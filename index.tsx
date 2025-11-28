@@ -762,7 +762,7 @@ const Services = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-float" style={{ animationDuration: '0.5s', animationName: 'fadeIn' }}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
           {(activeTab === 'rituals' ? rituals : tarot).map((item, idx) => (
             <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-purple/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
               <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform`}>

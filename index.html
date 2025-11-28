@@ -110,6 +110,11 @@
         background: #A569BD;
         border-radius: 4px;
       }
+      /* Logo Styling */
+      .logo-img {
+        object-fit: contain; /* Changed to contain so logo isn't cropped */
+        background-color: transparent;
+      }
     </style>
 <link rel="stylesheet" href="/index.css">
 </head>
@@ -119,9 +124,10 @@
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-purple/30 shadow-sm transition-all">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="bg-gradient-to-tr from-asteria-primary to-asteria-purple p-2 rounded-full text-white shadow-md">
-                    <i class="fa-solid fa-cat"></i>
-                </div>
+                <!-- LOGO: Using a placeholder cute white cat that matches the vibe -->
+                <!-- TIP: To use your REAL logo, save your image as 'logo.png' in this folder -->
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" onerror="this.src='logo.png'" class="w-12 h-12 rounded-full shadow-sm border border-asteria-purple/20 logo-img p-1" alt="Asteria Logo">
+                
                 <div class="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
                     ASTERIA <span class="text-asteria-primary text-sm hidden md:inline">Crystal Tarot</span>
                 </div>
@@ -202,7 +208,8 @@
                     
                     <div class="relative w-64 md:w-72 bg-white rounded-3xl shadow-2xl border-4 border-white overflow-hidden z-20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-500">
                         <div class="bg-gradient-to-r from-asteria-primary to-purple-400 p-4 flex items-center gap-3 text-white">
-                            <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center"><i class="fa-solid fa-cat"></i></div>
+                             <!-- LOGO in Phone Card -->
+                             <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" onerror="this.src='logo.png'" class="w-8 h-8 rounded-full border border-white/20 logo-img p-1" alt="Logo">
                             <div class="font-bold text-sm">Asteria Tarot</div>
                         </div>
                         <div class="p-4 bg-gray-50 h-64 flex flex-col gap-3">
@@ -318,11 +325,12 @@
                 </div>
             </div>
 
-            <div id="services-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-float" style="animation-duration: 0.5s; animation-name: fadeIn;">
+            <!-- Removed 'animate-fade-in' from grid to prevent flashing -->
+            <div id="services-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service Cards injected by JS -->
             </div>
 
-            <div class="mt-12 text-center bg-asteria-yellow/30 p-6 rounded-2xl max-w-2xl mx-auto border border-asteria-yellow/50">
+            <div class="mt-12 text-center bg-asteria-yellow/30 p-6 rounded-2xl max-w-2xl mx-auto border border-yellow-200">
                 <p class="text-gray-700 text-sm md:text-base">
                     <i class="fa-solid fa-circle-info text-yellow-500 mr-2"></i>
                     所有儀式及占卜均由 Asteria 親自主理，保證私隱。不確定自己適合哪種儀式？歡迎 WhatsApp 諮詢，我們會為您分析最合適的方案。
@@ -399,8 +407,10 @@
     <!-- Footer -->
     <footer class="py-12 bg-white border-t border-gray-100 text-center">
         <div class="container mx-auto px-6">
-            <div class="flex justify-center items-center gap-2 mb-6 text-2xl text-gray-700 font-eng font-bold">
-                <i class="fa-solid fa-cat text-asteria-primary"></i> ASTERIA
+            <div class="flex justify-center items-center gap-3 mb-6 text-2xl text-gray-700 font-eng font-bold">
+                 <!-- LOGO in Footer -->
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" onerror="this.src='logo.png'" class="w-10 h-10 rounded-full shadow-sm logo-img p-1" alt="Asteria Logo">
+                ASTERIA
             </div>
             <p class="text-gray-500 text-sm mb-8 max-w-md mx-auto">
                 用心聆聽，用愛療癒。<br/>
@@ -548,8 +558,10 @@
             const container = document.getElementById('services-grid');
             const data = type === 'rituals' ? rituals : tarotServices;
             
+            // Removed hover:-translate-y-1 to prevent jitter
+            // Removed hover:border-asteria-purple/30 to prevent color flash, used solid color if needed but relying on shadow
             container.innerHTML = data.map(item => `
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-purple/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
                     <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform">
                         <i class="${item.icon}"></i>
                     </div>
@@ -665,6 +677,7 @@
 
         function renderOracleResult(reading) {
             const container = document.getElementById('oracle-container');
+            // Removed animate-pulse from button to be less annoying
             container.innerHTML = `
                 <div class="w-full text-center animate-fade-in max-w-lg mx-auto flex flex-col items-center">
                     <div class="w-32 h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border-[4px] border-double border-yellow-200 shadow-2xl flex items-center justify-center relative overflow-hidden mb-6 group transform hover:scale-105 transition-transform duration-500">
@@ -689,7 +702,7 @@
                         </p>
                     </div>
 
-                    <a href="https://wa.me/85259413688" target="_blank" class="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-purple-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
+                    <a href="https://wa.me/85259413688" target="_blank" class="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-purple-200 flex items-center justify-center gap-2 text-lg hover:shadow-xl">
                         <i class="fa-brands fa-whatsapp"></i> 解鎖詳細占卜結果 (付費)
                     </a>
                     
