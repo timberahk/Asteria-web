@@ -3,13 +3,13 @@ import { createRoot } from 'react-dom/client';
 
 // --- Components ---
 
+const LOGO_SRC = "/asteria-logo.jpg";
+
 const Navbar = () => (
   <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-purple/30 shadow-sm transition-all">
     <div className="container mx-auto px-4 py-3 flex justify-between items-center">
       <div className="flex items-center gap-2">
-        <div className="bg-gradient-to-tr from-asteria-primary to-asteria-purple p-2 rounded-full text-white shadow-md">
-          <i className="fa-solid fa-cat"></i>
-        </div>
+        <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-purple/20 logo-img bg-white p-0.5" alt="Asteria logo" />
         <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
           ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">Crystal Tarot</span>
         </div>
@@ -93,7 +93,7 @@ const Hero = () => (
             {/* Center "Phone" Card */}
             <div className="relative w-64 md:w-72 bg-white rounded-3xl shadow-2xl border-4 border-white overflow-hidden z-20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-500">
                 <div className="bg-gradient-to-r from-asteria-primary to-purple-400 p-4 flex items-center gap-3 text-white">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center"><i className="fa-solid fa-cat"></i></div>
+                    <img src={LOGO_SRC} className="w-8 h-8 rounded-full border border-white/40 logo-img bg-white p-0.5" alt="Asteria logo" />
                     <div className="font-bold text-sm">Asteria Tarot</div>
                 </div>
                 <div className="p-4 bg-gray-50 h-64 flex flex-col gap-3">
@@ -594,105 +594,106 @@ const Blog = () => {
 };
 
 const Services = () => {
-  const [activeTab, setActiveTab] = useState<'rituals' | 'tarot'>('rituals');
+  const [activeTab, setActiveTab] = useState<'single' | 'sets'>('single');
 
-  const rituals = [
-    {
-      title: "高階復合儀式",
-      desc: "專門針對分手、斷聯、被封鎖的情況。修復破碎關係，消除對方負面印象，重新建立聯繫。",
-      icon: "fa-solid fa-heart-crack",
-      color: "bg-red-50 text-red-500",
-      tags: ["挽回前任", "解除封鎖", "修復關係"]
-    },
-    {
-      title: "西班牙紅魔法",
-      desc: "強力鎖心術。讓對方眼裡只有你，主動想念你，增加對你的佔有慾和依賴感。",
-      icon: "fa-solid fa-fire",
-      color: "bg-orange-50 text-orange-500",
-      tags: ["鎖心", "增加思念", "主動聯繫"]
-    },
-    {
-      title: "驅除第三者/爛桃花",
-      desc: "斬斷對方身邊的異性緣，清理這段關係的障礙，讓第三者自動退出。",
-      icon: "fa-solid fa-user-slash",
-      color: "bg-slate-50 text-slate-500",
-      tags: ["斬桃花", "擊退情敵", "清理障礙"]
-    },
-    {
-      title: "愛情升溫甜蜜儀式",
-      desc: "適合感情變淡、經常吵架的情侶。消除隔閡，找回熱戀期的甜蜜感覺。",
-      icon: "fa-solid fa-candy-cane",
-      color: "bg-pink-50 text-pink-500",
-      tags: ["感情升溫", "減少爭執", "甜蜜恩愛"]
-    },
-    {
-      title: "個人魅力/招正緣",
-      desc: "提升自身磁場與吸引力，讓你在人群中發光，吸引高質素的對象。",
-      icon: "fa-solid fa-wand-magic-sparkles",
-      color: "bg-purple-50 text-purple-500",
-      tags: ["提升魅力", "脫單", "吸引男神"]
-    },
-    {
-      title: "全方位感情拯救",
-      desc: "針對複雜個案，客製化多重儀式方案。全方位解決多個感情痛點。",
-      icon: "fa-solid fa-gem",
-      color: "bg-blue-50 text-blue-500",
-      tags: ["高難度", "客製化", "多重功效"]
-    }
+  const iconStyles = [
+    { icon: "fa-solid fa-wand-magic-sparkles", color: "bg-purple-50 text-purple-500" },
+    { icon: "fa-solid fa-heart", color: "bg-pink-50 text-pink-500" },
+    { icon: "fa-solid fa-fire", color: "bg-orange-50 text-orange-500" },
+    { icon: "fa-solid fa-shield-heart", color: "bg-blue-50 text-blue-500" },
+    { icon: "fa-solid fa-broom", color: "bg-teal-50 text-teal-500" },
+    { icon: "fa-solid fa-bolt", color: "bg-yellow-50 text-yellow-600" },
+    { icon: "fa-solid fa-link", color: "bg-indigo-50 text-indigo-500" },
+    { icon: "fa-solid fa-gem", color: "bg-rose-50 text-rose-500" }
   ];
 
-  const tarot = [
-    {
-      title: "全方位愛情分析",
-      desc: "深入剖析對方想法、你們的未來發展、潛在阻礙。提供實際建議。",
-      icon: "fa-solid fa-comments",
-      color: "bg-indigo-50 text-indigo-500",
-      tags: ["對方想法", "未來走向", "解決方案"]
-    },
-    {
-      title: "復合機率占卜",
-      desc: "我們還有機會嗎？他心裡還有我嗎？應否繼續等待？清楚告訴你答案。",
-      icon: "fa-solid fa-arrows-rotate",
-      color: "bg-teal-50 text-teal-500",
-      tags: ["復合", "抉擇", "時機"]
-    },
-    {
-      title: "流年運勢詳批",
-      desc: "掌握未來一年的整體運勢，包括感情、事業、財運起伏，助你趨吉避凶。",
-      icon: "fa-regular fa-calendar-check",
-      color: "bg-yellow-50 text-yellow-600",
-      tags: ["年運", "月運", "大方向"]
-    },
-    {
-      title: "事業/財運指引",
-      desc: "轉工好時機？升職加薪有無份？適合創業嗎？為你的職涯提供明燈。",
-      icon: "fa-solid fa-briefcase",
-      color: "bg-emerald-50 text-emerald-500",
-      tags: ["工作", "正財偏財", "發展"]
-    }
-  ];
+  const applyStyle = (items: Array<{ title: string; desc: string; tags: string[] }>) =>
+    items.map((item, idx) => ({ ...item, ...iconStyles[idx % iconStyles.length] }));
+
+  const singleRituals = applyStyle([
+    { title: "絕望", desc: "適合關係停滯、對方態度冷卻或局面看似無路可走時使用，協助重新打開轉機與情緒牽引。", tags: ["低谷轉機", "挽回局面", "情緒牽引"] },
+    { title: "開路", desc: "清走卡住進展的阻礙，讓聯絡、見面、溝通或新機會更順暢地展開。", tags: ["打開阻礙", "推動進展", "新機會"] },
+    { title: "斬斷", desc: "切斷不健康牽連、爛桃花或反覆消耗你的關係模式，幫助局面回到清晰。", tags: ["斷開牽連", "清理爛桃花", "界線"] },
+    { title: "海地愛/熱情火", desc: "提升愛情熱度、吸引力與想念感，適合曖昧降溫、關係平淡或需要重燃火花的情況。", tags: ["熱情", "吸引力", "升溫"] },
+    { title: "蝨子", desc: "針對細碎煩擾、旁人干擾或揮之不去的小阻礙，協助清走反覆黏住的負面能量。", tags: ["小人干擾", "煩擾清理", "淨化"] },
+    { title: "龍血", desc: "強化個人氣場與行動力，適合需要勇氣、保護、決斷力及快速推進的個案。", tags: ["強化氣場", "行動力", "保護"] },
+    { title: "來我身邊", desc: "加強對方靠近、主動聯絡與想見面的能量，適合斷聯、冷淡或距離感增加時使用。", tags: ["主動靠近", "聯絡", "見面"] },
+    { title: "和諧", desc: "緩和爭執、誤會與情緒對立，讓雙方較容易平心靜氣地重新溝通。", tags: ["減少爭執", "修和", "溝通"] },
+    { title: "鎖心", desc: "穩定對方心意與關係連結，減少外界誘惑或情緒飄忽帶來的不安感。", tags: ["穩定心意", "專一", "安全感"] },
+    { title: "清負", desc: "清理感情、工作或個人氣場中的低頻能量，適合近期覺得沉重、混亂或運勢受阻時。", tags: ["清負能量", "淨化", "重新整理"] },
+    { title: "丘比特", desc: "提升桃花與戀愛機會，讓合適的人更容易留意你、靠近你、對你產生好感。", tags: ["桃花", "好感", "戀愛機會"] },
+    { title: "特請", desc: "按個案目標特別配置，適合情況複雜、單一儀式未能完整覆蓋的需求。", tags: ["客製化", "複雜個案", "指定方向"] },
+    { title: "控制", desc: "協助你拉回局面的節奏與主導感，穩定情緒，不再被對方反覆牽動。", tags: ["主導節奏", "穩定局面", "情緒控制"] },
+    { title: "成功", desc: "加強目標達成與順利成事的能量，適合感情、事業或重要計劃需要推進時。", tags: ["成事", "順利", "目標推進"] },
+    { title: "保護", desc: "建立能量防護，減少小人、負面磁場或外界干擾對你和關係造成影響。", tags: ["防護", "避小人", "守護"] },
+    { title: "改現", desc: "針對現況不理想的個案，協助轉換能量方向，打開另一條更有利的發展線。", tags: ["改變現況", "轉向", "逆轉氣場"] },
+    { title: "魅女", desc: "提升女性魅力、自信與吸引力，適合想增強存在感、桃花運或被珍惜感的客人。", tags: ["魅力", "自信", "吸引"] },
+    { title: "清理", desc: "為個人、關係或空間做基礎清理，先清走雜訊，再讓後續儀式更易發揮。", tags: ["基礎清理", "整理磁場", "淨化"] },
+    { title: "毁滅", desc: "終止破壞性牽連與反覆消耗的負面模式，適合需要徹底斷開不良影響的情況。", tags: ["終止消耗", "斷開負面", "清場"] },
+    { title: "抗壓", desc: "穩住情緒與承受力，適合近期焦慮、內耗、壓力大或容易被感情影響生活的人。", tags: ["情緒支撐", "抗壓", "穩定"] },
+    { title: "忘記", desc: "淡化執念、痛苦回憶與反覆想起的情緒，幫助自己慢慢放下與恢復平衡。", tags: ["淡忘", "放下", "情緒修復"] }
+  ]);
+
+  const ritualSets = applyStyle([
+    { title: "心思思儀式", desc: "加強對方想起你、掛念你與忍不住關注你的能量，適合曖昧或冷淡後重新牽引。", tags: ["想念", "關注", "牽引"] },
+    { title: "脫單set儀式", desc: "提升桃花、魅力與被看見的機會，幫助吸引更合適的對象進入生活。", tags: ["脫單", "桃花", "正緣"] },
+    { title: "愛上你儀式", desc: "加深好感與情感投入，適合想由曖昧、普通關係推進到更親密階段。", tags: ["好感升溫", "情感投入", "曖昧推進"] },
+    { title: "恢復聯絡儀式", desc: "針對斷聯、已讀不回或冷淡狀態，推動對方重新打開聯絡窗口。", tags: ["斷聯", "破冰", "重新聯絡"] },
+    { title: "先攻後守儀式", desc: "先推動局面，再穩住後續發展，適合想主動出擊但又怕失控的個案。", tags: ["主動推進", "穩定後續", "策略"] },
+    { title: "金剛箍儀式", desc: "穩定對方心思與關係黏性，減少忽冷忽熱、逃避或心意飄忽。", tags: ["穩定", "黏性", "安全感"] },
+    { title: "解壓儀式", desc: "舒緩感情壓力、焦慮與內耗，讓自己和關係都回到較輕鬆的狀態。", tags: ["舒緩", "抗壓", "情緒平衡"] },
+    { title: "重修舊好儀式", desc: "修補舊日裂痕與負面印象，適合分開後仍想重新建立信任與好感。", tags: ["修復", "復合", "信任"] },
+    { title: "唯一儀式", desc: "加強被重視、被選擇與專一的能量，適合關係中缺乏安全感或有競爭者時。", tags: ["專一", "被選擇", "安全感"] },
+    { title: "斬斷儀式", desc: "切斷第三者、爛桃花或不健康連結，令局面回到乾淨清晰。", tags: ["斬斷", "清障礙", "爛桃花"] },
+    { title: "逆轉儀式", desc: "針對急轉直下或對你不利的現況，協助扭轉能量走勢與關係方向。", tags: ["逆轉", "轉機", "改局"] },
+    { title: "主動儀式", desc: "加強對方主動聯絡、主動邀約與主動表態的推動力。", tags: ["主動", "邀約", "表態"] },
+    { title: "溝通儀式", desc: "降低誤解、防備與情緒化反應，讓雙方更容易講清楚真正想法。", tags: ["溝通", "化解誤會", "坦白"] },
+    { title: "化解儀式", desc: "化解怨氣、心結、誤會與相處中的僵局，讓關係有重新柔和的空間。", tags: ["心結", "怨氣", "緩和"] },
+    { title: "趕盡殺絕儀式", desc: "徹底清理反覆出現的阻礙、爛桃花與干擾能量，適合需要斷得乾淨的局面。", tags: ["徹底清理", "阻礙", "爛桃花"] },
+    { title: "破冰儀式", desc: "打開沉默、尷尬或冷戰後的第一步，協助重新出現互動。", tags: ["破冰", "冷戰", "重新互動"] },
+    { title: "親密儀式", desc: "提升親密感、依戀感與想靠近的能量，適合感情淡化或距離變遠時。", tags: ["親密", "靠近", "升溫"] },
+    { title: "讓步儀式", desc: "軟化雙方僵硬立場，減少硬碰硬，讓對方較願意聽、願意退一步。", tags: ["軟化", "退讓", "緩和"] },
+    { title: "重燃愛火儀式", desc: "為平淡、冷卻或熱情下降的關係重新注入火花與期待感。", tags: ["重燃", "熱情", "甜蜜"] },
+    { title: "愛情三重奏儀式", desc: "結合吸引、修復與穩定三個方向，適合想一次處理多個感情痛點。", tags: ["吸引", "修復", "穩定"] },
+    { title: "念念不忘儀式", desc: "加深記掛與回想你的頻率，讓對方更容易被過往美好牽動。", tags: ["思念", "回想", "牽掛"] },
+    { title: "大掃除儀式", desc: "為個人狀態、關係磁場或近期低迷運勢做全面清理與重整。", tags: ["全面清理", "重整", "淨化"] },
+    { title: "重建信心儀式", desc: "修補自我價值感與感情信心，適合被冷待、分手或打擊後重新站穩。", tags: ["自信", "修復", "自我價值"] },
+    { title: "動情儀式", desc: "喚起對方情緒波動與感情感受，適合關係太理性、太冷或缺乏情感流動時。", tags: ["動情", "感受", "升溫"] },
+    { title: "詛咒法術移除儀式", desc: "針對疑似受負面能量、詛咒或不明阻滯影響的情況，做深層清理與解除。", tags: ["移除", "深層清理", "解除阻滯"] },
+    { title: "生財儀式", desc: "提升財氣流動與收入機會，適合想改善財運、接單量或金錢阻滯的人。", tags: ["財運", "收入", "機會"] },
+    { title: "事業上升儀式", desc: "推動事業能量向上，適合想升職、轉工、加強貴人與職場表現。", tags: ["事業", "升職", "貴人"] },
+    { title: "大發橫財儀式", desc: "加強偏財、突發機會與金錢驚喜的能量，適合想打開額外財路時。", tags: ["偏財", "財路", "驚喜"] },
+    { title: "事業建功儀式", desc: "協助重要工作、考核、項目或合作更順利推進，提升被認可的機會。", tags: ["項目成功", "職場表現", "認可"] },
+    { title: "轉危為安儀式", desc: "適合局面緊張、關係危機或事情臨界時，協助穩住狀況、減低衝擊。", tags: ["危機", "穩定", "轉機"] },
+    { title: "後悔莫及儀式", desc: "加強對方回想、反省與意識到失去你的重量，適合被忽視或被輕看後使用。", tags: ["反省", "回想", "後悔"] },
+    { title: "不計前縑儀式", desc: "淡化舊事、怨氣與過往不快，讓雙方較容易放下防備重新相處。", tags: ["放下舊事", "和解", "重新開始"] },
+    { title: "放手淡忘儀式", desc: "幫助慢慢放低一段關係或痛苦記憶，減少反覆回想與情緒拉扯。", tags: ["放手", "淡忘", "療癒"] },
+    { title: "執念消除儀式", desc: "針對放不低、想不通、停不下來的內耗，協助消減執念與情緒依附。", tags: ["消除執念", "停止內耗", "情緒自由"] }
+  ]);
+
+  const activeItems = activeTab === 'single' ? singleRituals : ritualSets;
 
   return (
     <section id="services" className="py-20 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">服務項目</h2>
-          <p className="text-gray-500 mb-8">請選擇您需要的服務類別，了解更多詳情</p>
+          <p className="text-gray-500 mb-8">按你的情況選擇單項儀式或組合儀式，詳情可 WhatsApp 查詢配搭。</p>
           
           {/* Tabs */}
           <div className="flex justify-center mb-10">
             <div className="bg-gray-100 p-1.5 rounded-full inline-flex relative shadow-inner">
-               <button 
-                onClick={() => setActiveTab('rituals')}
-                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeTab === 'rituals' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-gray-500 hover:text-gray-700'}`}
+              <button 
+                onClick={() => setActiveTab('single')}
+                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeTab === 'single' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-gray-500 hover:text-gray-700'}`}
               >
-                <i className="fa-solid fa-wand-sparkles mr-2"></i> 白魔法儀式
+                <i className="fa-solid fa-wand-sparkles mr-2"></i> 單項儀式
               </button>
               <button 
-                onClick={() => setActiveTab('tarot')}
-                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeTab === 'tarot' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-gray-500 hover:text-gray-700'}`}
+                onClick={() => setActiveTab('sets')}
+                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeTab === 'sets' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-gray-500 hover:text-gray-700'}`}
               >
-                <i className="fa-solid fa-star-half-stroke mr-2"></i> 塔羅占卜
+                <i className="fa-solid fa-layer-group mr-2"></i> 組合儀式
               </button>
             </div>
           </div>
@@ -700,8 +701,8 @@ const Services = () => {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-          {(activeTab === 'rituals' ? rituals : tarot).map((item, idx) => (
-            <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-purple/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+          {activeItems.map((item, idx) => (
+            <div key={`${activeTab}-${idx}`} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-purple/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
               <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform`}>
                 <i className={item.icon}></i>
               </div>
@@ -726,7 +727,7 @@ const Services = () => {
         <div className="mt-12 text-center bg-asteria-yellow/30 p-6 rounded-2xl max-w-2xl mx-auto border border-asteria-yellow/50">
            <p className="text-gray-700 text-sm md:text-base">
              <i className="fa-solid fa-circle-info text-yellow-500 mr-2"></i>
-             所有儀式及占卜均由 Asteria 親自主理，保證私隱。不確定自己適合哪種儀式？歡迎 WhatsApp 諮詢，我們會為您分析最合適的方案。
+             所有儀式均會按個案狀況建議配搭，保證私隱。不確定自己適合哪種儀式？歡迎 WhatsApp 諮詢，我們會為您分析最合適的方向。
            </p>
         </div>
 
@@ -805,7 +806,7 @@ const Footer = () => (
   <footer className="py-12 bg-white border-t border-gray-100 text-center">
     <div className="container mx-auto px-6">
       <div className="flex justify-center items-center gap-2 mb-6 text-2xl text-gray-700 font-eng font-bold">
-        <i className="fa-solid fa-cat text-asteria-primary"></i> ASTERIA
+        <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm logo-img bg-white p-0.5" alt="Asteria logo" /> ASTERIA
       </div>
       <p className="text-gray-500 text-sm mb-8 max-w-md mx-auto">
         用心聆聽，用愛療癒。<br/>
