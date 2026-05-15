@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import { GoogleGenAI, Type } from "@google/genai";
-
-// --- Gemini Configuration ---
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 // --- Components ---
 
@@ -276,76 +272,17 @@ const Oracle = () => {
     setError(null);
     setReading(null);
 
-    // Using a simple timeout to trigger the API call ensures visual feedback occurs immediately
+    // Keep this public page self-contained. AI summaries for members should run server-side.
     setTimeout(() => {
         getReading(selectedTopic);
     }, 1500);
   };
 
-  const getReading = async (selectedTopic: string) => {
+  const getReading = (_selectedTopic: string) => {
     try {
-      const topicLabel = topics.find(t => t.id === selectedTopic)?.label || "一般運勢";
-      const randomSeed = Math.floor(Math.random() * 1000000); // Add randomness
-      
-      const prompt = `
-      You are Asteria, a mystical tarot reader. 
-      The user has a concern about "${topicLabel}".
-      
-      Current Random Seed: ${randomSeed}.
-      
-      CRITICAL INSTRUCTION:
-      1. RANDOMLY select ONE Tarot card from the standard 78 cards. 
-      2. It can be Major Arcana or Minor Arcana (Cups, Wands, Swords, Pentacles).
-      3. DO NOT always pick "The Star" or "The Lovers". Be diverse.
-      
-      Provide a VERY SHORT, MYSTERIOUS, ONE-SENTENCE TEASER in Traditional Chinese (Hong Kong style).
-      DO NOT explain the full situation. 
-      DO NOT solve their problem.
-      Your goal is to make them curious so they want to book a paid reading.
-
-      Return ONLY raw JSON. Do not use Markdown block.
-      
-      Structure:
-      {
-        "type": "Tarot",
-        "card_name": "Name of the Card (e.g., The Moon 月亮)",
-        "keywords": ["Keyword1", "Keyword2"],
-        "analysis": "A single, mysterious sentence. (Max 20 words).",
-        "advice": "A short hook suggesting they need a full reading. (Max 15 words).",
-        "icon": "fa-solid fa-moon" 
-      }
-      `;
-
-      const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: prompt,
-        config: {
-          responseMimeType: "application/json",
-          temperature: 1.2, // Increase creativity/randomness
-        }
-      });
-      
-      let text = response.text;
-      
-      if (text) {
-        // Clean up any potential markdown residue
-        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
-        try {
-            const parsed = JSON.parse(text);
-            setReading(parsed);
-            setStep('result');
-        } catch (e) {
-            console.warn("JSON Parse Error, using fallback.", e);
-            useFallback();
-        }
-      } else {
-        // Response blocked or empty
-        useFallback();
-      }
-
+      useFallback();
     } catch (err) {
       console.error("Oracle error:", err);
-      // Fallback mechanism: If API fails, show a random pre-set card so user is not disappointed
       useFallback();
     } finally {
       setLoading(false);
