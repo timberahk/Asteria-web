@@ -10,7 +10,7 @@ insert into public.user_accounts (
   contact_email
 )
 values (
-  'b1c06372-573d-46f7-826a-457d375cce71',
+  'd4a962c6-da54-46ac-ae0b-5b4993bab069',
   'staff',
   'staff@accounts.asteria-space.local',
   'staff',
@@ -26,5 +26,5 @@ set
   contact_email = excluded.contact_email;
 
 insert into public.admin_users (user_id)
-values ('b1c06372-573d-46f7-826a-457d375cce71')
+values ('d4a962c6-da54-46ac-ae0b-5b4993bab069')
 on conflict (user_id) do nothing;
