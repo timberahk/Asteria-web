@@ -1087,47 +1087,7 @@ const REVIEW_CASES = [
   { title: '重建自信之後逆轉', tag: '自我價值', note: '適合放客人心態變穩、關係改善的回饋。' }
 ];
 
-const DEFAULT_CUSTOMERS: PortalCustomer[] = [
-  {
-    id: 'demo-1',
-    name: 'Demo 客人',
-    phone: '0000',
-    igHandle: '@demo_ig',
-    telegramHandle: '@demo_tg',
-    email: 'demo@example.com',
-    targetName: 'Demo 真名',
-    originalChannel: 'Instagram',
-    interests: ['復合', '斷聯', '溝通'],
-    messages: [
-      {
-        id: 101,
-        sender: 'customer',
-        text: '我想問今日佢有覆我 story，我應唔應該即刻覆返？',
-        createdAt: '2026-05-16T10:40:00.000Z'
-      },
-      {
-        id: 102,
-        sender: 'admin',
-        text: '可以覆，但唔好太長。保持輕鬆，唔好一次過追問關係。',
-        createdAt: '2026-05-16T10:52:00.000Z'
-      }
-    ],
-    entries: [
-      {
-        id: 1,
-        type: 'relationship',
-        text: '對方今日有覆 story，但語氣仍然比較冷淡，想知道應該主動定等佢。',
-        createdAt: '2026-05-16T09:30:00.000Z'
-      },
-      {
-        id: 2,
-        type: 'mood',
-        text: '今日比之前冷靜，知道自己唔可以一急就連環 message，要練習等一等。',
-        createdAt: '2026-05-16T10:15:00.000Z'
-      }
-    ]
-  }
-];
+const DEFAULT_CUSTOMERS: PortalCustomer[] = [];
 
 type SystemAccount = {
   label: string;
@@ -1138,55 +1098,22 @@ type SystemAccount = {
   customerId?: string;
 };
 
-const DEFAULT_ACCOUNTS: SystemAccount[] = [
-  {
-    label: '客人 demo',
-    username: 'client-demo',
-    email: 'client@asteria.space',
-    password: 'client123',
-    role: 'customer',
-    customerId: 'demo-1'
-  },
-  {
-    label: '客服 demo',
-    username: 'staff-demo',
-    email: 'staff@asteria.space',
-    password: 'staff123',
-    role: 'staff'
-  }
-];
+const DEFAULT_ACCOUNTS: SystemAccount[] = [];
 
 const loadPortalCustomers = () => {
-  try {
-    const saved = window.localStorage.getItem('asteriaPortalCustomers');
-    return saved ? JSON.parse(saved) as PortalCustomer[] : DEFAULT_CUSTOMERS;
-  } catch {
-    return DEFAULT_CUSTOMERS;
-  }
+  return DEFAULT_CUSTOMERS;
 };
 
 const savePortalCustomers = (customers: PortalCustomer[]) => {
-  window.localStorage.setItem('asteriaPortalCustomers', JSON.stringify(customers));
+  void customers;
 };
 
 const loadSystemAccounts = () => {
-  try {
-    const saved = window.localStorage.getItem('asteriaSystemAccounts');
-    const accounts = saved ? JSON.parse(saved) as SystemAccount[] : DEFAULT_ACCOUNTS;
-    return accounts.map((account) => {
-      const demo = DEFAULT_ACCOUNTS.find((item) => item.email === account.email);
-      return {
-        ...account,
-        username: (!account.username || account.username.includes('@')) ? (demo?.username || account.username || account.email) : account.username
-      };
-    });
-  } catch {
-    return DEFAULT_ACCOUNTS;
-  }
+  return DEFAULT_ACCOUNTS;
 };
 
 const saveSystemAccounts = (accounts: SystemAccount[]) => {
-  window.localStorage.setItem('asteriaSystemAccounts', JSON.stringify(accounts));
+  void accounts;
 };
 
 const formatEntryDate = (value: string) => {
@@ -1229,7 +1156,6 @@ const buildSummary = (customer: PortalCustomer) => {
 
 const RegisterPage = () => {
   const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
-  const [accounts] = useState<SystemAccount[]>(loadSystemAccounts);
   const [loginUsername, setLoginUsername] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
@@ -1269,20 +1195,7 @@ const RegisterPage = () => {
         storeSpaceAccount(account);
 
         if (account.role === 'customer') {
-          const existingCustomers = loadPortalCustomers();
-          const existing = existingCustomers.find((customer) => customer.id === account.user_id);
-          if (!existing) {
-            savePortalCustomers([{
-              id: account.user_id,
-              name: account.label,
-              phone: '',
-              email: account.contact_email || '',
-              originalChannel: 'Asteria Space',
-              interests: [],
-              entries: [],
-              messages: []
-            }, ...existingCustomers]);
-          }
+          window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
         }
 
         window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
@@ -1293,66 +1206,11 @@ const RegisterPage = () => {
       }
     }
 
-    const account = accounts.find((item) => item.username === loginUsername.trim() && item.password === loginPassword.trim());
-    if (!account) {
-      setLoginError('登入資料不正確。');
-      return;
-    }
-    window.localStorage.setItem('asteriaCurrentRole', account.role);
-    window.localStorage.setItem('asteriaCurrentUsername', account.username);
-    window.localStorage.setItem('asteriaCurrentEmail', account.email);
-    if (account.customerId) window.localStorage.setItem('asteriaCurrentCustomerId', account.customerId);
-    window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
+    setLoginError('Supabase backend 未連接，暫時不能登入。請檢查 Netlify env 並重新 deploy。');
   };
 
   const saveRegistration = () => {
-    const trimmedPhone = phone.trim();
-    const trimmedIg = igHandle.trim();
-    const trimmedTelegram = telegramHandle.trim();
-    const trimmedEmail = email.trim();
-    const trimmedTargetName = targetName.trim();
-    const trimmedName = name.trim() || 'Asteria 客人';
-    if (!trimmedPhone && !trimmedIg && !trimmedTelegram) return;
-
-    const existing = customers.find((customer) =>
-      (trimmedPhone && customer.phone === trimmedPhone) ||
-      (trimmedIg && customer.igHandle === trimmedIg) ||
-      (trimmedTelegram && customer.telegramHandle === trimmedTelegram)
-    );
-
-    const newCustomerId = `customer-${Date.now()}`;
-    const activeCustomerId = existing?.id || newCustomerId;
-
-    const nextCustomers = existing
-      ? customers.map((customer) => customer.id === existing.id ? {
-          ...customer,
-          name: trimmedName,
-          phone: trimmedPhone || customer.phone,
-          igHandle: trimmedIg || customer.igHandle,
-          telegramHandle: trimmedTelegram || customer.telegramHandle,
-          email: trimmedEmail || customer.email,
-          targetName: trimmedTargetName || customer.targetName
-        } : customer)
-      : [{
-          id: newCustomerId,
-          name: trimmedName,
-          phone: trimmedPhone,
-          whatsapp: trimmedPhone,
-          igHandle: trimmedIg,
-          telegramHandle: trimmedTelegram,
-          email: trimmedEmail,
-          targetName: trimmedTargetName,
-          originalChannel: 'Asteria Space',
-          interests: ['復合'],
-          entries: [],
-          messages: []
-        }, ...customers];
-
-    setCustomers(nextCustomers);
-    savePortalCustomers(nextCustomers);
-    window.localStorage.setItem('asteriaCurrentRole', 'customer');
-    window.localStorage.setItem('asteriaCurrentCustomerId', activeCustomerId);
-    window.location.hash = '#portal';
+    setLoginError('正式版只接受已建立的 Asteria Space account 登入。請先由客服後台新增 account。');
   };
 
   return (
@@ -1406,7 +1264,7 @@ const PortalPage = () => {
   const [telegramHandle, setTelegramHandle] = useState('');
   const [email, setEmail] = useState('');
   const [originalChannel, setOriginalChannel] = useState('Instagram');
-  const [activeCustomerId, setActiveCustomerId] = useState(DEFAULT_CUSTOMERS[0].id);
+  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || '');
   const [relationshipText, setRelationshipText] = useState('');
   const [moodText, setMoodText] = useState('');
   const [questionText, setQuestionText] = useState('');
@@ -1544,7 +1402,7 @@ const PortalPage = () => {
             </div>
 
             <div className="mt-6">
-              <div className="text-sm font-bold text-stone-500 mb-3">本地 demo：切換客人</div>
+              <div className="text-sm font-bold text-stone-500 mb-3">切換客人</div>
               <div className="flex gap-2 overflow-x-auto pb-2">
                 {customers.map((customer) => (
                   <button key={customer.id} onClick={() => setActiveCustomerId(customer.id)} className={`text-left px-4 py-3 rounded-xl border transition-all min-w-48 ${activeCustomer?.id === customer.id ? 'bg-asteria-yellow/25 border-asteria-primary' : 'border-asteria-cream/70 hover:bg-asteria-yellow/15'}`}>
@@ -1827,9 +1685,8 @@ const PortalPage = () => {
 
 const SpacePortalPage = () => {
   const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
-  const [accounts, setAccounts] = useState<SystemAccount[]>(loadSystemAccounts);
   const currentCustomerId = window.localStorage.getItem('asteriaCurrentCustomerId');
-  const [activeCustomerId] = useState(currentCustomerId || customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
+  const [activeCustomerId] = useState(currentCustomerId || customers[0]?.id || '');
   const [chatText, setChatText] = useState('');
   const [chatImages, setChatImages] = useState<string[]>([]);
   const [chatImageFiles, setChatImageFiles] = useState<File[]>([]);
@@ -1855,10 +1712,6 @@ const SpacePortalPage = () => {
     if (isBackendConfigured) return;
     savePortalCustomers(customers);
   }, [customers]);
-
-  useEffect(() => {
-    saveSystemAccounts(accounts);
-  }, [accounts]);
 
   const loadBackendSpace = async () => {
     if (!isBackendConfigured) return;
@@ -1960,24 +1813,13 @@ const SpacePortalPage = () => {
   };
 
   const changePassword = () => {
-    const currentUsername = window.localStorage.getItem('asteriaCurrentUsername');
-    const account = accounts.find((item) => item.username === currentUsername);
-    if (!account) {
-      setPasswordMessage('請先登入你的 account。');
-      return;
-    }
-    if (account.password !== oldPassword.trim()) {
-      setPasswordMessage('舊密碼不正確。');
-      return;
-    }
     if (newPassword.trim().length < 6) {
       setPasswordMessage('新密碼最少 6 個字。');
       return;
     }
-    setAccounts((current) => current.map((item) => item.email === account.email ? { ...item, password: newPassword.trim() } : item));
+    setPasswordMessage('正式版密碼暫時由客服 reset。呢個位之後會接 Supabase 改密碼。');
     setOldPassword('');
     setNewPassword('');
-    setPasswordMessage('密碼已更新。');
   };
 
   const saveProfile = () => {
@@ -2323,7 +2165,7 @@ const SpacePortalPage = () => {
 
 const AdminPage = () => {
   const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
-  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
+  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || '');
   const [adminReply, setAdminReply] = useState('');
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
 
@@ -2518,7 +2360,7 @@ const AdminPage = () => {
 const AdminInboxPage = () => {
   const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
   const [accounts, setAccounts] = useState<SystemAccount[]>(loadSystemAccounts);
-  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
+  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || '');
   const [inboxView, setInboxView] = useState<'list' | 'thread'>('list');
   const [adminView, setAdminView] = useState<'inbox' | 'accounts'>('inbox');
   const [replyText, setReplyText] = useState('');
@@ -2733,40 +2575,8 @@ const AdminInboxPage = () => {
       return;
     }
 
-    setAccountMessage('Supabase backend 未連接：呢個版本唔會新增假 account。請確認 Netlify env 已設定並已重新 deploy。');
+    setAccountMessage('Supabase backend 未連接：呢個版本唔會新增本機 account。請確認 Netlify env 已設定並已重新 deploy。');
     return;
-
-    let customerId: string | undefined;
-    if (newAccountRole === 'customer') {
-      customerId = `customer-${Date.now()}`;
-      const customer: PortalCustomer = {
-        id: customerId,
-        name: trimmedName,
-        phone: '',
-        email: trimmedEmail,
-        originalChannel: 'Asteria Space',
-        interests: [],
-        entries: [],
-        messages: []
-      };
-      setCustomers((current) => [customer, ...current]);
-      setActiveCustomerId(customerId);
-    }
-
-    setAccounts((current) => [{
-      label: trimmedName,
-      username: trimmedUsername,
-      email: trimmedEmail,
-      password: trimmedPassword,
-      role: newAccountRole,
-      customerId
-    }, ...current]);
-    setNewAccountName('');
-    setNewAccountUsername('');
-    setNewAccountEmail('');
-    setNewAccountPassword('');
-    setNewAccountRole('customer');
-    setAccountMessage('Account 已新增。');
   };
 
   const resetAccountPassword = async (username: string) => {
@@ -2787,9 +2597,6 @@ const AdminInboxPage = () => {
     }
     setAccountMessage('Supabase backend 未連接：不能 reset 真實 account password。');
     return;
-    setAccounts((current) => current.map((account) => account.username === username ? { ...account, password: nextPassword } : account));
-    setResetPasswords((current) => ({ ...current, [username]: '' }));
-    setAccountMessage(`${username} password 已 reset。`);
   };
 
   const deleteAccount = async (account: SystemAccount) => {
@@ -2810,14 +2617,6 @@ const AdminInboxPage = () => {
     }
     setAccountMessage('Supabase backend 未連接：不能 delete 真實 account。');
     return;
-    setAccounts((current) => current.filter((item) => item.username !== account.username));
-    if (account.customerId) {
-      setCustomers((current) => current.filter((customer) => customer.id !== account.customerId));
-      if (activeCustomerId === account.customerId) {
-        setActiveCustomerId(customers.find((customer) => customer.id !== account.customerId)?.id || DEFAULT_CUSTOMERS[0].id);
-      }
-    }
-    setAccountMessage(`${account.username} 已刪除。`);
   };
 
   return (

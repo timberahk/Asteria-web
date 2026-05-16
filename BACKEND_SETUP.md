@@ -57,7 +57,7 @@ Schema 已經加 Row Level Security。正式版要靠呢層保護，而唔係靠
 - Admin 先可以睇全部客人同全部對話
 - Admin 先可以管理 account mapping / audit log
 
-重要：依家本地 preview 仍然係 demo，會用 browser localStorage。正式收客人資料前，要將 frontend 接去 Supabase Auth + Database + Storage。
+重要：正式版必須連 Supabase Auth + Database + Storage。若 Netlify env 未設定好，Asteria Space 會直接提示 backend 未連接，不會再建立本機 account 或用 browser localStorage 假裝成功。
 
 ## Admin 權限
 

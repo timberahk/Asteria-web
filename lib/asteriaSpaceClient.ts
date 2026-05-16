@@ -62,7 +62,7 @@ export type StaffInboxCustomer = {
 };
 
 const requireSupabase = () => {
-  if (!supabase) throw new Error('Supabase 未設定，依家會繼續用本地 demo。');
+  if (!supabase) throw new Error('Supabase 未設定，請檢查 Netlify 環境變數並重新 deploy。');
   return supabase;
 };
 
