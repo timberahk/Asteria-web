@@ -2516,6 +2516,13 @@ const AdminInboxPage = () => {
   const [resetPasswords, setResetPasswords] = useState<Record<string, string>>({});
   const [accountSearch, setAccountSearch] = useState('');
   const [accountMessage, setAccountMessage] = useState('');
+  const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
+    try {
+      return JSON.parse(window.localStorage.getItem('asteriaStaffReadMarkers') || '{}') as Record<string, string>;
+    } catch {
+      return {};
+    }
+  });
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
   const sortedCustomers = [...customers].sort((a, b) => {
     const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
@@ -2580,7 +2587,10 @@ const AdminInboxPage = () => {
   const getUnreadCount = (customer: PortalCustomer) => {
     const messages = customer.messages || [];
     const lastAdminIndex = [...messages].map((message) => message.sender).lastIndexOf('admin');
-    return messages.slice(lastAdminIndex + 1).filter((message) => message.sender === 'customer').length;
+    const lastAdminTime = lastAdminIndex >= 0 ? messages[lastAdminIndex].createdAt : '';
+    const lastReadTime = readMarkers[customer.id] || '';
+    const baseline = [lastAdminTime, lastReadTime].sort().at(-1) || '';
+    return messages.filter((message) => message.sender === 'customer' && (!baseline || message.createdAt > baseline)).length;
   };
 
   const openThread = (customerId: string) => {
@@ -2588,6 +2598,16 @@ const AdminInboxPage = () => {
     setInboxView('thread');
     setReplyText('');
     setReplyImages([]);
+    setReplyImageFiles([]);
+    const customer = customers.find((item) => item.id === customerId);
+    const latestCustomerMessage = [...(customer?.messages || [])].reverse().find((message) => message.sender === 'customer');
+    if (latestCustomerMessage) {
+      setReadMarkers((current) => {
+        const next = { ...current, [customerId]: latestCustomerMessage.createdAt };
+        window.localStorage.setItem('asteriaStaffReadMarkers', JSON.stringify(next));
+        return next;
+      });
+    }
   };
 
   const sendReply = async () => {
@@ -3050,6 +3070,22 @@ const App = () => {
   }
 
   if (page === 'register') {
+    if (currentRole === 'staff') {
+      return (
+        <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+          <Navbar />
+          <AdminInboxPage />
+        </div>
+      );
+    }
+    if (currentRole === 'customer') {
+      return (
+        <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+          <Navbar />
+          <SpacePortalPage />
+        </div>
+      );
+    }
     return (
       <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
         <Navbar />
