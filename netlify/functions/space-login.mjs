@@ -9,11 +9,31 @@ export const handler = async (event) => {
     if (!normalizedUsername || !password) return json(400, { error: '請輸入 account 名同 password。' });
 
     const admin = getAdminClient();
-    const { data: account, error: accountError } = await admin
+    let { data: account, error: accountError } = await admin
       .from('user_accounts')
       .select('user_id, username, auth_email, role, label, contact_email')
       .eq('username', normalizedUsername)
-      .single();
+      .maybeSingle();
+
+    if (!account && normalizedUsername.includes('@')) {
+      const result = await admin
+        .from('user_accounts')
+        .select('user_id, username, auth_email, role, label, contact_email')
+        .eq('auth_email', normalizedUsername)
+        .maybeSingle();
+      account = result.data;
+      accountError = result.error;
+    }
+
+    if (!account && normalizedUsername.includes('@')) {
+      const result = await admin
+        .from('user_accounts')
+        .select('user_id, username, auth_email, role, label, contact_email')
+        .eq('contact_email', normalizedUsername)
+        .maybeSingle();
+      account = result.data;
+      accountError = result.error;
+    }
 
     if (accountError || !account) return json(401, { error: '登入資料不正確。' });
 

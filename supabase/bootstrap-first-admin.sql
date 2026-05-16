@@ -12,10 +12,10 @@ insert into public.user_accounts (
 values (
   'd4a962c6-da54-46ac-ae0b-5b4993bab069',
   'staff',
-  'staff@accounts.asteria-space.local',
+  'timberahk@gmail.com',
   'staff',
   '第一個客服',
-  'staff@asteria.space'
+  'timberahk@gmail.com'
 )
 on conflict (user_id) do update
 set
