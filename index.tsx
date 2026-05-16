@@ -4,6 +4,7 @@ import {
   getCurrentAccount,
   isBackendConfigured,
   loginWithUsername,
+  signOutSpace,
   staffCreateAccount,
   staffDeleteAccount,
   staffResetPassword
@@ -16,45 +17,66 @@ const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "";
 const FACEBOOK_URL = "https://www.facebook.com/share/p/1aAk2CJBt8/";
 
-const Navbar = () => (
-  <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
-    <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-      <div className="flex items-center gap-2">
-        <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
-        <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
-          ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">感情拯救所</span>
+const clearSpaceSession = async () => {
+  await signOutSpace();
+  window.localStorage.removeItem('asteriaCurrentRole');
+  window.localStorage.removeItem('asteriaCurrentUsername');
+  window.localStorage.removeItem('asteriaCurrentEmail');
+  window.localStorage.removeItem('asteriaCurrentCustomerId');
+  window.location.hash = '#register';
+  window.dispatchEvent(new Event('asteria-session-change'));
+};
+
+const Navbar = () => {
+  const role = window.localStorage.getItem('asteriaCurrentRole') as 'customer' | 'staff' | null;
+  const spaceHref = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
+  const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
+
+  return (
+    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="#home" className="flex items-center gap-2">
+          <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
+          <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
+            ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">感情拯救所</span>
+          </div>
+        </a>
+        <div className="flex gap-2 md:gap-5 text-sm md:text-base font-medium text-gray-600 items-center">
+          <a href="#oracle" className="hover:text-asteria-primary transition-colors hidden md:inline-block"><i className="fa-solid fa-star text-xs"></i> 每日指引</a>
+          <a href="#teaching" className="hover:text-asteria-primary transition-colors hidden md:inline-block">相處教學</a>
+          <a href="#services" className="hover:text-asteria-primary transition-colors hidden md:inline-block">服務</a>
+          <a href="#reviews" className="hover:text-asteria-primary transition-colors hidden lg:inline-block">好評</a>
+          <a href={spaceHref} className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
+            <i className="fa-regular fa-user"></i> <span>{spaceLabel}</span>
+          </a>
+          {role && (
+            <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all">
+              登出
+            </button>
+          )}
+          <a href={WHATSAPP_URL} target="_blank" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden sm:flex items-center gap-1">
+            <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
+          </a>
         </div>
       </div>
-      <div className="flex gap-3 md:gap-8 text-sm md:text-base font-medium text-gray-600 items-center">
-        <a href="#oracle" className="hover:text-asteria-primary transition-colors hidden md:inline-block"><i className="fa-solid fa-star text-xs"></i> 每日指引</a>
-        <a href="#teaching" className="hover:text-asteria-primary transition-colors hidden md:inline-block">相處教學</a>
-        <a href="#services" className="hover:text-asteria-primary transition-colors">服務</a>
-        <a href="#reviews" className="hover:text-asteria-primary transition-colors">好評</a>
-        <a href="#register" className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
-          <i className="fa-regular fa-user"></i> <span className="hidden sm:inline">Asteria </span>Space
-        </a>
-        <a href={WHATSAPP_URL} target="_blank" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-1">
-          <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
-        </a>
+      <div className="bg-asteria-dark text-white">
+        <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-4 text-xs md:text-sm text-center">
+          <span className="font-bold">IG帳號暫停通知</span>
+          <span className="text-white/80">請用 WhatsApp / Facebook / Telegram 聯絡我地：</span>
+          <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-white px-3 py-1 rounded-full font-bold">
+            <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
+          </a>
+          <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
+            <i className="fa-brands fa-facebook-f"></i> Facebook
+          </a>
+          <span className="inline-flex items-center justify-center gap-1 bg-white/12 border border-white/20 px-3 py-1 rounded-full font-bold">
+            <i className="fa-brands fa-telegram"></i> Telegram 待公布
+          </span>
+        </div>
       </div>
-    </div>
-    <div className="bg-asteria-dark text-white">
-      <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-4 text-xs md:text-sm text-center">
-        <span className="font-bold">IG帳號暫停通知</span>
-        <span className="text-white/80">請用 WhatsApp / Facebook / Telegram 聯絡我地：</span>
-        <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-white px-3 py-1 rounded-full font-bold">
-          <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
-        </a>
-        <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
-          <i className="fa-brands fa-facebook-f"></i> Facebook
-        </a>
-        <span className="inline-flex items-center justify-center gap-1 bg-white/12 border border-white/20 px-3 py-1 rounded-full font-bold">
-          <i className="fa-brands fa-telegram"></i> Telegram 待公布
-        </span>
-      </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 const Hero = () => (
   <section className="relative pt-56 md:pt-40 pb-16 overflow-hidden bg-[#FFF7EA] border-b border-asteria-cream/70">
@@ -2816,8 +2838,15 @@ const App = () => {
     const handleHashChange = () => {
       setPage(getPage());
     };
+    const handleSessionChange = () => {
+      setPage(getPage());
+    };
     window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('asteria-session-change', handleSessionChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('asteria-session-change', handleSessionChange);
+    };
   }, []);
 
   if (page === 'teaching') {
