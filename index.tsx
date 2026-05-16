@@ -2717,6 +2717,9 @@ const AdminInboxPage = () => {
       return;
     }
 
+    setAccountMessage('Supabase backend 未連接：呢個版本唔會新增假 account。請確認 Netlify env 已設定並已重新 deploy。');
+    return;
+
     let customerId: string | undefined;
     if (newAccountRole === 'customer') {
       customerId = `customer-${Date.now()}`;
@@ -2766,6 +2769,8 @@ const AdminInboxPage = () => {
       }
       return;
     }
+    setAccountMessage('Supabase backend 未連接：不能 reset 真實 account password。');
+    return;
     setAccounts((current) => current.map((account) => account.username === username ? { ...account, password: nextPassword } : account));
     setResetPasswords((current) => ({ ...current, [username]: '' }));
     setAccountMessage(`${username} password 已 reset。`);
@@ -2787,6 +2792,8 @@ const AdminInboxPage = () => {
       }
       return;
     }
+    setAccountMessage('Supabase backend 未連接：不能 delete 真實 account。');
+    return;
     setAccounts((current) => current.filter((item) => item.username !== account.username));
     if (account.customerId) {
       setCustomers((current) => current.filter((customer) => customer.id !== account.customerId));
@@ -2826,6 +2833,9 @@ const AdminInboxPage = () => {
               <div className="text-sm text-stone-400">Staff tools</div>
               <h2 className="text-2xl font-bold text-asteria-dark mb-2">Account 管理</h2>
               <p className="text-sm text-stone-500 leading-relaxed">客服可以新增客人 / staff account，亦可以幫客人 reset password。</p>
+              <div className={`mt-4 rounded-xl border px-4 py-3 text-sm font-bold ${isBackendConfigured ? 'bg-green-50 border-green-100 text-green-700' : 'bg-red-50 border-red-100 text-red-600'}`}>
+                {isBackendConfigured ? 'Supabase 已連接：新增 account 會寫入 Supabase Auth。' : 'Supabase 未連接：新增 account 不會生效，請檢查 Netlify env / deploy。'}
+              </div>
             </div>
 
             <div className="grid gap-3 flex-1">
