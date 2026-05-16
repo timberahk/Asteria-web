@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
+  getCurrentAccount,
   isBackendConfigured,
   loginWithUsername,
   staffCreateAccount,
@@ -1185,6 +1186,33 @@ const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [targetName, setTargetName] = useState('');
 
+  useEffect(() => {
+    if (!isBackendConfigured) return;
+
+    let isMounted = true;
+    getCurrentAccount()
+      .then((account) => {
+        if (!isMounted || !account) return;
+        window.localStorage.setItem('asteriaCurrentRole', account.role);
+        window.localStorage.setItem('asteriaCurrentUsername', account.username);
+        window.localStorage.setItem('asteriaCurrentEmail', account.contact_email || '');
+        if (account.role === 'customer') {
+          window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
+        }
+        window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
+      })
+      .catch(() => {
+        window.localStorage.removeItem('asteriaCurrentRole');
+        window.localStorage.removeItem('asteriaCurrentUsername');
+        window.localStorage.removeItem('asteriaCurrentEmail');
+        window.localStorage.removeItem('asteriaCurrentCustomerId');
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   const handleSystemLogin = async () => {
     if (isBackendConfigured) {
       try {
@@ -1221,7 +1249,7 @@ const RegisterPage = () => {
 
     const account = accounts.find((item) => item.username === loginUsername.trim() && item.password === loginPassword.trim());
     if (!account) {
-      setLoginError('登入資料不正確。你可以先用下面 demo account 試。');
+      setLoginError('登入資料不正確。');
       return;
     }
     window.localStorage.setItem('asteriaCurrentRole', account.role);
@@ -1229,12 +1257,6 @@ const RegisterPage = () => {
     window.localStorage.setItem('asteriaCurrentEmail', account.email);
     if (account.customerId) window.localStorage.setItem('asteriaCurrentCustomerId', account.customerId);
     window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
-  };
-
-  const fillDemoLogin = (account: SystemAccount) => {
-    setLoginUsername(account.username);
-    setLoginPassword(account.password);
-    setLoginError('');
   };
 
   const saveRegistration = () => {
@@ -1319,16 +1341,6 @@ const RegisterPage = () => {
               <button onClick={handleSystemLogin} className="btn-primary rounded-xl px-5 py-3 font-bold">登入</button>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-3 mt-4">
-              {accounts.slice(0, 2).map((account) => (
-                <button key={account.username} onClick={() => fillDemoLogin(account)} className="text-left bg-white border border-asteria-cream rounded-xl p-3 hover:border-asteria-primary transition-all">
-                  <div className="font-bold text-asteria-dark">{account.label}</div>
-                  <div className="text-xs text-stone-500 mt-1">account: {account.username}</div>
-                  <div className="text-xs text-stone-400">{account.email}</div>
-                  <div className="text-xs text-stone-400">password: {account.password}</div>
-                </button>
-              ))}
-            </div>
           </div>
 
           <div className="text-sm text-stone-500 text-center">
