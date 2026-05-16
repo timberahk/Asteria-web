@@ -28,112 +28,79 @@ const Navbar = () => (
 );
 
 const Hero = () => (
-  <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-amber-50 via-white to-cyan-50">
-    {/* Animated Background Elements */}
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-asteria-cream/20 rounded-full blur-[100px] animate-pulse"></div>
-       <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-asteria-blue/20 rounded-full blur-[100px] animate-pulse" style={{animationDelay: '2s'}}></div>
-       <div className="absolute top-[20%] left-[15%] text-asteria-yellow text-4xl opacity-40 animate-bounce-slow"><i className="fa-solid fa-star"></i></div>
-       <div className="absolute top-[60%] right-[10%] text-asteria-primary text-2xl opacity-30 animate-bounce-slow" style={{animationDelay: '1s'}}><i className="fa-solid fa-moon"></i></div>
-       <div className="absolute top-[15%] right-[30%] text-rose-200 text-3xl opacity-30 animate-spin-slow"><i className="fa-regular fa-snowflake"></i></div>
-    </div>
+  <section className="relative pt-28 pb-16 overflow-hidden bg-[#FFF7EA] border-b border-asteria-cream/70">
+    <div className="absolute inset-0 pointer-events-none opacity-70 bg-[linear-gradient(90deg,rgba(248,222,154,0.26)_1px,transparent_1px),linear-gradient(rgba(248,222,154,0.22)_1px,transparent_1px)] bg-[size:34px_34px]"></div>
 
     <div className="container mx-auto px-6 relative z-10">
-      <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-        
-        {/* Left Content */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur border border-asteria-cream/50 px-4 py-1.5 rounded-full text-asteria-primary text-sm font-bold mb-6 shadow-sm">
-             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-asteria-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-asteria-primary"></span>
-            </span>
-            專注高階白魔法 ＆ 塔羅占卜
+      <div className="grid lg:grid-cols-[1.05fr_0.95fr] items-center gap-10 lg:gap-16">
+        <div className="text-center lg:text-left animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 bg-white/80 border border-asteria-yellow/70 px-4 py-2 rounded-full text-asteria-primary text-sm font-bold mb-6 shadow-sm">
+            <i className="fa-solid fa-star text-amber-500 text-xs"></i>
+            Since 2019 · 西班牙儀式與塔羅分析
           </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 leading-tight tracking-tight">
-            感情問題<span className="text-transparent bg-clip-text bg-gradient-to-r from-asteria-primary to-amber-500">有救了！</span>
-            <br />
-            <span className="text-2xl md:text-4xl mt-4 block font-medium text-gray-600">
-               讓對方<span className="relative inline-block mx-2 after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-full after:h-3 after:bg-asteria-yellow/60 after:-z-10">重新愛上你</span>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-asteria-dark leading-tight tracking-tight">
+            Asteria
+            <span className="block text-2xl md:text-4xl mt-3 text-asteria-primary">
+              陪你把感情局面慢慢拉回來
             </span>
           </h1>
-          
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-            Asteria 獨家西班牙儀式與精準塔羅分析。
-            無論是分手復合、趕走第三者，還是想知道他的真心話，
-            我們都有對應的解決方案。
+
+          <p className="text-lg text-stone-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            用溫柔但清晰的方式，為復合、斷聯、曖昧、第三者與關係卡住的個案，
+            配合塔羅分析與儀式方向，幫你看清下一步。
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a href="#services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
-              <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看所有儀式
+              <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看儀式分類
             </a>
-            <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="bg-white text-gray-700 border-2 border-gray-100 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 hover:border-asteria-cream/30">
-              <i className="fa-brands fa-instagram text-xl"></i> 追蹤 Instagram
+            <a href="#oracle" className="bg-white text-asteria-primary border-2 border-asteria-yellow/70 px-8 py-4 rounded-xl font-bold hover:bg-asteria-yellow/20 transition-all flex items-center justify-center gap-2">
+              <i className="fa-solid fa-star"></i> 今日指引
             </a>
           </div>
 
-          <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 font-medium">
-            <div className="flex items-center gap-2">
-              <i className="fa-solid fa-check-circle text-green-400"></i> 11,000+ 成功個案
-            </div>
-            <div className="flex items-center gap-2">
-              <i className="fa-solid fa-check-circle text-green-400"></i> 90% 回頭客好評
-            </div>
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 text-left">
+            {[
+              ["11,000+", "累積個案"],
+              ["私隱", "一對一跟進"],
+              ["分類", "快速找方向"]
+            ].map(([num, label]) => (
+              <div key={label} className="bg-white/75 border border-asteria-cream/70 rounded-xl px-4 py-3 shadow-sm">
+                <div className="text-asteria-primary font-bold text-lg">{num}</div>
+                <div className="text-stone-500 text-xs">{label}</div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Visuals (Rich Graphics) */}
-        <div className="w-full lg:w-1/2 relative min-h-[400px] md:min-h-[500px] flex items-center justify-center animate-float">
-            {/* Main Circle Background */}
-            <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] border border-asteria-cream/30 rounded-full animate-spin-slow-reverse opacity-50"></div>
-            <div className="absolute w-[300px] h-[300px] md:w-[420px] md:h-[420px] border border-dashed border-asteria-primary/20 rounded-full animate-spin-slow"></div>
-            
-            {/* Center "Phone" Card */}
-            <div className="relative w-64 md:w-72 bg-white rounded-3xl shadow-2xl border-4 border-white overflow-hidden z-20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-500">
-                <div className="bg-gradient-to-r from-asteria-primary to-amber-500 p-4 flex items-center gap-3 text-white">
-                    <img src={LOGO_SRC} className="w-8 h-8 rounded-full border border-white/40 logo-img bg-white p-0.5" alt="Asteria logo" />
-                    <div className="font-bold text-sm">Asteria Tarot</div>
+        <div className="relative flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-md bg-white border border-asteria-cream rounded-2xl shadow-xl p-6 md:p-8">
+            <div className="flex items-center gap-4 border-b border-asteria-cream/70 pb-5 mb-5">
+              <img src={LOGO_SRC} className="w-24 h-24 rounded-2xl border border-asteria-yellow/70 bg-white object-contain shadow-sm" alt="Asteria logo" />
+              <div>
+                <div className="font-eng text-2xl font-bold text-asteria-dark">Asteria</div>
+                <div className="text-sm text-stone-500 tracking-wide">Crystal Tarot</div>
+                <div className="mt-2 inline-flex items-center gap-1 text-xs text-amber-700 bg-amber-50 border border-amber-100 px-2 py-1 rounded-full">
+                  <i className="fa-solid fa-heart text-rose-400"></i> warm magic, soft guidance
                 </div>
-                <div className="p-4 bg-gray-50 h-64 flex flex-col gap-3">
-                    <div className="bg-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-gray-600 max-w-[85%] self-start">
-                        你要相信，你們的緣分還未斷。這張牌顯示他心裡還有你... 🌸
-                    </div>
-                    <div className="bg-amber-50 p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-amber-900 max-w-[85%] self-end">
-                         真的嗎？我昨晚真的夢見他找我了！😭 多謝你 Asteria！
-                    </div>
-                    <div className="bg-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-gray-600 max-w-[85%] self-start flex items-center gap-2">
-                         <i className="fa-solid fa-gift text-rose-400"></i> [儀式生效通知] 對方正在輸入中...
-                    </div>
-                </div>
-                {/* Notification Badge */}
-                <div className="absolute top-20 right-[-10px] bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-bounce">
-                    New Message!
-                </div>
+              </div>
             </div>
 
-            {/* Floating Cards / Crystals */}
-            <div className="absolute top-10 left-0 md:left-10 bg-white p-2 rounded-lg shadow-lg rotate-12 animate-float" style={{animationDelay: '0.5s'}}>
-                <div className="w-16 h-24 bg-gradient-to-br from-yellow-100 to-orange-100 rounded border border-yellow-200 flex flex-col items-center justify-center">
-                    <i className="fa-solid fa-sun text-2xl text-orange-400"></i>
-                    <span className="text-[8px] mt-1 font-bold text-orange-800 uppercase">The Sun</span>
-                </div>
+            <div className="space-y-3">
+              <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-xl p-4 text-sm text-stone-600 leading-relaxed">
+                「你而家最需要未必係追問答案，而係知道下一步點樣做先唔會再消耗自己。」
+              </div>
+              <div className="grid grid-cols-3 gap-2 text-center text-xs font-bold text-asteria-primary">
+                <div className="bg-asteria-yellow/35 rounded-xl py-3">復合</div>
+                <div className="bg-asteria-pink/35 rounded-xl py-3">破冰</div>
+                <div className="bg-asteria-blue/35 rounded-xl py-3">清理</div>
+              </div>
+              <a href="https://wa.me/85259413688" target="_blank" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢
+              </a>
             </div>
-            
-            <div className="absolute bottom-20 right-0 md:right-10 bg-white p-2 rounded-lg shadow-lg -rotate-12 animate-float" style={{animationDelay: '1.5s'}}>
-                 <div className="w-16 h-24 bg-gradient-to-br from-rose-50 to-orange-100 rounded border border-rose-100 flex flex-col items-center justify-center">
-                    <i className="fa-solid fa-heart text-2xl text-rose-400"></i>
-                    <span className="text-[8px] mt-1 font-bold text-rose-800 uppercase">Lovers</span>
-                </div>
-            </div>
-
-            <div className="absolute top-1/2 right-[-20px] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-cyan-500 text-xl animate-pulse z-30">
-                <i className="fa-solid fa-gem"></i>
-            </div>
-             <div className="absolute bottom-10 left-20 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-amber-500 text-lg animate-bounce z-30">
-                <i className="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -607,17 +574,19 @@ const Services = () => {
     { icon: "fa-solid fa-shield-heart", color: "bg-cyan-50 text-cyan-600" },
     { icon: "fa-solid fa-broom", color: "bg-teal-50 text-teal-500" },
     { icon: "fa-solid fa-bolt", color: "bg-yellow-50 text-yellow-600" },
-    { icon: "fa-solid fa-link", color: "bg-indigo-50 text-indigo-500" },
+    { icon: "fa-solid fa-link", color: "bg-stone-100 text-stone-600" },
     { icon: "fa-solid fa-gem", color: "bg-rose-50 text-rose-500" }
   ];
 
   const applyStyle = (items: Array<{ title: string; desc: string; tags: string[] }>) =>
     items.map((item, idx) => ({ ...item, ...iconStyles[idx % iconStyles.length] }));
 
-  const serviceGroups: Record<ServiceCategory, { label: string; intro: string; single: ReturnType<typeof applyStyle>; sets: ReturnType<typeof applyStyle> }> = {
+  const serviceGroups: Record<ServiceCategory, { label: string; intro: string; icon: string; tone: string; single: ReturnType<typeof applyStyle>; sets: ReturnType<typeof applyStyle> }> = {
     love: {
       label: "愛情",
       intro: "復合、曖昧升溫、斷聯破冰、穩定關係與桃花方向。",
+      icon: "fa-solid fa-heart",
+      tone: "bg-rose-50 border-rose-100 text-rose-700",
       single: applyStyle([
         { title: "絕望", desc: "加強對方失去你後的空缺感與想念感，協助對方意識到無咗你好辛苦、始終想要你的情緒牽引。", tags: ["想念", "挽回", "情緒牽引"] },
         { title: "開路", desc: "突破現有關係卡住的位置，清除相處阻礙，增加聯絡、見面與發展機會。", tags: ["突破阻礙", "推進關係", "增加機會"] },
@@ -665,6 +634,8 @@ const Services = () => {
     career: {
       label: "金錢事業",
       intro: "工作順利、事業上升、財運、貴人、人緣與機會方向。",
+      icon: "fa-solid fa-coins",
+      tone: "bg-amber-50 border-amber-100 text-amber-800",
       single: applyStyle([
         { title: "工作", desc: "協助工作更順利，適合近期工作卡住、合作不順或想穩定職場狀態時。", tags: ["工作順利", "職場", "穩定"] },
         { title: "開路", desc: "清除工作上的阻礙，打開新機會、合作空間與職場發展路線。", tags: ["清除阻礙", "工作機會", "發展"] },
@@ -682,6 +653,8 @@ const Services = () => {
     other: {
       label: "其他",
       intro: "能量清理、防護、個人狀態、放下、淡忘與特殊個案方向。",
+      icon: "fa-solid fa-leaf",
+      tone: "bg-cyan-50 border-cyan-100 text-cyan-800",
       single: applyStyle([
         { title: "清負", desc: "清理個人氣場、關係或生活中的低頻能量，適合近期覺得沉重、混亂或運勢受阻時。", tags: ["清負能量", "淨化", "重新整理"] },
         { title: "特請", desc: "按個案目標特別配置，適合情況複雜、單一儀式未能完整覆蓋的需求。", tags: ["客製化", "複雜個案", "指定方向"] },
@@ -712,37 +685,42 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 px-4 bg-white">
+    <section id="services" className="py-20 px-4 bg-[#FFFDF8]">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">服務項目</h2>
-          <p className="text-gray-500 mb-8">先按方向分類，再選擇單項儀式或組合儀式，詳情可 WhatsApp 查詢配搭。</p>
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-asteria-primary bg-asteria-yellow/30 border border-asteria-yellow/50 px-3 py-1 rounded-full mb-4">
+            <i className="fa-solid fa-star"></i> Ritual Menu
+          </div>
+          <h2 className="text-3xl font-bold text-asteria-dark mb-4">服務項目</h2>
+          <p className="text-stone-500 mb-8">先揀你想處理嘅方向，再睇單項或組合儀式，畫面會清爽好多。</p>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
             {categories.map(([key, group]) => (
               <button
                 key={key}
                 onClick={() => handleCategoryChange(key)}
-                className={`px-6 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeCategory === key ? 'bg-asteria-primary text-white shadow-md transform scale-105' : 'bg-gray-100 text-gray-500 hover:text-gray-700 hover:bg-gray-200'}`}
+                className={`text-left rounded-2xl border p-5 transition-all duration-300 ${activeCategory === key ? 'bg-white border-asteria-primary shadow-lg -translate-y-1' : `${group.tone} hover:bg-white hover:shadow-md`}`}
               >
-                {group.label}
+                <span className={`w-11 h-11 rounded-xl inline-flex items-center justify-center mb-4 ${activeCategory === key ? 'bg-asteria-primary text-white' : 'bg-white/80'}`}>
+                  <i className={group.icon}></i>
+                </span>
+                <span className="block text-lg font-bold text-asteria-dark">{group.label}</span>
+                <span className="block text-sm text-stone-500 mt-2 leading-relaxed">{group.intro}</span>
               </button>
             ))}
           </div>
 
-          <p className="text-sm text-gray-400 mb-8">{currentGroup.intro}</p>
-
           <div className="flex justify-center mb-10">
-            <div className="bg-gray-100 p-1.5 rounded-full inline-flex relative shadow-inner">
+            <div className="bg-asteria-cream/60 p-1.5 rounded-full inline-flex relative shadow-inner border border-white">
               <button 
                 onClick={() => setActiveType('single')}
-                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'single' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-gray-500 hover:text-gray-700'}`}
+                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'single' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
               >
                 <i className="fa-solid fa-wand-sparkles mr-2"></i> 單項儀式
               </button>
               <button 
                 onClick={() => setActiveType('sets')}
-                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'sets' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-gray-500 hover:text-gray-700'}`}
+                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'sets' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
               >
                 <i className="fa-solid fa-layer-group mr-2"></i> 組合儀式
               </button>
@@ -753,22 +731,22 @@ const Services = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
           {activeItems.map((item, idx) => (
-            <div key={`${activeCategory}-${activeType}-${idx}`} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-cream/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
-              <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform`}>
+            <div key={`${activeCategory}-${activeType}-${idx}`} className="bg-white border border-asteria-cream/60 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-yellow/70 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform`}>
                 <i className={item.icon}></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-              <p className="text-gray-500 text-sm mb-4 leading-relaxed flex-grow">
+              <h3 className="text-xl font-bold text-asteria-dark mb-2">{item.title}</h3>
+              <p className="text-stone-500 text-sm mb-4 leading-relaxed flex-grow">
                 {item.desc}
               </p>
               
               <div className="flex flex-wrap gap-2 mb-6">
                 {item.tags.map((tag, tIdx) => (
-                  <span key={tIdx} className="text-xs bg-gray-50 text-gray-500 px-2 py-1 rounded-md"># {tag}</span>
+                  <span key={tIdx} className="text-xs bg-[#FFF8EC] text-stone-500 px-2 py-1 rounded-md border border-asteria-cream/50"># {tag}</span>
                 ))}
               </div>
 
-              <a href="https://wa.me/85259413688" target="_blank" className="w-full text-center border-2 border-asteria-cream/20 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
+              <a href="https://wa.me/85259413688" target="_blank" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
                 查詢詳情
               </a>
             </div>
