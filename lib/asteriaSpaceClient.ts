@@ -54,6 +54,13 @@ export type SpaceMessage = {
   created_at: string;
 };
 
+export type StaffInboxCustomer = {
+  account: SpaceAccount | null;
+  profile: SpaceProfile | null;
+  thread: SpaceThread;
+  messages: SpaceMessage[];
+};
+
 const requireSupabase = () => {
   if (!supabase) throw new Error('Supabase 未設定，依家會繼續用本地 demo。');
   return supabase;
@@ -166,7 +173,21 @@ export const getMySpace = async () => {
   };
 };
 
-export const uploadSpaceImages = async (files: FileList | File[]) => {
+export const getSignedImageMap = async (paths: string[]) => {
+  const client = requireSupabase();
+  const uniquePaths = [...new Set(paths.filter(Boolean))];
+  if (uniquePaths.length === 0) return {} as Record<string, string>;
+
+  const { data, error } = await client.storage.from('space-uploads').createSignedUrls(uniquePaths, 60 * 60);
+  if (error) throw error;
+
+  return (data || []).reduce<Record<string, string>>((map, item) => {
+    if (item.path && item.signedUrl) map[item.path] = item.signedUrl;
+    return map;
+  }, {});
+};
+
+export const uploadSpaceImages = async (files: FileList | File[], ownerUserId?: string) => {
   const client = requireSupabase();
   const { data: userData, error: userError } = await client.auth.getUser();
   if (userError || !userData.user) throw new Error('請先登入。');
@@ -176,7 +197,8 @@ export const uploadSpaceImages = async (files: FileList | File[]) => {
 
   for (const file of selectedFiles) {
     const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '-');
-    const path = `${userData.user.id}/${Date.now()}-${safeName}`;
+    const pathOwner = ownerUserId || userData.user.id;
+    const path = `${pathOwner}/${Date.now()}-${safeName}`;
     const { error } = await client.storage.from('space-uploads').upload(path, file, {
       cacheControl: '3600',
       upsert: false
@@ -200,6 +222,72 @@ export const sendMyMessage = async (threadId: string, body: string, imagePaths: 
       customer_id: userData.user.id,
       sender_id: userData.user.id,
       sender_role: 'customer',
+      body,
+      image_urls: imagePaths
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as SpaceMessage;
+};
+
+export const listStaffInbox = async () => {
+  const client = requireSupabase();
+
+  const { data: threads, error: threadError } = await client
+    .from('message_threads')
+    .select('*')
+    .order('last_message_at', { ascending: false });
+  if (threadError) throw threadError;
+
+  const threadRows = (threads || []) as SpaceThread[];
+  const customerIds = threadRows.map((thread) => thread.customer_id);
+  if (customerIds.length === 0) return [] as StaffInboxCustomer[];
+
+  const [accountResult, profileResult, messageResult] = await Promise.all([
+    client.from('user_accounts').select('user_id, username, role, label, contact_email').in('user_id', customerIds),
+    client.from('profiles').select('*').in('id', customerIds),
+    client.from('chat_messages').select('*').in('thread_id', threadRows.map((thread) => thread.id)).order('created_at', { ascending: true })
+  ]);
+
+  if (accountResult.error) throw accountResult.error;
+  if (profileResult.error) throw profileResult.error;
+  if (messageResult.error) throw messageResult.error;
+
+  const accounts = ((accountResult.data || []) as SpaceAccount[]).reduce<Record<string, SpaceAccount>>((map, account) => {
+    map[account.user_id] = account;
+    return map;
+  }, {});
+  const profiles = ((profileResult.data || []) as SpaceProfile[]).reduce<Record<string, SpaceProfile>>((map, profile) => {
+    map[profile.id] = profile;
+    return map;
+  }, {});
+  const messagesByThread = ((messageResult.data || []) as SpaceMessage[]).reduce<Record<string, SpaceMessage[]>>((map, message) => {
+    map[message.thread_id] = [...(map[message.thread_id] || []), message];
+    return map;
+  }, {});
+
+  return threadRows.map((thread) => ({
+    account: accounts[thread.customer_id] || null,
+    profile: profiles[thread.customer_id] || null,
+    thread,
+    messages: messagesByThread[thread.id] || []
+  }));
+};
+
+export const staffSendMessage = async (threadId: string, customerId: string, body: string, imagePaths: string[]) => {
+  const client = requireSupabase();
+  const { data: userData, error: userError } = await client.auth.getUser();
+  if (userError || !userData.user) throw new Error('請先登入。');
+
+  const { data, error } = await client
+    .from('chat_messages')
+    .insert({
+      thread_id: threadId,
+      customer_id: customerId,
+      sender_id: userData.user.id,
+      sender_role: 'admin',
       body,
       image_urls: imagePaths
     })

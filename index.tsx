@@ -2,12 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   getCurrentAccount,
+  getMySpace,
+  getSignedImageMap,
   isBackendConfigured,
+  listStaffInbox,
   loginWithUsername,
+  sendMyMessage,
   signOutSpace,
   staffCreateAccount,
   staffDeleteAccount,
-  staffResetPassword
+  staffSendMessage,
+  staffResetPassword,
+  upsertMyProfile,
+  uploadSpaceImages
 } from './lib/asteriaSpaceClient';
 
 // --- Components ---
@@ -1013,7 +1020,7 @@ type PortalEntry = {
 };
 
 type ChatMessage = {
-  id: number;
+  id: number | string;
   sender: 'customer' | 'admin';
   text: string;
   images?: string[];
@@ -1022,6 +1029,7 @@ type ChatMessage = {
 
 type PortalCustomer = {
   id: string;
+  threadId?: string;
   name: string;
   phone: string;
   whatsapp?: string;
@@ -1395,6 +1403,7 @@ const PortalPage = () => {
   const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile'>('dashboard');
 
   useEffect(() => {
+    if (isBackendConfigured) return;
     savePortalCustomers(customers);
   }, [customers]);
 
@@ -1807,6 +1816,9 @@ const SpacePortalPage = () => {
   const [activeCustomerId] = useState(currentCustomerId || customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
   const [chatText, setChatText] = useState('');
   const [chatImages, setChatImages] = useState<string[]>([]);
+  const [chatImageFiles, setChatImageFiles] = useState<File[]>([]);
+  const [backendThreadId, setBackendThreadId] = useState<string | null>(null);
+  const [spaceMessage, setSpaceMessage] = useState('');
   const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile'>('dashboard');
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -1824,6 +1836,7 @@ const SpacePortalPage = () => {
   const needsFirstProfile = !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.email && !activeCustomer?.targetName;
 
   useEffect(() => {
+    if (isBackendConfigured) return;
     savePortalCustomers(customers);
   }, [customers]);
 
@@ -1831,19 +1844,93 @@ const SpacePortalPage = () => {
     saveSystemAccounts(accounts);
   }, [accounts]);
 
+  const loadBackendSpace = async () => {
+    if (!isBackendConfigured) return;
+    try {
+      const space = await getMySpace();
+      const imageMap = await getSignedImageMap(space.messages.flatMap((message) => message.image_urls || []));
+      const mappedMessages: ChatMessage[] = space.messages.map((message) => ({
+        id: message.id,
+        sender: message.sender_role === 'admin' ? 'admin' : 'customer',
+        text: message.body,
+        images: (message.image_urls || []).map((path) => imageMap[path] || path),
+        createdAt: message.created_at
+      }));
+      const profile = space.profile;
+      const nextCustomer: PortalCustomer = {
+        id: space.account.user_id,
+        name: profile?.display_name || space.account.label,
+        phone: profile?.phone_number || '',
+        whatsapp: profile?.whatsapp || '',
+        igHandle: profile?.ig_handle || '',
+        telegramHandle: profile?.telegram_handle || '',
+        email: profile?.contact_email || space.account.contact_email || '',
+        targetName: profile?.self_name || '',
+        originalChannel: 'Asteria Space',
+        interests: activeCustomer?.interests || [],
+        entries: activeCustomer?.entries || [],
+        messages: mappedMessages
+      };
+      setBackendThreadId(space.thread.id);
+      setCustomers((current) => [nextCustomer, ...current.filter((customer) => customer.id !== nextCustomer.id)]);
+      window.localStorage.setItem('asteriaCurrentCustomerId', nextCustomer.id);
+      setProfileName(nextCustomer.name);
+      setProfilePhone(nextCustomer.phone);
+      setProfileWhatsapp(nextCustomer.whatsapp || nextCustomer.phone);
+      setProfileIg(nextCustomer.igHandle || '');
+      setProfileTelegram(nextCustomer.telegramHandle || '');
+      setProfileEmail(nextCustomer.email || '');
+      setProfileSelfName(nextCustomer.targetName || '');
+    } catch (error) {
+      setSpaceMessage(error instanceof Error ? error.message : 'Asteria Space 資料暫時載入唔到。');
+    }
+  };
+
+  useEffect(() => {
+    loadBackendSpace();
+  }, []);
+
   const updateCustomer = (updater: (customer: PortalCustomer) => PortalCustomer) => {
     if (!activeCustomer) return;
     setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? updater(customer) : customer));
   };
 
   const handleImageUpload = async (files: FileList | null) => {
+    setChatImageFiles((current) => [...current, ...Array.from(files || [])]);
     const images = await readFilesAsDataUrls(files);
     setChatImages((current) => [...current, ...images]);
   };
 
-  const sendChatMessage = () => {
+  const sendChatMessage = async () => {
     const trimmed = chatText.trim();
     if ((!trimmed && chatImages.length === 0) || !activeCustomer) return;
+    if (isBackendConfigured && backendThreadId) {
+      try {
+        const imagePaths = chatImageFiles.length ? await uploadSpaceImages(chatImageFiles) : [];
+        const message = await sendMyMessage(backendThreadId, trimmed, imagePaths);
+        const imageMap = await getSignedImageMap(message.image_urls || []);
+        updateCustomer((customer) => ({
+          ...customer,
+          messages: [
+            ...(customer.messages || []),
+            {
+              id: message.id,
+              sender: 'customer',
+              text: message.body,
+              images: (message.image_urls || []).map((path) => imageMap[path] || path),
+              createdAt: message.created_at
+            }
+          ]
+        }));
+        setChatText('');
+        setChatImages([]);
+        setChatImageFiles([]);
+        setSpaceMessage('');
+      } catch (error) {
+        setSpaceMessage(error instanceof Error ? error.message : '訊息送出失敗。');
+      }
+      return;
+    }
     updateCustomer((customer) => ({
       ...customer,
       messages: [
@@ -1853,6 +1940,7 @@ const SpacePortalPage = () => {
     }));
     setChatText('');
     setChatImages([]);
+    setChatImageFiles([]);
   };
 
   const changePassword = () => {
@@ -1877,6 +1965,19 @@ const SpacePortalPage = () => {
   };
 
   const saveProfile = () => {
+    if (isBackendConfigured) {
+      upsertMyProfile({
+        display_name: profileName.trim() || activeCustomer?.name || 'Asteria Space user',
+        self_name: profileSelfName.trim(),
+        phone_number: profilePhone.trim(),
+        whatsapp: profileWhatsapp.trim(),
+        ig_handle: profileIg.trim(),
+        telegram_handle: profileTelegram.trim(),
+        contact_email: profileEmail.trim()
+      }).catch((error) => {
+        setProfileMessage(error instanceof Error ? error.message : '資料暫時儲存唔到。');
+      });
+    }
     updateCustomer((customer) => ({
       ...customer,
       name: profileName.trim() || customer.name,
@@ -1911,6 +2012,7 @@ const SpacePortalPage = () => {
             </div>
             <button onClick={saveProfile} className="btn-primary w-full rounded-xl px-6 py-3 font-bold mt-6">儲存並進入 Space</button>
             {profileMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{profileMessage}</div>}
+            {spaceMessage && <div className="text-sm font-bold text-red-500 mt-3">{spaceMessage}</div>}
           </section>
         </div>
       </main>
@@ -1929,6 +2031,7 @@ const SpacePortalPage = () => {
                 </button>
                 <div className="font-bold text-asteria-dark text-lg">Inbox</div>
                 <div className="text-xs text-stone-400">{(activeCustomer?.messages || []).length} 則訊息 · 可 upload 對話截圖</div>
+                {spaceMessage && <div className="text-xs font-bold text-red-500 mt-1">{spaceMessage}</div>}
               </div>
               <span className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl">Asteria Space</span>
             </div>
@@ -2404,6 +2507,7 @@ const AdminInboxPage = () => {
   const [adminView, setAdminView] = useState<'inbox' | 'accounts'>('inbox');
   const [replyText, setReplyText] = useState('');
   const [replyImages, setReplyImages] = useState<string[]>([]);
+  const [replyImageFiles, setReplyImageFiles] = useState<File[]>([]);
   const [newAccountName, setNewAccountName] = useState('');
   const [newAccountUsername, setNewAccountUsername] = useState('');
   const [newAccountEmail, setNewAccountEmail] = useState('');
@@ -2432,6 +2536,47 @@ const AdminInboxPage = () => {
     saveSystemAccounts(accounts);
   }, [accounts]);
 
+  const loadBackendInbox = async () => {
+    if (!isBackendConfigured) return;
+    try {
+      const inbox = await listStaffInbox();
+      const imageMap = await getSignedImageMap(inbox.flatMap((item) => item.messages.flatMap((message) => message.image_urls || [])));
+      const nextCustomers: PortalCustomer[] = inbox.map((item) => {
+        const profile = item.profile;
+        const account = item.account;
+        return {
+          id: item.thread.customer_id,
+          threadId: item.thread.id,
+          name: profile?.display_name || account?.label || account?.username || 'Asteria 客人',
+          phone: profile?.phone_number || '',
+          whatsapp: profile?.whatsapp || '',
+          igHandle: profile?.ig_handle || '',
+          telegramHandle: profile?.telegram_handle || '',
+          email: profile?.contact_email || account?.contact_email || '',
+          targetName: profile?.self_name || '',
+          originalChannel: 'Asteria Space',
+          interests: [],
+          entries: [],
+          messages: item.messages.map((message) => ({
+            id: message.id,
+            sender: message.sender_role === 'admin' ? 'admin' : 'customer',
+            text: message.body,
+            images: (message.image_urls || []).map((path) => imageMap[path] || path),
+            createdAt: message.created_at
+          }))
+        };
+      });
+      setCustomers(nextCustomers);
+      if (nextCustomers[0]) setActiveCustomerId(nextCustomers[0].id);
+    } catch (error) {
+      setAccountMessage(error instanceof Error ? error.message : 'Staff inbox 暫時載入唔到。');
+    }
+  };
+
+  useEffect(() => {
+    loadBackendInbox();
+  }, []);
+
   const getUnreadCount = (customer: PortalCustomer) => {
     const messages = customer.messages || [];
     const lastAdminIndex = [...messages].map((message) => message.sender).lastIndexOf('admin');
@@ -2445,9 +2590,35 @@ const AdminInboxPage = () => {
     setReplyImages([]);
   };
 
-  const sendReply = () => {
+  const sendReply = async () => {
     const trimmed = replyText.trim();
     if ((!trimmed && replyImages.length === 0) || !activeCustomer) return;
+    if (isBackendConfigured && activeCustomer.threadId) {
+      try {
+        const imagePaths = replyImageFiles.length ? await uploadSpaceImages(replyImageFiles, activeCustomer.id) : [];
+        const message = await staffSendMessage(activeCustomer.threadId, activeCustomer.id, trimmed, imagePaths);
+        const imageMap = await getSignedImageMap(message.image_urls || []);
+        setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? {
+          ...customer,
+          messages: [
+            ...(customer.messages || []),
+            {
+              id: message.id,
+              sender: 'admin',
+              text: message.body,
+              images: (message.image_urls || []).map((path) => imageMap[path] || path),
+              createdAt: message.created_at
+            }
+          ]
+        } : customer));
+        setReplyText('');
+        setReplyImages([]);
+        setReplyImageFiles([]);
+      } catch (error) {
+        setAccountMessage(error instanceof Error ? error.message : '回覆送出失敗。');
+      }
+      return;
+    }
     setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? {
       ...customer,
       messages: [
@@ -2460,6 +2631,7 @@ const AdminInboxPage = () => {
   };
 
   const handleReplyImages = async (files: FileList | null) => {
+    setReplyImageFiles((current) => [...current, ...Array.from(files || [])]);
     const images = await readFilesAsDataUrls(files);
     setReplyImages((current) => [...current, ...images]);
   };
