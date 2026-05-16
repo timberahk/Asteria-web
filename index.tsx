@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
+import {
+  isBackendConfigured,
+  loginWithUsername,
+  staffCreateAccount,
+  staffDeleteAccount,
+  staffResetPassword
+} from './lib/asteriaSpaceClient';
 
 // --- Components ---
 
 const LOGO_SRC = "/asteria-logo.jpg";
+const WHATSAPP_URL = "https://wa.me/85259413688";
+const TELEGRAM_URL = "";
+const FACEBOOK_URL = "https://www.facebook.com/share/p/1aAk2CJBt8/";
 
 const Navbar = () => (
   <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
@@ -11,24 +21,42 @@ const Navbar = () => (
       <div className="flex items-center gap-2">
         <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
         <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
-          ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">Crystal Tarot</span>
+          ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">感情拯救所</span>
         </div>
       </div>
       <div className="flex gap-3 md:gap-8 text-sm md:text-base font-medium text-gray-600 items-center">
         <a href="#oracle" className="hover:text-asteria-primary transition-colors hidden md:inline-block"><i className="fa-solid fa-star text-xs"></i> 每日指引</a>
-        <a href="#blog" className="hover:text-asteria-primary transition-colors hidden md:inline-block">愛情補習社</a>
+        <a href="#teaching" className="hover:text-asteria-primary transition-colors hidden md:inline-block">相處教學</a>
         <a href="#services" className="hover:text-asteria-primary transition-colors">服務</a>
         <a href="#reviews" className="hover:text-asteria-primary transition-colors">好評</a>
-        <a href="https://wa.me/85259413688" target="_blank" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-1">
+        <a href="#register" className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
+          <i className="fa-regular fa-user"></i> <span className="hidden sm:inline">Asteria </span>Space
+        </a>
+        <a href={WHATSAPP_URL} target="_blank" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-1">
           <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
         </a>
+      </div>
+    </div>
+    <div className="bg-asteria-dark text-white">
+      <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-4 text-xs md:text-sm text-center">
+        <span className="font-bold">IG帳號暫停通知</span>
+        <span className="text-white/80">請用 WhatsApp / Facebook / Telegram 聯絡我地：</span>
+        <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-white px-3 py-1 rounded-full font-bold">
+          <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
+        </a>
+        <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
+          <i className="fa-brands fa-facebook-f"></i> Facebook
+        </a>
+        <span className="inline-flex items-center justify-center gap-1 bg-white/12 border border-white/20 px-3 py-1 rounded-full font-bold">
+          <i className="fa-brands fa-telegram"></i> Telegram 待公布
+        </span>
       </div>
     </div>
   </nav>
 );
 
 const Hero = () => (
-  <section className="relative pt-28 pb-16 overflow-hidden bg-[#FFF7EA] border-b border-asteria-cream/70">
+  <section className="relative pt-56 md:pt-40 pb-16 overflow-hidden bg-[#FFF7EA] border-b border-asteria-cream/70">
     <div className="absolute inset-0 pointer-events-none opacity-70 bg-[linear-gradient(90deg,rgba(248,222,154,0.26)_1px,transparent_1px),linear-gradient(rgba(248,222,154,0.22)_1px,transparent_1px)] bg-[size:34px_34px]"></div>
 
     <div className="container mx-auto px-6 relative z-10">
@@ -42,16 +70,58 @@ const Hero = () => (
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-asteria-dark leading-tight tracking-tight">
             Asteria
             <span className="block text-2xl md:text-4xl mt-3 text-asteria-primary">
-              陪你把感情局面慢慢拉回來
+              你的感情由你話事！
             </span>
           </h1>
 
           <p className="text-lg text-stone-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            用溫柔但清晰的方式，為復合、斷聯、曖昧、第三者與關係卡住的個案，
-            配合塔羅分析與儀式方向，幫你看清下一步。
+            所有感情煩惱一律建議搵我地。復合、斷聯、曖昧、第三者與關係卡住的個案，
+            我們會配合塔羅分析與儀式方向，幫你看清下一步。
           </p>
 
+          <div className="bg-white border border-asteria-yellow/70 rounded-2xl p-5 mb-8 shadow-sm max-w-xl mx-auto lg:mx-0 text-left">
+            <div className="flex items-start gap-3">
+              <div className="w-11 h-11 rounded-full bg-asteria-yellow/35 text-asteria-primary flex items-center justify-center shrink-0">
+                <i className="fa-solid fa-bullhorn"></i>
+              </div>
+              <div>
+                <div className="font-bold text-asteria-dark mb-1">IG帳號暫停通知</div>
+                <p className="text-sm text-stone-500 leading-relaxed mb-4">
+                  我地 Instagram 主帳及 backup 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
+                  </a>
+                  <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                    <i className="fa-brands fa-facebook-f"></i> Facebook
+                  </a>
+                  <span className="inline-flex items-center justify-center gap-2 bg-asteria-blue/40 text-asteria-dark border border-asteria-blue px-5 py-3 rounded-xl font-bold">
+                    <i className="fa-brands fa-telegram"></i> Telegram 待公布
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#FFF8EC] border border-asteria-cream rounded-2xl p-5 mb-8 shadow-sm max-w-xl mx-auto lg:mx-0 text-left">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+              <div>
+                <div className="font-bold text-asteria-dark mb-1">請留低你的聯絡資料</div>
+                <p className="text-sm text-stone-500 leading-relaxed">
+                  WhatsApp 照樣即時傾；Asteria Space 用嚟保存重要訊息、截圖同後備聯絡方法。
+                </p>
+              </div>
+              <a href="#register" className="bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shrink-0">
+                <i className="fa-regular fa-user"></i> 登入 Space
+              </a>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#register" className="bg-asteria-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+              <i className="fa-regular fa-address-card"></i> 留資料 / 登入 Space
+            </a>
             <a href="#services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
               <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看儀式分類
             </a>
@@ -96,7 +166,7 @@ const Hero = () => (
                 <div className="bg-asteria-pink/35 rounded-xl py-3">破冰</div>
                 <div className="bg-asteria-blue/35 rounded-xl py-3">清理</div>
               </div>
-              <a href="https://wa.me/85259413688" target="_blank" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
+              <a href={WHATSAPP_URL} target="_blank" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
                 <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢
               </a>
             </div>
@@ -355,7 +425,7 @@ const Oracle = () => {
                     </p>
                 </div>
 
-                <a href="https://wa.me/85259413688" target="_blank" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
+                <a href={WHATSAPP_URL} target="_blank" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
                     <i className="fa-brands fa-whatsapp"></i> 解鎖詳細占卜結果 (付費)
                 </a>
                 
@@ -375,7 +445,7 @@ const Oracle = () => {
 };
 
 // --- Blog Component (New) ---
-const Blog = () => {
+const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const [selectedPost, setSelectedPost] = useState<any>(null);
   
     const posts = [
@@ -383,8 +453,9 @@ const Blog = () => {
         id: 1,
         title: "明明只係小事，點解成日變嗌交？",
         category: "相處溝通",
-        color: "bg-blue-100",
+        color: "bg-asteria-blue/60",
         icon: "fa-regular fa-comments",
+        imageLabel: "溝通",
         summary: "拆解「情緒勒索」與「無效溝通」的惡性循環。學識這一招，讓爭吵變成了解。",
         content: `
           <h3 class="text-xl font-bold mb-4">為什麼我們總是為了小事吵架？</h3>
@@ -408,8 +479,9 @@ const Blog = () => {
         id: 2,
         title: "對方事事挑剔，令你唔敢再表達自己？",
         category: "自我價值",
-        color: "bg-amber-100",
+        color: "bg-asteria-yellow/50",
         icon: "fa-solid fa-person-rays",
+        imageLabel: "自信",
         summary: "如何面對「挑剔型」伴侶，重建自信。你不需要變得完美才值得被愛。",
         content: `
           <h3 class="text-xl font-bold mb-4">你是女朋友，不是他的員工</h3>
@@ -432,8 +504,9 @@ const Blog = () => {
         id: 3,
         title: "點解講極分手，佢都唔驚失去我？",
         category: "挽回攻略",
-        color: "bg-red-100",
+        color: "bg-asteria-pink/60",
         icon: "fa-solid fa-heart-circle-exclamation",
+        imageLabel: "底線",
         summary: "破解「假性分手」與「狼來了」效應。要讓對方學會珍惜，你需要的是底線。",
         content: `
           <h3 class="text-xl font-bold mb-4">別讓「分手」變成口頭禪</h3>
@@ -455,8 +528,9 @@ const Blog = () => {
         id: 4,
         title: "曖昧期必看！如何判斷佢係咪認真？",
         category: "脫單指南",
-        color: "bg-rose-100",
+        color: "bg-[#FFE7DD]",
         icon: "fa-regular fa-face-kiss-wink-heart",
+        imageLabel: "曖昧",
         summary: "區分「暖男」與「中央空調」。秒回不代表喜歡，細節見真章。",
         content: `
           <h3 class="text-xl font-bold mb-4">他對我是喜歡，還是釣魚？</h3>
@@ -478,25 +552,97 @@ const Blog = () => {
       }
     ];
   
+    if (fullPage) {
+      return (
+        <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+              <i className="fa-solid fa-arrow-left"></i> 返回首頁
+            </a>
+            <div className="mb-10 grid lg:grid-cols-[1fr_auto] gap-6 items-end">
+              <div>
+                <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
+                <h1 className="text-4xl font-bold text-asteria-dark mb-3">相處教學</h1>
+                <p className="text-stone-500 max-w-2xl">用 IG 圖文感覺慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
+              </div>
+              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="inline-flex items-center gap-2 bg-white border border-asteria-cream text-asteria-primary px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
+                <i className="fa-brands fa-instagram"></i> Instagram
+              </a>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+              {posts.map((post) => {
+                const isActive = selectedPost?.id === post.id;
+
+                return (
+                  <article
+                    key={post.id}
+                    className={`bg-white border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden ${isActive ? 'border-asteria-primary shadow-lg' : 'border-asteria-cream/70'}`}
+                  >
+                    <button
+                      onClick={() => setSelectedPost(isActive ? null : post)}
+                      className="group text-left w-full"
+                    >
+                      <div className={`${post.color} aspect-square relative overflow-hidden flex items-center justify-center`}>
+                        <div className="absolute inset-5 border border-white/70 rounded-2xl"></div>
+                        <div className="absolute top-4 left-4 bg-white/90 text-asteria-primary px-3 py-1 rounded-full text-xs font-bold shadow-sm">{post.category}</div>
+                        <div className="text-center px-8 relative z-10">
+                          <i className={`${post.icon} text-5xl text-white drop-shadow-md mb-5 block group-hover:scale-110 transition-transform duration-500`}></i>
+                          <div className="font-eng text-sm tracking-[0.2em] text-white/90 mb-2">ASTERIA</div>
+                          <div className="text-3xl font-bold text-asteria-dark">{post.imageLabel}</div>
+                        </div>
+                      </div>
+                      <div className="p-5">
+                        <h2 className="text-lg font-bold text-asteria-dark mb-2 leading-snug">{post.title}</h2>
+                        <p className="text-sm text-stone-500 leading-relaxed">{post.summary}</p>
+                        <div className="mt-4 inline-flex items-center gap-2 text-asteria-primary text-sm font-bold">
+                          {isActive ? '收起文字' : '展開文字'} <i className={`fa-solid fa-chevron-down transition-transform ${isActive ? 'rotate-180' : ''}`}></i>
+                        </div>
+                      </div>
+                    </button>
+                    {isActive && (
+                      <div className="px-5 pb-5">
+                        <div className="border-t border-asteria-cream/70 pt-5 text-sm text-stone-600 leading-loose" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                      </div>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </main>
+      );
+    }
+
     return (
       <section id="blog" className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-3">Asteria 愛情補習社</h2>
-            <p className="text-gray-500">不再在感情裡迷路，學會愛與被愛的智慧</p>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
+              <h2 className="text-3xl font-bold text-asteria-dark mb-3">相處教學</h2>
+              <p className="text-stone-500">不再在感情裡迷路，學會愛與被愛的智慧。</p>
+            </div>
+            <a href="#teaching" className="btn-primary px-5 py-3 rounded-xl font-bold inline-flex items-center gap-2 justify-center">
+              查看全部文章 <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
   
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {posts.map((post) => (
-              <div 
+              <a 
                 key={post.id} 
-                onClick={() => setSelectedPost(post)}
+                href="#teaching"
                 className="group cursor-pointer bg-white rounded-2xl border border-gray-100 hover:border-asteria-primary/30 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
                 {/* Visual Header */}
-                <div className={`h-40 ${post.color} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-white opacity-20 rotate-12 scale-150 translate-x-10 translate-y-10"></div>
-                  <i className={`${post.icon} text-6xl text-white/80 drop-shadow-md group-hover:scale-110 transition-transform duration-500`}></i>
+                <div className={`aspect-square ${post.color} flex items-center justify-center relative overflow-hidden`}>
+                  <div className="absolute inset-5 border border-white/70 rounded-2xl"></div>
+                  <div className="text-center px-6 relative z-10">
+                    <i className={`${post.icon} text-5xl text-white drop-shadow-md mb-4 block group-hover:scale-110 transition-transform duration-500`}></i>
+                    <div className="font-eng text-xs tracking-[0.2em] text-white/90 mb-2">ASTERIA</div>
+                    <div className="text-2xl font-bold text-asteria-dark">{post.imageLabel}</div>
+                  </div>
                   <span className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">
                     {post.category}
                   </span>
@@ -514,7 +660,7 @@ const Blog = () => {
                     閱讀更多 <i className="fa-solid fa-arrow-right ml-2"></i>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
@@ -525,7 +671,7 @@ const Blog = () => {
           </div>
   
           {/* Modal */}
-          {selectedPost && (
+          {false && selectedPost && (
             <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
               <div className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity" onClick={() => setSelectedPost(null)}></div>
               <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto relative z-10 shadow-2xl animate-fade-in-up">
@@ -547,7 +693,7 @@ const Blog = () => {
                     
                     <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
                         <span className="text-sm text-gray-400">想解決類似問題？</span>
-                        <a href="https://wa.me/85259413688" target="_blank" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
+                        <a href={WHATSAPP_URL} target="_blank" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
                             <i className="fa-brands fa-whatsapp mr-1"></i> 與 Asteria 聊聊
                         </a>
                     </div>
@@ -566,6 +712,7 @@ const Services = () => {
 
   const [activeCategory, setActiveCategory] = useState<ServiceCategory>('love');
   const [activeType, setActiveType] = useState<ServiceType>('single');
+  const [servicePage, setServicePage] = useState(0);
 
   const iconStyles = [
     { icon: "fa-solid fa-wand-magic-sparkles", color: "bg-amber-50 text-amber-600" },
@@ -676,12 +823,21 @@ const Services = () => {
   const categories = Object.entries(serviceGroups) as Array<[ServiceCategory, typeof serviceGroups[ServiceCategory]]>;
   const currentGroup = serviceGroups[activeCategory];
   const activeItems = currentGroup[activeType];
+  const itemsPerPage = 9;
+  const totalPages = Math.max(1, Math.ceil(activeItems.length / itemsPerPage));
+  const visibleItems = activeItems.slice(servicePage * itemsPerPage, servicePage * itemsPerPage + itemsPerPage);
 
   const handleCategoryChange = (category: ServiceCategory) => {
     setActiveCategory(category);
+    setServicePage(0);
     if (serviceGroups[category][activeType].length === 0) {
       setActiveType(serviceGroups[category].single.length > 0 ? 'single' : 'sets');
     }
+  };
+
+  const handleTypeChange = (type: ServiceType) => {
+    setActiveType(type);
+    setServicePage(0);
   };
 
   return (
@@ -713,13 +869,13 @@ const Services = () => {
           <div className="flex justify-center mb-10">
             <div className="bg-asteria-cream/60 p-1.5 rounded-full inline-flex relative shadow-inner border border-white">
               <button 
-                onClick={() => setActiveType('single')}
+                onClick={() => handleTypeChange('single')}
                 className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'single' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
               >
                 <i className="fa-solid fa-wand-sparkles mr-2"></i> 單項儀式
               </button>
               <button 
-                onClick={() => setActiveType('sets')}
+                onClick={() => handleTypeChange('sets')}
                 className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'sets' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
               >
                 <i className="fa-solid fa-layer-group mr-2"></i> 組合儀式
@@ -730,8 +886,8 @@ const Services = () => {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-          {activeItems.map((item, idx) => (
-            <div key={`${activeCategory}-${activeType}-${idx}`} className="bg-white border border-asteria-cream/60 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-yellow/70 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+          {visibleItems.map((item, idx) => (
+            <div key={`${activeCategory}-${activeType}-${servicePage}-${idx}`} className="bg-white border border-asteria-cream/60 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-yellow/70 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
               <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform`}>
                 <i className={item.icon}></i>
               </div>
@@ -746,12 +902,36 @@ const Services = () => {
                 ))}
               </div>
 
-              <a href="https://wa.me/85259413688" target="_blank" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
+              <a href={WHATSAPP_URL} target="_blank" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
                 查詢詳情
               </a>
             </div>
           ))}
         </div>
+
+        {activeItems.length > itemsPerPage && (
+          <div className="flex items-center justify-center gap-4 mt-10">
+            <button
+              onClick={() => setServicePage((page) => Math.max(0, page - 1))}
+              disabled={servicePage === 0}
+              className="w-12 h-12 rounded-full border border-asteria-cream bg-white text-asteria-primary shadow-sm hover:shadow-md disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              aria-label="上一頁"
+            >
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+            <div className="text-sm font-bold text-stone-500">
+              {servicePage + 1} / {totalPages}
+            </div>
+            <button
+              onClick={() => setServicePage((page) => Math.min(totalPages - 1, page + 1))}
+              disabled={servicePage >= totalPages - 1}
+              className="w-12 h-12 rounded-full border border-asteria-cream bg-white text-asteria-primary shadow-sm hover:shadow-md disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              aria-label="下一頁"
+            >
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        )}
 
         <div className="mt-12 text-center bg-asteria-yellow/30 p-6 rounded-2xl max-w-2xl mx-auto border border-asteria-yellow/50">
            <p className="text-gray-700 text-sm md:text-base">
@@ -769,57 +949,25 @@ const Reviews = () => (
   <section id="reviews" className="py-20 bg-asteria-blue/10">
     <div className="container mx-auto px-6">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-3">客人真實好評</h2>
+        <h2 className="text-3xl font-bold text-asteria-dark mb-3">客人真實好評</h2>
         <div className="flex justify-center gap-1 text-yellow-400 text-sm mb-2">
            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
         </div>
-        <p className="text-gray-500">超過 11,000 宗儀式，見證無數愛情奇蹟</p>
+        <p className="text-gray-500">之後可以放 WhatsApp 對話圖、IG story 圖、客人回饋截圖。</p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-white hover:border-asteria-blue transition-colors">
-           <div className="flex items-center gap-3 mb-4">
-             <div className="w-10 h-10 bg-gray-100 rounded-full overflow-hidden flex items-center justify-center">
-                <i className="fa-solid fa-user text-gray-400"></i>
-             </div>
-             <div>
-               <div className="font-bold text-sm text-gray-700">Chan***</div>
-               <div className="text-xs text-asteria-primary font-medium">復合儀式</div>
-             </div>
-           </div>
-           <p className="text-gray-600 text-sm leading-relaxed">
-             "真係好神奇！做完儀式第三日佢真係主動搵返我🥺 本身以為冇機會架啦，多謝 Asteria 救返我段感情！儀式過程都好細心解釋。"
-           </p>
-        </div>
-        <div className="bg-white rounded-2xl p-6 shadow-sm border-2 border-asteria-pink/30 relative">
-           <div className="absolute -top-3 -right-3 bg-asteria-pink text-white text-xs px-2 py-1 rounded-full font-bold shadow-sm">熱門</div>
-           <div className="flex items-center gap-3 mb-4">
-             <div className="w-10 h-10 bg-rose-50 rounded-full overflow-hidden flex items-center justify-center">
-                <span className="text-lg">👩🏻</span>
-             </div>
-             <div>
-               <div className="font-bold text-sm text-gray-700">Emily</div>
-               <div className="text-xs text-asteria-primary font-medium">愛情升溫</div>
-             </div>
-           </div>
-           <p className="text-gray-600 text-sm leading-relaxed">
-             "之前男朋友成日掛住打機唔理我，做完升溫儀式之後佢主動約我去街，仲送花比我！好耐冇試過咁sweet🥰 推薦比所有感情平淡既人！"
-           </p>
-        </div>
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-white hover:border-asteria-blue transition-colors">
-           <div className="flex items-center gap-3 mb-4">
-             <div className="w-10 h-10 bg-gray-100 rounded-full overflow-hidden flex items-center justify-center">
-             <i className="fa-solid fa-user text-gray-400"></i>
-             </div>
-             <div>
-               <div className="font-bold text-sm text-gray-700">Kylie</div>
-               <div className="text-xs text-asteria-primary font-medium">塔羅占卜</div>
-             </div>
-           </div>
-           <p className="text-gray-600 text-sm leading-relaxed">
-             "Asteria 講得好準！完全講中哂我地之間嘅問題。聽完你意見之後我知道應該點做啦，個心定好多❤️ 唔會再亂諗野。"
-           </p>
-        </div>
+        {["對話截圖", "Story 好評", "儀式回饋"].map((label, index) => (
+          <div key={label} className="bg-white rounded-2xl p-4 shadow-sm border border-asteria-cream/70">
+            <div className="aspect-[9/16] rounded-xl border-2 border-dashed border-asteria-yellow/70 bg-[#FFF8EC] flex flex-col items-center justify-center text-center px-6">
+              <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
+                <i className={index === 0 ? "fa-solid fa-comments" : index === 1 ? "fa-brands fa-instagram" : "fa-solid fa-star"}></i>
+              </div>
+              <div className="font-bold text-asteria-dark">{label}</div>
+              <div className="text-xs text-stone-400 mt-2">之後放圖片</div>
+            </div>
+          </div>
+        ))}
       </div>
       
       <div className="text-center mt-10">
@@ -830,6 +978,1783 @@ const Reviews = () => (
     </div>
   </section>
 );
+
+type PortalEntryType = 'relationship' | 'mood' | 'question';
+
+type PortalEntry = {
+  id: number;
+  type: PortalEntryType;
+  text: string;
+  images?: string[];
+  createdAt: string;
+};
+
+type ChatMessage = {
+  id: number;
+  sender: 'customer' | 'admin';
+  text: string;
+  images?: string[];
+  createdAt: string;
+};
+
+type PortalCustomer = {
+  id: string;
+  name: string;
+  phone: string;
+  whatsapp?: string;
+  igHandle?: string;
+  telegramHandle?: string;
+  email?: string;
+  targetName?: string;
+  originalChannel?: string;
+  interests: string[];
+  entries: PortalEntry[];
+  messages?: ChatMessage[];
+};
+
+const TEACHING_TYPES = [
+  '復合',
+  '斷聯',
+  '曖昧',
+  '第三者',
+  '情緒管理',
+  '溝通',
+  '自我價值',
+  '放手淡忘'
+];
+
+const REVIEW_CASES = [
+  { title: '斷聯後重新聯絡', tag: '斷聯', note: '適合睇返破冰、恢復聯絡類型的好評截圖。' },
+  { title: '復合後關係升溫', tag: '復合', note: '適合推送重修舊好、熱情回流類型的 story。' },
+  { title: '曖昧期對方主動', tag: '曖昧', note: '適合放主動約見、回覆變多的對話圖。' },
+  { title: '重建自信之後逆轉', tag: '自我價值', note: '適合放客人心態變穩、關係改善的回饋。' }
+];
+
+const DEFAULT_CUSTOMERS: PortalCustomer[] = [
+  {
+    id: 'demo-1',
+    name: 'Demo 客人',
+    phone: '0000',
+    igHandle: '@demo_ig',
+    telegramHandle: '@demo_tg',
+    email: 'demo@example.com',
+    targetName: 'Demo 真名',
+    originalChannel: 'Instagram',
+    interests: ['復合', '斷聯', '溝通'],
+    messages: [
+      {
+        id: 101,
+        sender: 'customer',
+        text: '我想問今日佢有覆我 story，我應唔應該即刻覆返？',
+        createdAt: '2026-05-16T10:40:00.000Z'
+      },
+      {
+        id: 102,
+        sender: 'admin',
+        text: '可以覆，但唔好太長。保持輕鬆，唔好一次過追問關係。',
+        createdAt: '2026-05-16T10:52:00.000Z'
+      }
+    ],
+    entries: [
+      {
+        id: 1,
+        type: 'relationship',
+        text: '對方今日有覆 story，但語氣仍然比較冷淡，想知道應該主動定等佢。',
+        createdAt: '2026-05-16T09:30:00.000Z'
+      },
+      {
+        id: 2,
+        type: 'mood',
+        text: '今日比之前冷靜，知道自己唔可以一急就連環 message，要練習等一等。',
+        createdAt: '2026-05-16T10:15:00.000Z'
+      }
+    ]
+  }
+];
+
+type SystemAccount = {
+  label: string;
+  username: string;
+  email: string;
+  password: string;
+  role: 'customer' | 'staff';
+  customerId?: string;
+};
+
+const DEFAULT_ACCOUNTS: SystemAccount[] = [
+  {
+    label: '客人 demo',
+    username: 'client-demo',
+    email: 'client@asteria.space',
+    password: 'client123',
+    role: 'customer',
+    customerId: 'demo-1'
+  },
+  {
+    label: '客服 demo',
+    username: 'staff-demo',
+    email: 'staff@asteria.space',
+    password: 'staff123',
+    role: 'staff'
+  }
+];
+
+const loadPortalCustomers = () => {
+  try {
+    const saved = window.localStorage.getItem('asteriaPortalCustomers');
+    return saved ? JSON.parse(saved) as PortalCustomer[] : DEFAULT_CUSTOMERS;
+  } catch {
+    return DEFAULT_CUSTOMERS;
+  }
+};
+
+const savePortalCustomers = (customers: PortalCustomer[]) => {
+  window.localStorage.setItem('asteriaPortalCustomers', JSON.stringify(customers));
+};
+
+const loadSystemAccounts = () => {
+  try {
+    const saved = window.localStorage.getItem('asteriaSystemAccounts');
+    const accounts = saved ? JSON.parse(saved) as SystemAccount[] : DEFAULT_ACCOUNTS;
+    return accounts.map((account) => {
+      const demo = DEFAULT_ACCOUNTS.find((item) => item.email === account.email);
+      return {
+        ...account,
+        username: (!account.username || account.username.includes('@')) ? (demo?.username || account.username || account.email) : account.username
+      };
+    });
+  } catch {
+    return DEFAULT_ACCOUNTS;
+  }
+};
+
+const saveSystemAccounts = (accounts: SystemAccount[]) => {
+  window.localStorage.setItem('asteriaSystemAccounts', JSON.stringify(accounts));
+};
+
+const getCurrentDemoRole = () => window.localStorage.getItem('asteriaCurrentRole') as 'customer' | 'staff' | null;
+
+const formatEntryDate = (value: string) => {
+  return new Intl.DateTimeFormat('zh-HK', {
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  }).format(new Date(value));
+};
+
+const entryLabels: Record<PortalEntryType, { label: string; icon: string; tone: string }> = {
+  relationship: { label: '關係 update', icon: 'fa-solid fa-heart-pulse', tone: 'bg-asteria-pink/45 text-asteria-dark' },
+  mood: { label: '心情日記', icon: 'fa-regular fa-note-sticky', tone: 'bg-asteria-blue/50 text-asteria-dark' },
+  question: { label: '想睇問題', icon: 'fa-regular fa-circle-question', tone: 'bg-asteria-yellow/55 text-asteria-dark' }
+};
+
+const timelineFilters: Array<{ value: 'all' | PortalEntryType; label: string }> = [
+  { value: 'all', label: 'All' },
+  { value: 'relationship', label: '感情 update' },
+  { value: 'mood', label: '個人日記' },
+  { value: 'question', label: '想睇問題' }
+];
+
+const readFilesAsDataUrls = (files: FileList | null) => {
+  const selectedFiles = Array.from(files || []);
+  return Promise.all(selectedFiles.map((file) => new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  })));
+};
+
+const buildSummary = (customer: PortalCustomer) => {
+  const latest = customer.entries.slice(-3).map((entry) => entry.text).join(' ');
+  if (!latest) return '未有足夠 update。之後可以接 AI，自動濃縮近況、情緒變化、客服 follow up 重點。';
+  return `AI summary 位：${customer.name} 最近重點圍繞「${customer.interests.join('、') || '未選分類'}」。近況摘要：${latest.slice(0, 90)}${latest.length > 90 ? '...' : ''}`;
+};
+
+const RegisterPage = () => {
+  const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
+  const [accounts] = useState<SystemAccount[]>(loadSystemAccounts);
+  const [loginUsername, setLoginUsername] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [igHandle, setIgHandle] = useState('');
+  const [telegramHandle, setTelegramHandle] = useState('');
+  const [email, setEmail] = useState('');
+  const [targetName, setTargetName] = useState('');
+
+  const handleSystemLogin = async () => {
+    if (isBackendConfigured) {
+      try {
+        const account = await loginWithUsername(loginUsername.trim(), loginPassword.trim());
+        window.localStorage.setItem('asteriaCurrentRole', account.role);
+        window.localStorage.setItem('asteriaCurrentUsername', account.username);
+        window.localStorage.setItem('asteriaCurrentEmail', account.contact_email || '');
+
+        if (account.role === 'customer') {
+          const existingCustomers = loadPortalCustomers();
+          const existing = existingCustomers.find((customer) => customer.id === account.user_id);
+          if (!existing) {
+            savePortalCustomers([{
+              id: account.user_id,
+              name: account.label,
+              phone: '',
+              email: account.contact_email || '',
+              originalChannel: 'Asteria Space',
+              interests: [],
+              entries: [],
+              messages: []
+            }, ...existingCustomers]);
+          }
+          window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
+        }
+
+        window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
+        return;
+      } catch (error) {
+        setLoginError(error instanceof Error ? error.message : '登入資料不正確。');
+        return;
+      }
+    }
+
+    const account = accounts.find((item) => item.username === loginUsername.trim() && item.password === loginPassword.trim());
+    if (!account) {
+      setLoginError('登入資料不正確。你可以先用下面 demo account 試。');
+      return;
+    }
+    window.localStorage.setItem('asteriaCurrentRole', account.role);
+    window.localStorage.setItem('asteriaCurrentUsername', account.username);
+    window.localStorage.setItem('asteriaCurrentEmail', account.email);
+    if (account.customerId) window.localStorage.setItem('asteriaCurrentCustomerId', account.customerId);
+    window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
+  };
+
+  const fillDemoLogin = (account: SystemAccount) => {
+    setLoginUsername(account.username);
+    setLoginPassword(account.password);
+    setLoginError('');
+  };
+
+  const saveRegistration = () => {
+    const trimmedPhone = phone.trim();
+    const trimmedIg = igHandle.trim();
+    const trimmedTelegram = telegramHandle.trim();
+    const trimmedEmail = email.trim();
+    const trimmedTargetName = targetName.trim();
+    const trimmedName = name.trim() || 'Asteria 客人';
+    if (!trimmedPhone && !trimmedIg && !trimmedTelegram) return;
+
+    const existing = customers.find((customer) =>
+      (trimmedPhone && customer.phone === trimmedPhone) ||
+      (trimmedIg && customer.igHandle === trimmedIg) ||
+      (trimmedTelegram && customer.telegramHandle === trimmedTelegram)
+    );
+
+    const newCustomerId = `customer-${Date.now()}`;
+    const activeCustomerId = existing?.id || newCustomerId;
+
+    const nextCustomers = existing
+      ? customers.map((customer) => customer.id === existing.id ? {
+          ...customer,
+          name: trimmedName,
+          phone: trimmedPhone || customer.phone,
+          igHandle: trimmedIg || customer.igHandle,
+          telegramHandle: trimmedTelegram || customer.telegramHandle,
+          email: trimmedEmail || customer.email,
+          targetName: trimmedTargetName || customer.targetName
+        } : customer)
+      : [{
+          id: newCustomerId,
+          name: trimmedName,
+          phone: trimmedPhone,
+          whatsapp: trimmedPhone,
+          igHandle: trimmedIg,
+          telegramHandle: trimmedTelegram,
+          email: trimmedEmail,
+          targetName: trimmedTargetName,
+          originalChannel: 'Asteria Space',
+          interests: ['復合'],
+          entries: [],
+          messages: []
+        }, ...customers];
+
+    setCustomers(nextCustomers);
+    savePortalCustomers(nextCustomers);
+    window.localStorage.setItem('asteriaCurrentRole', 'customer');
+    window.localStorage.setItem('asteriaCurrentCustomerId', activeCustomerId);
+    window.location.hash = '#portal';
+  };
+
+  return (
+    <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <div className="container mx-auto px-6 max-w-3xl">
+        <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+          <i className="fa-solid fa-arrow-left"></i> 返回首頁
+        </a>
+
+        <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
+          <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
+          <h1 className="text-3xl md:text-4xl font-bold text-asteria-dark mb-3">登入你的私人空間</h1>
+          <p className="text-stone-500 leading-relaxed mb-6">
+            一個方便記錄最近情況、上傳對話、同我哋保持聯絡嘅私人空間。WhatsApp 繼續用嚟即時傾，Asteria Space 就用嚟保留重要 record。
+          </p>
+
+          <div className="bg-[#FFF8EC] border border-asteria-cream rounded-2xl p-5 mb-6">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-white text-asteria-primary flex items-center justify-center shrink-0 shadow-sm">
+                <i className="fa-solid fa-lock"></i>
+              </div>
+              <div>
+                <div className="font-bold text-asteria-dark">系統登入</div>
+                <p className="text-sm text-stone-500 leading-relaxed">暫時由 Asteria 開 account 比你。客服同客人用同一個入口登入，系統會自動分去不同版面。</p>
+              </div>
+            </div>
+
+            <div className="grid gap-3">
+              <input value={loginUsername} onChange={(event) => setLoginUsername(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Account 名" />
+              <input type="password" value={loginPassword} onChange={(event) => setLoginPassword(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') handleSystemLogin(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="密碼" />
+              {loginError && <div className="text-sm font-bold text-red-500">{loginError}</div>}
+              <button onClick={handleSystemLogin} className="btn-primary rounded-xl px-5 py-3 font-bold">登入</button>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-3 mt-4">
+              {accounts.slice(0, 2).map((account) => (
+                <button key={account.username} onClick={() => fillDemoLogin(account)} className="text-left bg-white border border-asteria-cream rounded-xl p-3 hover:border-asteria-primary transition-all">
+                  <div className="font-bold text-asteria-dark">{account.label}</div>
+                  <div className="text-xs text-stone-500 mt-1">account: {account.username}</div>
+                  <div className="text-xs text-stone-400">{account.email}</div>
+                  <div className="text-xs text-stone-400">password: {account.password}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-sm text-stone-500 text-center">
+            第一次登入後，系統會請你補回聯絡資料。
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+const PortalPage = () => {
+  const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [igHandle, setIgHandle] = useState('');
+  const [telegramHandle, setTelegramHandle] = useState('');
+  const [email, setEmail] = useState('');
+  const [originalChannel, setOriginalChannel] = useState('Instagram');
+  const [activeCustomerId, setActiveCustomerId] = useState(DEFAULT_CUSTOMERS[0].id);
+  const [relationshipText, setRelationshipText] = useState('');
+  const [moodText, setMoodText] = useState('');
+  const [questionText, setQuestionText] = useState('');
+  const [relationshipImages, setRelationshipImages] = useState<string[]>([]);
+  const [moodImages, setMoodImages] = useState<string[]>([]);
+  const [questionImages, setQuestionImages] = useState<string[]>([]);
+  const [timelineFilter, setTimelineFilter] = useState<'all' | PortalEntryType>('all');
+  const [chatText, setChatText] = useState('');
+  const [chatImages, setChatImages] = useState<string[]>([]);
+  const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile'>('dashboard');
+
+  useEffect(() => {
+    savePortalCustomers(customers);
+  }, [customers]);
+
+  const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
+  const recommendedCases = REVIEW_CASES.filter((item) => activeCustomer?.interests.includes(item.tag));
+  const visibleEntries = [...(activeCustomer?.entries || [])]
+    .filter((entry) => timelineFilter === 'all' || entry.type === timelineFilter)
+    .reverse();
+
+  const upsertCustomer = () => {
+    const trimmedPhone = phone.trim();
+    const trimmedName = name.trim() || 'Asteria 客人';
+    const trimmedIg = igHandle.trim();
+    const trimmedTelegram = telegramHandle.trim();
+    const trimmedEmail = email.trim();
+    if (!trimmedPhone && !trimmedIg && !trimmedTelegram) return;
+
+    const existing = customers.find((customer) =>
+      (trimmedPhone && customer.phone === trimmedPhone) ||
+      (trimmedIg && customer.igHandle === trimmedIg) ||
+      (trimmedTelegram && customer.telegramHandle === trimmedTelegram)
+    );
+    if (existing) {
+      setCustomers((current) => current.map((customer) => customer.id === existing.id ? {
+        ...customer,
+        name: trimmedName,
+        phone: trimmedPhone || customer.phone,
+        igHandle: trimmedIg || customer.igHandle,
+        telegramHandle: trimmedTelegram || customer.telegramHandle,
+        email: trimmedEmail || customer.email,
+        originalChannel
+      } : customer));
+      setActiveCustomerId(existing.id);
+      return;
+    }
+
+    const nextCustomer: PortalCustomer = {
+      id: `customer-${Date.now()}`,
+      name: trimmedName,
+      phone: trimmedPhone,
+      igHandle: trimmedIg,
+      telegramHandle: trimmedTelegram,
+      email: trimmedEmail,
+      originalChannel,
+      interests: ['復合'],
+      entries: []
+    };
+    setCustomers((current) => [nextCustomer, ...current]);
+    setActiveCustomerId(nextCustomer.id);
+  };
+
+  const updateCustomer = (updater: (customer: PortalCustomer) => PortalCustomer) => {
+    setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? updater(customer) : customer));
+  };
+
+  const addEntry = (type: PortalEntryType, text: string, images: string[], clear: () => void) => {
+    const trimmed = text.trim();
+    if (!trimmed && images.length === 0) return;
+    updateCustomer((customer) => ({
+      ...customer,
+      entries: [
+        ...customer.entries,
+        { id: Date.now(), type, text: trimmed, images, createdAt: new Date().toISOString() }
+      ]
+    }));
+    clear();
+  };
+
+  const sendChatMessage = () => {
+    const trimmed = chatText.trim();
+    if (!trimmed && chatImages.length === 0) return;
+    updateCustomer((customer) => ({
+      ...customer,
+      messages: [
+        ...(customer.messages || []),
+        { id: Date.now(), sender: 'customer', text: trimmed, images: chatImages, createdAt: new Date().toISOString() }
+      ]
+    }));
+    setChatText('');
+    setChatImages([]);
+  };
+
+  const handleImageUpload = async (files: FileList | null, setter: React.Dispatch<React.SetStateAction<string[]>>) => {
+    const images = await readFilesAsDataUrls(files);
+    setter((current) => [...current, ...images]);
+  };
+
+  const toggleInterest = (interest: string) => {
+    updateCustomer((customer) => ({
+      ...customer,
+      interests: customer.interests.includes(interest)
+        ? customer.interests.filter((item) => item !== interest)
+        : [...customer.interests, interest]
+    }));
+  };
+
+  return (
+    <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <div className="container mx-auto px-6 max-w-4xl">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-10">
+          <div>
+            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+              <i className="fa-solid fa-arrow-left"></i> 返回首頁
+            </a>
+            <div className="text-sm font-bold text-asteria-primary mb-2">會員關係記錄</div>
+            <h1 className="text-4xl font-bold text-asteria-dark mb-3">Asteria 客人 Profile</h1>
+            <p className="text-stone-500 max-w-2xl">請補回 WhatsApp / IG / Telegram / Email，之後就算其中一個平台被 ban，我地都搵得返你。</p>
+          </div>
+          <a href="#admin" className="inline-flex items-center gap-2 bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
+            <i className="fa-solid fa-lock"></i> Admin 後台
+          </a>
+        </div>
+
+        <div className="grid gap-8 items-start">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-bold text-asteria-dark mb-2">我的 Profile</h2>
+                <p className="text-sm text-stone-500">呢度用嚟睇返你的 timeline、客服訊息同教學推送。未補聯絡資料的客人，請先申請 account。</p>
+              </div>
+              <a href="#register" className="btn-primary px-5 py-3 rounded-xl font-bold text-center">申請 / 更新 account</a>
+            </div>
+
+            <div className="mt-6">
+              <div className="text-sm font-bold text-stone-500 mb-3">本地 demo：切換客人</div>
+              <div className="flex gap-2 overflow-x-auto pb-2">
+                {customers.map((customer) => (
+                  <button key={customer.id} onClick={() => setActiveCustomerId(customer.id)} className={`text-left px-4 py-3 rounded-xl border transition-all min-w-48 ${activeCustomer?.id === customer.id ? 'bg-asteria-yellow/25 border-asteria-primary' : 'border-asteria-cream/70 hover:bg-asteria-yellow/15'}`}>
+                    <div className="font-bold text-asteria-dark">{customer.name}</div>
+                    <div className="text-xs text-stone-400">{customer.phone || customer.igHandle || customer.telegramHandle} · {customer.entries.length} 個 update</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+              <div>
+                <div className="text-sm text-stone-400">失聯備用資料</div>
+                <h2 className="text-2xl font-bold text-asteria-dark">我的聯絡方法</h2>
+              </div>
+              <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">客人可見</span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-3">
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">WhatsApp</div>
+                <div className="font-bold text-asteria-dark">{activeCustomer?.phone || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Instagram</div>
+                <div className="font-bold text-asteria-dark">{activeCustomer?.igHandle || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Telegram</div>
+                <div className="font-bold text-asteria-dark">{activeCustomer?.telegramHandle || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Email</div>
+                <div className="font-bold text-asteria-dark">{activeCustomer?.email || '未登記'}</div>
+              </div>
+            </div>
+          </section>
+
+          <section className="grid gap-6">
+            <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+                <div>
+                  <div className="text-sm text-stone-400">客人自己睇得到</div>
+                  <h2 className="text-2xl font-bold text-asteria-dark">我的近況 Timeline</h2>
+                </div>
+                <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
+                  {activeCustomer?.entries.length || 0} 個記錄
+                </span>
+              </div>
+
+              <div className="flex gap-2 overflow-x-auto pb-3 mb-4">
+                {timelineFilters.map((filter) => (
+                  <button
+                    key={filter.value}
+                    onClick={() => setTimelineFilter(filter.value)}
+                    className={`px-4 py-2 rounded-full text-sm font-bold border whitespace-nowrap transition-all ${timelineFilter === filter.value ? 'bg-asteria-primary text-white border-asteria-primary' : 'bg-white text-stone-500 border-asteria-cream hover:border-asteria-primary'}`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
+              </div>
+
+              {visibleEntries.length === 0 ? (
+                <div className="border-2 border-dashed border-asteria-yellow/70 rounded-2xl bg-[#FFF8EC] px-5 py-8 text-center">
+                  <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mx-auto mb-4">
+                    <i className="fa-regular fa-note-sticky"></i>
+                  </div>
+                  <div className="font-bold text-asteria-dark mb-2">呢個分類暫時未有 update</div>
+                  <p className="text-sm text-stone-500">可以喺下面寫低關係進展、心情反思，之後就會跟時間線排返喺呢度。</p>
+                </div>
+              ) : (
+                <div className="space-y-4 max-h-[360px] overflow-y-auto pr-2">
+                  {visibleEntries.map((entry) => {
+                    const meta = entryLabels[entry.type];
+                    return (
+                      <div key={entry.id} className="relative pl-8 pb-5 border-l-2 border-asteria-cream last:pb-0">
+                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-asteria-primary border-4 border-white shadow-sm"></div>
+                        <div className={`inline-flex items-center gap-2 ${meta.tone} text-xs font-bold px-3 py-1 rounded-full mb-2`}>
+                          <i className={meta.icon}></i> {meta.label}
+                        </div>
+                        <p className="text-stone-600 leading-relaxed">{entry.text}</p>
+                        {entry.images && entry.images.length > 0 && (
+                          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-3">
+                            {entry.images.map((image, index) => (
+                              <img key={`${entry.id}-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-asteria-cream" alt="update upload" />
+                            ))}
+                          </div>
+                        )}
+                        <div className="text-xs text-stone-400 mt-2">{formatEntryDate(entry.createdAt)}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+                <div>
+                  <div className="text-sm text-stone-400">會留 record 的網頁訊息</div>
+                  <h2 className="text-2xl font-bold text-asteria-dark">客服 Chatbox</h2>
+                </div>
+                <span className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
+                  {(activeCustomer?.messages || []).length} 則訊息
+                </span>
+              </div>
+
+              <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-2xl p-4 max-h-[360px] overflow-y-auto mb-4">
+                {(activeCustomer?.messages || []).length === 0 ? (
+                  <div className="text-center text-sm text-stone-500 py-8">暫時未有訊息，可以喺下面留言比客服。</div>
+                ) : (
+                  <div className="space-y-3">
+                    {(activeCustomer?.messages || []).map((message) => (
+                      <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
+                        <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                          <div className="text-sm leading-relaxed">{message.text}</div>
+                          {message.images && message.images.length > 0 && (
+                            <div className="grid grid-cols-2 gap-2 mt-3">
+                              {message.images.map((image, index) => (
+                                <img key={`${message.id}-customer-chat-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat upload" />
+                              ))}
+                            </div>
+                          )}
+                          <div className={`text-[11px] mt-2 ${message.sender === 'customer' ? 'text-white/70' : 'text-stone-400'}`}>{message.sender === 'customer' ? '你' : 'Asteria'} · {formatEntryDate(message.createdAt)}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="grid md:grid-cols-[auto_1fr_auto] gap-3">
+                <label className="inline-flex items-center justify-center gap-2 border border-asteria-cream bg-white text-asteria-primary px-4 py-3 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all">
+                  <i className="fa-regular fa-images"></i>
+                  <span className="hidden sm:inline">圖片</span>
+                  <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files, setChatImages)} />
+                </label>
+                <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言比客服，會自動留 record..." />
+                <button onClick={sendChatMessage} className="btn-primary px-5 py-3 rounded-xl font-bold">送出</button>
+              </div>
+              {chatImages.length > 0 && (
+                <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3">
+                  {chatImages.map((image, index) => (
+                    <img key={`chat-preview-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="chat upload preview" />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center justify-between gap-3 mb-5">
+                <div>
+                  <div className="text-sm text-stone-400">寫新記錄</div>
+                  <h2 className="text-2xl font-bold text-asteria-dark">{activeCustomer?.name} 的 update</h2>
+                </div>
+                <span className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">客人可見</span>
+              </div>
+
+              <div className="grid gap-5">
+                <div>
+                  <label className="block text-sm font-bold text-asteria-dark mb-2">關係 update</label>
+                  <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-40 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="例如：今日有無聯絡、對方態度、事件進展..." />
+                  <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-3">
+                    <label className="inline-flex items-center justify-center gap-2 border border-asteria-cream bg-white text-asteria-primary px-4 py-2 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all">
+                      <i className="fa-regular fa-images"></i> 加圖片
+                      <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files, setRelationshipImages)} />
+                    </label>
+                    <button onClick={() => addEntry('relationship', relationshipText, relationshipImages, () => { setRelationshipText(''); setRelationshipImages([]); })} className="bg-asteria-primary text-white px-4 py-2 rounded-xl font-bold">加入 timeline</button>
+                  </div>
+                  {relationshipImages.length > 0 && (
+                    <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-3">
+                      {relationshipImages.map((image, index) => (
+                        <img key={`relationship-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="relationship upload preview" />
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-asteria-dark mb-2">心情日記 / 反思</label>
+                  <textarea value={moodText} onChange={(event) => setMoodText(event.target.value)} className="w-full min-h-40 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="例如：今日學到咩、自己有咩改進、感情上的感悟..." />
+                  <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-3">
+                    <label className="inline-flex items-center justify-center gap-2 border border-asteria-cream bg-white text-asteria-primary px-4 py-2 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all">
+                      <i className="fa-regular fa-images"></i> 加圖片
+                      <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files, setMoodImages)} />
+                    </label>
+                    <button onClick={() => addEntry('mood', moodText, moodImages, () => { setMoodText(''); setMoodImages([]); })} className="bg-asteria-primary text-white px-4 py-2 rounded-xl font-bold">加入日記</button>
+                  </div>
+                  {moodImages.length > 0 && (
+                    <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-3">
+                      {moodImages.map((image, index) => (
+                        <img key={`mood-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="mood upload preview" />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+              <h2 className="text-xl font-bold text-asteria-dark mb-3">想睇咩教學 type</h2>
+              <div className="flex flex-wrap gap-2 mb-5">
+                {TEACHING_TYPES.map((interest) => (
+                  <button key={interest} onClick={() => toggleInterest(interest)} className={`px-4 py-2 rounded-full text-sm font-bold border transition-all ${activeCustomer?.interests.includes(interest) ? 'bg-asteria-primary text-white border-asteria-primary' : 'bg-white text-stone-500 border-asteria-cream hover:border-asteria-primary'}`}>
+                    {interest}
+                  </button>
+                ))}
+              </div>
+              <div className="grid md:grid-cols-[1fr_auto] gap-3">
+                <input value={questionText} onChange={(event) => setQuestionText(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="問題 box：你想 Asteria 寫咩題目？" />
+                <button onClick={() => addEntry('question', questionText, questionImages, () => { setQuestionText(''); setQuestionImages([]); })} className="btn-primary px-5 py-3 rounded-xl font-bold">提交</button>
+              </div>
+              <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-3">
+                <label className="inline-flex items-center justify-center gap-2 border border-asteria-cream bg-white text-asteria-primary px-4 py-2 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all">
+                  <i className="fa-regular fa-images"></i> 問題補圖
+                  <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files, setQuestionImages)} />
+                </label>
+                <span className="text-xs text-stone-400">可以放對話截圖、story、對方回覆。</span>
+              </div>
+              {questionImages.length > 0 && (
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-3">
+                  {questionImages.map((image, index) => (
+                    <img key={`question-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="question upload preview" />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="grid gap-6">
+              <div className="hidden">
+                <h2 className="text-xl font-bold text-asteria-dark mb-4">你的 timeline</h2>
+                <div className="space-y-4 max-h-[430px] overflow-y-auto pr-2">
+                  {[...(activeCustomer?.entries || [])].reverse().map((entry) => {
+                    const meta = entryLabels[entry.type];
+                    return (
+                      <div key={entry.id} className="border-l-4 border-asteria-yellow pl-4">
+                        <div className={`inline-flex items-center gap-2 ${meta.tone} text-xs font-bold px-3 py-1 rounded-full mb-2`}>
+                          <i className={meta.icon}></i> {meta.label}
+                        </div>
+                        <p className="text-stone-600 leading-relaxed">{entry.text}</p>
+                        <div className="text-xs text-stone-400 mt-2">{formatEntryDate(entry.createdAt)}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-asteria-dark mb-4">推送內容</h2>
+                <div className="mb-6">
+                  <div className="text-sm font-bold text-stone-500 mb-2">建議教學文</div>
+                  <div className="grid gap-2">
+                    {(activeCustomer?.interests || []).slice(0, 4).map((interest) => (
+                      <a key={interest} href="#teaching" className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-xl px-4 py-3 text-sm font-bold text-asteria-dark hover:border-asteria-primary transition-all">
+                        {interest} 相關相處教學 <i className="fa-solid fa-arrow-right ml-1 text-asteria-primary"></i>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-stone-500 mb-2">類似好評 case</div>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {(recommendedCases.length ? recommendedCases : REVIEW_CASES.slice(0, 2)).map((item) => (
+                      <div key={item.title} className="border border-dashed border-asteria-yellow/70 rounded-xl p-4 bg-white">
+                        <div className="text-xs font-bold text-asteria-primary mb-1">#{item.tag}</div>
+                        <div className="font-bold text-asteria-dark">{item.title}</div>
+                        <p className="text-xs text-stone-500 mt-1">{item.note}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+const SpacePortalPage = () => {
+  const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
+  const [accounts, setAccounts] = useState<SystemAccount[]>(loadSystemAccounts);
+  const currentCustomerId = window.localStorage.getItem('asteriaCurrentCustomerId');
+  const [activeCustomerId] = useState(currentCustomerId || customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
+  const [chatText, setChatText] = useState('');
+  const [chatImages, setChatImages] = useState<string[]>([]);
+  const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile'>('dashboard');
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [passwordMessage, setPasswordMessage] = useState('');
+  const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
+  const [profileName, setProfileName] = useState(activeCustomer?.name || '');
+  const [profilePhone, setProfilePhone] = useState(activeCustomer?.phone || '');
+  const [profileWhatsapp, setProfileWhatsapp] = useState(activeCustomer?.whatsapp || activeCustomer?.phone || '');
+  const [profileIg, setProfileIg] = useState(activeCustomer?.igHandle || '');
+  const [profileTelegram, setProfileTelegram] = useState(activeCustomer?.telegramHandle || '');
+  const [profileEmail, setProfileEmail] = useState(activeCustomer?.email || '');
+  const [profileSelfName, setProfileSelfName] = useState(activeCustomer?.targetName || '');
+  const [profileMessage, setProfileMessage] = useState('');
+  const [isEditingProfile, setIsEditingProfile] = useState(false);
+  const needsFirstProfile = !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.email && !activeCustomer?.targetName;
+
+  useEffect(() => {
+    savePortalCustomers(customers);
+  }, [customers]);
+
+  useEffect(() => {
+    saveSystemAccounts(accounts);
+  }, [accounts]);
+
+  const updateCustomer = (updater: (customer: PortalCustomer) => PortalCustomer) => {
+    if (!activeCustomer) return;
+    setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? updater(customer) : customer));
+  };
+
+  const handleImageUpload = async (files: FileList | null) => {
+    const images = await readFilesAsDataUrls(files);
+    setChatImages((current) => [...current, ...images]);
+  };
+
+  const sendChatMessage = () => {
+    const trimmed = chatText.trim();
+    if ((!trimmed && chatImages.length === 0) || !activeCustomer) return;
+    updateCustomer((customer) => ({
+      ...customer,
+      messages: [
+        ...(customer.messages || []),
+        { id: Date.now(), sender: 'customer', text: trimmed, images: chatImages, createdAt: new Date().toISOString() }
+      ]
+    }));
+    setChatText('');
+    setChatImages([]);
+  };
+
+  const changePassword = () => {
+    const currentUsername = window.localStorage.getItem('asteriaCurrentUsername');
+    const account = accounts.find((item) => item.username === currentUsername);
+    if (!account) {
+      setPasswordMessage('請先登入你的 account。');
+      return;
+    }
+    if (account.password !== oldPassword.trim()) {
+      setPasswordMessage('舊密碼不正確。');
+      return;
+    }
+    if (newPassword.trim().length < 6) {
+      setPasswordMessage('新密碼最少 6 個字。');
+      return;
+    }
+    setAccounts((current) => current.map((item) => item.email === account.email ? { ...item, password: newPassword.trim() } : item));
+    setOldPassword('');
+    setNewPassword('');
+    setPasswordMessage('密碼已更新。');
+  };
+
+  const saveProfile = () => {
+    updateCustomer((customer) => ({
+      ...customer,
+      name: profileName.trim() || customer.name,
+      phone: profilePhone.trim(),
+      whatsapp: profileWhatsapp.trim(),
+      igHandle: profileIg.trim(),
+      telegramHandle: profileTelegram.trim(),
+      email: profileEmail.trim(),
+      targetName: profileSelfName.trim()
+    }));
+    setProfileMessage('資料已更新。');
+    setIsEditingProfile(false);
+  };
+
+  if (needsFirstProfile) {
+    return (
+      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
+            <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
+            <h1 className="text-3xl font-bold text-asteria-dark mb-3">第一次登入，請補回聯絡資料</h1>
+            <p className="text-stone-500 leading-relaxed mb-6">
+              Account 已由 Asteria 開好。請填低常用聯絡方法，之後就算 IG / WhatsApp 其中一邊失效，我哋都搵得返你。
+            </p>
+            <div className="grid gap-4">
+              <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+              <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Phone number" />
+              <input value={profileWhatsapp} onChange={(event) => setProfileWhatsapp(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp" />
+              <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram" />
+              <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
+              <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+            </div>
+            <button onClick={saveProfile} className="btn-primary w-full rounded-xl px-6 py-3 font-bold mt-6">儲存並進入 Space</button>
+            {profileMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{profileMessage}</div>}
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  if (spaceView === 'chat') {
+    return (
+      <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen flex flex-col">
+        <div className="container mx-auto px-4 max-w-4xl flex-1 flex flex-col pb-4">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col min-h-[calc(100vh-230px)]">
+            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
+              <div className="min-w-0">
+                <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
+                  <i className="fa-solid fa-arrow-left"></i> 返回 Space
+                </button>
+                <div className="font-bold text-asteria-dark text-lg">Inbox</div>
+                <div className="text-xs text-stone-400">{(activeCustomer?.messages || []).length} 則訊息 · 可 upload 對話截圖</div>
+              </div>
+              <span className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl">Asteria Space</span>
+            </div>
+
+            <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+              {(activeCustomer?.messages || []).length === 0 ? (
+                <div className="h-full min-h-[420px] flex flex-col items-center justify-center text-center text-stone-500">
+                  <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
+                    <i className="fa-regular fa-comments"></i>
+                  </div>
+                  <div className="font-bold text-asteria-dark mb-2">暫時未有訊息</div>
+                  <p className="text-sm">可以喺下面留言，或者 upload 對話截圖比客服跟進。</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {(activeCustomer?.messages || []).map((message) => (
+                    <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                        {message.text && <div className="text-sm leading-relaxed">{message.text}</div>}
+                        {message.images && message.images.length > 0 && (
+                          <div className="grid grid-cols-2 gap-2 mt-3">
+                            {message.images.map((image, index) => (
+                              <img key={`${message.id}-space-chat-full-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat upload" />
+                            ))}
+                          </div>
+                        )}
+                        <div className={`text-[11px] mt-2 ${message.sender === 'customer' ? 'text-white/70' : 'text-stone-400'}`}>
+                          {message.sender === 'customer' ? '你' : 'Asteria'} · {formatEntryDate(message.createdAt)}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {chatImages.length > 0 && (
+              <div className="px-4 pt-3 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2">
+                {chatImages.map((image, index) => (
+                  <img key={`space-chat-preview-full-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="screenshot preview" />
+                ))}
+              </div>
+            )}
+
+            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="upload screenshot">
+                <i className="fa-regular fa-images"></i>
+                <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
+              </label>
+              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
+              <button onClick={sendChatMessage} className="btn-primary px-5 py-3 rounded-xl font-bold">
+                <i className="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  if (spaceView === 'profile') {
+    return (
+      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+            <i className="fa-solid fa-arrow-left"></i> 返回 Space
+          </button>
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
+            <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
+            <h1 className="text-3xl font-bold text-asteria-dark mb-3">修改你的聯絡資料</h1>
+            <p className="text-stone-500 leading-relaxed mb-6">呢度只係更新資料，不會跳返登入頁。</p>
+            <div className="grid gap-4">
+              <input value={profileName} onChange={(event) => setProfileName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="你的稱呼" />
+              <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp 電話" />
+              <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
+              <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram username / phone" />
+              <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+              <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+            </div>
+            <button onClick={saveProfile} className="btn-primary w-full rounded-xl px-6 py-3 font-bold mt-6">儲存資料</button>
+            {profileMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{profileMessage}</div>}
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <div className="container mx-auto px-6 max-w-5xl">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
+          <div>
+            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+              <i className="fa-solid fa-arrow-left"></i> 返回首頁
+            </a>
+            <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
+            <h1 className="text-4xl font-bold text-asteria-dark mb-3">你的私人聯絡空間</h1>
+            <p className="text-stone-500 max-w-2xl leading-relaxed">
+              WhatsApp 用嚟即時傾；Asteria Space 用嚟保留重要訊息、對話截圖同聯絡資料。就算 IG / WhatsApp 任何一邊失效，我哋都搵得返你。
+            </p>
+          </div>
+        </div>
+
+        <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm mb-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <div className="text-xs font-bold text-stone-400 mb-1">Login</div>
+              <h2 className="text-2xl font-bold text-asteria-dark">{activeCustomer?.name || 'Asteria Space user'}</h2>
+              <p className="text-sm text-stone-500 mt-1">系統登入已開啟，客人只會見到自己的資料。</p>
+            </div>
+            <span className="bg-asteria-yellow/35 text-asteria-dark rounded-xl px-5 py-3 font-bold flex items-center justify-center gap-2">
+              <i className="fa-solid fa-circle-check text-asteria-primary"></i> 已登入
+            </span>
+          </div>
+        </section>
+
+        <section className="grid gap-6">
+          <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+              <div>
+                <div className="text-sm text-stone-400">Password</div>
+                <h2 className="text-2xl font-bold text-asteria-dark">更改密碼</h2>
+              </div>
+              <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">客人自己操作</span>
+            </div>
+            <div className="grid md:grid-cols-[1fr_1fr_auto] gap-3">
+              <input type="password" value={oldPassword} onChange={(event) => setOldPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="舊密碼" />
+              <input type="password" value={newPassword} onChange={(event) => setNewPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="新密碼" />
+              <button onClick={changePassword} className="btn-primary px-5 py-3 rounded-xl font-bold">更新</button>
+            </div>
+            {passwordMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{passwordMessage}</div>}
+          </div>
+
+          <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+              <div>
+                <div className="text-sm text-stone-400">Basic Profile</div>
+                <h2 className="text-2xl font-bold text-asteria-dark">你的聯絡資料</h2>
+              </div>
+              <button onClick={() => { setIsEditingProfile(true); setProfileMessage(''); }} className="bg-white border border-asteria-cream text-asteria-primary px-4 py-2 rounded-xl font-bold inline-flex items-center justify-center gap-2 hover:border-asteria-primary transition-all">
+                <i className="fa-regular fa-pen-to-square"></i> Edit
+              </button>
+            </div>
+
+            {isEditingProfile ? (
+              <div className="grid gap-3">
+                <div className="grid md:grid-cols-2 gap-3">
+                  <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+                  <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Phone number" />
+                  <input value={profileWhatsapp} onChange={(event) => setProfileWhatsapp(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp" />
+                  <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram" />
+                  <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
+                  <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div className="text-sm text-stone-400">{profileMessage || '修改完記得儲存。'}</div>
+                  <button onClick={saveProfile} className="btn-primary px-6 py-3 rounded-xl font-bold sm:self-end">Save</button>
+                </div>
+              </div>
+            ) : (
+            <div className="grid md:grid-cols-3 gap-3">
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Phone number</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.phone || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">WhatsApp</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.whatsapp || activeCustomer?.phone || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Telegram</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.telegramHandle || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Instagram</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.igHandle || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">Email</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.email || '未登記'}</div>
+              </div>
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">自己名</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.targetName || '未填'}</div>
+              </div>
+            </div>
+            )}
+          </div>
+
+          {spaceView === 'dashboard' && (
+            <button onClick={() => setSpaceView('chat')} className="bg-asteria-dark text-white rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:brightness-110 transition-all">
+              <div>
+                <div className="text-sm text-white/70">Message Thread</div>
+                <div className="text-2xl font-bold">進入 Inbox</div>
+                <div className="text-sm text-white/70 mt-1">{(activeCustomer?.messages || []).length} 則訊息 · 可 upload 對話截圖</div>
+              </div>
+              <i className="fa-solid fa-arrow-right text-2xl"></i>
+            </button>
+          )}
+
+          {spaceView === 'chat' && (
+          <div className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden">
+            <div className="p-5 md:p-6 border-b border-asteria-cream/70 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div>
+                <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
+                  <i className="fa-solid fa-arrow-left"></i> 返回 Space
+                </button>
+                <div className="text-sm text-stone-400">Message Thread</div>
+                <h2 className="text-2xl font-bold text-asteria-dark">Inbox</h2>
+              </div>
+              <span className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
+                {(activeCustomer?.messages || []).length} 則訊息
+              </span>
+            </div>
+
+            <div className="bg-[#FFF8EC] p-5 min-h-[420px] max-h-[560px] overflow-y-auto">
+              {(activeCustomer?.messages || []).length === 0 ? (
+                <div className="h-[360px] flex flex-col items-center justify-center text-center text-stone-500">
+                  <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
+                    <i className="fa-regular fa-comments"></i>
+                  </div>
+                  <div className="font-bold text-asteria-dark mb-2">暫時未有訊息</div>
+                  <p className="text-sm">可以喺下面留言，或者 upload 對話截圖比客服跟進。</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {(activeCustomer?.messages || []).map((message) => (
+                    <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                        {message.text && <div className="text-sm leading-relaxed">{message.text}</div>}
+                        {message.images && message.images.length > 0 && (
+                          <div className="grid grid-cols-2 gap-2 mt-3">
+                            {message.images.map((image, index) => (
+                              <img key={`${message.id}-space-chat-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat upload" />
+                            ))}
+                          </div>
+                        )}
+                        <div className={`text-[11px] mt-2 ${message.sender === 'customer' ? 'text-white/70' : 'text-stone-400'}`}>
+                          {message.sender === 'customer' ? '你' : 'Asteria'} · {formatEntryDate(message.createdAt)}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {chatImages.length > 0 && (
+              <div className="px-5 pt-4 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2">
+                {chatImages.map((image, index) => (
+                  <img key={`space-chat-preview-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="screenshot preview" />
+                ))}
+              </div>
+            )}
+
+            <div className="p-4 md:p-5 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="upload screenshot">
+                <i className="fa-regular fa-images"></i>
+                <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
+              </label>
+              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
+              <button onClick={sendChatMessage} className="btn-primary px-5 py-3 rounded-xl font-bold">
+                <i className="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+          )}
+        </section>
+      </div>
+    </main>
+  );
+};
+
+const AdminPage = () => {
+  const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
+  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
+  const [adminReply, setAdminReply] = useState('');
+  const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
+
+  useEffect(() => {
+    const sync = () => setCustomers(loadPortalCustomers());
+    window.addEventListener('storage', sync);
+    return () => window.removeEventListener('storage', sync);
+  }, []);
+
+  useEffect(() => {
+    savePortalCustomers(customers);
+  }, [customers]);
+
+  const sendAdminReply = () => {
+    const trimmed = adminReply.trim();
+    if (!trimmed || !activeCustomer) return;
+    setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? {
+      ...customer,
+      messages: [
+        ...(customer.messages || []),
+        { id: Date.now(), sender: 'admin', text: trimmed, createdAt: new Date().toISOString() }
+      ]
+    } : customer));
+    setAdminReply('');
+  };
+
+  return (
+    <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <a href="#portal" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+          <i className="fa-solid fa-arrow-left"></i> 返回會員入口
+        </a>
+        <div className="mb-10">
+          <div className="text-sm font-bold text-asteria-primary mb-2">Admin 後台</div>
+          <h1 className="text-4xl font-bold text-asteria-dark mb-3">客服跟進 Dashboard</h1>
+          <p className="text-stone-500">呢版係後台原型：之後接真 database，就可以睇晒客人 update、AI summary、好評 tag 推送。</p>
+          <a href="#inbox" className="mt-5 inline-flex items-center gap-2 bg-asteria-primary text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
+            <i className="fa-solid fa-comments"></i> 進入客服 Inbox
+          </a>
+        </div>
+
+        <div className="grid lg:grid-cols-[360px_1fr] gap-8 items-start">
+          <aside className="bg-white border border-asteria-cream/70 rounded-2xl p-5 shadow-sm">
+            <div className="text-sm font-bold text-stone-500 mb-3">客人列表</div>
+            <div className="grid gap-2">
+              {customers.map((customer) => (
+                <button key={customer.id} onClick={() => setActiveCustomerId(customer.id)} className={`text-left p-4 rounded-xl border transition-all ${activeCustomer?.id === customer.id ? 'bg-asteria-yellow/25 border-asteria-primary' : 'border-asteria-cream/70 hover:bg-asteria-yellow/15'}`}>
+                  <div className="font-bold text-asteria-dark">{customer.name}</div>
+                  <div className="text-xs text-stone-400 mt-1">{customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}</div>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {customer.interests.slice(0, 3).map((interest) => (
+                      <span key={interest} className="bg-white text-asteria-primary border border-asteria-cream rounded-full px-2 py-0.5 text-[11px] font-bold">#{interest}</span>
+                    ))}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </aside>
+
+          <section className="grid gap-6">
+            <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
+                <div>
+                  <div className="text-sm text-stone-400">Profile</div>
+                  <h2 className="text-2xl font-bold text-asteria-dark">{activeCustomer?.name}</h2>
+                  <div className="text-sm text-stone-500 mt-1">原本平台：{activeCustomer?.originalChannel || '未填'}</div>
+                </div>
+                <div className="bg-asteria-blue/35 border border-asteria-blue rounded-2xl p-4 md:max-w-md">
+                  <div className="text-xs font-bold text-asteria-primary mb-2">AI SUMMARY</div>
+                  <p className="text-sm text-stone-600 leading-relaxed">{activeCustomer ? buildSummary(activeCustomer) : '未有客人資料。'}</p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-4 gap-3 mb-5">
+                <div className="bg-white border border-asteria-cream/70 rounded-xl p-4">
+                  <div className="text-xs text-stone-400 mb-1">WhatsApp</div>
+                  <div className="font-bold text-asteria-dark break-all">{activeCustomer?.phone || '未登記'}</div>
+                </div>
+                <div className="bg-white border border-asteria-cream/70 rounded-xl p-4">
+                  <div className="text-xs text-stone-400 mb-1">Instagram</div>
+                  <div className="font-bold text-asteria-dark break-all">{activeCustomer?.igHandle || '未登記'}</div>
+                </div>
+                <div className="bg-white border border-asteria-cream/70 rounded-xl p-4">
+                  <div className="text-xs text-stone-400 mb-1">Telegram</div>
+                  <div className="font-bold text-asteria-dark break-all">{activeCustomer?.telegramHandle || '未登記'}</div>
+                </div>
+                <div className="bg-white border border-asteria-cream/70 rounded-xl p-4">
+                  <div className="text-xs text-stone-400 mb-1">Email</div>
+                  <div className="font-bold text-asteria-dark break-all">{activeCustomer?.email || '未登記'}</div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-3">
+                <div className="bg-[#FFF8EC] rounded-xl p-4">
+                  <div className="text-2xl font-bold text-asteria-dark">{activeCustomer?.entries.length || 0}</div>
+                  <div className="text-xs text-stone-500">總 update</div>
+                </div>
+                <div className="bg-[#FFF8EC] rounded-xl p-4">
+                  <div className="text-2xl font-bold text-asteria-dark">{activeCustomer?.interests.length || 0}</div>
+                  <div className="text-xs text-stone-500">教學偏好</div>
+                </div>
+                <div className="bg-[#FFF8EC] rounded-xl p-4">
+                  <div className="text-2xl font-bold text-asteria-dark">{REVIEW_CASES.filter((item) => activeCustomer?.interests.includes(item.tag)).length}</div>
+                  <div className="text-xs text-stone-500">可推好評 case</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="hidden">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-5">
+                <div>
+                  <div className="text-sm text-stone-400">客服 Inbox</div>
+                  <h3 className="text-xl font-bold text-asteria-dark">Chat Record</h3>
+                </div>
+                <span className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
+                  {(activeCustomer?.messages || []).length} 則訊息
+                </span>
+              </div>
+
+              <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-2xl p-4 max-h-[360px] overflow-y-auto mb-4">
+                {(activeCustomer?.messages || []).length === 0 ? (
+                  <div className="text-center text-sm text-stone-500 py-8">暫時未有 chat 訊息。</div>
+                ) : (
+                  <div className="space-y-3">
+                    {(activeCustomer?.messages || []).map((message) => (
+                      <div key={message.id} className={`flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
+                        <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                          <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
+                          <div className="text-sm leading-relaxed">{message.text}</div>
+                          <div className={`text-[11px] mt-2 ${message.sender === 'admin' ? 'text-white/70' : 'text-stone-400'}`}>{formatEntryDate(message.createdAt)}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="grid md:grid-cols-[1fr_auto] gap-3">
+                <input value={adminReply} onChange={(event) => setAdminReply(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendAdminReply(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="回覆客人，會留喺 chat record..." />
+                <button onClick={sendAdminReply} className="btn-primary px-5 py-3 rounded-xl font-bold">回覆</button>
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-[1fr_360px] gap-6">
+              <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-asteria-dark mb-5">Timeline</h3>
+                <div className="space-y-5">
+                  {[...(activeCustomer?.entries || [])].reverse().map((entry) => {
+                    const meta = entryLabels[entry.type];
+                    return (
+                      <div key={entry.id} className="grid md:grid-cols-[120px_1fr] gap-3 border-b border-asteria-cream/60 pb-5">
+                        <div className="text-xs text-stone-400">{formatEntryDate(entry.createdAt)}</div>
+                        <div>
+                          <div className={`inline-flex items-center gap-2 ${meta.tone} text-xs font-bold px-3 py-1 rounded-full mb-2`}>
+                            <i className={meta.icon}></i> {meta.label}
+                          </div>
+                          <p className="text-stone-600 leading-relaxed">{entry.text}</p>
+                          {entry.images && entry.images.length > 0 && (
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-3">
+                              {entry.images.map((image, index) => (
+                                <img key={`${entry.id}-admin-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-asteria-cream" alt="admin update upload" />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-asteria-dark mb-4">Tag 好評庫</h3>
+                <div className="grid gap-3">
+                  {REVIEW_CASES.map((item) => (
+                    <div key={item.title} className={`rounded-xl border p-4 ${activeCustomer?.interests.includes(item.tag) ? 'border-asteria-primary bg-asteria-yellow/20' : 'border-asteria-cream/70'}`}>
+                      <div className="text-xs font-bold text-asteria-primary mb-1">#{item.tag}</div>
+                      <div className="font-bold text-asteria-dark">{item.title}</div>
+                      <p className="text-xs text-stone-500 mt-1">{item.note}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+const AdminInboxPage = () => {
+  const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
+  const [accounts, setAccounts] = useState<SystemAccount[]>(loadSystemAccounts);
+  const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || DEFAULT_CUSTOMERS[0].id);
+  const [inboxView, setInboxView] = useState<'list' | 'thread'>('list');
+  const [adminView, setAdminView] = useState<'inbox' | 'accounts'>('inbox');
+  const [replyText, setReplyText] = useState('');
+  const [replyImages, setReplyImages] = useState<string[]>([]);
+  const [newAccountName, setNewAccountName] = useState('');
+  const [newAccountUsername, setNewAccountUsername] = useState('');
+  const [newAccountEmail, setNewAccountEmail] = useState('');
+  const [newAccountPassword, setNewAccountPassword] = useState('');
+  const [newAccountRole, setNewAccountRole] = useState<'customer' | 'staff'>('customer');
+  const [resetPasswords, setResetPasswords] = useState<Record<string, string>>({});
+  const [accountSearch, setAccountSearch] = useState('');
+  const [accountMessage, setAccountMessage] = useState('');
+  const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
+  const sortedCustomers = [...customers].sort((a, b) => {
+    const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
+    const bTime = b.messages?.[b.messages.length - 1]?.createdAt || b.entries[b.entries.length - 1]?.createdAt || '';
+    return bTime.localeCompare(aTime);
+  });
+  const filteredAccounts = accounts.filter((account) => {
+    const query = accountSearch.trim().toLowerCase();
+    if (!query) return true;
+    return account.label.toLowerCase().includes(query) || account.username.toLowerCase().includes(query) || account.email.toLowerCase().includes(query) || account.role.toLowerCase().includes(query);
+  });
+
+  useEffect(() => {
+    savePortalCustomers(customers);
+  }, [customers]);
+
+  useEffect(() => {
+    saveSystemAccounts(accounts);
+  }, [accounts]);
+
+  const getUnreadCount = (customer: PortalCustomer) => {
+    const messages = customer.messages || [];
+    const lastAdminIndex = [...messages].map((message) => message.sender).lastIndexOf('admin');
+    return messages.slice(lastAdminIndex + 1).filter((message) => message.sender === 'customer').length;
+  };
+
+  const openThread = (customerId: string) => {
+    setActiveCustomerId(customerId);
+    setInboxView('thread');
+    setReplyText('');
+    setReplyImages([]);
+  };
+
+  const sendReply = () => {
+    const trimmed = replyText.trim();
+    if ((!trimmed && replyImages.length === 0) || !activeCustomer) return;
+    setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? {
+      ...customer,
+      messages: [
+        ...(customer.messages || []),
+        { id: Date.now(), sender: 'admin', text: trimmed, images: replyImages, createdAt: new Date().toISOString() }
+      ]
+    } : customer));
+    setReplyText('');
+    setReplyImages([]);
+  };
+
+  const handleReplyImages = async (files: FileList | null) => {
+    const images = await readFilesAsDataUrls(files);
+    setReplyImages((current) => [...current, ...images]);
+  };
+
+  const createAccount = async () => {
+    const trimmedUsername = newAccountUsername.trim();
+    const trimmedEmail = newAccountEmail.trim();
+    const trimmedPassword = newAccountPassword.trim();
+    const trimmedName = newAccountName.trim() || 'Asteria 客人';
+    if (!trimmedUsername || trimmedPassword.length < 6) {
+      setAccountMessage('請填 account 名，同最少 6 個字的 password。');
+      return;
+    }
+    if (accounts.some((account) => account.username === trimmedUsername)) {
+      setAccountMessage('呢個 account 名已經存在。');
+      return;
+    }
+
+    if (isBackendConfigured) {
+      try {
+        const result = await staffCreateAccount({
+          username: trimmedUsername,
+          password: trimmedPassword,
+          label: trimmedName,
+          contactEmail: trimmedEmail,
+          role: newAccountRole
+        });
+
+        let customerId: string | undefined;
+        if (result.account.role === 'customer') {
+          customerId = result.account.user_id;
+          const customer: PortalCustomer = {
+            id: customerId,
+            name: result.account.label,
+            phone: '',
+            email: result.account.contact_email || '',
+            originalChannel: 'Asteria Space',
+            interests: [],
+            entries: [],
+            messages: []
+          };
+          setCustomers((current) => [customer, ...current.filter((item) => item.id !== customerId)]);
+          setActiveCustomerId(customerId);
+        }
+
+        setAccounts((current) => [{
+          label: result.account.label,
+          username: result.account.username,
+          email: result.account.contact_email || '',
+          password: '',
+          role: result.account.role,
+          customerId
+        }, ...current.filter((item) => item.username !== result.account.username)]);
+        setNewAccountName('');
+        setNewAccountUsername('');
+        setNewAccountEmail('');
+        setNewAccountPassword('');
+        setNewAccountRole('customer');
+        setAccountMessage('Account 已在 Supabase 新增。');
+      } catch (error) {
+        setAccountMessage(error instanceof Error ? error.message : '新增 account 失敗。');
+      }
+      return;
+    }
+
+    let customerId: string | undefined;
+    if (newAccountRole === 'customer') {
+      customerId = `customer-${Date.now()}`;
+      const customer: PortalCustomer = {
+        id: customerId,
+        name: trimmedName,
+        phone: '',
+        email: trimmedEmail,
+        originalChannel: 'Asteria Space',
+        interests: [],
+        entries: [],
+        messages: []
+      };
+      setCustomers((current) => [customer, ...current]);
+      setActiveCustomerId(customerId);
+    }
+
+    setAccounts((current) => [{
+      label: trimmedName,
+      username: trimmedUsername,
+      email: trimmedEmail,
+      password: trimmedPassword,
+      role: newAccountRole,
+      customerId
+    }, ...current]);
+    setNewAccountName('');
+    setNewAccountUsername('');
+    setNewAccountEmail('');
+    setNewAccountPassword('');
+    setNewAccountRole('customer');
+    setAccountMessage('Account 已新增。');
+  };
+
+  const resetAccountPassword = async (username: string) => {
+    const nextPassword = (resetPasswords[username] || '').trim();
+    if (nextPassword.length < 6) {
+      setAccountMessage('新 password 最少 6 個字。');
+      return;
+    }
+    if (isBackendConfigured) {
+      try {
+        await staffResetPassword({ username, password: nextPassword });
+        setResetPasswords((current) => ({ ...current, [username]: '' }));
+        setAccountMessage(`${username} password 已在 Supabase reset。`);
+      } catch (error) {
+        setAccountMessage(error instanceof Error ? error.message : 'Reset password 失敗。');
+      }
+      return;
+    }
+    setAccounts((current) => current.map((account) => account.username === username ? { ...account, password: nextPassword } : account));
+    setResetPasswords((current) => ({ ...current, [username]: '' }));
+    setAccountMessage(`${username} password 已 reset。`);
+  };
+
+  const deleteAccount = async (account: SystemAccount) => {
+    const confirmed = window.confirm(`Delete account ${account.username}?`);
+    if (!confirmed) return;
+    if (isBackendConfigured) {
+      try {
+        await staffDeleteAccount({ username: account.username });
+        setAccounts((current) => current.filter((item) => item.username !== account.username));
+        if (account.customerId) {
+          setCustomers((current) => current.filter((customer) => customer.id !== account.customerId));
+        }
+        setAccountMessage(`${account.username} 已在 Supabase 刪除。`);
+      } catch (error) {
+        setAccountMessage(error instanceof Error ? error.message : 'Delete account 失敗。');
+      }
+      return;
+    }
+    setAccounts((current) => current.filter((item) => item.username !== account.username));
+    if (account.customerId) {
+      setCustomers((current) => current.filter((customer) => customer.id !== account.customerId));
+      if (activeCustomerId === account.customerId) {
+        setActiveCustomerId(customers.find((customer) => customer.id !== account.customerId)?.id || DEFAULT_CUSTOMERS[0].id);
+      }
+    }
+    setAccountMessage(`${account.username} 已刪除。`);
+  };
+
+  return (
+    <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
+          <div>
+            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-3">
+              <i className="fa-solid fa-arrow-left"></i> 返回主頁
+            </a>
+            <h1 className="text-3xl font-bold text-asteria-dark">客服 Inbox</h1>
+          </div>
+          <div className="text-sm text-stone-500">Inbox list → 對話頁 · Account search / reset</div>
+        </div>
+
+        <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
+          <button onClick={() => { setAdminView('inbox'); setInboxView('list'); }} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'inbox' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
+            Inbox
+          </button>
+          <button onClick={() => setAdminView('accounts')} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'accounts' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
+            Account 管理
+          </button>
+        </div>
+
+        {adminView === 'accounts' && (
+        <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm p-5 mb-5">
+          <div className="flex flex-col lg:flex-row lg:items-start gap-5">
+            <div className="lg:w-[360px] shrink-0">
+              <div className="text-sm text-stone-400">Staff tools</div>
+              <h2 className="text-2xl font-bold text-asteria-dark mb-2">Account 管理</h2>
+              <p className="text-sm text-stone-500 leading-relaxed">客服可以新增客人 / staff account，亦可以幫客人 reset password。</p>
+            </div>
+
+            <div className="grid gap-3 flex-1">
+              <div className="grid md:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-3">
+                <input value={newAccountName} onChange={(event) => setNewAccountName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="客人 / staff 名" />
+                <input value={newAccountUsername} onChange={(event) => setNewAccountUsername(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Account 名" />
+                <input value={newAccountEmail} onChange={(event) => setNewAccountEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email 備用聯絡" />
+                <input value={newAccountPassword} onChange={(event) => setNewAccountPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="初始 password" />
+                <select value={newAccountRole} onChange={(event) => setNewAccountRole(event.target.value as 'customer' | 'staff')} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white">
+                  <option value="customer">客人</option>
+                  <option value="staff">Staff</option>
+                </select>
+              </div>
+              <button onClick={createAccount} className="btn-primary rounded-xl px-5 py-3 font-bold md:w-fit">新增 account</button>
+              {accountMessage && <div className="text-sm font-bold text-asteria-primary">{accountMessage}</div>}
+              <input value={accountSearch} onChange={(event) => setAccountSearch(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white mt-2" placeholder="Search account 名 / 客人名 / email" />
+
+              <div className="grid gap-2 mt-2 max-h-[520px] overflow-y-auto pr-1">
+                {filteredAccounts.map((account) => (
+                  <div key={account.username} className="grid lg:grid-cols-[1fr_130px_1fr_auto_auto] gap-2 items-center bg-[#FFF8EC] rounded-xl p-3">
+                    <div>
+                      <div className="font-bold text-asteria-dark">{account.label}</div>
+                      <div className="text-xs text-stone-500 break-all">account: {account.username}</div>
+                      <div className="text-xs text-stone-400 break-all">email: {account.email || '未填'}</div>
+                    </div>
+                    <div className="text-xs font-bold text-asteria-primary bg-white border border-asteria-cream rounded-full px-3 py-1 w-fit">
+                      {account.role === 'staff' ? 'Staff' : '客人'}
+                    </div>
+                    <input value={resetPasswords[account.username] || ''} onChange={(event) => setResetPasswords((current) => ({ ...current, [account.username]: event.target.value }))} className="border border-asteria-cream rounded-xl px-4 py-2 outline-none focus:border-asteria-primary bg-white" placeholder="輸入新 password" />
+                    <button onClick={() => resetAccountPassword(account.username)} className="bg-asteria-dark text-white rounded-xl px-4 py-2 font-bold">Reset</button>
+                    <button onClick={() => deleteAccount(account)} className="bg-white text-red-600 border border-red-200 rounded-xl px-4 py-2 font-bold hover:bg-red-50">Delete</button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        )}
+
+        {adminView === 'inbox' && (
+        <div className="min-h-[calc(100vh-230px)]">
+          <section className={`${inboxView === 'list' ? 'block' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden`}>
+            <div className="p-4 border-b border-asteria-cream/70">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <div className="font-bold text-asteria-dark text-lg">所有對話</div>
+                  <div className="text-xs text-stone-400 mt-1">{customers.length} 個客人</div>
+                </div>
+                <div className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
+                  {customers.reduce((total, customer) => total + getUnreadCount(customer), 0)} 未讀
+                </div>
+              </div>
+            </div>
+            <div className="max-h-[calc(100vh-270px)] overflow-y-auto">
+              {sortedCustomers.map((customer) => {
+                const lastMessage = customer.messages?.[customer.messages.length - 1];
+                const unreadCount = getUnreadCount(customer);
+                return (
+                  <button
+                    key={customer.id}
+                    onClick={() => openThread(customer.id)}
+                    className="w-full text-left p-4 border-b border-asteria-cream/50 hover:bg-[#FFF8EC] transition-all bg-white"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className={`w-11 h-11 rounded-full flex items-center justify-center font-bold shrink-0 ${unreadCount ? 'bg-asteria-primary text-white' : 'bg-asteria-blue/45 text-asteria-primary'}`}>
+                        {customer.name.slice(0, 1).toUpperCase()}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="font-bold text-asteria-dark truncate">{customer.name}</div>
+                          <div className="flex items-center gap-2 shrink-0">
+                            {unreadCount > 0 && (
+                              <span className="min-w-6 h-6 px-2 rounded-full bg-asteria-primary text-white text-xs font-bold flex items-center justify-center">
+                                {unreadCount}
+                              </span>
+                            )}
+                            <div className="text-[11px] text-stone-400">{lastMessage ? formatEntryDate(lastMessage.createdAt) : ''}</div>
+                          </div>
+                        </div>
+                        <div className="text-xs text-stone-400 mt-0.5">{customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}</div>
+                        <div className={`text-sm truncate mt-1 ${unreadCount ? 'text-asteria-dark font-bold' : 'text-stone-500'}`}>
+                          {lastMessage ? `${lastMessage.sender === 'admin' ? '你：' : ''}${lastMessage.text || '圖片'}` : '未有訊息'}
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col min-h-[calc(100vh-230px)]`}>
+            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
+              <div className="min-w-0">
+                <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
+                  <i className="fa-solid fa-arrow-left"></i> 返回所有對話
+                </button>
+                <div className="font-bold text-asteria-dark text-lg truncate">{activeCustomer?.name}</div>
+                <div className="text-xs text-stone-400">
+                  WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
+                </div>
+              </div>
+              <span className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl">Asteria Space</span>
+            </div>
+
+            <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+              {(activeCustomer?.messages || []).length === 0 ? (
+                <div className="h-full flex items-center justify-center text-sm text-stone-500">未有對話，下面可以開始回覆。</div>
+              ) : (
+                <div className="space-y-4">
+                  {(activeCustomer?.messages || []).map((message) => (
+                    <div key={message.id} className={`flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`max-w-[78%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                        <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
+                        {message.text && <div className="text-sm leading-relaxed">{message.text}</div>}
+                        {message.images && message.images.length > 0 && (
+                          <div className="grid grid-cols-2 gap-2 mt-3">
+                            {message.images.map((image, index) => (
+                              <img key={`${message.id}-inbox-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat attachment" />
+                            ))}
+                          </div>
+                        )}
+                        <div className={`text-[11px] mt-2 ${message.sender === 'admin' ? 'text-white/70' : 'text-stone-400'}`}>{formatEntryDate(message.createdAt)}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {replyImages.length > 0 && (
+              <div className="px-4 pt-3 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2">
+                {replyImages.map((image, index) => (
+                  <img key={`reply-preview-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="reply upload preview" />
+                ))}
+              </div>
+            )}
+
+            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="send image">
+                <i className="fa-regular fa-images"></i>
+                <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleReplyImages(event.target.files)} />
+              </label>
+              <input value={replyText} onChange={(event) => setReplyText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendReply(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="輸入回覆..." />
+              <button onClick={sendReply} className="btn-primary px-5 py-3 rounded-xl font-bold">
+                <i className="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </section>
+        </div>
+        )}
+      </div>
+    </main>
+  );
+};
 
 const Footer = () => (
   <footer className="py-12 bg-white border-t border-gray-100 text-center">
@@ -845,9 +2770,15 @@ const Footer = () => (
         <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-asteria-primary hover:bg-asteria-primary hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-instagram text-xl"></i>
         </a>
-        <a href="https://wa.me/85259413688" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
+        <a href={WHATSAPP_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-whatsapp text-xl"></i>
         </a>
+        <a href={FACEBOOK_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+          <i className="fa-brands fa-facebook-f text-xl"></i>
+        </a>
+        <span className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-sky-500 shadow-sm opacity-70" title="Telegram 待公布">
+          <i className="fa-brands fa-telegram text-xl"></i>
+        </span>
       </div>
       <p className="text-gray-400 text-xs font-sans">
         © {new Date().getFullYear()} Asteria Crystal Tarot. All Rights Reserved.
@@ -857,6 +2788,93 @@ const Footer = () => (
 );
 
 const App = () => {
+  const getPage = () => {
+    if (window.location.hash === '#teaching') return 'teaching';
+    if (window.location.hash === '#register') return 'register';
+    if (window.location.hash === '#portal') return 'portal';
+    if (window.location.hash === '#admin') return 'admin';
+    if (window.location.hash === '#inbox') return 'inbox';
+    return 'home';
+  };
+
+  const [page, setPage] = useState(getPage);
+  const currentRole = getCurrentDemoRole();
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setPage(getPage());
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  if (page === 'teaching') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <Blog fullPage />
+        <Footer />
+      </div>
+    );
+  }
+
+  if (page === 'portal' && currentRole === 'staff') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <AdminInboxPage />
+      </div>
+    );
+  }
+
+  if (page === 'portal') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <SpacePortalPage />
+      </div>
+    );
+  }
+
+  if (page === 'register') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <RegisterPage />
+        <Footer />
+      </div>
+    );
+  }
+
+  if ((page === 'admin' || page === 'inbox') && currentRole !== 'staff') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <RegisterPage />
+        <Footer />
+      </div>
+    );
+  }
+
+  if (page === 'admin') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <AdminInboxPage />
+        <Footer />
+      </div>
+    );
+  }
+
+  if (page === 'inbox') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <AdminInboxPage />
+      </div>
+    );
+  }
+
   return (
     <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
       <Navbar />
