@@ -6,10 +6,10 @@ import { createRoot } from 'react-dom/client';
 const LOGO_SRC = "/asteria-logo.jpg";
 
 const Navbar = () => (
-  <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-purple/30 shadow-sm transition-all">
+  <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
     <div className="container mx-auto px-4 py-3 flex justify-between items-center">
       <div className="flex items-center gap-2">
-        <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-purple/20 logo-img bg-white p-0.5" alt="Asteria logo" />
+        <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
         <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
           ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">Crystal Tarot</span>
         </div>
@@ -28,14 +28,14 @@ const Navbar = () => (
 );
 
 const Hero = () => (
-  <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-purple-50 via-white to-blue-50">
+  <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-amber-50 via-white to-cyan-50">
     {/* Animated Background Elements */}
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-asteria-purple/20 rounded-full blur-[100px] animate-pulse"></div>
+       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-asteria-cream/20 rounded-full blur-[100px] animate-pulse"></div>
        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-asteria-blue/20 rounded-full blur-[100px] animate-pulse" style={{animationDelay: '2s'}}></div>
        <div className="absolute top-[20%] left-[15%] text-asteria-yellow text-4xl opacity-40 animate-bounce-slow"><i className="fa-solid fa-star"></i></div>
        <div className="absolute top-[60%] right-[10%] text-asteria-primary text-2xl opacity-30 animate-bounce-slow" style={{animationDelay: '1s'}}><i className="fa-solid fa-moon"></i></div>
-       <div className="absolute top-[15%] right-[30%] text-pink-300 text-3xl opacity-30 animate-spin-slow"><i className="fa-regular fa-snowflake"></i></div>
+       <div className="absolute top-[15%] right-[30%] text-rose-200 text-3xl opacity-30 animate-spin-slow"><i className="fa-regular fa-snowflake"></i></div>
     </div>
 
     <div className="container mx-auto px-6 relative z-10">
@@ -43,7 +43,7 @@ const Hero = () => (
         
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur border border-asteria-purple/50 px-4 py-1.5 rounded-full text-asteria-primary text-sm font-bold mb-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur border border-asteria-cream/50 px-4 py-1.5 rounded-full text-asteria-primary text-sm font-bold mb-6 shadow-sm">
              <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-asteria-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-asteria-primary"></span>
@@ -52,10 +52,10 @@ const Hero = () => (
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 leading-tight tracking-tight">
-            感情問題<span className="text-transparent bg-clip-text bg-gradient-to-r from-asteria-primary to-purple-400">有救了！</span>
+            感情問題<span className="text-transparent bg-clip-text bg-gradient-to-r from-asteria-primary to-amber-500">有救了！</span>
             <br />
             <span className="text-2xl md:text-4xl mt-4 block font-medium text-gray-600">
-               讓對方<span className="relative inline-block mx-2 after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-full after:h-3 after:bg-yellow-200/50 after:-z-10">重新愛上你</span>
+               讓對方<span className="relative inline-block mx-2 after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-full after:h-3 after:bg-asteria-yellow/60 after:-z-10">重新愛上你</span>
             </span>
           </h1>
           
@@ -66,10 +66,10 @@ const Hero = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-purple-200 flex items-center justify-center gap-2 group">
+            <a href="#services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
               <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看所有儀式
             </a>
-            <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="bg-white text-gray-700 border-2 border-gray-100 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 hover:border-asteria-purple/30">
+            <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="bg-white text-gray-700 border-2 border-gray-100 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 hover:border-asteria-cream/30">
               <i className="fa-brands fa-instagram text-xl"></i> 追蹤 Instagram
             </a>
           </div>
@@ -87,12 +87,12 @@ const Hero = () => (
         {/* Right Visuals (Rich Graphics) */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] md:min-h-[500px] flex items-center justify-center animate-float">
             {/* Main Circle Background */}
-            <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] border border-asteria-purple/30 rounded-full animate-spin-slow-reverse opacity-50"></div>
+            <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] border border-asteria-cream/30 rounded-full animate-spin-slow-reverse opacity-50"></div>
             <div className="absolute w-[300px] h-[300px] md:w-[420px] md:h-[420px] border border-dashed border-asteria-primary/20 rounded-full animate-spin-slow"></div>
             
             {/* Center "Phone" Card */}
             <div className="relative w-64 md:w-72 bg-white rounded-3xl shadow-2xl border-4 border-white overflow-hidden z-20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-500">
-                <div className="bg-gradient-to-r from-asteria-primary to-purple-400 p-4 flex items-center gap-3 text-white">
+                <div className="bg-gradient-to-r from-asteria-primary to-amber-500 p-4 flex items-center gap-3 text-white">
                     <img src={LOGO_SRC} className="w-8 h-8 rounded-full border border-white/40 logo-img bg-white p-0.5" alt="Asteria logo" />
                     <div className="font-bold text-sm">Asteria Tarot</div>
                 </div>
@@ -100,11 +100,11 @@ const Hero = () => (
                     <div className="bg-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-gray-600 max-w-[85%] self-start">
                         你要相信，你們的緣分還未斷。這張牌顯示他心裡還有你... 🌸
                     </div>
-                    <div className="bg-purple-100 p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-purple-800 max-w-[85%] self-end">
+                    <div className="bg-amber-50 p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-amber-900 max-w-[85%] self-end">
                          真的嗎？我昨晚真的夢見他找我了！😭 多謝你 Asteria！
                     </div>
                     <div className="bg-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm text-xs text-gray-600 max-w-[85%] self-start flex items-center gap-2">
-                         <i className="fa-solid fa-gift text-pink-400"></i> [儀式生效通知] 對方正在輸入中...
+                         <i className="fa-solid fa-gift text-rose-400"></i> [儀式生效通知] 對方正在輸入中...
                     </div>
                 </div>
                 {/* Notification Badge */}
@@ -122,16 +122,16 @@ const Hero = () => (
             </div>
             
             <div className="absolute bottom-20 right-0 md:right-10 bg-white p-2 rounded-lg shadow-lg -rotate-12 animate-float" style={{animationDelay: '1.5s'}}>
-                 <div className="w-16 h-24 bg-gradient-to-br from-pink-100 to-red-100 rounded border border-pink-200 flex flex-col items-center justify-center">
-                    <i className="fa-solid fa-heart text-2xl text-pink-400"></i>
-                    <span className="text-[8px] mt-1 font-bold text-pink-800 uppercase">Lovers</span>
+                 <div className="w-16 h-24 bg-gradient-to-br from-rose-50 to-orange-100 rounded border border-rose-100 flex flex-col items-center justify-center">
+                    <i className="fa-solid fa-heart text-2xl text-rose-400"></i>
+                    <span className="text-[8px] mt-1 font-bold text-rose-800 uppercase">Lovers</span>
                 </div>
             </div>
 
-            <div className="absolute top-1/2 right-[-20px] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-blue-400 text-xl animate-pulse z-30">
+            <div className="absolute top-1/2 right-[-20px] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-cyan-500 text-xl animate-pulse z-30">
                 <i className="fa-solid fa-gem"></i>
             </div>
-             <div className="absolute bottom-10 left-20 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-purple-400 text-lg animate-bounce z-30">
+             <div className="absolute bottom-10 left-20 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-amber-500 text-lg animate-bounce z-30">
                 <i className="fa-solid fa-wand-magic-sparkles"></i>
             </div>
         </div>
@@ -306,7 +306,7 @@ const Oracle = () => {
   };
 
   return (
-    <section id="oracle" className="py-20 bg-gradient-to-b from-white via-asteria-purple/10 to-white relative overflow-hidden">
+    <section id="oracle" className="py-20 bg-gradient-to-b from-white via-asteria-cream/10 to-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
@@ -335,7 +335,7 @@ const Oracle = () => {
                     disabled={loading}
                     className="group flex items-center p-4 bg-white/60 border border-white hover:border-asteria-primary/50 hover:bg-white rounded-xl transition-all shadow-sm hover:shadow-md text-left disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <div className="w-12 h-12 bg-asteria-purple/20 text-asteria-primary rounded-full flex items-center justify-center text-xl mr-4 group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-asteria-cream/20 text-asteria-primary rounded-full flex items-center justify-center text-xl mr-4 group-hover:scale-110 transition-transform">
                       <i className={t.icon}></i>
                     </div>
                     <span className="font-bold text-gray-700 group-hover:text-asteria-primary transition-colors">{t.label}</span>
@@ -349,8 +349,8 @@ const Oracle = () => {
           {step === 'drawing' && (
             <div className="flex flex-col items-center justify-center animate-fade-in py-10">
               <div className="relative w-32 h-48 mb-8">
-                <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-blue rounded-xl border-4 border-white shadow-xl animate-ping opacity-20"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-blue rounded-xl border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-yellow rounded-xl border-4 border-white shadow-xl animate-ping opacity-20"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-yellow rounded-xl border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
                    <i className="fa-solid fa-star-of-david text-4xl text-white animate-spin-slow"></i>
                 </div>
@@ -377,7 +377,7 @@ const Oracle = () => {
                     ))}
                 </div>
 
-                <div className="bg-white/80 p-6 rounded-2xl border border-asteria-purple/20 shadow-sm w-full mb-6">
+                <div className="bg-white/80 p-6 rounded-2xl border border-asteria-cream/20 shadow-sm w-full mb-6">
                     <p className="text-lg text-gray-700 font-medium leading-relaxed mb-4">
                         <i className="fa-solid fa-quote-left text-asteria-primary/30 mr-2 text-xl"></i>
                         {reading.analysis}
@@ -388,7 +388,7 @@ const Oracle = () => {
                     </p>
                 </div>
 
-                <a href="https://wa.me/85259413688" target="_blank" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-purple-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
+                <a href="https://wa.me/85259413688" target="_blank" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
                     <i className="fa-brands fa-whatsapp"></i> 解鎖詳細占卜結果 (付費)
                 </a>
                 
@@ -441,7 +441,7 @@ const Blog = () => {
         id: 2,
         title: "對方事事挑剔，令你唔敢再表達自己？",
         category: "自我價值",
-        color: "bg-purple-100",
+        color: "bg-amber-100",
         icon: "fa-solid fa-person-rays",
         summary: "如何面對「挑剔型」伴侶，重建自信。你不需要變得完美才值得被愛。",
         content: `
@@ -488,7 +488,7 @@ const Blog = () => {
         id: 4,
         title: "曖昧期必看！如何判斷佢係咪認真？",
         category: "脫單指南",
-        color: "bg-pink-100",
+        color: "bg-rose-100",
         icon: "fa-regular fa-face-kiss-wink-heart",
         summary: "區分「暖男」與「中央空調」。秒回不代表喜歡，細節見真章。",
         content: `
@@ -576,11 +576,11 @@ const Blog = () => {
                 </div>
 
                 <div className="p-8">
-                    <div className="prose prose-purple max-w-none text-gray-700 leading-loose" dangerouslySetInnerHTML={{ __html: selectedPost.content }}></div>
+                <div className="prose prose-stone max-w-none text-gray-700 leading-loose" dangerouslySetInnerHTML={{ __html: selectedPost.content }}></div>
                     
                     <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
                         <span className="text-sm text-gray-400">想解決類似問題？</span>
-                        <a href="https://wa.me/85259413688" target="_blank" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-purple-600 transition-colors shadow-md text-sm">
+                        <a href="https://wa.me/85259413688" target="_blank" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
                             <i className="fa-brands fa-whatsapp mr-1"></i> 與 Asteria 聊聊
                         </a>
                     </div>
@@ -601,10 +601,10 @@ const Services = () => {
   const [activeType, setActiveType] = useState<ServiceType>('single');
 
   const iconStyles = [
-    { icon: "fa-solid fa-wand-magic-sparkles", color: "bg-purple-50 text-purple-500" },
-    { icon: "fa-solid fa-heart", color: "bg-pink-50 text-pink-500" },
+    { icon: "fa-solid fa-wand-magic-sparkles", color: "bg-amber-50 text-amber-600" },
+    { icon: "fa-solid fa-heart", color: "bg-rose-50 text-rose-500" },
     { icon: "fa-solid fa-fire", color: "bg-orange-50 text-orange-500" },
-    { icon: "fa-solid fa-shield-heart", color: "bg-blue-50 text-blue-500" },
+    { icon: "fa-solid fa-shield-heart", color: "bg-cyan-50 text-cyan-600" },
     { icon: "fa-solid fa-broom", color: "bg-teal-50 text-teal-500" },
     { icon: "fa-solid fa-bolt", color: "bg-yellow-50 text-yellow-600" },
     { icon: "fa-solid fa-link", color: "bg-indigo-50 text-indigo-500" },
@@ -753,7 +753,7 @@ const Services = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
           {activeItems.map((item, idx) => (
-            <div key={`${activeCategory}-${activeType}-${idx}`} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-purple/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+            <div key={`${activeCategory}-${activeType}-${idx}`} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-asteria-cream/30 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
               <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 ${item.color} group-hover:scale-110 transition-transform`}>
                 <i className={item.icon}></i>
               </div>
@@ -768,7 +768,7 @@ const Services = () => {
                 ))}
               </div>
 
-              <a href="https://wa.me/85259413688" target="_blank" className="w-full text-center border-2 border-asteria-purple/20 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
+              <a href="https://wa.me/85259413688" target="_blank" className="w-full text-center border-2 border-asteria-cream/20 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
                 查詢詳情
               </a>
             </div>
@@ -816,7 +816,7 @@ const Reviews = () => (
         <div className="bg-white rounded-2xl p-6 shadow-sm border-2 border-asteria-pink/30 relative">
            <div className="absolute -top-3 -right-3 bg-asteria-pink text-white text-xs px-2 py-1 rounded-full font-bold shadow-sm">熱門</div>
            <div className="flex items-center gap-3 mb-4">
-             <div className="w-10 h-10 bg-pink-50 rounded-full overflow-hidden flex items-center justify-center">
+             <div className="w-10 h-10 bg-rose-50 rounded-full overflow-hidden flex items-center justify-center">
                 <span className="text-lg">👩🏻</span>
              </div>
              <div>
