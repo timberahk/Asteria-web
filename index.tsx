@@ -24,6 +24,20 @@ const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "";
 const FACEBOOK_URL = "https://www.facebook.com/share/p/1aAk2CJBt8/";
 
+type SpaceSessionRole = 'customer' | 'staff' | null;
+
+const getStoredSpaceRole = () => window.localStorage.getItem('asteriaCurrentRole') as SpaceSessionRole;
+
+const storeSpaceAccount = (account: { role: 'customer' | 'staff'; username: string; contact_email: string | null; user_id: string }) => {
+  window.localStorage.setItem('asteriaCurrentRole', account.role);
+  window.localStorage.setItem('asteriaCurrentUsername', account.username);
+  window.localStorage.setItem('asteriaCurrentEmail', account.contact_email || '');
+  if (account.role === 'customer') {
+    window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
+  }
+  window.dispatchEvent(new Event('asteria-session-change'));
+};
+
 const clearSpaceSession = async () => {
   await signOutSpace();
   window.localStorage.removeItem('asteriaCurrentRole');
@@ -35,9 +49,21 @@ const clearSpaceSession = async () => {
 };
 
 const Navbar = () => {
-  const role = window.localStorage.getItem('asteriaCurrentRole') as 'customer' | 'staff' | null;
+  const [role, setRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
   const spaceHref = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
   const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
+
+  useEffect(() => {
+    const syncRole = () => setRole(getStoredSpaceRole());
+    window.addEventListener('asteria-session-change', syncRole);
+    window.addEventListener('storage', syncRole);
+    window.addEventListener('hashchange', syncRole);
+    return () => {
+      window.removeEventListener('asteria-session-change', syncRole);
+      window.removeEventListener('storage', syncRole);
+      window.removeEventListener('hashchange', syncRole);
+    };
+  }, []);
 
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
@@ -1163,8 +1189,6 @@ const saveSystemAccounts = (accounts: SystemAccount[]) => {
   window.localStorage.setItem('asteriaSystemAccounts', JSON.stringify(accounts));
 };
 
-const getCurrentDemoRole = () => window.localStorage.getItem('asteriaCurrentRole') as 'customer' | 'staff' | null;
-
 const formatEntryDate = (value: string) => {
   return new Intl.DateTimeFormat('zh-HK', {
     month: 'short',
@@ -1223,12 +1247,7 @@ const RegisterPage = () => {
     getCurrentAccount()
       .then((account) => {
         if (!isMounted || !account) return;
-        window.localStorage.setItem('asteriaCurrentRole', account.role);
-        window.localStorage.setItem('asteriaCurrentUsername', account.username);
-        window.localStorage.setItem('asteriaCurrentEmail', account.contact_email || '');
-        if (account.role === 'customer') {
-          window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
-        }
+        storeSpaceAccount(account);
         window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
       })
       .catch(() => {
@@ -1247,9 +1266,7 @@ const RegisterPage = () => {
     if (isBackendConfigured) {
       try {
         const account = await loginWithUsername(loginUsername.trim(), loginPassword.trim());
-        window.localStorage.setItem('asteriaCurrentRole', account.role);
-        window.localStorage.setItem('asteriaCurrentUsername', account.username);
-        window.localStorage.setItem('asteriaCurrentEmail', account.contact_email || '');
+        storeSpaceAccount(account);
 
         if (account.role === 'customer') {
           const existingCustomers = loadPortalCustomers();
@@ -1266,7 +1283,6 @@ const RegisterPage = () => {
               messages: []
             }, ...existingCustomers]);
           }
-          window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
         }
 
         window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
@@ -3034,17 +3050,36 @@ const App = () => {
   };
 
   const [page, setPage] = useState(getPage);
-  const currentRole = getCurrentDemoRole();
+  const [currentRole, setCurrentRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
+
+  const restoreBackendSession = async () => {
+    if (!isBackendConfigured) return;
+    try {
+      const account = await getCurrentAccount();
+      if (!account) {
+        setCurrentRole(getStoredSpaceRole());
+        return;
+      }
+      storeSpaceAccount(account);
+      setCurrentRole(account.role);
+    } catch {
+      setCurrentRole(getStoredSpaceRole());
+    }
+  };
 
   useEffect(() => {
     const handleHashChange = () => {
+      setCurrentRole(getStoredSpaceRole());
       setPage(getPage());
+      restoreBackendSession();
     };
     const handleSessionChange = () => {
+      setCurrentRole(getStoredSpaceRole());
       setPage(getPage());
     };
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('asteria-session-change', handleSessionChange);
+    restoreBackendSession();
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
       window.removeEventListener('asteria-session-change', handleSessionChange);
