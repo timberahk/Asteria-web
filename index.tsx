@@ -2904,9 +2904,9 @@ const AdminInboxPage = () => {
                 </div>
               </div>
 
-              <div className="grid gap-2 mt-2 h-[68vh] min-h-[560px] max-h-[920px] overflow-y-auto pr-1 rounded-2xl border border-asteria-cream/60 bg-white p-2 max-w-full">
+              <div className="flex flex-col gap-2 mt-2 h-[68vh] min-h-[560px] max-h-[920px] overflow-y-auto pr-1 rounded-2xl border border-asteria-cream/60 bg-white p-2 max-w-full">
                 {filteredAccounts.map((account) => (
-                  <div key={account.username} className="grid grid-cols-1 lg:grid-cols-[1fr_130px_minmax(0,1fr)_auto_auto] gap-2 items-center bg-[#FFF8EC] rounded-xl p-3 min-w-0 overflow-hidden">
+                  <div key={account.username} className="grid grid-cols-1 lg:grid-cols-[1fr_130px_minmax(0,1fr)_auto_auto] gap-2 items-start lg:items-center bg-[#FFF8EC] rounded-xl p-4 min-w-0">
                     <div className="min-w-0">
                       <div className="font-bold text-asteria-dark">{account.label}</div>
                       <div className="text-xs text-stone-500 break-all">account: {account.username}</div>
