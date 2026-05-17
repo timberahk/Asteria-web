@@ -2998,21 +2998,23 @@ const AdminInboxPage = () => {
           <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-7rem)] sm:h-[calc(100vh-9rem)] min-h-[600px] sm:min-h-[700px] max-h-[980px] min-w-0`}>
             <div className="px-3 sm:px-4 py-2 sm:py-3 border-b border-asteria-cream/70 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 shrink-0">
               <div className="min-w-0">
-                <button onClick={showInboxList} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-xs sm:text-sm mb-1 sm:mb-2">
-                  <i className="fa-solid fa-arrow-left"></i> 返回所有對話
-                </button>
+                <div className="flex flex-wrap items-center gap-2 mb-1 sm:mb-2">
+                  <button onClick={showInboxList} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-xs sm:text-sm">
+                    <i className="fa-solid fa-arrow-left"></i> 返回所有對話
+                  </button>
+                  <button
+                    onClick={() => activeCustomer && markThreadReadState(activeCustomer, 'unread')}
+                    className="inline-flex items-center gap-1 text-xs font-bold text-asteria-primary bg-asteria-yellow/35 border border-asteria-cream px-3 py-1.5 rounded-full"
+                  >
+                    <i className="fa-regular fa-envelope"></i> 設為未讀
+                  </button>
+                </div>
                 <div className="font-bold text-asteria-dark truncate text-sm sm:text-base">{activeCustomer?.name}</div>
                 <div className="text-[11px] sm:text-xs text-stone-400 truncate">
                   @{activeCustomer?.accountUsername || '未有 account'} · WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
                 </div>
               </div>
               <div className="flex gap-2 overflow-x-auto">
-                <button
-                  onClick={() => activeCustomer && markThreadReadState(activeCustomer, 'unread')}
-                  className="text-xs sm:text-sm font-bold text-asteria-primary bg-white border border-asteria-cream px-3 py-2 rounded-xl whitespace-nowrap"
-                >
-                  標記未讀
-                </button>
                 <button
                   onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
                   disabled={activeChatImages.length === 0}
