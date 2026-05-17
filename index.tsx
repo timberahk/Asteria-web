@@ -16,6 +16,7 @@ import {
   signOutSpace,
   staffCreateAccount,
   staffDeleteAccount,
+  staffDeleteMessage,
   staffSendMessage,
   staffResetPassword,
   updateSpaceEntry,
@@ -2708,6 +2709,25 @@ const AdminInboxPage = () => {
     setReplyImages((current) => [...current, ...images]);
   };
 
+  const unsendStaffMessage = async (message: ChatMessage) => {
+    if (message.sender !== 'admin' || !activeCustomer) return;
+    const confirmed = window.confirm('確定收回呢句客服訊息？');
+    if (!confirmed) return;
+
+    try {
+      if (isBackendConfigured) {
+        await staffDeleteMessage({ messageId: String(message.id) });
+      }
+      setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? {
+        ...customer,
+        messages: (customer.messages || []).filter((item) => item.id !== message.id)
+      } : customer));
+      setAccountMessage('訊息已收回。');
+    } catch (error) {
+      setAccountMessage(error instanceof Error ? error.message : '收回訊息失敗。');
+    }
+  };
+
   const createAccount = async () => {
     const trimmedUsername = newAccountUsername.trim();
     const trimmedEmail = newAccountEmail.trim();
@@ -3017,7 +3037,7 @@ const AdminInboxPage = () => {
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div id={chatMessageDomId('staff-thread', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[88%] sm:max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                      <div className={`group relative max-w-[88%] sm:max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
@@ -3029,7 +3049,17 @@ const AdminInboxPage = () => {
                             ))}
                           </div>
                         )}
-                        <div className={`text-[11px] mt-2 ${message.sender === 'admin' ? 'text-white/70' : 'text-stone-400'}`}>{formatEntryDate(message.createdAt)}</div>
+                        <div className={`text-[11px] mt-2 flex items-center gap-2 ${message.sender === 'admin' ? 'text-white/70' : 'text-stone-400'}`}>
+                          <span>{formatEntryDate(message.createdAt)}</span>
+                          {message.sender === 'admin' && (
+                            <button
+                              onClick={() => unsendStaffMessage(message)}
+                              className="text-[11px] font-bold underline decoration-white/40 underline-offset-2 text-white/85 hover:text-white"
+                            >
+                              收回
+                            </button>
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}

@@ -296,6 +296,9 @@ export const staffResetPassword = (payload: { username: string; password: string
 export const staffDeleteAccount = (payload: { username: string; userId?: string }) =>
   apiRequest<{ ok: boolean }>('space-delete-account', payload);
 
+export const staffDeleteMessage = (payload: { messageId: string }) =>
+  apiRequest<{ ok: boolean }>('space-delete-message', payload);
+
 export const changeMyPassword = async (oldPassword: string, newPassword: string) => {
   const client = requireSupabase();
   const { data: userData, error: userError } = await client.auth.getUser();
