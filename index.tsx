@@ -2879,7 +2879,10 @@ const AdminInboxPage = () => {
       customer.igHandle,
       customer.telegramHandle,
       customer.email,
-      ...(customer.messages || []).map((message) => message.text)
+      customer.targetName,
+      customer.originalChannel,
+      ...(customer.messages || []).flatMap((message) => [message.text, message.sender, ...(message.images || [])]),
+      ...(customer.entries || []).flatMap((entry) => [entry.title, entry.text, entry.entryDate, entry.type])
     ].filter(Boolean).join(' ').toLowerCase();
     return searchable.includes(query);
   });
