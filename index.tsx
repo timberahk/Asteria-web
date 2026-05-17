@@ -1269,6 +1269,15 @@ const formatDisplayDate = (value: string) => {
   }).format(new Date(`${value}T00:00:00`));
 };
 
+const getEntryDateValue = (entry: PortalEntry) => entry.entryDate || entry.createdAt.slice(0, 10);
+
+const isEntryInDateRange = (entry: PortalEntry, from: string, to: string) => {
+  const value = getEntryDateValue(entry);
+  if (from && value < from) return false;
+  if (to && value > to) return false;
+  return true;
+};
+
 const chatMessageDomId = (scope: string, messageId: string | number) => {
   return `asteria-${scope}-message-${String(messageId).replace(/[^a-zA-Z0-9_-]/g, '-')}`;
 };
@@ -2391,6 +2400,8 @@ const AdminInboxPage = () => {
   const [viewerIndex, setViewerIndex] = useState(0);
   const [staffChatJumpDate, setStaffChatJumpDate] = useState(toDateInputValue());
   const [staffChatJumpMessage, setStaffChatJumpMessage] = useState('');
+  const [staffEntryFromDate, setStaffEntryFromDate] = useState('');
+  const [staffEntryToDate, setStaffEntryToDate] = useState('');
   const staffChatScrollRef = useRef<HTMLDivElement | null>(null);
   const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
     try {
@@ -2401,6 +2412,12 @@ const AdminInboxPage = () => {
   });
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
   const activeChatImages = (activeCustomer?.messages || []).flatMap((message) => message.images || []);
+  const activeRelationshipEntries = [...(activeCustomer?.entries || [])]
+    .filter((entry) => entry.type === 'relationship' && isEntryInDateRange(entry, staffEntryFromDate, staffEntryToDate))
+    .sort((a, b) => getEntryDateValue(b).localeCompare(getEntryDateValue(a)));
+  const activeJournalEntries = [...(activeCustomer?.entries || [])]
+    .filter((entry) => entry.type === 'mood' && isEntryInDateRange(entry, staffEntryFromDate, staffEntryToDate))
+    .sort((a, b) => getEntryDateValue(b).localeCompare(getEntryDateValue(a)));
   const openChatImage = (image: string) => {
     const imageIndex = activeChatImages.indexOf(image);
     setViewerImages(activeChatImages.length ? activeChatImages : [image]);
@@ -2944,14 +2961,24 @@ const AdminInboxPage = () => {
             </div>
             </>
             ) : staffThreadPanel === 'updates' ? (
-              <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
-                <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
-                  <h3 className="text-xl font-bold text-asteria-dark mb-4">情況 update</h3>
-                  {activeCustomer?.entries?.filter((entry) => entry.type === 'relationship').length ? (
+              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain">
+                <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 max-h-full overflow-y-auto">
+                  <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-asteria-dark">情況 update</h3>
+                      <div className="text-xs text-stone-400 mt-1">{activeRelationshipEntries.length} 個記錄</div>
+                    </div>
+                    <div className="grid grid-cols-[1fr_1fr_auto] gap-2">
+                      <input type="date" value={staffEntryFromDate} onChange={(event) => setStaffEntryFromDate(event.target.value)} className="min-w-0 border border-asteria-cream rounded-xl px-3 py-2 text-sm outline-none focus:border-asteria-primary bg-white" />
+                      <input type="date" value={staffEntryToDate} onChange={(event) => setStaffEntryToDate(event.target.value)} className="min-w-0 border border-asteria-cream rounded-xl px-3 py-2 text-sm outline-none focus:border-asteria-primary bg-white" />
+                      <button onClick={() => { setStaffEntryFromDate(''); setStaffEntryToDate(''); }} className="border border-asteria-cream text-asteria-primary rounded-xl px-3 py-2 text-sm font-bold bg-white">All</button>
+                    </div>
+                  </div>
+                  {activeRelationshipEntries.length ? (
                     <div className="space-y-4">
-                      {activeCustomer.entries.filter((entry) => entry.type === 'relationship').map((entry) => (
+                      {activeRelationshipEntries.map((entry) => (
                         <div key={entry.id} className="pl-5 border-l-2 border-asteria-primary">
-                          <div className="text-xs font-bold text-asteria-primary mb-1">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
+                          <div className="text-xs font-bold text-asteria-primary mb-1">{formatDisplayDate(getEntryDateValue(entry))}</div>
                           <p className="text-sm text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
                         </div>
                       ))}
@@ -2962,12 +2989,25 @@ const AdminInboxPage = () => {
                 </div>
               </div>
             ) : staffThreadPanel === 'journal' ? (
-              <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
-                <div className="grid md:grid-cols-2 gap-4">
-                  {(activeCustomer?.entries || []).filter((entry) => entry.type === 'mood').length ? (
-                    (activeCustomer?.entries || []).filter((entry) => entry.type === 'mood').map((entry) => (
+              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain">
+                <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 mb-4">
+                  <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3">
+                    <div>
+                      <h3 className="text-xl font-bold text-asteria-dark">心靈日記</h3>
+                      <div className="text-xs text-stone-400 mt-1">{activeJournalEntries.length} 篇</div>
+                    </div>
+                    <div className="grid grid-cols-[1fr_1fr_auto] gap-2">
+                      <input type="date" value={staffEntryFromDate} onChange={(event) => setStaffEntryFromDate(event.target.value)} className="min-w-0 border border-asteria-cream rounded-xl px-3 py-2 text-sm outline-none focus:border-asteria-primary bg-white" />
+                      <input type="date" value={staffEntryToDate} onChange={(event) => setStaffEntryToDate(event.target.value)} className="min-w-0 border border-asteria-cream rounded-xl px-3 py-2 text-sm outline-none focus:border-asteria-primary bg-white" />
+                      <button onClick={() => { setStaffEntryFromDate(''); setStaffEntryToDate(''); }} className="border border-asteria-cream text-asteria-primary rounded-xl px-3 py-2 text-sm font-bold bg-white">All</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4 max-h-[calc(100vh-430px)] min-h-[260px] overflow-y-auto pr-1">
+                  {activeJournalEntries.length ? (
+                    activeJournalEntries.map((entry) => (
                       <div key={entry.id} className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
-                        <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
+                        <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(getEntryDateValue(entry))}</div>
                         <p className="text-sm text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
                       </div>
                     ))
