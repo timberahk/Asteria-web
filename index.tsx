@@ -62,6 +62,24 @@ const clearSpaceSession = async () => {
   window.dispatchEvent(new Event('asteria-session-change'));
 };
 
+type AppPage = 'home' | 'teaching' | 'register' | 'portal' | 'admin' | 'inbox';
+
+const getRoutePage = (): AppPage => {
+  const rawHash = window.location.hash || '';
+  const cleanHash = rawHash
+    .replace(/^#/, '')
+    .split(/[?&/]/)[0]
+    .trim()
+    .toLowerCase();
+
+  if (cleanHash === 'teaching') return 'teaching';
+  if (cleanHash === 'register') return 'register';
+  if (cleanHash === 'portal') return 'portal';
+  if (cleanHash === 'admin') return 'admin';
+  if (cleanHash === 'inbox') return 'inbox';
+  return 'home';
+};
+
 const Navbar = () => {
   const [role, setRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
   const spaceHref = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
@@ -101,7 +119,7 @@ const Navbar = () => {
               登出
             </button>
           )}
-          <a href={WHATSAPP_URL} target="_blank" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden sm:flex items-center gap-1">
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden sm:flex items-center gap-1">
             <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
           </a>
         </div>
@@ -110,10 +128,10 @@ const Navbar = () => {
         <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-4 text-xs md:text-sm text-center">
           <span className="font-bold">IG帳號暫停通知</span>
           <span className="text-white/80">請用 WhatsApp / Facebook / Telegram 聯絡我地：</span>
-          <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-white px-3 py-1 rounded-full font-bold">
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-white px-3 py-1 rounded-full font-bold">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
           </a>
-          <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
+          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
             <i className="fa-brands fa-facebook-f"></i> Facebook
           </a>
           <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#2AABEE] text-white px-3 py-1 rounded-full font-bold">
@@ -160,10 +178,10 @@ const Hero = () => (
                   我地 Instagram 主帳及 backup 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
                     <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
                   </a>
-                  <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                  <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
                     <i className="fa-brands fa-facebook-f"></i> Facebook
                   </a>
                   <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#2AABEE] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
@@ -236,7 +254,7 @@ const Hero = () => (
                 <div className="bg-asteria-pink/35 rounded-xl py-3">破冰</div>
                 <div className="bg-asteria-blue/35 rounded-xl py-3">清理</div>
               </div>
-              <a href={WHATSAPP_URL} target="_blank" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
                 <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢
               </a>
             </div>
@@ -494,7 +512,7 @@ const Oracle = () => {
                     </p>
                 </div>
 
-                <a href={WHATSAPP_URL} target="_blank" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
                     <i className="fa-brands fa-whatsapp"></i> 解鎖詳細占卜結果 (付費)
                 </a>
                 
@@ -659,7 +677,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 <h1 className="text-4xl font-bold text-asteria-dark mb-3">相處教學</h1>
                 <p className="text-stone-500 max-w-2xl">用 IG 圖文感覺慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
               </div>
-              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="inline-flex items-center gap-2 bg-white border border-asteria-cream text-asteria-primary px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
+              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white border border-asteria-cream text-asteria-primary px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
                 <i className="fa-brands fa-instagram"></i> Instagram
               </a>
             </div>
@@ -759,7 +777,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
           </div>
 
           <div className="text-center mt-10">
-              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="inline-block text-gray-400 hover:text-asteria-primary transition-colors text-sm">
+              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" rel="noreferrer" className="inline-block text-gray-400 hover:text-asteria-primary transition-colors text-sm">
                 <i className="fa-brands fa-instagram mr-1"></i> 更多教學請 Follow Instagram
               </a>
           </div>
@@ -787,7 +805,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                     
                     <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
                         <span className="text-sm text-gray-400">想解決類似問題？</span>
-                        <a href={WHATSAPP_URL} target="_blank" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
+                        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
                             <i className="fa-brands fa-whatsapp mr-1"></i> 與 Asteria 聊聊
                         </a>
                     </div>
@@ -996,7 +1014,7 @@ const Services = () => {
                 ))}
               </div>
 
-              <a href={WHATSAPP_URL} target="_blank" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
                 查詢詳情
               </a>
             </div>
@@ -1065,6 +1083,7 @@ const Reviews = () => (
             key={review.src}
             href={review.src}
             target="_blank"
+            rel="noreferrer"
             className="group bg-white rounded-2xl p-3 shadow-sm border border-asteria-cream/70 hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             <div className="aspect-[9/16] rounded-xl overflow-hidden bg-[#FFF8EC]">
@@ -1075,7 +1094,7 @@ const Reviews = () => (
       </div>
       
       <div className="text-center mt-10">
-        <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" className="inline-flex items-center text-asteria-primary font-bold hover:underline bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
+        <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" rel="noreferrer" className="inline-flex items-center text-asteria-primary font-bold hover:underline bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
           查看更多好評 <i className="fa-solid fa-arrow-right ml-2"></i>
         </a>
       </div>
@@ -1280,10 +1299,7 @@ const ChatDateJump = ({
   </div>
 );
 
-const canEditRecentEntry = (entry: PortalEntry) => {
-  const createdTime = new Date(entry.createdAt).getTime();
-  return Number.isFinite(createdTime) && Date.now() - createdTime <= 7 * 24 * 60 * 60 * 1000;
-};
+const canEditEntry = (entry: PortalEntry) => Boolean(entry.id);
 
 const buildCalendarDays = (monthValue: string) => {
   const [year, month] = monthValue.split('-').map(Number);
@@ -1622,7 +1638,7 @@ const SpacePortalPage = () => {
     if (!body) return;
     const selectedJournalDate = (document.getElementById('journal-date-input') as HTMLInputElement | null)?.value || journalDate;
     try {
-      if (currentJournalEntry && canEditRecentEntry(currentJournalEntry)) {
+      if (currentJournalEntry && canEditEntry(currentJournalEntry)) {
         if (isBackendConfigured) {
           const updated = await updateSpaceEntry(String(currentJournalEntry.id), { entryDate: selectedJournalDate, title: '', body });
           upsertLocalEntry({
@@ -1658,7 +1674,7 @@ const SpacePortalPage = () => {
   };
 
   const startEditEntry = (entry: PortalEntry) => {
-    if (!canEditRecentEntry(entry)) return;
+    if (!canEditEntry(entry)) return;
     setEditingEntryId(entry.id);
     setEditingEntryDate(entry.entryDate || entry.createdAt.slice(0, 10));
     setEditingEntryText(entry.text);
@@ -1666,7 +1682,7 @@ const SpacePortalPage = () => {
 
   const saveEditedEntry = async (entry: PortalEntry) => {
     const body = editingEntryText.trim();
-    if (!body || !canEditRecentEntry(entry)) return;
+    if (!body || !canEditEntry(entry)) return;
     const nextEntryDate = (document.getElementById('editing-entry-date-input') as HTMLInputElement | null)?.value || editingEntryDate || entry.entryDate || entry.createdAt.slice(0, 10);
     try {
       if (isBackendConfigured) {
@@ -1693,7 +1709,7 @@ const SpacePortalPage = () => {
   };
 
   const deleteEntry = async (entry: PortalEntry) => {
-    if (!canEditRecentEntry(entry)) return;
+    if (!canEditEntry(entry)) return;
     const confirmed = window.confirm('確定刪除呢段內容？');
     if (!confirmed) return;
     try {
@@ -1969,7 +1985,7 @@ const SpacePortalPage = () => {
                           <p className="text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
                         )}
                       </div>
-                      {canEditRecentEntry(entry) && (
+                      {canEditEntry(entry) && (
                         <div className="flex gap-2 shrink-0">
                           {editingEntryId === entry.id ? (
                             <button onClick={() => saveEditedEntry(entry)} className="bg-asteria-primary text-white rounded-xl px-3 py-2 text-sm font-bold">Save</button>
@@ -2012,12 +2028,12 @@ const SpacePortalPage = () => {
                 <textarea value={journalText} onChange={(event) => setJournalText(event.target.value)} className="w-full min-h-[420px] bg-white border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary leading-relaxed" placeholder="今日的情緒、反思、相處上想提醒自己的事..." />
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
-                <div className="text-sm text-stone-400">{entryMessage || (currentJournalEntry && !canEditRecentEntry(currentJournalEntry) ? '呢篇暫時只可查看。' : '可以記低當日的心情、反思同相處提醒。')}</div>
+                <div className="text-sm text-stone-400">{entryMessage || '可以記低當日的心情、反思同相處提醒。'}</div>
                 <div className="flex gap-2">
-                  {currentJournalEntry && canEditRecentEntry(currentJournalEntry) && (
+                  {currentJournalEntry && canEditEntry(currentJournalEntry) && (
                     <button onClick={() => deleteEntry(currentJournalEntry)} className="bg-white border border-red-200 text-red-600 rounded-xl px-4 py-3 font-bold">Delete</button>
                   )}
-                  <button onClick={saveJournalEntry} disabled={Boolean(currentJournalEntry && !canEditRecentEntry(currentJournalEntry))} className="btn-primary px-5 py-3 rounded-xl font-bold disabled:opacity-50">Save</button>
+                  <button onClick={saveJournalEntry} className="btn-primary px-5 py-3 rounded-xl font-bold">Save</button>
                 </div>
               </div>
             </section>
@@ -2991,16 +3007,7 @@ const SessionCheckingPage = () => (
 );
 
 const App = () => {
-  const getPage = () => {
-    if (window.location.hash === '#teaching') return 'teaching';
-    if (window.location.hash === '#register') return 'register';
-    if (window.location.hash === '#portal') return 'portal';
-    if (window.location.hash === '#admin') return 'admin';
-    if (window.location.hash === '#inbox') return 'inbox';
-    return 'home';
-  };
-
-  const [page, setPage] = useState(getPage);
+  const [page, setPage] = useState<AppPage>(getRoutePage);
   const [currentRole, setCurrentRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
   const [isCheckingSession, setIsCheckingSession] = useState(isBackendConfigured);
 
@@ -3029,12 +3036,12 @@ const App = () => {
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentRole(getStoredSpaceRole());
-      setPage(getPage());
+      setPage(getRoutePage());
       restoreBackendSession();
     };
     const handleSessionChange = () => {
       setCurrentRole(getStoredSpaceRole());
-      setPage(getPage());
+      setPage(getRoutePage());
     };
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('asteria-session-change', handleSessionChange);

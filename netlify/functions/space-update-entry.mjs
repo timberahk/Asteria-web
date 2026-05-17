@@ -32,9 +32,6 @@ export const handler = async (event) => {
       .single();
     if (existingError || !existing) return json(404, { error: '搵唔到呢段內容。' });
     if (existing.customer_id !== userData.user.id) return json(403, { error: '你只可以修改自己的內容。' });
-    if (new Date(existing.created_at).getTime() < Date.now() - 7 * 24 * 60 * 60 * 1000) {
-      return json(403, { error: '只可以修改最近 7 日新增的內容。' });
-    }
 
     const updatePayload = {
       body: entryBody,

@@ -279,17 +279,19 @@ to authenticated
 with check (customer_id = (select auth.uid()));
 
 drop policy if exists "Members can update recent own space entries" on public.space_entries;
-create policy "Members can update recent own space entries"
+drop policy if exists "Members can update own space entries" on public.space_entries;
+create policy "Members can update own space entries"
 on public.space_entries for update
 to authenticated
-using (customer_id = (select auth.uid()) and created_at >= now() - interval '7 days')
-with check (customer_id = (select auth.uid()) and created_at >= now() - interval '7 days');
+using (customer_id = (select auth.uid()))
+with check (customer_id = (select auth.uid()));
 
 drop policy if exists "Members can delete recent own space entries" on public.space_entries;
-create policy "Members can delete recent own space entries"
+drop policy if exists "Members can delete own space entries" on public.space_entries;
+create policy "Members can delete own space entries"
 on public.space_entries for delete
 to authenticated
-using (customer_id = (select auth.uid()) and created_at >= now() - interval '7 days');
+using (customer_id = (select auth.uid()));
 
 drop policy if exists "Admins can read account audit events" on public.account_audit_events;
 create policy "Admins can read account audit events"
