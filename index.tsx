@@ -1548,11 +1548,12 @@ const SpacePortalPage = () => {
   const saveRelationshipUpdate = async () => {
     const body = relationshipText.trim();
     if (!body) return;
+    const selectedRelationshipDate = (document.getElementById('relationship-date-input') as HTMLInputElement | null)?.value || relationshipDate;
     try {
       if (isBackendConfigured) {
         const entry = await createSpaceEntry({
           entryType: 'relationship',
-          entryDate: relationshipDate,
+          entryDate: selectedRelationshipDate,
           body
         });
         upsertLocalEntry({
@@ -1564,7 +1565,7 @@ const SpacePortalPage = () => {
           updatedAt: entry.updated_at
         });
       } else {
-        upsertLocalEntry({ id: Date.now(), type: 'relationship', text: body, entryDate: relationshipDate, createdAt: new Date().toISOString() });
+        upsertLocalEntry({ id: Date.now(), type: 'relationship', text: body, entryDate: selectedRelationshipDate, createdAt: new Date().toISOString() });
       }
       setRelationshipText('');
       setEntryMessage('關係 update 已儲存。');
@@ -1622,7 +1623,7 @@ const SpacePortalPage = () => {
   const saveEditedEntry = async (entry: PortalEntry) => {
     const body = editingEntryText.trim();
     if (!body || !canEditRecentEntry(entry)) return;
-    const nextEntryDate = editingEntryDate || entry.entryDate || entry.createdAt.slice(0, 10);
+    const nextEntryDate = (document.getElementById('editing-entry-date-input') as HTMLInputElement | null)?.value || editingEntryDate || entry.entryDate || entry.createdAt.slice(0, 10);
     try {
       if (isBackendConfigured) {
         const updated = await updateSpaceEntry(String(entry.id), { entryDate: nextEntryDate, title: entry.title || '', body });
@@ -1889,7 +1890,7 @@ const SpacePortalPage = () => {
             </div>
             <label className="block mb-3">
               <span className="block text-sm font-bold text-asteria-dark mb-2">事情發生日期</span>
-              <input type="date" value={relationshipDate} onInput={(event) => setRelationshipDate(event.currentTarget.value)} onChange={(event) => setRelationshipDate(event.target.value)} className="w-full sm:w-auto border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
+              <input id="relationship-date-input" type="date" value={relationshipDate} onInput={(event) => setRelationshipDate(event.currentTarget.value)} onChange={(event) => setRelationshipDate(event.target.value)} className="w-full sm:w-auto border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
             </label>
             <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-36 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="寫低最近關係進展、對方態度、重要對話背景..." />
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-3">
@@ -1912,7 +1913,7 @@ const SpacePortalPage = () => {
                         <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
                         {editingEntryId === entry.id ? (
                           <div className="grid gap-3">
-                            <input type="date" value={editingEntryDate} onInput={(event) => setEditingEntryDate(event.currentTarget.value)} onChange={(event) => setEditingEntryDate(event.target.value)} className="w-full sm:w-52 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
+                            <input id="editing-entry-date-input" type="date" value={editingEntryDate} onInput={(event) => setEditingEntryDate(event.currentTarget.value)} onChange={(event) => setEditingEntryDate(event.target.value)} className="w-full sm:w-52 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
                             <textarea value={editingEntryText} onChange={(event) => setEditingEntryText(event.target.value)} className="w-full min-h-28 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
                           </div>
                         ) : (
