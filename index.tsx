@@ -1009,6 +1009,15 @@ const Services = () => {
   );
 };
 
+const reviewImages = [
+  { src: '/reviews/review-01.jpg', alt: '回心轉意術客人好評' },
+  { src: '/reviews/review-02.jpg', alt: '信任問題改善客人好評' },
+  { src: '/reviews/review-03.jpg', alt: '關係和好客人好評' },
+  { src: '/reviews/review-04.jpg', alt: '互動升溫客人好評' },
+  { src: '/reviews/review-05.jpg', alt: '主動破冰客人好評' },
+  { src: '/reviews/review-06.jpg', alt: '塔羅分析準確客人好評' }
+];
+
 const Reviews = () => (
   <section id="reviews" className="py-20 bg-asteria-blue/10">
     <div className="container mx-auto px-6">
@@ -1017,20 +1026,21 @@ const Reviews = () => (
         <div className="flex justify-center gap-1 text-yellow-400 text-sm mb-2">
            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
         </div>
-        <p className="text-gray-500">之後可以放 WhatsApp 對話圖、IG story 圖、客人回饋截圖。</p>
+        <p className="text-gray-500">真實客人回饋、儀式後情況同塔羅分析好評。</p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {["對話截圖", "Story 好評", "儀式回饋"].map((label, index) => (
-          <div key={label} className="bg-white rounded-2xl p-4 shadow-sm border border-asteria-cream/70">
-            <div className="aspect-[9/16] rounded-xl border-2 border-dashed border-asteria-yellow/70 bg-[#FFF8EC] flex flex-col items-center justify-center text-center px-6">
-              <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
-                <i className={index === 0 ? "fa-solid fa-comments" : index === 1 ? "fa-brands fa-instagram" : "fa-solid fa-star"}></i>
-              </div>
-              <div className="font-bold text-asteria-dark">{label}</div>
-              <div className="text-xs text-stone-400 mt-2">之後放圖片</div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {reviewImages.map((review) => (
+          <a
+            key={review.src}
+            href={review.src}
+            target="_blank"
+            className="group bg-white rounded-2xl p-3 shadow-sm border border-asteria-cream/70 hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            <div className="aspect-[9/16] rounded-xl overflow-hidden bg-[#FFF8EC]">
+              <img src={review.src} alt={review.alt} loading="lazy" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
             </div>
-          </div>
+          </a>
         ))}
       </div>
       
