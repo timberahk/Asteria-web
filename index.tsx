@@ -2769,7 +2769,7 @@ const AdminInboxPage = () => {
         </div>
 
         {adminView === 'accounts' && (
-        <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm p-5 mb-5 overflow-hidden">
+        <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm p-5 mb-8 overflow-visible min-h-[760px]">
           <div className="grid xl:grid-cols-[360px_minmax(0,1fr)] gap-5">
             <div className="min-w-0">
               <div className="text-sm text-stone-400">Account</div>
@@ -2794,9 +2794,17 @@ const AdminInboxPage = () => {
               <div className="text-xs text-stone-400">Password 最少 8 個字；開 account 後客人可以自行更改。</div>
               <button onClick={createAccount} className="btn-primary rounded-xl px-5 py-3 font-bold md:w-fit">新增 account</button>
               {accountMessage && <div className="text-sm font-bold text-asteria-primary">{accountMessage}</div>}
-              <input value={accountSearch} onChange={(event) => setAccountSearch(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white mt-2" placeholder="Search account 名 / 客人名 / email" />
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mt-2">
+                <label className="grid gap-1 flex-1 min-w-0">
+                  <span className="text-xs font-bold text-stone-500">Search</span>
+                  <input value={accountSearch} onChange={(event) => setAccountSearch(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Search account 名 / 客人名 / email" />
+                </label>
+                <div className="text-xs font-bold text-stone-400 whitespace-nowrap">
+                  {accountSearch.trim() ? `${filteredAccounts.length} / ${accounts.length}` : `${accounts.length}`} accounts
+                </div>
+              </div>
 
-              <div className="grid gap-2 mt-2 max-h-[520px] overflow-y-auto pr-1">
+              <div className="grid gap-2 mt-2 h-[68vh] min-h-[560px] max-h-[920px] overflow-y-auto pr-1 rounded-2xl border border-asteria-cream/60 bg-white p-2">
                 {filteredAccounts.map((account) => (
                   <div key={account.username} className="grid lg:grid-cols-[1fr_130px_1fr_auto_auto] gap-2 items-center bg-[#FFF8EC] rounded-xl p-3">
                     <div>
