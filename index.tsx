@@ -196,9 +196,6 @@ const Hero = () => (
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
               <div>
                 <div className="font-bold text-asteria-dark mb-1">請留低你的聯絡資料</div>
-                <p className="text-sm text-stone-500 leading-relaxed">
-                  WhatsApp 照樣即時傾；Asteria Space 用嚟保存重要訊息、截圖同後備聯絡方法。
-                </p>
               </div>
               <a href="#register" className="bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shrink-0">
                 <i className="fa-regular fa-user"></i> 登入 Space
@@ -1811,9 +1808,6 @@ const SpacePortalPage = () => {
           <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
             <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
             <h1 className="text-3xl font-bold text-asteria-dark mb-3">第一次登入，請補回聯絡資料</h1>
-            <p className="text-stone-500 leading-relaxed mb-6">
-              Account 已由 Asteria 開好。請填低常用聯絡方法，之後就算 IG / WhatsApp 其中一邊失效，我哋都搵得返你。
-            </p>
             <div className="grid gap-4">
               <label className="grid gap-1">
                 <span className="text-xs font-bold text-stone-500">自己名 / 真名</span>
@@ -2121,9 +2115,6 @@ const SpacePortalPage = () => {
             </a>
             <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
             <h1 className="text-4xl font-bold text-asteria-dark mb-3">你的私人聯絡空間</h1>
-            <p className="text-stone-500 max-w-2xl leading-relaxed">
-              WhatsApp 用嚟即時傾；Asteria Space 用嚟保留重要訊息、對話截圖同聯絡資料。就算 IG / WhatsApp 任何一邊失效，我哋都搵得返你。
-            </p>
           </div>
         </div>
 
@@ -2416,7 +2407,26 @@ const AdminInboxPage = () => {
   const filteredAccounts = accounts.filter((account) => {
     const query = accountSearch.trim().toLowerCase();
     if (!query) return true;
-    return account.label.toLowerCase().includes(query) || account.username.toLowerCase().includes(query) || account.email.toLowerCase().includes(query) || account.role.toLowerCase().includes(query);
+    const matchedCustomer = customers.find((customer) => {
+      return customer.id === account.customerId || customer.accountUsername === account.username;
+    });
+    const searchable = [
+      account.label,
+      account.username,
+      account.email,
+      account.role,
+      matchedCustomer?.name,
+      matchedCustomer?.phone,
+      matchedCustomer?.whatsapp,
+      matchedCustomer?.igHandle,
+      matchedCustomer?.telegramHandle,
+      matchedCustomer?.email,
+      matchedCustomer?.targetName,
+      matchedCustomer?.originalChannel,
+      ...(matchedCustomer?.messages || []).flatMap((message) => [message.text, message.sender, ...(message.images || [])]),
+      ...(matchedCustomer?.entries || []).flatMap((entry) => [entry.title, entry.text, entry.entryDate, entry.type])
+    ].filter(Boolean).join(' ').toLowerCase();
+    return searchable.includes(query);
   });
 
   useEffect(() => {
