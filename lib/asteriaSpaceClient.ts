@@ -79,7 +79,7 @@ const requireSupabase = () => {
 };
 
 const isMissingRelationError = (error: unknown) => {
-  return Boolean(error && typeof error === 'object' && 'code' in error && error.code === '42P01');
+  return Boolean(error && typeof error === 'object' && 'code' in error && ['42P01', 'PGRST205'].includes(String(error.code)));
 };
 
 const apiRequest = async <T>(path: string, payload: Record<string, unknown>): Promise<T> => {

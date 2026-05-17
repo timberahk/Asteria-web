@@ -1,6 +1,6 @@
 import { getAdminClient, getBearerToken, json } from './_space-utils.mjs';
 
-const isMissingRelationError = (error) => error && error.code === '42P01';
+const isMissingRelationError = (error) => error && ['42P01', 'PGRST205'].includes(error.code);
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });

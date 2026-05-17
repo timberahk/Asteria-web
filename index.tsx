@@ -1346,8 +1346,10 @@ const SpacePortalPage = () => {
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [viewerImages, setViewerImages] = useState<string[]>([]);
   const [viewerIndex, setViewerIndex] = useState(0);
+  const [relationshipDate, setRelationshipDate] = useState(toDateInputValue());
   const [relationshipText, setRelationshipText] = useState('');
   const [editingEntryId, setEditingEntryId] = useState<string | number | null>(null);
+  const [editingEntryDate, setEditingEntryDate] = useState('');
   const [editingEntryText, setEditingEntryText] = useState('');
   const [journalDate, setJournalDate] = useState(toDateInputValue());
   const [journalText, setJournalText] = useState('');
@@ -1514,7 +1516,7 @@ const SpacePortalPage = () => {
       if (isBackendConfigured) {
         const entry = await createSpaceEntry({
           entryType: 'relationship',
-          entryDate: toDateInputValue(),
+          entryDate: relationshipDate,
           body
         });
         upsertLocalEntry({
@@ -1526,7 +1528,7 @@ const SpacePortalPage = () => {
           updatedAt: entry.updated_at
         });
       } else {
-        upsertLocalEntry({ id: Date.now(), type: 'relationship', text: body, entryDate: toDateInputValue(), createdAt: new Date().toISOString() });
+        upsertLocalEntry({ id: Date.now(), type: 'relationship', text: body, entryDate: relationshipDate, createdAt: new Date().toISOString() });
       }
       setRelationshipText('');
       setEntryMessage('關係 update 已儲存。');
@@ -1577,15 +1579,17 @@ const SpacePortalPage = () => {
   const startEditEntry = (entry: PortalEntry) => {
     if (!canEditRecentEntry(entry)) return;
     setEditingEntryId(entry.id);
+    setEditingEntryDate(entry.entryDate || entry.createdAt.slice(0, 10));
     setEditingEntryText(entry.text);
   };
 
   const saveEditedEntry = async (entry: PortalEntry) => {
     const body = editingEntryText.trim();
     if (!body || !canEditRecentEntry(entry)) return;
+    const nextEntryDate = editingEntryDate || entry.entryDate || entry.createdAt.slice(0, 10);
     try {
       if (isBackendConfigured) {
-        const updated = await updateSpaceEntry(String(entry.id), { entryDate: entry.entryDate, title: entry.title || '', body });
+        const updated = await updateSpaceEntry(String(entry.id), { entryDate: nextEntryDate, title: entry.title || '', body });
         upsertLocalEntry({
           id: updated.id,
           type: updated.entry_type === 'journal' ? 'mood' : 'relationship',
@@ -1596,9 +1600,10 @@ const SpacePortalPage = () => {
           updatedAt: updated.updated_at
         });
       } else {
-        upsertLocalEntry({ ...entry, text: body, updatedAt: new Date().toISOString() });
+        upsertLocalEntry({ ...entry, text: body, entryDate: nextEntryDate, updatedAt: new Date().toISOString() });
       }
       setEditingEntryId(null);
+      setEditingEntryDate('');
       setEditingEntryText('');
       setEntryMessage('內容已更新。');
     } catch (error) {
@@ -1816,9 +1821,13 @@ const SpacePortalPage = () => {
               </div>
               <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">最近 7 日可 edit / delete</span>
             </div>
+            <label className="block mb-3">
+              <span className="block text-sm font-bold text-asteria-dark mb-2">事情發生日期</span>
+              <input type="date" value={relationshipDate} onChange={(event) => setRelationshipDate(event.target.value)} className="w-full sm:w-auto border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
+            </label>
             <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-36 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="寫低最近關係進展、對方態度、重要對話背景..." />
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-3">
-              <div className="text-sm text-stone-400">{entryMessage || '新增後會按時間線排返喺下面。'}</div>
+              <div className="text-sm text-stone-400">{entryMessage || '新增後會按事情發生日期排返喺下面；edit / delete 以新增記錄日期計 7 日。'}</div>
               <button onClick={saveRelationshipUpdate} className="btn-primary px-5 py-3 rounded-xl font-bold">加入 timeline</button>
             </div>
           </section>
@@ -1836,7 +1845,10 @@ const SpacePortalPage = () => {
                       <div className="min-w-0 flex-1">
                         <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
                         {editingEntryId === entry.id ? (
-                          <textarea value={editingEntryText} onChange={(event) => setEditingEntryText(event.target.value)} className="w-full min-h-28 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
+                          <div className="grid gap-3">
+                            <input type="date" value={editingEntryDate} onChange={(event) => setEditingEntryDate(event.target.value)} className="w-full sm:w-52 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
+                            <textarea value={editingEntryText} onChange={(event) => setEditingEntryText(event.target.value)} className="w-full min-h-28 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
+                          </div>
                         ) : (
                           <p className="text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
                         )}
