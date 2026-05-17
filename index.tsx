@@ -1923,7 +1923,7 @@ const SpacePortalPage = () => {
               onJump={() => jumpCustomerChatDate('customer-full')}
             />
 
-            <div ref={customerChatScrollRef} className="flex-1 min-h-[0] bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
+            <div ref={customerChatScrollRef} className="flex-1 min-h-[0] bg-[#FFF8EC] p-5 overflow-y-auto scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full min-h-0 flex flex-col items-center justify-center text-center text-stone-500">
                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
@@ -2936,7 +2936,7 @@ const AdminInboxPage = () => {
               onChange={setStaffChatJumpDate}
               onJump={jumpStaffChatDate}
             />
-            <div ref={staffChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
+            <div ref={staffChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full flex items-center justify-center text-sm text-stone-500">未有對話，下面可以開始回覆。</div>
               ) : (
@@ -2983,7 +2983,7 @@ const AdminInboxPage = () => {
             </div>
             </>
             ) : staffThreadPanel === 'updates' ? (
-              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain">
+              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto">
                 <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 max-h-full overflow-y-auto">
                   <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-4">
                     <div>
@@ -3011,7 +3011,7 @@ const AdminInboxPage = () => {
                 </div>
               </div>
             ) : staffThreadPanel === 'journal' ? (
-              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain">
+              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto">
                 <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 mb-4">
                   <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3">
                     <div>
@@ -3039,7 +3039,7 @@ const AdminInboxPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain">
+              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto">
                 <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
                   <h3 className="text-xl font-bold text-asteria-dark mb-4">客人資料</h3>
                   <div className="grid md:grid-cols-2 gap-3">

@@ -162,6 +162,15 @@
     };
   </script>
   <style>
+    html,
+    body {
+      min-height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     body {
       background-color: #fdfbf7;
       background-image: radial-gradient(#F4DFAE 1px, transparent 1px), radial-gradient(#CBE9E5 1px, transparent 1px);
@@ -169,6 +178,16 @@
       background-size: 50px 50px;
       color: #4A5568;
       scroll-behavior: smooth;
+    }
+
+    #root {
+      min-height: 100%;
+    }
+
+    .overflow-y-auto {
+      overscroll-behavior: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-gutter: stable;
     }
 
     .glass-card {
