@@ -109,10 +109,10 @@ export const handler = async (event) => {
     await ensureSpaceRows(admin, {
       userId,
       username,
-      auth_email: authEmail,
+      authEmail,
       role,
       label,
-      contact_email: contactEmail,
+      contactEmail,
       actorId: actor.id
     });
 
