@@ -1333,7 +1333,8 @@ const RegisterPage = () => {
 const SpacePortalPage = () => {
   const [customers, setCustomers] = useState<PortalCustomer[]>(loadPortalCustomers);
   const currentCustomerId = window.localStorage.getItem('asteriaCurrentCustomerId');
-  const [activeCustomerId] = useState(currentCustomerId || customers[0]?.id || '');
+  const [activeCustomerId, setActiveCustomerId] = useState(currentCustomerId || customers[0]?.id || '');
+  const [isSpaceLoading, setIsSpaceLoading] = useState(isBackendConfigured);
   const [chatText, setChatText] = useState('');
   const [chatImages, setChatImages] = useState<string[]>([]);
   const [chatImageFiles, setChatImageFiles] = useState<File[]>([]);
@@ -1370,7 +1371,7 @@ const SpacePortalPage = () => {
   const [profileSelfName, setProfileSelfName] = useState(activeCustomer?.targetName || '');
   const [profileMessage, setProfileMessage] = useState('');
   const [isEditingProfile, setIsEditingProfile] = useState(false);
-  const needsFirstProfile = !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.email && !activeCustomer?.targetName;
+  const needsFirstProfile = !isSpaceLoading && Boolean(activeCustomer) && !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.email && !activeCustomer?.targetName;
 
   const openChatImage = (image: string) => {
     const imageIndex = activeChatImages.indexOf(image);
@@ -1385,6 +1386,7 @@ const SpacePortalPage = () => {
 
   const loadBackendSpace = async () => {
     if (!isBackendConfigured) return;
+    setIsSpaceLoading(true);
     try {
       const space = await getMySpace();
       const imageMap = await getSignedImageMap(space.messages.flatMap((message) => message.image_urls || []));
@@ -1420,6 +1422,7 @@ const SpacePortalPage = () => {
         messages: mappedMessages
       };
       setBackendThreadId(space.thread.id);
+      setActiveCustomerId(nextCustomer.id);
       setCustomers((current) => [nextCustomer, ...current.filter((customer) => customer.id !== nextCustomer.id)]);
       window.localStorage.setItem('asteriaCurrentCustomerId', nextCustomer.id);
       setProfileName(nextCustomer.name);
@@ -1431,6 +1434,8 @@ const SpacePortalPage = () => {
       setProfileSelfName(nextCustomer.targetName || '');
     } catch (error) {
       setSpaceMessage(error instanceof Error ? error.message : 'Asteria Space 資料暫時載入唔到。');
+    } finally {
+      setIsSpaceLoading(false);
     }
   };
 
@@ -1651,33 +1656,56 @@ const SpacePortalPage = () => {
     }
   };
 
-  const saveProfile = () => {
+  const saveProfile = async () => {
+    if (!activeCustomer) return;
+    const nextProfile = {
+      display_name: profileName.trim() || activeCustomer.name || 'Asteria Space user',
+      self_name: profileSelfName.trim(),
+      phone_number: profilePhone.trim(),
+      whatsapp: profileWhatsapp.trim(),
+      ig_handle: profileIg.trim(),
+      telegram_handle: profileTelegram.trim(),
+      contact_email: profileEmail.trim()
+    };
+
     if (isBackendConfigured) {
-      upsertMyProfile({
-        display_name: profileName.trim() || activeCustomer?.name || 'Asteria Space user',
-        self_name: profileSelfName.trim(),
-        phone_number: profilePhone.trim(),
-        whatsapp: profileWhatsapp.trim(),
-        ig_handle: profileIg.trim(),
-        telegram_handle: profileTelegram.trim(),
-        contact_email: profileEmail.trim()
-      }).catch((error) => {
+      try {
+        await upsertMyProfile(nextProfile);
+      } catch (error) {
         setProfileMessage(error instanceof Error ? error.message : '資料暫時儲存唔到。');
-      });
+        return;
+      }
     }
+
     updateCustomer((customer) => ({
       ...customer,
-      name: profileName.trim() || customer.name,
-      phone: profilePhone.trim(),
-      whatsapp: profileWhatsapp.trim(),
-      igHandle: profileIg.trim(),
-      telegramHandle: profileTelegram.trim(),
-      email: profileEmail.trim(),
-      targetName: profileSelfName.trim()
+      name: nextProfile.display_name,
+      phone: nextProfile.phone_number,
+      whatsapp: nextProfile.whatsapp,
+      igHandle: nextProfile.ig_handle,
+      telegramHandle: nextProfile.telegram_handle,
+      email: nextProfile.contact_email,
+      targetName: nextProfile.self_name
     }));
     setProfileMessage('資料已更新。');
     setIsEditingProfile(false);
+    setSpaceMessage('');
+    setSpaceView('dashboard');
   };
+
+  if (isSpaceLoading) {
+    return (
+      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
+            <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
+            <h1 className="text-3xl font-bold text-asteria-dark mb-3">載入你的私人空間</h1>
+            <p className="text-stone-500 leading-relaxed">請稍等一下。</p>
+          </section>
+        </div>
+      </main>
+    );
+  }
 
   if (needsFirstProfile) {
     return (
