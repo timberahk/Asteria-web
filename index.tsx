@@ -2576,15 +2576,19 @@ const AdminInboxPage = () => {
         };
       });
       setCustomers(nextCustomers);
-      setReadMarkers(inbox.reduce<Record<string, StaffReadMarker>>((map, item) => {
-        if (item.read_state) {
-          map[item.thread.customer_id] = {
-            lastReadAt: item.read_state.last_read_at || '',
-            isUnread: Boolean(item.read_state.is_unread)
-          };
-        }
-        return map;
-      }, {}));
+      setReadMarkers((current) => {
+        const next = { ...current };
+        inbox.forEach((item) => {
+          if (item.read_state) {
+            next[item.thread.customer_id] = {
+              lastReadAt: item.read_state.last_read_at || '',
+              isUnread: Boolean(item.read_state.is_unread)
+            };
+          }
+        });
+        window.localStorage.setItem('asteriaStaffReadMarkers', JSON.stringify(next));
+        return next;
+      });
       setActiveCustomerId((current) => nextCustomers.find((customer) => customer.id === current)?.id || nextCustomers[0]?.id || '');
     } catch (error) {
       setAccountMessage(error instanceof Error ? error.message : 'Staff inbox 暫時載入唔到。');
