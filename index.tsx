@@ -5,6 +5,7 @@ import {
   getMySpace,
   getSignedImageMap,
   isBackendConfigured,
+  listStaffAccounts,
   listStaffInbox,
   loginWithUsername,
   sendMyMessage,
@@ -2473,7 +2474,18 @@ const AdminInboxPage = () => {
   const loadBackendInbox = async () => {
     if (!isBackendConfigured) return;
     try {
-      const inbox = await listStaffInbox();
+      const [inbox, backendAccounts] = await Promise.all([
+        listStaffInbox(),
+        listStaffAccounts()
+      ]);
+      setAccounts(backendAccounts.map((account) => ({
+        label: account.label,
+        username: account.username,
+        email: account.contact_email || '',
+        password: '',
+        role: account.role,
+        customerId: account.role === 'customer' ? account.user_id : undefined
+      })));
       const imageMap = await getSignedImageMap(inbox.flatMap((item) => item.messages.flatMap((message) => message.image_urls || [])));
       const nextCustomers: PortalCustomer[] = inbox.map((item) => {
         const profile = item.profile;
