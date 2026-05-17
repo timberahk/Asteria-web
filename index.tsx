@@ -26,7 +26,7 @@ import {
 
 const LOGO_SRC = "/asteria-logo.jpg";
 const WHATSAPP_URL = "https://wa.me/85259413688";
-const TELEGRAM_URL = "";
+const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/share/p/1aAk2CJBt8/";
 
 type SpaceSessionRole = 'customer' | 'staff' | null;
@@ -116,9 +116,9 @@ const Navbar = () => {
           <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
             <i className="fa-brands fa-facebook-f"></i> Facebook
           </a>
-          <span className="inline-flex items-center justify-center gap-1 bg-white/12 border border-white/20 px-3 py-1 rounded-full font-bold">
-            <i className="fa-brands fa-telegram"></i> Telegram 待公布
-          </span>
+          <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#2AABEE] text-white px-3 py-1 rounded-full font-bold">
+            <i className="fa-brands fa-telegram"></i> Telegram @asteriahongkong
+          </a>
         </div>
       </div>
     </nav>
@@ -166,9 +166,9 @@ const Hero = () => (
                   <a href={FACEBOOK_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
                     <i className="fa-brands fa-facebook-f"></i> Facebook
                   </a>
-                  <span className="inline-flex items-center justify-center gap-2 bg-asteria-blue/40 text-asteria-dark border border-asteria-blue px-5 py-3 rounded-xl font-bold">
-                    <i className="fa-brands fa-telegram"></i> Telegram 待公布
-                  </span>
+                  <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#2AABEE] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                    <i className="fa-brands fa-telegram"></i> Telegram @asteriahongkong
+                  </a>
                 </div>
               </div>
             </div>
@@ -2967,9 +2967,9 @@ const Footer = () => (
         <a href={FACEBOOK_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-facebook-f text-xl"></i>
         </a>
-        <span className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-sky-500 shadow-sm opacity-70" title="Telegram 待公布">
+        <a href={TELEGRAM_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-sky-500 hover:bg-sky-500 hover:text-white transition-all shadow-sm" title="Telegram @asteriahongkong" target="_blank" rel="noreferrer">
           <i className="fa-brands fa-telegram text-xl"></i>
-        </span>
+        </a>
       </div>
       <p className="text-gray-400 text-xs font-sans">
         © {new Date().getFullYear()} Asteria Crystal Tarot. All Rights Reserved.
