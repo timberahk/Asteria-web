@@ -94,9 +94,13 @@ const apiRequest = async <T>(path: string, payload: Record<string, unknown>): Pr
     body: JSON.stringify(payload)
   });
 
-  const body = await response.json().catch(() => ({}));
+  const contentType = response.headers.get('content-type') || '';
+  const body = contentType.includes('application/json') ? await response.json().catch(() => ({})) : {};
   if (!response.ok) {
     throw new Error(body.error || 'Asteria Space backend 暫時連接唔到。');
+  }
+  if (!contentType.includes('application/json')) {
+    throw new Error('本地 preview 未開 Netlify Functions，所以 account 管理暫時不能使用。請用正式網站測試，或改用 Netlify dev preview。');
   }
   return body as T;
 };

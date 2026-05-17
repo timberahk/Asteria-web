@@ -2272,18 +2272,7 @@ const AdminInboxPage = () => {
   const loadBackendInbox = async () => {
     if (!isBackendConfigured) return;
     try {
-      const [inbox, backendAccounts] = await Promise.all([
-        listStaffInbox(),
-        listStaffAccounts()
-      ]);
-      setAccounts(backendAccounts.map((account) => ({
-        label: account.label,
-        username: account.username,
-        email: account.contact_email || '',
-        password: '',
-        role: account.role,
-        customerId: account.role === 'customer' ? account.user_id : undefined
-      })));
+      const inbox = await listStaffInbox();
       const imageMap = await getSignedImageMap(inbox.flatMap((item) => item.messages.flatMap((message) => message.image_urls || [])));
       const nextCustomers: PortalCustomer[] = inbox.map((item) => {
         const profile = item.profile;
@@ -2322,6 +2311,20 @@ const AdminInboxPage = () => {
       if (nextCustomers[0]) setActiveCustomerId(nextCustomers[0].id);
     } catch (error) {
       setAccountMessage(error instanceof Error ? error.message : 'Staff inbox 暫時載入唔到。');
+    }
+
+    try {
+      const backendAccounts = await listStaffAccounts();
+      setAccounts(backendAccounts.map((account) => ({
+        label: account.label,
+        username: account.username,
+        email: account.contact_email || '',
+        password: '',
+        role: account.role,
+        customerId: account.role === 'customer' ? account.user_id : undefined
+      })));
+    } catch (error) {
+      setAccountMessage(error instanceof Error ? error.message : 'Account 管理暫時載入唔到。');
     }
   };
 
