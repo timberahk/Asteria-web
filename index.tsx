@@ -1506,6 +1506,18 @@ const SpacePortalPage = () => {
     scrollChatToBottom(customerChatScrollRef.current);
   }, [spaceView, activeCustomer?.id, activeCustomer?.messages?.length]);
 
+  useEffect(() => {
+    if (spaceView !== 'chat') return;
+    const originalBodyOverflow = document.body.style.overflow;
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalBodyOverflow;
+      document.documentElement.style.overflow = originalHtmlOverflow;
+    };
+  }, [spaceView]);
+
   const loadBackendSpace = async () => {
     if (!isBackendConfigured) return;
     setIsSpaceLoading(true);
@@ -1882,11 +1894,11 @@ const SpacePortalPage = () => {
 
   if (spaceView === 'chat') {
     return (
-      <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen flex flex-col">
+      <main className="pt-56 md:pt-40 bg-[#FFFDF8] h-screen overflow-hidden flex flex-col">
         <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
-        <div className="container mx-auto px-4 max-w-4xl flex-1 flex flex-col pb-4">
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[calc(100vh-238px)] min-h-[560px]">
-            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
+        <div className="container mx-auto px-4 max-w-4xl flex-1 min-h-0 flex flex-col pb-4 overflow-hidden">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col flex-1 min-h-0">
+            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回 Space
@@ -1913,7 +1925,7 @@ const SpacePortalPage = () => {
 
             <div ref={customerChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
-                <div className="h-full min-h-[420px] flex flex-col items-center justify-center text-center text-stone-500">
+                <div className="h-full min-h-0 flex flex-col items-center justify-center text-center text-stone-500">
                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
                     <i className="fa-regular fa-comments"></i>
                   </div>
@@ -1946,14 +1958,14 @@ const SpacePortalPage = () => {
             </div>
 
             {chatImages.length > 0 && (
-              <div className="px-4 pt-3 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2">
+              <div className="px-4 pt-3 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2 shrink-0">
                 {chatImages.map((image, index) => (
                   <img key={`space-chat-preview-full-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="screenshot preview" />
                 ))}
               </div>
             )}
 
-            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3">
+            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3 shrink-0">
               <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="upload screenshot">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
@@ -2432,6 +2444,7 @@ const AdminInboxPage = () => {
     if (inboxView !== 'thread' || staffThreadPanel !== 'chat') return;
     scrollChatToBottom(staffChatScrollRef.current);
   }, [inboxView, staffThreadPanel, activeCustomer?.id, activeCustomer?.messages?.length]);
+
   const sortedCustomers = [...customers].sort((a, b) => {
     const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
     const bTime = b.messages?.[b.messages.length - 1]?.createdAt || b.entries[b.entries.length - 1]?.createdAt || '';
@@ -2479,6 +2492,19 @@ const AdminInboxPage = () => {
     ].filter(Boolean).join(' ').toLowerCase();
     return searchable.includes(query);
   });
+  const isStaffThreadLayout = adminView === 'inbox' && inboxView === 'thread';
+
+  useEffect(() => {
+    if (!isStaffThreadLayout) return;
+    const originalBodyOverflow = document.body.style.overflow;
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalBodyOverflow;
+      document.documentElement.style.overflow = originalHtmlOverflow;
+    };
+  }, [isStaffThreadLayout]);
 
   useEffect(() => {
     savePortalCustomers(customers);
@@ -2732,10 +2758,10 @@ const AdminInboxPage = () => {
   };
 
   return (
-    <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen">
+    <main className={`pt-56 md:pt-40 bg-[#FFFDF8] ${isStaffThreadLayout ? 'h-screen overflow-hidden flex flex-col' : 'min-h-screen'}`}>
       <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
+      <div className={`container mx-auto px-4 max-w-7xl ${isStaffThreadLayout ? 'flex-1 min-h-0 flex flex-col overflow-hidden' : ''}`}>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5 shrink-0">
           <div>
             <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-3">
               <i className="fa-solid fa-arrow-left"></i> 返回主頁
@@ -2745,7 +2771,7 @@ const AdminInboxPage = () => {
           <div className="text-sm text-stone-500">Asteria Space</div>
         </div>
 
-        <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
+        <div className="flex gap-2 mb-5 overflow-x-auto pb-1 shrink-0">
           <button onClick={() => { setAdminView('inbox'); setInboxView('list'); }} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'inbox' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
             Inbox
           </button>
@@ -2805,7 +2831,7 @@ const AdminInboxPage = () => {
         )}
 
         {adminView === 'inbox' && (
-        <div className="min-h-[calc(100vh-230px)]">
+        <div className={isStaffThreadLayout ? 'flex-1 min-h-0 overflow-hidden' : 'min-h-[calc(100vh-230px)]'}>
           <section className={`${inboxView === 'list' ? 'block' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden`}>
             <div className="p-4 border-b border-asteria-cream/70">
               <div className="flex items-center justify-between gap-3">
@@ -2869,8 +2895,8 @@ const AdminInboxPage = () => {
             </div>
           </section>
 
-          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-230px)] min-h-[560px]`}>
-            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col ${isStaffThreadLayout ? 'h-full min-h-0' : 'h-[calc(100vh-230px)] min-h-[560px]'}`}>
+            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回所有對話
@@ -2889,7 +2915,7 @@ const AdminInboxPage = () => {
               </button>
             </div>
 
-            <div className="px-4 py-3 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto">
+            <div className="px-4 py-3 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto shrink-0">
               {[
                 { value: 'chat', label: '對話', icon: 'fa-regular fa-comments' },
                 { value: 'updates', label: '情況 update', icon: 'fa-solid fa-timeline' },
@@ -2942,14 +2968,14 @@ const AdminInboxPage = () => {
             </div>
 
             {replyImages.length > 0 && (
-              <div className="px-4 pt-3 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2">
+              <div className="px-4 pt-3 bg-white border-t border-asteria-cream/70 grid grid-cols-4 sm:grid-cols-6 gap-2 shrink-0">
                 {replyImages.map((image, index) => (
                   <img key={`reply-preview-${index}`} src={image} className="aspect-square rounded-xl object-cover border border-asteria-cream" alt="reply upload preview" />
                 ))}
               </div>
             )}
 
-            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3">
+            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3 shrink-0">
               <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="send image">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleReplyImages(event.target.files)} />
@@ -3017,7 +3043,7 @@ const AdminInboxPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+              <div className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain">
                 <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
                   <h3 className="text-xl font-bold text-asteria-dark mb-4">客人資料</h3>
                   <div className="grid md:grid-cols-2 gap-3">
