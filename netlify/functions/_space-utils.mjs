@@ -44,8 +44,16 @@ export const parseBody = (event) => {
   try {
     return event.body ? JSON.parse(event.body) : {};
   } catch {
-    throw new Error('Request 格式錯誤。');
+    const error = new Error('Request 格式錯誤。');
+    error.statusCode = 400;
+    throw error;
   }
+};
+
+const httpError = (statusCode, message) => {
+  const error = new Error(message);
+  error.statusCode = statusCode;
+  return error;
 };
 
 export const normalizeUsername = (value) => String(value || '').trim().toLowerCase();
@@ -84,11 +92,11 @@ export const getBearerToken = (event) => {
 
 export const requireAdmin = async (event) => {
   const token = getBearerToken(event);
-  if (!token) throw new Error('請先以 staff 登入。');
+  if (!token) throw httpError(401, '請先以 staff 登入。');
 
   const admin = getAdminClient();
   const { data: userData, error: userError } = await admin.auth.getUser(token);
-  if (userError || !userData.user) throw new Error('登入已過期，請重新登入。');
+  if (userError || !userData.user) throw httpError(401, '登入已過期，請重新登入。');
 
   const { data, error } = await admin
     .from('admin_users')
@@ -96,7 +104,7 @@ export const requireAdmin = async (event) => {
     .eq('user_id', userData.user.id)
     .single();
 
-  if (error || !data) throw new Error('只有 staff 可以做呢個操作。');
+  if (error || !data) throw httpError(403, '只有 staff 可以做呢個操作。');
   return { admin, user: userData.user };
 };
 

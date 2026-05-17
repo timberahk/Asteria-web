@@ -128,6 +128,6 @@ export const handler = async (event) => {
       }
     });
   } catch (error) {
-    return json(500, { error: error.message || '新增 account 失敗。' });
+    return json(error.statusCode || 500, { error: error.message || '新增 account 失敗。' });
   }
 };

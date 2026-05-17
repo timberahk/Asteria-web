@@ -95,6 +95,6 @@ export const handler = async (event) => {
 
     return json(200, { inbox });
   } catch (error) {
-    return json(500, { error: error.message || 'Staff inbox 暫時載入唔到。' });
+    return json(error.statusCode || 500, { error: error.message || 'Staff inbox 暫時載入唔到。' });
   }
 };

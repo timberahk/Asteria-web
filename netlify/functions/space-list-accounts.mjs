@@ -14,6 +14,6 @@ export const handler = async (event) => {
 
     return json(200, { accounts: data || [] });
   } catch (error) {
-    return json(500, { error: error.message || 'Account list 暫時載入唔到。' });
+    return json(error.statusCode || 500, { error: error.message || 'Account list 暫時載入唔到。' });
   }
 };

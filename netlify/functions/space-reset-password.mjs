@@ -28,6 +28,6 @@ export const handler = async (event) => {
     await logAudit(admin, actor.id, account.user_id, 'reset_password', { username: account.username });
     return json(200, { ok: true });
   } catch (error) {
-    return json(500, { error: error.message || 'Reset password 失敗。' });
+    return json(error.statusCode || 500, { error: error.message || 'Reset password 失敗。' });
   }
 };

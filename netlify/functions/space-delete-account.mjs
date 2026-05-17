@@ -29,6 +29,6 @@ export const handler = async (event) => {
 
     return json(200, { ok: true });
   } catch (error) {
-    return json(500, { error: error.message || 'Delete account 失敗。' });
+    return json(error.statusCode || 500, { error: error.message || 'Delete account 失敗。' });
   }
 };
