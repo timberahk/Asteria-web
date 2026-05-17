@@ -277,15 +277,8 @@ export const listStaffInbox = async () => {
 };
 
 export const listStaffAccounts = async () => {
-  const client = requireSupabase();
-
-  const { data, error } = await client
-    .from('user_accounts')
-    .select('user_id, username, role, label, contact_email')
-    .order('created_at', { ascending: false });
-
-  if (error) throw error;
-  return (data || []) as SpaceAccount[];
+  const result = await apiRequest<{ accounts: SpaceAccount[] }>('space-list-accounts', {});
+  return result.accounts;
 };
 
 export const staffSendMessage = async (threadId: string, customerId: string, body: string, imagePaths: string[]) => {
