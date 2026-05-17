@@ -71,6 +71,10 @@ export const handler = async (event) => {
       map[account.user_id] = account;
       return map;
     }, {});
+    const accountsByUserId = (accounts || []).reduce((map, account) => {
+      map[account.user_id] = account;
+      return map;
+    }, {});
     const profilesByCustomer = (profileResult.data || []).reduce((map, profile) => {
       map[profile.id] = profile;
       return map;
@@ -80,7 +84,14 @@ export const handler = async (event) => {
       return map;
     }, {});
     const messagesByThread = (safeMessageResult.data || []).reduce((map, message) => {
-      map[message.thread_id] = [...(map[message.thread_id] || []), message];
+      const senderAccount = accountsByUserId[message.sender_id];
+      map[message.thread_id] = [
+        ...(map[message.thread_id] || []),
+        {
+          ...message,
+          sender_label: senderAccount?.label || senderAccount?.username || null
+        }
+      ];
       return map;
     }, {});
     const entriesByCustomer = (entryResult.error ? [] : entryResult.data || []).reduce((map, entry) => {

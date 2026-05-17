@@ -49,6 +49,7 @@ export type SpaceMessage = {
   customer_id: string;
   sender_id: string;
   sender_role: 'customer' | 'admin';
+  sender_label?: string | null;
   body: string;
   image_urls: string[];
   created_at: string;

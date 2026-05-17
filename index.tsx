@@ -1145,6 +1145,7 @@ type PortalEntry = {
 type ChatMessage = {
   id: number | string;
   sender: 'customer' | 'admin';
+  staffName?: string;
   text: string;
   images?: string[];
   createdAt: string;
@@ -2567,6 +2568,7 @@ const AdminInboxPage = () => {
           messages: item.messages.map((message) => ({
             id: message.id,
             sender: message.sender_role === 'admin' ? 'admin' : 'customer',
+            staffName: message.sender_role === 'admin' ? (message.sender_label || undefined) : undefined,
             text: message.body,
             images: (message.image_urls || []).map((path) => imageMap[path] || path),
             createdAt: message.created_at
@@ -2671,6 +2673,7 @@ const AdminInboxPage = () => {
         const imagePaths = replyImageFiles.length ? await uploadSpaceImages(replyImageFiles, activeCustomer.id) : [];
         const message = await staffSendMessage(activeCustomer.threadId, activeCustomer.id, trimmed, imagePaths);
         const imageMap = await getSignedImageMap(message.image_urls || []);
+        const staffName = accounts.find((account) => account.userId === message.sender_id)?.label || window.localStorage.getItem('asteriaCurrentUsername') || 'Staff';
         setCustomers((current) => current.map((customer) => customer.id === activeCustomer.id ? {
           ...customer,
           messages: [
@@ -2678,6 +2681,7 @@ const AdminInboxPage = () => {
             {
               id: message.id,
               sender: 'admin',
+              staffName,
               text: message.body,
               images: (message.image_urls || []).map((path) => imageMap[path] || path),
               createdAt: message.created_at
@@ -2696,7 +2700,7 @@ const AdminInboxPage = () => {
       ...customer,
       messages: [
         ...(customer.messages || []),
-        { id: Date.now(), sender: 'admin', text: trimmed, images: replyImages, createdAt: new Date().toISOString() }
+        { id: Date.now(), sender: 'admin', staffName: window.localStorage.getItem('asteriaCurrentUsername') || 'Staff', text: trimmed, images: replyImages, createdAt: new Date().toISOString() }
       ]
     } : customer));
     setReplyText('');
@@ -3038,7 +3042,9 @@ const AdminInboxPage = () => {
                   {(activeCustomer?.messages || []).map((message) => (
                     <div id={chatMessageDomId('staff-thread', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`group relative max-w-[88%] sm:max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
-                        <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
+                        <div className="text-xs font-bold mb-1">
+                          {message.sender === 'admin' ? `Asteria${message.staffName ? ` · ${message.staffName}` : ''}` : activeCustomer?.name}
+                        </div>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
