@@ -33,6 +33,13 @@ type SpaceSessionRole = 'customer' | 'staff' | null;
 
 const getStoredSpaceRole = () => window.localStorage.getItem('asteriaCurrentRole') as SpaceSessionRole;
 
+const clearStoredSpaceAccount = () => {
+  window.localStorage.removeItem('asteriaCurrentRole');
+  window.localStorage.removeItem('asteriaCurrentUsername');
+  window.localStorage.removeItem('asteriaCurrentEmail');
+  window.localStorage.removeItem('asteriaCurrentCustomerId');
+};
+
 const storeSpaceAccount = (account: { role: 'customer' | 'staff'; username: string; contact_email: string | null; user_id: string }) => {
   window.localStorage.setItem('asteriaCurrentRole', account.role);
   window.localStorage.setItem('asteriaCurrentUsername', account.username);
@@ -45,10 +52,7 @@ const storeSpaceAccount = (account: { role: 'customer' | 'staff'; username: stri
 
 const clearSpaceSession = async () => {
   await signOutSpace();
-  window.localStorage.removeItem('asteriaCurrentRole');
-  window.localStorage.removeItem('asteriaCurrentUsername');
-  window.localStorage.removeItem('asteriaCurrentEmail');
-  window.localStorage.removeItem('asteriaCurrentCustomerId');
+  clearStoredSpaceAccount();
   window.location.hash = '#register';
   window.dispatchEvent(new Event('asteria-session-change'));
 };
@@ -1178,7 +1182,7 @@ const formatEntryDate = (value: string) => {
   }).format(new Date(value));
 };
 
-const toDateInputValue = (value = new Date()) => {
+const toDateInputValue = (value: Date | string = new Date()) => {
   const date = value instanceof Date ? value : new Date(value);
   const offsetDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
   return offsetDate.toISOString().slice(0, 10);
@@ -1192,6 +1196,48 @@ const formatDisplayDate = (value: string) => {
     weekday: 'short'
   }).format(new Date(`${value}T00:00:00`));
 };
+
+const chatMessageDomId = (scope: string, messageId: string | number) => {
+  return `asteria-${scope}-message-${String(messageId).replace(/[^a-zA-Z0-9_-]/g, '-')}`;
+};
+
+const scrollToChatDate = (scope: string, messages: ChatMessage[], date: string) => {
+  const target = messages.find((message) => toDateInputValue(message.createdAt) === date);
+  if (!target) return false;
+  window.requestAnimationFrame(() => {
+    document.getElementById(chatMessageDomId(scope, target.id))?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+  return true;
+};
+
+const ChatDateJump = ({
+  value,
+  message,
+  onChange,
+  onJump
+}: {
+  value: string;
+  message: string;
+  onChange: (value: string) => void;
+  onJump: () => void;
+}) => (
+  <div className="bg-white/80 border-b border-asteria-cream/70 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2">
+    <div className="text-xs font-bold text-stone-500 whitespace-nowrap">跳去日期</div>
+    <input
+      type="date"
+      value={value}
+      onChange={(event) => onChange(event.target.value)}
+      className="border border-asteria-cream rounded-xl px-3 py-2 outline-none focus:border-asteria-primary bg-white text-sm"
+    />
+    <button onClick={onJump} className="bg-asteria-yellow/35 text-asteria-dark px-4 py-2 rounded-xl text-sm font-bold">
+      跳去當日
+    </button>
+    {message && <div className="text-xs font-bold text-asteria-primary">{message}</div>}
+  </div>
+);
 
 const canEditRecentEntry = (entry: PortalEntry) => {
   const createdTime = new Date(entry.createdAt).getTime();
@@ -1242,28 +1288,6 @@ const RegisterPage = () => {
   const [loginUsername, setLoginUsername] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
-
-  useEffect(() => {
-    if (!isBackendConfigured) return;
-
-    let isMounted = true;
-    getCurrentAccount()
-      .then((account) => {
-        if (!isMounted || !account) return;
-        storeSpaceAccount(account);
-        window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
-      })
-      .catch(() => {
-        window.localStorage.removeItem('asteriaCurrentRole');
-        window.localStorage.removeItem('asteriaCurrentUsername');
-        window.localStorage.removeItem('asteriaCurrentEmail');
-        window.localStorage.removeItem('asteriaCurrentCustomerId');
-      });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   const handleSystemLogin = async () => {
     if (isBackendConfigured) {
@@ -1347,6 +1371,8 @@ const SpacePortalPage = () => {
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [viewerImages, setViewerImages] = useState<string[]>([]);
   const [viewerIndex, setViewerIndex] = useState(0);
+  const [chatJumpDate, setChatJumpDate] = useState(toDateInputValue());
+  const [chatJumpMessage, setChatJumpMessage] = useState('');
   const [relationshipDate, setRelationshipDate] = useState(toDateInputValue());
   const [relationshipText, setRelationshipText] = useState('');
   const [editingEntryId, setEditingEntryId] = useState<string | number | null>(null);
@@ -1377,6 +1403,11 @@ const SpacePortalPage = () => {
     const imageIndex = activeChatImages.indexOf(image);
     setViewerImages(activeChatImages.length ? activeChatImages : [image]);
     setViewerIndex(imageIndex >= 0 ? imageIndex : 0);
+  };
+
+  const jumpCustomerChatDate = (scope: string) => {
+    const ok = scrollToChatDate(scope, activeCustomer?.messages || [], chatJumpDate);
+    setChatJumpMessage(ok ? `已跳到 ${formatDisplayDate(chatJumpDate)}` : `當日未有訊息：${formatDisplayDate(chatJumpDate)}`);
   };
 
   useEffect(() => {
@@ -1776,6 +1807,13 @@ const SpacePortalPage = () => {
               </button>
             </div>
 
+            <ChatDateJump
+              value={chatJumpDate}
+              message={chatJumpMessage}
+              onChange={setChatJumpDate}
+              onJump={() => jumpCustomerChatDate('customer-full')}
+            />
+
             <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full min-h-[420px] flex flex-col items-center justify-center text-center text-stone-500">
@@ -1788,7 +1826,7 @@ const SpacePortalPage = () => {
               ) : (
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
-                    <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
+                    <div id={chatMessageDomId('customer-full', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
@@ -2050,7 +2088,7 @@ const SpacePortalPage = () => {
               <input type="password" value={oldPassword} onChange={(event) => setOldPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="舊密碼" />
               <input type="password" value={newPassword} onChange={(event) => setNewPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="新密碼" />
               <button onClick={changePassword} disabled={isChangingPassword} className="btn-primary px-5 py-3 rounded-xl font-bold disabled:opacity-60">
-                {isChangingPassword ? '更新中...' : '更新'}
+                {isChangingPassword ? '更新中...' : '更新密碼'}
               </button>
             </div>
             {passwordMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{passwordMessage}</div>}
@@ -2178,6 +2216,13 @@ const SpacePortalPage = () => {
               </button>
             </div>
 
+            <ChatDateJump
+              value={chatJumpDate}
+              message={chatJumpMessage}
+              onChange={setChatJumpDate}
+              onJump={() => jumpCustomerChatDate('customer-card')}
+            />
+
             <div className="bg-[#FFF8EC] p-5 min-h-[420px] max-h-[560px] overflow-y-auto">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-[360px] flex flex-col items-center justify-center text-center text-stone-500">
@@ -2190,7 +2235,7 @@ const SpacePortalPage = () => {
               ) : (
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
-                    <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
+                    <div id={chatMessageDomId('customer-card', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
@@ -2259,6 +2304,8 @@ const AdminInboxPage = () => {
   const [accountMessage, setAccountMessage] = useState('');
   const [viewerImages, setViewerImages] = useState<string[]>([]);
   const [viewerIndex, setViewerIndex] = useState(0);
+  const [staffChatJumpDate, setStaffChatJumpDate] = useState(toDateInputValue());
+  const [staffChatJumpMessage, setStaffChatJumpMessage] = useState('');
   const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
     try {
       return JSON.parse(window.localStorage.getItem('asteriaStaffReadMarkers') || '{}') as Record<string, string>;
@@ -2272,6 +2319,10 @@ const AdminInboxPage = () => {
     const imageIndex = activeChatImages.indexOf(image);
     setViewerImages(activeChatImages.length ? activeChatImages : [image]);
     setViewerIndex(imageIndex >= 0 ? imageIndex : 0);
+  };
+  const jumpStaffChatDate = () => {
+    const ok = scrollToChatDate('staff-thread', activeCustomer?.messages || [], staffChatJumpDate);
+    setStaffChatJumpMessage(ok ? `已跳到 ${formatDisplayDate(staffChatJumpDate)}` : `當日未有訊息：${formatDisplayDate(staffChatJumpDate)}`);
   };
   const sortedCustomers = [...customers].sort((a, b) => {
     const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
@@ -2721,13 +2772,19 @@ const AdminInboxPage = () => {
 
             {staffThreadPanel === 'chat' ? (
             <>
+            <ChatDateJump
+              value={staffChatJumpDate}
+              message={staffChatJumpMessage}
+              onChange={setStaffChatJumpDate}
+              onJump={jumpStaffChatDate}
+            />
             <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full flex items-center justify-center text-sm text-stone-500">未有對話，下面可以開始回覆。</div>
               ) : (
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
-                    <div key={message.id} className={`flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
+                    <div id={chatMessageDomId('staff-thread', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
@@ -2861,6 +2918,18 @@ const Footer = () => (
   </footer>
 );
 
+const SessionCheckingPage = () => (
+  <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+    <div className="container mx-auto px-6 max-w-3xl">
+      <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
+        <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
+        <h1 className="text-3xl font-bold text-asteria-dark mb-3">確認登入狀態</h1>
+        <p className="text-stone-500 leading-relaxed">請稍等一下。</p>
+      </section>
+    </div>
+  </main>
+);
+
 const App = () => {
   const getPage = () => {
     if (window.location.hash === '#teaching') return 'teaching';
@@ -2873,19 +2942,27 @@ const App = () => {
 
   const [page, setPage] = useState(getPage);
   const [currentRole, setCurrentRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
+  const [isCheckingSession, setIsCheckingSession] = useState(isBackendConfigured);
 
   const restoreBackendSession = async () => {
-    if (!isBackendConfigured) return;
+    if (!isBackendConfigured) {
+      setIsCheckingSession(false);
+      return;
+    }
+    setIsCheckingSession(true);
     try {
       const account = await getCurrentAccount();
       if (!account) {
-        setCurrentRole(getStoredSpaceRole());
+        clearStoredSpaceAccount();
+        setCurrentRole(null);
         return;
       }
       storeSpaceAccount(account);
       setCurrentRole(account.role);
     } catch {
       setCurrentRole(getStoredSpaceRole());
+    } finally {
+      setIsCheckingSession(false);
     }
   };
 
@@ -2907,6 +2984,17 @@ const App = () => {
       window.removeEventListener('asteria-session-change', handleSessionChange);
     };
   }, []);
+
+  const protectedPage = page === 'register' || page === 'portal' || page === 'admin' || page === 'inbox';
+
+  if (protectedPage && isCheckingSession) {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <SessionCheckingPage />
+      </div>
+    );
+  }
 
   if (page === 'teaching') {
     return (

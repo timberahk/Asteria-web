@@ -230,48 +230,17 @@ export const createSpaceEntry = async (payload: {
   title?: string;
   body: string;
 }) => {
-  const client = requireSupabase();
-  const { data: userData, error: userError } = await client.auth.getUser();
-  if (userError || !userData.user) throw new Error('請先登入。');
-
-  const { data, error } = await client
-    .from('space_entries')
-    .insert({
-      customer_id: userData.user.id,
-      entry_type: payload.entryType,
-      entry_date: payload.entryDate,
-      title: payload.title || '',
-      body: payload.body
-    })
-    .select()
-    .single();
-
-  if (error) throw error;
-  return data as SpaceEntry;
+  const result = await apiRequest<{ entry: SpaceEntry }>('space-create-entry', payload);
+  return result.entry;
 };
 
 export const updateSpaceEntry = async (entryId: string, payload: { entryDate?: string; title?: string; body: string }) => {
-  const client = requireSupabase();
-  const { data, error } = await client
-    .from('space_entries')
-    .update({
-      ...(payload.entryDate ? { entry_date: payload.entryDate } : {}),
-      ...(payload.title !== undefined ? { title: payload.title } : {}),
-      body: payload.body
-    })
-    .eq('id', entryId)
-    .select()
-    .single();
-
-  if (error) throw error;
-  return data as SpaceEntry;
+  const result = await apiRequest<{ entry: SpaceEntry }>('space-update-entry', { entryId, ...payload });
+  return result.entry;
 };
 
 export const deleteSpaceEntry = async (entryId: string) => {
-  const client = requireSupabase();
-  const { error } = await client.from('space_entries').delete().eq('id', entryId);
-  if (error) throw error;
-  return { ok: true };
+  return apiRequest<{ ok: boolean }>('space-delete-entry', { entryId });
 };
 
 export const listStaffAccounts = async () => {
