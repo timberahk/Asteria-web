@@ -62,6 +62,21 @@ const clearSpaceSession = async () => {
   window.dispatchEvent(new Event('asteria-session-change'));
 };
 
+const cleanHomeUrl = () => {
+  const rawHash = window.location.hash || '';
+  const cleanHash = rawHash.replace(/^#/, '').split(/[?&/]/)[0].trim().toLowerCase();
+  if (cleanHash === 'home') {
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+  }
+};
+
+const goHome = (event?: React.MouseEvent<HTMLAnchorElement>) => {
+  event?.preventDefault();
+  window.history.pushState(null, '', `${window.location.pathname}${window.location.search}`);
+  window.dispatchEvent(new Event('asteria-route-change'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 type AppPage = 'home' | 'teaching' | 'register' | 'portal' | 'admin' | 'inbox';
 
 const getRoutePage = (): AppPage => {
@@ -100,7 +115,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#home" className="flex items-center gap-2">
+        <a href="/" onClick={goHome} className="flex items-center gap-2">
           <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
           <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
             ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">感情拯救所</span>
@@ -125,16 +140,16 @@ const Navbar = () => {
         </div>
       </div>
       <div className="bg-asteria-dark text-white">
-        <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-4 text-xs md:text-sm text-center">
-          <span className="font-bold">IG帳號暫停通知</span>
-          <span className="text-white/80">請用 WhatsApp / Facebook / Telegram 聯絡我地：</span>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-white px-3 py-1 rounded-full font-bold">
+        <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
+          <span className="font-bold whitespace-nowrap">IG帳號暫停通知</span>
+          <span className="text-white/80 whitespace-nowrap">請用以下方式聯絡我地：</span>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
           </a>
-          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#1877F2] text-white px-3 py-1 rounded-full font-bold">
+          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#1877F2] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-facebook-f"></i> Facebook
           </a>
-          <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-1 bg-[#2AABEE] text-white px-3 py-1 rounded-full font-bold">
+          <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#2AABEE] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-telegram"></i> Telegram @asteriahongkong
           </a>
         </div>
@@ -177,14 +192,14 @@ const Hero = () => (
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
                   我地 Instagram 主帳及 backup 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                <div className="flex flex-wrap gap-3">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
                   </a>
-                  <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                  <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-facebook-f"></i> Facebook
                   </a>
-                  <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#2AABEE] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
+                  <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-2 bg-[#2AABEE] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-telegram"></i> Telegram @asteriahongkong
                   </a>
                 </div>
@@ -665,7 +680,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       return (
         <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
           <div className="container mx-auto px-6 max-w-6xl">
-            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+            <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
               <i className="fa-solid fa-arrow-left"></i> 返回首頁
             </a>
             <div className="mb-10 grid lg:grid-cols-[1fr_auto] gap-6 items-end">
@@ -1367,7 +1382,7 @@ const RegisterPage = () => {
   return (
     <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
       <div className="container mx-auto px-6 max-w-3xl">
-        <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+        <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
           <i className="fa-solid fa-arrow-left"></i> 返回首頁
         </a>
 
@@ -2110,7 +2125,7 @@ const SpacePortalPage = () => {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
           <div>
-            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+            <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
               <i className="fa-solid fa-arrow-left"></i> 返回首頁
             </a>
             <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
@@ -2686,7 +2701,7 @@ const AdminInboxPage = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
           <div>
-            <a href="#home" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-3">
+            <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-3">
               <i className="fa-solid fa-arrow-left"></i> 返回主頁
             </a>
             <h1 className="text-3xl font-bold text-asteria-dark">客服 Inbox</h1>
@@ -3044,20 +3059,26 @@ const App = () => {
   };
 
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleRouteChange = () => {
       setCurrentRole(getStoredSpaceRole());
       setPage(getRoutePage());
+      cleanHomeUrl();
       restoreBackendSession();
     };
     const handleSessionChange = () => {
       setCurrentRole(getStoredSpaceRole());
       setPage(getRoutePage());
     };
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('hashchange', handleRouteChange);
+    window.addEventListener('popstate', handleRouteChange);
+    window.addEventListener('asteria-route-change', handleRouteChange);
     window.addEventListener('asteria-session-change', handleSessionChange);
+    cleanHomeUrl();
     restoreBackendSession();
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('hashchange', handleRouteChange);
+      window.removeEventListener('popstate', handleRouteChange);
+      window.removeEventListener('asteria-route-change', handleRouteChange);
       window.removeEventListener('asteria-session-change', handleSessionChange);
     };
   }, []);
