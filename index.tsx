@@ -1579,10 +1579,11 @@ const SpacePortalPage = () => {
   const saveJournalEntry = async () => {
     const body = journalText.trim();
     if (!body) return;
+    const selectedJournalDate = (document.getElementById('journal-date-input') as HTMLInputElement | null)?.value || journalDate;
     try {
       if (currentJournalEntry && canEditRecentEntry(currentJournalEntry)) {
         if (isBackendConfigured) {
-          const updated = await updateSpaceEntry(String(currentJournalEntry.id), { entryDate: journalDate, title: '', body });
+          const updated = await updateSpaceEntry(String(currentJournalEntry.id), { entryDate: selectedJournalDate, title: '', body });
           upsertLocalEntry({
             id: updated.id,
             type: 'mood',
@@ -1592,11 +1593,11 @@ const SpacePortalPage = () => {
             updatedAt: updated.updated_at
           });
         } else {
-          upsertLocalEntry({ ...currentJournalEntry, text: body, entryDate: journalDate, updatedAt: new Date().toISOString() });
+          upsertLocalEntry({ ...currentJournalEntry, text: body, entryDate: selectedJournalDate, updatedAt: new Date().toISOString() });
         }
       } else {
         if (isBackendConfigured) {
-          const entry = await createSpaceEntry({ entryType: 'journal', entryDate: journalDate, body });
+          const entry = await createSpaceEntry({ entryType: 'journal', entryDate: selectedJournalDate, body });
           upsertLocalEntry({
             id: entry.id,
             type: 'mood',
@@ -1606,7 +1607,7 @@ const SpacePortalPage = () => {
             updatedAt: entry.updated_at
           });
         } else {
-          upsertLocalEntry({ id: Date.now(), type: 'mood', text: body, entryDate: journalDate, createdAt: new Date().toISOString() });
+          upsertLocalEntry({ id: Date.now(), type: 'mood', text: body, entryDate: selectedJournalDate, createdAt: new Date().toISOString() });
         }
       }
       setEntryMessage('心靈日記已儲存。');
@@ -1958,7 +1959,7 @@ const SpacePortalPage = () => {
                   <div className="text-sm text-stone-400">Soul Journal</div>
                   <h1 className="text-3xl font-bold text-asteria-dark">心靈日記</h1>
                 </div>
-                <input type="date" value={journalDate} onChange={(event) => setJournalDate(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
+              <input id="journal-date-input" type="date" value={journalDate} onInput={(event) => setJournalDate(event.currentTarget.value)} onChange={(event) => setJournalDate(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
               </div>
               <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-2xl p-4 md:p-5">
                 <div className="font-bold text-asteria-dark mb-3">{formatDisplayDate(journalDate)}</div>
