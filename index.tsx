@@ -1371,7 +1371,7 @@ const SpacePortalPage = () => {
   const [profileSelfName, setProfileSelfName] = useState(activeCustomer?.targetName || '');
   const [profileMessage, setProfileMessage] = useState('');
   const [isEditingProfile, setIsEditingProfile] = useState(false);
-  const needsFirstProfile = !isSpaceLoading && Boolean(activeCustomer) && !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.email && !activeCustomer?.targetName;
+  const needsFirstProfile = !isSpaceLoading && Boolean(activeCustomer) && !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.targetName;
 
   const openChatImage = (image: string) => {
     const imageIndex = activeChatImages.indexOf(image);
