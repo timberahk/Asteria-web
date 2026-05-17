@@ -2744,9 +2744,9 @@ const AdminInboxPage = () => {
         </div>
 
         {adminView === 'accounts' && (
-        <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm p-5 mb-5">
-          <div className="flex flex-col lg:flex-row lg:items-start gap-5">
-            <div className="lg:w-[360px] shrink-0">
+        <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm p-5 mb-5 overflow-hidden">
+          <div className="grid xl:grid-cols-[360px_minmax(0,1fr)] gap-5">
+            <div className="min-w-0">
               <div className="text-sm text-stone-400">Account</div>
               <h2 className="text-2xl font-bold text-asteria-dark mb-2">Account 管理</h2>
               <p className="text-sm text-stone-500 leading-relaxed">新增帳戶、搜尋帳戶及重設密碼。</p>
@@ -2755,20 +2755,20 @@ const AdminInboxPage = () => {
               </div>
             </div>
 
-            <div className="grid gap-3 flex-1">
-              <div className="grid md:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-3">
-                <input value={newAccountName} onChange={(event) => setNewAccountName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="客人 / staff 名" />
-                <input value={newAccountUsername} onChange={(event) => setNewAccountUsername(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Account 名" />
-                <input value={newAccountEmail} onChange={(event) => setNewAccountEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email 備用聯絡" />
-                <input value={newAccountPassword} onChange={(event) => setNewAccountPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="初始 password" />
-                <select value={newAccountRole} onChange={(event) => setNewAccountRole(event.target.value as 'customer' | 'staff')} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white">
+            <div className="grid gap-3 min-w-0">
+              <div className="grid sm:grid-cols-2 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_130px] gap-3 min-w-0">
+                <input value={newAccountName} onChange={(event) => setNewAccountName(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="客人 / staff 名" />
+                <input value={newAccountUsername} onChange={(event) => setNewAccountUsername(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Account 名" />
+                <input value={newAccountEmail} onChange={(event) => setNewAccountEmail(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email 備用聯絡" />
+                <input value={newAccountPassword} onChange={(event) => setNewAccountPassword(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="初始 password" />
+                <select value={newAccountRole} onChange={(event) => setNewAccountRole(event.target.value as 'customer' | 'staff')} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white sm:col-span-2 2xl:col-span-1">
                   <option value="customer">客人</option>
                   <option value="staff">Staff</option>
                 </select>
               </div>
               <button onClick={createAccount} className="btn-primary rounded-xl px-5 py-3 font-bold md:w-fit">新增 account</button>
               {accountMessage && <div className="text-sm font-bold text-asteria-primary">{accountMessage}</div>}
-              <input value={accountSearch} onChange={(event) => setAccountSearch(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white mt-2" placeholder="Search account 名 / 客人名 / email" />
+              <input value={accountSearch} onChange={(event) => setAccountSearch(event.target.value)} className="min-w-0 w-full border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white mt-2" placeholder="Search account 名 / 客人名 / email" />
 
               <div className="grid gap-2 mt-2 max-h-[520px] overflow-y-auto pr-1">
                 {filteredAccounts.map((account) => (
