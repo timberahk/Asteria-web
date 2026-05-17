@@ -1150,8 +1150,8 @@ const readFilesAsDataUrls = (files: FileList | null) => {
 
 const buildSummary = (customer: PortalCustomer) => {
   const latest = customer.entries.slice(-3).map((entry) => entry.text).join(' ');
-  if (!latest) return '未有足夠 update。之後可以接 AI，自動濃縮近況、情緒變化、客服 follow up 重點。';
-  return `AI summary 位：${customer.name} 最近重點圍繞「${customer.interests.join('、') || '未選分類'}」。近況摘要：${latest.slice(0, 90)}${latest.length > 90 ? '...' : ''}`;
+  if (!latest) return '暫未有足夠 update。';
+  return `${customer.name} 最近重點圍繞「${customer.interests.join('、') || '未選分類'}」。近況摘要：${latest.slice(0, 90)}${latest.length > 90 ? '...' : ''}`;
 };
 
 const RegisterPage = () => {
@@ -1206,11 +1206,11 @@ const RegisterPage = () => {
       }
     }
 
-    setLoginError('Supabase backend 未連接，暫時不能登入。請檢查 Netlify env 並重新 deploy。');
+    setLoginError('系統暫時未能連線，請稍後再試或聯絡 Asteria。');
   };
 
   const saveRegistration = () => {
-    setLoginError('正式版只接受已建立的 Asteria Space account 登入。請先由客服後台新增 account。');
+    setLoginError('請使用 Asteria 提供的 account 登入。');
   };
 
   return (
@@ -1224,7 +1224,7 @@ const RegisterPage = () => {
           <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
           <h1 className="text-3xl md:text-4xl font-bold text-asteria-dark mb-3">登入你的私人空間</h1>
           <p className="text-stone-500 leading-relaxed mb-6">
-            一個方便記錄最近情況、上傳對話、同我哋保持聯絡嘅私人空間。WhatsApp 繼續用嚟即時傾，Asteria Space 就用嚟保留重要 record。
+            查看訊息、上傳截圖，同 Asteria 保持聯絡。
           </p>
 
           <div className="bg-[#FFF8EC] border border-asteria-cream rounded-2xl p-5 mb-6">
@@ -1233,8 +1233,8 @@ const RegisterPage = () => {
                 <i className="fa-solid fa-lock"></i>
               </div>
               <div>
-                <div className="font-bold text-asteria-dark">系統登入</div>
-                <p className="text-sm text-stone-500 leading-relaxed">暫時由 Asteria 開 account 比你。客服同客人用同一個入口登入，系統會自動分去不同版面。</p>
+                <div className="font-bold text-asteria-dark">登入</div>
+                <p className="text-sm text-stone-500 leading-relaxed">請輸入 Asteria 提供的 account 名及密碼。</p>
               </div>
             </div>
 
@@ -1248,7 +1248,7 @@ const RegisterPage = () => {
           </div>
 
           <div className="text-sm text-stone-500 text-center">
-            第一次登入後，系統會請你補回聯絡資料。
+            如需開通帳戶，請聯絡 Asteria。
           </div>
         </div>
       </div>
@@ -1817,7 +1817,7 @@ const SpacePortalPage = () => {
       setPasswordMessage('新密碼最少 6 個字。');
       return;
     }
-    setPasswordMessage('正式版密碼暫時由客服 reset。呢個位之後會接 Supabase 改密碼。');
+    setPasswordMessage('如需更改密碼，請聯絡 Asteria。');
     setOldPassword('');
     setNewPassword('');
   };
@@ -2568,14 +2568,14 @@ const AdminInboxPage = () => {
         setNewAccountEmail('');
         setNewAccountPassword('');
         setNewAccountRole('customer');
-        setAccountMessage('Account 已在 Supabase 新增。');
+        setAccountMessage('Account 已新增。');
       } catch (error) {
         setAccountMessage(error instanceof Error ? error.message : '新增 account 失敗。');
       }
       return;
     }
 
-    setAccountMessage('Supabase backend 未連接：呢個版本唔會新增本機 account。請確認 Netlify env 已設定並已重新 deploy。');
+    setAccountMessage('系統暫時未能連線，未能新增 account。');
     return;
   };
 
@@ -2589,13 +2589,13 @@ const AdminInboxPage = () => {
       try {
         await staffResetPassword({ username, password: nextPassword });
         setResetPasswords((current) => ({ ...current, [username]: '' }));
-        setAccountMessage(`${username} password 已在 Supabase reset。`);
+        setAccountMessage(`${username} password 已更新。`);
       } catch (error) {
         setAccountMessage(error instanceof Error ? error.message : 'Reset password 失敗。');
       }
       return;
     }
-    setAccountMessage('Supabase backend 未連接：不能 reset 真實 account password。');
+    setAccountMessage('系統暫時未能連線，未能 reset password。');
     return;
   };
 
@@ -2609,13 +2609,13 @@ const AdminInboxPage = () => {
         if (account.customerId) {
           setCustomers((current) => current.filter((customer) => customer.id !== account.customerId));
         }
-        setAccountMessage(`${account.username} 已在 Supabase 刪除。`);
+        setAccountMessage(`${account.username} 已刪除。`);
       } catch (error) {
         setAccountMessage(error instanceof Error ? error.message : 'Delete account 失敗。');
       }
       return;
     }
-    setAccountMessage('Supabase backend 未連接：不能 delete 真實 account。');
+    setAccountMessage('系統暫時未能連線，未能 delete account。');
     return;
   };
 
@@ -2629,7 +2629,7 @@ const AdminInboxPage = () => {
             </a>
             <h1 className="text-3xl font-bold text-asteria-dark">客服 Inbox</h1>
           </div>
-          <div className="text-sm text-stone-500">Inbox list → 對話頁 · Account search / reset</div>
+          <div className="text-sm text-stone-500">Asteria Space</div>
         </div>
 
         <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
@@ -2645,11 +2645,11 @@ const AdminInboxPage = () => {
         <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm p-5 mb-5">
           <div className="flex flex-col lg:flex-row lg:items-start gap-5">
             <div className="lg:w-[360px] shrink-0">
-              <div className="text-sm text-stone-400">Staff tools</div>
+              <div className="text-sm text-stone-400">Account</div>
               <h2 className="text-2xl font-bold text-asteria-dark mb-2">Account 管理</h2>
-              <p className="text-sm text-stone-500 leading-relaxed">客服可以新增客人 / staff account，亦可以幫客人 reset password。</p>
+              <p className="text-sm text-stone-500 leading-relaxed">新增帳戶、搜尋帳戶及重設密碼。</p>
               <div className={`mt-4 rounded-xl border px-4 py-3 text-sm font-bold ${isBackendConfigured ? 'bg-green-50 border-green-100 text-green-700' : 'bg-red-50 border-red-100 text-red-600'}`}>
-                {isBackendConfigured ? 'Supabase 已連接：新增 account 會寫入 Supabase Auth。' : 'Supabase 未連接：新增 account 不會生效，請檢查 Netlify env / deploy。'}
+                {isBackendConfigured ? '系統連接正常。' : '系統暫時未能連線。'}
               </div>
             </div>
 

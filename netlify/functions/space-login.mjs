@@ -36,7 +36,7 @@ export const handler = async (event) => {
     }
 
     if (accountError || !account) {
-      return json(401, { error: '搵唔到呢個 Asteria Space account。請檢查 SQL 有冇 run 最新 bootstrap，或 account 名/email 有冇打錯。' });
+      return json(401, { error: '登入資料不正確，請檢查 account 名或 email。' });
     }
 
     const anon = getAnonClient();
@@ -47,7 +47,7 @@ export const handler = async (event) => {
 
     if (loginError || !loginData.session) {
       return json(401, {
-        error: `Supabase Auth 登入失敗。系統搵到 account「${account.username}」，但用 email「${account.auth_email}」登入唔到。請檢查 Supabase Auth 個 email 是否一樣，或 reset password 後再試。`
+        error: '登入資料不正確，請檢查密碼或聯絡 Asteria。'
       });
     }
 
