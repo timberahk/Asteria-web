@@ -11,12 +11,11 @@ export const handler = async (event) => {
     const { data: accounts, error: accountError } = await admin
       .from('user_accounts')
       .select('user_id, username, role, label, contact_email, created_at')
-      .eq('role', 'customer')
       .order('created_at', { ascending: false });
 
     if (accountError) throw accountError;
 
-    const customerAccounts = accounts || [];
+    const customerAccounts = (accounts || []).filter((account) => account.role !== 'staff');
     const customerIds = customerAccounts.map((account) => account.user_id);
     if (customerIds.length === 0) return json(200, { inbox: [] });
 

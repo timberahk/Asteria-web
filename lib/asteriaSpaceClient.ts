@@ -151,81 +151,13 @@ export const upsertMyProfile = async (profile: Partial<SpaceProfile>) => {
 };
 
 export const getMySpace = async () => {
-  const client = requireSupabase();
-  const { data: userData, error: userError } = await client.auth.getUser();
-  if (userError || !userData.user) throw new Error('請先登入。');
-  const userId = userData.user.id;
-
-  const [accountResult, profileResult, threadResult] = await Promise.all([
-    client.from('user_accounts').select('user_id, username, role, label, contact_email').eq('user_id', userId).single(),
-    client.from('profiles').select('*').eq('id', userId).maybeSingle(),
-    client.from('message_threads').select('*').eq('customer_id', userId).maybeSingle()
-  ]);
-
-  if (accountResult.error) throw accountResult.error;
-  if (profileResult.error) throw profileResult.error;
-  if (threadResult.error) throw threadResult.error;
-
-  const account = accountResult.data as SpaceAccount;
-  let profile = profileResult.data as SpaceProfile | null;
-  if (!profile) {
-    const createdProfile = await client
-      .from('profiles')
-      .upsert({
-        id: userId,
-        display_name: account.label,
-        contact_email: account.contact_email
-      }, { onConflict: 'id' })
-      .select()
-      .single();
-    if (createdProfile.error) throw createdProfile.error;
-    profile = createdProfile.data as SpaceProfile;
-  }
-
-  let thread = threadResult.data as SpaceThread | null;
-  if (!thread) {
-    const created = await client
-      .from('message_threads')
-      .insert({ customer_id: userId })
-      .select()
-      .single();
-    if (created.error) {
-      const existingThread = await client
-        .from('message_threads')
-        .select('*')
-        .eq('customer_id', userId)
-        .maybeSingle();
-      if (existingThread.error || !existingThread.data) throw created.error;
-      thread = existingThread.data as SpaceThread;
-    } else {
-      thread = created.data as SpaceThread;
-    }
-  }
-
-  const { data: messages, error: messagesError } = await client
-    .from('chat_messages')
-    .select('*')
-    .eq('thread_id', thread.id)
-    .order('created_at', { ascending: true });
-
-  if (messagesError) throw messagesError;
-
-  const { data: entries, error: entriesError } = await client
-    .from('space_entries')
-    .select('*')
-    .eq('customer_id', userId)
-    .order('entry_date', { ascending: false })
-    .order('created_at', { ascending: false });
-
-  if (entriesError && !isMissingRelationError(entriesError)) throw entriesError;
-
-  return {
-    account,
-    profile,
-    thread,
-    messages: (messages || []) as SpaceMessage[],
-    entries: (entriesError ? [] : entries || []) as SpaceEntry[]
-  };
+  return apiRequest<{
+    account: SpaceAccount;
+    profile: SpaceProfile | null;
+    thread: SpaceThread;
+    messages: SpaceMessage[];
+    entries: SpaceEntry[];
+  }>('space-my-space', {});
 };
 
 export const getSignedImageMap = async (paths: string[]) => {
