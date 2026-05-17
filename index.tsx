@@ -2585,7 +2585,7 @@ const AdminInboxPage = () => {
         }
         return map;
       }, {}));
-      if (nextCustomers[0]) setActiveCustomerId(nextCustomers[0].id);
+      setActiveCustomerId((current) => nextCustomers.find((customer) => customer.id === current)?.id || nextCustomers[0]?.id || '');
     } catch (error) {
       setAccountMessage(error instanceof Error ? error.message : 'Staff inbox 暫時載入唔到。');
     }
@@ -2609,6 +2609,16 @@ const AdminInboxPage = () => {
   useEffect(() => {
     loadBackendInbox();
   }, []);
+
+  const showInboxList = () => {
+    setInboxView('list');
+    void loadBackendInbox();
+  };
+
+  const openInboxPanel = () => {
+    setAdminView('inbox');
+    showInboxList();
+  };
 
   const getUnreadCount = (customer: PortalCustomer) => {
     const messages = customer.messages || [];
@@ -2850,7 +2860,7 @@ const AdminInboxPage = () => {
         </div>
 
         <div className={`flex gap-2 overflow-x-auto pb-1 shrink-0 ${isStaffThreadLayout ? 'mb-3' : 'mb-5'}`}>
-          <button onClick={() => { setAdminView('inbox'); setInboxView('list'); }} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'inbox' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
+          <button onClick={openInboxPanel} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'inbox' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
             Inbox
           </button>
           <button onClick={() => setAdminView('accounts')} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'accounts' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
@@ -2984,7 +2994,7 @@ const AdminInboxPage = () => {
           <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-7rem)] sm:h-[calc(100vh-9rem)] min-h-[600px] sm:min-h-[700px] max-h-[980px] min-w-0`}>
             <div className="px-3 sm:px-4 py-2 sm:py-3 border-b border-asteria-cream/70 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 shrink-0">
               <div className="min-w-0">
-                <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-xs sm:text-sm mb-1 sm:mb-2">
+                <button onClick={showInboxList} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-xs sm:text-sm mb-1 sm:mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回所有對話
                 </button>
                 <div className="font-bold text-asteria-dark truncate text-sm sm:text-base">{activeCustomer?.name}</div>
