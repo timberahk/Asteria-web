@@ -1980,13 +1980,13 @@ const SpacePortalPage = () => {
               </div>
             )}
 
-            <div className="p-3 sm:p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[3rem_minmax(0,1fr)_3rem] gap-2 sm:gap-3 shrink-0 min-w-0">
-              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="upload screenshot">
+            <div className="w-full max-w-full overflow-hidden p-3 sm:p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] gap-2 sm:gap-3 shrink-0 min-w-0">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-11 h-11 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="upload screenshot">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
               </label>
-              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-3 sm:px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
-              <button onClick={sendChatMessage} className="btn-primary w-12 h-12 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
+              <textarea value={chatText} onChange={(event) => setChatText(event.target.value)} rows={1} className="w-full min-w-0 max-h-28 resize-none border border-asteria-cream rounded-xl px-3 sm:px-4 py-2.5 outline-none focus:border-asteria-primary leading-relaxed" placeholder="留言 / 補充最近情況..." />
+              <button onClick={sendChatMessage} className="btn-primary w-11 h-11 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
@@ -1999,11 +1999,11 @@ const SpacePortalPage = () => {
   if (spaceView === 'updates') {
     return (
       <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
           </button>
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm mb-6">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-4 sm:p-5 md:p-6 shadow-sm mb-6 overflow-hidden">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
               <div>
                 <div className="text-sm text-stone-400">Relationship Update</div>
@@ -2013,7 +2013,7 @@ const SpacePortalPage = () => {
             </div>
             <label className="block mb-3">
               <span className="block text-sm font-bold text-asteria-dark mb-2">事情發生日期</span>
-              <input id="relationship-date-input" type="date" value={relationshipDate} onInput={(event) => setRelationshipDate(event.currentTarget.value)} onChange={(event) => setRelationshipDate(event.target.value)} className="w-full sm:w-auto border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
+              <input id="relationship-date-input" type="date" value={relationshipDate} onInput={(event) => setRelationshipDate(event.currentTarget.value)} onChange={(event) => setRelationshipDate(event.target.value)} className="block w-full max-w-full min-w-0 sm:w-64 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
             </label>
             <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-36 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="寫低最近關係進展、對方態度、重要對話背景..." />
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-3">
@@ -2036,7 +2036,7 @@ const SpacePortalPage = () => {
                         <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
                         {editingEntryId === entry.id ? (
                           <div className="grid gap-3">
-                            <input id="editing-entry-date-input" type="date" value={editingEntryDate} onInput={(event) => setEditingEntryDate(event.currentTarget.value)} onChange={(event) => setEditingEntryDate(event.target.value)} className="w-full sm:w-52 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
+                            <input id="editing-entry-date-input" type="date" value={editingEntryDate} onInput={(event) => setEditingEntryDate(event.currentTarget.value)} onChange={(event) => setEditingEntryDate(event.target.value)} className="block w-full max-w-full min-w-0 sm:w-52 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" />
                             <textarea value={editingEntryText} onChange={(event) => setEditingEntryText(event.target.value)} className="w-full min-h-28 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
                           </div>
                         ) : (
@@ -2393,13 +2393,13 @@ const SpacePortalPage = () => {
               </div>
             )}
 
-            <div className="p-3 md:p-5 bg-white border-t border-asteria-cream/70 grid grid-cols-[3rem_minmax(0,1fr)_3rem] gap-2 sm:gap-3 min-w-0">
-              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="upload screenshot">
+            <div className="w-full max-w-full overflow-hidden p-3 md:p-5 bg-white border-t border-asteria-cream/70 grid grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] gap-2 sm:gap-3 min-w-0">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-11 h-11 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="upload screenshot">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
               </label>
-              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-3 sm:px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
-              <button onClick={sendChatMessage} className="btn-primary w-12 h-12 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
+              <textarea value={chatText} onChange={(event) => setChatText(event.target.value)} rows={1} className="w-full min-w-0 max-h-28 resize-none border border-asteria-cream rounded-xl px-3 sm:px-4 py-2.5 outline-none focus:border-asteria-primary leading-relaxed" placeholder="留言 / 補充最近情況..." />
+              <button onClick={sendChatMessage} className="btn-primary w-11 h-11 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
@@ -2890,10 +2890,10 @@ const AdminInboxPage = () => {
                 </div>
               </div>
 
-              <div className="grid gap-2 mt-2 h-[68vh] min-h-[560px] max-h-[920px] overflow-y-auto pr-1 rounded-2xl border border-asteria-cream/60 bg-white p-2">
+              <div className="grid gap-2 mt-2 h-[68vh] min-h-[560px] max-h-[920px] overflow-y-auto pr-1 rounded-2xl border border-asteria-cream/60 bg-white p-2 max-w-full">
                 {filteredAccounts.map((account) => (
-                  <div key={account.username} className="grid lg:grid-cols-[1fr_130px_1fr_auto_auto] gap-2 items-center bg-[#FFF8EC] rounded-xl p-3">
-                    <div>
+                  <div key={account.username} className="grid grid-cols-1 lg:grid-cols-[1fr_130px_minmax(0,1fr)_auto_auto] gap-2 items-center bg-[#FFF8EC] rounded-xl p-3 min-w-0 overflow-hidden">
+                    <div className="min-w-0">
                       <div className="font-bold text-asteria-dark">{account.label}</div>
                       <div className="text-xs text-stone-500 break-all">account: {account.username}</div>
                       <div className="text-xs text-stone-400 break-all">email: {account.email || '未填'}</div>
@@ -2901,9 +2901,9 @@ const AdminInboxPage = () => {
                     <div className="text-xs font-bold text-asteria-primary bg-white border border-asteria-cream rounded-full px-3 py-1 w-fit">
                       {account.role === 'staff' ? 'Staff' : '客人'}
                     </div>
-                    <input value={resetPasswords[account.username] || ''} onChange={(event) => setResetPasswords((current) => ({ ...current, [account.username]: event.target.value }))} className="border border-asteria-cream rounded-xl px-4 py-2 outline-none focus:border-asteria-primary bg-white" placeholder="輸入新 password（最少 8 個字）" />
-                    <button onClick={() => resetAccountPassword(account.username)} className="bg-asteria-dark text-white rounded-xl px-4 py-2 font-bold">Reset</button>
-                    <button onClick={() => deleteAccount(account)} className="bg-white text-red-600 border border-red-200 rounded-xl px-4 py-2 font-bold hover:bg-red-50">Delete</button>
+                    <input value={resetPasswords[account.username] || ''} onChange={(event) => setResetPasswords((current) => ({ ...current, [account.username]: event.target.value }))} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-2 outline-none focus:border-asteria-primary bg-white" placeholder="輸入新 password（最少 8 個字）" />
+                    <button onClick={() => resetAccountPassword(account.username)} className="w-full lg:w-auto bg-asteria-dark text-white rounded-xl px-4 py-2 font-bold">Reset</button>
+                    <button onClick={() => deleteAccount(account)} className="w-full lg:w-auto bg-white text-red-600 border border-red-200 rounded-xl px-4 py-2 font-bold hover:bg-red-50">Delete</button>
                   </div>
                 ))}
               </div>
@@ -3075,13 +3075,13 @@ const AdminInboxPage = () => {
               </div>
             )}
 
-            <div className="p-3 sm:p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[3rem_minmax(0,1fr)_3rem] gap-2 sm:gap-3 shrink-0 min-w-0">
-              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="send image">
+            <div className="w-full max-w-full overflow-hidden p-3 sm:p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] gap-2 sm:gap-3 shrink-0 min-w-0">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-11 h-11 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="send image">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleReplyImages(event.target.files)} />
               </label>
-              <input value={replyText} onChange={(event) => setReplyText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendReply(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-3 sm:px-4 py-3 outline-none focus:border-asteria-primary" placeholder="輸入回覆..." />
-              <button onClick={sendReply} className="btn-primary w-12 h-12 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
+              <textarea value={replyText} onChange={(event) => setReplyText(event.target.value)} rows={1} className="w-full min-w-0 max-h-28 resize-none border border-asteria-cream rounded-xl px-3 sm:px-4 py-2.5 outline-none focus:border-asteria-primary leading-relaxed" placeholder="輸入回覆..." />
+              <button onClick={sendReply} className="btn-primary w-11 h-11 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
