@@ -248,8 +248,8 @@ const Hero = () => (
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 text-left">
             {[
               ["11,000+", "累積個案"],
-              ["私隱", "一對一跟進"],
-              ["分類", "快速找方向"]
+              ["極高", "回頭客好評"],
+              ["私隱", "一對一跟進"]
             ].map(([num, label]) => (
               <div key={label} className="bg-white/75 border border-asteria-cream/70 rounded-xl px-4 py-3 shadow-sm">
                 <div className="text-asteria-primary font-bold text-lg">{num}</div>
@@ -704,8 +704,8 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 <h1 className="text-4xl font-bold text-asteria-dark mb-3">相處教學</h1>
                 <p className="text-stone-500 max-w-2xl">用 IG 圖文感覺慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
               </div>
-              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white border border-asteria-cream text-asteria-primary px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
-                <i className="fa-brands fa-instagram"></i> Instagram
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
+                <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
               </a>
             </div>
 
@@ -804,8 +804,8 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
           </div>
 
           <div className="text-center mt-10">
-              <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" rel="noreferrer" className="inline-block text-gray-400 hover:text-asteria-primary transition-colors text-sm">
-                <i className="fa-brands fa-instagram mr-1"></i> 更多教學請 Follow Instagram
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 bg-white px-5 py-2 rounded-full shadow-sm hover:shadow transition-all text-sm font-bold">
+                <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
               </a>
           </div>
   
@@ -1121,8 +1121,8 @@ const Reviews = () => (
       </div>
       
       <div className="text-center mt-10">
-        <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" target="_blank" rel="noreferrer" className="inline-flex items-center text-asteria-primary font-bold hover:underline bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
-          查看更多好評 <i className="fa-solid fa-arrow-right ml-2"></i>
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
+          <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
         </a>
       </div>
     </div>
@@ -3264,6 +3264,19 @@ const Footer = () => (
   </footer>
 );
 
+const FloatingWhatsApp = () => (
+  <a
+    href={WHATSAPP_URL}
+    target="_blank"
+    rel="noreferrer"
+    aria-label="WhatsApp 聯絡 Asteria"
+    className="fixed right-4 bottom-4 z-[70] inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-white font-bold shadow-xl shadow-green-900/20 hover:brightness-95 hover:-translate-y-0.5 transition-all"
+  >
+    <i className="fa-brands fa-whatsapp text-xl"></i>
+    <span className="hidden sm:inline">WhatsApp</span>
+  </a>
+);
+
 const SessionCheckingPage = () => (
   <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
     <div className="container mx-auto px-6 max-w-3xl">
@@ -3364,6 +3377,7 @@ const App = () => {
         <Navbar />
         <RegisterPage />
         <Footer />
+        <FloatingWhatsApp />
       </div>
     );
   }
@@ -3399,6 +3413,7 @@ const App = () => {
         <Navbar />
         <RegisterPage />
         <Footer />
+        <FloatingWhatsApp />
       </div>
     );
   }
@@ -3409,6 +3424,7 @@ const App = () => {
         <Navbar />
         <RegisterPage />
         <Footer />
+        <FloatingWhatsApp />
       </div>
     );
   }
@@ -3441,6 +3457,7 @@ const App = () => {
       <Services />
       <Reviews />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
