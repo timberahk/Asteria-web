@@ -2628,7 +2628,7 @@ const AdminInboxPage = () => {
     const messages = customer.messages || [];
     const readMarker = readMarkers[customer.id];
     if (readMarker?.isUnread) {
-      return Math.max(1, messages.filter((message) => message.sender === 'customer').length);
+      return 1;
     }
     const lastAdminIndex = [...messages].map((message) => message.sender).lastIndexOf('admin');
     const lastAdminTime = lastAdminIndex >= 0 ? messages[lastAdminIndex].createdAt : '';
@@ -2959,6 +2959,7 @@ const AdminInboxPage = () => {
               ) : filteredInboxCustomers.map((customer) => {
                 const lastMessage = customer.messages?.[customer.messages.length - 1];
                 const unreadCount = getUnreadCount(customer);
+                const isMarkedUnread = Boolean(readMarkers[customer.id]?.isUnread);
                 return (
                   <div
                     key={customer.id}
@@ -2974,7 +2975,11 @@ const AdminInboxPage = () => {
                             <div className="flex items-center justify-between gap-2">
                               <div className="font-bold text-asteria-dark truncate">{customer.name}</div>
                               <div className="flex items-center gap-2 shrink-0">
-                                {unreadCount > 0 && (
+                                {isMarkedUnread ? (
+                                  <span className="rounded-full bg-asteria-yellow/60 px-2.5 py-1 text-[11px] font-bold text-asteria-primary">
+                                    未讀
+                                  </span>
+                                ) : unreadCount > 0 && (
                                   <span className="min-w-6 h-6 px-2 rounded-full bg-asteria-primary text-white text-xs font-bold flex items-center justify-center">
                                     {unreadCount}
                                   </span>
