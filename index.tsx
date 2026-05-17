@@ -31,6 +31,11 @@ const FACEBOOK_URL = "https://www.facebook.com/share/p/1aAk2CJBt8/";
 
 type SpaceSessionRole = 'customer' | 'staff' | null;
 
+const isGenericSpaceName = (name?: string | null) => {
+  const trimmed = (name || '').trim();
+  return !trimmed || trimmed === 'Asteria Space user';
+};
+
 const getStoredSpaceRole = () => window.localStorage.getItem('asteriaCurrentRole') as SpaceSessionRole;
 
 const clearStoredSpaceAccount = () => {
@@ -152,7 +157,7 @@ const Hero = () => (
               <div>
                 <div className="font-bold text-asteria-dark mb-1">IG帳號暫停通知</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  如果你係 Google 搜尋 asteria.crystal.tarot、Asteria IG 香港、asteria ig 香港 或 Asteria Tarot 香港而搵到呢度，呢個就係我地官方網站。我地 Instagram 主帳及 backup 帳號暫時未能使用，如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
+                  我地 Instagram 主帳及 backup 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
@@ -1474,9 +1479,10 @@ const SpacePortalPage = () => {
         updatedAt: entry.updated_at
       }));
       const profile = space.profile;
+      const customerName = profile?.self_name || (!isGenericSpaceName(profile?.display_name) ? profile?.display_name : '') || space.account.label || space.account.username;
       const nextCustomer: PortalCustomer = {
         id: space.account.user_id,
-        name: profile?.display_name || space.account.label,
+        name: customerName,
         phone: profile?.phone_number || '',
         accountUsername: space.account.username,
         whatsapp: profile?.whatsapp || '',
@@ -1728,8 +1734,13 @@ const SpacePortalPage = () => {
 
   const saveProfile = async () => {
     if (!activeCustomer) return;
+    const nextDisplayName = profileName.trim()
+      || profileSelfName.trim()
+      || (!isGenericSpaceName(activeCustomer.name) ? activeCustomer.name : '')
+      || activeCustomer.accountUsername
+      || 'Asteria 客人';
     const nextProfile = {
-      display_name: profileName.trim() || activeCustomer.name || 'Asteria Space user',
+      display_name: nextDisplayName,
       self_name: profileSelfName.trim(),
       phone_number: profilePhone.trim(),
       whatsapp: profileWhatsapp.trim(),
@@ -1749,7 +1760,7 @@ const SpacePortalPage = () => {
 
     updateCustomer((customer) => ({
       ...customer,
-      name: nextProfile.display_name,
+      name: nextProfile.self_name || nextProfile.display_name,
       phone: nextProfile.phone_number,
       whatsapp: nextProfile.whatsapp,
       igHandle: nextProfile.ig_handle,
@@ -2104,7 +2115,7 @@ const SpacePortalPage = () => {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <div className="text-xs font-bold text-stone-400 mb-1">Login</div>
-              <h2 className="text-2xl font-bold text-asteria-dark">{activeCustomer?.name || 'Asteria Space user'}</h2>
+              <h2 className="text-2xl font-bold text-asteria-dark">{activeCustomer?.name || activeCustomer?.accountUsername || 'Asteria 客人'}</h2>
               <p className="text-sm text-stone-500 mt-1">你已登入 Asteria Space。</p>
             </div>
             <span className="bg-asteria-yellow/35 text-asteria-dark rounded-xl px-5 py-3 font-bold flex items-center justify-center gap-2">
@@ -2409,9 +2420,9 @@ const AdminInboxPage = () => {
         const profile = item.profile;
         const account = item.account;
         const profileDisplayName = (profile?.display_name || '').trim();
-        const displayName = profileDisplayName && profileDisplayName !== 'Asteria Space user'
+        const displayName = profile?.self_name || (!isGenericSpaceName(profileDisplayName)
           ? profileDisplayName
-          : account?.label || account?.username || 'Asteria 客人';
+          : account?.label || account?.username || 'Asteria 客人');
         return {
           id: item.thread.customer_id,
           threadId: item.thread.id,
