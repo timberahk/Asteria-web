@@ -133,14 +133,14 @@ const Hero = () => (
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-asteria-dark leading-tight tracking-tight">
-            Asteria
+            Asteria Crystal Tarot
             <span className="block text-2xl md:text-4xl mt-3 text-asteria-primary">
               你的感情由你話事！
             </span>
           </h1>
 
           <p className="text-lg text-stone-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            所有感情煩惱一律建議搵我地。復合、斷聯、曖昧、第三者與關係卡住的個案，
+            asteria.crystal.tarot 香港官方網站。所有感情煩惱一律建議搵我地。復合、斷聯、曖昧、第三者與關係卡住的個案，
             我們會配合塔羅分析與儀式方向，幫你看清下一步。
           </p>
 
@@ -152,7 +152,7 @@ const Hero = () => (
               <div>
                 <div className="font-bold text-asteria-dark mb-1">IG帳號暫停通知</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  我地 Instagram 主帳及 backup 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
+                  如果你係 Google 搜尋 asteria.crystal.tarot、Asteria IG 香港、asteria ig 香港 或 Asteria Tarot 香港而搵到呢度，呢個就係我地官方網站。我地 Instagram 主帳及 backup 帳號暫時未能使用，如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href={WHATSAPP_URL} target="_blank" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all">
