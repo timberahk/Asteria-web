@@ -2268,7 +2268,11 @@ const SpacePortalPage = () => {
                 </div>
               </div>
             ) : (
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-2 gap-3">
+              <div className="bg-[#FFF8EC] rounded-xl p-4">
+                <div className="text-xs text-stone-400 mb-1">自己名 / 真名</div>
+                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.targetName || '未填'}</div>
+              </div>
               <div className="bg-[#FFF8EC] rounded-xl p-4">
                 <div className="text-xs text-stone-400 mb-1">Phone number</div>
                 <div className="font-bold text-asteria-dark break-all">{activeCustomer?.phone || '未登記'}</div>
@@ -2288,10 +2292,6 @@ const SpacePortalPage = () => {
               <div className="bg-[#FFF8EC] rounded-xl p-4">
                 <div className="text-xs text-stone-400 mb-1">Email</div>
                 <div className="font-bold text-asteria-dark break-all">{activeCustomer?.email || '未登記'}</div>
-              </div>
-              <div className="bg-[#FFF8EC] rounded-xl p-4">
-                <div className="text-xs text-stone-400 mb-1">自己名</div>
-                <div className="font-bold text-asteria-dark break-all">{activeCustomer?.targetName || '未填'}</div>
               </div>
             </div>
             )}
