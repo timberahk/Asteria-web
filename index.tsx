@@ -1861,12 +1861,30 @@ const SpacePortalPage = () => {
               Account 已由 Asteria 開好。請填低常用聯絡方法，之後就算 IG / WhatsApp 其中一邊失效，我哋都搵得返你。
             </p>
             <div className="grid gap-4">
-              <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
-              <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Phone number" />
-              <input value={profileWhatsapp} onChange={(event) => setProfileWhatsapp(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp" />
-              <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram" />
-              <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
-              <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">自己名 / 真名</span>
+                <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Phone number</span>
+                <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Phone number" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">WhatsApp</span>
+                <input value={profileWhatsapp} onChange={(event) => setProfileWhatsapp(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Telegram</span>
+                <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Instagram username</span>
+                <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Email</span>
+                <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+              </label>
             </div>
             <button onClick={saveProfile} className="btn-primary w-full rounded-xl px-6 py-3 font-bold mt-6">儲存並進入 Space</button>
             {profileMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{profileMessage}</div>}
@@ -1907,8 +1925,8 @@ const SpacePortalPage = () => {
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
-                        {message.text && <div className="text-sm leading-relaxed">{message.text}</div>}
+                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                        {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
                             {message.images.map((image, index) => (
@@ -1962,12 +1980,30 @@ const SpacePortalPage = () => {
             <h1 className="text-3xl font-bold text-asteria-dark mb-3">修改你的聯絡資料</h1>
             <p className="text-stone-500 leading-relaxed mb-6">呢度只係更新資料，不會跳返登入頁。</p>
             <div className="grid gap-4">
-              <input value={profileName} onChange={(event) => setProfileName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="你的稱呼" />
-              <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp 電話" />
-              <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
-              <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram username / phone" />
-              <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
-              <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">你的稱呼</span>
+                <input value={profileName} onChange={(event) => setProfileName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="你的稱呼" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">WhatsApp 電話</span>
+                <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp 電話" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Instagram username</span>
+                <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Telegram username / phone</span>
+                <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram username / phone" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">Email</span>
+                <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+              </label>
+              <label className="grid gap-1">
+                <span className="text-xs font-bold text-stone-500">自己名 / 真名</span>
+                <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+              </label>
             </div>
             <button onClick={saveProfile} className="btn-primary w-full rounded-xl px-6 py-3 font-bold mt-6">儲存資料</button>
             {profileMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{profileMessage}</div>}
@@ -2037,12 +2073,30 @@ const SpacePortalPage = () => {
             {isEditingProfile ? (
               <div className="grid gap-3">
                 <div className="grid md:grid-cols-2 gap-3">
-                  <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
-                  <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Phone number" />
-                  <input value={profileWhatsapp} onChange={(event) => setProfileWhatsapp(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp" />
-                  <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram" />
-                  <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
-                  <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+                  <label className="grid gap-1">
+                    <span className="text-xs font-bold text-stone-500">自己名 / 真名</span>
+                    <input value={profileSelfName} onChange={(event) => setProfileSelfName(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="自己名 / 真名" />
+                  </label>
+                  <label className="grid gap-1">
+                    <span className="text-xs font-bold text-stone-500">Phone number</span>
+                    <input value={profilePhone} onChange={(event) => setProfilePhone(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Phone number" />
+                  </label>
+                  <label className="grid gap-1">
+                    <span className="text-xs font-bold text-stone-500">WhatsApp</span>
+                    <input value={profileWhatsapp} onChange={(event) => setProfileWhatsapp(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="WhatsApp" />
+                  </label>
+                  <label className="grid gap-1">
+                    <span className="text-xs font-bold text-stone-500">Telegram</span>
+                    <input value={profileTelegram} onChange={(event) => setProfileTelegram(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Telegram" />
+                  </label>
+                  <label className="grid gap-1">
+                    <span className="text-xs font-bold text-stone-500">Instagram username</span>
+                    <input value={profileIg} onChange={(event) => setProfileIg(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Instagram username" />
+                  </label>
+                  <label className="grid gap-1">
+                    <span className="text-xs font-bold text-stone-500">Email</span>
+                    <input value={profileEmail} onChange={(event) => setProfileEmail(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="Email" />
+                  </label>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <div className="text-sm text-stone-400">{profileMessage || '修改完記得儲存。'}</div>
@@ -2118,8 +2172,8 @@ const SpacePortalPage = () => {
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div key={message.id} className={`flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
-                        {message.text && <div className="text-sm leading-relaxed">{message.text}</div>}
+                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                        {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
                             {message.images.map((image, index) => (
@@ -2373,6 +2427,7 @@ const AdminInboxPage = () => {
   const [newAccountRole, setNewAccountRole] = useState<'customer' | 'staff'>('customer');
   const [resetPasswords, setResetPasswords] = useState<Record<string, string>>({});
   const [accountSearch, setAccountSearch] = useState('');
+  const [inboxSearch, setInboxSearch] = useState('');
   const [accountMessage, setAccountMessage] = useState('');
   const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
     try {
@@ -2386,6 +2441,20 @@ const AdminInboxPage = () => {
     const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
     const bTime = b.messages?.[b.messages.length - 1]?.createdAt || b.entries[b.entries.length - 1]?.createdAt || '';
     return bTime.localeCompare(aTime);
+  });
+  const filteredInboxCustomers = sortedCustomers.filter((customer) => {
+    const query = inboxSearch.trim().toLowerCase();
+    if (!query) return true;
+    const searchable = [
+      customer.name,
+      customer.phone,
+      customer.whatsapp,
+      customer.igHandle,
+      customer.telegramHandle,
+      customer.email,
+      ...(customer.messages || []).map((message) => message.text)
+    ].filter(Boolean).join(' ').toLowerCase();
+    return searchable.includes(query);
   });
   const filteredAccounts = accounts.filter((account) => {
     const query = accountSearch.trim().toLowerCase();
@@ -2697,15 +2766,26 @@ const AdminInboxPage = () => {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <div className="font-bold text-asteria-dark text-lg">所有對話</div>
-                  <div className="text-xs text-stone-400 mt-1">{customers.length} 個客人</div>
+                  <div className="text-xs text-stone-400 mt-1">{inboxSearch.trim() ? `${filteredInboxCustomers.length} / ${customers.length}` : customers.length} 個客人</div>
                 </div>
                 <div className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
                   {customers.reduce((total, customer) => total + getUnreadCount(customer), 0)} 未讀
                 </div>
               </div>
+              <div className="relative mt-4">
+                <i className="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+                <input
+                  value={inboxSearch}
+                  onChange={(event) => setInboxSearch(event.target.value)}
+                  className="w-full border border-asteria-cream rounded-xl pl-10 pr-4 py-3 outline-none focus:border-asteria-primary bg-white"
+                  placeholder="Search 客人名 / 聯絡方法 / 對話內容"
+                />
+              </div>
             </div>
             <div className="max-h-[calc(100vh-270px)] overflow-y-auto">
-              {sortedCustomers.map((customer) => {
+              {filteredInboxCustomers.length === 0 ? (
+                <div className="p-8 text-center text-sm text-stone-500">搵唔到相關對話。</div>
+              ) : filteredInboxCustomers.map((customer) => {
                 const lastMessage = customer.messages?.[customer.messages.length - 1];
                 const unreadCount = getUnreadCount(customer);
                 return (
@@ -2763,9 +2843,9 @@ const AdminInboxPage = () => {
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div key={message.id} className={`flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[78%] rounded-2xl px-4 py-3 shadow-sm ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                      <div className={`max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
-                        {message.text && <div className="text-sm leading-relaxed">{message.text}</div>}
+                        {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
                             {message.images.map((image, index) => (
