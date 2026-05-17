@@ -2368,10 +2368,14 @@ const AdminInboxPage = () => {
       const nextCustomers: PortalCustomer[] = inbox.map((item) => {
         const profile = item.profile;
         const account = item.account;
+        const profileDisplayName = (profile?.display_name || '').trim();
+        const displayName = profileDisplayName && profileDisplayName !== 'Asteria Space user'
+          ? profileDisplayName
+          : account?.label || account?.username || 'Asteria 客人';
         return {
           id: item.thread.customer_id,
           threadId: item.thread.id,
-          name: profile?.display_name || account?.label || account?.username || 'Asteria 客人',
+          name: displayName,
           phone: profile?.phone_number || '',
           whatsapp: profile?.whatsapp || '',
           igHandle: profile?.ig_handle || '',
