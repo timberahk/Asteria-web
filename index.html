@@ -184,6 +184,20 @@
       min-height: 100%;
     }
 
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+      min-width: 0;
+      max-width: 100%;
+    }
+
     .overflow-y-auto {
       overscroll-behavior: auto;
       -webkit-overflow-scrolling: touch;

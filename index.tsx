@@ -1326,15 +1326,15 @@ const ChatDateJump = ({
   onChange: (value: string) => void;
   onJump: () => void;
 }) => (
-  <div className="bg-white/80 border-b border-asteria-cream/70 px-4 py-2 flex flex-col sm:flex-row sm:items-center gap-2">
+  <div className="bg-white/80 border-b border-asteria-cream/70 px-3 sm:px-4 py-2 flex flex-col sm:flex-row sm:items-center gap-2 min-w-0">
     <div className="text-xs font-bold text-stone-500 whitespace-nowrap">跳去日期</div>
     <input
       type="date"
       value={value}
       onChange={(event) => onChange(event.target.value)}
-      className="border border-asteria-cream rounded-xl px-3 py-1.5 outline-none focus:border-asteria-primary bg-white text-sm"
+      className="w-full sm:w-auto min-w-0 border border-asteria-cream rounded-xl px-3 py-1.5 outline-none focus:border-asteria-primary bg-white text-sm"
     />
-    <button onClick={onJump} className="bg-asteria-yellow/35 text-asteria-dark px-4 py-1.5 rounded-xl text-sm font-bold">
+    <button onClick={onJump} className="w-full sm:w-auto bg-asteria-yellow/35 text-asteria-dark px-4 py-1.5 rounded-xl text-sm font-bold">
       跳去當日
     </button>
     {message && <div className="text-xs font-bold text-asteria-primary">{message}</div>}
@@ -1411,19 +1411,19 @@ const RegisterPage = () => {
 
   return (
     <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
-      <div className="container mx-auto px-6 max-w-3xl">
+      <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
         <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
           <i className="fa-solid fa-arrow-left"></i> 返回首頁
         </a>
 
-        <div className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
+        <div className="bg-white border border-asteria-cream/70 rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm overflow-hidden">
           <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
           <h1 className="text-3xl md:text-4xl font-bold text-asteria-dark mb-3">登入你的私人空間</h1>
           <p className="text-stone-500 leading-relaxed mb-6">
             查看訊息、上傳截圖，同 Asteria 保持聯絡。
           </p>
 
-          <div className="bg-[#FFF8EC] border border-asteria-cream rounded-2xl p-5 mb-6">
+          <div className="bg-[#FFF8EC] border border-asteria-cream rounded-2xl p-4 sm:p-5 mb-6 overflow-hidden">
             <div className="flex items-start gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-white text-asteria-primary flex items-center justify-center shrink-0 shadow-sm">
                 <i className="fa-solid fa-lock"></i>
@@ -1435,8 +1435,8 @@ const RegisterPage = () => {
             </div>
 
             <div className="grid gap-3">
-              <input value={loginUsername} onChange={(event) => setLoginUsername(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Account 名" />
-              <input type="password" value={loginPassword} onChange={(event) => setLoginPassword(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') handleSystemLogin(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="密碼" />
+              <input value={loginUsername} onChange={(event) => setLoginUsername(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Account 名" />
+              <input type="password" value={loginPassword} onChange={(event) => setLoginPassword(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') handleSystemLogin(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="密碼" />
               <div className="text-xs text-stone-400">密碼最少 8 個字。如需開通或 reset，請聯絡 Asteria。</div>
               {loginError && <div className="text-sm font-bold text-red-500">{loginError}</div>}
               <button onClick={handleSystemLogin} className="btn-primary rounded-xl px-5 py-3 font-bold">登入</button>
@@ -1898,8 +1898,8 @@ const SpacePortalPage = () => {
     return (
       <main className="pt-36 md:pt-28 pb-10 bg-[#FFFDF8] min-h-screen">
         <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
-        <div className="container mx-auto px-4 max-w-5xl">
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[calc(100vh-9rem)] min-h-[700px] max-h-[980px]">
+        <div className="container mx-auto px-3 sm:px-4 max-w-5xl">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[calc(100vh-9rem)] min-h-[640px] sm:min-h-[700px] max-h-[980px] min-w-0">
             <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
@@ -1924,7 +1924,7 @@ const SpacePortalPage = () => {
               onJump={() => jumpCustomerChatDate('customer-full')}
             />
 
-            <div ref={customerChatScrollRef} className="flex-1 min-h-[0] bg-[#FFF8EC] p-5 overflow-y-auto scroll-smooth">
+            <div ref={customerChatScrollRef} className="flex-1 min-h-[0] bg-[#FFF8EC] p-3 sm:p-5 overflow-y-auto scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full min-h-0 flex flex-col items-center justify-center text-center text-stone-500">
                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
@@ -1937,7 +1937,7 @@ const SpacePortalPage = () => {
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div id={chatMessageDomId('customer-full', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                      <div className={`max-w-[88%] sm:max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
@@ -1966,13 +1966,13 @@ const SpacePortalPage = () => {
               </div>
             )}
 
-            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3 shrink-0">
-              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="upload screenshot">
+            <div className="p-3 sm:p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[3rem_minmax(0,1fr)_3rem] gap-2 sm:gap-3 shrink-0 min-w-0">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="upload screenshot">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
               </label>
-              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
-              <button onClick={sendChatMessage} className="btn-primary px-5 py-3 rounded-xl font-bold">
+              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-3 sm:px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
+              <button onClick={sendChatMessage} className="btn-primary w-12 h-12 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
@@ -2330,7 +2330,7 @@ const SpacePortalPage = () => {
               onJump={() => jumpCustomerChatDate('customer-card')}
             />
 
-            <div className="bg-[#FFF8EC] p-5 min-h-[420px] max-h-[560px] overflow-y-auto">
+            <div className="bg-[#FFF8EC] p-3 sm:p-5 min-h-[420px] max-h-[560px] overflow-y-auto">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-[360px] flex flex-col items-center justify-center text-center text-stone-500">
                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
@@ -2343,7 +2343,7 @@ const SpacePortalPage = () => {
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div id={chatMessageDomId('customer-card', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                      <div className={`max-w-[88%] sm:max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
@@ -2372,13 +2372,13 @@ const SpacePortalPage = () => {
               </div>
             )}
 
-            <div className="p-4 md:p-5 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3">
-              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="upload screenshot">
+            <div className="p-3 md:p-5 bg-white border-t border-asteria-cream/70 grid grid-cols-[3rem_minmax(0,1fr)_3rem] gap-2 sm:gap-3 min-w-0">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="upload screenshot">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleImageUpload(event.target.files)} />
               </label>
-              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
-              <button onClick={sendChatMessage} className="btn-primary px-5 py-3 rounded-xl font-bold">
+              <input value={chatText} onChange={(event) => setChatText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendChatMessage(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-3 sm:px-4 py-3 outline-none focus:border-asteria-primary" placeholder="留言 / 補充最近情況..." />
+              <button onClick={sendChatMessage} className="btn-primary w-12 h-12 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
@@ -2894,7 +2894,7 @@ const AdminInboxPage = () => {
             </div>
           </section>
 
-          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-9rem)] min-h-[700px] max-h-[980px]`}>
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-9rem)] min-h-[640px] sm:min-h-[700px] max-h-[980px] min-w-0`}>
             <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
@@ -2939,14 +2939,14 @@ const AdminInboxPage = () => {
               onChange={setStaffChatJumpDate}
               onJump={jumpStaffChatDate}
             />
-            <div ref={staffChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto scroll-smooth">
+            <div ref={staffChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-3 sm:p-5 overflow-y-auto scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full flex items-center justify-center text-sm text-stone-500">未有對話，下面可以開始回覆。</div>
               ) : (
                 <div className="space-y-4">
                   {(activeCustomer?.messages || []).map((message) => (
                     <div id={chatMessageDomId('staff-thread', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
+                      <div className={`max-w-[88%] sm:max-w-[78%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'admin' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         <div className="text-xs font-bold mb-1">{message.sender === 'admin' ? 'Asteria' : activeCustomer?.name}</div>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
                         {message.images && message.images.length > 0 && (
@@ -2974,13 +2974,13 @@ const AdminInboxPage = () => {
               </div>
             )}
 
-            <div className="p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[auto_1fr_auto] gap-3 shrink-0">
-              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all" title="send image">
+            <div className="p-3 sm:p-4 bg-white border-t border-asteria-cream/70 grid grid-cols-[3rem_minmax(0,1fr)_3rem] gap-2 sm:gap-3 shrink-0 min-w-0">
+              <label className="inline-flex items-center justify-center border border-asteria-cream bg-white text-asteria-primary w-12 h-12 rounded-xl font-bold cursor-pointer hover:border-asteria-primary transition-all shrink-0" title="send image">
                 <i className="fa-regular fa-images"></i>
                 <input type="file" accept="image/*" multiple className="hidden" onChange={(event) => handleReplyImages(event.target.files)} />
               </label>
-              <input value={replyText} onChange={(event) => setReplyText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendReply(); }} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="輸入回覆..." />
-              <button onClick={sendReply} className="btn-primary px-5 py-3 rounded-xl font-bold">
+              <input value={replyText} onChange={(event) => setReplyText(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') sendReply(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-3 sm:px-4 py-3 outline-none focus:border-asteria-primary" placeholder="輸入回覆..." />
+              <button onClick={sendReply} className="btn-primary w-12 h-12 px-0 rounded-xl font-bold shrink-0 flex items-center justify-center">
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
