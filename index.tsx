@@ -27,7 +27,7 @@ import {
 const LOGO_SRC = "/asteria-logo.jpg";
 const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "https://t.me/asteriahongkong";
-const FACEBOOK_URL = "https://www.facebook.com/share/p/1aAk2CJBt8/";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
 
 type SpaceSessionRole = 'customer' | 'staff' | null;
 
