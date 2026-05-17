@@ -1071,6 +1071,52 @@ type PortalCustomer = {
   messages?: ChatMessage[];
 };
 
+const ImageViewer = ({
+  images,
+  index,
+  onSelect,
+  onClose
+}: {
+  images: string[];
+  index: number;
+  onSelect: (index: number) => void;
+  onClose: () => void;
+}) => {
+  if (images.length === 0) return null;
+  const safeIndex = Math.min(Math.max(index, 0), images.length - 1);
+
+  return (
+    <div className="fixed inset-0 z-[80] bg-black/80 backdrop-blur-sm p-4 md:p-6 flex flex-col" role="dialog" aria-modal="true">
+      <div className="flex items-center justify-between gap-3 text-white mb-4">
+        <div className="text-sm font-bold">{safeIndex + 1} / {images.length}</div>
+        <button onClick={onClose} className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center" aria-label="close image viewer">
+          <i className="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div className="flex-1 min-h-0 flex items-center justify-center">
+        <button onClick={() => onSelect((safeIndex - 1 + images.length) % images.length)} className="hidden md:flex w-11 h-11 rounded-full bg-white/15 hover:bg-white/25 text-white items-center justify-center mr-4" aria-label="previous image">
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+        <img src={images[safeIndex]} className="max-w-full max-h-full object-contain rounded-xl shadow-2xl" alt="chat attachment enlarged" />
+        <button onClick={() => onSelect((safeIndex + 1) % images.length)} className="hidden md:flex w-11 h-11 rounded-full bg-white/15 hover:bg-white/25 text-white items-center justify-center ml-4" aria-label="next image">
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      {images.length > 1 && (
+        <div className="mt-4 grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 max-h-28 overflow-y-auto">
+          {images.map((image, imageIndex) => (
+            <button key={`${image}-${imageIndex}`} onClick={() => onSelect(imageIndex)} className={`aspect-square rounded-lg overflow-hidden border-2 ${imageIndex === safeIndex ? 'border-white' : 'border-white/20'}`}>
+              <img src={image} className="w-full h-full object-cover" alt="chat attachment thumbnail" />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const TEACHING_TYPES = [
   '復合',
   '斷聯',
@@ -1699,7 +1745,10 @@ const SpacePortalPage = () => {
   const [newPassword, setNewPassword] = useState('');
   const [passwordMessage, setPasswordMessage] = useState('');
   const [isChangingPassword, setIsChangingPassword] = useState(false);
+  const [viewerImages, setViewerImages] = useState<string[]>([]);
+  const [viewerIndex, setViewerIndex] = useState(0);
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
+  const activeChatImages = (activeCustomer?.messages || []).flatMap((message) => message.images || []);
   const [profileName, setProfileName] = useState(activeCustomer?.name || '');
   const [profilePhone, setProfilePhone] = useState(activeCustomer?.phone || '');
   const [profileWhatsapp, setProfileWhatsapp] = useState(activeCustomer?.whatsapp || activeCustomer?.phone || '');
@@ -1710,6 +1759,12 @@ const SpacePortalPage = () => {
   const [profileMessage, setProfileMessage] = useState('');
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const needsFirstProfile = !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.email && !activeCustomer?.targetName;
+
+  const openChatImage = (image: string) => {
+    const imageIndex = activeChatImages.indexOf(image);
+    setViewerImages(activeChatImages.length ? activeChatImages : [image]);
+    setViewerIndex(imageIndex >= 0 ? imageIndex : 0);
+  };
 
   useEffect(() => {
     if (isBackendConfigured) return;
@@ -1918,6 +1973,7 @@ const SpacePortalPage = () => {
   if (spaceView === 'chat') {
     return (
       <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen flex flex-col">
+        <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
         <div className="container mx-auto px-4 max-w-4xl flex-1 flex flex-col pb-4">
           <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col min-h-[calc(100vh-230px)]">
             <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
@@ -1929,7 +1985,13 @@ const SpacePortalPage = () => {
                 <div className="text-xs text-stone-400">{(activeCustomer?.messages || []).length} 則訊息 · 可 upload 對話截圖</div>
                 {spaceMessage && <div className="text-xs font-bold text-red-500 mt-1">{spaceMessage}</div>}
               </div>
-              <span className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl">Asteria Space</span>
+              <button
+                onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
+                disabled={activeChatImages.length === 0}
+                className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
+              >
+                <i className="fa-regular fa-images mr-1"></i> 所有圖片
+              </button>
             </div>
 
             <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
@@ -1950,7 +2012,9 @@ const SpacePortalPage = () => {
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
                             {message.images.map((image, index) => (
-                              <img key={`${message.id}-space-chat-full-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat upload" />
+                              <button key={`${message.id}-space-chat-full-${index}`} onClick={() => openChatImage(image)} className="aspect-square w-full rounded-xl overflow-hidden border border-white/40 cursor-zoom-in">
+                                <img src={image} className="w-full h-full object-cover" alt="chat upload" />
+                              </button>
                             ))}
                           </div>
                         )}
@@ -2054,7 +2118,7 @@ const SpacePortalPage = () => {
             <div>
               <div className="text-xs font-bold text-stone-400 mb-1">Login</div>
               <h2 className="text-2xl font-bold text-asteria-dark">{activeCustomer?.name || 'Asteria Space user'}</h2>
-              <p className="text-sm text-stone-500 mt-1">系統登入已開啟，客人只會見到自己的資料。</p>
+              <p className="text-sm text-stone-500 mt-1">你已登入 Asteria Space。</p>
             </div>
             <span className="bg-asteria-yellow/35 text-asteria-dark rounded-xl px-5 py-3 font-bold flex items-center justify-center gap-2">
               <i className="fa-solid fa-circle-check text-asteria-primary"></i> 已登入
@@ -2176,9 +2240,13 @@ const SpacePortalPage = () => {
                 <div className="text-sm text-stone-400">Message Thread</div>
                 <h2 className="text-2xl font-bold text-asteria-dark">Inbox</h2>
               </div>
-              <span className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">
-                {(activeCustomer?.messages || []).length} 則訊息
-              </span>
+              <button
+                onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
+                disabled={activeChatImages.length === 0}
+                className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <i className="fa-regular fa-images mr-1"></i> 所有圖片 · {activeChatImages.length}
+              </button>
             </div>
 
             <div className="bg-[#FFF8EC] p-5 min-h-[420px] max-h-[560px] overflow-y-auto">
@@ -2199,7 +2267,9 @@ const SpacePortalPage = () => {
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
                             {message.images.map((image, index) => (
-                              <img key={`${message.id}-space-chat-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat upload" />
+                              <button key={`${message.id}-space-chat-${index}`} onClick={() => openChatImage(image)} className="aspect-square w-full rounded-xl overflow-hidden border border-white/40 cursor-zoom-in">
+                                <img src={image} className="w-full h-full object-cover" alt="chat upload" />
+                              </button>
                             ))}
                           </div>
                         )}
@@ -2277,7 +2347,7 @@ const AdminPage = () => {
         <div className="mb-10">
           <div className="text-sm font-bold text-asteria-primary mb-2">Admin 後台</div>
           <h1 className="text-4xl font-bold text-asteria-dark mb-3">客服跟進 Dashboard</h1>
-          <p className="text-stone-500">呢版係後台原型：之後接真 database，就可以睇晒客人 update、AI summary、好評 tag 推送。</p>
+          <p className="text-stone-500">客服可以集中查看客人資料、訊息及跟進摘要。</p>
           <a href="#inbox" className="mt-5 inline-flex items-center gap-2 bg-asteria-primary text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all">
             <i className="fa-solid fa-comments"></i> 進入客服 Inbox
           </a>
@@ -2451,6 +2521,8 @@ const AdminInboxPage = () => {
   const [accountSearch, setAccountSearch] = useState('');
   const [inboxSearch, setInboxSearch] = useState('');
   const [accountMessage, setAccountMessage] = useState('');
+  const [viewerImages, setViewerImages] = useState<string[]>([]);
+  const [viewerIndex, setViewerIndex] = useState(0);
   const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
     try {
       return JSON.parse(window.localStorage.getItem('asteriaStaffReadMarkers') || '{}') as Record<string, string>;
@@ -2459,6 +2531,12 @@ const AdminInboxPage = () => {
     }
   });
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
+  const activeChatImages = (activeCustomer?.messages || []).flatMap((message) => message.images || []);
+  const openChatImage = (image: string) => {
+    const imageIndex = activeChatImages.indexOf(image);
+    setViewerImages(activeChatImages.length ? activeChatImages : [image]);
+    setViewerIndex(imageIndex >= 0 ? imageIndex : 0);
+  };
   const sortedCustomers = [...customers].sort((a, b) => {
     const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
     const bTime = b.messages?.[b.messages.length - 1]?.createdAt || b.entries[b.entries.length - 1]?.createdAt || '';
@@ -2723,6 +2801,7 @@ const AdminInboxPage = () => {
 
   return (
     <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen">
+      <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
           <div>
@@ -2866,7 +2945,13 @@ const AdminInboxPage = () => {
                   WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
                 </div>
               </div>
-              <span className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl">Asteria Space</span>
+              <button
+                onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
+                disabled={activeChatImages.length === 0}
+                className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
+              >
+                <i className="fa-regular fa-images mr-1"></i> 所有圖片
+              </button>
             </div>
 
             <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
@@ -2882,7 +2967,9 @@ const AdminInboxPage = () => {
                         {message.images && message.images.length > 0 && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
                             {message.images.map((image, index) => (
-                              <img key={`${message.id}-inbox-${index}`} src={image} className="aspect-square w-full rounded-xl object-cover border border-white/40" alt="chat attachment" />
+                              <button key={`${message.id}-inbox-${index}`} onClick={() => openChatImage(image)} className="aspect-square w-full rounded-xl overflow-hidden border border-white/40 cursor-zoom-in">
+                                <img src={image} className="w-full h-full object-cover" alt="chat attachment" />
+                              </button>
                             ))}
                           </div>
                         )}
