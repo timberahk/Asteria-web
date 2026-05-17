@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   changeMyPassword,
@@ -1285,6 +1285,13 @@ const scrollToChatDate = (scope: string, messages: ChatMessage[], date: string) 
   return true;
 };
 
+const scrollChatToBottom = (element: HTMLDivElement | null, behavior: ScrollBehavior = 'auto') => {
+  if (!element) return;
+  window.requestAnimationFrame(() => {
+    element.scrollTo({ top: element.scrollHeight, behavior });
+  });
+};
+
 const ChatDateJump = ({
   value,
   message,
@@ -1466,6 +1473,7 @@ const SpacePortalPage = () => {
   const [profileSelfName, setProfileSelfName] = useState(activeCustomer?.targetName || '');
   const [profileMessage, setProfileMessage] = useState('');
   const [isEditingProfile, setIsEditingProfile] = useState(false);
+  const customerChatScrollRef = useRef<HTMLDivElement | null>(null);
   const needsFirstProfile = !isSpaceLoading && Boolean(activeCustomer) && !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.targetName;
 
   const openChatImage = (image: string) => {
@@ -1483,6 +1491,11 @@ const SpacePortalPage = () => {
     if (isBackendConfigured) return;
     savePortalCustomers(customers);
   }, [customers]);
+
+  useEffect(() => {
+    if (spaceView !== 'chat') return;
+    scrollChatToBottom(customerChatScrollRef.current);
+  }, [spaceView, activeCustomer?.id, activeCustomer?.messages?.length]);
 
   const loadBackendSpace = async () => {
     if (!isBackendConfigured) return;
@@ -1863,7 +1876,7 @@ const SpacePortalPage = () => {
       <main className="pt-56 md:pt-40 bg-[#FFFDF8] min-h-screen flex flex-col">
         <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
         <div className="container mx-auto px-4 max-w-4xl flex-1 flex flex-col pb-4">
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col min-h-[calc(100vh-230px)]">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[calc(100vh-238px)] min-h-[560px]">
             <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
               <div className="min-w-0">
                 <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
@@ -1889,7 +1902,7 @@ const SpacePortalPage = () => {
               onJump={() => jumpCustomerChatDate('customer-full')}
             />
 
-            <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+            <div ref={customerChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full min-h-[420px] flex flex-col items-center justify-center text-center text-stone-500">
                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
@@ -2378,6 +2391,7 @@ const AdminInboxPage = () => {
   const [viewerIndex, setViewerIndex] = useState(0);
   const [staffChatJumpDate, setStaffChatJumpDate] = useState(toDateInputValue());
   const [staffChatJumpMessage, setStaffChatJumpMessage] = useState('');
+  const staffChatScrollRef = useRef<HTMLDivElement | null>(null);
   const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
     try {
       return JSON.parse(window.localStorage.getItem('asteriaStaffReadMarkers') || '{}') as Record<string, string>;
@@ -2396,6 +2410,11 @@ const AdminInboxPage = () => {
     const ok = scrollToChatDate('staff-thread', activeCustomer?.messages || [], staffChatJumpDate);
     setStaffChatJumpMessage(ok ? `已跳到 ${formatDisplayDate(staffChatJumpDate)}` : `當日未有訊息：${formatDisplayDate(staffChatJumpDate)}`);
   };
+
+  useEffect(() => {
+    if (inboxView !== 'thread' || staffThreadPanel !== 'chat') return;
+    scrollChatToBottom(staffChatScrollRef.current);
+  }, [inboxView, staffThreadPanel, activeCustomer?.id, activeCustomer?.messages?.length]);
   const sortedCustomers = [...customers].sort((a, b) => {
     const aTime = a.messages?.[a.messages.length - 1]?.createdAt || a.entries[a.entries.length - 1]?.createdAt || '';
     const bTime = b.messages?.[b.messages.length - 1]?.createdAt || b.entries[b.entries.length - 1]?.createdAt || '';
@@ -2833,7 +2852,7 @@ const AdminInboxPage = () => {
             </div>
           </section>
 
-          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col min-h-[calc(100vh-230px)]`}>
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-230px)] min-h-[560px]`}>
             <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4">
               <div className="min-w-0">
                 <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
@@ -2878,7 +2897,7 @@ const AdminInboxPage = () => {
               onChange={setStaffChatJumpDate}
               onJump={jumpStaffChatDate}
             />
-            <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+            <div ref={staffChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full flex items-center justify-center text-sm text-stone-500">未有對話，下面可以開始回覆。</div>
               ) : (
