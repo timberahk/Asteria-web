@@ -97,8 +97,16 @@ const getRoutePage = (): AppPage => {
 
 const Navbar = () => {
   const [role, setRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
+  const [showNotice, setShowNotice] = useState(() => window.localStorage.getItem('asteriaHideTopNotice') !== '1');
   const spaceHref = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
   const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
+  const toggleNotice = () => {
+    setShowNotice((current) => {
+      const next = !current;
+      window.localStorage.setItem('asteriaHideTopNotice', next ? '0' : '1');
+      return next;
+    });
+  };
 
   useEffect(() => {
     const syncRole = () => setRole(getStoredSpaceRole());
@@ -134,11 +142,15 @@ const Navbar = () => {
               登出
             </button>
           )}
+          <button onClick={toggleNotice} className="border border-asteria-cream bg-white text-stone-500 px-3 py-1.5 rounded-full text-xs font-bold hover:text-asteria-primary transition-all hidden sm:inline-flex">
+            {showNotice ? '收起公告' : '顯示公告'}
+          </button>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden sm:flex items-center gap-1">
             <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
           </a>
         </div>
       </div>
+      {showNotice && (
       <div className="bg-asteria-dark text-white">
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
           <span className="font-bold whitespace-nowrap">IG帳號暫停通知</span>
@@ -154,6 +166,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      )}
     </nav>
   );
 };
@@ -1312,15 +1325,15 @@ const ChatDateJump = ({
   onChange: (value: string) => void;
   onJump: () => void;
 }) => (
-  <div className="bg-white/80 border-b border-asteria-cream/70 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2">
+  <div className="bg-white/80 border-b border-asteria-cream/70 px-4 py-2 flex flex-col sm:flex-row sm:items-center gap-2">
     <div className="text-xs font-bold text-stone-500 whitespace-nowrap">跳去日期</div>
     <input
       type="date"
       value={value}
       onChange={(event) => onChange(event.target.value)}
-      className="border border-asteria-cream rounded-xl px-3 py-2 outline-none focus:border-asteria-primary bg-white text-sm"
+      className="border border-asteria-cream rounded-xl px-3 py-1.5 outline-none focus:border-asteria-primary bg-white text-sm"
     />
-    <button onClick={onJump} className="bg-asteria-yellow/35 text-asteria-dark px-4 py-2 rounded-xl text-sm font-bold">
+    <button onClick={onJump} className="bg-asteria-yellow/35 text-asteria-dark px-4 py-1.5 rounded-xl text-sm font-bold">
       跳去當日
     </button>
     {message && <div className="text-xs font-bold text-asteria-primary">{message}</div>}
@@ -1505,18 +1518,6 @@ const SpacePortalPage = () => {
     if (spaceView !== 'chat') return;
     scrollChatToBottom(customerChatScrollRef.current);
   }, [spaceView, activeCustomer?.id, activeCustomer?.messages?.length]);
-
-  useEffect(() => {
-    if (spaceView !== 'chat') return;
-    const originalBodyOverflow = document.body.style.overflow;
-    const originalHtmlOverflow = document.documentElement.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = originalBodyOverflow;
-      document.documentElement.style.overflow = originalHtmlOverflow;
-    };
-  }, [spaceView]);
 
   const loadBackendSpace = async () => {
     if (!isBackendConfigured) return;
@@ -1838,7 +1839,7 @@ const SpacePortalPage = () => {
 
   if (isSpaceLoading) {
     return (
-      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
         <div className="container mx-auto px-6 max-w-3xl">
           <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
             <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
@@ -1852,7 +1853,7 @@ const SpacePortalPage = () => {
 
   if (needsFirstProfile) {
     return (
-      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
         <div className="container mx-auto px-6 max-w-3xl">
           <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
             <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
@@ -1894,17 +1895,16 @@ const SpacePortalPage = () => {
 
   if (spaceView === 'chat') {
     return (
-      <main className="pt-56 md:pt-40 bg-[#FFFDF8] h-screen overflow-hidden flex flex-col">
+      <main className="pt-36 md:pt-28 pb-10 bg-[#FFFDF8] min-h-screen">
         <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
-        <div className="container mx-auto px-4 max-w-4xl flex-1 min-h-0 flex flex-col pb-4 overflow-hidden">
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col flex-1 min-h-0">
-            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col min-h-[760px]">
+            <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回 Space
                 </button>
-                <div className="font-bold text-asteria-dark text-lg">Inbox</div>
-                <div className="text-xs text-stone-400">{(activeCustomer?.messages || []).length} 則訊息 · 可 upload 對話截圖</div>
+                <div className="font-bold text-asteria-dark">Inbox · {(activeCustomer?.messages || []).length} 則訊息</div>
                 {spaceMessage && <div className="text-xs font-bold text-red-500 mt-1">{spaceMessage}</div>}
               </div>
               <button
@@ -1923,7 +1923,7 @@ const SpacePortalPage = () => {
               onJump={() => jumpCustomerChatDate('customer-full')}
             />
 
-            <div ref={customerChatScrollRef} className="flex-1 min-h-0 bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
+            <div ref={customerChatScrollRef} className="flex-1 min-h-[0] bg-[#FFF8EC] p-5 overflow-y-auto overscroll-contain scroll-smooth">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full min-h-0 flex flex-col items-center justify-center text-center text-stone-500">
                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-asteria-primary text-xl mb-4">
@@ -1983,8 +1983,8 @@ const SpacePortalPage = () => {
 
   if (spaceView === 'updates') {
     return (
-      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
-        <div className="container mx-auto px-6 max-w-4xl">
+      <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-5xl">
           <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
           </button>
@@ -2007,7 +2007,7 @@ const SpacePortalPage = () => {
             </div>
           </section>
 
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm min-h-[640px]">
             <h2 className="text-2xl font-bold text-asteria-dark mb-5">Timeline</h2>
             {relationshipEntries.length === 0 ? (
               <div className="border-2 border-dashed border-asteria-yellow/70 rounded-2xl bg-[#FFF8EC] px-5 py-10 text-center text-stone-500">暫時未有關係 update。</div>
@@ -2052,13 +2052,13 @@ const SpacePortalPage = () => {
   if (spaceView === 'journal') {
     const calendarDays = buildCalendarDays(journalMonth);
     return (
-      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-7xl">
           <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
           </button>
           <div className="grid lg:grid-cols-[1fr_340px] gap-6 items-start">
-            <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
+            <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm min-h-[720px]">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
                 <div>
                   <div className="text-sm text-stone-400">Soul Journal</div>
@@ -2068,7 +2068,7 @@ const SpacePortalPage = () => {
               </div>
               <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-2xl p-4 md:p-5">
                 <div className="font-bold text-asteria-dark mb-3">{formatDisplayDate(journalDate)}</div>
-                <textarea value={journalText} onChange={(event) => setJournalText(event.target.value)} className="w-full min-h-[420px] bg-white border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary leading-relaxed" placeholder="今日的情緒、反思、相處上想提醒自己的事..." />
+                <textarea value={journalText} onChange={(event) => setJournalText(event.target.value)} className="w-full min-h-[520px] bg-white border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary leading-relaxed" placeholder="今日的情緒、反思、相處上想提醒自己的事..." />
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
                 <div className="text-sm text-stone-400">{entryMessage || '可以記低當日的心情、反思同相處提醒。'}</div>
@@ -2111,7 +2111,7 @@ const SpacePortalPage = () => {
 
   if (spaceView === 'profile') {
     return (
-      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+      <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
         <div className="container mx-auto px-6 max-w-3xl">
           <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
@@ -2155,7 +2155,7 @@ const SpacePortalPage = () => {
   }
 
   return (
-    <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+    <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
           <div>
@@ -2495,18 +2495,6 @@ const AdminInboxPage = () => {
   const isStaffThreadLayout = adminView === 'inbox' && inboxView === 'thread';
 
   useEffect(() => {
-    if (!isStaffThreadLayout) return;
-    const originalBodyOverflow = document.body.style.overflow;
-    const originalHtmlOverflow = document.documentElement.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = originalBodyOverflow;
-      document.documentElement.style.overflow = originalHtmlOverflow;
-    };
-  }, [isStaffThreadLayout]);
-
-  useEffect(() => {
     savePortalCustomers(customers);
   }, [customers]);
 
@@ -2758,20 +2746,20 @@ const AdminInboxPage = () => {
   };
 
   return (
-    <main className={`pt-56 md:pt-40 bg-[#FFFDF8] ${isStaffThreadLayout ? 'h-screen overflow-hidden flex flex-col' : 'min-h-screen'}`}>
+    <main className="pt-36 md:pt-28 pb-10 bg-[#FFFDF8] min-h-screen">
       <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
-      <div className={`container mx-auto px-4 max-w-7xl ${isStaffThreadLayout ? 'flex-1 min-h-0 flex flex-col overflow-hidden' : ''}`}>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5 shrink-0">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className={`flex flex-col md:flex-row md:items-center md:justify-between gap-4 shrink-0 ${isStaffThreadLayout ? 'mb-3' : 'mb-5'}`}>
           <div>
-            <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-3">
+            <a href="/" onClick={goHome} className={`inline-flex items-center gap-2 text-asteria-primary font-bold ${isStaffThreadLayout ? 'mb-1 text-sm' : 'mb-3'}`}>
               <i className="fa-solid fa-arrow-left"></i> 返回主頁
             </a>
-            <h1 className="text-3xl font-bold text-asteria-dark">客服 Inbox</h1>
+            <h1 className={`${isStaffThreadLayout ? 'text-xl' : 'text-3xl'} font-bold text-asteria-dark`}>客服 Inbox</h1>
           </div>
           <div className="text-sm text-stone-500">Asteria Space</div>
         </div>
 
-        <div className="flex gap-2 mb-5 overflow-x-auto pb-1 shrink-0">
+        <div className={`flex gap-2 overflow-x-auto pb-1 shrink-0 ${isStaffThreadLayout ? 'mb-3' : 'mb-5'}`}>
           <button onClick={() => { setAdminView('inbox'); setInboxView('list'); }} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'inbox' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
             Inbox
           </button>
@@ -2831,7 +2819,7 @@ const AdminInboxPage = () => {
         )}
 
         {adminView === 'inbox' && (
-        <div className={isStaffThreadLayout ? 'flex-1 min-h-0 overflow-hidden' : 'min-h-[calc(100vh-230px)]'}>
+        <div className="min-h-[calc(100vh-180px)]">
           <section className={`${inboxView === 'list' ? 'block' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden`}>
             <div className="p-4 border-b border-asteria-cream/70">
               <div className="flex items-center justify-between gap-3">
@@ -2895,13 +2883,13 @@ const AdminInboxPage = () => {
             </div>
           </section>
 
-          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col ${isStaffThreadLayout ? 'h-full min-h-0' : 'h-[calc(100vh-230px)] min-h-[560px]'}`}>
-            <div className="p-4 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col min-h-[760px]`}>
+            <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回所有對話
                 </button>
-                <div className="font-bold text-asteria-dark text-lg truncate">{activeCustomer?.name}</div>
+                <div className="font-bold text-asteria-dark truncate">{activeCustomer?.name}</div>
                 <div className="text-xs text-stone-400">
                   @{activeCustomer?.accountUsername || '未有 account'} · WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
                 </div>
@@ -2915,7 +2903,7 @@ const AdminInboxPage = () => {
               </button>
             </div>
 
-            <div className="px-4 py-3 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto shrink-0">
+            <div className="px-4 py-2 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto shrink-0">
               {[
                 { value: 'chat', label: '對話', icon: 'fa-regular fa-comments' },
                 { value: 'updates', label: '情況 update', icon: 'fa-solid fa-timeline' },
@@ -3113,7 +3101,7 @@ const Footer = () => (
 );
 
 const SessionCheckingPage = () => (
-  <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+  <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
     <div className="container mx-auto px-6 max-w-3xl">
       <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
         <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Space</div>
