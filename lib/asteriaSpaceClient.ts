@@ -65,10 +65,19 @@ export type SpaceEntry = {
   updated_at: string;
 };
 
+export type SpaceThreadReadState = {
+  thread_id: string;
+  last_read_at: string | null;
+  is_unread: boolean;
+  read_by: string | null;
+  updated_at: string;
+};
+
 export type StaffInboxCustomer = {
   account: SpaceAccount | null;
   profile: SpaceProfile | null;
   thread: SpaceThread;
+  read_state: SpaceThreadReadState | null;
   messages: SpaceMessage[];
   entries: SpaceEntry[];
 };
@@ -223,6 +232,9 @@ export const listStaffInbox = async () => {
   const result = await apiRequest<{ inbox: StaffInboxCustomer[] }>('space-list-inbox', {});
   return result.inbox;
 };
+
+export const markStaffThreadRead = (payload: { threadId: string; mode?: 'read' | 'unread' }) =>
+  apiRequest<{ ok: boolean; read_state: SpaceThreadReadState | null; unsupported?: boolean }>('space-mark-thread-read', payload);
 
 export const createSpaceEntry = async (payload: {
   entryType: 'relationship' | 'journal';

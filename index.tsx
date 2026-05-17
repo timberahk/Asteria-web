@@ -11,6 +11,7 @@ import {
   listStaffAccounts,
   listStaffInbox,
   loginWithUsername,
+  markStaffThreadRead,
   sendMyMessage,
   signOutSpace,
   staffCreateAccount,
@@ -1241,6 +1242,11 @@ type SystemAccount = {
   customerId?: string;
 };
 
+type StaffReadMarker = {
+  lastReadAt: string;
+  isUnread: boolean;
+};
+
 const DEFAULT_ACCOUNTS: SystemAccount[] = [];
 
 const loadPortalCustomers = () => {
@@ -1310,8 +1316,10 @@ const scrollToChatDate = (scope: string, messages: ChatMessage[], date: string) 
 
 const scrollChatToBottom = (element: HTMLDivElement | null, behavior: ScrollBehavior = 'auto') => {
   if (!element) return;
+  const scroll = () => element.scrollTo({ top: element.scrollHeight, behavior });
   window.requestAnimationFrame(() => {
-    element.scrollTo({ top: element.scrollHeight, behavior });
+    scroll();
+    window.setTimeout(scroll, 120);
   });
 };
 
@@ -1519,6 +1527,11 @@ const SpacePortalPage = () => {
     if (spaceView !== 'chat') return;
     scrollChatToBottom(customerChatScrollRef.current);
   }, [spaceView, activeCustomer?.id, activeCustomer?.messages?.length]);
+
+  useEffect(() => {
+    if (spaceView !== 'updates') return;
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }, [spaceView]);
 
   const loadBackendSpace = async () => {
     if (!isBackendConfigured) return;
@@ -2046,6 +2059,13 @@ const SpacePortalPage = () => {
             )}
           </section>
         </div>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed right-4 bottom-5 z-40 w-12 h-12 rounded-full bg-asteria-dark text-white shadow-lg flex items-center justify-center"
+          aria-label="回到頁頂"
+        >
+          <i className="fa-solid fa-arrow-up"></i>
+        </button>
       </main>
     );
   }
@@ -2416,9 +2436,15 @@ const AdminInboxPage = () => {
   const [staffEntryFromDate, setStaffEntryFromDate] = useState('');
   const [staffEntryToDate, setStaffEntryToDate] = useState('');
   const staffChatScrollRef = useRef<HTMLDivElement | null>(null);
-  const [readMarkers, setReadMarkers] = useState<Record<string, string>>(() => {
+  const [readMarkers, setReadMarkers] = useState<Record<string, StaffReadMarker>>(() => {
     try {
-      return JSON.parse(window.localStorage.getItem('asteriaStaffReadMarkers') || '{}') as Record<string, string>;
+      const stored = JSON.parse(window.localStorage.getItem('asteriaStaffReadMarkers') || '{}') as Record<string, string | StaffReadMarker>;
+      return Object.entries(stored).reduce<Record<string, StaffReadMarker>>((map, [customerId, value]) => {
+        map[customerId] = typeof value === 'string'
+          ? { lastReadAt: value, isUnread: false }
+          : { lastReadAt: value.lastReadAt || '', isUnread: Boolean(value.isUnread) };
+        return map;
+      }, {});
     } catch {
       return {};
     }
@@ -2547,6 +2573,15 @@ const AdminInboxPage = () => {
         };
       });
       setCustomers(nextCustomers);
+      setReadMarkers(inbox.reduce<Record<string, StaffReadMarker>>((map, item) => {
+        if (item.read_state) {
+          map[item.thread.customer_id] = {
+            lastReadAt: item.read_state.last_read_at || '',
+            isUnread: Boolean(item.read_state.is_unread)
+          };
+        }
+        return map;
+      }, {}));
       if (nextCustomers[0]) setActiveCustomerId(nextCustomers[0].id);
     } catch (error) {
       setAccountMessage(error instanceof Error ? error.message : 'Staff inbox 暫時載入唔到。');
@@ -2574,11 +2609,46 @@ const AdminInboxPage = () => {
 
   const getUnreadCount = (customer: PortalCustomer) => {
     const messages = customer.messages || [];
+    const readMarker = readMarkers[customer.id];
+    if (readMarker?.isUnread) {
+      return Math.max(1, messages.filter((message) => message.sender === 'customer').length);
+    }
     const lastAdminIndex = [...messages].map((message) => message.sender).lastIndexOf('admin');
     const lastAdminTime = lastAdminIndex >= 0 ? messages[lastAdminIndex].createdAt : '';
-    const lastReadTime = readMarkers[customer.id] || '';
+    const lastReadTime = readMarker?.lastReadAt || '';
     const baseline = [lastAdminTime, lastReadTime].sort().at(-1) || '';
     return messages.filter((message) => message.sender === 'customer' && (!baseline || message.createdAt > baseline)).length;
+  };
+
+  const saveReadMarker = (customerId: string, marker: StaffReadMarker) => {
+    setReadMarkers((current) => {
+      const next = { ...current, [customerId]: marker };
+      window.localStorage.setItem('asteriaStaffReadMarkers', JSON.stringify(next));
+      return next;
+    });
+  };
+
+  const markThreadReadState = async (customer: PortalCustomer, mode: 'read' | 'unread') => {
+    const latestCustomerMessage = [...(customer.messages || [])].reverse().find((message) => message.sender === 'customer');
+    const fallbackMarker = {
+      lastReadAt: mode === 'read' ? (latestCustomerMessage?.createdAt || new Date().toISOString()) : '',
+      isUnread: mode === 'unread'
+    };
+    saveReadMarker(customer.id, fallbackMarker);
+
+    if (!isBackendConfigured || !customer.threadId) return;
+
+    try {
+      const result = await markStaffThreadRead({ threadId: customer.threadId, mode });
+      if (result.read_state) {
+        saveReadMarker(customer.id, {
+          lastReadAt: result.read_state.last_read_at || '',
+          isUnread: Boolean(result.read_state.is_unread)
+        });
+      }
+    } catch (error) {
+      setAccountMessage(error instanceof Error ? error.message : '已讀狀態暫時更新唔到。');
+    }
   };
 
   const openThread = (customerId: string) => {
@@ -2589,14 +2659,7 @@ const AdminInboxPage = () => {
     setReplyImageFiles([]);
     setStaffThreadPanel('chat');
     const customer = customers.find((item) => item.id === customerId);
-    const latestCustomerMessage = [...(customer?.messages || [])].reverse().find((message) => message.sender === 'customer');
-    if (latestCustomerMessage) {
-      setReadMarkers((current) => {
-        const next = { ...current, [customerId]: latestCustomerMessage.createdAt };
-        window.localStorage.setItem('asteriaStaffReadMarkers', JSON.stringify(next));
-        return next;
-      });
-    }
+    if (customer) void markThreadReadState(customer, 'read');
   };
 
   const sendReply = async () => {
@@ -2894,27 +2957,35 @@ const AdminInboxPage = () => {
             </div>
           </section>
 
-          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-9rem)] min-h-[640px] sm:min-h-[700px] max-h-[980px] min-w-0`}>
-            <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-7rem)] sm:h-[calc(100vh-9rem)] min-h-[600px] sm:min-h-[700px] max-h-[980px] min-w-0`}>
+            <div className="px-3 sm:px-4 py-2 sm:py-3 border-b border-asteria-cream/70 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 shrink-0">
               <div className="min-w-0">
-                <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
+                <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-xs sm:text-sm mb-1 sm:mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回所有對話
                 </button>
-                <div className="font-bold text-asteria-dark truncate">{activeCustomer?.name}</div>
-                <div className="text-xs text-stone-400">
+                <div className="font-bold text-asteria-dark truncate text-sm sm:text-base">{activeCustomer?.name}</div>
+                <div className="text-[11px] sm:text-xs text-stone-400 truncate">
                   @{activeCustomer?.accountUsername || '未有 account'} · WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
                 </div>
               </div>
-              <button
-                onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
-                disabled={activeChatImages.length === 0}
-                className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
-              >
-                <i className="fa-regular fa-images mr-1"></i> 所有圖片
-              </button>
+              <div className="flex gap-2 overflow-x-auto">
+                <button
+                  onClick={() => activeCustomer && markThreadReadState(activeCustomer, 'unread')}
+                  className="text-xs sm:text-sm font-bold text-asteria-primary bg-white border border-asteria-cream px-3 py-2 rounded-xl whitespace-nowrap"
+                >
+                  標記未讀
+                </button>
+                <button
+                  onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
+                  disabled={activeChatImages.length === 0}
+                  className="text-xs sm:text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
+                >
+                  <i className="fa-regular fa-images mr-1"></i> 所有圖片
+                </button>
+              </div>
             </div>
 
-            <div className="px-4 py-2 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto shrink-0">
+            <div className="px-3 sm:px-4 py-2 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto shrink-0">
               {[
                 { value: 'chat', label: '對話', icon: 'fa-regular fa-comments' },
                 { value: 'updates', label: '情況 update', icon: 'fa-solid fa-timeline' },

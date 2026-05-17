@@ -98,6 +98,14 @@ create table if not exists public.notification_events (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.thread_read_states (
+  thread_id uuid primary key references public.message_threads(id) on delete cascade,
+  last_read_at timestamptz,
+  is_unread boolean not null default false,
+  read_by uuid references auth.users(id) on delete set null,
+  updated_at timestamptz not null default now()
+);
+
 create index if not exists idx_user_accounts_username on public.user_accounts (username);
 create index if not exists idx_user_accounts_auth_email on public.user_accounts (auth_email);
 create index if not exists idx_user_accounts_role on public.user_accounts (role);
@@ -107,6 +115,7 @@ create index if not exists idx_chat_messages_customer_id on public.chat_messages
 create index if not exists idx_chat_messages_thread_id_created_at on public.chat_messages (thread_id, created_at);
 create index if not exists idx_space_entries_customer_type_date on public.space_entries (customer_id, entry_type, entry_date desc);
 create index if not exists idx_notification_events_delivered_at on public.notification_events (delivered_at);
+create index if not exists idx_thread_read_states_updated_at on public.thread_read_states (updated_at desc);
 
 create or replace function public.touch_updated_at()
 returns trigger
@@ -172,6 +181,7 @@ alter table public.chat_messages enable row level security;
 alter table public.space_entries enable row level security;
 alter table public.account_audit_events enable row level security;
 alter table public.notification_events enable row level security;
+alter table public.thread_read_states enable row level security;
 
 drop policy if exists "Admins can read admin list" on public.admin_users;
 create policy "Admins can read admin list"
@@ -320,6 +330,19 @@ with check (public.is_admin());
 drop policy if exists "Admins can update notification delivery" on public.notification_events;
 create policy "Admins can update notification delivery"
 on public.notification_events for update
+to authenticated
+using (public.is_admin())
+with check (public.is_admin());
+
+drop policy if exists "Admins can read thread read states" on public.thread_read_states;
+create policy "Admins can read thread read states"
+on public.thread_read_states for select
+to authenticated
+using (public.is_admin());
+
+drop policy if exists "Admins can manage thread read states" on public.thread_read_states;
+create policy "Admins can manage thread read states"
+on public.thread_read_states for all
 to authenticated
 using (public.is_admin())
 with check (public.is_admin());

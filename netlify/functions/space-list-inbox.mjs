@@ -49,10 +49,23 @@ export const handler = async (event) => {
 
     const threads = threadResult.data || [];
     const threadIds = threads.map((thread) => thread.id);
-    const messageResult = threadIds.length > 0
-      ? await admin.from('chat_messages').select('*').in('thread_id', threadIds).order('created_at', { ascending: true })
-      : { data: [], error: null };
+    const [messageResult, readStateResult] = threadIds.length > 0
+      ? await Promise.all([
+        admin.from('chat_messages').select('*').in('thread_id', threadIds).order('created_at', { ascending: true }),
+        admin.from('thread_read_states').select('*').in('thread_id', threadIds)
+      ])
+      : [{ data: [], error: null }, { data: [], error: null }];
     if (messageResult.error) throw messageResult.error;
+    if (readStateResult.error && !isMissingRelationError(readStateResult.error)) throw readStateResult.error;
+
+    const readStatesByThread = (readStateResult.error ? [] : readStateResult.data || []).reduce((map, state) => {
+      map[state.thread_id] = state;
+      return map;
+    }, {});
+
+    const safeMessageResult = threadIds.length > 0
+      ? messageResult
+      : { data: [], error: null };
 
     const accountsByCustomer = customerAccounts.reduce((map, account) => {
       map[account.user_id] = account;
@@ -66,7 +79,7 @@ export const handler = async (event) => {
       map[thread.customer_id] = thread;
       return map;
     }, {});
-    const messagesByThread = (messageResult.data || []).reduce((map, message) => {
+    const messagesByThread = (safeMessageResult.data || []).reduce((map, message) => {
       map[message.thread_id] = [...(map[message.thread_id] || []), message];
       return map;
     }, {});
@@ -82,6 +95,7 @@ export const handler = async (event) => {
           account: accountsByCustomer[customerId] || null,
           profile: profilesByCustomer[customerId] || null,
           thread,
+          read_state: thread ? (readStatesByThread[thread.id] || null) : null,
           messages: thread ? (messagesByThread[thread.id] || []) : [],
           entries: entriesByCustomer[customerId] || []
         };
