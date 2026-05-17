@@ -1069,6 +1069,7 @@ type PortalCustomer = {
   threadId?: string;
   name: string;
   phone: string;
+  accountUsername?: string;
   whatsapp?: string;
   igHandle?: string;
   telegramHandle?: string;
@@ -1442,6 +1443,7 @@ const SpacePortalPage = () => {
         id: space.account.user_id,
         name: profile?.display_name || space.account.label,
         phone: profile?.phone_number || '',
+        accountUsername: space.account.username,
         whatsapp: profile?.whatsapp || '',
         igHandle: profile?.ig_handle || '',
         telegramHandle: profile?.telegram_handle || '',
@@ -2335,6 +2337,7 @@ const AdminInboxPage = () => {
     if (!query) return true;
     const searchable = [
       customer.name,
+      customer.accountUsername,
       customer.phone,
       customer.whatsapp,
       customer.igHandle,
@@ -2378,6 +2381,7 @@ const AdminInboxPage = () => {
           threadId: item.thread.id,
           name: displayName,
           phone: profile?.phone_number || '',
+          accountUsername: account?.username || '',
           whatsapp: profile?.whatsapp || '',
           igHandle: profile?.ig_handle || '',
           telegramHandle: profile?.telegram_handle || '',
@@ -2528,6 +2532,7 @@ const AdminInboxPage = () => {
             id: customerId,
             name: result.account.label,
             phone: '',
+            accountUsername: result.account.username,
             email: result.account.contact_email || '',
             originalChannel: 'Asteria Space',
             interests: [],
@@ -2726,7 +2731,9 @@ const AdminInboxPage = () => {
                             <div className="text-[11px] text-stone-400">{lastMessage ? formatEntryDate(lastMessage.createdAt) : ''}</div>
                           </div>
                         </div>
-                        <div className="text-xs text-stone-400 mt-0.5">{customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}</div>
+                        <div className="text-xs text-stone-400 mt-0.5">
+                          {customer.accountUsername ? `@${customer.accountUsername}` : '未有 account 名'} · {customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}
+                        </div>
                         <div className={`text-sm truncate mt-1 ${unreadCount ? 'text-asteria-dark font-bold' : 'text-stone-500'}`}>
                           {lastMessage ? `${lastMessage.sender === 'admin' ? '你：' : ''}${lastMessage.text || '圖片'}` : '未有訊息'}
                         </div>
@@ -2746,7 +2753,7 @@ const AdminInboxPage = () => {
                 </button>
                 <div className="font-bold text-asteria-dark text-lg truncate">{activeCustomer?.name}</div>
                 <div className="text-xs text-stone-400">
-                  WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
+                  @{activeCustomer?.accountUsername || '未有 account'} · WA {activeCustomer?.phone || '未登記'} · TG {activeCustomer?.telegramHandle || '未登記'} · {(activeCustomer?.messages || []).length} 則訊息
                 </div>
               </div>
               <button
@@ -2868,6 +2875,7 @@ const AdminInboxPage = () => {
                   <h3 className="text-xl font-bold text-asteria-dark mb-4">客人資料</h3>
                   <div className="grid md:grid-cols-2 gap-3">
                     {[
+                      ['Account 名', activeCustomer?.accountUsername ? `@${activeCustomer.accountUsername}` : '未登記'],
                       ['自己名', activeCustomer?.targetName || '未填'],
                       ['WhatsApp', activeCustomer?.whatsapp || activeCustomer?.phone || '未登記'],
                       ['Phone number', activeCustomer?.phone || '未登記'],
