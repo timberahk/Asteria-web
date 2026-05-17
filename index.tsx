@@ -1889,7 +1889,7 @@ const SpacePortalPage = () => {
                 <div className="text-sm text-stone-400">Relationship Update</div>
                 <h1 className="text-3xl font-bold text-asteria-dark">關係 update</h1>
               </div>
-              <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">最近 7 日可 edit / delete</span>
+              <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">Timeline</span>
             </div>
             <label className="block mb-3">
               <span className="block text-sm font-bold text-asteria-dark mb-2">事情發生日期</span>
@@ -1897,7 +1897,7 @@ const SpacePortalPage = () => {
             </label>
             <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-36 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="寫低最近關係進展、對方態度、重要對話背景..." />
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-3">
-              <div className="text-sm text-stone-400">{entryMessage || '新增後會按事情發生日期排返喺下面；edit / delete 以新增記錄日期計 7 日。'}</div>
+              <div className="text-sm text-stone-400">{entryMessage || '新增後會按事情發生日期排返喺下面。'}</div>
               <button onClick={saveRelationshipUpdate} className="btn-primary px-5 py-3 rounded-xl font-bold">加入 timeline</button>
             </div>
           </section>
@@ -1966,7 +1966,7 @@ const SpacePortalPage = () => {
                 <textarea value={journalText} onChange={(event) => setJournalText(event.target.value)} className="w-full min-h-[420px] bg-white border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary leading-relaxed" placeholder="今日的情緒、反思、相處上想提醒自己的事..." />
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
-                <div className="text-sm text-stone-400">{entryMessage || (currentJournalEntry && !canEditRecentEntry(currentJournalEntry) ? '呢篇已超過 7 日，只可查看。' : '最近 7 日內的日記可 edit / delete。')}</div>
+                <div className="text-sm text-stone-400">{entryMessage || (currentJournalEntry && !canEditRecentEntry(currentJournalEntry) ? '呢篇暫時只可查看。' : '可以記低當日的心情、反思同相處提醒。')}</div>
                 <div className="flex gap-2">
                   {currentJournalEntry && canEditRecentEntry(currentJournalEntry) && (
                     <button onClick={() => deleteEntry(currentJournalEntry)} className="bg-white border border-red-200 text-red-600 rounded-xl px-4 py-3 font-bold">Delete</button>
