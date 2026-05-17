@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
+  changeMyPassword,
   getCurrentAccount,
   getMySpace,
   getSignedImageMap,
@@ -1697,6 +1698,7 @@ const SpacePortalPage = () => {
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [passwordMessage, setPasswordMessage] = useState('');
+  const [isChangingPassword, setIsChangingPassword] = useState(false);
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
   const [profileName, setProfileName] = useState(activeCustomer?.name || '');
   const [profilePhone, setProfilePhone] = useState(activeCustomer?.phone || '');
@@ -1813,14 +1815,31 @@ const SpacePortalPage = () => {
     setChatImageFiles([]);
   };
 
-  const changePassword = () => {
+  const changePassword = async () => {
+    if (!oldPassword.trim()) {
+      setPasswordMessage('請輸入舊密碼。');
+      return;
+    }
     if (newPassword.trim().length < 6) {
       setPasswordMessage('新密碼最少 6 個字。');
       return;
     }
-    setPasswordMessage('如需更改密碼，請聯絡 Asteria。');
-    setOldPassword('');
-    setNewPassword('');
+    if (!isBackendConfigured) {
+      setPasswordMessage('系統暫時未能連線，未能更新密碼。');
+      return;
+    }
+
+    setIsChangingPassword(true);
+    try {
+      await changeMyPassword(oldPassword.trim(), newPassword.trim());
+      setPasswordMessage('密碼已更新。下次請用新密碼登入。');
+      setOldPassword('');
+      setNewPassword('');
+    } catch (error) {
+      setPasswordMessage(error instanceof Error ? error.message : '更新密碼失敗。');
+    } finally {
+      setIsChangingPassword(false);
+    }
   };
 
   const saveProfile = () => {
@@ -2055,7 +2074,9 @@ const SpacePortalPage = () => {
             <div className="grid md:grid-cols-[1fr_1fr_auto] gap-3">
               <input type="password" value={oldPassword} onChange={(event) => setOldPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="舊密碼" />
               <input type="password" value={newPassword} onChange={(event) => setNewPassword(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="新密碼" />
-              <button onClick={changePassword} className="btn-primary px-5 py-3 rounded-xl font-bold">更新</button>
+              <button onClick={changePassword} disabled={isChangingPassword} className="btn-primary px-5 py-3 rounded-xl font-bold disabled:opacity-60">
+                {isChangingPassword ? '更新中...' : '更新'}
+              </button>
             </div>
             {passwordMessage && <div className="text-sm font-bold text-asteria-primary mt-3">{passwordMessage}</div>}
           </div>

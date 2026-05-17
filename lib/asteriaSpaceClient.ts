@@ -324,6 +324,31 @@ export const staffResetPassword = (payload: { username: string; password: string
 export const staffDeleteAccount = (payload: { username: string }) =>
   apiRequest<{ ok: boolean }>('space-delete-account', payload);
 
+export const changeMyPassword = async (oldPassword: string, newPassword: string) => {
+  const client = requireSupabase();
+  const { data: userData, error: userError } = await client.auth.getUser();
+  if (userError || !userData.user) throw new Error('請先登入。');
+
+  const { data: account, error: accountError } = await client
+    .from('user_accounts')
+    .select('auth_email')
+    .eq('user_id', userData.user.id)
+    .single();
+
+  if (accountError || !account?.auth_email) throw new Error('暫時搵唔到你的 account。');
+
+  const loginCheck = await client.auth.signInWithPassword({
+    email: account.auth_email,
+    password: oldPassword
+  });
+  if (loginCheck.error) throw new Error('舊密碼不正確。');
+
+  const { error: updateError } = await client.auth.updateUser({ password: newPassword });
+  if (updateError) throw updateError;
+
+  return { ok: true };
+};
+
 export const signOutSpace = async () => {
   if (supabase) await supabase.auth.signOut();
 };
