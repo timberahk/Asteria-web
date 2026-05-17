@@ -1232,6 +1232,7 @@ const REVIEW_CASES = [
 const DEFAULT_CUSTOMERS: PortalCustomer[] = [];
 
 type SystemAccount = {
+  userId: string;
   label: string;
   username: string;
   email: string;
@@ -2554,6 +2555,7 @@ const AdminInboxPage = () => {
     try {
       const backendAccounts = await listStaffAccounts();
       setAccounts(backendAccounts.map((account) => ({
+        userId: account.user_id,
         label: account.label,
         username: account.username,
         email: account.contact_email || '',
@@ -2682,6 +2684,7 @@ const AdminInboxPage = () => {
         }
 
         setAccounts((current) => [{
+          userId: result.account.user_id,
           label: result.account.label,
           username: result.account.username,
           email: result.account.contact_email || '',
@@ -2730,8 +2733,8 @@ const AdminInboxPage = () => {
     if (!confirmed) return;
     if (isBackendConfigured) {
       try {
-        await staffDeleteAccount({ username: account.username });
-        setAccounts((current) => current.filter((item) => item.username !== account.username));
+        await staffDeleteAccount({ username: account.username, userId: account.userId });
+        setAccounts((current) => current.filter((item) => item.userId !== account.userId));
         if (account.customerId) {
           setCustomers((current) => current.filter((customer) => customer.id !== account.customerId));
         }

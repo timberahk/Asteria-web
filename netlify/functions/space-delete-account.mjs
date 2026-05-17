@@ -5,26 +5,33 @@ export const handler = async (event) => {
 
   try {
     const { admin, user: actor } = await requireAdmin(event);
-    const { username } = parseBody(event);
+    const { username, userId } = parseBody(event);
     const normalizedUsername = normalizeUsername(username);
 
-    if (!normalizedUsername) return json(400, { error: '請輸入 account 名。' });
+    if (!normalizedUsername && !userId) return json(400, { error: '請輸入 account 名。' });
 
-    const { data: account, error: accountError } = await admin
+    let accountQuery = admin
       .from('user_accounts')
-      .select('user_id, username')
-      .eq('username', normalizedUsername)
-      .single();
+      .select('user_id, username');
 
-    if (accountError || !account) return json(404, { error: '搵唔到呢個 account。' });
+    accountQuery = userId ? accountQuery.eq('user_id', userId) : accountQuery.eq('username', normalizedUsername);
 
-    if (account.user_id === actor.id) {
+    const { data: account, error: accountError } = await accountQuery.maybeSingle();
+
+    if (accountError) throw accountError;
+
+    const targetUserId = account?.user_id || userId;
+    const targetUsername = account?.username || normalizedUsername || String(userId).slice(0, 8);
+
+    if (!targetUserId) return json(404, { error: '搵唔到呢個 account。' });
+
+    if (targetUserId === actor.id) {
       return json(400, { error: '唔可以刪除自己而家登入緊嘅 staff account。' });
     }
 
-    await logAudit(admin, actor.id, account.user_id, 'delete_account', { username: account.username });
+    await logAudit(admin, actor.id, targetUserId, 'delete_account', { username: targetUsername });
 
-    const { error: deleteError } = await admin.auth.admin.deleteUser(account.user_id);
+    const { error: deleteError } = await admin.auth.admin.deleteUser(targetUserId);
     if (deleteError) throw deleteError;
 
     return json(200, { ok: true });

@@ -281,7 +281,7 @@ export const staffCreateAccount = (payload: {
 export const staffResetPassword = (payload: { username: string; password: string }) =>
   apiRequest<{ ok: boolean }>('space-reset-password', payload);
 
-export const staffDeleteAccount = (payload: { username: string }) =>
+export const staffDeleteAccount = (payload: { username: string; userId?: string }) =>
   apiRequest<{ ok: boolean }>('space-delete-account', payload);
 
 export const changeMyPassword = async (oldPassword: string, newPassword: string) => {
