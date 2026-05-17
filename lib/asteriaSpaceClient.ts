@@ -54,16 +54,32 @@ export type SpaceMessage = {
   created_at: string;
 };
 
+export type SpaceEntry = {
+  id: string;
+  customer_id: string;
+  entry_type: 'relationship' | 'journal';
+  entry_date: string;
+  title: string;
+  body: string;
+  created_at: string;
+  updated_at: string;
+};
+
 export type StaffInboxCustomer = {
   account: SpaceAccount | null;
   profile: SpaceProfile | null;
   thread: SpaceThread;
   messages: SpaceMessage[];
+  entries: SpaceEntry[];
 };
 
 const requireSupabase = () => {
   if (!supabase) throw new Error('Supabase 未設定，請檢查 Netlify 環境變數並重新 deploy。');
   return supabase;
+};
+
+const isMissingRelationError = (error: unknown) => {
+  return Boolean(error && typeof error === 'object' && 'code' in error && error.code === '42P01');
 };
 
 const apiRequest = async <T>(path: string, payload: Record<string, unknown>): Promise<T> => {
@@ -165,11 +181,21 @@ export const getMySpace = async () => {
 
   if (messagesError) throw messagesError;
 
+  const { data: entries, error: entriesError } = await client
+    .from('space_entries')
+    .select('*')
+    .eq('customer_id', userId)
+    .order('entry_date', { ascending: false })
+    .order('created_at', { ascending: false });
+
+  if (entriesError && !isMissingRelationError(entriesError)) throw entriesError;
+
   return {
     account: accountResult.data as SpaceAccount,
     profile: profileResult.data as SpaceProfile | null,
     thread,
-    messages: (messages || []) as SpaceMessage[]
+    messages: (messages || []) as SpaceMessage[],
+    entries: (entriesError ? [] : entries || []) as SpaceEntry[]
   };
 };
 
@@ -245,15 +271,17 @@ export const listStaffInbox = async () => {
   const customerIds = threadRows.map((thread) => thread.customer_id);
   if (customerIds.length === 0) return [] as StaffInboxCustomer[];
 
-  const [accountResult, profileResult, messageResult] = await Promise.all([
+  const [accountResult, profileResult, messageResult, entryResult] = await Promise.all([
     client.from('user_accounts').select('user_id, username, role, label, contact_email').in('user_id', customerIds),
     client.from('profiles').select('*').in('id', customerIds),
-    client.from('chat_messages').select('*').in('thread_id', threadRows.map((thread) => thread.id)).order('created_at', { ascending: true })
+    client.from('chat_messages').select('*').in('thread_id', threadRows.map((thread) => thread.id)).order('created_at', { ascending: true }),
+    client.from('space_entries').select('*').in('customer_id', customerIds).order('entry_date', { ascending: false }).order('created_at', { ascending: false })
   ]);
 
   if (accountResult.error) throw accountResult.error;
   if (profileResult.error) throw profileResult.error;
   if (messageResult.error) throw messageResult.error;
+  if (entryResult.error && !isMissingRelationError(entryResult.error)) throw entryResult.error;
 
   const accounts = ((accountResult.data || []) as SpaceAccount[]).reduce<Record<string, SpaceAccount>>((map, account) => {
     map[account.user_id] = account;
@@ -267,13 +295,68 @@ export const listStaffInbox = async () => {
     map[message.thread_id] = [...(map[message.thread_id] || []), message];
     return map;
   }, {});
+  const entriesByCustomer = ((entryResult.error ? [] : entryResult.data || []) as SpaceEntry[]).reduce<Record<string, SpaceEntry[]>>((map, entry) => {
+    map[entry.customer_id] = [...(map[entry.customer_id] || []), entry];
+    return map;
+  }, {});
 
   return threadRows.map((thread) => ({
     account: accounts[thread.customer_id] || null,
     profile: profiles[thread.customer_id] || null,
     thread,
-    messages: messagesByThread[thread.id] || []
+    messages: messagesByThread[thread.id] || [],
+    entries: entriesByCustomer[thread.customer_id] || []
   }));
+};
+
+export const createSpaceEntry = async (payload: {
+  entryType: 'relationship' | 'journal';
+  entryDate: string;
+  title?: string;
+  body: string;
+}) => {
+  const client = requireSupabase();
+  const { data: userData, error: userError } = await client.auth.getUser();
+  if (userError || !userData.user) throw new Error('請先登入。');
+
+  const { data, error } = await client
+    .from('space_entries')
+    .insert({
+      customer_id: userData.user.id,
+      entry_type: payload.entryType,
+      entry_date: payload.entryDate,
+      title: payload.title || '',
+      body: payload.body
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as SpaceEntry;
+};
+
+export const updateSpaceEntry = async (entryId: string, payload: { entryDate?: string; title?: string; body: string }) => {
+  const client = requireSupabase();
+  const { data, error } = await client
+    .from('space_entries')
+    .update({
+      ...(payload.entryDate ? { entry_date: payload.entryDate } : {}),
+      ...(payload.title !== undefined ? { title: payload.title } : {}),
+      body: payload.body
+    })
+    .eq('id', entryId)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as SpaceEntry;
+};
+
+export const deleteSpaceEntry = async (entryId: string) => {
+  const client = requireSupabase();
+  const { error } = await client.from('space_entries').delete().eq('id', entryId);
+  if (error) throw error;
+  return { ok: true };
 };
 
 export const listStaffAccounts = async () => {

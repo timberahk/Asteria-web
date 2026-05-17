@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   changeMyPassword,
+  createSpaceEntry,
+  deleteSpaceEntry,
   getCurrentAccount,
   getMySpace,
   getSignedImageMap,
@@ -15,6 +17,7 @@ import {
   staffDeleteAccount,
   staffSendMessage,
   staffResetPassword,
+  updateSpaceEntry,
   upsertMyProfile,
   uploadSpaceImages
 } from './lib/asteriaSpaceClient';
@@ -1040,11 +1043,14 @@ const Reviews = () => (
 type PortalEntryType = 'relationship' | 'mood' | 'question';
 
 type PortalEntry = {
-  id: number;
+  id: number | string;
   type: PortalEntryType;
   text: string;
+  title?: string;
+  entryDate?: string;
   images?: string[];
   createdAt: string;
+  updatedAt?: string;
 };
 
 type ChatMessage = {
@@ -1171,6 +1177,37 @@ const formatEntryDate = (value: string) => {
     hour: '2-digit',
     minute: '2-digit'
   }).format(new Date(value));
+};
+
+const toDateInputValue = (value = new Date()) => {
+  const date = value instanceof Date ? value : new Date(value);
+  const offsetDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+  return offsetDate.toISOString().slice(0, 10);
+};
+
+const formatDisplayDate = (value: string) => {
+  return new Intl.DateTimeFormat('zh-HK', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    weekday: 'short'
+  }).format(new Date(`${value}T00:00:00`));
+};
+
+const canEditRecentEntry = (entry: PortalEntry) => {
+  const createdTime = new Date(entry.createdAt).getTime();
+  return Number.isFinite(createdTime) && Date.now() - createdTime <= 7 * 24 * 60 * 60 * 1000;
+};
+
+const buildCalendarDays = (monthValue: string) => {
+  const [year, month] = monthValue.split('-').map(Number);
+  const firstDay = new Date(year, month - 1, 1);
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const leadingBlanks = firstDay.getDay();
+  return [
+    ...Array.from({ length: leadingBlanks }, () => null),
+    ...Array.from({ length: daysInMonth }, (_, index) => `${monthValue}-${String(index + 1).padStart(2, '0')}`)
+  ];
 };
 
 const entryLabels: Record<PortalEntryType, { label: string; icon: string; tone: string }> = {
@@ -1740,15 +1777,26 @@ const SpacePortalPage = () => {
   const [chatImageFiles, setChatImageFiles] = useState<File[]>([]);
   const [backendThreadId, setBackendThreadId] = useState<string | null>(null);
   const [spaceMessage, setSpaceMessage] = useState('');
-  const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile'>('dashboard');
+  const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile' | 'updates' | 'journal'>('dashboard');
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [passwordMessage, setPasswordMessage] = useState('');
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [viewerImages, setViewerImages] = useState<string[]>([]);
   const [viewerIndex, setViewerIndex] = useState(0);
+  const [relationshipText, setRelationshipText] = useState('');
+  const [editingEntryId, setEditingEntryId] = useState<string | number | null>(null);
+  const [editingEntryText, setEditingEntryText] = useState('');
+  const [journalDate, setJournalDate] = useState(toDateInputValue());
+  const [journalText, setJournalText] = useState('');
+  const [journalMonth, setJournalMonth] = useState(toDateInputValue().slice(0, 7));
+  const [entryMessage, setEntryMessage] = useState('');
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
   const activeChatImages = (activeCustomer?.messages || []).flatMap((message) => message.images || []);
+  const relationshipEntries = [...(activeCustomer?.entries || [])].filter((entry) => entry.type === 'relationship').sort((a, b) => (b.entryDate || b.createdAt).localeCompare(a.entryDate || a.createdAt));
+  const journalEntries = [...(activeCustomer?.entries || [])].filter((entry) => entry.type === 'mood').sort((a, b) => (b.entryDate || b.createdAt).localeCompare(a.entryDate || a.createdAt));
+  const currentJournalEntry = journalEntries.find((entry) => entry.entryDate === journalDate);
+  const journalDates = new Set(journalEntries.map((entry) => entry.entryDate || entry.createdAt.slice(0, 10)));
   const [profileName, setProfileName] = useState(activeCustomer?.name || '');
   const [profilePhone, setProfilePhone] = useState(activeCustomer?.phone || '');
   const [profileWhatsapp, setProfileWhatsapp] = useState(activeCustomer?.whatsapp || activeCustomer?.phone || '');
@@ -1783,6 +1831,15 @@ const SpacePortalPage = () => {
         images: (message.image_urls || []).map((path) => imageMap[path] || path),
         createdAt: message.created_at
       }));
+      const mappedEntries: PortalEntry[] = space.entries.map((entry) => ({
+        id: entry.id,
+        type: entry.entry_type === 'journal' ? 'mood' : 'relationship',
+        title: entry.title,
+        text: entry.body,
+        entryDate: entry.entry_date,
+        createdAt: entry.created_at,
+        updatedAt: entry.updated_at
+      }));
       const profile = space.profile;
       const nextCustomer: PortalCustomer = {
         id: space.account.user_id,
@@ -1795,7 +1852,7 @@ const SpacePortalPage = () => {
         targetName: profile?.self_name || '',
         originalChannel: 'Asteria Space',
         interests: activeCustomer?.interests || [],
-        entries: activeCustomer?.entries || [],
+        entries: mappedEntries,
         messages: mappedMessages
       };
       setBackendThreadId(space.thread.id);
@@ -1816,6 +1873,10 @@ const SpacePortalPage = () => {
   useEffect(() => {
     loadBackendSpace();
   }, []);
+
+  useEffect(() => {
+    setJournalText(currentJournalEntry?.text || '');
+  }, [journalDate, currentJournalEntry?.id]);
 
   const updateCustomer = (updater: (customer: PortalCustomer) => PortalCustomer) => {
     if (!activeCustomer) return;
@@ -1868,6 +1929,132 @@ const SpacePortalPage = () => {
     setChatText('');
     setChatImages([]);
     setChatImageFiles([]);
+  };
+
+  const upsertLocalEntry = (entry: PortalEntry) => {
+    updateCustomer((customer) => ({
+      ...customer,
+      entries: [entry, ...(customer.entries || []).filter((item) => item.id !== entry.id)]
+    }));
+  };
+
+  const removeLocalEntry = (entryId: string | number) => {
+    updateCustomer((customer) => ({
+      ...customer,
+      entries: (customer.entries || []).filter((entry) => entry.id !== entryId)
+    }));
+  };
+
+  const saveRelationshipUpdate = async () => {
+    const body = relationshipText.trim();
+    if (!body) return;
+    try {
+      if (isBackendConfigured) {
+        const entry = await createSpaceEntry({
+          entryType: 'relationship',
+          entryDate: toDateInputValue(),
+          body
+        });
+        upsertLocalEntry({
+          id: entry.id,
+          type: 'relationship',
+          text: entry.body,
+          entryDate: entry.entry_date,
+          createdAt: entry.created_at,
+          updatedAt: entry.updated_at
+        });
+      } else {
+        upsertLocalEntry({ id: Date.now(), type: 'relationship', text: body, entryDate: toDateInputValue(), createdAt: new Date().toISOString() });
+      }
+      setRelationshipText('');
+      setEntryMessage('關係 update 已儲存。');
+    } catch (error) {
+      setEntryMessage(error instanceof Error ? error.message : '關係 update 暫時儲存唔到。');
+    }
+  };
+
+  const saveJournalEntry = async () => {
+    const body = journalText.trim();
+    if (!body) return;
+    try {
+      if (currentJournalEntry && canEditRecentEntry(currentJournalEntry)) {
+        if (isBackendConfigured) {
+          const updated = await updateSpaceEntry(String(currentJournalEntry.id), { entryDate: journalDate, title: '', body });
+          upsertLocalEntry({
+            id: updated.id,
+            type: 'mood',
+            text: updated.body,
+            entryDate: updated.entry_date,
+            createdAt: updated.created_at,
+            updatedAt: updated.updated_at
+          });
+        } else {
+          upsertLocalEntry({ ...currentJournalEntry, text: body, entryDate: journalDate, updatedAt: new Date().toISOString() });
+        }
+      } else {
+        if (isBackendConfigured) {
+          const entry = await createSpaceEntry({ entryType: 'journal', entryDate: journalDate, body });
+          upsertLocalEntry({
+            id: entry.id,
+            type: 'mood',
+            text: entry.body,
+            entryDate: entry.entry_date,
+            createdAt: entry.created_at,
+            updatedAt: entry.updated_at
+          });
+        } else {
+          upsertLocalEntry({ id: Date.now(), type: 'mood', text: body, entryDate: journalDate, createdAt: new Date().toISOString() });
+        }
+      }
+      setEntryMessage('心靈日記已儲存。');
+    } catch (error) {
+      setEntryMessage(error instanceof Error ? error.message : '心靈日記暫時儲存唔到。');
+    }
+  };
+
+  const startEditEntry = (entry: PortalEntry) => {
+    if (!canEditRecentEntry(entry)) return;
+    setEditingEntryId(entry.id);
+    setEditingEntryText(entry.text);
+  };
+
+  const saveEditedEntry = async (entry: PortalEntry) => {
+    const body = editingEntryText.trim();
+    if (!body || !canEditRecentEntry(entry)) return;
+    try {
+      if (isBackendConfigured) {
+        const updated = await updateSpaceEntry(String(entry.id), { entryDate: entry.entryDate, title: entry.title || '', body });
+        upsertLocalEntry({
+          id: updated.id,
+          type: updated.entry_type === 'journal' ? 'mood' : 'relationship',
+          title: updated.title,
+          text: updated.body,
+          entryDate: updated.entry_date,
+          createdAt: updated.created_at,
+          updatedAt: updated.updated_at
+        });
+      } else {
+        upsertLocalEntry({ ...entry, text: body, updatedAt: new Date().toISOString() });
+      }
+      setEditingEntryId(null);
+      setEditingEntryText('');
+      setEntryMessage('內容已更新。');
+    } catch (error) {
+      setEntryMessage(error instanceof Error ? error.message : '內容暫時更新唔到。');
+    }
+  };
+
+  const deleteEntry = async (entry: PortalEntry) => {
+    if (!canEditRecentEntry(entry)) return;
+    const confirmed = window.confirm('確定刪除呢段內容？');
+    if (!confirmed) return;
+    try {
+      if (isBackendConfigured) await deleteSpaceEntry(String(entry.id));
+      removeLocalEntry(entry.id);
+      setEntryMessage('內容已刪除。');
+    } catch (error) {
+      setEntryMessage(error instanceof Error ? error.message : '內容暫時刪除唔到。');
+    }
   };
 
   const changePassword = async () => {
@@ -2052,6 +2239,127 @@ const SpacePortalPage = () => {
     );
   }
 
+  if (spaceView === 'updates') {
+    return (
+      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+            <i className="fa-solid fa-arrow-left"></i> 返回 Space
+          </button>
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm mb-6">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
+              <div>
+                <div className="text-sm text-stone-400">Relationship Update</div>
+                <h1 className="text-3xl font-bold text-asteria-dark">關係 update</h1>
+              </div>
+              <span className="bg-asteria-yellow/35 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full">最近 7 日可 edit / delete</span>
+            </div>
+            <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-36 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="寫低最近關係進展、對方態度、重要對話背景..." />
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-3">
+              <div className="text-sm text-stone-400">{entryMessage || '新增後會按時間線排返喺下面。'}</div>
+              <button onClick={saveRelationshipUpdate} className="btn-primary px-5 py-3 rounded-xl font-bold">加入 timeline</button>
+            </div>
+          </section>
+
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
+            <h2 className="text-2xl font-bold text-asteria-dark mb-5">Timeline</h2>
+            {relationshipEntries.length === 0 ? (
+              <div className="border-2 border-dashed border-asteria-yellow/70 rounded-2xl bg-[#FFF8EC] px-5 py-10 text-center text-stone-500">暫時未有關係 update。</div>
+            ) : (
+              <div className="space-y-5">
+                {relationshipEntries.map((entry) => (
+                  <div key={entry.id} className="relative pl-8 pb-5 border-l-2 border-asteria-cream last:pb-0">
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-asteria-primary border-4 border-white shadow-sm"></div>
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
+                        {editingEntryId === entry.id ? (
+                          <textarea value={editingEntryText} onChange={(event) => setEditingEntryText(event.target.value)} className="w-full min-h-28 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
+                        ) : (
+                          <p className="text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
+                        )}
+                      </div>
+                      {canEditRecentEntry(entry) && (
+                        <div className="flex gap-2 shrink-0">
+                          {editingEntryId === entry.id ? (
+                            <button onClick={() => saveEditedEntry(entry)} className="bg-asteria-primary text-white rounded-xl px-3 py-2 text-sm font-bold">Save</button>
+                          ) : (
+                            <button onClick={() => startEditEntry(entry)} className="bg-white border border-asteria-cream text-asteria-primary rounded-xl px-3 py-2 text-sm font-bold">Edit</button>
+                          )}
+                          <button onClick={() => deleteEntry(entry)} className="bg-white border border-red-200 text-red-600 rounded-xl px-3 py-2 text-sm font-bold">Delete</button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  if (spaceView === 'journal') {
+    const calendarDays = buildCalendarDays(journalMonth);
+    return (
+      <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+            <i className="fa-solid fa-arrow-left"></i> 返回 Space
+          </button>
+          <div className="grid lg:grid-cols-[1fr_340px] gap-6 items-start">
+            <section className="bg-white border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
+                <div>
+                  <div className="text-sm text-stone-400">Soul Journal</div>
+                  <h1 className="text-3xl font-bold text-asteria-dark">心靈日記</h1>
+                </div>
+                <input type="date" value={journalDate} onChange={(event) => setJournalDate(event.target.value)} className="border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" />
+              </div>
+              <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-2xl p-4 md:p-5">
+                <div className="font-bold text-asteria-dark mb-3">{formatDisplayDate(journalDate)}</div>
+                <textarea value={journalText} onChange={(event) => setJournalText(event.target.value)} className="w-full min-h-[420px] bg-white border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary leading-relaxed" placeholder="今日的情緒、反思、相處上想提醒自己的事..." />
+              </div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
+                <div className="text-sm text-stone-400">{entryMessage || (currentJournalEntry && !canEditRecentEntry(currentJournalEntry) ? '呢篇已超過 7 日，只可查看。' : '最近 7 日內的日記可 edit / delete。')}</div>
+                <div className="flex gap-2">
+                  {currentJournalEntry && canEditRecentEntry(currentJournalEntry) && (
+                    <button onClick={() => deleteEntry(currentJournalEntry)} className="bg-white border border-red-200 text-red-600 rounded-xl px-4 py-3 font-bold">Delete</button>
+                  )}
+                  <button onClick={saveJournalEntry} disabled={Boolean(currentJournalEntry && !canEditRecentEntry(currentJournalEntry))} className="btn-primary px-5 py-3 rounded-xl font-bold disabled:opacity-50">Save</button>
+                </div>
+              </div>
+            </section>
+
+            <aside className="bg-white border border-asteria-cream/70 rounded-2xl p-5 shadow-sm">
+              <div className="flex items-center justify-between gap-3 mb-4">
+                <h2 className="text-xl font-bold text-asteria-dark">月曆</h2>
+                <input type="month" value={journalMonth} onChange={(event) => setJournalMonth(event.target.value)} className="border border-asteria-cream rounded-xl px-3 py-2 outline-none focus:border-asteria-primary" />
+              </div>
+              <div className="grid grid-cols-7 gap-1 text-center text-xs font-bold text-stone-400 mb-2">
+                {['日', '一', '二', '三', '四', '五', '六'].map((day) => <div key={day}>{day}</div>)}
+              </div>
+              <div className="grid grid-cols-7 gap-1">
+                {calendarDays.map((day, index) => (
+                  <button
+                    key={day || `blank-${index}`}
+                    disabled={!day}
+                    onClick={() => day && setJournalDate(day)}
+                    className={`relative aspect-square rounded-xl text-sm font-bold ${day === journalDate ? 'bg-asteria-primary text-white' : day ? 'bg-[#FFF8EC] text-asteria-dark hover:bg-asteria-yellow/35' : 'bg-transparent'}`}
+                  >
+                    {day ? Number(day.slice(-2)) : ''}
+                    {day && journalDates.has(day) && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[9px] text-amber-500">★</span>}
+                  </button>
+                ))}
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   if (spaceView === 'profile') {
     return (
       <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
@@ -2220,14 +2528,32 @@ const SpacePortalPage = () => {
           </div>
 
           {spaceView === 'dashboard' && (
-            <button onClick={() => setSpaceView('chat')} className="bg-asteria-dark text-white rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:brightness-110 transition-all">
-              <div>
-                <div className="text-sm text-white/70">Message Thread</div>
-                <div className="text-2xl font-bold">進入 Inbox</div>
-                <div className="text-sm text-white/70 mt-1">{(activeCustomer?.messages || []).length} 則訊息 · 可 upload 對話截圖</div>
-              </div>
-              <i className="fa-solid fa-arrow-right text-2xl"></i>
-            </button>
+            <div className="grid md:grid-cols-3 gap-4">
+              <button onClick={() => setSpaceView('chat')} className="bg-asteria-dark text-white rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:brightness-110 transition-all">
+                <div>
+                  <div className="text-sm text-white/70">Message Thread</div>
+                  <div className="text-2xl font-bold">Inbox</div>
+                  <div className="text-sm text-white/70 mt-1">{(activeCustomer?.messages || []).length} 則訊息</div>
+                </div>
+                <i className="fa-solid fa-arrow-right text-2xl"></i>
+              </button>
+              <button onClick={() => setSpaceView('updates')} className="bg-white border border-asteria-cream/70 text-asteria-dark rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:border-asteria-primary transition-all">
+                <div>
+                  <div className="text-sm text-stone-400">Relationship</div>
+                  <div className="text-2xl font-bold">關係 update</div>
+                  <div className="text-sm text-stone-500 mt-1">{relationshipEntries.length} 個記錄</div>
+                </div>
+                <i className="fa-solid fa-timeline text-2xl text-asteria-primary"></i>
+              </button>
+              <button onClick={() => setSpaceView('journal')} className="bg-[#FFF8EC] border border-asteria-cream/70 text-asteria-dark rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:border-asteria-primary transition-all">
+                <div>
+                  <div className="text-sm text-stone-400">Journal</div>
+                  <div className="text-2xl font-bold">心靈日記</div>
+                  <div className="text-sm text-stone-500 mt-1">{journalEntries.length} 篇</div>
+                </div>
+                <i className="fa-regular fa-bookmark text-2xl text-asteria-primary"></i>
+              </button>
+            </div>
           )}
 
           {spaceView === 'chat' && (
@@ -2509,6 +2835,7 @@ const AdminInboxPage = () => {
   const [activeCustomerId, setActiveCustomerId] = useState(customers[0]?.id || '');
   const [inboxView, setInboxView] = useState<'list' | 'thread'>('list');
   const [adminView, setAdminView] = useState<'inbox' | 'accounts'>('inbox');
+  const [staffThreadPanel, setStaffThreadPanel] = useState<'chat' | 'updates' | 'journal' | 'profile'>('chat');
   const [replyText, setReplyText] = useState('');
   const [replyImages, setReplyImages] = useState<string[]>([]);
   const [replyImageFiles, setReplyImageFiles] = useState<File[]>([]);
@@ -2601,7 +2928,15 @@ const AdminInboxPage = () => {
           targetName: profile?.self_name || '',
           originalChannel: 'Asteria Space',
           interests: [],
-          entries: [],
+          entries: item.entries.map((entry) => ({
+            id: entry.id,
+            type: entry.entry_type === 'journal' ? 'mood' : 'relationship',
+            title: entry.title,
+            text: entry.body,
+            entryDate: entry.entry_date,
+            createdAt: entry.created_at,
+            updatedAt: entry.updated_at
+          })),
           messages: item.messages.map((message) => ({
             id: message.id,
             sender: message.sender_role === 'admin' ? 'admin' : 'customer',
@@ -2637,6 +2972,7 @@ const AdminInboxPage = () => {
     setReplyText('');
     setReplyImages([]);
     setReplyImageFiles([]);
+    setStaffThreadPanel('chat');
     const customer = customers.find((item) => item.id === customerId);
     const latestCustomerMessage = [...(customer?.messages || [])].reverse().find((message) => message.sender === 'customer');
     if (latestCustomerMessage) {
@@ -2954,6 +3290,25 @@ const AdminInboxPage = () => {
               </button>
             </div>
 
+            <div className="px-4 py-3 border-b border-asteria-cream/70 bg-white flex gap-2 overflow-x-auto">
+              {[
+                { value: 'chat', label: '對話', icon: 'fa-regular fa-comments' },
+                { value: 'updates', label: '情況 update', icon: 'fa-solid fa-timeline' },
+                { value: 'journal', label: '日記', icon: 'fa-regular fa-bookmark' },
+                { value: 'profile', label: '資料', icon: 'fa-regular fa-address-card' }
+              ].map((item) => (
+                <button
+                  key={item.value}
+                  onClick={() => setStaffThreadPanel(item.value as 'chat' | 'updates' | 'journal' | 'profile')}
+                  className={`px-4 py-2 rounded-xl text-sm font-bold border whitespace-nowrap ${staffThreadPanel === item.value ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}
+                >
+                  <i className={`${item.icon} mr-1`}></i> {item.label}
+                </button>
+              ))}
+            </div>
+
+            {staffThreadPanel === 'chat' ? (
+            <>
             <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
               {(activeCustomer?.messages || []).length === 0 ? (
                 <div className="h-full flex items-center justify-center text-sm text-stone-500">未有對話，下面可以開始回覆。</div>
@@ -2999,6 +3354,62 @@ const AdminInboxPage = () => {
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
             </div>
+            </>
+            ) : staffThreadPanel === 'updates' ? (
+              <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+                <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
+                  <h3 className="text-xl font-bold text-asteria-dark mb-4">情況 update</h3>
+                  {activeCustomer?.entries?.filter((entry) => entry.type === 'relationship').length ? (
+                    <div className="space-y-4">
+                      {activeCustomer.entries.filter((entry) => entry.type === 'relationship').map((entry) => (
+                        <div key={entry.id} className="pl-5 border-l-2 border-asteria-primary">
+                          <div className="text-xs font-bold text-asteria-primary mb-1">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
+                          <p className="text-sm text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-sm text-stone-500">暫時未有情況 update。</div>
+                  )}
+                </div>
+              </div>
+            ) : staffThreadPanel === 'journal' ? (
+              <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {(activeCustomer?.entries || []).filter((entry) => entry.type === 'mood').length ? (
+                    (activeCustomer?.entries || []).filter((entry) => entry.type === 'mood').map((entry) => (
+                      <div key={entry.id} className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
+                        <div className="text-xs font-bold text-asteria-primary mb-2">{formatDisplayDate(entry.entryDate || entry.createdAt.slice(0, 10))}</div>
+                        <p className="text-sm text-stone-600 leading-relaxed whitespace-pre-wrap">{entry.text}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5 text-sm text-stone-500">暫時未有心靈日記。</div>
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div className="flex-1 bg-[#FFF8EC] p-5 overflow-y-auto">
+                <div className="bg-white border border-asteria-cream/70 rounded-2xl p-5">
+                  <h3 className="text-xl font-bold text-asteria-dark mb-4">客人資料</h3>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {[
+                      ['自己名', activeCustomer?.targetName || '未填'],
+                      ['WhatsApp', activeCustomer?.whatsapp || activeCustomer?.phone || '未登記'],
+                      ['Phone number', activeCustomer?.phone || '未登記'],
+                      ['Instagram', activeCustomer?.igHandle || '未登記'],
+                      ['Telegram', activeCustomer?.telegramHandle || '未登記'],
+                      ['Email', activeCustomer?.email || '未登記']
+                    ].map(([label, value]) => (
+                      <div key={label} className="bg-[#FFF8EC] rounded-xl p-4">
+                        <div className="text-xs text-stone-400 mb-1">{label}</div>
+                        <div className="font-bold text-asteria-dark break-all">{value}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </section>
         </div>
         )}

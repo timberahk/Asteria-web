@@ -68,6 +68,17 @@ create table if not exists public.chat_messages (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.space_entries (
+  id uuid primary key default gen_random_uuid(),
+  customer_id uuid not null references auth.users(id) on delete cascade,
+  entry_type text not null check (entry_type in ('relationship', 'journal')),
+  entry_date date not null default current_date,
+  title text not null default '',
+  body text not null default '',
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
 create table if not exists public.account_audit_events (
   id uuid primary key default gen_random_uuid(),
   actor_id uuid references auth.users(id) on delete set null,
@@ -94,6 +105,7 @@ create index if not exists idx_profiles_contact_email on public.profiles (contac
 create index if not exists idx_message_threads_customer_id on public.message_threads (customer_id);
 create index if not exists idx_chat_messages_customer_id on public.chat_messages (customer_id);
 create index if not exists idx_chat_messages_thread_id_created_at on public.chat_messages (thread_id, created_at);
+create index if not exists idx_space_entries_customer_type_date on public.space_entries (customer_id, entry_type, entry_date desc);
 create index if not exists idx_notification_events_delivered_at on public.notification_events (delivered_at);
 
 create or replace function public.touch_updated_at()
@@ -114,6 +126,11 @@ for each row execute function public.touch_updated_at();
 drop trigger if exists touch_profiles_updated_at on public.profiles;
 create trigger touch_profiles_updated_at
 before update on public.profiles
+for each row execute function public.touch_updated_at();
+
+drop trigger if exists touch_space_entries_updated_at on public.space_entries;
+create trigger touch_space_entries_updated_at
+before update on public.space_entries
 for each row execute function public.touch_updated_at();
 
 create or replace function public.touch_thread_on_message()
@@ -152,6 +169,7 @@ alter table public.user_accounts enable row level security;
 alter table public.profiles enable row level security;
 alter table public.message_threads enable row level security;
 alter table public.chat_messages enable row level security;
+alter table public.space_entries enable row level security;
 alter table public.account_audit_events enable row level security;
 alter table public.notification_events enable row level security;
 
@@ -247,6 +265,31 @@ with check (
     )
   )
 );
+
+drop policy if exists "Members and admins can read space entries" on public.space_entries;
+create policy "Members and admins can read space entries"
+on public.space_entries for select
+to authenticated
+using (customer_id = (select auth.uid()) or public.is_admin());
+
+drop policy if exists "Members can create own space entries" on public.space_entries;
+create policy "Members can create own space entries"
+on public.space_entries for insert
+to authenticated
+with check (customer_id = (select auth.uid()));
+
+drop policy if exists "Members can update recent own space entries" on public.space_entries;
+create policy "Members can update recent own space entries"
+on public.space_entries for update
+to authenticated
+using (customer_id = (select auth.uid()) and created_at >= now() - interval '7 days')
+with check (customer_id = (select auth.uid()) and created_at >= now() - interval '7 days');
+
+drop policy if exists "Members can delete recent own space entries" on public.space_entries;
+create policy "Members can delete recent own space entries"
+on public.space_entries for delete
+to authenticated
+using (customer_id = (select auth.uid()) and created_at >= now() - interval '7 days');
 
 drop policy if exists "Admins can read account audit events" on public.account_audit_events;
 create policy "Admins can read account audit events"
