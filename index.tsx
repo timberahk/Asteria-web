@@ -515,103 +515,128 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const posts = [
       {
         id: 1,
-        title: "明明只係小事，點解成日變嗌交？",
-        category: "相處溝通",
-        color: "bg-asteria-blue/60",
-        icon: "fa-regular fa-comments",
-        imageLabel: "溝通",
-        summary: "拆解「情緒勒索」與「無效溝通」的惡性循環。學識這一招，讓爭吵變成了解。",
+        title: "男朋友對你事事挑剔？拆解「打壓式教育」背後的自卑心理",
+        category: "PUA警號",
+        color: "bg-asteria-yellow/50",
+        icon: "fa-solid fa-person-rays",
+        imageLabel: "自信",
+        summary: "經常被批評不代表你真的差。挑剔式相處很多時是情感操控的前奏，重點是守住自我價值。",
         content: `
-          <h3 class="text-xl font-bold mb-4">為什麼我們總是為了小事吵架？</h3>
-          <p class="mb-4">很多客人都會問我：「明明只係佢唔記得倒垃圾/遲到/講野大聲左，點解最後會搞到分手咁嚴重？」</p>
-          <p class="mb-4">其實，**我們吵的往往不是事情本身，而是「態度」與「被忽視感」。**</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">1. 把「你」變成「我」</h4>
-          <p class="mb-4">當對方做錯事，我們習慣說：「**你**又唔記得！**你**好自私！」這在對方聽來是攻擊。</p>
-          <p class="mb-4">試著改用「我訊息」：「當我看見垃圾還在，**我**覺得好累，覺得家務都落在我身上。」</p>
-          <p class="mb-4">表達你的感受，而不是審判他的人格。</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">2. 暫停鍵的重要性</h4>
-          <p class="mb-4">情緒上頭時，智商為零。約定一個「暫停手勢」，當雙方都激動時，停戰 30 分鐘，各自冷靜，回來再談。</p>
-          
-          <p class="mt-6 p-4 bg-gray-50 rounded-lg text-sm text-gray-500">
-            如果你們的溝通已經去到無法對話的地步，可能是有負能量阻礙了你們的磁場。可以考慮做一個 <span class="text-asteria-primary font-bold">甜蜜升溫儀式</span> 來化解怨氣。
-          </p>
+          <h3 class="text-xl font-bold mb-4">挑剔不是期望，是消耗</h3>
+          <p class="mb-4">「你著呢件衫好肥。」「你煮飯好難食。」「你做事咁慢，有無腦？」如果一段關係入面，對方成日用挑剔包裝成「為你好」，你會慢慢變得小心翼翼，連表達自己都驚。</p>
+          <p class="mb-4">真正愛你的人會接納你的不完美，並用鼓勵代替羞辱。長期貶低你的人，很多時是在透過踩低你，換取自己的優越感。</p>
+          <h4 class="font-bold text-lg mb-2 text-asteria-primary">點樣面對挑剔型伴侶？</h4>
+          <ul class="list-disc pl-5 mb-4 text-gray-700">
+            <li>不要急住辯論，越解釋越容易被帶入他的框架。</li>
+            <li>分清楚建議同攻擊：建議會幫你變好，攻擊只會令你變細。</li>
+            <li>用平靜語氣設限：「我可以聽建議，但我不接受呢種語氣。」</li>
+          </ul>
+          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">你不需要變得完美先值得被愛。自信不是逞強，而是知道自己不應該被任何人日日打壓。</p>
         `
       },
       {
         id: 2,
-        title: "對方事事挑剔，令你唔敢再表達自己？",
-        category: "自我價值",
-        color: "bg-asteria-yellow/50",
-        icon: "fa-solid fa-person-rays",
-        imageLabel: "自信",
-        summary: "如何面對「挑剔型」伴侶，重建自信。你不需要變得完美才值得被愛。",
+        title: "對佢好但佢唔領情？原來你一直做緊「假性努力」",
+        category: "付出心理學",
+        color: "bg-[#FFE7DD]",
+        icon: "fa-solid fa-hand-holding-heart",
+        imageLabel: "付出",
+        summary: "付出不是越多越好，而是要付出得準。用錯方式愛人，只會令雙方都覺得委屈。",
         content: `
-          <h3 class="text-xl font-bold mb-4">你是女朋友，不是他的員工</h3>
-          <p class="mb-4">「你著得咁醜架」、「你煮野食好難食」、「你講野好無腦」... 這些說話聽多了，你會開始懷疑自己：係咪我真係咁差？</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">挑剔背後的心理</h4>
-          <p class="mb-4">挑剔往往源於對方內心的**不安全感**或**控制慾**。通過貶低你，他能獲得一種優越感和掌控感。</p>
-          <p class="mb-4">記住：**他對你的批評，反映的是他的修養，而不是你的價值。**</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">溫柔而堅定地設限</h4>
-          <p class="mb-4">下次他再無理挑剔，試著平靜地看著他說：「親愛的，我可以接受建議，但我不接受這種語氣。這讓我很受傷。」</p>
-          <p class="mb-4">如果他愛你，他會反思。如果他變本加厲，這段關係或許需要重新審視。</p>
-          
-          <p class="mt-6 p-4 bg-gray-50 rounded-lg text-sm text-gray-500">
-            缺乏自信會讓你的氣場變弱，更容易吸引到打壓你的人。推薦佩戴 <span class="text-asteria-primary font-bold">草莓晶或粉晶</span>，或者進行 <span class="text-asteria-primary font-bold">個人魅力儀式</span> 來增強自信光環。
-          </p>
+          <h3 class="text-xl font-bold mb-4">你以為感動佢，其實只係感動自己</h3>
+          <p class="mb-4">你幫佢煮早餐、提佢食藥、幫佢執屋，覺得自己已經做到 100 分。到最後佢一句：「我都無叫你做。」你即刻心碎。</p>
+          <p class="mb-4">問題未必是你不夠好，而是你做緊「假性努力」：你用自己以為好的方式去愛他，卻沒有對準他的真正需要。</p>
+          <h4 class="font-bold text-lg mb-2 text-asteria-primary">真正有效的付出</h4>
+          <ul class="list-disc pl-5 mb-4 text-gray-700">
+            <li>對方想要空間，就不要用關心塞滿他的時間。</li>
+            <li>對方想被聆聽，就不要急住給建議或批評。</li>
+            <li>做一件他真正需要的事，勝過做十件你自己覺得感人的事。</li>
+          </ul>
+          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">愛不是用力到筋疲力盡，而是先看清楚對方需要什麼，再決定你要給什麼。</p>
         `
       },
       {
         id: 3,
-        title: "點解講極分手，佢都唔驚失去我？",
-        category: "挽回攻略",
+        title: "衝動鬧分手後悔了點算？黃金 72 小時挽回攻略",
+        category: "假性分手",
         color: "bg-asteria-pink/60",
         icon: "fa-solid fa-heart-circle-exclamation",
-        imageLabel: "底線",
-        summary: "破解「假性分手」與「狼來了」效應。要讓對方學會珍惜，你需要的是底線。",
+        imageLabel: "挽回",
+        summary: "有些分手不是不愛，而是情緒上頭。重點是承認傷害、先降溫，再慢慢重建溝通橋樑。",
         content: `
-          <h3 class="text-xl font-bold mb-4">別讓「分手」變成口頭禪</h3>
-          <p class="mb-4">很多女生說分手，其實是想被挽留。第一次他說對不起，第二次他哄你，第十次... 他就累了，直接答應你。</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">狼來了效應</h4>
-          <p class="mb-4">當你沒有真的想走，卻用離開來威脅對方，你在他潛意識裡就變得「廉價」了。他知道你離不開他，所以有恃無恐。</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">真正的底線</h4>
-          <p class="mb-4">要讓他害怕失去你，不是靠嘴巴說，而是靠**行為**。專注在自己的生活，打扮得漂漂亮亮，有自己的社交圈。</p>
-          <p class="mb-4">當你把注意力從他身上收回來，他才會感到慌張：「咦？她是不是不愛我了？」這時候，他的征服慾才會回來。</p>
-          
-           <p class="mt-6 p-4 bg-gray-50 rounded-lg text-sm text-gray-500">
-            如果你已經「弄假成真」被分手了，千萬不要死纏爛打。這時候最有效的是 <span class="text-asteria-primary font-bold">西班牙鎖心復合儀式</span>，在能量層面讓他主動想起你的好，消除負面印象。
-          </p>
+          <h3 class="text-xl font-bold mb-4">一句晦氣說話，對方竟然當真</h3>
+          <p class="mb-4">你講「分手」其實是想被挽留，想知道對方有幾緊張你。但對方聽到的，可能是被拒絕、被否定、被推開。</p>
+          <p class="mb-4">如果你衝動講了分手又後悔，最重要不是即刻逼他復合，而是把傷害降到最低。</p>
+          <h4 class="font-bold text-lg mb-2 text-asteria-primary">黃金 72 小時急救</h4>
+          <ul class="list-disc pl-5 mb-4 text-gray-700">
+            <li>放下自尊，承認自己情緒失控，而不是反過來怪他不挽留。</li>
+            <li>真誠道歉：「我剛才太激動，講了傷害你的話，其實我無心分手。」</li>
+            <li>道歉後給他時間消化，不要不停追問答案。</li>
+          </ul>
+          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">不要讓「分手」變成口頭禪。真正想被珍惜，靠的不是威脅離開，而是建立穩定、清楚、有底線的溝通。</p>
         `
       },
       {
         id: 4,
-        title: "曖昧期必看！如何判斷佢係咪認真？",
-        category: "脫單指南",
-        color: "bg-[#FFE7DD]",
+        title: "女人太主動會貶值？教你「主動的矜持」讓男人負責任",
+        category: "兩性博弈",
+        color: "bg-asteria-blue/60",
         icon: "fa-regular fa-face-kiss-wink-heart",
-        imageLabel: "曖昧",
-        summary: "區分「暖男」與「中央空調」。秒回不代表喜歡，細節見真章。",
+        imageLabel: "矜持",
+        summary: "矜持不是坐著等，主動也不是倒貼。真正有智慧的做法，是製造機會，再讓對方完成關鍵一步。",
         content: `
-          <h3 class="text-xl font-bold mb-4">他對我是喜歡，還是釣魚？</h3>
-          <p class="mb-4">曖昧讓人受盡委屈。他每天跟你早安晚安，但從來不約你見面？或者見面很親密，回家就失蹤？</p>
-          
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">稀缺資源法則</h4>
-          <p class="mb-4">看一個男人是否認真，不要看他擁有很多的東西（例如時間多的男人秒回你不稀奇，有錢的男人請食飯不稀奇）。</p>
-          <p class="mb-4">要看他願意為你付出什麼**稀缺資源**。</p>
+          <h3 class="text-xl font-bold mb-4">主動，不等於失去身價</h3>
+          <p class="mb-4">曖昧中的你，可能一直等對方開口；有結婚打算的你，可能一直等男朋友求婚。可是如果你完全不給訊號，對方也可能以為你沒有興趣。</p>
+          <p class="mb-4">「主動的矜持」不是追著他跑，而是懂得拋波，讓他有位置接住，再由他完成最後一步。</p>
+          <h4 class="font-bold text-lg mb-2 text-asteria-primary">點樣主動得有分寸？</h4>
           <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>大忙人願意抽空陪你 = 真心</li>
-            <li>木訥男願意為你製造驚喜 = 真心</li>
-            <li>未來規劃裡有你 = 真心</li>
+            <li>你可以製造見面機會，但不必每次都由你安排到底。</li>
+            <li>你可以表達欣賞，但不要把關係責任全部扛上身。</li>
+            <li>你可以給訊號，但保留讓他表態、承擔、推進的空間。</li>
           </ul>
-          
-          <p class="mt-6 p-4 bg-gray-50 rounded-lg text-sm text-gray-500">
-            想突破曖昧期，讓對方主動表白？可以嘗試 <span class="text-asteria-primary font-bold">加速顯化儀式</span>，推動緣分發展。
-          </p>
+          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">高價值不是扮冷淡，而是知道自己可以主動選擇，同時不失去自己的位置。</p>
+        `
+      },
+      {
+        id: 5,
+        title: "男朋友唔肯改？90% 關係問題源自「勸導」失敗",
+        category: "兩性溝通",
+        color: "bg-[#E7F4F2]",
+        icon: "fa-regular fa-comments",
+        imageLabel: "引導",
+        summary: "越逼對方改，對方越反抗。有效溝通不是命令，而是引導他自己講出改變的理由。",
+        content: `
+          <h3 class="text-xl font-bold mb-4">點解你講極佢都唔改？</h3>
+          <p class="mb-4">你可能講過很多次：「我叫你唔好咁做，點解你都係唔改？」然後對方只會回你：「你又哦我，好煩。」</p>
+          <p class="mb-4">人被逼時會自然產生心理抗拒。你越用力推，他越想證明自己有自主權，所以直接勸導經常失敗。</p>
+          <h4 class="font-bold text-lg mb-2 text-asteria-primary">由勸導改成引導</h4>
+          <ul class="list-disc pl-5 mb-4 text-gray-700">
+            <li>少講「你應該」，多問「如果咁樣，會唔會舒服啲？」</li>
+            <li>不要做教官，要做盟友，讓對方覺得你們是同一邊。</li>
+            <li>先理解他抗拒的原因，再討論可以調整的做法。</li>
+          </ul>
+          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">真正有用的溝通，不是贏一場辯論，而是令對方願意同你一齊解決問題。</p>
+        `
+      },
+      {
+        id: 6,
+        title: "男朋友唔識氹人？教你 3 招調教直男，令佢主動錫返你",
+        category: "兩性相處",
+        color: "bg-asteria-yellow/50",
+        icon: "fa-solid fa-heart",
+        imageLabel: "氹人",
+        summary: "很多男生不是不愛，而是不知道怎樣安撫情緒。你要給清晰指引，再用正向回應強化他的行為。",
+        content: `
+          <h3 class="text-xl font-bold mb-4">他不是一定不在乎，可能是真的不懂</h3>
+          <p class="mb-4">你嬲了一整晚，他竟然走去睡覺；你想他安慰，他卻問：「咁你想我點？」這些反應很容易令人覺得自己不被愛。</p>
+          <p class="mb-4">很多男生是結果導向，習慣解決問題，不習慣處理情緒。你黑面時，他可能以為自己講多錯多，所以選擇走開。</p>
+          <h4 class="font-bold text-lg mb-2 text-asteria-primary">3 個引導方法</h4>
+          <ul class="list-disc pl-5 mb-4 text-gray-700">
+            <li>直接講需求：「我而家不開心，我想你抱住我 5 分鐘。」</li>
+            <li>把抽象要求變成具體動作，例如陪你坐低、聽你講完、不要即刻反駁。</li>
+            <li>他做對時要回應：「你剛才咁樣氹我，我真係舒服好多。」</li>
+          </ul>
+          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">想對方變暖，不是靠生悶氣等他猜中，而是讓他知道怎樣做會令你感受到愛。</p>
         `
       }
     ];
