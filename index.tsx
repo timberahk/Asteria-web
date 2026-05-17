@@ -2964,41 +2964,50 @@ const AdminInboxPage = () => {
                     key={customer.id}
                     className="flex items-stretch gap-2 border-b border-asteria-cream/50 bg-white hover:bg-[#FFF8EC] transition-all"
                   >
-                    <button
-                      onClick={() => openThread(customer.id)}
-                      className="min-w-0 flex-1 text-left p-4"
-                    >
+                    <div className="min-w-0 flex-1 p-4">
                       <div className="flex items-start gap-3">
                         <div className={`w-11 h-11 rounded-full flex items-center justify-center font-bold shrink-0 ${unreadCount ? 'bg-asteria-primary text-white' : 'bg-asteria-blue/45 text-asteria-primary'}`}>
                           {customer.name.slice(0, 1).toUpperCase()}
                         </div>
                         <div className="min-w-0 flex-1">
-                          <div className="flex items-center justify-between gap-2">
-                            <div className="font-bold text-asteria-dark truncate">{customer.name}</div>
-                            <div className="flex items-center gap-2 shrink-0">
-                              {unreadCount > 0 && (
-                                <span className="min-w-6 h-6 px-2 rounded-full bg-asteria-primary text-white text-xs font-bold flex items-center justify-center">
-                                  {unreadCount}
-                                </span>
-                              )}
-                              <div className="text-[11px] text-stone-400">{lastMessage ? formatEntryDate(lastMessage.createdAt) : ''}</div>
+                          <button onClick={() => openThread(customer.id)} className="w-full text-left">
+                            <div className="flex items-center justify-between gap-2">
+                              <div className="font-bold text-asteria-dark truncate">{customer.name}</div>
+                              <div className="flex items-center gap-2 shrink-0">
+                                {unreadCount > 0 && (
+                                  <span className="min-w-6 h-6 px-2 rounded-full bg-asteria-primary text-white text-xs font-bold flex items-center justify-center">
+                                    {unreadCount}
+                                  </span>
+                                )}
+                                <div className="text-[11px] text-stone-400">{lastMessage ? formatEntryDate(lastMessage.createdAt) : ''}</div>
+                              </div>
                             </div>
+                          </button>
+                          <div className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-stone-400">
+                            <button onClick={() => openThread(customer.id)} className="min-w-0 text-left truncate">
+                              {customer.accountUsername ? `@${customer.accountUsername}` : '未有 account 名'} · {customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}
+                            </button>
+                            <button
+                              onClick={() => markThreadReadState(customer, 'unread')}
+                              className="rounded-full border border-asteria-cream bg-asteria-yellow/35 px-2.5 py-1 text-[11px] font-bold text-asteria-primary whitespace-nowrap"
+                            >
+                              設為未讀
+                            </button>
                           </div>
-                          <div className="text-xs text-stone-400 mt-0.5">
-                            {customer.accountUsername ? `@${customer.accountUsername}` : '未有 account 名'} · {customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}
-                          </div>
-                          <div className={`text-sm truncate mt-1 ${unreadCount ? 'text-asteria-dark font-bold' : 'text-stone-500'}`}>
+                          <button onClick={() => openThread(customer.id)} className={`block w-full text-left text-sm truncate mt-1 ${unreadCount ? 'text-asteria-dark font-bold' : 'text-stone-500'}`}>
                             {lastMessage ? `${lastMessage.sender === 'admin' ? '你：' : ''}${lastMessage.text || '圖片'}` : '未有訊息'}
-                          </div>
+                          </button>
                         </div>
                       </div>
-                    </button>
-                    <button
-                      onClick={() => markThreadReadState(customer, 'unread')}
-                      className="m-3 ml-0 self-center rounded-full border border-asteria-cream bg-asteria-yellow/30 px-3 py-2 text-xs font-bold text-asteria-primary whitespace-nowrap"
-                    >
-                      未讀
-                    </button>
+                    </div>
+                    <div className="hidden lg:flex items-center pr-4">
+                      <button
+                        onClick={() => markThreadReadState(customer, 'unread')}
+                        className="rounded-full border border-asteria-cream bg-asteria-yellow/30 px-3 py-2 text-xs font-bold text-asteria-primary whitespace-nowrap"
+                      >
+                        未讀
+                      </button>
+                    </div>
                   </div>
                 );
               })}
