@@ -166,6 +166,22 @@ export const getMySpace = async () => {
   if (profileResult.error) throw profileResult.error;
   if (threadResult.error) throw threadResult.error;
 
+  const account = accountResult.data as SpaceAccount;
+  let profile = profileResult.data as SpaceProfile | null;
+  if (!profile) {
+    const createdProfile = await client
+      .from('profiles')
+      .upsert({
+        id: userId,
+        display_name: account.label,
+        contact_email: account.contact_email
+      }, { onConflict: 'id' })
+      .select()
+      .single();
+    if (createdProfile.error) throw createdProfile.error;
+    profile = createdProfile.data as SpaceProfile;
+  }
+
   let thread = threadResult.data as SpaceThread | null;
   if (!thread) {
     const created = await client
@@ -173,8 +189,17 @@ export const getMySpace = async () => {
       .insert({ customer_id: userId })
       .select()
       .single();
-    if (created.error) throw created.error;
-    thread = created.data as SpaceThread;
+    if (created.error) {
+      const existingThread = await client
+        .from('message_threads')
+        .select('*')
+        .eq('customer_id', userId)
+        .maybeSingle();
+      if (existingThread.error || !existingThread.data) throw created.error;
+      thread = existingThread.data as SpaceThread;
+    } else {
+      thread = created.data as SpaceThread;
+    }
   }
 
   const { data: messages, error: messagesError } = await client
@@ -195,8 +220,8 @@ export const getMySpace = async () => {
   if (entriesError && !isMissingRelationError(entriesError)) throw entriesError;
 
   return {
-    account: accountResult.data as SpaceAccount,
-    profile: profileResult.data as SpaceProfile | null,
+    account,
+    profile,
     thread,
     messages: (messages || []) as SpaceMessage[],
     entries: (entriesError ? [] : entries || []) as SpaceEntry[]
@@ -263,54 +288,8 @@ export const sendMyMessage = async (threadId: string, body: string, imagePaths: 
 };
 
 export const listStaffInbox = async () => {
-  const client = requireSupabase();
-
-  const { data: threads, error: threadError } = await client
-    .from('message_threads')
-    .select('*')
-    .order('last_message_at', { ascending: false });
-  if (threadError) throw threadError;
-
-  const threadRows = (threads || []) as SpaceThread[];
-  const customerIds = threadRows.map((thread) => thread.customer_id);
-  if (customerIds.length === 0) return [] as StaffInboxCustomer[];
-
-  const [accountResult, profileResult, messageResult, entryResult] = await Promise.all([
-    client.from('user_accounts').select('user_id, username, role, label, contact_email').in('user_id', customerIds),
-    client.from('profiles').select('*').in('id', customerIds),
-    client.from('chat_messages').select('*').in('thread_id', threadRows.map((thread) => thread.id)).order('created_at', { ascending: true }),
-    client.from('space_entries').select('*').in('customer_id', customerIds).order('entry_date', { ascending: false }).order('created_at', { ascending: false })
-  ]);
-
-  if (accountResult.error) throw accountResult.error;
-  if (profileResult.error) throw profileResult.error;
-  if (messageResult.error) throw messageResult.error;
-  if (entryResult.error && !isMissingRelationError(entryResult.error)) throw entryResult.error;
-
-  const accounts = ((accountResult.data || []) as SpaceAccount[]).reduce<Record<string, SpaceAccount>>((map, account) => {
-    map[account.user_id] = account;
-    return map;
-  }, {});
-  const profiles = ((profileResult.data || []) as SpaceProfile[]).reduce<Record<string, SpaceProfile>>((map, profile) => {
-    map[profile.id] = profile;
-    return map;
-  }, {});
-  const messagesByThread = ((messageResult.data || []) as SpaceMessage[]).reduce<Record<string, SpaceMessage[]>>((map, message) => {
-    map[message.thread_id] = [...(map[message.thread_id] || []), message];
-    return map;
-  }, {});
-  const entriesByCustomer = ((entryResult.error ? [] : entryResult.data || []) as SpaceEntry[]).reduce<Record<string, SpaceEntry[]>>((map, entry) => {
-    map[entry.customer_id] = [...(map[entry.customer_id] || []), entry];
-    return map;
-  }, {});
-
-  return threadRows.map((thread) => ({
-    account: accounts[thread.customer_id] || null,
-    profile: profiles[thread.customer_id] || null,
-    thread,
-    messages: messagesByThread[thread.id] || [],
-    entries: entriesByCustomer[thread.customer_id] || []
-  }));
+  const result = await apiRequest<{ inbox: StaffInboxCustomer[] }>('space-list-inbox', {});
+  return result.inbox;
 };
 
 export const createSpaceEntry = async (payload: {
@@ -396,7 +375,7 @@ export const staffCreateAccount = (payload: {
   label: string;
   contactEmail?: string;
   role: SpaceRole;
-}) => apiRequest<{ account: SpaceAccount }>('space-create-account', payload);
+}) => apiRequest<{ account: SpaceAccount; repaired?: boolean }>('space-create-account', payload);
 
 export const staffResetPassword = (payload: { username: string; password: string }) =>
   apiRequest<{ ok: boolean }>('space-reset-password', payload);

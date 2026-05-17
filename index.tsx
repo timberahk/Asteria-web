@@ -2414,10 +2414,6 @@ const AdminInboxPage = () => {
       setAccountMessage('請填 account 名，同最少 8 個字的 password。');
       return;
     }
-    if (accounts.some((account) => account.username === trimmedUsername)) {
-      setAccountMessage('呢個 account 名已經存在。');
-      return;
-    }
 
     if (isBackendConfigured) {
       try {
@@ -2459,7 +2455,7 @@ const AdminInboxPage = () => {
         setNewAccountEmail('');
         setNewAccountPassword('');
         setNewAccountRole('customer');
-        setAccountMessage('Account 已新增。');
+        setAccountMessage(result.repaired ? 'Account 已存在，已補齊 Space record。' : 'Account 已新增。');
       } catch (error) {
         setAccountMessage(error instanceof Error ? error.message : '新增 account 失敗。');
       }

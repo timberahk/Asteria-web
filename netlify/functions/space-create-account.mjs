@@ -1,5 +1,46 @@
 import { json, logAudit, makeAuthEmail, normalizeUsername, parseBody, requireAdmin } from './_space-utils.mjs';
 
+const findAuthUserByEmail = async (admin, email) => {
+  let page = 1;
+  while (page < 20) {
+    const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
+    if (error) throw error;
+    const user = (data.users || []).find((item) => item.email === email);
+    if (user) return user;
+    if (!data.users || data.users.length < 1000) return null;
+    page += 1;
+  }
+  return null;
+};
+
+const ensureSpaceRows = async (admin, { userId, username, authEmail, role, label, contactEmail, actorId }) => {
+  const { error: accountError } = await admin.from('user_accounts').upsert({
+    user_id: userId,
+    username,
+    auth_email: authEmail,
+    role,
+    label,
+    contact_email: contactEmail,
+    created_by: actorId
+  }, { onConflict: 'user_id' });
+  if (accountError) throw accountError;
+
+  const { error: profileError } = await admin.from('profiles').upsert({
+    id: userId,
+    display_name: label,
+    contact_email: contactEmail
+  }, { onConflict: 'id' });
+  if (profileError) throw profileError;
+
+  if (role === 'staff') {
+    const { error: adminError } = await admin.from('admin_users').upsert({ user_id: userId }, { onConflict: 'user_id' });
+    if (adminError) throw adminError;
+  } else {
+    const { error: threadError } = await admin.from('message_threads').upsert({ customer_id: userId }, { onConflict: 'customer_id' });
+    if (threadError) throw threadError;
+  }
+};
+
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
 
@@ -17,11 +58,33 @@ export const handler = async (event) => {
 
     const { data: existing } = await admin
       .from('user_accounts')
-      .select('username')
+      .select('user_id, username, role, label, contact_email')
       .eq('username', username)
       .maybeSingle();
 
-    if (existing) return json(409, { error: '呢個 account 名已經存在。' });
+    if (existing) {
+      await ensureSpaceRows(admin, {
+        userId: existing.user_id,
+        username: existing.username,
+        authEmail,
+        role: existing.role,
+        label: existing.label || label,
+        contactEmail: existing.contact_email || contactEmail,
+        actorId: actor.id
+      });
+      await logAudit(admin, actor.id, existing.user_id, 'create_account', { username, role: existing.role, repaired: true });
+
+      return json(200, {
+        repaired: true,
+        account: {
+          user_id: existing.user_id,
+          username: existing.username,
+          role: existing.role,
+          label: existing.label || label,
+          contact_email: existing.contact_email || contactEmail
+        }
+      });
+    }
 
     const { data: created, error: createError } = await admin.auth.admin.createUser({
       email: authEmail,
@@ -34,35 +97,24 @@ export const handler = async (event) => {
       }
     });
 
-    if (createError || !created.user) throw createError || new Error('建立 Auth user 失敗。');
+    let authUser = created?.user || null;
+    if (createError || !authUser) {
+      const existingAuthUser = await findAuthUserByEmail(admin, authEmail);
+      if (!existingAuthUser) throw createError || new Error('建立 Auth user 失敗。');
+      authUser = existingAuthUser;
+    }
 
-    const userId = created.user.id;
+    const userId = authUser.id;
 
-    const { error: accountError } = await admin.from('user_accounts').insert({
-      user_id: userId,
+    await ensureSpaceRows(admin, {
+      userId,
       username,
       auth_email: authEmail,
       role,
       label,
       contact_email: contactEmail,
-      created_by: actor.id
+      actorId: actor.id
     });
-    if (accountError) throw accountError;
-
-    const { error: profileError } = await admin.from('profiles').insert({
-      id: userId,
-      display_name: label,
-      contact_email: contactEmail
-    });
-    if (profileError) throw profileError;
-
-    if (role === 'staff') {
-      const { error: adminError } = await admin.from('admin_users').insert({ user_id: userId });
-      if (adminError) throw adminError;
-    } else {
-      const { error: threadError } = await admin.from('message_threads').insert({ customer_id: userId });
-      if (threadError) throw threadError;
-    }
 
     await logAudit(admin, actor.id, userId, 'create_account', { username, role });
 
