@@ -2668,6 +2668,12 @@ const AdminInboxPage = () => {
     }
   };
 
+  const markChatUnreadFromList = async (customer: PortalCustomer) => {
+    await markThreadReadState(customer, 'unread');
+    setInboxView('list');
+    void loadBackendInbox();
+  };
+
   const openThread = (customerId: string) => {
     setActiveCustomerId(customerId);
     setInboxView('thread');
@@ -2993,7 +2999,7 @@ const AdminInboxPage = () => {
                               {customer.accountUsername ? `@${customer.accountUsername}` : '未有 account 名'} · {customer.phone || customer.igHandle || customer.telegramHandle || '未有聯絡資料'}
                             </button>
                             <button
-                              onClick={() => markThreadReadState(customer, 'unread')}
+                              onClick={() => void markChatUnreadFromList(customer)}
                               className="rounded-full border border-asteria-cream bg-asteria-yellow/35 px-2.5 py-1 text-[11px] font-bold text-asteria-primary whitespace-nowrap"
                             >
                               設為未讀
@@ -3007,7 +3013,7 @@ const AdminInboxPage = () => {
                     </div>
                     <div className="hidden lg:flex items-center pr-4">
                       <button
-                        onClick={() => markThreadReadState(customer, 'unread')}
+                        onClick={() => void markChatUnreadFromList(customer)}
                         className="rounded-full border border-asteria-cream bg-asteria-yellow/30 px-3 py-2 text-xs font-bold text-asteria-primary whitespace-nowrap"
                       >
                         未讀
