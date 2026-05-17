@@ -1,4 +1,4 @@
-import { getAdminClient, getAnonClient, json, normalizeUsername, parseBody } from './_space-utils.mjs';
+import { assertRateLimit, getAdminClient, getAnonClient, getClientIp, json, normalizeUsername, parseBody } from './_space-utils.mjs';
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
@@ -7,6 +7,7 @@ export const handler = async (event) => {
     const { username, password } = parseBody(event);
     const normalizedUsername = normalizeUsername(username);
     if (!normalizedUsername || !password) return json(400, { error: '請輸入 account 名同 password。' });
+    assertRateLimit({ key: `login:${getClientIp(event)}:${normalizedUsername}`, limit: 8 });
 
     const admin = getAdminClient();
     let { data: account, error: accountError } = await admin
@@ -36,7 +37,7 @@ export const handler = async (event) => {
     }
 
     if (accountError || !account) {
-      return json(401, { error: '登入資料不正確，請檢查 account 名或 email。' });
+      return json(401, { error: '登入資料不正確，請檢查 account 名或密碼。' });
     }
 
     const anon = getAnonClient();
@@ -47,7 +48,7 @@ export const handler = async (event) => {
 
     if (loginError || !loginData.session) {
       return json(401, {
-        error: '登入資料不正確，請檢查密碼或聯絡 Asteria。'
+        error: '登入資料不正確，請檢查 account 名或密碼。'
       });
     }
 
@@ -62,6 +63,6 @@ export const handler = async (event) => {
       }
     });
   } catch (error) {
-    return json(500, { error: error.message || '登入暫時失敗。' });
+    return json(error.statusCode || 500, { error: error.message || '登入暫時失敗。' });
   }
 };

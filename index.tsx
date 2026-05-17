@@ -391,7 +391,6 @@ const Oracle = () => {
       // Improved randomness for fallback
       const randomIndex = Math.floor(Math.random() * fallbackReadings.length);
       const random = fallbackReadings[randomIndex];
-      console.log("Using Fallback Card:", random.card_name);
       setReading(random);
       setStep('result');
   };
@@ -2062,8 +2061,8 @@ const SpacePortalPage = () => {
       setPasswordMessage('請輸入舊密碼。');
       return;
     }
-    if (newPassword.trim().length < 6) {
-      setPasswordMessage('新密碼最少 6 個字。');
+    if (newPassword.trim().length < 8) {
+      setPasswordMessage('新密碼最少 8 個字。');
       return;
     }
     if (!isBackendConfigured) {
@@ -3038,8 +3037,8 @@ const AdminInboxPage = () => {
     const trimmedEmail = newAccountEmail.trim();
     const trimmedPassword = newAccountPassword.trim();
     const trimmedName = newAccountName.trim() || 'Asteria 客人';
-    if (!trimmedUsername || trimmedPassword.length < 6) {
-      setAccountMessage('請填 account 名，同最少 6 個字的 password。');
+    if (!trimmedUsername || trimmedPassword.length < 8) {
+      setAccountMessage('請填 account 名，同最少 8 個字的 password。');
       return;
     }
     if (accounts.some((account) => account.username === trimmedUsername)) {
@@ -3100,8 +3099,8 @@ const AdminInboxPage = () => {
 
   const resetAccountPassword = async (username: string) => {
     const nextPassword = (resetPasswords[username] || '').trim();
-    if (nextPassword.length < 6) {
-      setAccountMessage('新 password 最少 6 個字。');
+    if (nextPassword.length < 8) {
+      setAccountMessage('新 password 最少 8 個字。');
       return;
     }
     if (isBackendConfigured) {

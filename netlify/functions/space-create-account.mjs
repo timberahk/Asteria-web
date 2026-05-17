@@ -13,7 +13,7 @@ export const handler = async (event) => {
     const contactEmail = String(body.contactEmail || '').trim() || null;
     const authEmail = makeAuthEmail(username);
 
-    if (password.length < 6) return json(400, { error: 'Password 最少 6 個字。' });
+    if (password.length < 8) return json(400, { error: 'Password 最少 8 個字。' });
 
     const { data: existing } = await admin
       .from('user_accounts')

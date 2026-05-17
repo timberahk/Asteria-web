@@ -10,7 +10,7 @@ export const handler = async (event) => {
     const nextPassword = String(password || '').trim();
 
     if (!normalizedUsername) return json(400, { error: '請輸入 account 名。' });
-    if (nextPassword.length < 6) return json(400, { error: '新 password 最少 6 個字。' });
+    if (nextPassword.length < 8) return json(400, { error: '新 password 最少 8 個字。' });
 
     const { data: account, error: accountError } = await admin
       .from('user_accounts')

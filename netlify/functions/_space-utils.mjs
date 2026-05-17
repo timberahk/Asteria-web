@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const rateLimitBuckets = new Map();
 
 export const json = (statusCode, body) => ({
   statusCode,
@@ -48,6 +49,27 @@ export const parseBody = (event) => {
 };
 
 export const normalizeUsername = (value) => String(value || '').trim().toLowerCase();
+
+export const getClientIp = (event) => {
+  const forwardedFor = event.headers['x-forwarded-for'] || event.headers['X-Forwarded-For'] || '';
+  return String(forwardedFor).split(',')[0].trim() || event.headers['client-ip'] || 'unknown';
+};
+
+export const assertRateLimit = ({ key, limit = 8, windowMs = 15 * 60 * 1000 }) => {
+  const now = Date.now();
+  const bucket = rateLimitBuckets.get(key);
+  if (!bucket || bucket.resetAt <= now) {
+    rateLimitBuckets.set(key, { count: 1, resetAt: now + windowMs });
+    return;
+  }
+  bucket.count += 1;
+  if (bucket.count > limit) {
+    const waitMinutes = Math.max(1, Math.ceil((bucket.resetAt - now) / 60000));
+    const error = new Error(`登入嘗試太多，請 ${waitMinutes} 分鐘後再試。`);
+    error.statusCode = 429;
+    throw error;
+  }
+};
 
 export const makeAuthEmail = (username) => {
   const safe = normalizeUsername(username).replace(/[^a-z0-9._-]/g, '-');
