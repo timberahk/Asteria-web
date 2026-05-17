@@ -1898,7 +1898,7 @@ const SpacePortalPage = () => {
       <main className="pt-36 md:pt-28 pb-10 bg-[#FFFDF8] min-h-screen">
         <ImageViewer images={viewerImages} index={viewerIndex} onSelect={setViewerIndex} onClose={() => setViewerImages([])} />
         <div className="container mx-auto px-4 max-w-5xl">
-          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col min-h-[760px]">
+          <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[calc(100vh-9rem)] min-h-[700px] max-h-[980px]">
             <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
@@ -2891,7 +2891,7 @@ const AdminInboxPage = () => {
             </div>
           </section>
 
-          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col min-h-[760px]`}>
+          <section className={`${inboxView === 'thread' ? 'flex' : 'hidden'} bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex-col h-[calc(100vh-9rem)] min-h-[700px] max-h-[980px]`}>
             <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
                 <button onClick={() => setInboxView('list')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
