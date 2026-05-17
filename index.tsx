@@ -144,13 +144,13 @@ const Navbar = () => {
           <span className="font-bold whitespace-nowrap">IG帳號暫停通知</span>
           <span className="text-white/80 whitespace-nowrap">請用以下方式聯絡我地：</span>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
-            <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
+            <i className="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
           <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#1877F2] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-facebook-f"></i> Facebook
           </a>
           <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#2AABEE] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
-            <i className="fa-brands fa-telegram"></i> Telegram @asteriahongkong
+            <i className="fa-brands fa-telegram"></i> Telegram
           </a>
         </div>
       </div>
@@ -194,13 +194,13 @@ const Hero = () => (
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
-                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 5941 3688
+                    <i className="fa-brands fa-whatsapp"></i> WhatsApp
                   </a>
                   <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-facebook-f"></i> Facebook
                   </a>
                   <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-2 bg-[#2AABEE] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
-                    <i className="fa-brands fa-telegram"></i> Telegram @asteriahongkong
+                    <i className="fa-brands fa-telegram"></i> Telegram
                   </a>
                 </div>
               </div>
@@ -3083,18 +3083,26 @@ const Footer = () => (
         用心聆聽，用愛療癒。<br/>
         我們致力於運用白魔法與塔羅智慧，為你在迷惘中找到出口。
       </p>
-      <div className="flex justify-center gap-6 mb-8">
-        <a href="https://www.instagram.com/asteria.CRYSTAL.TAROT" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-asteria-primary hover:bg-asteria-primary hover:text-white transition-all shadow-sm">
-          <i className="fa-brands fa-instagram text-xl"></i>
-        </a>
-        <a href={WHATSAPP_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
+      <div className="flex justify-center gap-4 mb-6">
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-whatsapp text-xl"></i>
         </a>
-        <a href={FACEBOOK_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+        <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" aria-label="Facebook" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-facebook-f text-xl"></i>
         </a>
-        <a href={TELEGRAM_URL} className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-sky-500 hover:bg-sky-500 hover:text-white transition-all shadow-sm" title="Telegram @asteriahongkong" target="_blank" rel="noreferrer">
+        <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" aria-label="Telegram" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-sky-500 hover:bg-sky-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-telegram text-xl"></i>
+        </a>
+      </div>
+      <div className="mx-auto mb-8 grid gap-2 text-sm text-stone-500 max-w-md">
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
+          WhatsApp：5941 3688
+        </a>
+        <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
+          Telegram：@asteriahongkong
+        </a>
+        <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
+          Facebook：Asteria
         </a>
       </div>
       <p className="text-gray-400 text-xs font-sans">
