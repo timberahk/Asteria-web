@@ -3079,14 +3079,6 @@ const AdminInboxPage = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="hidden lg:flex items-center pr-4">
-                      <button
-                        onClick={() => void markChatUnreadFromList(customer)}
-                        className="rounded-full border border-asteria-cream bg-asteria-yellow/30 px-3 py-2 text-xs font-bold text-asteria-primary whitespace-nowrap"
-                      >
-                        未讀
-                      </button>
-                    </div>
                   </div>
                 );
               })}
