@@ -3338,7 +3338,7 @@ const FloatingWhatsApp = () => (
     target="_blank"
     rel="noreferrer"
     aria-label="WhatsApp 聯絡 Asteria"
-    className="fixed right-4 bottom-4 z-[70] inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-white font-bold shadow-xl shadow-green-900/20 hover:brightness-95 hover:-translate-y-0.5 transition-all"
+    className="fixed right-5 bottom-[calc(1.25rem+env(safe-area-inset-bottom))] z-[9999] inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-white font-bold shadow-xl shadow-green-900/20 hover:brightness-95 hover:-translate-y-0.5 transition-all"
   >
     <i className="fa-brands fa-whatsapp text-xl"></i>
     <span className="hidden sm:inline">WhatsApp</span>
@@ -3416,6 +3416,7 @@ const App = () => {
       <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
         <Navbar />
         <SessionCheckingPage />
+        <FloatingWhatsApp />
       </div>
     );
   }
@@ -3426,6 +3427,7 @@ const App = () => {
         <Navbar />
         <Blog fullPage />
         <Footer />
+        <FloatingWhatsApp />
       </div>
     );
   }
