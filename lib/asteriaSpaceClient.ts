@@ -234,6 +234,11 @@ export const listStaffInbox = async () => {
   return result.inbox;
 };
 
+export const getStaffThread = async (payload: { customerId?: string; threadId?: string }) => {
+  const result = await apiRequest<{ item: StaffInboxCustomer }>('space-get-thread', payload);
+  return result.item;
+};
+
 export const markStaffThreadRead = (payload: { threadId: string; mode?: 'read' | 'unread' }) =>
   apiRequest<{ ok: boolean; read_state: SpaceThreadReadState | null; unsupported?: boolean }>('space-mark-thread-read', payload);
 

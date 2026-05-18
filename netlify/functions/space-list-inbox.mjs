@@ -2,6 +2,15 @@ import { json, requireAdmin } from './_space-utils.mjs';
 
 const isMissingRelationError = (error) => error && ['42P01', 'PGRST205'].includes(error.code);
 
+const mapLimit = async (items, limit, worker) => {
+  const results = [];
+  for (let index = 0; index < items.length; index += limit) {
+    const chunk = items.slice(index, index + limit);
+    results.push(...await Promise.all(chunk.map(worker)));
+  }
+  return results;
+};
+
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
 
@@ -37,35 +46,37 @@ export const handler = async (event) => {
       if (upsertThreadError) throw upsertThreadError;
     }
 
-    const [threadResult, profileResult, entryResult] = await Promise.all([
+    const [threadResult, profileResult] = await Promise.all([
       admin.from('message_threads').select('*').in('customer_id', customerIds),
-      admin.from('profiles').select('*').in('id', customerIds),
-      admin.from('space_entries').select('*').in('customer_id', customerIds).order('entry_date', { ascending: false }).order('created_at', { ascending: false })
+      admin.from('profiles').select('*').in('id', customerIds)
     ]);
 
     if (threadResult.error) throw threadResult.error;
     if (profileResult.error) throw profileResult.error;
-    if (entryResult.error && !isMissingRelationError(entryResult.error)) throw entryResult.error;
 
     const threads = threadResult.data || [];
     const threadIds = threads.map((thread) => thread.id);
-    const [messageResult, readStateResult] = threadIds.length > 0
+    const [latestMessageResults, readStateResult] = threadIds.length > 0
       ? await Promise.all([
-        admin.from('chat_messages').select('*').in('thread_id', threadIds).order('created_at', { ascending: true }),
+        mapLimit(threadIds, 12, async (threadId) => {
+          const { data, error } = await admin
+            .from('chat_messages')
+            .select('*')
+            .eq('thread_id', threadId)
+            .order('created_at', { ascending: false })
+            .limit(1);
+          if (error) throw error;
+          return data?.[0] || null;
+        }),
         admin.from('thread_read_states').select('*').in('thread_id', threadIds)
       ])
-      : [{ data: [], error: null }, { data: [], error: null }];
-    if (messageResult.error) throw messageResult.error;
+      : [[], { data: [], error: null }];
     if (readStateResult.error && !isMissingRelationError(readStateResult.error)) throw readStateResult.error;
 
     const readStatesByThread = (readStateResult.error ? [] : readStateResult.data || []).reduce((map, state) => {
       map[state.thread_id] = state;
       return map;
     }, {});
-
-    const safeMessageResult = threadIds.length > 0
-      ? messageResult
-      : { data: [], error: null };
 
     const accountsByCustomer = customerAccounts.reduce((map, account) => {
       map[account.user_id] = account;
@@ -83,7 +94,7 @@ export const handler = async (event) => {
       map[thread.customer_id] = thread;
       return map;
     }, {});
-    const messagesByThread = (safeMessageResult.data || []).reduce((map, message) => {
+    const messagesByThread = (latestMessageResults || []).filter(Boolean).reduce((map, message) => {
       const senderAccount = accountsByUserId[message.sender_id];
       map[message.thread_id] = [
         ...(map[message.thread_id] || []),
@@ -92,10 +103,6 @@ export const handler = async (event) => {
           sender_label: senderAccount?.label || senderAccount?.username || null
         }
       ];
-      return map;
-    }, {});
-    const entriesByCustomer = (entryResult.error ? [] : entryResult.data || []).reduce((map, entry) => {
-      map[entry.customer_id] = [...(map[entry.customer_id] || []), entry];
       return map;
     }, {});
 
@@ -108,7 +115,7 @@ export const handler = async (event) => {
           thread,
           read_state: thread ? (readStatesByThread[thread.id] || null) : null,
           messages: thread ? (messagesByThread[thread.id] || []) : [],
-          entries: entriesByCustomer[customerId] || []
+          entries: []
         };
       })
       .filter((item) => item.thread)

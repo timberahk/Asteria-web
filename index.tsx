@@ -7,6 +7,7 @@ import {
   getCurrentAccount,
   getMySpace,
   getSignedImageMap,
+  getStaffThread,
   isBackendConfigured,
   listStaffAccounts,
   listStaffInbox,
@@ -23,6 +24,7 @@ import {
   upsertMyProfile,
   uploadSpaceImages
 } from './lib/asteriaSpaceClient';
+import type { StaffInboxCustomer } from './lib/asteriaSpaceClient';
 
 // --- Components ---
 
@@ -2531,50 +2533,72 @@ const AdminInboxPage = () => {
     saveSystemAccounts(accounts);
   }, [accounts]);
 
+  const mapInboxItemToCustomer = async (item: StaffInboxCustomer, includeSignedImages: boolean): Promise<PortalCustomer> => {
+    const imageMap = includeSignedImages
+      ? await getSignedImageMap(item.messages.flatMap((message) => message.image_urls || []))
+      : {};
+    const profile = item.profile;
+    const account = item.account;
+    const profileDisplayName = (profile?.display_name || '').trim();
+    const displayName = profile?.self_name || (!isGenericSpaceName(profileDisplayName)
+      ? profileDisplayName
+      : account?.label || account?.username || 'Asteria 客人');
+    return {
+      id: item.thread.customer_id,
+      threadId: item.thread.id,
+      name: displayName,
+      phone: profile?.phone_number || '',
+      accountUsername: account?.username || '',
+      whatsapp: profile?.whatsapp || '',
+      igHandle: profile?.ig_handle || '',
+      telegramHandle: profile?.telegram_handle || '',
+      email: profile?.contact_email || account?.contact_email || '',
+      targetName: profile?.self_name || '',
+      originalChannel: 'Asteria Space',
+      interests: [],
+      entries: item.entries.map((entry) => ({
+        id: entry.id,
+        type: entry.entry_type === 'journal' ? 'mood' : 'relationship',
+        title: entry.title,
+        text: entry.body,
+        entryDate: entry.entry_date,
+        createdAt: entry.created_at,
+        updatedAt: entry.updated_at
+      })),
+      messages: item.messages.map((message) => ({
+        id: message.id,
+        sender: message.sender_role === 'admin' ? 'admin' : 'customer',
+        staffName: message.sender_role === 'admin' ? (message.sender_label || undefined) : undefined,
+        text: message.body,
+        images: includeSignedImages ? (message.image_urls || []).map((path) => imageMap[path] || path) : [],
+        createdAt: message.created_at
+      }))
+    };
+  };
+
+  const loadBackendAccounts = async () => {
+    if (!isBackendConfigured) return;
+    try {
+      const backendAccounts = await listStaffAccounts();
+      setAccounts(backendAccounts.map((account) => ({
+        userId: account.user_id,
+        label: account.label,
+        username: account.username,
+        email: account.contact_email || '',
+        password: '',
+        role: account.role,
+        customerId: account.role === 'customer' ? account.user_id : undefined
+      })));
+    } catch (error) {
+      setAccountMessage(error instanceof Error ? error.message : 'Account 管理暫時載入唔到。');
+    }
+  };
+
   const loadBackendInbox = async () => {
     if (!isBackendConfigured) return;
     try {
       const inbox = await listStaffInbox();
-      const imageMap = await getSignedImageMap(inbox.flatMap((item) => item.messages.flatMap((message) => message.image_urls || [])));
-      const nextCustomers: PortalCustomer[] = inbox.map((item) => {
-        const profile = item.profile;
-        const account = item.account;
-        const profileDisplayName = (profile?.display_name || '').trim();
-        const displayName = profile?.self_name || (!isGenericSpaceName(profileDisplayName)
-          ? profileDisplayName
-          : account?.label || account?.username || 'Asteria 客人');
-        return {
-          id: item.thread.customer_id,
-          threadId: item.thread.id,
-          name: displayName,
-          phone: profile?.phone_number || '',
-          accountUsername: account?.username || '',
-          whatsapp: profile?.whatsapp || '',
-          igHandle: profile?.ig_handle || '',
-          telegramHandle: profile?.telegram_handle || '',
-          email: profile?.contact_email || account?.contact_email || '',
-          targetName: profile?.self_name || '',
-          originalChannel: 'Asteria Space',
-          interests: [],
-          entries: item.entries.map((entry) => ({
-            id: entry.id,
-            type: entry.entry_type === 'journal' ? 'mood' : 'relationship',
-            title: entry.title,
-            text: entry.body,
-            entryDate: entry.entry_date,
-            createdAt: entry.created_at,
-            updatedAt: entry.updated_at
-          })),
-          messages: item.messages.map((message) => ({
-            id: message.id,
-            sender: message.sender_role === 'admin' ? 'admin' : 'customer',
-            staffName: message.sender_role === 'admin' ? (message.sender_label || undefined) : undefined,
-            text: message.body,
-            images: (message.image_urls || []).map((path) => imageMap[path] || path),
-            createdAt: message.created_at
-          }))
-        };
-      });
+      const nextCustomers = await Promise.all(inbox.map((item) => mapInboxItemToCustomer(item, false)));
       setCustomers(nextCustomers);
       setReadMarkers((current) => {
         const next = { ...current };
@@ -2592,21 +2616,6 @@ const AdminInboxPage = () => {
       setActiveCustomerId((current) => nextCustomers.find((customer) => customer.id === current)?.id || nextCustomers[0]?.id || '');
     } catch (error) {
       setAccountMessage(error instanceof Error ? error.message : 'Staff inbox 暫時載入唔到。');
-    }
-
-    try {
-      const backendAccounts = await listStaffAccounts();
-      setAccounts(backendAccounts.map((account) => ({
-        userId: account.user_id,
-        label: account.label,
-        username: account.username,
-        email: account.contact_email || '',
-        password: '',
-        role: account.role,
-        customerId: account.role === 'customer' ? account.user_id : undefined
-      })));
-    } catch (error) {
-      setAccountMessage(error instanceof Error ? error.message : 'Account 管理暫時載入唔到。');
     }
   };
 
@@ -2683,6 +2692,19 @@ const AdminInboxPage = () => {
     setStaffThreadPanel('chat');
     const customer = customers.find((item) => item.id === customerId);
     if (customer) void markThreadReadState(customer, 'read');
+    if (isBackendConfigured) {
+      void (async () => {
+        try {
+          const item = await getStaffThread({ customerId });
+          const fullCustomer = await mapInboxItemToCustomer(item, true);
+          setCustomers((current) => current.map((existing) => (
+            existing.id === customerId ? fullCustomer : existing
+          )));
+        } catch (error) {
+          setAccountMessage(error instanceof Error ? error.message : '對話暫時載入唔到。');
+        }
+      })();
+    }
   };
 
   const sendReply = async () => {
@@ -2873,7 +2895,7 @@ const AdminInboxPage = () => {
           <button onClick={openInboxPanel} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'inbox' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
             Inbox
           </button>
-          <button onClick={() => setAdminView('accounts')} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'accounts' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
+          <button onClick={() => { setAdminView('accounts'); void loadBackendAccounts(); }} className={`px-5 py-3 rounded-xl font-bold border whitespace-nowrap ${adminView === 'accounts' ? 'bg-asteria-dark text-white border-asteria-dark' : 'bg-white text-asteria-primary border-asteria-cream'}`}>
             Account 管理
           </button>
         </div>
