@@ -1150,6 +1150,7 @@ type ChatMessage = {
   staffName?: string;
   text: string;
   images?: string[];
+  imagePaths?: string[];
   createdAt: string;
 };
 
@@ -1495,6 +1496,7 @@ const SpacePortalPage = () => {
   const [entryMessage, setEntryMessage] = useState('');
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
   const activeChatImages = (activeCustomer?.messages || []).flatMap((message) => message.images || []);
+  const activeChatImagePaths = (activeCustomer?.messages || []).flatMap((message) => message.imagePaths || []);
   const relationshipEntries = [...(activeCustomer?.entries || [])].filter((entry) => entry.type === 'relationship').sort((a, b) => (b.entryDate || b.createdAt).localeCompare(a.entryDate || a.createdAt));
   const journalEntries = [...(activeCustomer?.entries || [])].filter((entry) => entry.type === 'mood').sort((a, b) => (b.entryDate || b.createdAt).localeCompare(a.entryDate || a.createdAt));
   const currentJournalEntry = journalEntries.find((entry) => entry.entryDate === journalDate);
@@ -1511,10 +1513,41 @@ const SpacePortalPage = () => {
   const customerChatScrollRef = useRef<HTMLDivElement | null>(null);
   const needsFirstProfile = !isSpaceLoading && Boolean(activeCustomer) && !activeCustomer?.phone && !activeCustomer?.whatsapp && !activeCustomer?.igHandle && !activeCustomer?.telegramHandle && !activeCustomer?.targetName;
 
+  const hydrateCustomerChatImages = async () => {
+    if (!activeCustomer) return [] as string[];
+    const paths = (activeCustomer.messages || []).flatMap((message) => message.imagePaths || []);
+    if (paths.length === 0) return activeChatImages;
+    const imageMap = await getSignedImageMap(paths);
+    const urls = paths.map((path) => imageMap[path]).filter(Boolean);
+    updateCustomer((customer) => ({
+      ...customer,
+      messages: (customer.messages || []).map((message) => ({
+        ...message,
+        images: message.imagePaths?.length
+          ? message.imagePaths.map((path) => imageMap[path]).filter(Boolean)
+          : message.images
+      }))
+    }));
+    return urls;
+  };
+
+  const openAllCustomerImages = async () => {
+    const urls = activeChatImages.length ? activeChatImages : await hydrateCustomerChatImages();
+    setViewerImages(urls);
+    setViewerIndex(0);
+  };
+
   const openChatImage = (image: string) => {
     const imageIndex = activeChatImages.indexOf(image);
     setViewerImages(activeChatImages.length ? activeChatImages : [image]);
     setViewerIndex(imageIndex >= 0 ? imageIndex : 0);
+  };
+
+  const openDeferredChatImages = async () => {
+    const urls = await hydrateCustomerChatImages();
+    if (urls.length === 0) return;
+    setViewerImages(urls);
+    setViewerIndex(0);
   };
 
   const jumpCustomerChatDate = (scope: string) => {
@@ -1542,12 +1575,12 @@ const SpacePortalPage = () => {
     setIsSpaceLoading(true);
     try {
       const space = await getMySpace();
-      const imageMap = await getSignedImageMap(space.messages.flatMap((message) => message.image_urls || []));
       const mappedMessages: ChatMessage[] = space.messages.map((message) => ({
         id: message.id,
         sender: message.sender_role === 'admin' ? 'admin' : 'customer',
         text: message.body,
-        images: (message.image_urls || []).map((path) => imageMap[path] || path),
+        images: [],
+        imagePaths: message.image_urls || [],
         createdAt: message.created_at
       }));
       const mappedEntries: PortalEntry[] = space.entries.map((entry) => ({
@@ -1630,6 +1663,7 @@ const SpacePortalPage = () => {
               sender: 'customer',
               text: message.body,
               images: (message.image_urls || []).map((path) => imageMap[path] || path),
+              imagePaths: message.image_urls || [],
               createdAt: message.created_at
             }
           ]
@@ -1647,7 +1681,7 @@ const SpacePortalPage = () => {
       ...customer,
       messages: [
         ...(customer.messages || []),
-        { id: Date.now(), sender: 'customer', text: trimmed, images: chatImages, createdAt: new Date().toISOString() }
+        { id: Date.now(), sender: 'customer', text: trimmed, images: chatImages, imagePaths: [], createdAt: new Date().toISOString() }
       ]
     }));
     setChatText('');
@@ -1926,8 +1960,8 @@ const SpacePortalPage = () => {
                 {spaceMessage && <div className="text-xs font-bold text-red-500 mt-1">{spaceMessage}</div>}
               </div>
               <button
-                onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
-                disabled={activeChatImages.length === 0}
+                onClick={() => void openAllCustomerImages()}
+                disabled={activeChatImages.length === 0 && activeChatImagePaths.length === 0}
                 className="text-sm font-bold text-asteria-primary bg-asteria-yellow/25 px-3 py-2 rounded-xl disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
               >
                 <i className="fa-regular fa-images mr-1"></i> 所有圖片
@@ -1956,11 +1990,17 @@ const SpacePortalPage = () => {
                     <div id={chatMessageDomId('customer-full', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[88%] sm:max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
-                        {message.images && message.images.length > 0 && (
+                        {((message.images && message.images.length > 0) || (message.imagePaths && message.imagePaths.length > 0)) && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
-                            {message.images.map((image, index) => (
+                            {(message.images || []).map((image, index) => (
                               <button key={`${message.id}-space-chat-full-${index}`} onClick={() => openChatImage(image)} className="aspect-square w-full rounded-xl overflow-hidden border border-white/40 cursor-zoom-in">
                                 <img src={image} className="w-full h-full object-cover" alt="chat upload" />
+                              </button>
+                            ))}
+                            {(!message.images || message.images.length === 0) && (message.imagePaths || []).map((_, index) => (
+                              <button key={`${message.id}-space-chat-full-deferred-${index}`} onClick={() => void openDeferredChatImages()} className="aspect-square w-full rounded-xl border border-white/40 bg-white/60 text-asteria-primary flex flex-col items-center justify-center gap-2 cursor-zoom-in">
+                                <i className="fa-regular fa-image text-xl"></i>
+                                <span className="text-xs font-bold">載入圖片</span>
                               </button>
                             ))}
                           </div>
@@ -2339,11 +2379,11 @@ const SpacePortalPage = () => {
                 <h2 className="text-2xl font-bold text-asteria-dark">Inbox</h2>
               </div>
               <button
-                onClick={() => { setViewerImages(activeChatImages); setViewerIndex(0); }}
-                disabled={activeChatImages.length === 0}
+                onClick={() => void openAllCustomerImages()}
+                disabled={activeChatImages.length === 0 && activeChatImagePaths.length === 0}
                 className="bg-asteria-blue/40 text-asteria-dark text-xs font-bold px-3 py-1 rounded-full disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                <i className="fa-regular fa-images mr-1"></i> 所有圖片 · {activeChatImages.length}
+                <i className="fa-regular fa-images mr-1"></i> 所有圖片 · {activeChatImages.length || activeChatImagePaths.length}
               </button>
             </div>
 
@@ -2369,11 +2409,17 @@ const SpacePortalPage = () => {
                     <div id={chatMessageDomId('customer-card', message.id)} key={message.id} className={`scroll-mt-4 flex ${message.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[88%] sm:max-w-[82%] rounded-2xl px-4 py-3 shadow-sm select-text cursor-text min-w-0 ${message.sender === 'customer' ? 'bg-asteria-primary text-white' : 'bg-white text-stone-700 border border-asteria-cream/70'}`}>
                         {message.text && <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</div>}
-                        {message.images && message.images.length > 0 && (
+                        {((message.images && message.images.length > 0) || (message.imagePaths && message.imagePaths.length > 0)) && (
                           <div className="grid grid-cols-2 gap-2 mt-3">
-                            {message.images.map((image, index) => (
+                            {(message.images || []).map((image, index) => (
                               <button key={`${message.id}-space-chat-${index}`} onClick={() => openChatImage(image)} className="aspect-square w-full rounded-xl overflow-hidden border border-white/40 cursor-zoom-in">
                                 <img src={image} className="w-full h-full object-cover" alt="chat upload" />
+                              </button>
+                            ))}
+                            {(!message.images || message.images.length === 0) && (message.imagePaths || []).map((_, index) => (
+                              <button key={`${message.id}-space-chat-deferred-${index}`} onClick={() => void openDeferredChatImages()} className="aspect-square w-full rounded-xl border border-white/40 bg-white/60 text-asteria-primary flex flex-col items-center justify-center gap-2 cursor-zoom-in">
+                                <i className="fa-regular fa-image text-xl"></i>
+                                <span className="text-xs font-bold">載入圖片</span>
                               </button>
                             ))}
                           </div>
