@@ -25,6 +25,8 @@ import {
   uploadSpaceImages
 } from './lib/asteriaSpaceClient';
 import type { StaffInboxCustomer } from './lib/asteriaSpaceClient';
+import { teachingPosts } from './lib/articlesData';
+import type { TeachingPost } from './lib/articlesData';
 
 // --- Components ---
 
@@ -81,11 +83,29 @@ const goHome = (event?: React.MouseEvent<HTMLAnchorElement>) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-type AppPage = 'home' | 'teaching' | 'register' | 'portal' | 'admin' | 'inbox';
+const goHomeSection = (section: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+  event.preventDefault();
+  window.history.pushState(null, '', `/${window.location.search}#${section}`);
+  window.dispatchEvent(new Event('asteria-route-change'));
+  requestAnimationFrame(() => {
+    document.getElementById(section)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  });
+};
+
+const goSpaceEntry = (hash: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+  event.preventDefault();
+  window.history.pushState(null, '', `/${window.location.search}${hash}`);
+  window.dispatchEvent(new Event('asteria-route-change'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+type AppPage = 'home' | 'teaching' | 'about' | 'services' | 'register' | 'portal' | 'admin' | 'inbox';
 
 const getRoutePage = (): AppPage => {
   const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
-  if (cleanPath === 'teaching' || cleanPath.startsWith('articles/') || cleanPath.startsWith('cases/')) return 'teaching';
+  if (cleanPath === 'teaching' || cleanPath === 'cases' || cleanPath.startsWith('articles/')) return 'teaching';
+  if (cleanPath === 'about') return 'about';
+  if (cleanPath === 'services') return 'services';
 
   const rawHash = window.location.hash || '';
   const cleanHash = rawHash
@@ -94,7 +114,9 @@ const getRoutePage = (): AppPage => {
     .trim()
     .toLowerCase();
 
-  if (cleanHash === 'teaching' || cleanHash.startsWith('article-') || cleanHash.startsWith('case-')) return 'teaching';
+  if (cleanHash === 'teaching' || cleanHash === 'cases' || cleanHash.startsWith('article-')) return 'teaching';
+  if (cleanHash === 'about') return 'about';
+  if (cleanHash === 'services') return 'services';
   if (cleanHash === 'register') return 'register';
   if (cleanHash === 'portal') return 'portal';
   if (cleanHash === 'admin') return 'admin';
@@ -102,11 +124,22 @@ const getRoutePage = (): AppPage => {
   return 'home';
 };
 
+const scrollToHashTarget = () => {
+  const hash = window.location.hash;
+  if (!hash || hash === '#home') return;
+  requestAnimationFrame(() => {
+    const target = document.getElementById(hash.slice(1));
+    target?.scrollIntoView({ block: 'start' });
+  });
+};
+
 const Navbar = () => {
   const [role, setRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
   const [showNotice, setShowNotice] = useState(() => window.localStorage.getItem('asteriaHideTopNotice') !== '1');
-  const spaceHref = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
+  const spaceHash = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
+  const spaceHref = `/${spaceHash}`;
   const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
+  const navLinkClass = "hover:text-asteria-primary transition-colors hidden md:inline-flex items-center gap-1.5 whitespace-nowrap";
   const toggleNotice = () => {
     setShowNotice((current) => {
       const next = !current;
@@ -136,12 +169,13 @@ const Navbar = () => {
             ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">感情拯救所</span>
           </div>
         </a>
-        <div className="flex gap-2 md:gap-5 text-sm md:text-base font-medium text-gray-600 items-center">
-          <a href="#oracle" className="hover:text-asteria-primary transition-colors hidden md:inline-block"><i className="fa-solid fa-star text-xs"></i> 每日指引</a>
-          <a href="/teaching" className="hover:text-asteria-primary transition-colors hidden md:inline-block">相處教學</a>
-          <a href="#services" className="hover:text-asteria-primary transition-colors hidden md:inline-block">服務</a>
-          <a href="#reviews" className="hover:text-asteria-primary transition-colors hidden lg:inline-block">好評</a>
-          <a href={spaceHref} className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
+        <div className="flex gap-2 md:gap-4 text-sm md:text-base font-medium text-gray-600 items-center">
+          <a href="/about" className={navLinkClass}><i className="fa-regular fa-heart text-xs"></i> 關於我們</a>
+          <a href="/teaching" className={navLinkClass}><i className="fa-regular fa-newspaper text-xs"></i> 相處教學</a>
+          <a href="/services" className={navLinkClass}><i className="fa-solid fa-wand-magic-sparkles text-xs"></i> 服務</a>
+          <a href="/#oracle" onClick={goHomeSection('oracle')} className={navLinkClass}><i className="fa-regular fa-star text-xs"></i> 每日指引</a>
+          <a href="/#reviews" onClick={goHomeSection('reviews')} className={`${navLinkClass} hidden lg:inline-flex`}><i className="fa-regular fa-comment-dots text-xs"></i> 好評</a>
+          <a href={spaceHref} onClick={goSpaceEntry(spaceHash)} className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
             <i className="fa-regular fa-user"></i> <span>{spaceLabel}</span>
           </a>
           {role && (
@@ -232,20 +266,20 @@ const Hero = () => (
               <div>
                 <div className="font-bold text-asteria-dark mb-1">請留低你的聯絡資料</div>
               </div>
-              <a href="#register" className="bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shrink-0">
+              <a href="/#register" className="bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shrink-0">
                 <i className="fa-regular fa-user"></i> 登入 Space
               </a>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#register" className="bg-asteria-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+            <a href="/#register" className="bg-asteria-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all">
               <i className="fa-regular fa-address-card"></i> 留資料 / 登入 Space
             </a>
-            <a href="#services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
+            <a href="/services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
               <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看儀式分類
             </a>
-            <a href="#oracle" className="bg-white text-asteria-primary border-2 border-asteria-yellow/70 px-8 py-4 rounded-xl font-bold hover:bg-asteria-yellow/20 transition-all flex items-center justify-center gap-2">
+            <a href="/#oracle" className="bg-white text-asteria-primary border-2 border-asteria-yellow/70 px-8 py-4 rounded-xl font-bold hover:bg-asteria-yellow/20 transition-all flex items-center justify-center gap-2">
               <i className="fa-solid fa-star"></i> 今日指引
             </a>
           </div>
@@ -563,194 +597,143 @@ const Oracle = () => {
   );
 };
 
+const GuidanceSection = () => {
+  const guidanceItems = [
+    {
+      title: "逐句訊息 review",
+      desc: "唔係叫你死背罐頭句，而係按你同對方的語氣、關係狀態，睇每句應唔應該講、點樣講會少啲壓迫感。",
+      icon: "fa-regular fa-message"
+    },
+    {
+      title: "日常相處指引",
+      desc: "對方冷淡、已讀不回、忽冷忽熱、講錯嘢後點補救，我哋會幫你拆解下一步應該點處理。",
+      icon: "fa-solid fa-route"
+    },
+    {
+      title: "情緒支援陪伴",
+      desc: "失戀、斷聯、等回覆的時間好難捱，我哋會陪你整理情緒，避免你因為太急而做錯下一步。",
+      icon: "fa-solid fa-hand-holding-heart"
+    },
+    {
+      title: "感情策略方向",
+      desc: "占卜同儀式只係其中一部分，更重要係知道現實中應該點行，幾時進、幾時停、幾時唔好再追問。",
+      icon: "fa-solid fa-compass"
+    }
+  ];
+
+  const painPoints = [
+    "一心急就長篇大論，令對方更想避開",
+    "不停問「你仲愛唔愛我」，逼對方即刻表態",
+    "用情緒試探對方，結果愈試愈無安全感",
+    "明明想修補，講出口卻變成責怪或翻舊帳",
+    "失戀時太痛，忍唔住追訊息、追答案、追承諾"
+  ];
+
+  return (
+    <section className="py-20 bg-white" aria-labelledby="guidance-title">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-12 items-start">
+          <div>
+            <div className="text-sm font-bold text-asteria-primary mb-2">Asteria 不只係占卜同儀式</div>
+            <h2 id="guidance-title" className="text-3xl md:text-4xl font-bold text-asteria-dark leading-tight mb-5">
+              你最亂嗰陣，<br className="hidden md:block" />我哋做你感情路上的指明燈
+            </h2>
+            <p className="text-stone-500 leading-relaxed mb-6">
+              幫襯 Asteria 唔係收完錢就完。我哋會陪你睇清楚局面，亦會手把手教你日常相處：訊息點覆、邊句唔好講、幾時應該退一步、幾時可以推進。尤其失戀、斷聯、冷淡期最難捱的時候，你唔需要自己一個亂估亂衝。
+            </p>
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
+              <i className="fa-brands fa-whatsapp"></i> 想有人陪你拆解
+            </a>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {guidanceItems.map((item) => (
+              <article key={item.title} className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-2xl p-5">
+                <div className="w-11 h-11 rounded-full bg-white text-asteria-primary flex items-center justify-center mb-4 shadow-sm">
+                  <i className={item.icon}></i>
+                </div>
+                <h3 className="text-lg font-bold text-asteria-dark mb-2">{item.title}</h3>
+                <p className="text-sm text-stone-500 leading-relaxed">{item.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 rounded-3xl border border-asteria-cream/70 bg-[#FFFDF8] p-6 md:p-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-6 items-start">
+            <div>
+              <div className="text-sm font-bold text-asteria-primary mb-2">常見卡位</div>
+              <h3 className="text-2xl font-bold text-asteria-dark">通常唔係你唔夠愛，而係方法錯咗</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-3">
+              {painPoints.map((point) => (
+                <div key={point} className="flex items-start gap-3 bg-white rounded-xl border border-asteria-cream/60 p-4">
+                  <i className="fa-solid fa-check text-asteria-primary mt-1"></i>
+                  <span className="text-sm text-stone-600 leading-relaxed">{point}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const AboutPage = () => (
+  <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+    <div className="container mx-auto px-6 max-w-6xl">
+      <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+        <i className="fa-solid fa-arrow-left"></i> 返回首頁
+      </a>
+      <section className="rounded-3xl bg-white border border-asteria-cream/70 p-8 md:p-10 shadow-sm mb-10">
+        <div className="text-sm font-bold text-asteria-primary mb-2">About Asteria</div>
+        <h1 className="text-4xl md:text-5xl font-bold text-asteria-dark leading-tight mb-5">Asteria 感情拯救所</h1>
+        <p className="text-lg text-stone-500 leading-relaxed max-w-3xl">
+          我哋唔只係幫你占卜同安排儀式，更重要係陪你睇清楚局面，教你喺日常相處入面點樣講、點樣做、幾時應該停一停。感情最混亂嗰陣，好多時差一步就講錯、追錯、逼錯；Asteria 就係陪你穩住嗰一步。
+        </p>
+      </section>
+    </div>
+    <GuidanceSection />
+    <div className="container mx-auto px-6 max-w-6xl">
+      <section className="rounded-3xl bg-asteria-dark text-white p-8 md:p-10 mt-10">
+        <div className="text-sm font-bold text-asteria-yellow mb-2">你唔需要自己一個估</div>
+        <h2 className="text-3xl font-bold mb-4">想知道你個情況可以點行？</h2>
+        <p className="text-white/75 leading-relaxed mb-6 max-w-2xl">
+          如果你正面對冷淡、斷聯、分手、復合、第三者、訊息唔知點覆，或者只係情緒好亂，可以直接 WhatsApp 我哋。
+        </p>
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
+          <i className="fa-brands fa-whatsapp"></i> WhatsApp 聯絡
+        </a>
+      </section>
+    </div>
+  </main>
+);
+
 // --- Blog Component (New) ---
 const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const [selectedPost, setSelectedPost] = useState<any>(null);
   
-    const posts = [
-      {
-        id: 1,
-        title: "男朋友對你事事挑剔？拆解「打壓式教育」背後的自卑心理",
-        category: "PUA警號",
-        color: "bg-asteria-yellow/50",
-        icon: "fa-solid fa-person-rays",
-        imageLabel: "自信",
-        summary: "經常被批評不代表你真的差。挑剔式相處很多時是情感操控的前奏，重點是守住自我價值。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">挑剔不是期望，是消耗</h3>
-          <p class="mb-4">「你著呢件衫好肥。」「你煮飯好難食。」「你做事咁慢，有無腦？」如果一段關係入面，對方成日用挑剔包裝成「為你好」，你會慢慢變得小心翼翼，連表達自己都驚。</p>
-          <p class="mb-4">真正愛你的人會接納你的不完美，並用鼓勵代替羞辱。長期貶低你的人，很多時是在透過踩低你，換取自己的優越感。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">點樣面對挑剔型伴侶？</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>不要急住辯論，越解釋越容易被帶入他的框架。</li>
-            <li>分清楚建議同攻擊：建議會幫你變好，攻擊只會令你變細。</li>
-            <li>用平靜語氣設限：「我可以聽建議，但我不接受呢種語氣。」</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">你不需要變得完美先值得被愛。自信不是逞強，而是知道自己不應該被任何人日日打壓。</p>
-        `
-      },
-      {
-        id: 2,
-        title: "對佢好但佢唔領情？原來你一直做緊「假性努力」",
-        category: "付出心理學",
-        color: "bg-[#FFE7DD]",
-        icon: "fa-solid fa-hand-holding-heart",
-        imageLabel: "付出",
-        summary: "付出不是越多越好，而是要付出得準。用錯方式愛人，只會令雙方都覺得委屈。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">你以為感動佢，其實只係感動自己</h3>
-          <p class="mb-4">你幫佢煮早餐、提佢食藥、幫佢執屋，覺得自己已經做到 100 分。到最後佢一句：「我都無叫你做。」你即刻心碎。</p>
-          <p class="mb-4">問題未必是你不夠好，而是你做緊「假性努力」：你用自己以為好的方式去愛他，卻沒有對準他的真正需要。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">真正有效的付出</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>對方想要空間，就不要用關心塞滿他的時間。</li>
-            <li>對方想被聆聽，就不要急住給建議或批評。</li>
-            <li>做一件他真正需要的事，勝過做十件你自己覺得感人的事。</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">愛不是用力到筋疲力盡，而是先看清楚對方需要什麼，再決定你要給什麼。</p>
-        `
-      },
-      {
-        id: 3,
-        title: "衝動鬧分手後悔了點算？黃金 72 小時挽回攻略",
-        category: "假性分手",
-        color: "bg-asteria-pink/60",
-        icon: "fa-solid fa-heart-circle-exclamation",
-        imageLabel: "挽回",
-        summary: "有些分手不是不愛，而是情緒上頭。重點是承認傷害、先降溫，再慢慢重建溝通橋樑。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">一句晦氣說話，對方竟然當真</h3>
-          <p class="mb-4">你講「分手」其實是想被挽留，想知道對方有幾緊張你。但對方聽到的，可能是被拒絕、被否定、被推開。</p>
-          <p class="mb-4">如果你衝動講了分手又後悔，最重要不是即刻逼他復合，而是把傷害降到最低。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">黃金 72 小時急救</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>放下自尊，承認自己情緒失控，而不是反過來怪他不挽留。</li>
-            <li>真誠道歉：「我剛才太激動，講了傷害你的話，其實我無心分手。」</li>
-            <li>道歉後給他時間消化，不要不停追問答案。</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">不要讓「分手」變成口頭禪。真正想被珍惜，靠的不是威脅離開，而是建立穩定、清楚、有底線的溝通。</p>
-        `
-      },
-      {
-        id: 4,
-        title: "女人太主動會貶值？教你「主動的矜持」讓男人負責任",
-        category: "兩性博弈",
-        color: "bg-asteria-blue/60",
-        icon: "fa-regular fa-face-kiss-wink-heart",
-        imageLabel: "矜持",
-        summary: "矜持不是坐著等，主動也不是倒貼。真正有智慧的做法，是製造機會，再讓對方完成關鍵一步。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">主動，不等於失去身價</h3>
-          <p class="mb-4">曖昧中的你，可能一直等對方開口；有結婚打算的你，可能一直等男朋友求婚。可是如果你完全不給訊號，對方也可能以為你沒有興趣。</p>
-          <p class="mb-4">「主動的矜持」不是追著他跑，而是懂得拋波，讓他有位置接住，再由他完成最後一步。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">點樣主動得有分寸？</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>你可以製造見面機會，但不必每次都由你安排到底。</li>
-            <li>你可以表達欣賞，但不要把關係責任全部扛上身。</li>
-            <li>你可以給訊號，但保留讓他表態、承擔、推進的空間。</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">高價值不是扮冷淡，而是知道自己可以主動選擇，同時不失去自己的位置。</p>
-        `
-      },
-      {
-        id: 5,
-        title: "男朋友唔肯改？90% 關係問題源自「勸導」失敗",
-        category: "兩性溝通",
-        color: "bg-[#E7F4F2]",
-        icon: "fa-regular fa-comments",
-        imageLabel: "引導",
-        summary: "越逼對方改，對方越反抗。有效溝通不是命令，而是引導他自己講出改變的理由。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">點解你講極佢都唔改？</h3>
-          <p class="mb-4">你可能講過很多次：「我叫你唔好咁做，點解你都係唔改？」然後對方只會回你：「你又哦我，好煩。」</p>
-          <p class="mb-4">人被逼時會自然產生心理抗拒。你越用力推，他越想證明自己有自主權，所以直接勸導經常失敗。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">由勸導改成引導</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>少講「你應該」，多問「如果咁樣，會唔會舒服啲？」</li>
-            <li>不要做教官，要做盟友，讓對方覺得你們是同一邊。</li>
-            <li>先理解他抗拒的原因，再討論可以調整的做法。</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">真正有用的溝通，不是贏一場辯論，而是令對方願意同你一齊解決問題。</p>
-        `
-      },
-      {
-        id: 6,
-        title: "男朋友唔識氹人？教你 3 招調教直男，令佢主動錫返你",
-        category: "兩性相處",
-        color: "bg-asteria-yellow/50",
-        icon: "fa-solid fa-heart",
-        imageLabel: "氹人",
-        summary: "很多男生不是不愛，而是不知道怎樣安撫情緒。你要給清晰指引，再用正向回應強化他的行為。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">他不是一定不在乎，可能是真的不懂</h3>
-          <p class="mb-4">你嬲了一整晚，他竟然走去睡覺；你想他安慰，他卻問：「咁你想我點？」這些反應很容易令人覺得自己不被愛。</p>
-          <p class="mb-4">很多男生是結果導向，習慣解決問題，不習慣處理情緒。你黑面時，他可能以為自己講多錯多，所以選擇走開。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">3 個引導方法</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>直接講需求：「我而家不開心，我想你抱住我 5 分鐘。」</li>
-            <li>把抽象要求變成具體動作，例如陪你坐低、聽你講完、不要即刻反駁。</li>
-            <li>他做對時要回應：「你剛才咁樣氹我，我真係舒服好多。」</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">想對方變暖，不是靠生悶氣等他猜中，而是讓他知道怎樣做會令你感受到愛。</p>
-        `
-      }
-    ];
+    const posts = teachingPosts;
+    const [articleSearch, setArticleSearch] = useState('');
+    const [activeArticleCategory, setActiveArticleCategory] = useState('全部');
+    const articleCategories = ['全部', ...Array.from(new Set(posts.map((post) => post.category)))];
+    const normalizedArticleSearch = articleSearch.trim().toLowerCase();
+    const visiblePosts = posts.filter((post) => {
+      const matchesCategory = activeArticleCategory === '全部' || post.category === activeArticleCategory;
+      const haystack = `${post.title} ${post.summary} ${post.category} ${post.tags.join(' ')}`.toLowerCase();
+      return matchesCategory && (!normalizedArticleSearch || haystack.includes(normalizedArticleSearch));
+    });
+    const homePosts = posts.slice(0, 4);
 
-    const casePosts = [
-      {
-        id: 1,
-        title: "冷淡期點樣重新拉近？由抗拒到主動回覆的個案拆解",
-        category: "客人個案",
-        color: "bg-[#E7F4F2]",
-        icon: "fa-solid fa-message-heart",
-        imageLabel: "復聯",
-        summary: "當對方開始冷淡、回覆變少，重點不是追問答案，而是先穩住互動節奏，再慢慢重建安全感。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">個案背景</h3>
-          <p class="mb-4">客人原本同對方日日傾偈，但一段時間後對方開始回覆慢、語氣淡，甚至見面都顯得抗拒。客人越緊張，越想問清楚關係，反而令對方更想逃避。</p>
-          <p class="mb-4">呢類個案最常見的問題，是雙方已經進入「一方追、一方退」的循環。越追問，對方越覺得有壓力；越退縮，客人就越焦慮。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">處理方向</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>先停止逼問關係定位，減少對方防衛。</li>
-            <li>將訊息由情緒追問，轉成輕鬆、有空間的互動。</li>
-            <li>等對方重新習慣舒服相處，再逐步拉回親密感。</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">感情卡住時，不一定要即刻衝前。有時先退半步，先有空間讓對方重新靠近。</p>
-        `
-      },
-      {
-        id: 2,
-        title: "分手後對方態度反覆？點樣分辨是假性分手定真正放低",
-        category: "客人個案",
-        color: "bg-[#FFE7DD]",
-        icon: "fa-solid fa-heart-crack",
-        imageLabel: "復合",
-        summary: "對方一時冷淡、一時又關心，未必代表無機會。關鍵是看行為背後，是情緒、防衛，還是真的切斷。",
-        content: `
-          <h3 class="text-xl font-bold mb-4">個案背景</h3>
-          <p class="mb-4">客人分手後一直不確定對方是否仍然有感情。對方有時會回覆訊息，有時又突然消失，令客人情緒大起大落。</p>
-          <p class="mb-4">這種反覆，很多時不是單純不愛，而是對方仍然有情緒、防備、怨氣或未消化的壓力。若處理得太急，很容易把最後的窗口關上。</p>
-          <h4 class="font-bold text-lg mb-2 text-asteria-primary">處理方向</h4>
-          <ul class="list-disc pl-5 mb-4 text-gray-700">
-            <li>先觀察對方是否仍願意保留聯絡窗口。</li>
-            <li>不要用質問方式逼對方表態，先降低壓迫感。</li>
-            <li>用穩定、短而準的訊息，慢慢修補對方對關係的負面印象。</li>
-          </ul>
-          <p class="mt-6 p-4 bg-[#FFF8EC] rounded-lg text-sm text-stone-600">復合不是靠一次訊息扭轉，而是一步步讓對方重新覺得，靠近你是安全而舒服的。</p>
-        `
-      }
-    ];
-
-    const makeArticleHref = (post: any, type: 'article' | 'case') => `/${type === 'case' ? 'cases' : 'articles'}/${post.id}`;
-    const pathMatch = fullPage ? window.location.pathname.match(/^\/(articles|cases)\/(\d+)\/?$/) : null;
+    const makeArticleHref = (post: any) => `/articles/${post.id}`;
+    const pathMatch = fullPage ? window.location.pathname.match(/^\/articles\/(\d+)\/?$/) : null;
     const hashMatch = fullPage ? (window.location.hash || '').replace(/^#/, '').match(/^(article|case)-(\d+)$/) : null;
     const articleMatch = pathMatch || hashMatch;
-    const activeType = articleMatch?.[1] === 'cases' || articleMatch?.[1] === 'case' ? 'case' : articleMatch ? 'article' : undefined;
-    const activeId = articleMatch ? Number(articleMatch[2]) : null;
-    const activePost = activeType === 'case'
-      ? casePosts.find((post) => post.id === activeId)
-      : posts.find((post) => post.id === activeId);
-    const relatedPosts = (activeType === 'case' ? casePosts : posts).filter((post) => post.id !== activeId).slice(0, 3);
+    const activeId = articleMatch ? Number(articleMatch[1] === 'article' ? articleMatch[2] : articleMatch[1]) : null;
+    const activePost = posts.find((post) => post.id === activeId);
+    const relatedPosts = posts.filter((post) => post.id !== activeId).slice(0, 3);
+    const isCaseLibrary = fullPage && window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase() === 'cases';
 
     useEffect(() => {
       if (!fullPage) return;
@@ -759,10 +742,12 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         : '相處教學｜Asteria 感情拯救所';
       const description = activePost
         ? activePost.summary
-        : 'Asteria 感情拯救所相處教學，整理感情相處、復合心態、曖昧判斷與匿名客人個案長文。';
+        : isCaseLibrary
+          ? 'Asteria 感情拯救所客人個案長文庫，之後會整理真實匿名個案、復合、斷聯、冷淡、第三者與關係修復案例。'
+          : 'Asteria 感情拯救所相處教學，整理感情相處、復合心態、曖昧判斷與溝通方法。';
       const canonical = activePost
-        ? `https://asteria-tarot.com/${activeType === 'case' ? 'cases' : 'articles'}/${activeId}`
-        : 'https://asteria-tarot.com/teaching';
+        ? `https://asteria-tarot.com/articles/${activeId}`
+        : isCaseLibrary ? 'https://asteria-tarot.com/cases' : 'https://asteria-tarot.com/teaching';
 
       document.title = title;
 
@@ -787,10 +772,10 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         script.type = 'application/ld+json';
         script.textContent = JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': activeType === 'case' ? 'BlogPosting' : 'Article',
+          '@type': 'Article',
           headline: activePost.title,
           description,
-          image: editorialImages.map((image) => image.src),
+          image: getEditorialImages(activeId).map((image) => `https://asteria-tarot.com${image.src}`),
           author: { '@type': 'Organization', name: 'Asteria Crystal Tarot' },
           publisher: {
             '@type': 'Organization',
@@ -804,16 +789,16 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         });
         document.head.appendChild(script);
       }
-    }, [fullPage, activeId, activeType, activePost?.title]);
+    }, [fullPage, activeId, activePost?.title, isCaseLibrary]);
 
     useEffect(() => {
       if (!fullPage || !activePost) return;
       requestAnimationFrame(() => {
         document.querySelector('main')?.scrollIntoView({ block: 'start' });
       });
-    }, [fullPage, activeId, activeType, activePost?.title]);
+    }, [fullPage, activeId, activePost?.title]);
 
-    const ArticleVisual = ({ post, large = false }: { post: any; large?: boolean }) => (
+    const ArticleVisual = ({ post, large = false }: { post: TeachingPost; large?: boolean }) => (
       <div className={`${post.color} ${large ? 'min-h-[280px] md:min-h-[380px]' : 'aspect-[1.2/1]'} relative overflow-hidden flex items-center justify-center`}>
         <div className="absolute inset-5 border border-white/70 rounded-2xl"></div>
         <div className="absolute top-4 left-4 bg-white/90 text-asteria-primary px-3 py-1 rounded-full text-xs font-bold shadow-sm">{post.category}</div>
@@ -827,47 +812,64 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       </div>
     );
 
-    const editorialImages = [
-      {
-        src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80",
-        caption: "關係最難的地方，往往不是不愛，而是兩個人都在用自己的方式保護自己。"
-      },
-      {
-        src: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80",
-        caption: "穩定的相處，需要溝通、信任與願意理解對方的耐性。"
-      },
-      {
-        src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
-        caption: "當互動重新變得舒服，關係才有機會慢慢回溫。"
-      }
-    ];
+    const ArticleCover = ({ post, compact = false, hero = false }: { post: TeachingPost; compact?: boolean; hero?: boolean }) => {
+      const cover = getEditorialImages(post.id)[0];
+      const [failed, setFailed] = useState(false);
+      return (
+        <div className={`${hero ? 'aspect-[16/9] md:aspect-[2.2/1]' : compact ? 'aspect-[1.15/1]' : 'aspect-[4/3]'} relative overflow-hidden bg-[#FFF8EC]`}>
+          {!failed ? (
+            <img src={cover.src} alt={cover.caption} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-[#FFF8EC] text-asteria-primary">
+              <i className="fa-regular fa-image text-3xl"></i>
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-asteria-dark/18 via-transparent to-transparent pointer-events-none"></div>
+          <span className="absolute top-4 left-4 bg-[#FFF8EC]/95 backdrop-blur-sm border border-white/80 px-3.5 py-1.5 rounded-full text-xs font-bold text-asteria-primary shadow-[0_8px_22px_rgba(59,38,29,0.16)]">
+            {post.category}
+          </span>
+        </div>
+      );
+    };
 
-    const getArticleParts = (content: string) => {
-      const splitIndex = content.indexOf('<h4');
-      if (splitIndex < 0) return [content, ''];
-      return [content.slice(0, splitIndex), content.slice(splitIndex)];
+    const getEditorialImages = (id?: number | null) => {
+      const post = posts.find((item) => item.id === id) || posts[0];
+      return post.images?.length ? post.images : [{ src: post.coverImage, caption: post.coverCaption, prompt: '' }];
+    };
+
+    const getArticleSegments = (content: string) => {
+      const parts = content.split(/(?=<h2>)/g).filter((part) => part.trim());
+      return parts.length ? parts : [content];
     };
 
     const ArticleInlineImage = ({ index }: { index: number }) => {
-      const image = editorialImages[index % editorialImages.length];
+      const images = getEditorialImages(activeId);
+      const image = images[index] || images[0];
+      const [failed, setFailed] = useState(false);
       return (
-        <figure className="my-8 md:my-10 -mx-6 md:-mx-10">
-          <img src={image.src} alt="感情關係插圖" className="w-full max-h-[520px] object-cover" loading="lazy" />
-          <figcaption className="px-6 md:px-10 pt-3 text-sm text-stone-400 leading-relaxed">{image.caption}</figcaption>
+        <figure className="article-figure my-10 md:my-14 overflow-hidden rounded-[24px] md:rounded-[32px] border border-asteria-cream/70 bg-white shadow-sm">
+          <div className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] bg-[#FFF8EC]">
+            {!failed ? (
+              <img src={image.src} alt={image.caption} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-asteria-primary">
+                <i className="fa-regular fa-image text-3xl"></i>
+              </div>
+            )}
+          </div>
         </figure>
       );
     };
 
-    const ArticleRelatedCallout = ({ currentId, currentType }: { currentId: number | null; currentType?: 'article' | 'case' }) => {
-      const pool = currentType === 'case' ? posts : [...posts, ...casePosts];
+    const ArticleRelatedCallout = ({ currentId }: { currentId: number | null }) => {
+      const pool = posts;
       const recommendation = pool.find((post) => post.id !== currentId) || pool[0];
       if (!recommendation) return null;
-      const type = casePosts.some((post) => post.id === recommendation.id && post.title === recommendation.title) ? 'case' : 'article';
       return (
         <aside className="my-8 md:my-10 rounded-2xl border border-asteria-cream bg-[#FFF8EC] p-5 md:p-6">
           <div className="text-xs font-bold tracking-[0.2em] text-asteria-primary mb-3">你可能也想睇</div>
-          <a href={makeArticleHref(recommendation, type)} className="grid md:grid-cols-[160px_1fr] gap-4 items-center group">
-            <ArticleVisual post={recommendation} />
+          <a href={makeArticleHref(recommendation)} className="grid md:grid-cols-[160px_1fr] gap-4 items-center group">
+            <ArticleCover post={recommendation} compact />
             <div>
               <h3 className="text-xl font-bold text-asteria-dark leading-snug group-hover:text-asteria-primary transition-colors">{recommendation.title}</h3>
               <p className="text-sm text-stone-500 leading-relaxed mt-2 line-clamp-3">{recommendation.summary}</p>
@@ -880,32 +882,59 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       );
     };
 
+    if (fullPage && isCaseLibrary) {
+      return (
+        <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
+          <div className="container mx-auto px-6 max-w-5xl">
+            <a href="/" onClick={goHome} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+              <i className="fa-solid fa-arrow-left"></i> 返回首頁
+            </a>
+            <section className="bg-white border border-asteria-cream/70 rounded-3xl p-8 md:p-10 shadow-sm">
+              <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
+              <h1 className="text-4xl md:text-5xl font-bold text-asteria-dark mb-5">客人個案長文</h1>
+              <p className="text-stone-500 leading-relaxed max-w-2xl">
+                呢度之後會放真實匿名個案長文，例如復合、斷聯、冷淡、第三者、前任新歡、關係修復等案例拆解。暫時未放內容，等整理好真個案先公開。
+              </p>
+              <div className="mt-8 grid md:grid-cols-3 gap-4">
+                {['復合個案', '斷聯冷淡', '第三者／新歡'].map((label) => (
+                  <div key={label} className="rounded-2xl bg-[#FFF8EC] border border-asteria-cream/70 p-5">
+                    <div className="text-lg font-bold text-asteria-dark">{label}</div>
+                    <div className="text-sm text-stone-400 mt-2">即將整理</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+        </main>
+      );
+    }
+
     if (fullPage && activePost) {
-      const [contentIntro, contentRest] = getArticleParts(activePost.content);
+      const articleSegments = getArticleSegments(activePost.content);
       return (
         <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
           <article className="container mx-auto px-6 max-w-4xl">
             <a href="/teaching" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
               <i className="fa-solid fa-arrow-left"></i> 返回文章列表
             </a>
-            <div className="bg-white border border-asteria-cream/70 rounded-3xl overflow-hidden shadow-sm">
-              <ArticleVisual post={activePost} large />
-              <div className="p-6 md:p-10">
+            <div className="overflow-hidden">
+              <div className="rounded-[28px] md:rounded-[36px] overflow-hidden shadow-sm border border-asteria-cream/70 bg-white">
+                <ArticleCover post={activePost} hero />
+              </div>
+              <div className="py-8 md:py-12">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-stone-400 mb-5">
                   <span className="text-asteria-primary font-bold">{activePost.category}</span>
                   <span>asteria感情拯救所</span>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold text-asteria-dark leading-tight mb-5">{activePost.title}</h1>
-                <p className="text-lg text-stone-500 leading-relaxed mb-8">{activePost.summary}</p>
-                <div className="my-8 rounded-2xl bg-[#FFF8EC] border border-asteria-cream/70 p-5 md:p-6 text-asteria-dark">
-                  <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Note</div>
-                  <p className="leading-relaxed">每段關係卡住的位置都不同，文章可以幫你先整理方向；如果情況牽涉分手、斷聯、第三者或長期冷淡，可以再 WhatsApp 我哋分析。</p>
-                </div>
-                <div className="article-body text-stone-700 leading-loose text-lg space-y-4" dangerouslySetInnerHTML={{ __html: contentIntro }}></div>
-                <ArticleInlineImage index={(activeId || 1) - 1} />
-                <ArticleRelatedCallout currentId={activeId} currentType={activeType} />
-                <div className="article-body text-stone-700 leading-loose text-lg space-y-4" dangerouslySetInnerHTML={{ __html: contentRest }}></div>
-                <ArticleInlineImage index={activeId || 2} />
+                <p className="text-lg md:text-xl text-stone-500 leading-relaxed mb-10 max-w-3xl">{activePost.summary}</p>
+                {articleSegments.map((segment, index) => (
+                  <React.Fragment key={`${activePost.id}-${index}`}>
+                    <div className="article-body" dangerouslySetInnerHTML={{ __html: segment }}></div>
+                    {index < 3 && <ArticleInlineImage index={index + 1} />}
+                    {index === 0 && <ArticleRelatedCallout currentId={activeId} />}
+                  </React.Fragment>
+                ))}
               </div>
             </div>
 
@@ -919,8 +948,8 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               </div>
               <div className="grid md:grid-cols-3 gap-5">
                 {relatedPosts.map((post) => (
-                  <a key={post.id} href={makeArticleHref(post, activeType || 'article')} className="bg-white border border-asteria-cream/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
-                    <ArticleVisual post={post} />
+                  <a key={post.id} href={makeArticleHref(post)} className="bg-white border border-asteria-cream/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+                    <ArticleCover post={post} compact />
                     <div className="p-4">
                       <h3 className="font-bold text-asteria-dark leading-snug line-clamp-2">{post.title}</h3>
                       <p className="text-sm text-stone-500 mt-2 line-clamp-2">{post.summary}</p>
@@ -952,34 +981,51 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               </a>
             </div>
 
-            <div className="mb-8 flex flex-wrap gap-3">
-              <a href="/teaching#teaching-articles" className="px-4 py-2 rounded-full bg-asteria-dark text-white text-sm font-bold">教學文</a>
-              <a href="/teaching#teaching-cases" className="px-4 py-2 rounded-full bg-white border border-asteria-cream text-asteria-primary text-sm font-bold">客人個案長文</a>
-            </div>
-
             <section id="teaching-articles" className="scroll-mt-40">
-              <div className="mb-5">
-                <h2 className="text-2xl font-bold text-asteria-dark">教學文</h2>
-                <p className="text-stone-500 text-sm mt-1">感情相處、溝通、復合心態與曖昧判斷。</p>
+              <div className="mb-8 rounded-3xl bg-white border border-asteria-cream/70 p-4 md:p-5 shadow-sm">
+                <label className="block text-sm font-bold text-asteria-dark mb-2">搜尋教學文</label>
+                <div className="relative mb-4">
+                  <i className="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-300"></i>
+                  <input
+                    value={articleSearch}
+                    onChange={(event) => setArticleSearch(event.target.value)}
+                    placeholder="Search 分手、復合、冷淡、訊息、曖昧..."
+                    className="w-full rounded-2xl border border-asteria-cream px-11 py-3 text-asteria-dark focus:outline-none focus:border-asteria-primary"
+                  />
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {articleCategories.map((category) => (
+                    <button
+                      key={category}
+                      type="button"
+                      onClick={() => setActiveArticleCategory(category)}
+                      className={`px-4 py-2 rounded-full text-sm font-bold border transition-colors ${
+                        activeArticleCategory === category
+                          ? 'bg-asteria-dark text-white border-asteria-dark'
+                          : 'bg-[#FFF8EC] text-asteria-primary border-asteria-cream'
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+                <div className="mt-3 text-sm text-stone-400">{visiblePosts.length} 篇文章</div>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-              {posts.map((post) => {
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              {visiblePosts.map((post) => {
                 const isActive = selectedPost?.id === post.id;
 
                 return (
                   <article
                     key={post.id}
-                    className={`bg-white border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden ${isActive ? 'border-asteria-primary shadow-lg' : 'border-asteria-cream/70'}`}
+                    className={`bg-white border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden h-full ${isActive ? 'border-asteria-primary shadow-lg' : 'border-asteria-cream/70'}`}
                   >
-                    <a
-                      href={makeArticleHref(post, 'article')}
-                      className="group text-left w-full block"
-                    >
-                      <ArticleVisual post={post} />
-                      <div className="p-5">
-                        <h2 className="text-lg font-bold text-asteria-dark mb-2 leading-snug">{post.title}</h2>
-                        <p className="text-sm text-stone-500 leading-relaxed">{post.summary}</p>
-                        <div className="mt-4 inline-flex items-center gap-2 text-asteria-primary text-sm font-bold">
+                    <a href={makeArticleHref(post)} className="group text-left w-full h-full flex flex-col">
+                      <ArticleCover post={post} />
+                      <div className="p-5 flex flex-col flex-grow">
+                        <h2 className="text-lg font-bold text-asteria-dark mb-2 leading-snug line-clamp-2 min-h-[3.15rem]">{post.title}</h2>
+                        <p className="text-sm text-stone-500 leading-relaxed line-clamp-3 min-h-[4.9rem]">{post.summary}</p>
+                        <div className="mt-auto pt-4 inline-flex items-center gap-2 text-asteria-primary text-sm font-bold">
                           閱讀全文 <i className="fa-solid fa-arrow-right"></i>
                         </div>
                       </div>
@@ -990,28 +1036,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               </div>
             </section>
 
-            <section id="teaching-cases" className="scroll-mt-40 mt-14">
-              <div className="mb-5">
-                <h2 className="text-2xl font-bold text-asteria-dark">客人個案長文</h2>
-                <p className="text-stone-500 text-sm mt-1">用匿名個案拆解常見感情困局，方便大家對照自己情況。</p>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-6 items-start">
-                {casePosts.map((post) => (
-                  <article key={post.id} className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <a href={makeArticleHref(post, 'case')} className="group text-left w-full block">
-                      <ArticleVisual post={post} />
-                      <div className="p-5">
-                        <h2 className="text-xl font-bold text-asteria-dark mb-2 leading-snug">{post.title}</h2>
-                        <p className="text-sm text-stone-500 leading-relaxed">{post.summary}</p>
-                        <div className="mt-4 inline-flex items-center gap-2 text-asteria-primary text-sm font-bold">
-                          閱讀個案 <i className="fa-solid fa-arrow-right"></i>
-                        </div>
-                      </div>
-                    </a>
-                  </article>
-                ))}
-              </div>
-            </section>
             </div>
         </main>
       );
@@ -1032,24 +1056,13 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
           </div>
   
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {posts.map((post) => (
+            {homePosts.map((post) => (
               <a 
                 key={post.id} 
-                href={makeArticleHref(post, 'article')}
+                href={makeArticleHref(post)}
                 className="group cursor-pointer bg-white rounded-2xl border border-gray-100 hover:border-asteria-primary/30 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                {/* Visual Header */}
-                <div className={`aspect-square ${post.color} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-5 border border-white/70 rounded-2xl"></div>
-                  <div className="text-center px-6 relative z-10">
-                    <i className={`${post.icon} text-5xl text-white drop-shadow-md mb-4 block group-hover:scale-110 transition-transform duration-500`}></i>
-                    <div className="font-eng text-xs tracking-[0.2em] text-white/90 mb-2">ASTERIA</div>
-                    <div className="text-2xl font-bold text-asteria-dark">{post.imageLabel}</div>
-                  </div>
-                  <span className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">
-                    {post.category}
-                  </span>
-                </div>
+                <ArticleCover post={post} compact />
                 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-grow">
@@ -1112,52 +1125,84 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 const SearchIntentSection = () => {
   const intents = [
     {
-      title: "想復合、挽回前任",
-      question: "分手後仲有無機會復合？",
-      answer: "先睇對方是否仍保留聯絡窗口，再判斷是假性分手、冷淡期，定係真正切斷。",
-      icon: "fa-solid fa-heart-circle-bolt"
+      title: "想復合、想挽回前任",
+      question: "分手後佢仲有無掛住你？仲有無機會返轉頭？",
+      answer: "唔好淨係估佢冷淡就等於無機會。先睇對方有無保留聯絡窗口、分手原因、假性分手定真性切斷，再決定應該主動、斷聯定慢慢拉返距離。",
+      icon: "fa-solid fa-heart-circle-bolt",
+      tone: "from-[#FFF3D6] to-[#FFE7DD]",
+      accent: "text-[#A65F2B]",
+      badge: "bg-[#FBE0B8]",
+      motif: "復合"
     },
     {
-      title: "分手、失戀、放唔低",
-      question: "失戀後好辛苦，可以點行下一步？",
-      answer: "先整理情緒同分手原因，再分清楚應該挽回、等待、淡化執念，定係學習放低。",
-      icon: "fa-solid fa-heart-crack"
+      title: "分手失戀、放唔低佢",
+      question: "明明知道要冷靜，但一到夜晚就忍唔住想搵佢？",
+      answer: "失戀最痛係個心停唔到。Asteria 會先陪你整理情緒、分手原因同對方心態，再分清楚係應該挽回、等待、淡化執念，定係學習放低。",
+      icon: "fa-solid fa-heart-crack",
+      tone: "from-[#F8EAF1] to-[#FFF8EC]",
+      accent: "text-[#A95577]",
+      badge: "bg-[#F3D3E1]",
+      motif: "療癒"
     },
     {
-      title: "斷聯、冷淡、少覆訊息",
-      question: "對方突然冷淡點算？",
-      answer: "重點唔係追問答案，而係降低壓力，重建舒服互動，再慢慢拉近距離。",
-      icon: "fa-solid fa-comment-slash"
+      title: "對方少覆、冷淡、斷聯",
+      question: "佢突然少覆 message，係忙、逃避，定係感情變淡？",
+      answer: "愈追問答案，對方有時退得愈快。要先降低壓力，睇清楚佢係冷淡期、迴避、情緒爆煲定真係抽離，再用舒服互動慢慢拉近。",
+      icon: "fa-solid fa-comment-slash",
+      tone: "from-[#E8F4F1] to-[#FFFDF8]",
+      accent: "text-[#3F817A]",
+      badge: "bg-[#CBE9E5]",
+      motif: "復聯"
     },
     {
-      title: "曖昧、第三者、關係卡住",
-      question: "點解關係一直無進展？",
-      answer: "要先分清楚阻礙來自對方心態、現實因素，定係你哋互動模式已經失衡。",
-      icon: "fa-solid fa-people-arrows"
+      title: "曖昧卡住、關係無名份",
+      question: "明明有feel，但佢一直唔表態，點解關係推唔前？",
+      answer: "曖昧最折磨係唔知自己算咩。要分清楚阻礙來自對方心態、現實因素、前任陰影，定係你哋互動模式令佢唔敢承擔。",
+      icon: "fa-solid fa-people-arrows",
+      tone: "from-[#EDF0F7] to-[#FFF8EC]",
+      accent: "text-[#546C9E]",
+      badge: "bg-[#DDE4F6]",
+      motif: "卡位"
     },
     {
       title: "前任有新歡、第三者介入",
-      question: "佢有新對象係咪無得救？",
-      answer: "要睇新歡關係深度、你同對方的情感連結、分手原因同對方現時防備心。",
-      icon: "fa-solid fa-user-group"
+      question: "佢身邊有新對象，係咪代表你完全無機會？",
+      answer: "唔係見到新歡就一定輸。要睇新歡關係深度、你同對方原本的情感連結、分手原因同對方現時防備心，再判斷仲可唔可以逆轉。",
+      icon: "fa-solid fa-user-group",
+      tone: "from-[#F6E7D8] to-[#FFFDF8]",
+      accent: "text-[#7B4A2D]",
+      badge: "bg-[#EBC9A7]",
+      motif: "新歡"
     },
     {
       title: "感情占卜、塔羅分析",
-      question: "想知對方點諗我、會唔會主動聯絡？",
-      answer: "塔羅可以幫你整理對方狀態、關係阻礙同下一步方向，避免亂估亂做。",
-      icon: "fa-solid fa-star"
+      question: "想知佢仲有無諗你、會唔會主動聯絡？",
+      answer: "當你睇唔清對方真心，塔羅可以幫你整理對方狀態、關係阻礙、復合機會同下一步方向，避免你靠情緒亂估亂做。",
+      icon: "fa-solid fa-star",
+      tone: "from-[#FFF8EC] to-[#EEF5DD]",
+      accent: "text-[#8A6A2F]",
+      badge: "bg-[#F4DFAE]",
+      motif: "占卜"
     },
     {
       title: "愛情儀式、關係能量調整",
-      question: "想推動關係可以點做？",
-      answer: "儀式會按個案方向配搭，例如復聯、升溫、化解、開路、清理負能量。",
-      icon: "fa-solid fa-wand-magic-sparkles"
+      question: "想復聯、升溫、化解阻礙，可以點樣配合？",
+      answer: "愛情儀式會按個案方向配搭，例如復聯、升溫、化解、開路、清理負能量。唔係每個人都同一套，要先睇你哋關係卡喺邊。",
+      icon: "fa-solid fa-wand-magic-sparkles",
+      tone: "from-[#FFF3D6] to-[#FDE7E2]",
+      accent: "text-[#C2733D]",
+      badge: "bg-[#F7D6A0]",
+      motif: "儀式"
     },
     {
-      title: "相處教學、溝通方法",
-      question: "點樣講先唔會越講越衰？",
-      answer: "用引導代替逼問，用穩定代替情緒勒索，先有機會令對方願意靠近。",
-      icon: "fa-solid fa-comments"
+      title: "相處教學、訊息點覆",
+      question: "怕自己一開口就講錯，令佢更加唔想理你？",
+      answer: "我哋會幫你拆解訊息點覆、邊句唔好講、幾時要退一步。用引導代替逼問，用穩定代替情緒勒索，先有機會令對方願意靠近。",
+      icon: "fa-solid fa-comments",
+      tone: "from-[#E8F4F1] to-[#FDF4EA]",
+      accent: "text-[#6F8752]",
+      badge: "bg-[#D8E8BE]",
+      motif: "相處"
     }
   ];
 
@@ -1165,19 +1210,25 @@ const SearchIntentSection = () => {
     <section className="py-18 bg-[#FFFDF8]" aria-labelledby="search-intent-title">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="mb-8">
-          <div className="text-sm font-bold text-asteria-primary mb-2">感情問題搜尋指南</div>
-          <h2 id="search-intent-title" className="text-3xl md:text-4xl font-bold text-asteria-dark mb-3">你可能正在搵的答案</h2>
-          <p className="text-stone-500 max-w-2xl leading-relaxed">無論你搜尋復合、挽回、斷聯、冷淡、曖昧、占卜或愛情儀式，都可以由呢度開始整理方向。</p>
+          <div>
+            <div className="text-sm font-bold text-asteria-primary mb-2">感情問題搜尋指南</div>
+            <h2 id="search-intent-title" className="text-3xl md:text-4xl font-bold text-asteria-dark mb-3">你可能正在搵的答案</h2>
+            <p className="text-stone-500 max-w-2xl leading-relaxed">無論你搜尋復合、挽回、斷聯、冷淡、曖昧、占卜或愛情儀式，都可以由呢度開始整理方向。</p>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {intents.map((item) => (
-            <article key={item.title} className="bg-white border border-asteria-cream/70 rounded-2xl p-5 shadow-sm">
-              <div className="w-11 h-11 rounded-full bg-[#FFF8EC] text-asteria-primary flex items-center justify-center mb-4">
-                <i className={item.icon}></i>
+            <article key={item.title} className={`relative overflow-hidden bg-gradient-to-br ${item.tone} border border-white rounded-3xl p-5 shadow-sm hover:shadow-lg transition-all duration-300`}>
+              <div className="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-white/40"></div>
+              <div className="absolute right-5 bottom-4 text-5xl font-bold text-white/55">{item.motif}</div>
+              <div className={`relative z-10 w-12 h-12 rounded-2xl ${item.badge} ${item.accent} flex items-center justify-center mb-4 shadow-sm`}>
+                <i className={`${item.icon} text-lg`}></i>
               </div>
-              <h3 className="text-lg font-bold text-asteria-dark mb-2">{item.title}</h3>
-              <div className="text-sm font-bold text-asteria-primary mb-2">{item.question}</div>
-              <p className="text-sm text-stone-500 leading-relaxed">{item.answer}</p>
+              <div className="relative z-10">
+                <h3 className="text-lg font-bold text-asteria-dark mb-2">{item.title}</h3>
+                <div className={`inline-flex rounded-full bg-white/75 px-3 py-1 text-sm font-bold ${item.accent} mb-3`}>{item.question}</div>
+                <p className="text-sm text-stone-600 leading-relaxed">{item.answer}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -1186,11 +1237,64 @@ const SearchIntentSection = () => {
   );
 };
 
+const ServicesPreview = () => {
+  const serviceDirections = [
+    {
+      title: "感情占卜分析",
+      desc: "睇清對方心態、關係阻礙、復合機會同下一步方向。",
+      icon: "fa-solid fa-star",
+      tone: "bg-[#FFF8EC]"
+    },
+    {
+      title: "愛情儀式方向",
+      desc: "按個案評估復聯、升溫、化解、開路、清理負能量等方向。",
+      icon: "fa-solid fa-wand-magic-sparkles",
+      tone: "bg-[#FFE7DD]"
+    },
+    {
+      title: "相處訊息指引",
+      desc: "教你點覆、邊句唔好講、幾時主動、幾時先停一停。",
+      icon: "fa-regular fa-comments",
+      tone: "bg-[#E8F4F1]"
+    }
+  ];
+
+  return (
+    <section id="services" className="py-16 bg-white">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-center">
+          <div>
+            <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Services</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-asteria-dark leading-tight mb-4">想深入睇服務，可以入去慢慢研究</h2>
+            <p className="text-stone-500 leading-relaxed mb-6">
+              首頁先俾你揀大方向；完整儀式、組合、金錢事業同其他能量服務，放喺獨立服務頁，畫面會清爽啲。
+            </p>
+            <a href="/services" className="btn-primary px-6 py-3 rounded-xl font-bold inline-flex items-center gap-2">
+              查看完整服務項目 <i className="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {serviceDirections.map((item) => (
+              <a key={item.title} href="/services" className={`${item.tone} border border-asteria-cream/70 rounded-3xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all`}>
+                <div className="w-12 h-12 rounded-2xl bg-white text-asteria-primary flex items-center justify-center mb-4 shadow-sm">
+                  <i className={item.icon}></i>
+                </div>
+                <h3 className="font-bold text-asteria-dark mb-2">{item.title}</h3>
+                <p className="text-sm text-stone-500 leading-relaxed">{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Services = () => {
-  type ServiceCategory = 'love' | 'career' | 'other';
+  type ServiceCategory = 'tarot' | 'love' | 'career' | 'other';
   type ServiceType = 'single' | 'sets';
 
-  const [activeCategory, setActiveCategory] = useState<ServiceCategory>('love');
+  const [activeCategory, setActiveCategory] = useState<ServiceCategory>('tarot');
   const [activeType, setActiveType] = useState<ServiceType>('single');
   const [servicePage, setServicePage] = useState(0);
 
@@ -1209,6 +1313,20 @@ const Services = () => {
     items.map((item, idx) => ({ ...item, ...iconStyles[idx % iconStyles.length] }));
 
   const serviceGroups: Record<ServiceCategory, { label: string; intro: string; icon: string; tone: string; single: ReturnType<typeof applyStyle>; sets: ReturnType<typeof applyStyle> }> = {
+    tarot: {
+      label: "占卜",
+      intro: "按你而家嘅感情狀態揀牌陣，分析對方心態、關係走向同下一步。",
+      icon: "fa-solid fa-star",
+      tone: "bg-[#FFF8EC] border-asteria-cream text-asteria-primary",
+      single: applyStyle([
+        { title: "曖昧 plan", desc: "適合未確定關係、對方忽冷忽熱、唔知佢有無意思，幫你睇清曖昧卡住位同下一步點推進。", tags: ["曖昧", "忽冷忽熱", "推進"] },
+        { title: "拍拖 plan", desc: "適合已經拍拖但相處有摩擦、冷淡、溝通唔順，分析雙方心態、問題根源同改善方向。", tags: ["拍拖", "相處", "溝通"] },
+        { title: "暗戀 plan", desc: "適合有心儀對象但未開始，想知對方觀感、接近機會、應該主動定慢慢鋪路。", tags: ["暗戀", "心儀對象", "接近"] },
+        { title: "復合 plan", desc: "適合分手、斷聯、冷淡或想挽回前任，睇對方現時心態、復合機會同你應該點行。", tags: ["復合", "分手", "挽回"] },
+        { title: "單身 plan", desc: "適合想招正桃花、了解感情課題、未來對象方向，幫你整理脫單機會同吸引力位置。", tags: ["單身", "桃花", "脫單"] }
+      ]),
+      sets: applyStyle([])
+    },
     love: {
       label: "愛情",
       intro: "復合、曖昧升溫、斷聯破冰、穩定關係與桃花方向。",
@@ -1303,6 +1421,7 @@ const Services = () => {
   const categories = Object.entries(serviceGroups) as Array<[ServiceCategory, typeof serviceGroups[ServiceCategory]]>;
   const currentGroup = serviceGroups[activeCategory];
   const activeItems = currentGroup[activeType];
+  const hasSets = currentGroup.sets.length > 0;
   const itemsPerPage = 9;
   const totalPages = Math.max(1, Math.ceil(activeItems.length / itemsPerPage));
   const visibleItems = activeItems.slice(servicePage * itemsPerPage, servicePage * itemsPerPage + itemsPerPage);
@@ -1328,7 +1447,7 @@ const Services = () => {
             <i className="fa-solid fa-star"></i> Ritual Menu
           </div>
           <h2 className="text-3xl font-bold text-asteria-dark mb-4">服務項目</h2>
-          <p className="text-stone-500 mb-8">先揀你想處理嘅方向，再睇單項或組合儀式，畫面會清爽好多。</p>
+          <p className="text-stone-500 mb-8">先揀你想處理嘅方向，再睇占卜 plan、單項儀式或組合儀式，畫面會清爽好多。</p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             {categories.map(([key, group]) => (
@@ -1348,18 +1467,20 @@ const Services = () => {
 
           <div className="flex justify-center mb-10">
             <div className="bg-asteria-cream/60 p-1.5 rounded-full inline-flex relative shadow-inner border border-white">
-              <button 
+              <button
                 onClick={() => handleTypeChange('single')}
                 className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'single' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
               >
-                <i className="fa-solid fa-wand-sparkles mr-2"></i> 單項儀式
+                <i className="fa-solid fa-wand-sparkles mr-2"></i> {activeCategory === 'tarot' ? '占卜 plan' : '單項儀式'}
               </button>
-              <button 
-                onClick={() => handleTypeChange('sets')}
-                className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'sets' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
-              >
-                <i className="fa-solid fa-layer-group mr-2"></i> 組合儀式
-              </button>
+              {hasSets && (
+                <button
+                  onClick={() => handleTypeChange('sets')}
+                  className={`px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeType === 'sets' ? 'bg-white text-asteria-primary shadow-md transform scale-105' : 'text-stone-500 hover:text-asteria-primary'}`}
+                >
+                  <i className="fa-solid fa-layer-group mr-2"></i> 組合儀式
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -3723,6 +3844,7 @@ const App = () => {
       setPage(getRoutePage());
       cleanHomeUrl();
       restoreBackendSession();
+      scrollToHashTarget();
     };
     const handleSessionChange = () => {
       setCurrentRole(getStoredSpaceRole());
@@ -3734,6 +3856,7 @@ const App = () => {
     window.addEventListener('asteria-session-change', handleSessionChange);
     cleanHomeUrl();
     restoreBackendSession();
+    scrollToHashTarget();
     return () => {
       window.removeEventListener('hashchange', handleRouteChange);
       window.removeEventListener('popstate', handleRouteChange);
@@ -3759,6 +3882,30 @@ const App = () => {
       <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
         <Navbar />
         <Blog fullPage key={routeKey || 'teaching'} />
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    );
+  }
+
+  if (page === 'about') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <AboutPage />
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    );
+  }
+
+  if (page === 'services') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <main className="pt-48 md:pt-32 bg-[#FFFDF8] min-h-screen">
+          <Services />
+        </main>
         <Footer />
         <FloatingWhatsApp />
       </div>
@@ -3855,10 +4002,10 @@ const App = () => {
     <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
       <Navbar />
       <Hero />
+      <SearchIntentSection />
       <Oracle />
       <Blog />
-      <SearchIntentSection />
-      <Services />
+      <ServicesPreview />
       <Reviews />
       <Footer />
       <FloatingWhatsApp />
