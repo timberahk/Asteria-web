@@ -41,6 +41,103 @@ const colors = [
   'bg-[#EDF0F7]'
 ];
 
+const pexelsImage = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1600`;
+
+const stockPhotos = {
+  cafeTalk: {
+    src: pexelsImage('20804849'),
+    credit: 'Photo by Tuba Nur Dogan on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/'
+  },
+  warmCafe: {
+    src: pexelsImage('20479952'),
+    credit: 'Photo by Alexander Mass on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/'
+  },
+  outdoorCafe: {
+    src: pexelsImage('20045413'),
+    credit: 'Photo by Mustafa Bodur on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/'
+  },
+  cafeNight: {
+    src: pexelsImage('17637241'),
+    credit: 'Photo by K on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/'
+  },
+  sofaArgument: {
+    src: pexelsImage('36812991'),
+    credit: 'Photo by Vitaly Gariev on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/'
+  },
+  sofaSilent: {
+    src: pexelsImage('8560663'),
+    credit: 'Photo by Timur Weber on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-after-argument-8560663/'
+  },
+  phoneBed: {
+    src: pexelsImage('8036689'),
+    credit: 'Photo by SHVETS production on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/'
+  },
+  phoneWarm: {
+    src: pexelsImage('8070516'),
+    credit: 'Photo by Ron Lach on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/'
+  },
+  phonePartner: {
+    src: pexelsImage('8070513'),
+    credit: 'Photo by Ron Lach on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-woman-lying-on-the-bed-while-using-her-mobile-phone-8070513/'
+  },
+  cafeDate: {
+    src: pexelsImage('8442219'),
+    credit: 'Photo by Ron Lach on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/'
+  },
+  streetCafe: {
+    src: pexelsImage('12944983'),
+    credit: 'Photo by Atlantic Ambience on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-sitting-by-a-cafe-and-talking-12944983/'
+  }
+};
+
+const stockPhotoSetFor = (title, category) => {
+  const text = `${title} ${category}`;
+  if (/少覆|唔覆|不回|已讀|message|訊息|回覆|秒回|Long D|遠距|異地/.test(text)) {
+    return [stockPhotos.phoneWarm, stockPhotos.phoneBed, stockPhotos.phonePartner, stockPhotos.cafeNight];
+  }
+  if (/第三者|新歡|出軌|偷食|變心|劈腿|外遇|PUA|控制|操控|打壓|冷暴力|渣男|紅旗|警號|危機/.test(text)) {
+    return [stockPhotos.sofaSilent, stockPhotos.sofaArgument, stockPhotos.phoneBed, stockPhotos.cafeNight];
+  }
+  if (/分手|失戀|放低|前任|復合|挽回|斷聯|block|冷淡/.test(text)) {
+    return [stockPhotos.sofaSilent, stockPhotos.phoneWarm, stockPhotos.cafeTalk, stockPhotos.outdoorCafe];
+  }
+  if (/曖昧|約會|單身|桃花|吸引|主動|追求/.test(text)) {
+    return [stockPhotos.cafeDate, stockPhotos.outdoorCafe, stockPhotos.warmCafe, stockPhotos.streetCafe];
+  }
+  if (/道歉|吵架|嗌交|冷戰|誤會|修補|和好|爭執|溝通|說話|講嘢|勸/.test(text)) {
+    return [stockPhotos.cafeTalk, stockPhotos.sofaArgument, stockPhotos.warmCafe, stockPhotos.sofaSilent];
+  }
+  if (/安全感|不安|焦慮|內耗|委屈|情緒|治癒|自信|低落/.test(text)) {
+    return [stockPhotos.phoneWarm, stockPhotos.phoneBed, stockPhotos.cafeTalk, stockPhotos.sofaSilent];
+  }
+  return [stockPhotos.warmCafe, stockPhotos.cafeTalk, stockPhotos.outdoorCafe, stockPhotos.cafeDate];
+};
+
+const editorialImagesFor = ({ id, title, category }) => {
+  const set = stockPhotoSetFor(title, category);
+  return [0, 1, 2, 3].map((slot) => {
+    const photo = set[(id + slot) % set.length];
+    return {
+      src: photo.src,
+      caption: slot === 0 ? `封面圖：${title}` : `內文配圖：${title}`,
+      credit: photo.credit,
+      creditUrl: photo.creditUrl,
+      prompt: ''
+    };
+  });
+};
+
 const escapeHtml = (value = '') => value
   .replace(/&/g, '&amp;')
   .replace(/</g, '&lt;')
@@ -124,11 +221,11 @@ const parseIndex = () => {
 
 const inferCategory = (title, frontmatterCategory = '') => {
   const text = `${title} ${frontmatterCategory}`;
+  if (/出軌|第三者|變心|新歡|欺騙|冷暴力|家暴|操控|控制|PUA|渣男|紅旗|警號/.test(text)) return '關係危機';
   if (/復合|挽回|前任|分手後|斷聯|block|冷淡/.test(text)) return '復合挽回';
   if (/溝通|訊息|說話|講嘢|勸|道歉|冷戰|表達|分享/.test(text)) return '溝通相處';
   if (/安全感|不安|情緒|失戀|治癒|自信|焦慮|內心|委屈/.test(text)) return '情緒修復';
   if (/曖昧|約會|單身|桃花|吸引|主動|矜持|追求/.test(text)) return '曖昧桃花';
-  if (/出軌|第三者|變心|新歡|欺騙|冷暴力|家暴|操控|PUA|渣男/.test(text)) return '關係危機';
   if (/結婚|同居|見家長|辦公室|Long D|遠距/.test(text)) return '長期關係';
   return frontmatterCategory || '戀愛心理';
 };
@@ -155,8 +252,27 @@ const formatInline = (text) => {
   return value;
 };
 
-const formatParagraph = (text) => {
+const restoreLooseChinesePunctuation = (text = '') => {
   const value = text.trim();
+  const hasChinese = /[\u4e00-\u9fff]/.test(value);
+  const hasSpaces = /\s+/.test(value);
+  const punctuationCount = (value.match(/[，。！？；：]/g) || []).length;
+  if (!hasChinese || !hasSpaces || punctuationCount >= 2 || /^https?:\/\//i.test(value)) return value;
+
+  let restored = value
+    .replace(/([\u4e00-\u9fff）】」])\s+([\u4e00-\u9fff「（【])/g, '$1，$2')
+    .replace(/([A-Za-z0-9])\s+([\u4e00-\u9fff])/g, '$1，$2')
+    .replace(/([\u4e00-\u9fff])\s+([A-Za-z0-9])/g, '$1，$2')
+    .replace(/，+/g, '，');
+
+  if (restored.length > 14 && !/[。！？.!?」）】]$/.test(restored)) {
+    restored += '。';
+  }
+  return restored;
+};
+
+const formatParagraph = (text) => {
+  const value = restoreLooseChinesePunctuation(text);
   const factMatch = value.match(/^(真相[:：]?)(.+?)\s+Fact Check Point\s+(.+)$/i);
   if (factMatch) {
     return `<div class="article-insight">
@@ -268,7 +384,7 @@ const markdownToHtml = (markdown) => {
 
   const flushList = () => {
     if (list.length) {
-      html.push(`<ul>${list.map((item) => `<li>${formatInline(item)}</li>`).join('')}</ul>`);
+      html.push(`<ul>${list.map((item) => `<li>${formatInline(restoreLooseChinesePunctuation(item))}</li>`).join('')}</ul>`);
       list = [];
     }
   };
@@ -359,53 +475,115 @@ const wrapSvgText = (text, maxChars = 12, maxLines = 4) => {
 
 const photoScenarioFor = (title, category, slot) => {
   const text = `${title} ${category}`;
+  if (/Long D|遠距|異地/.test(text)) {
+    return [
+      'a real candid photo of one partner smiling softly during a late-night video call in a cozy room, city lights outside the window',
+      'a close-up real photo of a phone glowing with an unread message on a warm bed beside a notebook and bedside lamp, no readable text',
+      'a real photo of two coffee cups, a blank calendar, and a laptop video call glow on a small table, intimate long-distance relationship mood',
+      'a real candid photo of a couple reuniting in a quiet station waiting area, one small suitcase, gentle side hug, blurred warm background'
+    ][slot % 4];
+  }
+  if (/少覆|唔覆|不回|已讀|message|訊息|回覆|秒回|覆訊息/.test(text)) {
+    return [
+      'a real close-up photo of a phone beside a half-finished cup of tea at night, unread message glow, no readable text',
+      'a real candid photo of a young woman sitting on a sofa waiting for a reply, phone in hand, soft anxious mood',
+      'a real photo of a couple texting from different rooms at night, emotional distance, warm cinematic light',
+      'a real photo of a quiet bedroom desk with a phone, notebook, and dim lamp, waiting-for-message relationship mood, no readable text'
+    ][slot % 4];
+  }
+  if (/第三者|新歡|出軌|偷食|變心|劈腿|外遇/.test(text)) {
+    return [
+      'a real photo of a phone face down between two silent people at a dining table, trust crisis mood, no readable text',
+      'a real candid photo of a woman standing alone under city lights after a painful relationship discovery, cinematic but subtle',
+      'a real photo of a tense couple in a dim living room, one person looking away while the other holds a phone',
+      'a real photo of two people walking in opposite directions on a quiet street at night, relationship betrayal mood'
+    ][slot % 4];
+  }
+  if (/PUA|控制|操控|打壓|冷暴力|渣男|紅旗|警號/.test(text)) {
+    return [
+      'a real photo of a person sitting at the edge of a bed holding a phone, uneasy relationship boundary mood, soft shadow',
+      'a real photo of a couple in a quiet kitchen after a tense conversation, one person withdrawn, documentary style',
+      'a real photo of a woman looking thoughtful in a cafe window reflection, self-protection and relationship red flag mood',
+      'a real photo of two people sitting apart on a sofa with emotional distance, warm but heavy atmosphere'
+    ][slot % 4];
+  }
+  if (/安全感|不安|焦慮|內耗|委屈|情緒|治癒|自信|放低|低落/.test(text)) {
+    return [
+      'a real photo of a woman journaling by a window in warm morning light, emotional healing after relationship stress',
+      'a real photo of someone holding a warm mug beside a phone, calm self-reflection mood, no readable text',
+      'a real candid photo of a person walking alone by the harbour at dusk, healing and emotional clarity mood',
+      'a real photo of a quiet bedroom with a notebook, blanket, and soft lamp, relationship recovery mood'
+    ][slot % 4];
+  }
+  if (/道歉|吵架|嗌交|冷戰|誤會|修補|和好|爭執/.test(text)) {
+    return [
+      'a real candid photo of a couple talking softly across a small cafe table after an argument, hands near cups',
+      'a real photo of two people sitting on a sofa after a difficult conversation, one gently reaching out',
+      'a real photo of a dining table after dinner with two people having a calm reconciliation talk, warm home light',
+      'a real photo of a couple walking slowly together after resolving tension, evening street light'
+    ][slot % 4];
+  }
+  if (/結婚|同居|見家長|長期|承諾|未來|穩定/.test(text)) {
+    return [
+      'a real photo of a couple cooking together in a small warm kitchen, long-term relationship everyday intimacy',
+      'a real candid photo of two people organizing a cozy home shelf together, stable partnership mood',
+      'a real photo of a couple sitting at a dining table with family dinner atmosphere, no identifiable faces in background',
+      'a real photo of two hands placing keys beside a small plant on a home table, commitment and shared life mood'
+    ][slot % 4];
+  }
   if (/分手|失戀|放低|前任|復合|挽回|斷聯|block|冷淡/.test(text)) {
     return [
-      'a cinematic photorealistic couple standing apart on a quiet city street at dusk, emotional distance, warm film grain',
-      'a young woman alone by a window holding a phone, late night heartbreak mood, soft warm interior light',
-      'a couple sitting across a cafe table after a difficult conversation, subtle tension, natural documentary style'
-    ][slot % 3];
+      'a real candid photo of a couple standing apart on a quiet city street at dusk, emotional distance, warm film grain',
+      'a real photo of a young woman alone by a window holding a phone, late night heartbreak mood, soft warm interior light',
+      'a real photo of a couple sitting across a cafe table after a difficult conversation, subtle tension, natural documentary style',
+      'a real photo of an unsent message on a phone beside old instant photos, breakup and reconciliation mood, no readable text'
+    ][slot % 4];
   }
   if (/溝通|訊息|說話|講嘢|道歉|冷戰|分享|勸/.test(text)) {
     return [
-      'a couple having a sincere conversation at a small cafe table, hands near cups, gentle daylight, photorealistic',
-      'close-up of a phone on a bed with an unread message, soft bedroom light, relationship communication mood',
-      'a couple sitting on a sofa talking calmly after an argument, warm home atmosphere, realistic lifestyle photo'
-    ][slot % 3];
+      'a real candid photo of a couple having a sincere conversation at a small cafe table, hands near cups, gentle daylight',
+      'a real close-up photo of a phone on a bed with a blurred unread message glow, soft bedroom light, no readable text',
+      'a real photo of a couple sitting on a sofa talking calmly after an argument, warm home atmosphere',
+      'a real photo of two people sitting quietly at a dining table after a disagreement, one reaching gently toward the other'
+    ][slot % 4];
   }
   if (/曖昧|約會|單身|桃花|吸引|主動|追求/.test(text)) {
     return [
-      'a couple on an early date walking through a softly lit city street, shy romantic tension, realistic photo',
-      'two people sitting side by side at a coffee shop, almost touching hands, ambiguous relationship mood',
-      'a woman getting ready before a date, mirror reflection, soft warm light, confident romantic mood'
-    ][slot % 3];
+      'a real candid photo of two people on an early date walking through a softly lit city street, shy romantic tension',
+      'a real photo of two people sitting side by side at a coffee shop, almost touching hands, ambiguous relationship mood',
+      'a real photo of a woman getting ready before a date, mirror reflection, soft warm light, confident romantic mood',
+      'a real photo of a quiet first-date table with two drinks and hands near each other, gentle anticipation'
+    ][slot % 4];
   }
   if (/出軌|第三者|變心|新歡|欺騙|操控|PUA|渣男|危機/.test(text)) {
     return [
-      'a tense couple in a dim apartment, one person looking away while the other holds a phone, realistic cinematic photo',
-      'a woman sitting alone on a bed after discovering a painful message, moody soft light, documentary style',
-      'a couple walking in opposite directions under street lights, emotional distance, photorealistic'
-    ][slot % 3];
+      'a real photo of a tense couple in a dim apartment, one person looking away while the other holds a phone',
+      'a real photo of a woman sitting alone on a bed after discovering a painful message, moody soft light, documentary style',
+      'a real photo of a couple walking in opposite directions under street lights, emotional distance',
+      'a real photo of a phone face down on a table between two silent people, trust crisis mood, no readable text'
+    ][slot % 4];
   }
   return [
-    'a warm photorealistic couple portrait during golden hour, intimate but tasteful, natural lifestyle photography',
-    'a couple sitting together quietly near a window, peaceful relationship reflection, soft film photography',
-    'two people walking side by side in a park at sunset, gentle romantic relationship mood, realistic photo'
-  ][slot % 3];
+    'a real warm couple portrait during golden hour, intimate but tasteful, natural lifestyle photography',
+    'a real photo of a couple sitting together quietly near a window, peaceful relationship reflection, soft film photography',
+    'a real photo of two people walking side by side in a park at sunset, gentle romantic relationship mood',
+    'a real photo of a couple sharing a quiet moment at home, warm light, thoughtful relationship mood'
+  ][slot % 4];
 };
 
 const buildImagePrompt = (article, slot, kind) => {
   const scene = photoScenarioFor(article.title, article.category, slot);
   return [
-    'Use case: editorial article image',
-    `Asset type: ${kind === 'cover' ? 'article listing cover and article hero image' : 'inline editorial article image'}`,
+    'Use case: photorealistic relationship website photo',
+    `Asset type: ${kind === 'cover' ? 'website listing cover photo and hero photo' : 'inline website photo'}`,
     `Primary request: ${scene}`,
-    'Style/medium: photorealistic lifestyle photography, like a modern relationship magazine, not illustration, not vector, not cartoon',
-    'Composition/framing: horizontal 16:9, natural negative space, no overlaid text, no watermark, no logo',
+    'Style/medium: single photorealistic lifestyle camera photo, modern relationship magazine mood, not illustration, not vector, not cartoon',
+    'Composition/framing: horizontal 16:9, natural negative space, one continuous camera scene only',
     'Lighting/mood: warm, emotional, cinematic but realistic, Hong Kong / Asian editorial sensibility without showing identifiable public figures',
-    `Article topic: ${article.title}`,
-    `Category: ${article.category}`,
-    'Avoid: text in image, typography, fake UI, hands with distorted fingers, overly stock-photo smiles, explicit sexual content'
+    `Relationship theme to match: ${article.title}`,
+    `Mood category: ${article.category}`,
+    'Hard constraints: no text, no typography, no poster, no infographic, no chart, no diagram, no panels, no UI mockup, no captions, no logo, no watermark',
+    'Avoid: readable words, educational graphics, school or grammar content, daily routine schedules, parent-child family scenes, children, father routine, hands with distorted fingers, overly stock-photo smiles, explicit sexual content'
   ].join('\\n');
 };
 
@@ -434,13 +612,7 @@ const articles = orderedFiles.map((file, index) => {
   const content = markdownToHtml(removeDuplicateIntro(cleaned, summary));
   const id = index + 1;
   const imageLabel = imageLabelFor(title, category);
-  const imageBase = `/article-photos/article-${id}`;
-  const imagePrompts = [
-    { kind: 'cover', file: `${imageBase}-cover.png`, prompt: '' },
-    { kind: 'inline-1', file: `${imageBase}-inline-1.png`, prompt: '' },
-    { kind: 'inline-2', file: `${imageBase}-inline-2.png`, prompt: '' },
-    { kind: 'inline-3', file: `${imageBase}-inline-3.png`, prompt: '' }
-  ];
+  const editorialImages = editorialImagesFor({ id, title, category });
   const article = {
     id,
     title,
@@ -453,12 +625,8 @@ const articles = orderedFiles.map((file, index) => {
     sourceIg: frontmatter.source_ig || '',
     date: frontmatter.date || '',
     tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
-    coverImage: imagePrompts[0].file,
-    images: imagePrompts.map((image, slot) => ({
-      src: image.file,
-      caption: slot === 0 ? `封面圖：${title}` : `內文配圖：${title}`,
-      prompt: buildImagePrompt({ id, title, category }, slot, image.kind === 'cover' ? 'cover' : 'inline')
-    })),
+    coverImage: editorialImages[0].src,
+    images: editorialImages,
     coverCaption: `Asteria 相處教學：${title}`,
     inlineCaption: `關係不只是答案，還需要一步一步看清楚相處方法。`
   };
@@ -469,7 +637,9 @@ const articles = orderedFiles.map((file, index) => {
       title,
       category,
       output: image.src,
-      prompt: image.prompt
+      credit: image.credit,
+      creditUrl: image.creditUrl,
+      prompt: buildImagePrompt({ id, title, category }, slot, slot === 0 ? 'cover' : 'inline')
     }));
   });
   return article;
@@ -488,7 +658,7 @@ const ts = `export type TeachingPost = {
   date: string;
   tags: string[];
   coverImage: string;
-  images: Array<{ src: string; caption: string; prompt: string }>;
+  images: Array<{ src: string; caption: string; credit: string; creditUrl: string; prompt: string }>;
   coverCaption: string;
   inlineCaption: string;
 };

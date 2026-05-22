@@ -834,7 +834,23 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 
     const getEditorialImages = (id?: number | null) => {
       const post = posts.find((item) => item.id === id) || posts[0];
-      return post.images?.length ? post.images : [{ src: post.coverImage, caption: post.coverCaption, prompt: '' }];
+      return post.images?.length ? post.images : [{ src: post.coverImage, caption: post.coverCaption, credit: '', creditUrl: '', prompt: '' }];
+    };
+
+    const PhotoCredit = ({ image }: { image?: { credit?: string; creditUrl?: string } }) => {
+      if (!image?.credit) return null;
+      return (
+        <figcaption className="px-4 py-2 text-xs md:text-sm text-stone-400 bg-white">
+          圖片｜
+          {image.creditUrl ? (
+            <a href={image.creditUrl} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-asteria-primary">
+              {image.credit}
+            </a>
+          ) : (
+            image.credit
+          )}
+        </figcaption>
+      );
     };
 
     const getArticleSegments = (content: string) => {
@@ -857,6 +873,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               </div>
             )}
           </div>
+          <PhotoCredit image={image} />
         </figure>
       );
     };
@@ -920,6 +937,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
             <div className="overflow-hidden">
               <div className="rounded-[28px] md:rounded-[36px] overflow-hidden shadow-sm border border-asteria-cream/70 bg-white">
                 <ArticleCover post={activePost} hero />
+                <PhotoCredit image={getEditorialImages(activePost.id)[0]} />
               </div>
               <div className="py-8 md:py-12">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-stone-400 mb-5">
