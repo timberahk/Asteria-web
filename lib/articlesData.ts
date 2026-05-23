@@ -806,30 +806,30 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "coverCredit": "Photo by Vitaly Gariev on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+    "coverImage": "/article-custom-images/by_article/017-helping-partner-without-pressure/01-asian-couple-sofa-quiet-presence.jpg",
+    "coverCredit": "",
+    "coverCreditUrl": "",
     "coverPrompt": "",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？3 個常見相處誤區",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/02-asian-woman-window-respectful-space.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？3 個常見相處誤區",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/03-asian-couple-park-patient-companionship.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？3 個常見相處誤區",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/04-asian-man-cafe-self-boundary.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -854,30 +854,30 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "coverCredit": "Photo by Alexander Mass on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+    "coverImage": "/article-custom-images/by_article/018-care-becoming-pressure/01-asian-couple-advice-pressure-table.jpg",
+    "coverCredit": "",
+    "coverCreditUrl": "",
     "coverPrompt": "",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/018-care-becoming-pressure/02-asian-woman-train-autonomy.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/018-care-becoming-pressure/03-asian-couple-cafe-share-not-control.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/018-care-becoming-pressure/04-asian-couple-park-same-side.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -902,30 +902,30 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "coverCredit": "Photo by Ron Lach on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
+    "coverImage": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/01-asian-couple-kitchen-stuck-mindset.jpg",
+    "coverCredit": "",
+    "coverCreditUrl": "",
     "coverPrompt": "",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/02-asian-woman-desk-reflection-patterns.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/03-asian-couple-floor-learning-together.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/04-asian-couple-walking-growth-path.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -950,30 +950,30 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "coverCredit": "Photo by Timur Weber on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+    "coverImage": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/01-asian-woman-window-old-messages.jpg",
+    "coverCredit": "",
+    "coverCreditUrl": "",
     "coverPrompt": "",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
+        "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/02-asian-man-cafe-two-cups-reflection.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/03-asian-former-couple-bench-postmortem.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/04-asian-woman-sunset-repair-uncertain.jpg",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
