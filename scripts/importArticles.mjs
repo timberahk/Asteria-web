@@ -6,6 +6,7 @@ const repoRoot = path.resolve(import.meta.dirname, '..');
 const outFile = path.join(repoRoot, 'lib', 'articlesData.ts');
 const customImageDir = path.join(repoRoot, 'public', 'article-custom-images', 'by_article');
 const promptsFile = path.join(repoRoot, 'scripts', 'article-image-prompts.jsonl');
+const pexelsArticleImagesFile = path.join(repoRoot, 'scripts', 'pexels-article-images.json');
 const sitemapFile = path.join(repoRoot, 'public', 'sitemap.xml');
 
 const colorThemes = [
@@ -170,6 +171,12 @@ const getCustomImageMap = () => {
   }
 
   return imageMap;
+};
+
+const getPexelsArticleImageMap = () => {
+  if (!fs.existsSync(pexelsArticleImagesFile)) return new Map();
+  const parsed = JSON.parse(fs.readFileSync(pexelsArticleImagesFile, 'utf8'));
+  return new Map(Object.entries(parsed).map(([id, images]) => [Number(id), images]));
 };
 
 const escapeHtml = (value = '') => value
@@ -624,6 +631,7 @@ const buildImagePrompt = (article, slot, kind) => {
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
 const imagePromptRows = [];
 const customImageMap = getCustomImageMap();
+const pexelsArticleImageMap = getPexelsArticleImageMap();
 
 const { order, titles } = parseIndex();
 const excludedFiles = new Set([
@@ -648,8 +656,11 @@ const articles = orderedFiles.map((file, index) => {
   const imageLabel = imageLabelFor(title, category);
   const fallbackImages = editorialImagesFor({ id, title, category });
   const customImages = customImageMap.get(file) || [];
+  const pexelsArticleImages = pexelsArticleImageMap.get(id) || [];
   const editorialImages = customImages.length
     ? [0, 1, 2, 3].map((slot) => customImages[slot] || fallbackImages[slot])
+    : pexelsArticleImages.length
+      ? [0, 1, 2, 3].map((slot) => pexelsArticleImages[slot] || fallbackImages[slot])
     : fallbackImages;
   const coverImage = editorialImages[0];
   const inlineImages = editorialImages.slice(1);
