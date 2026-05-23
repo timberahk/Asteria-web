@@ -880,8 +880,18 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       </div>
     );
 
+    const getEditorialImages = (id?: number | null) => {
+      const post = posts.find((item) => item.id === id) || posts[0];
+      return post.images?.length ? post.images : [{ src: post.coverImage, caption: post.coverCaption, credit: '', creditUrl: '', prompt: '' }];
+    };
+
+    const getCoverImage = (post: TeachingPost) => {
+      const imageWithCredit = post.images?.find((image) => image.src === post.coverImage);
+      return imageWithCredit || { src: post.coverImage, caption: post.coverCaption, credit: '', creditUrl: '', prompt: '' };
+    };
+
     const ArticleCover = ({ post, compact = false, hero = false }: { post: TeachingPost; compact?: boolean; hero?: boolean }) => {
-      const cover = getEditorialImages(post.id)[0];
+      const cover = getCoverImage(post);
       const [failed, setFailed] = useState(false);
       return (
         <div className={`${hero ? 'aspect-[16/9] md:aspect-[2.2/1]' : compact ? 'aspect-[1.15/1]' : 'aspect-[4/3]'} relative overflow-hidden bg-[#FFF8EC]`}>
@@ -900,9 +910,10 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       );
     };
 
-    const getEditorialImages = (id?: number | null) => {
+    const getInlineImages = (id?: number | null) => {
       const post = posts.find((item) => item.id === id) || posts[0];
-      return post.images?.length ? post.images : [{ src: post.coverImage, caption: post.coverCaption, credit: '', creditUrl: '', prompt: '' }];
+      const images = post.images?.filter((image) => image.src !== post.coverImage) || [];
+      return images.length ? images : getEditorialImages(post.id);
     };
 
     const PhotoCredit = ({ image }: { image?: { credit?: string; creditUrl?: string } }) => {
@@ -927,7 +938,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     };
 
     const ArticleInlineImage = ({ index }: { index: number }) => {
-      const images = getEditorialImages(activeId);
+      const images = getInlineImages(activeId);
       const image = images[index] || images[0];
       const [failed, setFailed] = useState(false);
       return (
@@ -1005,7 +1016,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
             <div className="overflow-hidden">
               <div className="rounded-[28px] md:rounded-[36px] overflow-hidden shadow-sm border border-asteria-cream/70 bg-white">
                 <ArticleCover post={activePost} hero />
-                <PhotoCredit image={getEditorialImages(activePost.id)[0]} />
+                <PhotoCredit image={getCoverImage(activePost)} />
               </div>
               <div className="py-8 md:py-12">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-stone-400 mb-5">
@@ -1017,7 +1028,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 {articleSegments.map((segment, index) => (
                   <React.Fragment key={`${activePost.id}-${index}`}>
                     <div className="article-body" dangerouslySetInnerHTML={{ __html: segment }}></div>
-                    {index < 3 && <ArticleInlineImage index={index + 1} />}
+                    {index < 3 && <ArticleInlineImage index={index} />}
                     {index === 0 && <ArticleRelatedCallout currentId={activeId} />}
                   </React.Fragment>
                 ))}
@@ -2039,7 +2050,8 @@ const SpacePortalPage = () => {
   const [journalDate, setJournalDate] = useState(toDateInputValue());
   const [journalText, setJournalText] = useState('');
   const [journalMonth, setJournalMonth] = useState(toDateInputValue().slice(0, 7));
-  const [entryMessage, setEntryMessage] = useState('');
+  const [relationshipEntryMessage, setRelationshipEntryMessage] = useState('');
+  const [journalEntryMessage, setJournalEntryMessage] = useState('');
   const activeCustomer = customers.find((customer) => customer.id === activeCustomerId) || customers[0];
   const activeChatImages = (activeCustomer?.messages || []).flatMap((message) => message.images || []);
   const activeChatImagePaths = (activeCustomer?.messages || []).flatMap((message) => message.imagePaths || []);
@@ -2272,9 +2284,9 @@ const SpacePortalPage = () => {
         upsertLocalEntry({ id: Date.now(), type: 'relationship', text: body, entryDate: selectedRelationshipDate, createdAt: new Date().toISOString() });
       }
       setRelationshipText('');
-      setEntryMessage('關係 update 已儲存。');
+      setRelationshipEntryMessage('關係 update 已儲存。');
     } catch (error) {
-      setEntryMessage(error instanceof Error ? error.message : '關係 update 暫時儲存唔到。');
+      setRelationshipEntryMessage(error instanceof Error ? error.message : '關係 update 暫時儲存唔到。');
     }
   };
 
@@ -2312,9 +2324,9 @@ const SpacePortalPage = () => {
           upsertLocalEntry({ id: Date.now(), type: 'mood', text: body, entryDate: selectedJournalDate, createdAt: new Date().toISOString() });
         }
       }
-      setEntryMessage('心靈日記已儲存。');
+      setJournalEntryMessage('心靈日記已儲存。');
     } catch (error) {
-      setEntryMessage(error instanceof Error ? error.message : '心靈日記暫時儲存唔到。');
+      setJournalEntryMessage(error instanceof Error ? error.message : '心靈日記暫時儲存唔到。');
     }
   };
 
@@ -2606,7 +2618,7 @@ const SpacePortalPage = () => {
             </label>
             <textarea value={relationshipText} onChange={(event) => setRelationshipText(event.target.value)} className="w-full min-h-36 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary" placeholder="寫低最近關係進展、對方態度、重要對話背景..." />
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-3">
-              <div className="text-sm text-stone-400">{entryMessage || '新增後會按事情發生日期排返喺下面。'}</div>
+              <div className="text-sm text-stone-400">{relationshipEntryMessage || '新增後會按事情發生日期排返喺下面。'}</div>
               <button onClick={saveRelationshipUpdate} className="btn-primary px-5 py-3 rounded-xl font-bold">加入 timeline</button>
             </div>
           </section>
@@ -2682,7 +2694,7 @@ const SpacePortalPage = () => {
                 <textarea value={journalText} onChange={(event) => setJournalText(event.target.value)} className="w-full min-h-[520px] bg-white border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary leading-relaxed" placeholder="今日的情緒、反思、相處上想提醒自己的事..." />
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
-                <div className="text-sm text-stone-400">{entryMessage || '可以記低當日的心情、反思同相處提醒。'}</div>
+                <div className="text-sm text-stone-400">{journalEntryMessage || '可以記低當日的心情、反思同相處提醒。'}</div>
                 <div className="flex gap-2">
                   {currentJournalEntry && canEditEntry(currentJournalEntry) && (
                     <button onClick={() => deleteEntry(currentJournalEntry)} className="bg-white border border-red-200 text-red-600 rounded-xl px-4 py-3 font-bold">Delete</button>
