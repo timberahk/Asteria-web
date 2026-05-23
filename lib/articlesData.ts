@@ -139,31 +139,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.png",
+    "coverImage": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.png",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/02-asian-couple-station-goodbye.png",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/02-asian-couple-station-goodbye.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/03-asian-woman-dinner-video-call.png",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/03-asian-woman-dinner-video-call.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/04-asian-man-night-train-longing.png",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/04-asian-man-night-train-longing.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -191,31 +191,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.png",
+    "coverImage": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.png",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/02-asian-woman-feeling-unheard.png",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/02-asian-woman-feeling-unheard.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/03-asian-couple-sofa-understanding.png",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/03-asian-couple-sofa-understanding.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/04-asian-man-overthinking-desk.png",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/04-asian-man-overthinking-desk.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -243,31 +243,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.png",
+    "coverImage": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.png",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/02-asian-woman-after-formal-date.png",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/02-asian-woman-after-formal-date.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/03-asian-woman-questioning-checklist.png",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/03-asian-woman-questioning-checklist.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/04-asian-couple-comfortable-park.png",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/04-asian-couple-comfortable-park.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -295,31 +295,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.png",
+    "coverImage": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.png",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/02-asian-woman-phone-privacy-pressure.png",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/02-asian-woman-phone-privacy-pressure.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/03-asian-woman-window-boundaries.png",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/03-asian-woman-window-boundaries.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/04-asian-friends-support-cafe.png",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/04-asian-friends-support-cafe.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -347,31 +347,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.png",
+    "coverImage": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.png",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/02-asian-woman-values-notebook.png",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/02-asian-woman-values-notebook.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/03-asian-couple-park-compromise.png",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/03-asian-couple-park-compromise.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/04-asian-woman-window-clarity.png",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/04-asian-woman-window-clarity.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -399,31 +399,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.png",
+    "coverImage": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.png",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/02-asian-woman-phone-uncertainty-night.png",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/02-asian-woman-phone-uncertainty-night.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/03-asian-man-avoidant-after-work.png",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/03-asian-man-avoidant-after-work.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/04-asian-couple-waterfront-uncertain-talk.png",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/04-asian-couple-waterfront-uncertain-talk.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -451,31 +451,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.png",
+    "coverImage": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.png",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/02-asian-woman-pause-before-speaking.png",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/02-asian-woman-pause-before-speaking.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/03-asian-couple-floor-safe-talk.png",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/03-asian-couple-floor-safe-talk.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/04-hands-near-reconnection-cafe.png",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/04-hands-near-reconnection-cafe.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -503,31 +503,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.png",
+    "coverImage": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.png",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/02-asian-couple-kitchen-apology.png",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/02-asian-couple-kitchen-apology.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/03-asian-couple-rain-umbrella-repair.png",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/03-asian-couple-rain-umbrella-repair.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/04-asian-woman-cafe-journal-tarot.png",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/04-asian-woman-cafe-journal-tarot.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -555,31 +555,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.png",
+    "coverImage": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.png",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/02-asian-woman-first-attraction-street.png",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/02-asian-woman-first-attraction-street.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/03-asian-couple-outdoor-cafe-date.png",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/03-asian-couple-outdoor-cafe-date.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/04-asian-couple-seaside-attachment.png",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/04-asian-couple-seaside-attachment.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -607,31 +607,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.png",
+    "coverImage": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.png",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/02-asian-woman-writing-feelings.png",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/02-asian-woman-writing-feelings.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/03-asian-couple-cafe-direct-talk.png",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/03-asian-couple-cafe-direct-talk.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/04-asian-couple-after-honest-talk.png",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/04-asian-couple-after-honest-talk.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -659,31 +659,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.png",
+    "coverImage": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.png",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/02-asian-couple-night-ambiguous-walk.png",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/02-asian-couple-night-ambiguous-walk.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/03-asian-couple-cafe-define-relationship.png",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/03-asian-couple-cafe-define-relationship.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/04-asian-couple-crossing-commitment.png",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/04-asian-couple-crossing-commitment.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -711,31 +711,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.png",
+    "coverImage": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.png",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/02-asian-woman-dinner-emotional-distance.png",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/02-asian-woman-dinner-emotional-distance.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/03-asian-couple-kitchen-mutual-sharing.png",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/03-asian-couple-kitchen-mutual-sharing.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/04-asian-couple-balcony-reconnection.png",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/04-asian-couple-balcony-reconnection.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -763,31 +763,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.png",
+    "coverImage": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.png",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/02-asian-couple-home-imbalance.png",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/02-asian-couple-home-imbalance.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/03-asian-woman-cafe-self-worth.png",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/03-asian-woman-cafe-self-worth.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/04-asian-couple-table-restoring-balance.png",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/04-asian-couple-table-restoring-balance.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -815,31 +815,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.png",
+    "coverImage": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.png",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/02-asian-couple-kitchen-shared-tasks.png",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/02-asian-couple-kitchen-shared-tasks.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/03-asian-couple-planner-ask-before-helping.png",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/03-asian-couple-planner-ask-before-helping.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/04-asian-woman-park-support-boundaries.png",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/04-asian-woman-park-support-boundaries.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -2323,31 +2323,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.png",
+    "coverImage": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.png",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/02-asian-woman-mirror-self-care.png",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/02-asian-woman-mirror-self-care.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/03-asian-woman-cafe-new-chapter.png",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/03-asian-woman-cafe-new-chapter.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/04-asian-couple-cafe-reconciliation.png",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/04-asian-couple-cafe-reconciliation.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
@@ -3519,31 +3519,31 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.png",
+    "coverImage": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.jpg",
     "images": [
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.png",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.jpg",
         "caption": "Asteria 原創文章封面圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/02-asian-couple-cold-war-sofa.png",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/02-asian-couple-cold-war-sofa.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/03-asian-woman-careful-message-cafe.png",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/03-asian-woman-careful-message-cafe.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/04-asian-couple-distance-riverside.png",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/04-asian-couple-distance-riverside.jpg",
         "caption": "Asteria 原創文章配圖",
         "credit": "",
         "creditUrl": "",
