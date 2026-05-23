@@ -651,6 +651,8 @@ const articles = orderedFiles.map((file, index) => {
   const editorialImages = customImages.length
     ? [0, 1, 2, 3].map((slot) => customImages[slot] || fallbackImages[slot])
     : fallbackImages;
+  const coverImage = editorialImages[0];
+  const inlineImages = editorialImages.slice(1);
   const article = {
     id,
     title,
@@ -663,12 +665,15 @@ const articles = orderedFiles.map((file, index) => {
     sourceIg: frontmatter.source_ig || '',
     date: frontmatter.date || '',
     tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
-    coverImage: editorialImages[0].src,
-    images: editorialImages,
+    coverImage: coverImage.src,
+    coverCredit: coverImage.credit,
+    coverCreditUrl: coverImage.creditUrl,
+    coverPrompt: coverImage.prompt,
+    images: inlineImages,
     coverCaption: `Asteria 相處教學：${title}`,
     inlineCaption: `關係不只是答案，還需要一步一步看清楚相處方法。`
   };
-  article.images.forEach((image, slot) => {
+  [coverImage, ...inlineImages].forEach((image, slot) => {
     imagePromptRows.push(JSON.stringify({
       articleId: id,
       slot,
@@ -696,6 +701,9 @@ const ts = `export type TeachingPost = {
   date: string;
   tags: string[];
   coverImage: string;
+  coverCredit: string;
+  coverCreditUrl: string;
+  coverPrompt: string;
   images: Array<{ src: string; caption: string; credit: string; creditUrl: string; prompt: string }>;
   coverCaption: string;
   inlineCaption: string;

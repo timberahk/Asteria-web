@@ -887,7 +887,13 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 
     const getCoverImage = (post: TeachingPost) => {
       const imageWithCredit = post.images?.find((image) => image.src === post.coverImage);
-      return imageWithCredit || { src: post.coverImage, caption: post.coverCaption, credit: '', creditUrl: '', prompt: '' };
+      return imageWithCredit || {
+        src: post.coverImage,
+        caption: post.coverCaption,
+        credit: post.coverCredit || '',
+        creditUrl: post.coverCreditUrl || '',
+        prompt: post.coverPrompt || ''
+      };
     };
 
     const ArticleCover = ({ post, compact = false, hero = false }: { post: TeachingPost; compact?: boolean; hero?: boolean }) => {
@@ -912,7 +918,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 
     const getInlineImages = (id?: number | null) => {
       const post = posts.find((item) => item.id === id) || posts[0];
-      const images = post.images?.filter((image) => image.src !== post.coverImage) || [];
+      const images = post.images || [];
       return images.length ? images : getEditorialImages(post.id);
     };
 
