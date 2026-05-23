@@ -4,7 +4,7 @@ import path from 'node:path';
 const sourceDir = '/Users/dorothy/Documents/asteria 所有教學文/backup/愛情拯救所 教學文/web_ready';
 const repoRoot = path.resolve(import.meta.dirname, '..');
 const outFile = path.join(repoRoot, 'lib', 'articlesData.ts');
-const imageDir = path.join(repoRoot, 'public', 'article-photos');
+const customImageDir = path.join(repoRoot, 'public', 'article-custom-images', 'by_article');
 const promptsFile = path.join(repoRoot, 'scripts', 'article-image-prompts.jsonl');
 const sitemapFile = path.join(repoRoot, 'public', 'sitemap.xml');
 
@@ -136,6 +136,40 @@ const editorialImagesFor = ({ id, title, category }) => {
       prompt: ''
     };
   });
+};
+
+const getCustomImageMap = () => {
+  const imageMap = new Map();
+  if (!fs.existsSync(customImageDir)) return imageMap;
+
+  for (const articleDir of fs.readdirSync(customImageDir, { withFileTypes: true })) {
+    if (!articleDir.isDirectory()) continue;
+    const dirPath = path.join(customImageDir, articleDir.name);
+    const manifestPath = path.join(dirPath, 'manifest.md');
+    if (!fs.existsSync(manifestPath)) continue;
+
+    const manifest = fs.readFileSync(manifestPath, 'utf8');
+    const articleMatch = manifest.match(/Article file:\s*\n`([^`]+)`/);
+    if (!articleMatch) continue;
+    const sourceFilename = path.basename(articleMatch[1]);
+    const images = fs
+      .readdirSync(dirPath)
+      .filter((file) => /\.(png|jpe?g|webp)$/i.test(file))
+      .sort((a, b) => a.localeCompare(b, 'en', { numeric: true }))
+      .map((file, index) => ({
+        src: `/article-custom-images/by_article/${articleDir.name}/${file}`,
+        caption: index === 0 ? 'Asteria 原創文章封面圖' : 'Asteria 原創文章配圖',
+        credit: '',
+        creditUrl: '',
+        prompt: ''
+      }));
+
+    if (images.length) {
+      imageMap.set(sourceFilename, images);
+    }
+  }
+
+  return imageMap;
 };
 
 const escapeHtml = (value = '') => value
@@ -588,8 +622,8 @@ const buildImagePrompt = (article, slot, kind) => {
 };
 
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
-fs.mkdirSync(imageDir, { recursive: true });
 const imagePromptRows = [];
+const customImageMap = getCustomImageMap();
 
 const { order, titles } = parseIndex();
 const excludedFiles = new Set([
@@ -612,7 +646,11 @@ const articles = orderedFiles.map((file, index) => {
   const content = markdownToHtml(removeDuplicateIntro(cleaned, summary));
   const id = index + 1;
   const imageLabel = imageLabelFor(title, category);
-  const editorialImages = editorialImagesFor({ id, title, category });
+  const fallbackImages = editorialImagesFor({ id, title, category });
+  const customImages = customImageMap.get(file) || [];
+  const editorialImages = customImages.length
+    ? [0, 1, 2, 3].map((slot) => customImages[slot] || fallbackImages[slot])
+    : fallbackImages;
   const article = {
     id,
     title,

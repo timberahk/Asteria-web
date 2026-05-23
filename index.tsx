@@ -136,10 +136,13 @@ const scrollToHashTarget = () => {
 const Navbar = () => {
   const [role, setRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
   const [showNotice, setShowNotice] = useState(() => window.localStorage.getItem('asteriaHideTopNotice') !== '1');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const spaceHash = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
   const spaceHref = `/${spaceHash}`;
   const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
   const navLinkClass = "hover:text-asteria-primary transition-colors hidden md:inline-flex items-center gap-1.5 whitespace-nowrap";
+  const mobileLinkClass = "flex items-center justify-between gap-3 rounded-2xl border border-asteria-cream bg-white px-4 py-3 text-base font-bold text-asteria-dark shadow-sm";
+  const closeMobileMenu = () => setMobileMenuOpen(false);
   const toggleNotice = () => {
     setShowNotice((current) => {
       const next = !current;
@@ -153,10 +156,12 @@ const Navbar = () => {
     window.addEventListener('asteria-session-change', syncRole);
     window.addEventListener('storage', syncRole);
     window.addEventListener('hashchange', syncRole);
+    window.addEventListener('asteria-route-change', closeMobileMenu);
     return () => {
       window.removeEventListener('asteria-session-change', syncRole);
       window.removeEventListener('storage', syncRole);
       window.removeEventListener('hashchange', syncRole);
+      window.removeEventListener('asteria-route-change', closeMobileMenu);
     };
   }, []);
 
@@ -179,7 +184,7 @@ const Navbar = () => {
             <i className="fa-regular fa-user"></i> <span>{spaceLabel}</span>
           </a>
           {role && (
-            <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all">
+            <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all hidden md:inline-flex">
               登出
             </button>
           )}
@@ -189,8 +194,71 @@ const Navbar = () => {
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden sm:flex items-center gap-1">
             <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
           </a>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((current) => !current)}
+            className="md:hidden border border-asteria-cream bg-white text-asteria-primary w-10 h-10 rounded-full text-lg font-bold flex items-center justify-center shadow-sm"
+            aria-label={mobileMenuOpen ? '收起選單' : '打開選單'}
+            aria-expanded={mobileMenuOpen}
+          >
+            <i className={`fa-solid ${mobileMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+          </button>
         </div>
       </div>
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-asteria-cream/70 bg-[#FFF9F0] px-4 py-4 shadow-lg">
+          <div className="grid gap-2">
+            <a href="/about" onClick={closeMobileMenu} className={mobileLinkClass}>
+              <span><i className="fa-regular fa-heart mr-2 text-asteria-primary"></i>關於我們</span>
+              <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
+            </a>
+            <a href="/#oracle" onClick={(event) => { closeMobileMenu(); goHomeSection('oracle')(event); }} className={mobileLinkClass}>
+              <span><i className="fa-regular fa-star mr-2 text-asteria-primary"></i>每日指引</span>
+              <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
+            </a>
+            <a href="/teaching" onClick={closeMobileMenu} className={mobileLinkClass}>
+              <span><i className="fa-regular fa-newspaper mr-2 text-asteria-primary"></i>相處教學</span>
+              <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
+            </a>
+            <a href="/services" onClick={closeMobileMenu} className={mobileLinkClass}>
+              <span><i className="fa-solid fa-wand-magic-sparkles mr-2 text-asteria-primary"></i>服務</span>
+              <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
+            </a>
+            <a href="/#reviews" onClick={(event) => { closeMobileMenu(); goHomeSection('reviews')(event); }} className={mobileLinkClass}>
+              <span><i className="fa-regular fa-comment-dots mr-2 text-asteria-primary"></i>好評</span>
+              <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
+            </a>
+            <a href={spaceHref} onClick={(event) => { closeMobileMenu(); goSpaceEntry(spaceHash)(event); }} className={`${mobileLinkClass} bg-asteria-dark text-white border-asteria-dark`}>
+              <span><i className="fa-regular fa-user mr-2"></i>{spaceLabel}</span>
+              <i className="fa-solid fa-chevron-right text-xs text-white/60"></i>
+            </a>
+            {role && (
+              <button
+                type="button"
+                onClick={() => {
+                  closeMobileMenu();
+                  void clearSpaceSession();
+                }}
+                className="flex items-center justify-between gap-3 rounded-2xl border border-red-100 bg-white px-4 py-3 text-base font-bold text-red-500 shadow-sm"
+              >
+                <span><i className="fa-solid fa-arrow-right-from-bracket mr-2"></i>登出</span>
+                <i className="fa-solid fa-chevron-right text-xs text-red-200"></i>
+              </button>
+            )}
+            <div className="grid grid-cols-3 gap-2 pt-2">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">
+                WhatsApp
+              </a>
+              <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#2AABEE] px-3 py-2 text-center text-sm font-bold text-white">
+                Telegram
+              </a>
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#1877F2] px-3 py-2 text-center text-sm font-bold text-white">
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
       {showNotice && (
       <div className="bg-asteria-dark text-white">
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">

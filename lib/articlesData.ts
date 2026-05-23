@@ -139,34 +139,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/17637241/pexels-photo-17637241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/17637241/pexels-photo-17637241.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "Photo by K on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/02-asian-couple-station-goodbye.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8036689/pexels-photo-8036689.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "Photo by SHVETS production on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/03-asian-woman-dinner-video-call.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8070513/pexels-photo-8070513.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-lying-on-the-bed-while-using-her-mobile-phone-8070513/",
+        "src": "/article-custom-images/by_article/003-long-distance-relationship/04-asian-man-night-train-longing.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -191,34 +191,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/02-asian-woman-feeling-unheard.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/03-asian-couple-sofa-understanding.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/004-rational-partner-argument/04-asian-man-overthinking-desk.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -243,34 +243,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/02-asian-woman-after-formal-date.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/03-asian-woman-questioning-checklist.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/04-asian-couple-comfortable-park.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -295,34 +295,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8036689/pexels-photo-8036689.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8036689/pexels-photo-8036689.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "Photo by SHVETS production on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/17637241/pexels-photo-17637241.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "Photo by K on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/02-asian-woman-phone-privacy-pressure.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/03-asian-woman-window-boundaries.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/006-control-disguised-as-care/04-asian-friends-support-cafe.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -347,34 +347,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/02-asian-woman-values-notebook.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/03-asian-couple-park-compromise.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/04-asian-woman-window-clarity.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -399,34 +399,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/02-asian-woman-phone-uncertainty-night.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/03-asian-man-avoidant-after-work.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
+        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/04-asian-couple-waterfront-uncertain-talk.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -451,34 +451,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/02-asian-woman-pause-before-speaking.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/03-asian-couple-floor-safe-talk.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/04-hands-near-reconnection-cafe.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -503,34 +503,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/02-asian-couple-kitchen-apology.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/03-asian-couple-rain-umbrella-repair.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
+        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/04-asian-woman-cafe-journal-tarot.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -555,34 +555,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/02-asian-woman-first-attraction-street.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/03-asian-couple-outdoor-cafe-date.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/04-asian-couple-seaside-attachment.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -607,34 +607,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/02-asian-woman-writing-feelings.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/03-asian-couple-cafe-direct-talk.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/04-asian-couple-after-honest-talk.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -659,34 +659,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/02-asian-couple-night-ambiguous-walk.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/12944983/pexels-photo-12944983.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "Photo by Atlantic Ambience on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-by-a-cafe-and-talking-12944983/",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/03-asian-couple-cafe-define-relationship.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8442219/pexels-photo-8442219.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
+        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/04-asian-couple-crossing-commitment.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -711,34 +711,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/02-asian-woman-dinner-emotional-distance.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/03-asian-couple-kitchen-mutual-sharing.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/04-asian-couple-balcony-reconnection.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -763,34 +763,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/17637241/pexels-photo-17637241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/17637241/pexels-photo-17637241.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "Photo by K on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/02-asian-couple-home-imbalance.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/03-asian-woman-cafe-self-worth.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8036689/pexels-photo-8036689.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "Photo by SHVETS production on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
+        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/04-asian-couple-table-restoring-balance.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -815,34 +815,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/36812991/pexels-photo-36812991.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "Photo by Vitaly Gariev on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/02-asian-couple-kitchen-shared-tasks.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20479952/pexels-photo-20479952.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "Photo by Alexander Mass on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/03-asian-couple-planner-ask-before-helping.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/04-asian-woman-park-support-boundaries.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -2323,34 +2323,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20804849/pexels-photo-20804849.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "Photo by Tuba Nur Dogan on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/02-asian-woman-mirror-self-care.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/20045413/pexels-photo-20045413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "Photo by Mustafa Bodur on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/03-asian-woman-cafe-new-chapter.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8560663/pexels-photo-8560663.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
+        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/04-asian-couple-cafe-reconciliation.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
@@ -3519,34 +3519,34 @@ export const teachingPosts: TeachingPost[] = [
       "塔羅",
       "白魔法儀式"
     ],
-    "coverImage": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "coverImage": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.png",
     "images": [
       {
-        "src": "https://images.pexels.com/photos/8070516/pexels-photo-8070516.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "封面圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.png",
+        "caption": "Asteria 原創文章封面圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8036689/pexels-photo-8036689.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "Photo by SHVETS production on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/02-asian-couple-cold-war-sofa.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/8070513/pexels-photo-8070513.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "Photo by Ron Lach on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-lying-on-the-bed-while-using-her-mobile-phone-8070513/",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/03-asian-woman-careful-message-cafe.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       },
       {
-        "src": "https://images.pexels.com/photos/17637241/pexels-photo-17637241.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "Photo by K on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
+        "src": "/article-custom-images/by_article/001-block-read-no-contact/04-asian-couple-distance-riverside.png",
+        "caption": "Asteria 原創文章配圖",
+        "credit": "",
+        "creditUrl": "",
         "prompt": ""
       }
     ],
