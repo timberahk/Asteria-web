@@ -99,13 +99,14 @@ const goSpaceEntry = (hash: string) => (event: React.MouseEvent<HTMLAnchorElemen
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-type AppPage = 'home' | 'teaching' | 'about' | 'services' | 'register' | 'portal' | 'admin' | 'inbox';
+type AppPage = 'home' | 'teaching' | 'about' | 'services' | 'reviews' | 'register' | 'portal' | 'admin' | 'inbox';
 
 const getRoutePage = (): AppPage => {
   const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
   if (cleanPath === 'teaching' || cleanPath === 'cases' || cleanPath.startsWith('articles/')) return 'teaching';
   if (cleanPath === 'about') return 'about';
   if (cleanPath === 'services') return 'services';
+  if (cleanPath === 'reviews') return 'reviews';
 
   const rawHash = window.location.hash || '';
   const cleanHash = rawHash
@@ -117,6 +118,7 @@ const getRoutePage = (): AppPage => {
   if (cleanHash === 'teaching' || cleanHash === 'cases' || cleanHash.startsWith('article-')) return 'teaching';
   if (cleanHash === 'about') return 'about';
   if (cleanHash === 'services') return 'services';
+  if (cleanHash === 'reviews') return 'reviews';
   if (cleanHash === 'register') return 'register';
   if (cleanHash === 'portal') return 'portal';
   if (cleanHash === 'admin') return 'admin';
@@ -1655,8 +1657,37 @@ const reviewImages = [
   { src: '/reviews/review-03.jpg', alt: '關係和好客人好評' },
   { src: '/reviews/review-04.jpg', alt: '互動升溫客人好評' },
   { src: '/reviews/review-05.jpg', alt: '主動破冰客人好評' },
-  { src: '/reviews/review-06.jpg', alt: '塔羅分析準確客人好評' }
+  { src: '/reviews/review-06.jpg', alt: '塔羅分析準確客人好評' },
+  { src: '/reviews/review-07.jpg', alt: '願望逐步實現客人好評' },
+  { src: '/reviews/review-08.jpg', alt: '同理心與關係調整客人好評' },
+  { src: '/reviews/review-09.jpg', alt: '白魔法溫和推進客人好評' },
+  { src: '/reviews/review-10.jpg', alt: '負面情緒清理客人好評' },
+  { src: '/reviews/review-11.jpg', alt: '整治口裡說不客人好評' },
+  { src: '/reviews/review-12.jpg', alt: '解讀準確及情敵淡定客人好評' },
+  { src: '/reviews/review-13.jpg', alt: '解除封鎖關係重見天日客人好評' },
+  { src: '/reviews/review-14.jpg', alt: '伴侶重新投入客人好評' },
+  { src: '/reviews/review-15.jpg', alt: '占卜準確客人好評' },
+  { src: '/reviews/review-16.jpg', alt: '解決不讀不回客人好評' },
+  { src: '/reviews/review-17.jpg', alt: '拍拖倦怠期改善客人好評' }
 ];
+
+const ReviewGrid = ({ reviews }: { reviews: typeof reviewImages }) => (
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    {reviews.map((review) => (
+      <a
+        key={review.src}
+        href={review.src}
+        target="_blank"
+        rel="noreferrer"
+        className="group bg-white rounded-2xl p-3 shadow-sm border border-asteria-cream/70 hover:shadow-xl hover:-translate-y-1 transition-all"
+      >
+        <div className="aspect-[9/16] rounded-xl overflow-hidden bg-[#FFF8EC]">
+          <img src={review.src} alt={review.alt} loading="lazy" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
+        </div>
+      </a>
+    ))}
+  </div>
+);
 
 const Reviews = () => (
   <section id="reviews" className="py-20 bg-asteria-blue/10">
@@ -1669,29 +1700,41 @@ const Reviews = () => (
         <p className="text-gray-500">真實客人回饋、儀式後情況同塔羅分析好評。</p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {reviewImages.map((review) => (
-          <a
-            key={review.src}
-            href={review.src}
-            target="_blank"
-            rel="noreferrer"
-            className="group bg-white rounded-2xl p-3 shadow-sm border border-asteria-cream/70 hover:shadow-xl hover:-translate-y-1 transition-all"
-          >
-            <div className="aspect-[9/16] rounded-xl overflow-hidden bg-[#FFF8EC]">
-              <img src={review.src} alt={review.alt} loading="lazy" className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
-            </div>
-          </a>
-        ))}
-      </div>
+      <ReviewGrid reviews={reviewImages.slice(0, 6)} />
       
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/reviews" className="inline-flex items-center justify-center gap-2 text-asteria-primary font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
+          <i className="fa-regular fa-images"></i> 查看更多好評
+        </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
           <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
         </a>
       </div>
     </div>
   </section>
+);
+
+const ReviewsPage = () => (
+  <main className="pt-48 md:pt-32 pb-20 bg-asteria-blue/10 min-h-screen">
+    <div className="container mx-auto px-6">
+      <a href="/#reviews" onClick={goHomeSection('reviews')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+        <i className="fa-solid fa-arrow-left"></i> 返回首頁好評
+      </a>
+      <div className="text-center mb-12">
+        <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Reviews</div>
+        <h1 className="text-4xl md:text-5xl font-bold text-asteria-dark mb-4">客人真實好評庫</h1>
+        <p className="text-stone-500 max-w-2xl mx-auto leading-relaxed">
+          收錄客人回饋、儀式後情況、占卜與關係分析好評，方便你慢慢參考。
+        </p>
+      </div>
+      <ReviewGrid reviews={reviewImages} />
+      <div className="text-center mt-12">
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-white font-bold bg-[#25D366] px-7 py-3 rounded-full shadow-lg shadow-green-900/10 hover:brightness-95 transition-all">
+          <i className="fa-brands fa-whatsapp"></i> WhatsApp 聯絡 Asteria
+        </a>
+      </div>
+    </div>
+  </main>
 );
 
 type PortalEntryType = 'relationship' | 'mood' | 'question';
@@ -4010,6 +4053,17 @@ const App = () => {
         <main className="pt-48 md:pt-32 bg-[#FFFDF8] min-h-screen">
           <Services />
         </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    );
+  }
+
+  if (page === 'reviews') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <ReviewsPage />
         <Footer />
         <FloatingWhatsApp />
       </div>
