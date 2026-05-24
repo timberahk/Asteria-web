@@ -1668,7 +1668,8 @@ const reviewImages = [
   { src: '/reviews/review-14.jpg', alt: '伴侶重新投入客人好評' },
   { src: '/reviews/review-15.jpg', alt: '占卜準確客人好評' },
   { src: '/reviews/review-16.jpg', alt: '解決不讀不回客人好評' },
-  { src: '/reviews/review-17.jpg', alt: '拍拖倦怠期改善客人好評' }
+  { src: '/reviews/review-17.jpg', alt: '拍拖倦怠期改善客人好評' },
+  { src: '/reviews/review-18.jpg', alt: '斬斷潛在桃花客人好評' }
 ];
 
 const ReviewGrid = ({ reviews }: { reviews: typeof reviewImages }) => (
