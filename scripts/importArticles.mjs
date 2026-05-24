@@ -42,61 +42,61 @@ const colors = [
   'bg-[#EDF0F7]'
 ];
 
-const pexelsImage = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1600`;
+const localStockImage = (id) => `/article-custom-images/stock_local/pexels-${id}.jpg`;
 
 const stockPhotos = {
   cafeTalk: {
-    src: pexelsImage('20804849'),
+    src: localStockImage('20804849'),
     credit: 'Photo by Tuba Nur Dogan on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/'
   },
   warmCafe: {
-    src: pexelsImage('20479952'),
+    src: localStockImage('20479952'),
     credit: 'Photo by Alexander Mass on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/'
   },
   outdoorCafe: {
-    src: pexelsImage('20045413'),
+    src: localStockImage('20045413'),
     credit: 'Photo by Mustafa Bodur on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/'
   },
   cafeNight: {
-    src: pexelsImage('17637241'),
+    src: localStockImage('17637241'),
     credit: 'Photo by K on Pexels',
     creditUrl: 'https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/'
   },
   sofaArgument: {
-    src: pexelsImage('36812991'),
+    src: localStockImage('36812991'),
     credit: 'Photo by Vitaly Gariev on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/'
   },
   sofaSilent: {
-    src: pexelsImage('8560663'),
+    src: localStockImage('8560663'),
     credit: 'Photo by Timur Weber on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-after-argument-8560663/'
   },
   phoneBed: {
-    src: pexelsImage('8036689'),
+    src: localStockImage('8036689'),
     credit: 'Photo by SHVETS production on Pexels',
     creditUrl: 'https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/'
   },
   phoneWarm: {
-    src: pexelsImage('8070516'),
+    src: localStockImage('8070516'),
     credit: 'Photo by Ron Lach on Pexels',
     creditUrl: 'https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/'
   },
   phonePartner: {
-    src: pexelsImage('8070513'),
+    src: localStockImage('8070513'),
     credit: 'Photo by Ron Lach on Pexels',
     creditUrl: 'https://www.pexels.com/photo/a-woman-lying-on-the-bed-while-using-her-mobile-phone-8070513/'
   },
   cafeDate: {
-    src: pexelsImage('8442219'),
+    src: localStockImage('8442219'),
     credit: 'Photo by Ron Lach on Pexels',
     creditUrl: 'https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/'
   },
   streetCafe: {
-    src: pexelsImage('12944983'),
+    src: localStockImage('12944983'),
     credit: 'Photo by Atlantic Ambience on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-sitting-by-a-cafe-and-talking-12944983/'
   }
