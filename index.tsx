@@ -567,7 +567,7 @@ const Oracle = () => {
 
   return (
     <section id="oracle" className="py-20 bg-gradient-to-b from-white via-asteria-cream/10 to-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(160,106,54,0.18)_1px,transparent_0)] [background-size:18px_18px] opacity-30 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
         <h2 className="text-3xl font-bold text-gray-800 mb-2">🔮 宇宙解憂信箱</h2>
@@ -611,7 +611,7 @@ const Oracle = () => {
               <div className="relative w-32 h-48 mb-8">
                 <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-yellow rounded-xl border-4 border-white shadow-xl animate-ping opacity-20"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-yellow rounded-xl border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
-                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:16px_16px] opacity-20"></div>
                    <i className="fa-solid fa-star-of-david text-4xl text-white animate-spin-slow"></i>
                 </div>
               </div>
@@ -625,7 +625,7 @@ const Oracle = () => {
             <div className="w-full text-center animate-fade-in max-w-lg mx-auto flex flex-col items-center">
                 {/* Card Visual - Centered */}
                 <div className="w-32 h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border-[4px] border-double border-yellow-200 shadow-2xl flex items-center justify-center relative overflow-hidden mb-6 group transform hover:scale-105 transition-transform duration-500">
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:16px_16px] opacity-30"></div>
                     <i className={`${reading.icon} text-5xl text-yellow-100 drop-shadow-[0_0_15px_rgba(253,224,71,0.6)]`}></i>
                 </div>
 
