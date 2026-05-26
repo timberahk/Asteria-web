@@ -8,6 +8,11 @@ const articlesPath = path.join(rootDir, 'lib', 'articlesData.ts');
 const siteUrl = 'https://asteria-tarot.com';
 const logoUrl = `${siteUrl}/asteria-logo.jpg`;
 
+function canonicalPath(route) {
+  if (route === '/') return '/';
+  return route.endsWith('/') ? route : `${route}/`;
+}
+
 const searchIntents = [
   '復合',
   '挽回',
@@ -50,7 +55,7 @@ const staticPages = [
       '@type': 'CollectionPage',
       name: 'Asteria 相處教學',
       description: '復合挽回、分手失戀、斷聯冷淡、曖昧相處與感情占卜教學文章。',
-      url: `${siteUrl}/teaching`
+      url: `${siteUrl}/teaching/`
     }
   },
   {
@@ -77,7 +82,7 @@ const staticPages = [
       '@type': 'AboutPage',
       name: '關於 Asteria 感情拯救所',
       description: 'Asteria 提供感情占卜、相處教學、訊息回覆指引與失戀情緒支援。',
-      url: `${siteUrl}/about`
+      url: `${siteUrl}/about/`
     }
   },
   {
@@ -90,7 +95,7 @@ const staticPages = [
       '@type': 'CollectionPage',
       name: 'Asteria 客人個案與好評見證',
       description: '復合、斷聯、冷淡、第三者與關係修復個案回饋。',
-      url: `${siteUrl}/cases`
+      url: `${siteUrl}/cases/`
     }
   }
 ];
@@ -218,7 +223,7 @@ function removeDynamicSchema(html) {
 }
 
 function applyMeta(baseHtml, meta) {
-  const canonical = `${siteUrl}${meta.route}`;
+  const canonical = `${siteUrl}${canonicalPath(meta.route)}`;
   const image = absoluteUrl(meta.image);
   let html = removeDynamicSchema(baseHtml);
   html = replaceOrInsert(html, /<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(meta.title)}</title>`);
@@ -250,7 +255,7 @@ function writeRoute(route, html) {
 
 function articleMeta(post) {
   const route = `/articles/${post.id}`;
-  const canonical = `${siteUrl}${route}`;
+  const canonical = `${siteUrl}${canonicalPath(route)}`;
   const title = `${cleanTitle(post.title)}｜Asteria 感情拯救所`;
   const description = buildDescription(post);
   const keywords = buildKeywords(post);
@@ -293,7 +298,7 @@ function articleMeta(post) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '首頁', item: `${siteUrl}/` },
-        { '@type': 'ListItem', position: 2, name: '相處教學', item: `${siteUrl}/teaching` },
+        { '@type': 'ListItem', position: 2, name: '相處教學', item: `${siteUrl}/teaching/` },
         { '@type': 'ListItem', position: 3, name: cleanTitle(post.title), item: canonical }
       ]
     }

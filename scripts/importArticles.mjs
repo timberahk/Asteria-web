@@ -728,11 +728,11 @@ fs.writeFileSync(promptsFile, `${imagePromptRows.join('\n')}\n`);
 
 const baseUrls = [
   '/',
-  '/teaching',
-  '/services',
-  '/about',
-  '/cases',
-  ...articles.map((article) => `/articles/${article.id}`)
+  '/teaching/',
+  '/services/',
+  '/about/',
+  '/cases/',
+  ...articles.map((article) => `/articles/${article.id}/`)
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

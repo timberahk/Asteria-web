@@ -796,7 +796,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     });
     const homePosts = posts.slice(0, 4);
 
-    const makeArticleHref = (post: any) => `/articles/${post.id}`;
+    const makeArticleHref = (post: any) => `/articles/${post.id}/`;
     const pathMatch = fullPage ? window.location.pathname.match(/^\/articles\/(\d+)\/?$/) : null;
     const hashMatch = fullPage ? (window.location.hash || '').replace(/^#/, '').match(/^(article|case)-(\d+)$/) : null;
     const articleMatch = pathMatch || hashMatch;
@@ -861,8 +861,8 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         : '相處教學｜Asteria 感情拯救所';
       const description = buildSeoDescription(activePost);
       const canonical = activePost
-        ? `https://asteria-tarot.com/articles/${activeId}`
-        : isCaseLibrary ? 'https://asteria-tarot.com/cases' : 'https://asteria-tarot.com/teaching';
+        ? `https://asteria-tarot.com/articles/${activeId}/`
+        : isCaseLibrary ? 'https://asteria-tarot.com/cases/' : 'https://asteria-tarot.com/teaching/';
       const coverImage = absoluteUrl(activePost?.coverImage);
       const keywords = buildSeoKeywords(activePost);
 
