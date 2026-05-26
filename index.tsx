@@ -804,20 +804,67 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const activePost = posts.find((post) => post.id === activeId);
     const relatedPosts = posts.filter((post) => post.id !== activeId).slice(0, 3);
     const isCaseLibrary = fullPage && window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase() === 'cases';
+    const siteUrl = 'https://asteria-tarot.com';
+
+    const absoluteUrl = (url?: string) => {
+      if (!url) return `${siteUrl}${LOGO_SRC}`;
+      return url.startsWith('http') ? url : `${siteUrl}${url}`;
+    };
+
+    const buildSeoKeywords = (post?: TeachingPost | null) => {
+      const searchIntents = [
+        '復合', '挽回', '挽回前任', '分手後點算', '失戀', '放唔低前任',
+        '斷聯', '冷淡期', '對方冷淡', '少覆 message', '曖昧', '第三者',
+        '感情占卜', '愛情塔羅', '塔羅分析', '愛情儀式', '關係修復',
+        '相處教學', '感情教學', '訊息點覆', '情緒支援', 'Asteria 感情拯救所'
+      ];
+      const articleTerms = post ? [post.title, post.category, post.imageLabel, ...post.tags] : [];
+      return Array.from(new Set([...articleTerms, ...searchIntents]))
+        .filter(Boolean)
+        .join(', ');
+    };
+
+    const buildSeoDescription = (post?: TeachingPost | null) => {
+      if (!post) {
+        return isCaseLibrary
+          ? 'Asteria 感情拯救所客人個案長文庫，整理復合、斷聯、冷淡、第三者與關係修復案例。'
+          : 'Asteria 感情拯救所相處教學，整理復合挽回、分手失戀、斷聯冷淡、曖昧第三者、感情占卜與日常相處方法。';
+      }
+      const cleanSummary = post.summary.replace(/[\[\]【】]/g, '').replace(/\s+/g, ' ').trim();
+      const base = `${cleanSummary} Asteria 感情拯救所提供復合挽回、斷聯冷淡、曖昧相處、感情占卜、塔羅分析與關係修復方向。`;
+      return base.slice(0, 155);
+    };
+
+    const extractArticleFaqs = (html: string) => {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const faqHeading = Array.from(doc.querySelectorAll('h2')).find((heading) => heading.textContent?.includes('常見問題'));
+      if (!faqHeading) return [];
+      const faqs: Array<{ question: string; answer: string }> = [];
+      let node = faqHeading.nextElementSibling;
+      while (node) {
+        if (node.tagName === 'H2') break;
+        if (node.tagName === 'H3') {
+          const question = (node.textContent || '').trim();
+          const answerNode = node.nextElementSibling;
+          const answer = answerNode?.tagName === 'P' ? (answerNode.textContent || '').replace(/\s+/g, ' ').trim() : '';
+          if (question && answer) faqs.push({ question, answer });
+        }
+        node = node.nextElementSibling;
+      }
+      return faqs.slice(0, 4);
+    };
 
     useEffect(() => {
       if (!fullPage) return;
       const title = activePost
         ? `${activePost.title}｜Asteria 感情拯救所`
         : '相處教學｜Asteria 感情拯救所';
-      const description = activePost
-        ? activePost.summary
-        : isCaseLibrary
-          ? 'Asteria 感情拯救所客人個案長文庫，之後會整理真實匿名個案、復合、斷聯、冷淡、第三者與關係修復案例。'
-          : 'Asteria 感情拯救所相處教學，整理感情相處、復合心態、曖昧判斷與溝通方法。';
+      const description = buildSeoDescription(activePost);
       const canonical = activePost
         ? `https://asteria-tarot.com/articles/${activeId}`
         : isCaseLibrary ? 'https://asteria-tarot.com/cases' : 'https://asteria-tarot.com/teaching';
+      const coverImage = absoluteUrl(activePost?.coverImage);
+      const keywords = buildSeoKeywords(activePost);
 
       document.title = title;
 
@@ -827,35 +874,79 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       };
 
       setMeta('meta[name="description"]', 'content', description);
+      setMeta('meta[name="keywords"]', 'content', keywords);
       setMeta('link[rel="canonical"]', 'href', canonical);
       setMeta('meta[property="og:title"]', 'content', title);
       setMeta('meta[property="og:description"]', 'content', description);
       setMeta('meta[property="og:url"]', 'content', canonical);
+      setMeta('meta[property="og:image"]', 'content', coverImage);
+      setMeta('meta[property="og:image:alt"]', 'content', activePost?.title || 'Asteria 感情拯救所');
       setMeta('meta[name="twitter:title"]', 'content', title);
       setMeta('meta[name="twitter:description"]', 'content', description);
+      setMeta('meta[name="twitter:image"]', 'content', coverImage);
 
       const previous = document.getElementById('asteria-dynamic-article-schema');
       previous?.remove();
       if (activePost) {
+        const faqs = extractArticleFaqs(activePost.content);
+        const articleImages = [
+          absoluteUrl(activePost.coverImage),
+          ...getEditorialImages(activeId).map((image) => absoluteUrl(image.src))
+        ];
+        const graph: any[] = [
+          {
+            '@type': 'Article',
+            headline: activePost.title,
+            description,
+            image: Array.from(new Set(articleImages)),
+            author: { '@type': 'Organization', name: 'Asteria Crystal Tarot' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Asteria Crystal Tarot',
+              logo: { '@type': 'ImageObject', url: 'https://asteria-tarot.com/asteria-logo.jpg' }
+            },
+            mainEntityOfPage: canonical,
+            inLanguage: 'zh-HK',
+            articleSection: activePost.category,
+            datePublished: activePost.date,
+            dateModified: activePost.date,
+            keywords,
+            about: [
+              '復合挽回',
+              '分手失戀',
+              '斷聯冷淡',
+              '曖昧關係',
+              '感情占卜',
+              '愛情塔羅',
+              '相處教學',
+              activePost.category
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: '首頁', item: 'https://asteria-tarot.com/' },
+              { '@type': 'ListItem', position: 2, name: '相處教學', item: 'https://asteria-tarot.com/teaching' },
+              { '@type': 'ListItem', position: 3, name: activePost.title, item: canonical }
+            ]
+          }
+        ];
+        if (faqs.length) {
+          graph.push({
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+            }))
+          });
+        }
         const script = document.createElement('script');
         script.id = 'asteria-dynamic-article-schema';
         script.type = 'application/ld+json';
         script.textContent = JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: activePost.title,
-          description,
-          image: getEditorialImages(activeId).map((image) => `https://asteria-tarot.com${image.src}`),
-          author: { '@type': 'Organization', name: 'Asteria Crystal Tarot' },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Asteria Crystal Tarot',
-            logo: { '@type': 'ImageObject', url: 'https://asteria-tarot.com/asteria-logo.jpg' }
-          },
-          mainEntityOfPage: canonical,
-          inLanguage: 'zh-HK',
-          articleSection: activePost.category,
-          keywords: ['感情拯救', '復合', '曖昧', '感情相處', 'Asteria 感情拯救所', activePost.category]
+          '@graph': graph
         });
         document.head.appendChild(script);
       }

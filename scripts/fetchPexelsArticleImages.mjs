@@ -29,33 +29,33 @@ const clean = (value = '') => String(value).replace(/\s+/g, ' ').trim();
 const queryFor = (post) => {
   const text = `${post.title} ${post.category} ${(post.tags || []).join(' ')}`;
   if (/少覆|唔覆|不回|已讀|message|訊息|回覆|秒回|遠距|異地|Long D/i.test(text)) {
-    return 'couple texting phone relationship';
+    return 'asian woman texting relationship phone';
   }
   if (/第三者|新歡|出軌|偷食|變心|劈腿|外遇|信任/i.test(text)) {
-    return 'couple relationship trust conflict';
+    return 'asian couple relationship trust conflict';
   }
   if (/PUA|控制|操控|打壓|冷暴力|渣男|紅旗|警號|危機/i.test(text)) {
-    return 'couple argument emotional distance';
+    return 'asian couple argument emotional distance';
   }
   if (/分手|失戀|放低|前任|復合|挽回|斷聯|block|冷淡/i.test(text)) {
-    return 'breakup couple sad relationship';
+    return 'asian woman breakup sad relationship';
   }
   if (/曖昧|約會|單身|桃花|吸引|主動|追求/i.test(text)) {
-    return 'dating couple cafe';
+    return 'asian couple dating cafe';
   }
   if (/道歉|吵架|嗌交|冷戰|誤會|修補|和好|爭執|溝通|說話|講嘢|勸/i.test(text)) {
-    return 'couple talking communication';
+    return 'asian couple talking communication';
   }
   if (/安全感|不安|焦慮|內耗|委屈|情緒|治癒|自信|低落/i.test(text)) {
-    return 'woman relationship reflection phone';
+    return 'asian woman relationship reflection phone';
   }
   if (/結婚|同居|見家長|長期|承諾|未來|穩定/i.test(text)) {
-    return 'couple home relationship';
+    return 'asian couple home relationship';
   }
-  return 'couple relationship lifestyle';
+  return 'asian couple relationship lifestyle';
 };
 
-const blocked = /wedding|bride|groom|child|baby|family|pregnant|school|classroom|seminar|conference|army|military|soldier|football|animal|dog|cat|cartoon|illustration|drawing|logo|poster|text|nude|sex|church|politic/i;
+const blocked = /wedding|bride|groom|child|baby|family|pregnant|school|classroom|seminar|conference|army|military|soldier|football|animal|dog|cat|cartoon|illustration|drawing|logo|poster|text|nude|sex|church|politic|african|afro/i;
 
 const getJson = (url) => new Promise((resolve, reject) => {
   https
@@ -123,7 +123,7 @@ const run = async () => {
   }
 
   const assignments = {};
-  const postsNeedingPexels = posts.filter((post) => !String(post.coverImage || '').includes('/article-custom-images/'));
+  const postsNeedingPexels = posts.filter((post) => !String(post.coverImage || '').includes('/article-custom-images/by_article/'));
   const grouped = new Map();
   for (const post of postsNeedingPexels) {
     const query = queryFor(post);
@@ -134,10 +134,10 @@ const run = async () => {
   for (const [query, queryPosts] of grouped) {
     const needed = queryPosts.length * 4;
     let photos = await fetchQueryPhotos(query, usedPhotoIds, needed);
-    if (photos.length < needed && query !== 'couple relationship lifestyle') {
+    if (photos.length < needed && query !== 'asian couple relationship lifestyle') {
       photos = [
         ...photos,
-        ...(await fetchQueryPhotos('couple relationship lifestyle', usedPhotoIds, needed - photos.length))
+        ...(await fetchQueryPhotos('asian couple relationship lifestyle', usedPhotoIds, needed - photos.length))
       ];
     }
     if (photos.length < needed) {
