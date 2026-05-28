@@ -403,7 +403,11 @@ const shortTopicFromTitle = (title = '') => {
     .replace(/[：:｜|].*$/g, '')
     .replace(/\s+/g, ' ')
     .trim();
-  return cleaned.length > 22 ? `${cleaned.slice(0, 22)}...` : cleaned;
+  const questionLead = cleaned.split(/[？?]/)[0]?.trim();
+  if (questionLead && questionLead.length >= 8 && questionLead.length < cleaned.length) {
+    return questionLead;
+  }
+  return cleaned.length > 26 ? cleaned.slice(0, 26) : cleaned;
 };
 
 const buildArticleFaqMarkdown = ({ title, category, summary }) => {
@@ -473,6 +477,37 @@ const buildArticleFaqMarkdown = ({ title, category, summary }) => {
   return [
     '## 常見問題',
     ...faqs.flatMap(([question, answer]) => [`### ${question}`, answer])
+  ].join('\n\n');
+};
+
+const markdownPlainLength = (markdown = '') => normalizeText(markdown
+  .replace(/^#{1,6}\s+/gm, '')
+  .replace(/!\[.*?\]\(.*?\)/g, '')
+  .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+  .replace(/[*_`>#-]/g, ' ')
+).length;
+
+const buildFallbackBodyMarkdown = ({ title, category, summary }) => {
+  const topic = shortTopicFromTitle(title) || '呢段關係';
+  const categoryLead = {
+    '復合挽回': `如果你正卡喺「${topic}」，最重要唔係即刻逼對方表態，而係先分清楚對方係真心想切斷，定只係情緒退後、需要空間。`,
+    '溝通相處': `如果你正卡喺「${topic}」，問題好多時唔係你講得唔夠多，而係對方聽到嘅感覺同你想表達嘅意思出現落差。`,
+    '情緒修復': `如果你正因為「${topic}」而好辛苦，先唔好急住否定自己。感情入面最耗人嘅位，往往係你一邊想理性，一邊又停唔到猜測。`,
+    '曖昧桃花': `如果你正遇到「${topic}」，唔好只睇一兩句甜言蜜語，要睇對方有冇穩定投入、會唔會主動推進，以及你哋互動係舒服定長期失衡。`,
+    '關係危機': `如果你正面對「${topic}」，要先停低觀察訊號，而唔係急住幫對方搵藉口。關係危機最怕拖到自己失去底線。`,
+    '長期關係': `如果你正處理「${topic}」，關係變淡未必等於唔愛，但一定代表相處模式需要重新整理。長期關係最怕只靠習慣維持。`,
+    '戀愛心理': `如果你正思考「${topic}」，可以先由對方行為、你自己的感受、同你哋互動後的狀態一齊判斷，而唔係只靠一個答案定生死。`
+  };
+  const lead = categoryLead[category] || categoryLead['戀愛心理'];
+
+  return [
+    `## 先看清楚「${topic}」真正卡住的位置`,
+    lead,
+    summary,
+    `好多感情問題表面上係一句說話、一個行為、一段冷淡期，但背後可能係安全感、溝通方式、投入程度或者過往失望累積出嚟。你愈急住處理，愈容易用錯方法，令對方更防衛，自己亦更內耗。`,
+    `## 可以先做的三件事`,
+    `第一，記低最近最令你不安的事件，而唔係只記低情緒。第二，觀察對方係短暫退後，定長期不願面對。第三，先諗清楚你想要的是答案、修補、復合，還是單純想停止痛苦。`,
+    `當方向未清楚時，可以先將對話同近況整理出嚟，再決定下一步。Asteria 會幫你拆對方心態、關係卡位同訊息策略，避免你喺最亂嘅時候越做越錯。`
   ].join('\n\n');
 };
 
@@ -734,8 +769,12 @@ const articles = orderedFiles.map((file, index) => {
   const cleaned = cleanMarkdown(body, title);
   const preliminaryContent = markdownToHtml(cleaned);
   const summary = makeSummary({ frontmatter, preliminaryContent, title, category });
+  const bodyMarkdown = removeDuplicateIntro(cleaned, summary);
+  const safeBodyMarkdown = markdownPlainLength(bodyMarkdown) < 90
+    ? buildFallbackBodyMarkdown({ title, category, summary })
+    : bodyMarkdown;
   const articleMarkdown = [
-    removeDuplicateIntro(cleaned, summary),
+    safeBodyMarkdown,
     buildArticleFaqMarkdown({ title, category, summary })
   ].filter(Boolean).join('\n\n');
   const content = markdownToHtml(articleMarkdown);
