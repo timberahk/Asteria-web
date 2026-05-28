@@ -370,6 +370,10 @@ const cleanMarkdown = (body, title) => {
     const heading = trimmed.match(/^(#{2,3})\s+(.+)$/);
     if (heading) {
       const headingText = heading[2].replace(/^#\s*/, '').trim();
+      if (/^常見問題/.test(headingText)) {
+        skipSection = heading[1].length;
+        continue;
+      }
       if (/^(你以為只是小事，其實是關係正在發出的訊號|關係卡住時，問題通常不只是一句說話)$/.test(headingText)) {
         continue;
       }
@@ -391,6 +395,85 @@ const cleanMarkdown = (body, title) => {
     out.push(line);
   }
   return out.join('\n').trim();
+};
+
+const shortTopicFromTitle = (title = '') => {
+  const cleaned = cleanTitle(title)
+    .replace(/[!！?？]+$/g, '')
+    .replace(/[：:｜|].*$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return cleaned.length > 22 ? `${cleaned.slice(0, 22)}...` : cleaned;
+};
+
+const buildArticleFaqMarkdown = ({ title, category, summary }) => {
+  const topic = shortTopicFromTitle(title) || '呢段關係';
+  const text = `${title} ${category} ${summary}`;
+
+  const questionSets = {
+    reply: [
+      [`「${topic}」入面，對方少覆或冷淡係咪代表冇機會？`, `唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。`],
+      [`遇到「${topic}」時，我應該繼續追問定暫停？`, `通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。`],
+      [`Asteria 可以點幫我睇「${topic}」呢類情況？`, `我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。`]
+    ],
+    reunion: [
+      [`「${topic}」仲有機會挽回或復合嗎？`, `要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。`],
+      [`想處理「${topic}」，第一步應該做咩？`, `第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。`],
+      [`愛情塔羅或儀式可以點樣配合「${topic}」？`, `塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。`]
+    ],
+    communication: [
+      [`「${topic}」其實係溝通問題定感情變淡？`, `兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。`],
+      [`面對「${topic}」，我應該點講先唔會令對方防衛？`, `避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。`],
+      [`Asteria 會唔會教我點覆「${topic}」相關 message？`, `會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。`]
+    ],
+    crisis: [
+      [`「${topic}」係咪關係危機警號？`, `有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。`],
+      [`遇到「${topic}」，我應該即刻攤牌嗎？`, `唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。`],
+      [`塔羅可以點樣睇「${topic}」背後狀態？`, `可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。`]
+    ],
+    emotion: [
+      [`「${topic}」係咪代表我太情緒化？`, `唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。`],
+      [`因為「${topic}」好辛苦時，可以點樣先穩住自己？`, `先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。`],
+      [`Asteria 可以點樣陪我處理「${topic}」？`, `可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。`]
+    ],
+    ambiguous: [
+      [`「${topic}」入面，曖昧卡住或對方唔表態應該點判斷？`, `唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。`],
+      [`「${topic}」入面，我主動少少會唔會好似低價值？`, `主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。`],
+      [`塔羅可以睇「${topic}」對方係咪認真嗎？`, `可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。`]
+    ],
+    longterm: [
+      [`「${topic}」入面，長期關係變淡係咪代表唔愛？`, `唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。`],
+      [`「${topic}」可以點樣重新拉近距離？`, `可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。`],
+      [`Asteria 可以點幫我處理「${topic}」？`, `我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。`]
+    ],
+    general: [
+      [`「${topic}」可以點樣先睇清楚方向？`, `先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。`],
+      [`面對「${topic}」，我應該主動處理定等對方先？`, `如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。`],
+      [`Asteria 感情拯救所可以點樣幫「${topic}」？`, `我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。`]
+    ]
+  };
+
+  const key = /少覆|唔覆|不回|已讀|message|訊息|回覆|秒回|斷聯|冷淡|Long D|遠距|異地/.test(text)
+    ? 'reply'
+    : /復合|挽回|前任|分手後|分手|block/.test(text)
+      ? 'reunion'
+      : /第三者|新歡|出軌|偷食|變心|劈腿|外遇|PUA|控制|操控|打壓|冷暴力|渣男|紅旗|警號|危機/.test(text)
+        ? 'crisis'
+        : /溝通|說話|講嘢|道歉|冷戰|表達|分享|勸|嗌交|爭吵|誤會/.test(text)
+          ? 'communication'
+          : /安全感|不安|焦慮|內耗|委屈|情緒|治癒|自信|低落|放低|失戀/.test(text)
+            ? 'emotion'
+            : /曖昧|約會|單身|桃花|吸引|主動|矜持|追求/.test(text)
+              ? 'ambiguous'
+              : /結婚|同居|見家長|辦公室|長期|承諾|未來|穩定/.test(text)
+                ? 'longterm'
+                : 'general';
+
+  const faqs = questionSets[key];
+  return [
+    '## 常見問題',
+    ...faqs.flatMap(([question, answer]) => [`### ${question}`, answer])
+  ].join('\n\n');
 };
 
 const removeDuplicateIntro = (markdown, summary) => {
@@ -651,7 +734,11 @@ const articles = orderedFiles.map((file, index) => {
   const cleaned = cleanMarkdown(body, title);
   const preliminaryContent = markdownToHtml(cleaned);
   const summary = makeSummary({ frontmatter, preliminaryContent, title, category });
-  const content = markdownToHtml(removeDuplicateIntro(cleaned, summary));
+  const articleMarkdown = [
+    removeDuplicateIntro(cleaned, summary),
+    buildArticleFaqMarkdown({ title, category, summary })
+  ].filter(Boolean).join('\n\n');
+  const content = markdownToHtml(articleMarkdown);
   const id = index + 1;
   const imageLabel = imageLabelFor(title, category);
   const fallbackImages = editorialImagesFor({ id, title, category });
