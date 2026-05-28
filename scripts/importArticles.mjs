@@ -505,9 +505,33 @@ const buildFallbackBodyMarkdown = ({ title, category, summary }) => {
     lead,
     summary,
     `好多感情問題表面上係一句說話、一個行為、一段冷淡期，但背後可能係安全感、溝通方式、投入程度或者過往失望累積出嚟。你愈急住處理，愈容易用錯方法，令對方更防衛，自己亦更內耗。`,
+    `## 為什麼會越處理越亂`,
+    `最常見的情況，是你用自己的不安去追問，對方就用沉默、逃避或者敷衍去防衛。你以為自己只係想溝通，但對方感受到的可能係壓力；你以為對方冷淡代表不愛，但其實亦可能係佢唔識處理衝突。真正要拆的，不只是一句訊息，而是你哋互動入面重複出現的模式。`,
     `## 可以先做的三件事`,
     `第一，記低最近最令你不安的事件，而唔係只記低情緒。第二，觀察對方係短暫退後，定長期不願面對。第三，先諗清楚你想要的是答案、修補、復合，還是單純想停止痛苦。`,
+    `如果仍然想修補，就要由低壓、清楚、有界線的互動開始。不要一次過追問所有答案，也不要用長篇訊息迫對方即刻表態。先穩住自己的節奏，再按對方反應決定下一步。`,
     `當方向未清楚時，可以先將對話同近況整理出嚟，再決定下一步。Asteria 會幫你拆對方心態、關係卡位同訊息策略，避免你喺最亂嘅時候越做越錯。`
+  ].join('\n\n');
+};
+
+const buildShortArticleExpansionMarkdown = ({ title, category }) => {
+  const topic = shortTopicFromTitle(title) || '呢段關係';
+  const angle = {
+    '復合挽回': '對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。',
+    '溝通相處': '好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。',
+    '情緒修復': '最辛苦的地方通常不是事情本身，而是你一直在腦內重播，令自己無法分清直覺、恐懼同事實。',
+    '曖昧桃花': '曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。',
+    '關係危機': '危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。',
+    '長期關係': '長期關係需要的不只是愛，還有穩定溝通、共同節奏同願意修正相處模式的能力。',
+    '戀愛心理': '感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。'
+  };
+
+  return [
+    `## 再看深一層：${topic}的真正訊號`,
+    angle[category] || angle['戀愛心理'],
+    `你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。`,
+    `## 下一步不要急著做錯`,
+    `如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。`
   ].join('\n\n');
 };
 
@@ -770,9 +794,12 @@ const articles = orderedFiles.map((file, index) => {
   const preliminaryContent = markdownToHtml(cleaned);
   const summary = makeSummary({ frontmatter, preliminaryContent, title, category });
   const bodyMarkdown = removeDuplicateIntro(cleaned, summary);
-  const safeBodyMarkdown = markdownPlainLength(bodyMarkdown) < 90
+  const bodyLength = markdownPlainLength(bodyMarkdown);
+  const safeBodyMarkdown = bodyLength < 90
     ? buildFallbackBodyMarkdown({ title, category, summary })
-    : bodyMarkdown;
+    : bodyLength < 520
+      ? [bodyMarkdown, buildShortArticleExpansionMarkdown({ title, category })].join('\n\n')
+      : bodyMarkdown;
   const articleMarkdown = [
     safeBodyMarkdown,
     buildArticleFaqMarkdown({ title, category, summary })
