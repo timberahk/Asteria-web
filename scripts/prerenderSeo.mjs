@@ -97,6 +97,19 @@ const staticPages = [
       description: '復合、斷聯、冷淡、第三者與關係修復個案回饋。',
       url: `${siteUrl}/cases/`
     }
+  },
+  {
+    route: '/reviews',
+    title: '客人真實好評庫｜感情占卜・愛情儀式・關係修復見證｜Asteria 感情拯救所',
+    description: 'Asteria 客人真實好評庫，收錄感情占卜、塔羅分析、愛情儀式、復合挽回與關係修復後的客人回饋。',
+    keywords: 'Asteria 好評, 客人真實好評, 感情占卜好評, 愛情儀式好評, 復合好評, 關係修復見證',
+    image: logoUrl,
+    schema: {
+      '@type': 'CollectionPage',
+      name: 'Asteria 客人真實好評庫',
+      description: '感情占卜、塔羅分析、愛情儀式、復合挽回與關係修復客人回饋。',
+      url: `${siteUrl}/reviews/`
+    }
   }
 ];
 

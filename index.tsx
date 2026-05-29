@@ -177,9 +177,9 @@ const Navbar = () => {
           </div>
         </a>
         <div className="flex gap-2 md:gap-4 text-sm md:text-base font-medium text-gray-600 items-center">
-          <a href="/about" className={navLinkClass}><i className="fa-regular fa-heart text-xs"></i> 關於我們</a>
-          <a href="/teaching" className={navLinkClass}><i className="fa-regular fa-newspaper text-xs"></i> 相處教學</a>
-          <a href="/services" className={navLinkClass}><i className="fa-solid fa-wand-magic-sparkles text-xs"></i> 服務</a>
+          <a href="/about/" className={navLinkClass}><i className="fa-regular fa-heart text-xs"></i> 關於我們</a>
+          <a href="/teaching/" className={navLinkClass}><i className="fa-regular fa-newspaper text-xs"></i> 相處教學</a>
+          <a href="/services/" className={navLinkClass}><i className="fa-solid fa-wand-magic-sparkles text-xs"></i> 服務</a>
           <a href="/#oracle" onClick={goHomeSection('oracle')} className={navLinkClass}><i className="fa-regular fa-star text-xs"></i> 每日指引</a>
           <a href="/#reviews" onClick={goHomeSection('reviews')} className={`${navLinkClass} hidden lg:inline-flex`}><i className="fa-regular fa-comment-dots text-xs"></i> 好評</a>
           <a href={spaceHref} onClick={goSpaceEntry(spaceHash)} className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
@@ -210,7 +210,7 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-asteria-cream/70 bg-[#FFF9F0] px-4 py-4 shadow-lg">
           <div className="grid gap-2">
-            <a href="/about" onClick={closeMobileMenu} className={mobileLinkClass}>
+            <a href="/about/" onClick={closeMobileMenu} className={mobileLinkClass}>
               <span><i className="fa-regular fa-heart mr-2 text-asteria-primary"></i>關於我們</span>
               <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
             </a>
@@ -218,11 +218,11 @@ const Navbar = () => {
               <span><i className="fa-regular fa-star mr-2 text-asteria-primary"></i>每日指引</span>
               <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
             </a>
-            <a href="/teaching" onClick={closeMobileMenu} className={mobileLinkClass}>
+            <a href="/teaching/" onClick={closeMobileMenu} className={mobileLinkClass}>
               <span><i className="fa-regular fa-newspaper mr-2 text-asteria-primary"></i>相處教學</span>
               <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
             </a>
-            <a href="/services" onClick={closeMobileMenu} className={mobileLinkClass}>
+            <a href="/services/" onClick={closeMobileMenu} className={mobileLinkClass}>
               <span><i className="fa-solid fa-wand-magic-sparkles mr-2 text-asteria-primary"></i>服務</span>
               <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
             </a>
@@ -346,7 +346,7 @@ const Hero = () => (
             <a href="/#register" className="bg-asteria-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all">
               <i className="fa-regular fa-address-card"></i> 留資料 / 登入 Space
             </a>
-            <a href="/services" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
+            <a href="/services/" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
               <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看儀式分類
             </a>
             <a href="/#oracle" className="bg-white text-asteria-primary border-2 border-asteria-yellow/70 px-8 py-4 rounded-xl font-bold hover:bg-asteria-yellow/20 transition-all flex items-center justify-center gap-2">
@@ -1109,7 +1109,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       return (
         <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
           <article className="container mx-auto px-6 max-w-4xl">
-            <a href="/teaching" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+            <a href="/teaching/" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
               <i className="fa-solid fa-arrow-left"></i> 返回文章列表
             </a>
             <div className="overflow-hidden">
@@ -1140,7 +1140,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                   <div className="text-sm font-bold text-asteria-primary mb-1">繼續閱讀</div>
                   <h2 className="text-2xl font-bold text-asteria-dark">其他推介</h2>
                 </div>
-                <a href="/teaching" className="text-sm font-bold text-asteria-primary">全部文章</a>
+                <a href="/teaching/" className="text-sm font-bold text-asteria-primary">全部文章</a>
               </div>
               <div className="grid md:grid-cols-3 gap-5">
                 {relatedPosts.map((post) => (
@@ -1246,7 +1246,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               <h2 className="text-3xl font-bold text-asteria-dark mb-3">相處教學</h2>
               <p className="text-stone-500">不再在感情裡迷路，學會愛與被愛的智慧。</p>
             </div>
-            <a href="/teaching" className="btn-primary px-5 py-3 rounded-xl font-bold inline-flex items-center gap-2 justify-center">
+            <a href="/teaching/" className="btn-primary px-5 py-3 rounded-xl font-bold inline-flex items-center gap-2 justify-center">
               查看全部文章 <i className="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -1465,13 +1465,13 @@ const ServicesPreview = () => {
             <p className="text-stone-500 leading-relaxed mb-6">
               首頁先俾你揀大方向；完整儀式、組合、金錢事業同其他能量服務，放喺獨立服務頁，畫面會清爽啲。
             </p>
-            <a href="/services" className="btn-primary px-6 py-3 rounded-xl font-bold inline-flex items-center gap-2">
+            <a href="/services/" className="btn-primary px-6 py-3 rounded-xl font-bold inline-flex items-center gap-2">
               查看完整服務項目 <i className="fa-solid fa-arrow-right"></i>
             </a>
           </div>
           <div className="grid sm:grid-cols-3 gap-4">
             {serviceDirections.map((item) => (
-              <a key={item.title} href="/services" className={`${item.tone} border border-asteria-cream/70 rounded-3xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all`}>
+              <a key={item.title} href="/services/" className={`${item.tone} border border-asteria-cream/70 rounded-3xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all`}>
                 <div className="w-12 h-12 rounded-2xl bg-white text-asteria-primary flex items-center justify-center mb-4 shadow-sm">
                   <i className={item.icon}></i>
                 </div>
@@ -1795,7 +1795,7 @@ const Reviews = () => (
       <ReviewGrid reviews={reviewImages.slice(0, 6)} />
       
       <div className="text-center mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/reviews" className="inline-flex items-center justify-center gap-2 text-asteria-primary font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
+        <a href="/reviews/" className="inline-flex items-center justify-center gap-2 text-asteria-primary font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
           <i className="fa-regular fa-images"></i> 查看更多好評
         </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
