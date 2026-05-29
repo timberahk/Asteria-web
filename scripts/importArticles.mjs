@@ -203,10 +203,54 @@ const normalizeText = (value = '') => value
   .replace(/[，。！？、：；「」『』（）\[\]\s]/g, '')
   .toLowerCase();
 
+const decorativeMarkerPattern = /(?:[✅✔☑⭕❌🚫🔎📌✉❤💔✨🈲‼❗🔺💬⭐🌟💫]+|[0-9]️⃣)/g;
+const emojiPattern = /[\u{1f000}-\u{1faff}\u{2600}-\u{27bf}\ufe0f\u{1f3fb}-\u{1f3ff}]/gu;
+
+const normalizeArticleText = (value = '') => {
+  let text = value
+    .replace(/<aside>/gi, '')
+    .replace(/<\/aside>/gi, '')
+    .replace(/❤️‍🩹|[0-9]️⃣/g, '、')
+    .replace(decorativeMarkerPattern, '、')
+    .replace(emojiPattern, '')
+    .replace(/\bFollow我們的Instagram\b.*$/i, '')
+    .replace(/\bFollow\s*Instagram\b.*$/i, '')
+    .replace(/學習更多關於長期關係相處、溝通技巧、情感連結的小秘笈.*$/i, '')
+    .replace(/\s*[\u200d\ufe0f]+\s*/g, '')
+    .replace(/[ \t]+/g, ' ')
+    .trim();
+
+  text = text
+    .replace(/\s*([，。！？、：；])\s*/g, '$1')
+    .replace(/([，。！？；：])+/g, (match) => match.at(-1) || match)
+    .replace(/、{2,}/g, '、')
+    .replace(/^、+|、+$/g, '')
+    .replace(/([一-龥）」】）])\s+([一-龥「【（])/g, '$1，$2')
+    .replace(/([一-龥])\s*=\s*([一-龥])/g, '$1等於$2')
+    .replace(/：、/g, '：')
+    .replace(/，([。！？；：])/g, '$1')
+    .replace(/、([。！？；：，])/g, '$1')
+    .replace(/([（「【])，/g, '$1')
+    .replace(/，([）」】])/g, '$1')
+    .replace(/，{2,}/g, '，')
+    .replace(/。{2,}/g, '。')
+    .replace(/([？！，；：])。/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (text.length > 14 && /[\u4e00-\u9fff]$/.test(text) && !/[。！？]$/.test(text)) {
+    text += '。';
+  }
+  return text;
+};
+
 const cleanDescription = (value = '') => value
   .replace(/遇到「.*?」這種感情難題時，最怕急著用情緒做決定。\s*/g, '')
   .replace(/本文從.*?角度拆解關係訊號、應對方法與挽回前要留意的重點。?/g, '')
-  .replace(/\s+/g, ' ')
+  .split(/\r?\n/)
+  .map(normalizeArticleText)
+  .filter(Boolean)
+  .join(' ')
   .trim();
 
 const parseFrontmatter = (raw) => {
@@ -286,7 +330,16 @@ const imageLabelFor = (title, category) => {
 };
 
 const formatInline = (text) => {
-  let value = escapeHtml(text.trim());
+  let value = escapeHtml(normalizeArticleText(text));
+  value = value.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  value = value.replace(/\[(.+?)\]\((.+?)\)/g, '<mark>$1</mark>');
+  value = value.replace(/「([^」]{2,24})」/g, '「<strong>$1</strong>」');
+  return value;
+};
+
+const formatHeadingInline = (text) => {
+  const cleaned = normalizeArticleText(text).replace(/。+$/g, '');
+  let value = escapeHtml(cleaned);
   value = value.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   value = value.replace(/\[(.+?)\]\((.+?)\)/g, '<mark>$1</mark>');
   value = value.replace(/「([^」]{2,24})」/g, '「<strong>$1</strong>」');
@@ -294,16 +347,13 @@ const formatInline = (text) => {
 };
 
 const restoreLooseChinesePunctuation = (text = '') => {
-  const value = text.trim();
+  const value = normalizeArticleText(text);
   const hasChinese = /[\u4e00-\u9fff]/.test(value);
   const hasSpaces = /\s+/.test(value);
-  const punctuationCount = (value.match(/[，。！？；：]/g) || []).length;
-  if (!hasChinese || !hasSpaces || punctuationCount >= 2 || /^https?:\/\//i.test(value)) return value;
+  if (!hasChinese || !hasSpaces || /^https?:\/\//i.test(value)) return value;
 
   let restored = value
     .replace(/([\u4e00-\u9fff）】」])\s+([\u4e00-\u9fff「（【])/g, '$1，$2')
-    .replace(/([A-Za-z0-9])\s+([\u4e00-\u9fff])/g, '$1，$2')
-    .replace(/([\u4e00-\u9fff])\s+([A-Za-z0-9])/g, '$1，$2')
     .replace(/，+/g, '，');
 
   if (restored.length > 14 && !/[。！？.!?」）】]$/.test(restored)) {
@@ -336,7 +386,7 @@ const formatParagraph = (text) => {
 };
 
 const shouldSkipLine = (line) => {
-  const trimmed = line.trim();
+  const trimmed = normalizeArticleText(line.trim());
   return (
     /^!\[.*?\]\(IMAGE_PLACEHOLDER/i.test(trimmed) ||
     /^-\s*\[.+?\]\(.+?\)\s*$/.test(trimmed) ||
@@ -365,8 +415,18 @@ const cleanMarkdown = (body, title) => {
   const lines = body.split(/\r?\n/);
   const out = [];
   let skipSection = null;
+  let skipAside = false;
   for (const line of lines) {
     const trimmed = line.trim();
+    if (/<aside>/i.test(trimmed)) {
+      skipAside = true;
+      continue;
+    }
+    if (/<\/aside>/i.test(trimmed)) {
+      skipAside = false;
+      continue;
+    }
+    if (skipAside) continue;
     const heading = trimmed.match(/^(#{2,3})\s+(.+)$/);
     if (heading) {
       const headingText = heading[2].replace(/^#\s*/, '').trim();
@@ -392,7 +452,7 @@ const cleanMarkdown = (body, title) => {
       if (stripSeoSuffix(h1) === stripSeoSuffix(title) || h1.length < 24) continue;
     }
     if (/^##\s+#/.test(trimmed)) continue;
-    out.push(line);
+    out.push(line.replace(/^(\s*#{1,6}\s+)(.+)$/u, (_, prefix, text) => `${prefix}${normalizeArticleText(text)}`));
   }
   return out.join('\n').trim();
 };
@@ -586,9 +646,9 @@ const markdownToHtml = (markdown) => {
       const level = heading[1].length;
       const text = heading[2].replace(/^#\s*/, '').trim();
       if (level <= 2) {
-        html.push(`<h2>${formatInline(text)}</h2>`);
+        html.push(`<h2>${formatHeadingInline(text)}</h2>`);
       } else {
-        html.push(`<h3>${formatInline(text)}</h3>`);
+        html.push(`<h3>${formatHeadingInline(text)}</h3>`);
       }
       continue;
     }
@@ -641,10 +701,11 @@ const makeSummary = ({ frontmatter, preliminaryContent, title, category }) => {
   const fromDescription = cleanDescription(frontmatter.description || '');
   const candidate = fromDescription || excerptFrom(preliminaryContent, title);
   const normalized = candidate.replace(/\s+/g, ' ').trim();
-  if (!normalized || isFaqLikeSummary(normalized) || normalizeText(normalized) === normalizeText(title)) {
+  const cleaned = normalizeArticleText(normalized);
+  if (!cleaned || isFaqLikeSummary(cleaned) || normalizeText(cleaned) === normalizeText(title)) {
     return buildFallbackSummary(title, category).slice(0, 150);
   }
-  return normalized.slice(0, 150);
+  return cleaned.slice(0, 150);
 };
 
 const wrapSvgText = (text, maxChars = 12, maxLines = 4) => {
