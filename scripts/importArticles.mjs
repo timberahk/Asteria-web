@@ -200,21 +200,27 @@ const cleanTitle = (title = '') => stripSeoSuffix(title)
 
 const normalizeText = (value = '') => value
   .replace(/<[^>]+>/g, '')
+  .replace(/[\uD800-\uDFFF]/g, '')
   .replace(/[，。！？、：；「」『』（）\[\]\s]/g, '')
   .toLowerCase();
 
 const decorativeMarkerPattern = /(?:[✅✔☑⭕❌🚫🔎📌✉❤💔✨🈲‼❗🔺💬⭐🌟💫]+|[0-9]️⃣)/g;
-const emojiPattern = /[\u{1f000}-\u{1faff}\u{2600}-\u{27bf}\ufe0f\u{1f3fb}-\u{1f3ff}]/gu;
+const emojiPattern = /[\u{1f000}-\u{1faff}\u{2600}-\u{27bf}\ufe0f\u{1f3fb}-\u{1f3ff}\uD800-\uDFFF]/gu;
 
 const normalizeArticleText = (value = '') => {
   let text = value
     .replace(/<aside>/gi, '')
     .replace(/<\/aside>/gi, '')
+    .replace(/\uFFFD/g, '')
+    .replace(/[\uD800-\uDFFF]/g, '')
+    .replace(/^[\s　]*[\[【][^\]】]{1,24}[\]】]\s*/g, '')
     .replace(/❤️‍🩹|[0-9]️⃣/g, '、')
     .replace(decorativeMarkerPattern, '、')
     .replace(emojiPattern, '')
     .replace(/\bFollow我們的Instagram\b.*$/i, '')
     .replace(/\bFollow\s*Instagram\b.*$/i, '')
+    .replace(/\badmin\b.*$/i, '')
+    .replace(/\bremark\b.*$/i, '')
     .replace(/學習更多關於長期關係相處、溝通技巧、情感連結的小秘笈.*$/i, '')
     .replace(/\s*[\u200d\ufe0f]+\s*/g, '')
     .replace(/[ \t]+/g, ' ')
@@ -235,6 +241,8 @@ const normalizeArticleText = (value = '') => {
     .replace(/，{2,}/g, '，')
     .replace(/。{2,}/g, '。')
     .replace(/([？！，；：])。/g, '$1')
+    .replace(/\s+([。！？；：，、])/g, '$1')
+    .replace(/([。！？；：，、])\s+/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
 
@@ -245,6 +253,8 @@ const normalizeArticleText = (value = '') => {
 };
 
 const cleanDescription = (value = '') => value
+  .replace(/^[\s　]*[\[【][^\]】]{1,24}[\]】]\s*/g, '')
+  .replace(/\uFFFD/g, '')
   .replace(/遇到「.*?」這種感情難題時，最怕急著用情緒做決定。\s*/g, '')
   .replace(/本文從.*?角度拆解關係訊號、應對方法與挽回前要留意的重點。?/g, '')
   .split(/\r?\n/)
@@ -407,6 +417,8 @@ const shouldSkipLine = (line) => {
     /^>\s*$/.test(trimmed) ||
     /^\[WhatsApp 聯絡我哋\]/.test(trimmed) ||
     /^所有感情問題/.test(trimmed) ||
+    /^想知你嘅關係可以點修補/.test(trimmed) ||
+    /^想知道呢段關係下一步/.test(trimmed) ||
     /^本文屬感情心理/.test(trimmed)
   );
 };
@@ -448,8 +460,7 @@ const cleanMarkdown = (body, title) => {
     if (skipSection) continue;
     if (shouldSkipLine(line)) continue;
     if (/^#\s+/.test(trimmed)) {
-      const h1 = trimmed.replace(/^#\s+/, '').trim();
-      if (stripSeoSuffix(h1) === stripSeoSuffix(title) || h1.length < 24) continue;
+      continue;
     }
     if (/^##\s+#/.test(trimmed)) continue;
     out.push(line.replace(/^(\s*#{1,6}\s+)(.+)$/u, (_, prefix, text) => `${prefix}${normalizeArticleText(text)}`));
@@ -563,7 +574,6 @@ const buildFallbackBodyMarkdown = ({ title, category, summary }) => {
   return [
     `## 先看清楚「${topic}」真正卡住的位置`,
     lead,
-    summary,
     `好多感情問題表面上係一句說話、一個行為、一段冷淡期，但背後可能係安全感、溝通方式、投入程度或者過往失望累積出嚟。你愈急住處理，愈容易用錯方法，令對方更防衛，自己亦更內耗。`,
     `## 為什麼會越處理越亂`,
     `最常見的情況，是你用自己的不安去追問，對方就用沉默、逃避或者敷衍去防衛。你以為自己只係想溝通，但對方感受到的可能係壓力；你以為對方冷淡代表不愛，但其實亦可能係佢唔識處理衝突。真正要拆的，不只是一句訊息，而是你哋互動入面重複出現的模式。`,
@@ -600,6 +610,32 @@ const removeDuplicateIntro = (markdown, summary) => {
   const summaryKey = normalizeText(summary).slice(0, 56);
   if (summaryKey.length < 18) return markdown;
   const lines = markdown.split(/\r?\n/);
+  const firstContentIndex = lines.findIndex((line) => {
+    const trimmed = line.trim();
+    return trimmed && !/^#{2,4}\s+/.test(trimmed);
+  });
+  if (firstContentIndex < 0) return markdown;
+
+  let buffer = '';
+  let endIndex = firstContentIndex - 1;
+  for (let index = firstContentIndex; index < Math.min(lines.length, firstContentIndex + 4); index += 1) {
+    const trimmed = lines[index].trim();
+    if (!trimmed || /^#{2,4}\s+/.test(trimmed)) break;
+    buffer += normalizeText(trimmed);
+    endIndex = index;
+    if (
+      buffer.includes(summaryKey) ||
+      summaryKey.includes(buffer.slice(0, Math.min(buffer.length, summaryKey.length))) ||
+      normalizeText(trimmed).includes(summaryKey)
+    ) {
+      return [
+        ...lines.slice(0, firstContentIndex),
+        ...lines.slice(endIndex + 1)
+      ].join('\n').replace(/^\s+/, '').trim();
+    }
+    if (buffer.length > summaryKey.length + 80) break;
+  }
+
   const out = [];
   let removed = false;
   for (const line of lines) {
@@ -689,6 +725,29 @@ const excerptFrom = (html, fallback) => {
     .replace(/\s+/g, ' ')
     .trim();
   return (plain || fallback).slice(0, 130);
+};
+
+const stripHtml = (html = '') => html
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/&nbsp;/g, ' ')
+  .replace(/&amp;/g, '&')
+  .replace(/&lt;/g, '<')
+  .replace(/&gt;/g, '>')
+  .replace(/&quot;/g, '"')
+  .replace(/&#39;/g, "'")
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const removeDuplicateSummaryHtml = (html, summary) => {
+  const summaryKey = normalizeText(summary).slice(0, 60);
+  if (summaryKey.length < 24) return html;
+  return html.replace(/^<p>([\s\S]*?)<\/p>\n?/, (match, firstParagraph) => {
+    const paragraphKey = normalizeText(stripHtml(firstParagraph));
+    if (paragraphKey.includes(summaryKey) || summaryKey.includes(paragraphKey.slice(0, summaryKey.length))) {
+      return '';
+    }
+    return match;
+  });
 };
 
 const buildFallbackSummary = (title, category) => {
@@ -865,7 +924,7 @@ const articles = orderedFiles.map((file, index) => {
     safeBodyMarkdown,
     buildArticleFaqMarkdown({ title, category, summary })
   ].filter(Boolean).join('\n\n');
-  const content = markdownToHtml(articleMarkdown);
+  const content = removeDuplicateSummaryHtml(markdownToHtml(articleMarkdown), summary);
   const id = index + 1;
   const imageLabel = imageLabelFor(title, category);
   const fallbackImages = editorialImagesFor({ id, title, category });

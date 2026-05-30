@@ -163,6 +163,8 @@ function stripHtml(html = '') {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/\s+/g, ' ')
+    .replace(/([「『（(])\s+/g, '$1')
+    .replace(/\s+([」』）)、，。？！：；])/g, '$1')
     .trim();
 }
 
