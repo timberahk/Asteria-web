@@ -265,7 +265,7 @@ const Navbar = () => {
       <div className="bg-asteria-dark text-white">
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
           <span className="font-bold whitespace-nowrap">IG帳號暫停通知</span>
-          <span className="text-white/80 whitespace-nowrap">請用以下方式聯絡我地：</span>
+          <span className="text-white/80 whitespace-nowrap">請改用官方聯絡方法：</span>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
@@ -314,7 +314,7 @@ const Hero = () => (
               <div>
                 <div className="font-bold text-asteria-dark mb-1">IG帳號暫停通知</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  我地 Instagram 主帳及 backup 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻用以下方法重新聯絡，避免之後失聯。
+                  我地 Instagram 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻改用以下官方方法聯絡。
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
@@ -325,6 +325,9 @@ const Hero = () => (
                   </a>
                   <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-2 bg-[#2AABEE] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-telegram"></i> Telegram
+                  </a>
+                  <a href="/#register" className="inline-flex items-center justify-center gap-2 bg-asteria-dark text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-110 transition-all whitespace-nowrap">
+                    <i className="fa-regular fa-user"></i> Asteria Space
                   </a>
                 </div>
               </div>
