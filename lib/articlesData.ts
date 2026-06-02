@@ -22,7 +22,7 @@ export type TeachingPost = {
 export const teachingPosts: TeachingPost[] = [
   {
     "id": 1,
-    "title": "5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+    "title": "愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
     "category": "戀愛心理",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
@@ -45,27 +45,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-5080651.jpg",
-        "caption": "內文配圖：5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+        "caption": "內文配圖：愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
         "credit": "Photo by Anna Tarazevich on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-kissing-a-woman-on-the-cheek-5080651/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-35130646.jpg",
-        "caption": "內文配圖：5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+        "caption": "內文配圖：愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
         "credit": "Photo by Hiếu Nguyễn on Pexels",
         "creditUrl": "https://www.pexels.com/photo/young-couple-smiling-in-a-sunlit-park-35130646/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5184856.jpg",
-        "caption": "內文配圖：5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+        "caption": "內文配圖：愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
         "credit": "Photo by Bethany Ferr on Pexels",
         "creditUrl": "https://www.pexels.com/photo/photo-of-a-couple-embracing-each-other-5184856/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+    "coverCaption": "Asteria 相處教學：愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -268,7 +268,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-compass",
     "imageLabel": "警號",
     "summary": "佢成日都話係為你好，但你有冇諗過，其實佢嘅行為係一種操控？一齊睇吓你身邊嘅另一半，有冇呢類潛在操控嘅傾向啦。",
-    "content": "<p>你嘅另一半成日都話，「<strong>為你好</strong>」、「<strong>我係想保護你</strong>」，但就用呢類理由，要求你改變自己、限制你嘅自由，你可能覺得佢咁做係因為愛你、想保護你，但其實呢種「<strong>保護</strong>」有機會係「<strong>操控</strong>」，而操控仲可以分成幾個level 一齊睇吓你嘅另一半有冇呢啲問題。</p>\n<p>「<strong>你絕對唔可以著呢件衫，太性感，我唔批准！</strong>」，「<strong>你唔可以咁樣化妝，太誇張，我唔鍾意！</strong>」，如果對方經常用「<strong>我係為你好</strong>」呢個理由來干涉你嘅穿搭，甚至令你覺得自己無自由選擇，咁其實係一種操控，真正尊重你、欣賞你，會喺衣著打扮上俾意見你。</p>\n<p>而唔係改造你、命令你只可以跟隨佢喜好。</p>\n<h2>Level 2 限制你同邊啲人來往</h2>\n<p>佢可能會話，「阿A唔好/我唔鍾意阿A，你唔準再同佢做friend！」，甚至直接要求你切斷同朋友嘅聯繫，令你漸漸失去自己嘅社交圈子，操控緊你嘅社交，但其實真正嘅關心，係提醒你留意邊啲人值得深交，而唔係直接剝奪你選擇朋友嘅權利。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>佢可能會用擔心你安危嚟做藉口，「最近太多罪行，好危險，你每次出街都要send Live Location俾我」，要求你隨時報備自己去邊，甚至會喺你電話裝GPS 令佢可以隨時知道你嘅行蹤，其實係好恐怖嘅事，愛一個人係基於信任。</p>\n<p>而唔係靠24小時監察，如果對方唔信任你，而係用控制嚟換取安全感，咁同佢一齊都冇意思啦！</p>\n<p>真正啲保護係出於愛同尊重，唔係限制同控制，而係當你遇到困難時，對方會支持你，而唔係剝奪你選擇的權利，係當你感到不安時，對方會理解你，而唔係用恐懼令你就範，保護係幫你變得更強，而唔係令你失去自我，保護係俾你空間成長，而唔係用「<strong>為你好</strong>」嘅名義去操控你。</p>\n<h2>常見問題</h2>\n<h3>「<strong>「為你好</strong>」可能係控制」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>「為你好</strong>」可能係控制」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>「為你好</strong>」可能係控制」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "content": "<p>你嘅另一半成日都話，「<strong>為你好</strong>」、「<strong>我係想保護你</strong>」，但就用呢類理由，要求你改變自己、限制你嘅自由。你可能覺得佢咁做係因為愛你，但其實呢種「<strong>保護</strong>」有機會係「<strong>操控</strong>」。</p>\n<h2>警號 1 干涉你嘅穿搭同打扮</h2>\n<p>「<strong>你絕對唔可以著呢件衫，太性感，我唔批准！</strong>」，「<strong>你唔可以咁樣化妝，太誇張，我唔鍾意！</strong>」，如果對方經常用「<strong>我係為你好</strong>」呢個理由來干涉你嘅穿搭，甚至令你覺得自己無自由選擇，咁其實係一種操控。</p>\n<h2>警號 2 限制你同邊啲人來往</h2>\n<p>佢可能會話，「阿A唔好/我唔鍾意阿A，你唔準再同佢做friend！」，甚至直接要求你切斷同朋友嘅聯繫，令你漸漸失去自己嘅社交圈子。真正嘅關心係提醒你留意邊啲人值得深交，而唔係剝奪你選擇朋友嘅權利。</p>\n<h2>警號 3 要你隨時報備行蹤</h2>\n<p>佢可能會用擔心你安危嚟做藉口，「最近太多罪行，好危險，你每次出街都要send Live Location俾我」，要求你隨時報備自己去邊，甚至會喺你電話裝GPS。愛一個人係基於信任，而唔係靠24小時監察。</p>\n<h2>警號 4 用恐懼令你就範</h2>\n<p>如果對方經常用危險、後果、責任去嚇你，令你因為驚而服從，這不是保護，而是用恐懼控制你嘅選擇。</p>\n<h2>警號 5 令你慢慢失去自己</h2>\n<p>真正嘅保護係出於愛同尊重，會支持你變得更強，而唔係令你失去自由、朋友同判斷力。保護係俾你空間成長，而唔係用「<strong>為你好</strong>」嘅名義去操控你。</p>\n<h2>常見問題</h2>\n<h3>「<strong>「為你好</strong>」可能係控制」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>「為你好</strong>」可能係控制」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>「為你好</strong>」可能係控制」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "https://www.instagram.com/p/DHh7nBMJ9MP/",
     "date": "2025-03-23",
     "tags": [
@@ -796,7 +796,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-heart",
     "imageLabel": "溝通",
     "summary": "都市人壓力大，久唔久都會心情差、情緒低落，甚至憂鬱，如果撞正身邊嘅伴侶都有呢個情況，作為另一半嘅人，又應該點同佢哋相處？",
-    "content": "<p>喺度愁眉苦臉，你會點做</p>\n<p>搵方法氹佢開心，不停問佢發生咩事，叫對方有問題要同佢講，不停討論研究問題，勢要問清楚。</p>\n<p>請過好多夫婦或情侶嚟模擬場景，假設其中一個遇到問題，另外一個要提供幫助，分咗3個情況 1. 抱住佢，溫情地陪伴 2. 同佢傾偈，無意中話「<strong>我有個朋友也遇到同樣問題，他會咗做……</strong>」 3.同佢分析問題，提出自己嘅建議「<strong>你應該……</strong>」</p>\n<p>前面兩種方法可以降低伴侶嘅焦慮感，而最後一種通常起到舒緩情緒嘅作用，反而可能引起不必要嘅爭執，事實證明，當另一半最初出現情緒低落、面對難關時，最需要嘅係你窩心陪伴、窩心嘅語言，其實佢當下唔需要你即時幫佢解決問題。</p>\n<h2>當另一半嘅情緒問題成為日常</h2>\n<p>你要點做</p>\n<p>1. 允許對方有「<strong>負面</strong>」情緒，喺一段關係中，當其中一方深陷負面情緒，都有一項共同特性：「<strong>唔係要即刻解決低落根源，而係要被理解</strong>」，但偏偏另一方往往會設法解決對方嘅問題，係咁不斷地提供建議，但其實一段健康嘅關係，係藏著「<strong>正面</strong>」&amp;「<strong>負面</strong>」情緒、思維。</p>\n<p>嘗試將對方嘅低落視作日常抱怨、低潮，千萬唔好阻止對方有負面情緒。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>4. 漫長嘅陪伴期，陪伴期首要任務係陪伴對方，若對方情緒低落嚴重、有憂鬱徵兆，咁陪佢搵可信賴嘅治療師、聽佢分享生活，都係陪伴期可以維持關係嘅催化劑，你可以從學習同對方共處過程中成長，你唔一定永遠係「<strong>給予者</strong>」(Giver) 對方也唔一定係「<strong>接受者</strong>」(Taker)。</p>\n<p>而係可以互相照顧，令呢段關係唔會因為對方嘅情緒問題而中斷。</p>\n<p>5. 你嘅同理心會帶來「<strong>傷害</strong>」，當另一半情緒低落，你會想要施予「<strong>同理心</strong>」，喺好容易喺傾聽同陪伴過程中，一唔小心就被對方嘅情緒影響，連自己都深陷抑鬱、低潮之中，所以最緊要係要先意識到，「<strong>對方嘅情緒會傷害到自己</strong>」，你要提高「<strong>自我意識</strong>」，發現自己會唔會受到對方情緒影響。</p>\n<p>避免跟住佢一齊陷入低潮</p>\n<h2>常見問題</h2>\n<h3>「<strong>你以為在幫對方，其實正在增加壓力</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>你以為在幫對方，其實正在增加壓力</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>你以為在幫對方，其實正在增加壓力</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "content": "<p>當另一半愁眉苦臉、壓力大，你第一反應可能係想即刻幫佢解決：不停問「發生咩事」、分析問題、叫佢一定要講清楚。但好多時候，對方當下最需要的不是答案，而是先感受到你站在他身邊。</p>\n<p>伴侶遇到低潮時，常見反應大概有三種：溫柔陪伴、分享類似經驗、直接分析問題。前兩種通常較容易令對方放鬆；最容易引起反感的，反而是太快進入「你應該點做」模式。</p>\n<h2>誤區一：急住問清楚，令對方更有壓力</h2>\n<p>你以為不停追問是關心，但對方情緒未穩時，連整理自己感受都未必做到。這時候太多問題，會令對方覺得自己要即刻交代、即刻解釋，壓力反而更大。</p>\n<p>如果對方明顯心情差，可以先用簡單句子接住對方，例如「我見你好似好攰，我喺度」或「你想講我會聽，唔想講都可以」。這種留白，比逼對方即刻講清楚更舒服。</p>\n<h2>誤區二：太快俾建議，聽起來似否定</h2>\n<p>很多人一聽到另一半有煩惱，就會急住分析、提出方法，甚至講「你應該……」。你的出發點可能是幫忙，但對方聽起來，可能會覺得自己被評價、被指導，甚至覺得你不理解他的難處。</p>\n<p>在關係裡，建議不是不能給，而是要等對方情緒降下來，再問一句：「你想我聽你講，定想我一齊諗方法？」讓對方有選擇，才不會把你的幫忙感受成壓迫。</p>\n<h2>誤區三：把對方情緒當成自己責任</h2>\n<p>陪伴不是把對方所有情緒都背上身。如果你每次都覺得自己一定要令對方好返，就很容易過度緊張，最後連自己都被拖入低潮。</p>\n<p>真正穩定的陪伴，是承認對方可以有負面情緒，同時你也可以保留自己的界線。你可以關心、可以聆聽，但不需要用耗盡自己的方式證明你在乎。</p>\n<h2>更舒服的做法：先陪伴，再處理</h2>\n<p>當另一半低落時，先不要急著修正對方。先讓對方知道你願意聽、願意陪，再慢慢判斷是否需要實際方法。如果情緒問題已經持續很久，甚至影響生活，也可以鼓勵對方尋求專業協助。</p>\n<p>感情裡最有力量的支持，未必是立刻給答案，而是讓對方感覺到：即使他狀態不好，你仍然願意溫柔地靠近。</p>\n<h2>常見問題</h2>\n<h3>「<strong>你以為在幫對方，其實正在增加壓力</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>你以為在幫對方，其實正在增加壓力</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>你以為在幫對方，其實正在增加壓力</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "https://www.instagram.com/p/C7yyhizS7Gm/",
     "date": "2024-06-04",
     "tags": [
@@ -1318,7 +1318,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 28,
-    "title": "你是在關心，還是在批評？3 個偽關心地雷",
+    "title": "你是在關心，還是在批評？常見偽關心地雷",
     "category": "溝通相處",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
@@ -1341,27 +1341,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-5235450.jpg",
-        "caption": "內文配圖：你是在關心，還是在批評？3 個偽關心地雷",
+        "caption": "內文配圖：你是在關心，還是在批評？常見偽關心地雷",
         "credit": "Photo by arvi refo on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-sitting-on-a-bench-5235450/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6214258.jpg",
-        "caption": "內文配圖：你是在關心，還是在批評？3 個偽關心地雷",
+        "caption": "內文配圖：你是在關心，還是在批評？常見偽關心地雷",
         "credit": "Photo by Trần Long on Pexels",
         "creditUrl": "https://www.pexels.com/photo/cheerful-loving-asian-couple-talking-and-smiling-6214258/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7683846.jpg",
-        "caption": "內文配圖：你是在關心，還是在批評？3 個偽關心地雷",
+        "caption": "內文配圖：你是在關心，還是在批評？常見偽關心地雷",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/roommates-having-a-conversation-in-the-kitchen-7683846/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你是在關心，還是在批評？3 個偽關心地雷",
+    "coverCaption": "Asteria 相處教學：你是在關心，還是在批評？常見偽關心地雷",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -1414,7 +1414,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 30,
-    "title": "你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+    "title": "你是真的喜歡他，還是只享受被愛？判斷自己心意的方法",
     "category": "戀愛心理",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
@@ -1437,27 +1437,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8645709.jpg",
-        "caption": "內文配圖：你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+        "caption": "內文配圖：你是真的喜歡他，還是只享受被愛？判斷自己心意的方法",
         "credit": "Photo by Windd on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-kissing-a-woman-8645709/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7488994.jpg",
-        "caption": "內文配圖：你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+        "caption": "內文配圖：你是真的喜歡他，還是只享受被愛？判斷自己心意的方法",
         "credit": "Photo by Gustavo Fring on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-preparing-food-7488994/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5185246.jpg",
-        "caption": "內文配圖：你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+        "caption": "內文配圖：你是真的喜歡他，還是只享受被愛？判斷自己心意的方法",
         "credit": "Photo by Bethany Ferr on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-embracing-on-beach-5185246/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+    "coverCaption": "Asteria 相處教學：你是真的喜歡他，還是只享受被愛？判斷自己心意的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -1750,7 +1750,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 37,
-    "title": "他對你不像以前了？男人感情扣分的 5 個細節",
+    "title": "他對你不像以前了？男人感情扣分的細節",
     "category": "戀愛心理",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
@@ -1773,32 +1773,32 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11989344.jpg",
-        "caption": "內文配圖：他對你不像以前了？男人感情扣分的 5 個細節",
+        "caption": "內文配圖：他對你不像以前了？男人感情扣分的細節",
         "credit": "Photo by EGO  AGENCY on Pexels",
         "creditUrl": "https://www.pexels.com/photo/smiling-couple-on-a-balcony-11989344/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5225281.jpg",
-        "caption": "內文配圖：他對你不像以前了？男人感情扣分的 5 個細節",
+        "caption": "內文配圖：他對你不像以前了？男人感情扣分的細節",
         "credit": "Photo by Samson Katt on Pexels",
         "creditUrl": "https://www.pexels.com/photo/smiling-diverse-couple-standing-together-in-sunny-day-5225281/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4650305.jpg",
-        "caption": "內文配圖：他對你不像以前了？男人感情扣分的 5 個細節",
+        "caption": "內文配圖：他對你不像以前了？男人感情扣分的細節",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-lying-together-in-bed-4650305/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他對你不像以前了？男人感情扣分的 5 個細節",
+    "coverCaption": "Asteria 相處教學：他對你不像以前了？男人感情扣分的細節",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 38,
-    "title": "他是真心還是假意？5 個細節看出對方有沒有認真愛你",
+    "title": "他是真心還是假意？看出對方有沒有認真愛你",
     "category": "戀愛心理",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
@@ -1821,27 +1821,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-7592333.jpg",
-        "caption": "內文配圖：他是真心還是假意？5 個細節看出對方有沒有認真愛你",
+        "caption": "內文配圖：他是真心還是假意？看出對方有沒有認真愛你",
         "credit": "Photo by Miriam Alonso on Pexels",
         "creditUrl": "https://www.pexels.com/photo/smiling-man-suggesting-fruit-to-girlfriend-bending-aside-in-morning-7592333/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4650287.jpg",
-        "caption": "內文配圖：他是真心還是假意？5 個細節看出對方有沒有認真愛你",
+        "caption": "內文配圖：他是真心還是假意？看出對方有沒有認真愛你",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-4650287/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7592743.jpg",
-        "caption": "內文配圖：他是真心還是假意？5 個細節看出對方有沒有認真愛你",
+        "caption": "內文配圖：他是真心還是假意？看出對方有沒有認真愛你",
         "credit": "Photo by Miriam Alonso on Pexels",
         "creditUrl": "https://www.pexels.com/photo/asian-couple-on-sofa-in-living-room-7592743/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他是真心還是假意？5 個細節看出對方有沒有認真愛你",
+    "coverCaption": "Asteria 相處教學：他是真心還是假意？看出對方有沒有認真愛你",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -1990,13 +1990,13 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 42,
-    "title": "分手前有咩徵兆？4 個感情亮紅燈的信號",
+    "title": "分手前有咩徵兆？感情亮紅燈的信號",
     "category": "復合挽回",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
     "imageLabel": "復合",
     "summary": "另一半冇啦啦話要分手，嚇你一跳？但老土啲咁講，「冰封三尺非一日之寒」，對方想分手，其實先有徵兆，只係差在你feel唔feel到、識唔識觀察。一齊睇吓暴風雨前夕會發生咩事啦！",
-    "content": "<h2>先別急著追問答案：真正要看的，是對方為何退後</h2>\n<p>明明覺得自己同另一半嘅感情冇乜問題，但佢突然間話想分手，令你好震驚。</p>\n<p>其實當一段感情去到盡頭之前，往往都會出現一啲「<strong>徵兆</strong>」！</p>\n<p>種種嘅徵兆都代表住，你漸漸地從佢嘅生活圈入面被推得越嚟越遠，呢啲種種都是「<strong>唔再愛</strong>」嘅徵兆，只係你冇認真留意到！</p>\n<ul><li>徵兆1 分享欲減少</li></ul>\n<p>分享欲可以反映到一個人對你在唔在乎，以前你哋會成日互相分享大家嘅生活瑣事，佢既願意聽你講、亦願意主動同你講，而家佢都冇乜意欲同你分享佢嘅生活，當你主動問起，佢只會淡淡然咁講，「<strong>冇乜特別</strong>」、「<strong>冇乜好講</strong>」、「<strong>唔記得咗講</strong>」，當佢分享欲逐漸減少，你會感覺自己慢慢被排除喺佢嘅生活圈外。</p>\n<h2>徵兆2 排斥溝通、拒絕解決問題</h2>\n<ul><li>徵兆2 排斥溝通、拒絕解決問題。</li></ul>\n<p>肯磨合、嘗試一齊解決問題可以令感情升溫，以前出現意見分歧會無限包容、退讓，就算有摩擦都會想諗辦法慢慢傾，而家開始變得唔想同你溝通，有問題連發脾氣都懶，淨係喺度逃避、由得你自己唔開心，只係會講，「<strong>算啦算啦</strong>」、「<strong>同你講都冇用</strong>」，咁意味住佢已經放棄修補關係。</p>\n<p>已經唔想再努力，佢對呢段感情都已經失去任何期待。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<ul><li>徵兆4 迴避肢體接觸</li></ul>\n<p>肢體接觸係判斷對唔對你嘅最直觀方法，以前佢會鍾意痴住你，經常拖手、抱、Kiss、想有親密行為，而家唔單止減少要求想有親密行為，亦減少主動對你有肢體接觸，甚至會避開你嘅肢體接觸，或者敷衍了事，呢種情況可能佢對你嘅愛意已經減少咗好多，甚至可能佢嘅心入面已經有其他人存在。</p>\n<p>大家出現嘅溝通變少、相處時冇乜嘢好講，「聞」到情感疏遠嘅味道，又唔係一時三刻/突然間出現，而可能係一個月嚟都係呢個狀態，以上種種「<strong>唔對路</strong>」嘅情況，就要盡快挽救，試吓主動同對方傾吓你嘅諗法，或者同我哋幫手做吓儀式。</p>\n<p>消除你哋重新連接嘅障礙，重燃對方嘅愛意、你嘅吸引力，令你哋重新修補關係。</p>\n<h2>常見問題</h2>\n<h3>「<strong>分手前有咩徵兆？4 個感情亮紅燈的信號</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>分手前有咩徵兆？4 個感情亮紅燈的信號</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>分手前有咩徵兆？4 個感情亮紅燈的信號</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "content": "<h2>先別急著追問答案：真正要看的，是對方為何退後</h2>\n<p>明明覺得自己同另一半嘅感情冇乜問題，但佢突然間話想分手，令你好震驚。</p>\n<p>其實當一段感情去到盡頭之前，往往都會出現一啲「<strong>徵兆</strong>」！</p>\n<p>種種嘅徵兆都代表住，你漸漸地從佢嘅生活圈入面被推得越嚟越遠，呢啲種種都是「<strong>唔再愛</strong>」嘅徵兆，只係你冇認真留意到！</p>\n<ul><li>徵兆1 分享欲減少</li></ul>\n<p>分享欲可以反映到一個人對你在唔在乎，以前你哋會成日互相分享大家嘅生活瑣事，佢既願意聽你講、亦願意主動同你講，而家佢都冇乜意欲同你分享佢嘅生活，當你主動問起，佢只會淡淡然咁講，「<strong>冇乜特別</strong>」、「<strong>冇乜好講</strong>」、「<strong>唔記得咗講</strong>」，當佢分享欲逐漸減少，你會感覺自己慢慢被排除喺佢嘅生活圈外。</p>\n<h2>徵兆2 排斥溝通、拒絕解決問題</h2>\n<ul><li>徵兆2 排斥溝通、拒絕解決問題。</li></ul>\n<p>肯磨合、嘗試一齊解決問題可以令感情升溫，以前出現意見分歧會無限包容、退讓，就算有摩擦都會想諗辦法慢慢傾，而家開始變得唔想同你溝通，有問題連發脾氣都懶，淨係喺度逃避、由得你自己唔開心，只係會講，「<strong>算啦算啦</strong>」、「<strong>同你講都冇用</strong>」，咁意味住佢已經放棄修補關係。</p>\n<p>已經唔想再努力，佢對呢段感情都已經失去任何期待。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<ul><li>徵兆4 迴避肢體接觸</li></ul>\n<p>肢體接觸係判斷對唔對你嘅最直觀方法，以前佢會鍾意痴住你，經常拖手、抱、Kiss、想有親密行為，而家唔單止減少要求想有親密行為，亦減少主動對你有肢體接觸，甚至會避開你嘅肢體接觸，或者敷衍了事，呢種情況可能佢對你嘅愛意已經減少咗好多，甚至可能佢嘅心入面已經有其他人存在。</p>\n<p>大家出現嘅溝通變少、相處時冇乜嘢好講，「聞」到情感疏遠嘅味道，又唔係一時三刻/突然間出現，而可能係一個月嚟都係呢個狀態，以上種種「<strong>唔對路</strong>」嘅情況，就要盡快挽救，試吓主動同對方傾吓你嘅諗法，或者同我哋幫手做吓儀式。</p>\n<p>消除你哋重新連接嘅障礙，重燃對方嘅愛意、你嘅吸引力，令你哋重新修補關係。</p>\n<h2>常見問題</h2>\n<h3>「<strong>分手前有咩徵兆？感情亮紅燈的信號</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>分手前有咩徵兆？感情亮紅燈的信號</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>分手前有咩徵兆？感情亮紅燈的信號</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "https://www.instagram.com/p/DD3XB06yN11/",
     "date": "2024-12-22",
     "tags": [
@@ -2013,32 +2013,32 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-6643018.jpg",
-        "caption": "內文配圖：分手前有咩徵兆？4 個感情亮紅燈的信號",
+        "caption": "內文配圖：分手前有咩徵兆？感情亮紅燈的信號",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-wearing-turtleneck-sweater-6643018/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4024022.jpg",
-        "caption": "內文配圖：分手前有咩徵兆？4 個感情亮紅燈的信號",
+        "caption": "內文配圖：分手前有咩徵兆？感情亮紅燈的信號",
         "credit": "Photo by Adril Kudri on Pexels",
         "creditUrl": "https://www.pexels.com/photo/pensive-teen-aged-girl-sitting-near-stone-fence-4024022/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6943492.jpg",
-        "caption": "內文配圖：分手前有咩徵兆？4 個感情亮紅燈的信號",
+        "caption": "內文配圖：分手前有咩徵兆？感情亮紅燈的信號",
         "credit": "Photo by cottonbro studio on Pexels",
         "creditUrl": "https://www.pexels.com/photo/young-brunette-woman-standing-with-back-to-sad-elderly-woman-6943492/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手前有咩徵兆？4 個感情亮紅燈的信號",
+    "coverCaption": "Asteria 相處教學：分手前有咩徵兆？感情亮紅燈的信號",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 43,
-    "title": "分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
+    "title": "分手後怎樣重新站起來？把情傷變成成長的方法",
     "category": "復合挽回",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
@@ -2061,27 +2061,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8727461.jpg",
-        "caption": "內文配圖：分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
+        "caption": "內文配圖：分手後怎樣重新站起來？把情傷變成成長的方法",
         "credit": "Photo by Tima Miroshnichenko on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-sad-woman-wearing-red-long-sleeves-8727461/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-36766098.jpg",
-        "caption": "內文配圖：分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
+        "caption": "內文配圖：分手後怎樣重新站起來？把情傷變成成長的方法",
         "credit": "Photo by Vitaly Gariev on Pexels",
         "creditUrl": "https://www.pexels.com/photo/young-woman-feeling-left-out-at-a-social-gathering-36766098/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-11963474.jpg",
-        "caption": "內文配圖：分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
+        "caption": "內文配圖：分手後怎樣重新站起來？把情傷變成成長的方法",
         "credit": "Photo by Doci on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-woman-looking-outside-the-window-11963474/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
+    "coverCaption": "Asteria 相處教學：分手後怎樣重新站起來？把情傷變成成長的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -2182,7 +2182,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 46,
-    "title": "分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
+    "title": "分手後仲有聯絡代表有機會復合嗎？判斷重點",
     "category": "復合挽回",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
@@ -2205,27 +2205,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-4918390.jpg",
-        "caption": "內文配圖：分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
+        "caption": "內文配圖：分手後仲有聯絡代表有機會復合嗎？判斷重點",
         "credit": "Photo by Khoa Võ on Pexels",
         "creditUrl": "https://www.pexels.com/photo/sad-asian-woman-looking-out-window-4918390/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-9317605.jpg",
-        "caption": "內文配圖：分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
+        "caption": "內文配圖：分手後仲有聯絡代表有機會復合嗎？判斷重點",
         "credit": "Photo by Anh Tuan on Pexels",
         "creditUrl": "https://www.pexels.com/photo/photo-of-a-drunk-person-holding-a-can-9317605/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6643007.jpg",
-        "caption": "內文配圖：分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
+        "caption": "內文配圖：分手後仲有聯絡代表有機會復合嗎？判斷重點",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/close-up-photo-of-a-woman-crying-6643007/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
+    "coverCaption": "Asteria 相處教學：分手後仲有聯絡代表有機會復合嗎？判斷重點",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -2374,7 +2374,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 50,
-    "title": "對方出軌前有跡象嗎？6 個容易忽略的變心信號",
+    "title": "對方出軌前有跡象嗎？容易忽略的變心信號",
     "category": "關係危機",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
@@ -2397,27 +2397,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8560422.jpg",
-        "caption": "內文配圖：對方出軌前有跡象嗎？6 個容易忽略的變心信號",
+        "caption": "內文配圖：對方出軌前有跡象嗎？容易忽略的變心信號",
         "credit": "Photo by Timur Weber on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-holding-hands-while-sitting-back-to-back-8560422/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5617744.jpg",
-        "caption": "內文配圖：對方出軌前有跡象嗎？6 個容易忽略的變心信號",
+        "caption": "內文配圖：對方出軌前有跡象嗎？容易忽略的變心信號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/upset-couple-not-talking-to-each-other-5617744/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8560441.jpg",
-        "caption": "內文配圖：對方出軌前有跡象嗎？6 個容易忽略的變心信號",
+        "caption": "內文配圖：對方出軌前有跡象嗎？容易忽略的變心信號",
         "credit": "Photo by Timur Weber on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-looking-at-each-other-8560441/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方出軌前有跡象嗎？6 個容易忽略的變心信號",
+    "coverCaption": "Asteria 相處教學：對方出軌前有跡象嗎？容易忽略的變心信號",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -2614,7 +2614,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 55,
-    "title": "大男人定恐怖情人？5 個控制慾警號",
+    "title": "大男人定恐怖情人？控制慾警號",
     "category": "關係危機",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
@@ -2637,27 +2637,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-5617752.jpg",
-        "caption": "內文配圖：大男人定恐怖情人？5 個控制慾警號",
+        "caption": "內文配圖：大男人定恐怖情人？控制慾警號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-standing-next-to-the-man-with-her-arms-crossed-5617752/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7176127.jpg",
-        "caption": "內文配圖：大男人定恐怖情人？5 個控制慾警號",
+        "caption": "內文配圖：大男人定恐怖情人？控制慾警號",
         "credit": "Photo by SHVETS production on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-a-woman-sitting-on-gray-sofa-7176127/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6669884.jpg",
-        "caption": "內文配圖：大男人定恐怖情人？5 個控制慾警號",
+        "caption": "內文配圖：大男人定恐怖情人？控制慾警號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-crying-6669884/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：大男人定恐怖情人？5 個控制慾警號",
+    "coverCaption": "Asteria 相處教學：大男人定恐怖情人？控制慾警號",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -2710,7 +2710,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 57,
-    "title": "你可能正在無意識破壞感情：5 個常見自毀行為",
+    "title": "你可能正在無意識破壞感情：常見自毀行為",
     "category": "戀愛心理",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
@@ -2733,27 +2733,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-18888662.jpg",
-        "caption": "內文配圖：你可能正在無意識破壞感情：5 個常見自毀行為",
+        "caption": "內文配圖：你可能正在無意識破壞感情：常見自毀行為",
         "credit": "Photo by Chuot  Anhls on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-young-couple-standing-on-the-street-18888662/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4649796.jpg",
-        "caption": "內文配圖：你可能正在無意識破壞感情：5 個常見自毀行為",
+        "caption": "內文配圖：你可能正在無意識破壞感情：常見自毀行為",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/two-women-playing-guitar-4649796/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-21837433.jpg",
-        "caption": "內文配圖：你可能正在無意識破壞感情：5 個常見自毀行為",
+        "caption": "內文配圖：你可能正在無意識破壞感情：常見自毀行為",
         "credit": "Photo by Toàn Văn on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-sitting-together-by-building-wall-21837433/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你可能正在無意識破壞感情：5 個常見自毀行為",
+    "coverCaption": "Asteria 相處教學：你可能正在無意識破壞感情：常見自毀行為",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -2860,7 +2860,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "警號",
     "summary": "對於你好愛嗰個人，你哋嘅關係可能曾經好平等，但係唔知從幾時開始，佢嘅位置開始比你高階，你哋之間嘅愛情，變得越嚟越不對等。當我哋越愛一個人，就越容易放下過往嘅堅持，處處為佢著想、為佢付出。但其實越係咁樣，你哋嘅關係就越係唔對等！想知點解會咁？",
-    "content": "<p>1、你總在發起交流，而對方迴避交流 2、你的付出被當成理所當然 3、有一方沒有在公開場合承認過你們的關係 4、你在對方心中並沒有很高的優先權，那你有可能身處於「<strong>承諾不對等</strong>」的親密關係。</p>\n<p>雙方想要繼續在一起並維持情感連結的意願，選擇放棄其他人，單獨與某個人發展親密關係，不對等的親密關係中，「<strong>強連結</strong>」（strong link）：承諾較多的一方，「<strong>弱連結</strong>」（weak link）：承諾較少的一方。</p>\n<p>研究證明，在親密關係中男性多數是弱連結那方，害怕做出承諾，為何感情關係會出現不平等？</p>\n<p>敏感程度較高的人，情緒起伏大、難維持穩定的心情，會因在意非必要的事而感到心煩，當對方隨便講一句就自行腦補數十種可能性，受情緒影響而過度猜測男方行為背後的意義，對愛情患得患失以致過度上心，內心承受過多壓力而淹沒在自身情緒中。</p>\n<h2>原因 2 保留選擇權</h2>\n<p>速食文化下，越來越多人對長遠穩定的愛情持懷疑態度，視拍拖為非長遠發展，覺得得過且過，對將來沒有期待，但又不想分手或被分手，騎牛搵馬，留住與他人發展的可能性，認為一旦做出明確承諾，就等同失去其他選擇的機會。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>切勿將對方視為自己世界的中心，嘗試把自己當成世界中心，凡事以自己感受想法為先，自然就不會再感到卑微，選擇二，心甘情願地付出，食得咸魚抵得渴，你就要接受對方可能無動於衷，你可以單純為對方好而做，雖然是自討苦吃，但這也是你心甘情願的付出。</p>\n<p>戀愛的雙方，總有一方更被愛，一方釋放更多愛，但也要知分寸、自己衡量，想想你的付出會否已達至不對等的臨界點。</p>\n<h2>常見問題</h2>\n<h3>「<strong>愛到委屈自己值得嗎</strong>」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>愛到委屈自己值得嗎</strong>」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>愛到委屈自己值得嗎</strong>」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "content": "<p>如果你發現自己總是主動開話題、主動修補、主動遷就，而對方只是被動接受，這段關係可能已經慢慢變得不對等。</p>\n<p>不對等不一定代表對方不愛你，但代表你們對關係的投入、承諾和優先次序不在同一水平。以下幾個警號，可以先幫你分清自己是在付出，還是在委屈自己。</p>\n<h2>警號一：你總是在發起交流，對方卻迴避交流</h2>\n<p>每次有問題，都是你先開口、你先解釋、你先想修補；對方卻總是沉默、逃避，或者用「遲啲先講」拖過去。久而久之，你會變成一個人維繫兩個人的關係。</p>\n<h2>警號二：你的付出被當成理所當然</h2>\n<p>你為對方安排、照顧、忍讓，對方卻很少回應、感謝或主動付出。當你的好被視為「應份」，你會越做越攰，也會越來越懷疑自己是否值得被珍惜。</p>\n<h2>警號三：對方不願公開承認你們的關係</h2>\n<p>如果對方長期不願意讓身邊人知道你們的關係，或者在重要場合總是避開你的存在，這可能代表他仍然想保留選擇權，不願把承諾放在你身上。</p>\n<h2>警號四：你在對方心中不是優先</h2>\n<p>你總是等對方有空、等對方心情好、等對方想起你，才輪到你被照顧。當你長期排在最後，關係就會變成你不斷降低要求，對方卻不需要提高投入。</p>\n<h2>為什麼關係會變得不對等？</h2>\n<p>有些人因為怕失去，所以會不斷付出，甚至把對方放在自己世界中心；有些人則因為不想承諾、想保留選擇權，所以一直不肯真正投入。兩邊一拉開，關係就會變成一方追、一方退。</p>\n<p>你可以心甘情願付出，但也要知道界線在哪裡。愛一個人，不等於要把自己放到最卑微的位置。</p>\n<h2>如果你正在委屈自己</h2>\n<p>先把注意力放回自己身上，問清楚：我想要的是什麼？我正在接受的，又是不是我真正想要的關係？當你不再只圍著對方轉，才有空間重新看清這段關係值不值得繼續。</p>",
     "sourceIg": "https://www.instagram.com/p/CwU1WJryJaO/",
     "date": "2023-08-24",
     "tags": [
@@ -3100,7 +3100,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-heart",
     "imageLabel": "復合",
     "summary": "所有男人都曾經遇到嘅難題：「女朋友明明發緊嬲，但又唔出聲，乜都唔講，淨係黑曬面，到底想點？」今次嘅女朋友說明書就話曬俾你知，到底女人為乜要咁做！一齊。",
-    "content": "<h2>先別急著追問答案：真正要看的，是對方為何退後</h2>\n<p>有10個都會話最怕女朋友嬲嗰陣唔出聲，因為唔出聲、冇反應，所以好難知佢嬲緊乜，亦唔知應該點樣氹返佢，但到底女人嬲嗰陣，點解會唔出聲。</p>\n<p>就等我哋話你知啦！</p>\n<p>你哋爭執嘅內容，或者你做過嘅事，佢可能已經對你唔止講過一次，但你依然冇改進，令佢覺得失望，產生一種「<strong>無話可說</strong>」嘅情緒，覺得講咗你又唔聽，聽咗你又唔識，就算你識，你都唔一定會做，就算你會做，都唔一定做得好，尤其浪費自己嘅唇舌、浪費自己嘅期待。</p>\n<p>咁不如收返把口、乜都唔講仲好</p>\n<h2>原因 2 怕你覺得佢煩</h2>\n<p>如果呢個女朋友好珍惜你、好愛你，佢都會希望俾返個好嘅印象你，所以會好擔心如果佢對你諸多投訴，講得太多，你就會覺得佢好煩，覺得佢無理取鬧，由於為自己製造唔好嘅形象，咁倒不如乜都唔講，自己默默地嬲就算。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>有時女仔唔出聲，其實可能係希望另一半可以察覺到佢嘅情緒，希望另一半可以理解到佢嘅諗法，而唔需要下下都要用言語表達，因為女仔會覺得，咁樣可以令對方更加關心佢真實嘅感受，所以寧願用唔出聲呢個方法，嚟測試下男朋友，睇下對方明唔明、理唔理解到自己點解會嬲。</p>\n<p>回想下自己有冇做錯啲乜、因應自己做得唔好嘅嘢先道歉、用溫柔嘅語氣同佢溝通、諗吓點避免自己再做錯、話佢知你會點避免自己再做錯、提出令佢消氣嘅方法、喺佢嬲完後一齊外出、放鬆穩定情緒 (例如：去食佢想食嘅嘢、睇場戲）</p>\n<p>持續自我反省</p>\n<h2>常見問題</h2>\n<h3>「<strong>情侶冷戰點算？分清冷靜、逃避與拒絕溝通</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>情侶冷戰點算？分清冷靜、逃避與拒絕溝通</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>情侶冷戰點算？分清冷靜、逃避與拒絕溝通</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "content": "<p>情侶冷戰最令人辛苦的地方，是你明知對方有情緒，卻不知道他是需要冷靜、正在逃避，還是已經拒絕溝通。</p>\n<p>所以不要一開始就逼對方即刻講清楚。你要先分辨對方沉默背後的原因，才知道下一步應該安撫、等待，還是直接處理問題。</p>\n<h2>原因一：講過太多次，覺得再講都無用</h2>\n<p>有時對方不出聲，不是因為沒有感受，而是同一件事已經講過太多次。對方可能覺得「講咗你又唔聽，聽咗你又唔改」，最後乾脆收口。</p>\n<p>這種冷戰的重點不是叫對方快點講，而是先承認自己有沒有忽略過對方的需要。否則你追問越多，對方只會越覺得疲累。</p>\n<h2>原因二：怕講太多會被嫌煩</h2>\n<p>如果對方很珍惜這段關係，反而可能會害怕自己投訴太多，令你覺得他麻煩、無理取鬧。所以他選擇自己消化情緒，不想破壞自己在你心中的形象。</p>\n<h2>原因三：希望你主動察覺他的感受</h2>\n<p>有些人冷戰，其實是希望另一半能夠留意到自己的情緒，而不是每次都要自己逐字講出口。這不一定是成熟做法，但背後通常有一種需要：希望被理解、被在乎。</p>\n<h2>冷靜、逃避、拒絕溝通點樣分？</h2>\n<p>如果對方只是需要冷靜，通常冷靜後仍願意回來溝通；如果是逃避，對方會一直拖延、轉移話題；如果是拒絕溝通，則可能完全不願承認問題存在。</p>\n<p>你可以先用低壓方式開口，例如：「我知你而家未必想講，但我想理解你。你準備好時，我會聽。」這比逼問「你到底嬲咩」更容易令對方放下防衛。</p>\n<h2>修補冷戰的做法</h2>\n<p>先回想自己有沒有做錯的地方，再針對具體事件道歉。不要只說「對不起」，而是讓對方知道你明白問題在哪裡，之後會怎樣避免重複。</p>\n<p>冷戰最怕的是大家只想贏，不想修補。真正有用的溝通，是令對方感到你願意理解，而不是只想快點結束他的情緒。</p>",
     "sourceIg": "https://www.instagram.com/p/DCHIBoLyfxp/",
     "date": "2024-11-08",
     "tags": [
@@ -3622,7 +3622,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 76,
-    "title": "情侶吵架 5 大禁區：踩中一個都可能傷透關係",
+    "title": "情侶吵架禁區：踩中就可能傷透關係",
     "category": "復合挽回",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
@@ -3645,27 +3645,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8560045.jpg",
-        "caption": "內文配圖：情侶吵架 5 大禁區：踩中一個都可能傷透關係",
+        "caption": "內文配圖：情侶吵架禁區：踩中就可能傷透關係",
         "credit": "Photo by Timur Weber on Pexels",
         "creditUrl": "https://www.pexels.com/photo/young-woman-talking-to-a-therapist-8560045/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6754012.jpg",
-        "caption": "內文配圖：情侶吵架 5 大禁區：踩中一個都可能傷透關係",
+        "caption": "內文配圖：情侶吵架禁區：踩中就可能傷透關係",
         "credit": "Photo by cottonbro studio on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-lonely-woman-sitting-on-a-bed-6754012/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6669777.jpg",
-        "caption": "內文配圖：情侶吵架 5 大禁區：踩中一個都可能傷透關係",
+        "caption": "內文配圖：情侶吵架禁區：踩中就可能傷透關係",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/upset-woman-sitting-while-holding-a-cellphone-6669777/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶吵架 5 大禁區：踩中一個都可能傷透關係",
+    "coverCaption": "Asteria 相處教學：情侶吵架禁區：踩中就可能傷透關係",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -3718,7 +3718,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 78,
-    "title": "想同前任重新開始？復合前必經的 5 個階段",
+    "title": "想同前任重新開始？復合前必經的心理階段",
     "category": "復合挽回",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
@@ -3741,27 +3741,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-6670164.jpg",
-        "caption": "內文配圖：想同前任重新開始？復合前必經的 5 個階段",
+        "caption": "內文配圖：想同前任重新開始？復合前必經的心理階段",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/light-nature-fashion-love-6670164/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-3732384.jpg",
-        "caption": "內文配圖：想同前任重新開始？復合前必經的 5 個階段",
+        "caption": "內文配圖：想同前任重新開始？復合前必經的心理階段",
         "credit": "Photo by ATC Comm Photo on Pexels",
         "creditUrl": "https://www.pexels.com/photo/person-holding-two-parts-of-paper-heart-3732384/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8560714.jpg",
-        "caption": "內文配圖：想同前任重新開始？復合前必經的 5 個階段",
+        "caption": "內文配圖：想同前任重新開始？復合前必經的心理階段",
         "credit": "Photo by Timur Weber on Pexels",
         "creditUrl": "https://www.pexels.com/photo/sad-woman-and-man-8560714/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想同前任重新開始？復合前必經的 5 個階段",
+    "coverCaption": "Asteria 相處教學：想同前任重新開始？復合前必經的心理階段",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -3910,7 +3910,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 82,
-    "title": "愛得太用力會推走對方？重回關係平衡的 4 個方法",
+    "title": "愛得太用力會推走對方？重回關係平衡的方法",
     "category": "戀愛心理",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
@@ -3933,27 +3933,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8943645.jpg",
-        "caption": "內文配圖：愛得太用力會推走對方？重回關係平衡的 4 個方法",
+        "caption": "內文配圖：愛得太用力會推走對方？重回關係平衡的方法",
         "credit": "Photo by Anastasia  Shuraeva on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-walking-in-the-park-hand-in-hand-8943645/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-28459341.jpg",
-        "caption": "內文配圖：愛得太用力會推走對方？重回關係平衡的 4 個方法",
+        "caption": "內文配圖：愛得太用力會推走對方？重回關係平衡的方法",
         "credit": "Photo by Huy Nguyễn on Pexels",
         "creditUrl": "https://www.pexels.com/photo/happy-couple-embracing-in-nature-28459341/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5225466.jpg",
-        "caption": "內文配圖：愛得太用力會推走對方？重回關係平衡的 4 個方法",
+        "caption": "內文配圖：愛得太用力會推走對方？重回關係平衡的方法",
         "credit": "Photo by Samson Katt on Pexels",
         "creditUrl": "https://www.pexels.com/photo/positive-young-asian-couple-cuddling-while-standing-near-brick-wall-5225466/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：愛得太用力會推走對方？重回關係平衡的 4 個方法",
+    "coverCaption": "Asteria 相處教學：愛得太用力會推走對方？重回關係平衡的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -4006,13 +4006,13 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 84,
-    "title": "感情變淡點算？4 個令對方慢慢抽離的行為",
+    "title": "感情變淡點算？令對方慢慢抽離的行為",
     "category": "戀愛心理",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "心理",
     "summary": "你有冇試過，感覺自己同另一半越嚟越疏遠，吸引力好似冇咗？或者追求異性嘅時候，對方由頭熱情，後尾變得冷淡？有時問題未必淨係外表，而係生活中嘅細節逐漸令你失咗魅力！一齊睇圖了解吓你有冇呢啲問題啦。",
-    "content": "<p>有時拍拖耐咗/曖昧太耐，會feel到對方好似對你越嚟越冇興趣、感情變淡，呢啲情況，你第一直覺係咪認為對方另有新歡。</p>\n<p>但其實好多時係細節出咗問題，因為你有啲習慣或者行為可能慢慢消磨自己嘅吸引力，一齊嚟睇吓有冇啲係你中咗招！</p>\n<ul><li>頹Look</li></ul>\n<p>無論你覺得自己係靚仔/靚女，抑或係普通樣，外表其實都好重要！</p>\n<p>好多時開頭會好care自己個樣、衣著，但而家？</p>\n<p>你回想下有冇唔太注重自己嘅外表，可能著衫好hea，連頭都懶得梳，對方梗係覺得冇新鮮感啦！</p>\n<h2>過度依賴對方</h2>\n<ul><li>過度依賴對方</li></ul>\n<p>對於拍緊拖嘅人嚟講，可能會想同另一半有多啲時間時間，但如果成日要對方陪，經常唔俾私人空間對方，無論咩嘢事要問對方意見，連剪頭髮、見朋友都要對方同你一齊，咁樣會令對方覺得好煩。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<ul><li>忽略對方感受</li></ul>\n<p>成日諗住自己開心、唔認真聽對方講嘢，都冇顧慮對方感受，忽略對方嘅需要，或者對方為咗你默默做咗好多，但你完全冇留意，甚至視為理所當然，會令對方覺得被冷落、唔被重視，令對方覺得自己嘅努力冇價值，慢慢就會對你失去熱情，亦會覺得你失去吸引力，係個唔稱職嘅另一半。</p>\n<p>注重外表、儀容、進行戀愛熱度提升儀式、偶然安排小驚喜或者禮物、適當地保持自己嘅神秘感、多啲溝通、多啲善意地表達關心、學啲簡單嘅新嘢，保持成長嘅狀態、提升情緒管理能力，主動解決矛盾、學啲簡單嘅新嘢，保持成長嘅狀態。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」入面，對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>遇到「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」時，我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我睇「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」呢類情況？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
+    "content": "<p>有時拍拖耐咗/曖昧太耐，會feel到對方好似對你越嚟越冇興趣、感情變淡，呢啲情況，你第一直覺係咪認為對方另有新歡。</p>\n<p>但其實好多時係細節出咗問題，因為你有啲習慣或者行為可能慢慢消磨自己嘅吸引力，一齊嚟睇吓有冇啲係你中咗招！</p>\n<ul><li>頹Look</li></ul>\n<p>無論你覺得自己係靚仔/靚女，抑或係普通樣，外表其實都好重要！</p>\n<p>好多時開頭會好care自己個樣、衣著，但而家？</p>\n<p>你回想下有冇唔太注重自己嘅外表，可能著衫好hea，連頭都懶得梳，對方梗係覺得冇新鮮感啦！</p>\n<h2>過度依賴對方</h2>\n<ul><li>過度依賴對方</li></ul>\n<p>對於拍緊拖嘅人嚟講，可能會想同另一半有多啲時間時間，但如果成日要對方陪，經常唔俾私人空間對方，無論咩嘢事要問對方意見，連剪頭髮、見朋友都要對方同你一齊，咁樣會令對方覺得好煩。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<ul><li>忽略對方感受</li></ul>\n<p>成日諗住自己開心、唔認真聽對方講嘢，都冇顧慮對方感受，忽略對方嘅需要，或者對方為咗你默默做咗好多，但你完全冇留意，甚至視為理所當然，會令對方覺得被冷落、唔被重視，令對方覺得自己嘅努力冇價值，慢慢就會對你失去熱情，亦會覺得你失去吸引力，係個唔稱職嘅另一半。</p>\n<p>注重外表、儀容、進行戀愛熱度提升儀式、偶然安排小驚喜或者禮物、適當地保持自己嘅神秘感、多啲溝通、多啲善意地表達關心、學啲簡單嘅新嘢，保持成長嘅狀態、提升情緒管理能力，主動解決矛盾、學啲簡單嘅新嘢，保持成長嘅狀態。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情變淡點算？令對方慢慢抽離的行為</strong>」入面，對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>遇到「<strong>感情變淡點算？令對方慢慢抽離的行為</strong>」時，我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我睇「<strong>感情變淡點算？令對方慢慢抽離的行為</strong>」呢類情況？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "https://www.instagram.com/p/DF75z8GyKYR/",
     "date": "2025-02-11",
     "tags": [
@@ -4029,27 +4029,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11947721.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的行為",
         "credit": "Photo by Tài Đặng on Pexels",
         "creditUrl": "https://www.pexels.com/photo/photo-of-a-couple-nose-to-nose-11947721/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7488997.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的行為",
         "credit": "Photo by Gustavo Fring on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-having-fun-while-preparing-food-together-7488997/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4030761.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的行為",
         "credit": "Photo by Dewey gallery on Pexels",
         "creditUrl": "https://www.pexels.com/photo/happy-asian-couple-having-fun-in-field-4030761/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡點算？4 個令對方慢慢抽離的行為",
+    "coverCaption": "Asteria 相處教學：感情變淡點算？令對方慢慢抽離的行為",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -4246,7 +4246,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 89,
-    "title": "一面對伴侶就燥底？5 個正在破壞關係的原因",
+    "title": "一面對伴侶就燥底？正在破壞關係的原因",
     "category": "溝通相處",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
@@ -4269,27 +4269,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-4307727.jpg",
-        "caption": "內文配圖：一面對伴侶就燥底？5 個正在破壞關係的原因",
+        "caption": "內文配圖：一面對伴侶就燥底？正在破壞關係的原因",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/happy-couple-talking-on-veranda-in-morning-4307727/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4307715.jpg",
-        "caption": "內文配圖：一面對伴侶就燥底？5 個正在破壞關係的原因",
+        "caption": "內文配圖：一面對伴侶就燥底？正在破壞關係的原因",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/happy-married-couple-using-smartphone-and-discussing-funny-internet-post-4307715/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7972543.jpg",
-        "caption": "內文配圖：一面對伴侶就燥底？5 個正在破壞關係的原因",
+        "caption": "內文配圖：一面對伴侶就燥底？正在破壞關係的原因",
         "credit": "Photo by George Pak on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-holding-papers-while-talking-to-a-woman-7972543/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一面對伴侶就燥底？5 個正在破壞關係的原因",
+    "coverCaption": "Asteria 相處教學：一面對伴侶就燥底？正在破壞關係的原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -4342,13 +4342,13 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 91,
-    "title": "感情變淡點算？4 個令對方慢慢抽離的行為",
+    "title": "感情變淡點算？令對方慢慢抽離的相處習慣",
     "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
     "summary": "拍拖初期，大家成日好有好多嘢講，但一齊耐咗，好多情侶都會越嚟越冇計傾。你以為咁樣只係好小事？但其實可能係造成分手嘅大地雷！到底要點樣面對「越拍越冇嘢講」呢個問題？一齊嚟睇吓啦！",
-    "content": "<p>同另一半一齊坐喺度、各自玩電話，完全冇傾計，傾計永遠圍繞住食咗乜嘢、做咗乜嘢，覺得一齊咁耐，已經冇嘢要傾，其實對於愛情長跑嘅情侶嚟講，已經好了解對方 =/= 唔需要傾計，因為長期冇連結就，大家嘅感情會慢慢變得無感、越嚟越淡。</p>\n<p>拍拖耐咗習慣沉默相處，變得唔再主動分享，太了解對方生活，話題已經冇乜火花，興趣唔同，怕講嘅嘢對方無興趣就乾脆唔講，單方面溝通，對方成日只係「哦」「嗯」回應，傾計模式出現問題，大家講嘢習慣唔同，其中一方冇心經營感情，用冷處理方式對待。</p>\n<p>想令大家唔會好似住喺同一間屋嘅陌生人，可以試吓用以下呢啲方法！</p>\n<h2>開放式提問，令對方更願意講</h2>\n<p>唔好淨係問「<strong>係定唔係</strong>」、「<strong>忙唔忙</strong>」，試吓傾計時問：「<strong>最近返工有冇邊啲嘢令你覺得好癡線/好有挑戰？</strong>」，開放式問題等於幫對方開口講嘢，唔係為咗搵答案，而係為咗搵連結，當你唔再用「<strong>係定唔係</strong>」去傾計，你哋之間嘅溝通自然會更加close</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>如果一方鍾意分享生活入面啲雞毛蒜皮小事，但另一方就比較直接，覺得應該講重點，會變成一個想傾偈，另一個想快快講完，令溝通模式對唔上，所以最緊要係改變大家嘅溝通模式，要搵個時間，坦誠咁講出嚟，了解大家鍾意點傾計，然後慢慢磨合。</p>\n<p>感情會變得平淡，有時唔係因為唔愛，而係因為冇咗愛嘅儀式感，試吓同對方整個「<strong>每月小任務</strong>」，例如一齊試吓煮嘢、做未挑戰嘅運動、互相寫信，咁已經可以令大家有共鳴、有互動、有話題，生活嘅儀式感，其實唔止係浪漫嘅表現，仲係一種「<strong>創造對話</strong>」嘅機會。</p>\n<p>透過呢啲有心思嘅舉動，自然會帶出有溫度嘅交流。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "content": "<p>同另一半一齊坐喺度、各自玩電話，完全冇傾計，傾計永遠圍繞住食咗乜嘢、做咗乜嘢，覺得一齊咁耐，已經冇嘢要傾，其實對於愛情長跑嘅情侶嚟講，已經好了解對方 =/= 唔需要傾計，因為長期冇連結就，大家嘅感情會慢慢變得無感、越嚟越淡。</p>\n<p>拍拖耐咗習慣沉默相處，變得唔再主動分享，太了解對方生活，話題已經冇乜火花，興趣唔同，怕講嘅嘢對方無興趣就乾脆唔講，單方面溝通，對方成日只係「哦」「嗯」回應，傾計模式出現問題，大家講嘢習慣唔同，其中一方冇心經營感情，用冷處理方式對待。</p>\n<p>想令大家唔會好似住喺同一間屋嘅陌生人，可以試吓用以下呢啲方法！</p>\n<h2>開放式提問，令對方更願意講</h2>\n<p>唔好淨係問「<strong>係定唔係</strong>」、「<strong>忙唔忙</strong>」，試吓傾計時問：「<strong>最近返工有冇邊啲嘢令你覺得好癡線/好有挑戰？</strong>」，開放式問題等於幫對方開口講嘢，唔係為咗搵答案，而係為咗搵連結，當你唔再用「<strong>係定唔係</strong>」去傾計，你哋之間嘅溝通自然會更加close</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>如果一方鍾意分享生活入面啲雞毛蒜皮小事，但另一方就比較直接，覺得應該講重點，會變成一個想傾偈，另一個想快快講完，令溝通模式對唔上，所以最緊要係改變大家嘅溝通模式，要搵個時間，坦誠咁講出嚟，了解大家鍾意點傾計，然後慢慢磨合。</p>\n<p>感情會變得平淡，有時唔係因為唔愛，而係因為冇咗愛嘅儀式感，試吓同對方整個「<strong>每月小任務</strong>」，例如一齊試吓煮嘢、做未挑戰嘅運動、互相寫信，咁已經可以令大家有共鳴、有互動、有話題，生活嘅儀式感，其實唔止係浪漫嘅表現，仲係一種「<strong>創造對話</strong>」嘅機會。</p>\n<p>透過呢啲有心思嘅舉動，自然會帶出有溫度嘅交流。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情變淡點算？令對方慢慢抽離的相處習慣</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>感情變淡點算？令對方慢慢抽離的相處習慣</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>感情變淡點算？令對方慢慢抽離的相處習慣</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "https://www.instagram.com/p/C-fXvtDyEPS/",
     "date": "2025-06-04",
     "tags": [
@@ -4365,27 +4365,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11014402.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的相處習慣",
         "credit": "Photo by Yudha Aprilian on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-having-conversation-while-sitting-at-the-park-11014402/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8405558.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的相處習慣",
         "credit": "Photo by Los Muertos Crew on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-talking-on-the-phone-together-8405558/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8151713.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的相處習慣",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-standing-near-the-wooden-door-while-drinking-coffee-8151713/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡點算？4 個令對方慢慢抽離的行為",
+    "coverCaption": "Asteria 相處教學：感情變淡點算？令對方慢慢抽離的相處習慣",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5302,13 +5302,13 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 111,
-    "title": "感情變淡點算？4 個令對方慢慢抽離的行為",
+    "title": "感情變淡點算？令對方慢慢抽離的行為",
     "category": "溝通相處",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
     "imageLabel": "溝通",
     "summary": "我哋收到唔少已婚客人嘅諮詢，表示自從結咗婚，或者生咗小朋友之後，同另一半嘅關係越嚟緊淡，唔知係自己變咗，定係另一半變咗。面對呢個困境，又應該點拆局？",
-    "content": "<p>你而家係咪面對緊呢個處境</p>\n<p>留給彼此嘅時間越來越少，冇曬對雙方親暱嘅稱呼，用「<strong>爸爸/媽媽</strong>」代替，容易將挫折發洩喺對方身上，將精力、注意力都只focus喺BB身上。</p>\n<p>自從有小朋友之後，夫妻之間嘅情況唔同咗，而家唔只係兩個人、而係三個人，雙方都要付出大量注意力、精力喺小朋友身上，變相好似多咗個第三者，令你哋嘅感情變得越嚟越淡。</p>\n<h2>我冇咁多時間/精力/錢去理對方</h2>\n<p>對方會明白我嘅，問題係出喺佢度，而唔係我，對方肯改，咁我咪改囉，對方將問題誇大咗啫，面對呢啲情況，至少其中一方嘅內心，一定係好似上述咁諗、一定有好多藉口，但呢啲只係自己缺乏改善關係決心嘅理由。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>可能真係好難抽到時間出去，重拾以前拍拖嘅日子，但有幾樣嘢一定要記住。</p>\n<p>調情，打情罵俏、氹對方開心，為婚姻生活增加興奮感，要有身體接觸，攬、Kiss、拖一手，提醒彼此互相珍惜嘅舉動，傾偈，話題唔好淨係圍繞BB 都應該有兩個人之間嘅話題。</p>\n<p>大家嘅專注力都喺度BB度，令感覺漸漸淡化、令彼此失去連結，就要借助外界力量，打開你哋之間嘅溝通渠道，等對方更容易接受你嘅訊息，重新喚起對方心中對你嘅感覺，令對方再次感受到你嘅存在，重新喚起對呢段感情嘅重視。</p>\n<h2>再看深一層：感情變淡點算？4 個令對方慢慢抽離的行為的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>感情變淡點算？4 個令對方慢慢抽離的行為</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "content": "<p>你而家係咪面對緊呢個處境：留給彼此嘅時間越來越少，冇曬對雙方親暱嘅稱呼，甚至只用「<strong>爸爸/媽媽</strong>」代替。挫折容易發洩喺對方身上，注意力亦慢慢只放喺小朋友、工作或生活壓力度。</p>\n<p>自從生活角色改變之後，關係唔再只是兩個人嘅互動。當雙方大量精力都被其他責任分走，伴侶之間就容易失去原本的親密感，感情亦會不知不覺變淡。</p>\n<h2>令對方抽離的核心：覺得自己不再被重視</h2>\n<p>很多人會覺得：「對方會明白我嘅」、「問題係出喺佢度」、「佢肯改，我咪改囉」。但如果雙方都等對方先改，關係就會一直停喺消耗狀態。</p>\n<p>感情變淡通常不是突然發生，而是一次又一次忽略、一次又一次無時間、一次又一次把親密互動排到最後，慢慢累積出距離。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>可能真係好難抽到時間重拾以前拍拖嘅日子，但有幾樣嘢一定要記住：要有調情、打情罵俏、氹對方開心，為關係增加一點興奮感；也要有身體接觸，例如攬、親吻、拖手，提醒彼此仍然是伴侶。</p>\n<p>傾偈時，話題不要只圍繞小朋友、工作或責任。即使每日只得一小段時間，也要留返少少空間俾兩個人本身，讓對方重新感覺到自己在你心中有位置。</p>\n<p>如果你哋已經好耐無真正溝通，可以先由低壓句子開始，例如「我想同你慢慢近返少少」或者「我唔想我哋只剩低責任」。比起指責，這種說法更容易打開對話。</p>\n<h2>再看深一層：感情變淡的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種忽略重複太多次，令對方開始防衛或者麻木。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情變淡點算？令對方慢慢抽離的行為</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>感情變淡點算？令對方慢慢抽離的行為</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>感情變淡點算？令對方慢慢抽離的行為</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "https://www.instagram.com/p/DEq5m_my9_n/",
     "date": "2025-01-11",
     "tags": [
@@ -5325,27 +5325,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-33893084.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的行為",
         "credit": "Photo by Daniil Kondrashin on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-enjoying-a-fall-evening-outdoors-33893084/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-14036056.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的行為",
         "credit": "Photo by Quang Nguyen Vinh on Pexels",
         "creditUrl": "https://www.pexels.com/photo/boy-and-a-girl-wearing-traditional-clothes-talking-in-front-of-a-building-entrance-14036056/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-36180297.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡點算？令對方慢慢抽離的行為",
         "credit": "Photo by Supriyanto  Katiman on Pexels",
         "creditUrl": "https://www.pexels.com/photo/casual-conversation-in-modern-cafe-setting-36180297/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡點算？4 個令對方慢慢抽離的行為",
+    "coverCaption": "Asteria 相處教學：感情變淡點算？令對方慢慢抽離的行為",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -6214,13 +6214,13 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 130,
-    "title": "想讓關係升溫？建立親密感的 5 個日常方法",
+    "title": "想讓關係升溫？建立親密感的日常方法",
     "category": "溝通相處",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
     "imageLabel": "溝通",
     "summary": "好多啱啱/第一次拍拖嘅人，都係唔好識要應該點樣經營感情，唔知點同另一半喺心靈上、關係上更加親密。係咪覺得好困擾？不如睇吓應該點做啦！",
-    "content": "<p>無論係男定女，可能都會有種諗法，「<strong>想快啲同佢進入下一步</strong>」，「<strong>想同佢再close啲</strong>」，所謂嘅下一步，未必一定係身體上嘅親密接觸，亦代表緊大家嘅感情狀態、信任度。</p>\n<p>親密感、信任度亦唔係一日就有，而係透過一個循環過程慢慢build up 喺呢個語程入面，逐漸咁建立喺「<strong>逐步感受到安全感</strong>」嘅氛圍，所以呢個時候，最重要就係一步一步建立親密關係。</p>\n<h2>階段一：漸進式分享，建立信任感</h2>\n<p>啱啱開始一段關係，最重要係先令大家習慣咗有對方嘅存在，先可以令大家舒服地相處，所以啱啱拍拖時，唔使太急住講深層次話題。</p>\n<ul><li>同屋企人關係點？</li></ul>\n<ul><li>上一段/上幾段感情點結束？</li></ul>\n<p>呢啲話題可以令雙方慢慢了解對方內心世界，可以令關係更進一步。</p>\n<ul><li>但記住</li></ul>\n<p>分享要有節奏，唔好一次過講晒自己所有秘密，或者一次過問曬對方所有秘密，否則可能會嚇親對方！</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>親密關唔係淨係靠講同親密行為，仲要一齊經歷唔同嘅事。</p>\n<ul><li>一齊去旅行，體驗新事物</li></ul>\n<ul><li>參與對方鍾意嘅活動，了解佢嘅世界。</li></ul>\n<p>當你哋有共同回憶，感情會更加深厚，唔係淨係拍拖打卡咁簡單。</p>\n<p>親密感唔係淨係開心時先有，而係當對方唔開心、冇安全感時，你嘅回應可唔可以令佢覺得安心。</p>\n<ul><li>對方壓力大/情緒低落時會陪佢傾計、諗辦法解決。</li></ul>\n<ul><li>大家有矛盾時，你唔好鬧爆佢，而係冷靜溝通。</li></ul>\n<p>做一個願意聆聽、包容對方情緒嘅另一半，佢就自然會更加信任你、依賴佢，親密感都會更加堅固！</p>\n<h2>再看深一層：想讓關係升溫？建立親密感的 5 個日常方法的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<h2>常見問題</h2>\n<h3>「<strong>想讓關係升溫？建立親密感的 5 個日常方法</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>想讓關係升溫？建立親密感的 5 個日常方法</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>想讓關係升溫？建立親密感的 5 個日常方法</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "content": "<p>無論係男定女，可能都會有種諗法，「<strong>想快啲同佢進入下一步</strong>」，「<strong>想同佢再close啲</strong>」，所謂嘅下一步，未必一定係身體上嘅親密接觸，亦代表緊大家嘅感情狀態、信任度。</p>\n<p>親密感、信任度亦唔係一日就有，而係透過一個循環過程慢慢build up 喺呢個語程入面，逐漸咁建立喺「<strong>逐步感受到安全感</strong>」嘅氛圍，所以呢個時候，最重要就係一步一步建立親密關係。</p>\n<h2>階段一：漸進式分享，建立信任感</h2>\n<p>啱啱開始一段關係，最重要係先令大家習慣咗有對方嘅存在，先可以令大家舒服地相處，所以啱啱拍拖時，唔使太急住講深層次話題。</p>\n<ul><li>同屋企人關係點？</li></ul>\n<ul><li>上一段/上幾段感情點結束？</li></ul>\n<p>呢啲話題可以令雙方慢慢了解對方內心世界，可以令關係更進一步。</p>\n<ul><li>但記住</li></ul>\n<p>分享要有節奏，唔好一次過講晒自己所有秘密，或者一次過問曬對方所有秘密，否則可能會嚇親對方！</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>親密關唔係淨係靠講同親密行為，仲要一齊經歷唔同嘅事。</p>\n<ul><li>一齊去旅行，體驗新事物</li></ul>\n<ul><li>參與對方鍾意嘅活動，了解佢嘅世界。</li></ul>\n<p>當你哋有共同回憶，感情會更加深厚，唔係淨係拍拖打卡咁簡單。</p>\n<p>親密感唔係淨係開心時先有，而係當對方唔開心、冇安全感時，你嘅回應可唔可以令佢覺得安心。</p>\n<ul><li>對方壓力大/情緒低落時會陪佢傾計、諗辦法解決。</li></ul>\n<ul><li>大家有矛盾時，你唔好鬧爆佢，而係冷靜溝通。</li></ul>\n<p>做一個願意聆聽、包容對方情緒嘅另一半，佢就自然會更加信任你、依賴佢，親密感都會更加堅固！</p>\n<h2>再看深一層：想讓關係升溫？建立親密感的日常方法的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<h2>常見問題</h2>\n<h3>「<strong>想讓關係升溫？建立親密感的日常方法</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>想讓關係升溫？建立親密感的日常方法</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>想讓關係升溫？建立親密感的日常方法</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "https://www.instagram.com/p/DG5tdCjS6Di/",
     "date": "2025-03-07",
     "tags": [
@@ -6237,27 +6237,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-14839139.jpg",
-        "caption": "內文配圖：想讓關係升溫？建立親密感的 5 個日常方法",
+        "caption": "內文配圖：想讓關係升溫？建立親密感的日常方法",
         "credit": "Photo by Trần Long on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-holding-hands-in-an-alley-14839139/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-30696772.jpg",
-        "caption": "內文配圖：想讓關係升溫？建立親密感的 5 個日常方法",
+        "caption": "內文配圖：想讓關係升溫？建立親密感的日常方法",
         "credit": "Photo by İrem Çevik on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-enjoying-a-peaceful-moment-in-park-30696772/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5225457.jpg",
-        "caption": "內文配圖：想讓關係升溫？建立親密感的 5 個日常方法",
+        "caption": "內文配圖：想讓關係升溫？建立親密感的日常方法",
         "credit": "Photo by Samson Katt on Pexels",
         "creditUrl": "https://www.pexels.com/photo/positive-young-multiethnic-couple-smiling-and-looking-at-each-other-on-street-5225457/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想讓關係升溫？建立親密感的 5 個日常方法",
+    "coverCaption": "Asteria 相處教學：想讓關係升溫？建立親密感的日常方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -6310,7 +6310,7 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 132,
-    "title": "講心底話不等於有效溝通：5 個最常見溝通盲點",
+    "title": "講心底話不等於有效溝通：最常見溝通盲點",
     "category": "溝通相處",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
@@ -6333,27 +6333,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8367606.jpg",
-        "caption": "內文配圖：講心底話不等於有效溝通：5 個最常見溝通盲點",
+        "caption": "內文配圖：講心底話不等於有效溝通：最常見溝通盲點",
         "credit": "Photo by Ron Lach on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-holding-cellphone-while-talking-to-a-man-8367606/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-35747961.jpg",
-        "caption": "內文配圖：講心底話不等於有效溝通：5 個最常見溝通盲點",
+        "caption": "內文配圖：講心底話不等於有效溝通：最常見溝通盲點",
         "credit": "Photo by Musaddek Sayek on Pexels",
         "creditUrl": "https://www.pexels.com/photo/black-and-white-street-scene-with-couples-35747961/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-12944681.jpg",
-        "caption": "內文配圖：講心底話不等於有效溝通：5 個最常見溝通盲點",
+        "caption": "內文配圖：講心底話不等於有效溝通：最常見溝通盲點",
         "credit": "Photo by Atlantic Ambience on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-sitting-while-talking-in-front-of-a-house-12944681/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：講心底話不等於有效溝通：5 個最常見溝通盲點",
+    "coverCaption": "Asteria 相處教學：講心底話不等於有效溝通：最常見溝通盲點",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -6412,7 +6412,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-compass",
     "imageLabel": "警號",
     "summary": "就算當初愛得死去活來，時間都會令一切趨於平淡；就算身邊嘅另一半外貌標緻身材好，男人都有機會愛上其他女人！唔通男人變心真係預料之中？佢到底點解會變心？",
-    "content": "<p>親密關係理想形式必然係一對一，但喺人類天生的特質，呢種情況唔係必然，就算已經互相確立關係，人的感情絕對有可能愛上兩個人，亦可能慢慢變心。</p>\n<h2>逐點拆解：這些細節最值得留意</h2>\n<h3>一個人變心有好多徵兆</h3>\n<p>當對方持續缺乏耐性，少咗主動聯絡你，唔再分享佢嘅嘢，冇過問你交友同生活，突然有一兩次對你太好，你哋之間嘅親熱都係你主導，點解拍拖中都會對其他人有feel</p>\n<p>假如兩個女人剛好填補佢心中唔同嘅缺塊，好像唔同嘅朋友帶俾男人唔同嘅功能，例如：打機打波時搵A 旅行時搵B 佢唔會刻意去諗邊個朋友更重要，對女人都一樣，佢會覺得兩個人都一樣重要，所以兩個女人佢都有feel ＼貪心地覺得“全都要“／。</p>\n<h2>原因2 過於缺乏安全感</h2>\n<p>缺乏安全感嘅人，最容易喺遇到唔同人，令自己內心有所動搖，少少的熱情，少少的讚賞，就令佢分不清自己嘅真實心意 ＼佢地只係想自己被愛／。</p>\n<p>當佢認識咗個新嘅人，最開初的交流一定係最開心最輕鬆，互相會逐漸交流，產生興趣、好感，刺激同興奮的感覺，誤以為自己愛上另一個人 ＼對其他人產生太多興趣可能誤以為係愛！／。</p>\n<p>世界咁大，會覺得自己想試下唔同對象，覺得一生的決定可能有更好，冇辦法選定一個人，即使目前對象唔錯，但都總有心思思的念頭 ＼當遇到令佢眼光一亮嘅人，就會動搖！／。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>當然都有人是真・渣男，只貪圖另一人給予嘅情感缺失補償，例如：性行為方面好夾，金錢或物質上嘅滿足，從伴侶中得到優越感，明明知道自己最愛係邊個，但就係唔願放棄另一個對自己死心塌地嘅「<strong>工具人</strong>」 ＼通常嗰個「<strong>工具人</strong>」都係元配！／。</p>\n<p>人都有自我防衛機制，世俗定義覺得「<strong>見異思遷</strong>」係一件唔好嘅事，只有渣男/渣女先會咁做，所以佢亦唔想承認自己係衰人，包裝到「<strong>兩個女人都愛，揀唔到</strong>」，喺愛情世界中，能夠說出兩個都愛嘅人，其實根本就兩個都唔愛，最愛自己。</p>\n<h2>常見問題</h2>\n<h3>「<strong>男人變心是天性嗎</strong>」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>男人變心是天性嗎</strong>」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>男人變心是天性嗎</strong>」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "content": "<p>男人變心未必是「天性」，但感情確實會受新鮮感、缺失補償、安全感和責任感影響。與其只問他是不是變心，不如先看清他為什麼會被別人吸引。</p>\n<p>一個人變心，通常不是單一原因造成，而是關係內外同時出現缺口。以下幾個位置，最值得留意。</p>\n<h2>原因一：新鮮感令他誤以為是愛</h2>\n<p>長期關係會慢慢進入平淡期，而新認識的人往往帶來刺激、輕鬆和被欣賞的感覺。這種感覺容易令人誤會成愛，尤其當他本身不懂分辨好感、吸引和責任時。</p>\n<h2>原因二：過於缺乏安全感</h2>\n<p>缺乏安全感的人，很容易因為別人的讚賞、關心或崇拜而動搖。對方給他一點熱情，他就覺得自己重新被需要，甚至誤以為那就是更適合自己的感情。</p>\n<h2>原因三：兩個人填補不同缺口</h2>\n<p>有些人會把不同需要分散在不同對象身上：一個給他穩定，一個給他刺激；一個陪他生活，一個滿足他的幻想。這不是深情，而是貪心地想「全部都要」。</p>\n<h2>原因四：不想承認自己自私</h2>\n<p>很多人明知自己動搖，卻不願承認自己傷害了伴侶，於是包裝成「我兩個都愛」「我不知道怎樣選」。但真正愛一個人，不會長期讓兩個人都受傷。</p>\n<h2>原因五：把別人當成情感補償</h2>\n<p>也有人只是貪圖另一個人給予的補償，例如崇拜感、性吸引、金錢物質、優越感，或者被死心塌地對待的滿足。這種情況下，他愛的未必是對方，而是被滿足的自己。</p>\n<h2>如果他真的變心，你要先看現實行為</h2>\n<p>不要只聽他說「我很亂」或者「我都不知道」。你要看他是否願意切斷曖昧、承認傷害、重建界線，還是只想繼續享受兩邊的好處。</p>\n<p>變心最痛的地方，是你很想搶回他，但真正要先判斷的是：他還有沒有責任感，以及這段關係是否仍然值得你繼續投入。</p>",
     "sourceIg": "https://www.instagram.com/p/CvW-f89ywKW/",
     "date": "2023-07-31",
     "tags": [
@@ -6940,7 +6940,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-heart",
     "imageLabel": "溝通",
     "summary": "有冇試過喺愛情關係入面，經常缺乏「安全感」，諸多焦慮、擔心，驚對方有日會唔再愛自己，或者擔心自己真實缺點暴露後會被嫌棄，擔心對方會瞞住你暗交新女伴？種種嘅擔憂、懷疑，其實都只係因為自己嘅安全感一直填唔滿！但到底點解為何我嘅安全感總係填不滿？",
-    "content": "<p>會唔會身邊有其他對象？</p>\n<p>Esp對方曾經不忠過，令你格外小心，偷睇佢電話，要佢報告行蹤，留意上線時間，要佢開定位，甚至係佢電話裝gps 到底點解自己嘅安全感總係填唔滿？</p>\n<p>研究發現，「<strong>依附理論</strong>」會影響親密關係中安全感嘅多寡（英國精神分析學家約翰．鮑比（John Bowlby）），小朋友會依附於照顧者嘅反應，尤其情緒上，如果童年經常處於孤單嘅家庭環境，會覺得自己不被愛，成年後傾向覺得人唔可信。</p>\n<p>會長期缺乏安全感</p>\n<h2>原因2 自戀性人格障礙</h2>\n<p>自戀人格嘅人自大卻自卑，希望對方視自己做世界中心，需要不斷從對方身上獲得認可讚賞，來維持內心脆弱的自尊感，呢種自我枯竭（ego’s depletion）現象，令患者出現自我價值的質疑，所以要向對方索取更多安全感。</p>\n<h2>如果還想修復關係，你可以先這樣做</h2>\n<p>學習同不安共處，如果你係個極度冇安全感嘅人，可能終其一生都擺脫唔到呢種情緒，只可以學識同不安感共處，減少被不安、不安全感影響嘅機會，調整自己心態，明白愈捉得緊，愈走得快，控制同監視係留唔住一個人。</p>\n<p>心理學理論，安全感觸發（Security priming），透過試想像一個令你有安全感嘅「人」，例如：神明、動物、玩偶，喺不安時想像佢喺你身旁，佢會安慰你、陪伴你，用作緩解你當下嘅焦慮&amp;不安情緒，嘗試由自身提供安全感比自己。</p>\n<p>而唔係依賴對方提供</p>\n<h2>再看深一層：為什麼安全感總是填不滿的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<h2>常見問題</h2>\n<h3>「<strong>為什麼安全感總是填不滿</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>為什麼安全感總是填不滿</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>為什麼安全感總是填不滿</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "content": "<p>在愛情裡缺乏安全感，不只是因為你想太多。很多時候，它來自過去的經驗、依附模式、被背叛的陰影，或者你一直把「安心」交給對方負責。</p>\n<p>如果你經常擔心對方不再愛你、怕他有其他對象、想查電話、想知道行蹤，這些行為背後通常不是單純控制慾，而是內心一直在問：「我是不是不夠重要？」</p>\n<h2>原因一：過去經驗令你很難相信關係</h2>\n<p>如果你曾經被背叛、被忽略，或者在成長過程中很少得到穩定回應，成年後就容易對親密關係特別敏感。對方一冷淡、一遲覆，你就會自動聯想到被拋下。</p>\n<h2>原因二：依附模式令你容易焦慮</h2>\n<p>依附理論認為，早期照顧者如何回應我們，會影響長大後面對親密關係的安全感。如果你習慣了不穩定的愛，就很容易在關係中不斷測試、確認、追問。</p>\n<h2>原因三：把自我價值交給對方決定</h2>\n<p>當你需要對方不斷回覆、不斷表態、不斷證明愛你，才覺得自己有價值，你的安全感就會永遠填不滿。因為只要對方有一點點退後，你就會覺得自己被否定。</p>\n<h2>原因四：控制行為短暫止痛，卻長期傷害關係</h2>\n<p>偷看電話、要求定位、追問行蹤，可能短時間令你安心，但長期會令關係變得窒息。你越捉得緊，對方越想退；對方越退，你又越不安。</p>\n<h2>真正要練習的是自己給自己安全感</h2>\n<p>你可以學習同不安共處，而不是每次不安都立即向對方索取證明。先停一停，分清楚這份不安是來自現實證據，還是來自過去受傷的記憶。</p>\n<p>安全感不是完全不怕失去，而是就算關係有波動，你都知道自己仍然值得被愛，也有能力保護自己。</p>\n<h2>如果你想修補關係</h2>\n<p>先不要用查問、監視或情緒勒索去換取答案。可以改用更清楚的表達：「我最近有點不安，我想同你傾一個具體情況。」當你能講出事件、感受和需要，對方才比較容易回應，而不是只感到被審問。</p>",
     "sourceIg": "https://www.instagram.com/p/CvrjKAxSKl2/",
     "date": "2023-08-08",
     "tags": [
