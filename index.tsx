@@ -34,6 +34,7 @@ const LOGO_SRC = "/asteria-logo.jpg";
 const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
+const INSTAGRAM_URL = "https://www.instagram.com/asteria.crystal.tarot/";
 
 type SpaceSessionRole = 'customer' | 'staff' | null;
 
@@ -185,6 +186,9 @@ const Navbar = () => {
           <a href={spaceHref} onClick={goSpaceEntry(spaceHash)} className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
             <i className="fa-regular fa-user"></i> <span>{spaceLabel}</span>
           </a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="border border-pink-100 bg-white text-pink-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-pink-50 transition-all hidden lg:inline-flex items-center gap-1">
+            <i className="fa-brands fa-instagram"></i> IG
+          </a>
           {role && (
             <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all hidden md:inline-flex">
               登出
@@ -248,13 +252,16 @@ const Navbar = () => {
               </button>
             )}
             <div className="grid grid-cols-3 gap-2 pt-2">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-gradient-to-r from-pink-500 to-orange-400 px-3 py-2 text-center text-sm font-bold text-white">
+                Instagram
+              </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">
                 WhatsApp
               </a>
               <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#2AABEE] px-3 py-2 text-center text-sm font-bold text-white">
                 Telegram
               </a>
-              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#1877F2] px-3 py-2 text-center text-sm font-bold text-white">
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-[#1877F2] px-3 py-2 text-center text-sm font-bold text-white col-span-3">
                 Facebook
               </a>
             </div>
@@ -264,8 +271,11 @@ const Navbar = () => {
       {showNotice && (
       <div className="bg-asteria-dark text-white">
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
-          <span className="font-bold whitespace-nowrap">IG帳號暫停通知</span>
-          <span className="text-white/80 whitespace-nowrap">請改用官方聯絡方法：</span>
+          <span className="font-bold whitespace-nowrap">官方聯絡入口</span>
+          <span className="text-white/80 whitespace-nowrap">可以用以下方法搵我哋：</span>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-gradient-to-r from-pink-500 to-orange-400 text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
+            <i className="fa-brands fa-instagram"></i> Instagram
+          </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
@@ -312,11 +322,14 @@ const Hero = () => (
                 <i className="fa-solid fa-bullhorn"></i>
               </div>
               <div>
-                <div className="font-bold text-asteria-dark mb-1">IG帳號暫停通知</div>
+                <div className="font-bold text-asteria-dark mb-1">官方聯絡方法</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  我地 Instagram 帳號暫時未能使用。如你之前只係用 IG 搵我地，請即刻改用以下官方方法聯絡。
+                  Instagram 已恢復使用。你可以用 IG、WhatsApp、Facebook、Telegram 或 Asteria Space 聯絡我哋。
                 </p>
                 <div className="flex flex-wrap gap-3">
+                  <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-orange-400 text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
+                    <i className="fa-brands fa-instagram"></i> Instagram
+                  </a>
                   <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-whatsapp"></i> WhatsApp
                   </a>
@@ -929,7 +942,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
             '@type': 'BreadcrumbList',
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: '首頁', item: 'https://asteria-tarot.com/' },
-              { '@type': 'ListItem', position: 2, name: '相處教學', item: 'https://asteria-tarot.com/teaching' },
+              { '@type': 'ListItem', position: 2, name: '相處教學', item: 'https://asteria-tarot.com/teaching/' },
               { '@type': 'ListItem', position: 3, name: activePost.title, item: canonical }
             ]
           }
@@ -3998,6 +4011,9 @@ const Footer = () => (
         我們致力於運用白魔法與塔羅智慧，為你在迷惘中找到出口。
       </p>
       <div className="flex justify-center gap-4 mb-6">
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Instagram" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition-all shadow-sm">
+          <i className="fa-brands fa-instagram text-xl"></i>
+        </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-whatsapp text-xl"></i>
         </a>
@@ -4009,6 +4025,9 @@ const Footer = () => (
         </a>
       </div>
       <div className="mx-auto mb-8 grid gap-2 text-sm text-stone-500 max-w-md">
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
+          Instagram：@asteria.crystal.tarot
+        </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
           WhatsApp：5941 3688
         </a>
