@@ -75,7 +75,7 @@ const staticPages = [
   {
     route: '/about',
     title: '關於我們｜Asteria 感情拯救所｜不只占卜，也陪你學識相處',
-    description: 'Asteria 感情拯救所不只提供占卜與儀式，亦會手把手教你訊息點覆、關係點修補、失戀情緒點穩住。',
+    description: 'Asteria 感情拯救所不只提供感情占卜與愛情儀式，亦會手把手教你訊息點覆、關係點修補、失戀情緒點穩住。',
     keywords: 'Asteria 感情拯救所, asteria.crystal.tarot, Asteria IG 香港, 感情指引, 情緒支援, 相處教學',
     image: logoUrl,
     schema: {
@@ -88,7 +88,7 @@ const staticPages = [
   {
     route: '/cases',
     title: '客人個案與好評見證｜復合・斷聯・冷淡・關係修復｜Asteria 感情拯救所',
-    description: 'Asteria 客人個案與好評見證，整理復合、斷聯、冷淡、第三者、關係修復與愛情儀式後的真實回饋。',
+    description: 'Asteria 客人個案與好評見證，整理復合挽回、斷聯冷淡、第三者、關係修復與愛情儀式後的真實回饋。',
     keywords: 'Asteria 好評, 客人見證, 復合成功, 關係修復, 斷聯復聯, 愛情儀式好評, 感情占卜好評',
     image: logoUrl,
     schema: {
@@ -101,7 +101,7 @@ const staticPages = [
   {
     route: '/reviews',
     title: '客人真實好評庫｜感情占卜・愛情儀式・關係修復見證｜Asteria 感情拯救所',
-    description: 'Asteria 客人真實好評庫，收錄感情占卜、塔羅分析、愛情儀式、復合挽回與關係修復後的客人回饋。',
+    description: 'Asteria 客人真實好評庫，收錄感情占卜、塔羅分析、愛情儀式、復合挽回與關係修復後的客人回饋見證。',
     keywords: 'Asteria 好評, 客人真實好評, 感情占卜好評, 愛情儀式好評, 復合好評, 關係修復見證',
     image: logoUrl,
     schema: {
