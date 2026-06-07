@@ -143,7 +143,7 @@ const Navbar = () => {
   const spaceHash = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
   const spaceHref = `/${spaceHash}`;
   const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
-  const navLinkClass = "hover:text-asteria-primary transition-colors hidden md:inline-flex items-center gap-1.5 whitespace-nowrap";
+  const navLinkClass = "hover:text-asteria-primary transition-colors hidden xl:inline-flex items-center gap-1.5 whitespace-nowrap";
   const mobileLinkClass = "flex items-center justify-between gap-3 rounded-2xl border border-asteria-cream bg-white px-4 py-3 text-base font-bold text-asteria-dark shadow-sm";
   const closeMobileMenu = () => setMobileMenuOpen(false);
   const toggleNotice = () => {
@@ -170,40 +170,40 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-asteria-cream/30 shadow-sm transition-all">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="/" onClick={goHome} className="flex items-center gap-2">
-          <img src={LOGO_SRC} className="w-12 h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
-          <div className="text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng">
-            ASTERIA <span className="text-asteria-primary text-sm hidden md:inline">感情拯救所</span>
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center gap-3">
+        <a href="/" onClick={goHome} className="flex min-w-0 shrink-0 items-center gap-2">
+          <img src={LOGO_SRC} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-sm border border-asteria-cream/20 logo-img bg-white p-0.5" alt="Asteria logo" />
+          <div className="text-base sm:text-lg md:text-xl font-bold text-gray-700 tracking-wide font-eng leading-none whitespace-nowrap">
+            ASTERIA <span className="text-asteria-primary text-sm hidden xl:inline">感情拯救所</span>
           </div>
         </a>
-        <div className="flex gap-2 md:gap-4 text-sm md:text-base font-medium text-gray-600 items-center">
+        <div className="flex min-w-0 items-center justify-end gap-2 text-sm font-medium text-gray-600">
           <a href="/about/" className={navLinkClass}><i className="fa-regular fa-heart text-xs"></i> 關於我們</a>
           <a href="/teaching/" className={navLinkClass}><i className="fa-regular fa-newspaper text-xs"></i> 相處教學</a>
           <a href="/services/" className={navLinkClass}><i className="fa-solid fa-wand-magic-sparkles text-xs"></i> 服務</a>
           <a href="/#oracle" onClick={goHomeSection('oracle')} className={navLinkClass}><i className="fa-regular fa-star text-xs"></i> 每日指引</a>
-          <a href="/#reviews" onClick={goHomeSection('reviews')} className={`${navLinkClass} hidden lg:inline-flex`}><i className="fa-regular fa-comment-dots text-xs"></i> 好評</a>
-          <a href={spaceHref} onClick={goSpaceEntry(spaceHash)} className="border border-asteria-cream bg-white text-asteria-primary px-3 py-1.5 rounded-full text-sm font-bold hover:border-asteria-primary transition-all flex items-center gap-1">
-            <i className="fa-regular fa-user"></i> <span>{spaceLabel}</span>
+          <a href="/#reviews" onClick={goHomeSection('reviews')} className={navLinkClass}><i className="fa-regular fa-comment-dots text-xs"></i> 好評</a>
+          <a href={spaceHref} onClick={goSpaceEntry(spaceHash)} className="border border-asteria-cream bg-white text-asteria-primary px-2.5 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold hover:border-asteria-primary transition-all flex shrink-0 items-center gap-1 whitespace-nowrap" aria-label={spaceLabel}>
+            <i className="fa-regular fa-user"></i> <span className="hidden min-[360px]:inline">{spaceLabel}</span>
           </a>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="border border-pink-100 bg-white text-pink-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-pink-50 transition-all hidden lg:inline-flex items-center gap-1">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="border border-pink-100 bg-white text-pink-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-pink-50 transition-all hidden xl:inline-flex items-center gap-1 whitespace-nowrap">
             <i className="fa-brands fa-instagram"></i> IG
           </a>
           {role && (
-            <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all hidden md:inline-flex">
+            <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all hidden xl:inline-flex whitespace-nowrap">
               登出
             </button>
           )}
-          <button onClick={toggleNotice} className="border border-asteria-cream bg-white text-stone-500 px-3 py-1.5 rounded-full text-xs font-bold hover:text-asteria-primary transition-all hidden sm:inline-flex">
+          <button onClick={toggleNotice} className="border border-asteria-cream bg-white text-stone-500 px-3 py-1.5 rounded-full text-xs font-bold hover:text-asteria-primary transition-all hidden xl:inline-flex whitespace-nowrap">
             {showNotice ? '收起公告' : '顯示公告'}
           </button>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden sm:flex items-center gap-1">
-            <i className="fa-brands fa-whatsapp"></i> <span className="hidden md:inline">預約</span>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden xl:flex items-center gap-1 whitespace-nowrap">
+            <i className="fa-brands fa-whatsapp"></i> <span>預約</span>
           </a>
           <button
             type="button"
             onClick={() => setMobileMenuOpen((current) => !current)}
-            className="md:hidden border border-asteria-cream bg-white text-asteria-primary w-10 h-10 rounded-full text-lg font-bold flex items-center justify-center shadow-sm"
+            className="xl:hidden border border-asteria-cream bg-white text-asteria-primary w-10 h-10 rounded-full text-lg font-bold flex shrink-0 items-center justify-center shadow-sm"
             aria-label={mobileMenuOpen ? '收起選單' : '打開選單'}
             aria-expanded={mobileMenuOpen}
           >
@@ -212,7 +212,7 @@ const Navbar = () => {
         </div>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-asteria-cream/70 bg-[#FFF9F0] px-4 py-4 shadow-lg">
+        <div className="xl:hidden border-t border-asteria-cream/70 bg-[#FFF9F0] px-4 py-4 shadow-lg">
           <div className="grid gap-2">
             <a href="/about/" onClick={closeMobileMenu} className={mobileLinkClass}>
               <span><i className="fa-regular fa-heart mr-2 text-asteria-primary"></i>關於我們</span>
@@ -251,6 +251,17 @@ const Navbar = () => {
                 <i className="fa-solid fa-chevron-right text-xs text-red-200"></i>
               </button>
             )}
+            <button
+              type="button"
+              onClick={() => {
+                closeMobileMenu();
+                toggleNotice();
+              }}
+              className="flex items-center justify-between gap-3 rounded-2xl border border-asteria-cream bg-white px-4 py-3 text-base font-bold text-stone-600 shadow-sm"
+            >
+              <span><i className="fa-regular fa-bell mr-2 text-asteria-primary"></i>{showNotice ? '收起公告' : '顯示公告'}</span>
+              <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
+            </button>
             <div className="grid grid-cols-3 gap-2 pt-2">
               <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="rounded-2xl bg-gradient-to-r from-pink-500 to-orange-400 px-3 py-2 text-center text-sm font-bold text-white">
                 Instagram
