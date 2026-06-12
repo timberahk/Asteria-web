@@ -125,6 +125,24 @@ export const loginWithUsername = async (username: string, password: string) => {
   return result.account;
 };
 
+export const registerWithInviteCode = async (payload: {
+  username: string;
+  password: string;
+  label: string;
+  contactEmail: string;
+  inviteCode: string;
+}) => {
+  const result = await apiRequest<{ session?: Session; account: SpaceAccount }>('space-register-with-code', payload);
+  if (!result.session) return loginWithUsername(payload.username, payload.password);
+
+  const client = requireSupabase();
+  await client.auth.setSession({
+    access_token: result.session.access_token,
+    refresh_token: result.session.refresh_token
+  });
+  return result.account;
+};
+
 export const getCurrentAccount = async () => {
   const client = requireSupabase();
   const { data: userData, error: userError } = await client.auth.getUser();

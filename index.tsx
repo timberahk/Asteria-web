@@ -13,6 +13,7 @@ import {
   listStaffInbox,
   loginWithUsername,
   markStaffThreadRead,
+  registerWithInviteCode,
   sendMyMessage,
   signOutSpace,
   staffCreateAccount,
@@ -36,10 +37,14 @@ const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
 const SITE_URL = "https://asteria-tarot.com";
 const DEFAULT_SEO_IMAGE = `${SITE_URL}${LOGO_SRC}`;
+const DEFAULT_WHATSAPP_MESSAGE = '你好，我喺 Asteria 網站睇到服務，想先做免費初步評估。我的情況是：';
+const SPACE_INVITE_MESSAGE = '你好，我想開通 Asteria Space，請問可以俾我專屬邀請碼嗎？';
 const makeWhatsappUrl = (message?: string) => {
   const text = message?.trim();
   return text ? `${WHATSAPP_URL}?text=${encodeURIComponent(text)}` : WHATSAPP_URL;
 };
+const makeServiceWhatsappMessage = (service?: string) =>
+  `你好，我想了解${service ? `「${service}」` : 'Asteria 的感情服務'}，想先做免費初步評估。我的情況是：`;
 
 const setSeoMeta = ({
   title,
@@ -227,7 +232,7 @@ const Navbar = () => {
               登出
             </button>
           )}
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden 2xl:flex items-center gap-1 whitespace-nowrap">
+          <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden 2xl:flex items-center gap-1 whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> <span>預約</span>
           </a>
           <button
@@ -281,7 +286,7 @@ const Navbar = () => {
               </div>
             )}
             <div className="mt-2 grid grid-cols-2 gap-2 border-t border-asteria-cream/60 pt-2">
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#25D366] px-3 text-xs font-bold text-white">
+              <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#25D366] px-3 text-xs font-bold text-white">
                 <i className="fa-brands fa-whatsapp"></i> WhatsApp
               </a>
               <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#2AABEE] px-3 text-xs font-bold text-white">
@@ -297,7 +302,7 @@ const Navbar = () => {
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
           <span className="font-bold whitespace-nowrap">IG 帳號暫停通知</span>
           <span className="text-white/80 whitespace-nowrap">請改用以下官方方法聯絡：</span>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
+          <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
           <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#1877F2] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
@@ -350,7 +355,7 @@ const Hero = () => (
                   IG 暫時停用。請用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡我哋。
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
+                  <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-whatsapp"></i> WhatsApp
                   </a>
                   <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
@@ -426,8 +431,8 @@ const Hero = () => (
                 <div className="bg-asteria-pink/35 rounded-xl py-3">破冰</div>
                 <div className="bg-asteria-blue/35 rounded-xl py-3">清理</div>
               </div>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
-                <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢
+              <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp 免費初步評估
               </a>
             </div>
           </div>
@@ -683,7 +688,7 @@ const Oracle = () => {
                 </div>
 
                 <a href={makeWhatsappUrl(oracleMessage)} target="_blank" rel="noreferrer" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
-                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢詳細指引
+                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢我的牌面
                 </a>
                 
                 <button 
@@ -745,7 +750,7 @@ const GuidanceSection = () => {
             <p className="text-stone-500 leading-relaxed mb-6">
               幫襯 Asteria 唔係收完錢就完。我哋會陪你睇清楚局面，亦會手把手教你日常相處：訊息點覆、邊句唔好講、幾時應該退一步、幾時可以推進。尤其失戀、斷聯、冷淡期最難捱的時候，你唔需要自己一個亂估亂衝。
             </p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
+            <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
               <i className="fa-brands fa-whatsapp"></i> 想有人陪你拆解
             </a>
           </div>
@@ -806,7 +811,7 @@ const AboutPage = () => (
         <p className="text-white/75 leading-relaxed mb-6 max-w-2xl">
           如果你正面對冷淡、斷聯、分手、復合、第三者、訊息唔知點覆，或者只係情緒好亂，可以直接 WhatsApp 我哋。
         </p>
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
+        <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
           <i className="fa-brands fa-whatsapp"></i> WhatsApp 聯絡
         </a>
       </section>
@@ -1308,7 +1313,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 <h1 className="text-4xl font-bold text-asteria-dark mb-3">相處教學</h1>
                 <p className="text-stone-500 max-w-2xl">用圖文方式慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
               </div>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
+              <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
                 <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
               </a>
             </div>
@@ -1413,7 +1418,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
           </div>
 
           <div className="text-center mt-10">
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 bg-white px-5 py-2 rounded-full shadow-sm hover:shadow transition-all text-sm font-bold">
+              <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 bg-white px-5 py-2 rounded-full shadow-sm hover:shadow transition-all text-sm font-bold">
                 <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
               </a>
           </div>
@@ -1441,7 +1446,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                     
                     <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
                         <span className="text-sm text-gray-400">想解決類似問題？</span>
-                        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
+                        <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="bg-asteria-primary text-white px-6 py-2 rounded-full font-bold hover:bg-amber-800 transition-colors shadow-md text-sm">
                             <i className="fa-brands fa-whatsapp mr-1"></i> 與 Asteria 聊聊
                         </a>
                     </div>
@@ -1815,6 +1820,20 @@ const Services = () => {
               )}
             </div>
           </div>
+
+          <div className="grid gap-3 md:grid-cols-3 text-left mb-10">
+            {[
+              ['01', 'WhatsApp 講低近況', '簡單講你而家嘅關係狀態、想處理咩，我哋會先睇方向。'],
+              ['02', 'Asteria 初步了解', '先判斷適合塔羅分析、相處策略，定係儀式配搭，唔會一入嚟就硬銷。'],
+              ['03', '確認方向後作實', '方向清楚後先安排付款同跟進，令你知道自己下一步點行。']
+            ].map(([step, title, desc]) => (
+              <div key={step} className="rounded-2xl border border-asteria-cream bg-white/80 p-4 shadow-sm">
+                <div className="text-xs font-bold text-amber-600 mb-2">{step}</div>
+                <div className="font-bold text-asteria-dark mb-2">{title}</div>
+                <p className="text-sm text-stone-500 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Content Grid */}
@@ -1835,8 +1854,8 @@ const Services = () => {
                 ))}
               </div>
 
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
-                查詢詳情
+              <a href={makeWhatsappUrl(makeServiceWhatsappMessage(item.title))} target="_blank" rel="noreferrer" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
+                WhatsApp 免費初步評估
               </a>
             </div>
           ))}
@@ -1867,10 +1886,13 @@ const Services = () => {
         )}
 
         <div className="mt-12 text-center bg-asteria-yellow/30 p-6 rounded-2xl max-w-2xl mx-auto border border-asteria-yellow/50">
-           <p className="text-gray-700 text-sm md:text-base">
+           <p className="text-gray-700 text-sm md:text-base mb-4">
              <i className="fa-solid fa-circle-info text-yellow-500 mr-2"></i>
-             所有儀式均會按個案狀況建議配搭，保證私隱。不確定自己適合哪種儀式？歡迎 WhatsApp 諮詢，我們會為您分析最合適的方向。
+             唔肯定自己適合邊種？可以先 WhatsApp 做免費初步評估。
            </p>
+           <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-sm font-bold text-white hover:brightness-95 transition-all">
+             <i className="fa-brands fa-whatsapp"></i> WhatsApp 免費初步評估
+           </a>
         </div>
 
       </div>
@@ -1934,7 +1956,7 @@ const Reviews = () => (
         <a href="/reviews/" className="inline-flex items-center justify-center gap-2 text-asteria-primary font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
           <i className="fa-regular fa-images"></i> 查看更多好評
         </a>
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
+        <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
           <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
         </a>
       </div>
@@ -1957,7 +1979,7 @@ const ReviewsPage = () => (
       </div>
       <ReviewGrid reviews={reviewImages} />
       <div className="text-center mt-12">
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-white font-bold bg-[#25D366] px-7 py-3 rounded-full shadow-lg shadow-green-900/10 hover:brightness-95 transition-all">
+        <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-white font-bold bg-[#25D366] px-7 py-3 rounded-full shadow-lg shadow-green-900/10 hover:brightness-95 transition-all">
           <i className="fa-brands fa-whatsapp"></i> WhatsApp 聯絡 Asteria
         </a>
       </div>
@@ -2231,11 +2253,20 @@ const buildSummary = (customer: PortalCustomer) => {
 };
 
 const RegisterPage = () => {
+  const [mode, setMode] = useState<'login' | 'register'>('login');
   const [loginUsername, setLoginUsername] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const [registerName, setRegisterName] = useState('');
+  const [registerUsername, setRegisterUsername] = useState('');
+  const [registerEmail, setRegisterEmail] = useState('');
+  const [registerPassword, setRegisterPassword] = useState('');
+  const [registerInviteCode, setRegisterInviteCode] = useState('');
+  const [registerError, setRegisterError] = useState('');
+  const [isRegistering, setIsRegistering] = useState(false);
 
   const handleSystemLogin = async () => {
+    setLoginError('');
     if (isBackendConfigured) {
       try {
         const account = await loginWithUsername(loginUsername.trim(), loginPassword.trim());
@@ -2257,6 +2288,33 @@ const RegisterPage = () => {
     setLoginError('系統暫時未能連線，請稍後再試或聯絡 Asteria。');
   };
 
+  const handleRegister = async () => {
+    setRegisterError('');
+    if (!isBackendConfigured) {
+      setRegisterError('系統暫時未能連線，請稍後再試或聯絡 Asteria。');
+      return;
+    }
+
+    try {
+      setIsRegistering(true);
+      const account = await registerWithInviteCode({
+        username: registerUsername.trim(),
+        password: registerPassword.trim(),
+        label: registerName.trim(),
+        contactEmail: registerEmail.trim(),
+        inviteCode: registerInviteCode.trim()
+      });
+      storeSpaceAccount(account);
+      window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
+      window.history.pushState(null, '', '/space/');
+      window.dispatchEvent(new Event('asteria-route-change'));
+    } catch (error) {
+      setRegisterError(error instanceof Error ? error.message : '註冊失敗，請稍後再試。');
+    } finally {
+      setIsRegistering(false);
+    }
+  };
+
   return (
     <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
@@ -2271,29 +2329,64 @@ const RegisterPage = () => {
             查看訊息、上傳截圖，同 Asteria 保持聯絡。
           </p>
 
+          <div className="grid grid-cols-2 gap-2 rounded-2xl bg-[#FFF8EC] border border-asteria-cream p-1 mb-6">
+            <button
+              onClick={() => setMode('login')}
+              className={`rounded-xl px-4 py-3 font-bold transition-all ${mode === 'login' ? 'bg-white text-asteria-primary shadow-sm' : 'text-stone-500'}`}
+            >
+              登入
+            </button>
+            <button
+              onClick={() => setMode('register')}
+              className={`rounded-xl px-4 py-3 font-bold transition-all ${mode === 'register' ? 'bg-white text-asteria-primary shadow-sm' : 'text-stone-500'}`}
+            >
+              申請 Space
+            </button>
+          </div>
+
           <div className="bg-[#FFF8EC] border border-asteria-cream rounded-2xl p-4 sm:p-5 mb-6 overflow-hidden">
             <div className="flex items-start gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-white text-asteria-primary flex items-center justify-center shrink-0 shadow-sm">
-                <i className="fa-solid fa-lock"></i>
+                <i className={`fa-solid ${mode === 'login' ? 'fa-lock' : 'fa-key'}`}></i>
               </div>
               <div>
-                <div className="font-bold text-asteria-dark">登入</div>
-                <p className="text-sm text-stone-500 leading-relaxed">請輸入 Asteria 提供的 account 名及密碼。</p>
+                <div className="font-bold text-asteria-dark">{mode === 'login' ? '登入' : '用邀請碼開通'}</div>
+                <p className="text-sm text-stone-500 leading-relaxed">
+                  {mode === 'login' ? '請輸入 account 名及密碼。' : 'Asteria 會提供專屬邀請碼，填完即可開通私人空間。'}
+                </p>
               </div>
             </div>
 
-            <div className="grid gap-3">
-              <input value={loginUsername} onChange={(event) => setLoginUsername(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Account 名" />
-              <input type="password" value={loginPassword} onChange={(event) => setLoginPassword(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') handleSystemLogin(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="密碼" />
-              <div className="text-xs text-stone-400">密碼最少 8 個字。如需開通或 reset，請聯絡 Asteria。</div>
-              {loginError && <div className="text-sm font-bold text-red-500">{loginError}</div>}
-              <button onClick={handleSystemLogin} className="btn-primary rounded-xl px-5 py-3 font-bold">登入</button>
-            </div>
+            {mode === 'login' ? (
+              <div className="grid gap-3">
+                <input value={loginUsername} onChange={(event) => setLoginUsername(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Account 名" />
+                <input type="password" value={loginPassword} onChange={(event) => setLoginPassword(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') handleSystemLogin(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="密碼" />
+                <div className="text-xs text-stone-400">密碼最少 8 個字。如需開通或 reset，請聯絡 Asteria。</div>
+                {loginError && <div className="text-sm font-bold text-red-500">{loginError}</div>}
+                <button onClick={handleSystemLogin} className="btn-primary rounded-xl px-5 py-3 font-bold">登入</button>
+              </div>
+            ) : (
+              <div className="grid gap-3">
+                <input value={registerName} onChange={(event) => setRegisterName(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="自己名 / 暱稱" />
+                <input value={registerUsername} onChange={(event) => setRegisterUsername(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Account 名（英文 / 數字）" />
+                <input type="email" value={registerEmail} onChange={(event) => setRegisterEmail(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="Email 備用聯絡" />
+                <input type="password" value={registerPassword} onChange={(event) => setRegisterPassword(event.target.value)} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="密碼（至少 8 個字）" />
+                <input value={registerInviteCode} onChange={(event) => setRegisterInviteCode(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') handleRegister(); }} className="w-full min-w-0 border border-asteria-cream rounded-xl px-4 py-3 outline-none focus:border-asteria-primary bg-white" placeholder="專屬邀請碼" />
+                <div className="text-xs text-stone-400">Account 名只可用英文細階、數字、點、底線或橫線。</div>
+                {registerError && <div className="text-sm font-bold text-red-500">{registerError}</div>}
+                <button onClick={handleRegister} disabled={isRegistering} className="btn-primary rounded-xl px-5 py-3 font-bold disabled:opacity-60">
+                  {isRegistering ? '開通中...' : '開通 Space'}
+                </button>
+              </div>
+            )}
 
           </div>
 
           <div className="text-sm text-stone-500 text-center">
-            如需開通帳戶，請聯絡 Asteria。
+            未有邀請碼？
+            <a href={makeWhatsappUrl(SPACE_INVITE_MESSAGE)} target="_blank" rel="noreferrer" className="ml-1 font-bold text-green-600 underline underline-offset-4">
+              WhatsApp 搵 Asteria
+            </a>
           </div>
         </div>
       </div>
@@ -4132,7 +4225,7 @@ const Footer = () => (
         我們致力於運用白魔法與塔羅智慧，為你在迷惘中找到出口。
       </p>
       <div className="flex justify-center gap-4 mb-6">
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
+        <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-whatsapp text-xl"></i>
         </a>
         <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" aria-label="Facebook" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
@@ -4143,7 +4236,7 @@ const Footer = () => (
         </a>
       </div>
       <div className="mx-auto mb-8 grid gap-2 text-sm text-stone-500 max-w-md">
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
+        <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
           WhatsApp：5941 3688
         </a>
         <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
@@ -4162,7 +4255,7 @@ const Footer = () => (
 
 const FloatingWhatsApp = () => (
   <a
-    href={WHATSAPP_URL}
+    href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)}
     target="_blank"
     rel="noreferrer"
     aria-label="WhatsApp 聯絡 Asteria"
