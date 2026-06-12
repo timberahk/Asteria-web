@@ -186,10 +186,31 @@ function cleanTitle(title = '') {
   return title.replace(/[\[\]【】]/g, '').replace(/\s+/g, ' ').trim();
 }
 
+function articleSearchPhrases(post) {
+  const phrases = [];
+  const add = (...items) => {
+    for (const item of items) {
+      if (item && !phrases.includes(item)) phrases.push(item);
+    }
+  };
+  const haystack = `${post?.title || ''} ${post?.summary || ''} ${post?.category || ''} ${(post?.tags || []).join(' ')}`;
+
+  if (/復合|挽回|前任|分手/.test(haystack)) add('分手後點算', '挽回前任', '復合機會');
+  if (/斷聯|冷淡|少覆|失聯|不讀不回|已讀不回/.test(haystack)) add('對方冷淡', '少覆 message', '斷聯後如何開口');
+  if (/曖昧|暗戀|桃花|單身|脫單/.test(haystack)) add('曖昧關係點推進', '對方有冇意思', '暗戀塔羅');
+  if (/第三者|新歡|出軌|介入/.test(haystack)) add('第三者介入', '前任有新歡', '關係逆轉');
+  if (/溝通|訊息|message|回覆|勸|說話|聊天/.test(haystack)) add('感情溝通', '訊息點覆', '相處教學');
+  if (/儀式|能量|占卜|塔羅|牌/.test(haystack)) add('香港塔羅占卜', '愛情儀式', '感情能量調整');
+
+  add('感情占卜', '香港塔羅', 'Asteria 感情拯救所');
+  return phrases.slice(0, 7);
+}
+
 function buildDescription(post) {
   const summary = stripHtml(post.summary || '').replace(/[\[\]【】]/g, '');
   const body = stripHtml(post.content || '');
-  const text = `${summary || body} Asteria 感情拯救所提供復合挽回、斷聯冷淡、曖昧相處、感情占卜、塔羅分析與關係修復方向。`;
+  const phrases = articleSearchPhrases(post).slice(0, 3).join('、');
+  const text = `${summary || body} 如果你正在搜尋${phrases}，Asteria 以相處教學、香港塔羅占卜與愛情儀式方向幫你整理下一步。`;
   return text.replace(/\s+/g, ' ').trim().slice(0, 155);
 }
 
@@ -199,6 +220,7 @@ function buildKeywords(post) {
     post.category,
     post.imageLabel,
     ...(post.tags || []),
+    ...articleSearchPhrases(post),
     ...searchIntents
   ].filter(Boolean))).join(', ');
 }
