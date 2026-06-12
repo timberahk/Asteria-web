@@ -439,9 +439,6 @@ const Oracle = () => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState<'topic' | 'drawing' | 'result'>('topic');
   const [topic, setTopic] = useState('');
-  const [leadName, setLeadName] = useState('');
-  const [leadContact, setLeadContact] = useState('');
-  const [leadConcern, setLeadConcern] = useState('');
   const [reading, setReading] = useState<{ 
     type: string; 
     card_name: string; 
@@ -450,7 +447,6 @@ const Oracle = () => {
     advice: string;
     icon: string 
   } | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   const topics = [
     { id: 'love_conflict', label: '💔 伴侶冷淡/爭吵', icon: 'fa-regular fa-snowflake' },
@@ -461,14 +457,11 @@ const Oracle = () => {
 
   const selectedTopicLabel = topics.find((item) => item.id === topic)?.label.replace(/^[^\s]+\s*/, '') || '未選擇';
 
-  const leadMessage = [
-    'Asteria 你好，我想領取今日宇宙專屬感情指引。',
-    `稱呼：${leadName.trim() || '未填'}`,
-    `聯絡方法：${leadContact.trim() || '未填'}`,
+  const oracleMessage = [
+    'Asteria 你好，我剛剛抽了今日宇宙專屬感情指引。',
     `最想問：${selectedTopicLabel}`,
-    leadConcern.trim() ? `補充：${leadConcern.trim()}` : '',
     reading ? `今日抽到：${reading.card_name}（${reading.keywords.join('、')}）` : '',
-    '可以幫我睇下下一步點做好嗎？'
+    '想請你幫我睇清楚對方心態同下一步。'
   ].filter(Boolean).join('\n');
 
   // Vastly expanded fallback readings to ensure variety (78 cards simulation)
@@ -576,14 +569,9 @@ const Oracle = () => {
   ];
 
   const handleTopicSelect = (selectedTopic: string) => {
-    if (!leadContact.trim()) {
-      setError('請先留下 WhatsApp 或 Email，方便我哋把今日指引發返俾你。');
-      return;
-    }
     setTopic(selectedTopic);
     setStep('drawing');
     setLoading(true);
-    setError(null);
     setReading(null);
 
     // Keep this public page self-contained. AI summaries for members should run server-side.
@@ -615,7 +603,6 @@ const Oracle = () => {
     setStep('topic');
     setReading(null);
     setTopic('');
-    setError(null);
   };
 
   return (
@@ -623,66 +610,14 @@ const Oracle = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(160,106,54,0.18)_1px,transparent_0)] [background-size:18px_18px] opacity-30 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">今日宇宙專屬指引</h2>
-        <p className="text-gray-500 mb-10">留下聯絡方法，抽一張牌睇清今日感情方向。</p>
+        <h2 className="text-3xl font-bold text-gray-800 mb-2">宇宙解憂信箱</h2>
+        <p className="text-gray-500 mb-10">心裡想著那個讓你困擾的人或事，抽一張牌睇清今日感情方向。</p>
 
         <div className="glass-card rounded-3xl p-8 md:p-12 min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500 shadow-2xl bg-white/50">
-          
-          {error && (
-            <div className="absolute top-4 left-0 w-full px-4 z-50 animate-fade-in-up">
-                <div className="bg-red-100 text-red-600 px-4 py-2 rounded-lg text-sm shadow-sm inline-block">
-                    <i className="fa-solid fa-circle-exclamation mr-1"></i> {error}
-                </div>
-            </div>
-          )}
 
           {/* Step 1: Select Topic */}
           {step === 'topic' && (
             <div className="w-full animate-fade-in">
-              <div className="max-w-2xl mx-auto mb-8 text-left bg-white/75 border border-asteria-cream/70 rounded-2xl p-5 md:p-6 shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-full bg-asteria-primary text-white flex items-center justify-center">
-                    <i className="fa-regular fa-envelope"></i>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-asteria-dark">領取今日指引</h3>
-                    <p className="text-sm text-stone-500">如果 IG / WhatsApp 又失效，我哋都可以搵得返你。</p>
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-3">
-                  <label className="block">
-                    <span className="text-xs font-bold text-stone-500">稱呼</span>
-                    <input
-                      value={leadName}
-                      onChange={(event) => setLeadName(event.target.value)}
-                      className="mt-1 w-full rounded-xl border border-asteria-cream bg-white px-4 py-3 outline-none focus:border-asteria-primary"
-                      placeholder="例如：Dorothy"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-xs font-bold text-stone-500">WhatsApp / Email</span>
-                    <input
-                      value={leadContact}
-                      onChange={(event) => {
-                        setLeadContact(event.target.value);
-                        if (error) setError(null);
-                      }}
-                      className="mt-1 w-full rounded-xl border border-asteria-cream bg-white px-4 py-3 outline-none focus:border-asteria-primary"
-                      placeholder="留一個可聯絡方法"
-                    />
-                  </label>
-                </div>
-                <label className="block mt-3">
-                  <span className="text-xs font-bold text-stone-500">想問的感情狀況</span>
-                  <textarea
-                    value={leadConcern}
-                    onChange={(event) => setLeadConcern(event.target.value)}
-                    className="mt-1 w-full min-h-[92px] rounded-xl border border-asteria-cream bg-white px-4 py-3 outline-none focus:border-asteria-primary resize-none"
-                    placeholder="例如：對方突然冷淡、斷聯幾日、想知仲有冇機會..."
-                  />
-                </label>
-              </div>
-
               <h3 className="text-xl font-bold text-gray-700 mb-8">你現在最煩惱的是什麼？</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
                 {topics.map((t) => (
@@ -745,8 +680,8 @@ const Oracle = () => {
                     </p>
                 </div>
 
-                <a href={makeWhatsappUrl(leadMessage)} target="_blank" rel="noreferrer" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
-                    <i className="fa-brands fa-whatsapp"></i> 送出資料，領取完整指引
+                <a href={makeWhatsappUrl(oracleMessage)} target="_blank" rel="noreferrer" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
+                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢詳細指引
                 </a>
                 
                 <button 
