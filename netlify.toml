@@ -7,8 +7,36 @@
   node_bundler = "esbuild"
 
 [[redirects]]
+  from = "http://www.asteria-tarot.com/*"
+  to = "https://asteria-tarot.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.asteria-tarot.com/*"
+  to = "https://asteria-tarot.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://asteria-tarot.com/*"
+  to = "https://asteria-tarot.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/teaching"
+  to = "/teaching/"
+  status = 301
+
+[[redirects]]
   from = "/teaching.html"
   to = "/teaching/"
+  status = 301
+
+[[redirects]]
+  from = "/services"
+  to = "/services/"
   status = 301
 
 [[redirects]]
@@ -17,8 +45,18 @@
   status = 301
 
 [[redirects]]
+  from = "/reviews"
+  to = "/reviews/"
+  status = 301
+
+[[redirects]]
   from = "/reviews.html"
   to = "/reviews/"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about/"
   status = 301
 
 [[redirects]]
@@ -27,8 +65,23 @@
   status = 301
 
 [[redirects]]
+  from = "/cases"
+  to = "/cases/"
+  status = 301
+
+[[redirects]]
   from = "/cases.html"
   to = "/cases/"
+  status = 301
+
+[[redirects]]
+  from = "/oracle"
+  to = "/oracle/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/:id"
+  to = "/articles/:id/"
   status = 301
 
 [[redirects]]

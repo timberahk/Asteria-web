@@ -203,20 +203,6 @@ function buildKeywords(post) {
   ].filter(Boolean))).join(', ');
 }
 
-function extractFaqs(html = '') {
-  const afterHeading = html.split(/<h2[^>]*>\s*常見問題\s*<\/h2>/i)[1];
-  if (!afterHeading) return [];
-  const chunks = afterHeading.split(/<h3[^>]*>/i).slice(1);
-  return chunks.map((chunk) => {
-    const [questionPart, rest = ''] = chunk.split(/<\/h3>/i);
-    const answerMatch = rest.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
-    return {
-      question: stripHtml(questionPart),
-      answer: answerMatch ? stripHtml(answerMatch[1]) : ''
-    };
-  }).filter((faq) => faq.question && faq.answer).slice(0, 4);
-}
-
 function replaceOrInsert(html, selectorPattern, replacement, before = '</head>') {
   if (selectorPattern.test(html)) return html.replace(selectorPattern, replacement);
   return html.replace(before, `${replacement}\n${before}`);
@@ -278,7 +264,6 @@ function articleMeta(post) {
     absoluteUrl(post.coverImage),
     ...(post.images || []).map((image) => absoluteUrl(image.src))
   ]));
-  const faqs = extractFaqs(post.content);
   const graph = [
     {
       '@type': 'Article',
@@ -318,16 +303,6 @@ function articleMeta(post) {
       ]
     }
   ];
-  if (faqs.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      mainEntity: faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
-      }))
-    });
-  }
   return {
     route,
     title,

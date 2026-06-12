@@ -34,7 +34,6 @@ const LOGO_SRC = "/asteria-logo.jpg";
 const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
-const INSTAGRAM_URL = "https://www.instagram.com/asteria.crystal.tarot/";
 
 type SpaceSessionRole = 'customer' | 'staff' | null;
 
@@ -65,7 +64,8 @@ const storeSpaceAccount = (account: { role: 'customer' | 'staff'; username: stri
 const clearSpaceSession = async () => {
   await signOutSpace();
   clearStoredSpaceAccount();
-  window.location.hash = '#register';
+  window.history.pushState(null, '', '/space/');
+  window.dispatchEvent(new Event('asteria-route-change'));
   window.dispatchEvent(new Event('asteria-session-change'));
 };
 
@@ -93,21 +93,24 @@ const goHomeSection = (section: string) => (event: React.MouseEvent<HTMLAnchorEl
   });
 };
 
-const goSpaceEntry = (hash: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+const goSpaceEntry = (path: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
-  window.history.pushState(null, '', `/${window.location.search}${hash}`);
+  window.history.pushState(null, '', path);
   window.dispatchEvent(new Event('asteria-route-change'));
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-type AppPage = 'home' | 'teaching' | 'about' | 'services' | 'reviews' | 'register' | 'portal' | 'admin' | 'inbox';
+type AppPage = 'home' | 'teaching' | 'about' | 'services' | 'oracle' | 'reviews' | 'register' | 'portal' | 'admin' | 'inbox';
 
 const getRoutePage = (): AppPage => {
   const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
   if (cleanPath === 'teaching' || cleanPath === 'cases' || cleanPath.startsWith('articles/')) return 'teaching';
   if (cleanPath === 'about') return 'about';
   if (cleanPath === 'services') return 'services';
+  if (cleanPath === 'oracle') return 'oracle';
   if (cleanPath === 'reviews') return 'reviews';
+  if (cleanPath === 'space' || cleanPath === 'login') return 'register';
+  if (cleanPath === 'staff') return 'inbox';
 
   const rawHash = window.location.hash || '';
   const cleanHash = rawHash
@@ -138,22 +141,13 @@ const scrollToHashTarget = () => {
 
 const Navbar = () => {
   const [role, setRole] = useState<SpaceSessionRole>(getStoredSpaceRole);
-  const [showNotice, setShowNotice] = useState(() => window.localStorage.getItem('asteriaHideTopNotice') !== '1');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const spaceHash = role === 'staff' ? '#inbox' : role === 'customer' ? '#portal' : '#register';
-  const spaceHref = `/${spaceHash}`;
+  const spacePath = role === 'staff' ? '/staff/' : '/space/';
+  const spaceHref = spacePath;
   const spaceLabel = role === 'staff' ? 'Staff Inbox' : role === 'customer' ? '我的 Space' : 'Asteria Space';
-  const navLinkClass = "hover:text-asteria-primary transition-colors hidden md:inline-flex items-center gap-1.5 whitespace-nowrap";
-  const mobileLinkClass = "flex items-center justify-between gap-3 border-b border-asteria-cream/60 px-1 py-3 text-sm font-bold text-asteria-dark last:border-b-0";
-  const mobileSpaceLinkClass = "flex items-center justify-between gap-2 rounded-xl border border-asteria-dark bg-asteria-dark px-3.5 py-2.5 text-sm font-bold text-white shadow-sm";
+  const navLinkClass = "hidden xl:inline-flex h-9 items-center gap-1.5 rounded-full px-3 text-sm font-bold text-stone-600 transition-colors hover:bg-asteria-cream/30 hover:text-asteria-primary whitespace-nowrap";
+  const mobileLinkClass = "flex h-10 items-center justify-between gap-3 rounded-xl px-3 text-sm font-bold text-asteria-dark transition-colors hover:bg-asteria-cream/20";
   const closeMobileMenu = () => setMobileMenuOpen(false);
-  const toggleNotice = () => {
-    setShowNotice((current) => {
-      const next = !current;
-      window.localStorage.setItem('asteriaHideTopNotice', next ? '0' : '1');
-      return next;
-    });
-  };
 
   useEffect(() => {
     const syncRole = () => setRole(getStoredSpaceRole());
@@ -178,33 +172,27 @@ const Navbar = () => {
             ASTERIA <span className="text-asteria-primary text-sm hidden 2xl:inline">感情拯救所</span>
           </div>
         </a>
-        <div className="flex min-w-0 items-center justify-end gap-2 text-sm font-medium text-gray-600">
+        <div className="flex min-w-0 items-center justify-end gap-1.5 text-sm font-medium text-gray-600">
           <a href="/about/" className={navLinkClass}><i className="fa-regular fa-heart text-xs"></i> 關於我們</a>
           <a href="/teaching/" className={navLinkClass}><i className="fa-regular fa-newspaper text-xs"></i> 相處教學</a>
           <a href="/services/" className={navLinkClass}><i className="fa-solid fa-wand-magic-sparkles text-xs"></i> 服務</a>
-          <a href="/#oracle" onClick={goHomeSection('oracle')} className={navLinkClass}><i className="fa-regular fa-star text-xs"></i> 每日指引</a>
-          <a href="/#reviews" onClick={goHomeSection('reviews')} className={navLinkClass}><i className="fa-regular fa-comment-dots text-xs"></i> 好評</a>
-          <a href={spaceHref} onClick={goSpaceEntry(spaceHash)} className="border border-asteria-cream bg-white text-asteria-primary px-2.5 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold hover:border-asteria-primary transition-all flex shrink-0 items-center gap-1 whitespace-nowrap" aria-label={spaceLabel}>
+          <a href="/oracle/" className={navLinkClass}><i className="fa-regular fa-star text-xs"></i> 每日指引</a>
+          <a href="/reviews/" className={navLinkClass}><i className="fa-regular fa-comment-dots text-xs"></i> 好評</a>
+          <a href={spaceHref} onClick={goSpaceEntry(spacePath)} className="border border-asteria-cream bg-white text-asteria-primary px-2.5 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold hover:border-asteria-primary transition-all flex shrink-0 items-center gap-1 whitespace-nowrap" aria-label={spaceLabel}>
             <i className="fa-regular fa-user"></i> <span className="hidden min-[360px]:inline">{spaceLabel}</span>
-          </a>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="border border-pink-100 bg-white text-pink-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-pink-50 transition-all hidden xl:inline-flex items-center gap-1 whitespace-nowrap">
-            <i className="fa-brands fa-instagram"></i> IG
           </a>
           {role && (
             <button onClick={clearSpaceSession} className="border border-red-100 bg-white text-red-500 px-3 py-1.5 rounded-full text-sm font-bold hover:bg-red-50 transition-all hidden xl:inline-flex whitespace-nowrap">
               登出
             </button>
           )}
-          <button onClick={toggleNotice} className="border border-asteria-cream bg-white text-stone-500 px-3 py-1.5 rounded-full text-xs font-bold hover:text-asteria-primary transition-all hidden 2xl:inline-flex whitespace-nowrap">
-            {showNotice ? '收起公告' : '顯示公告'}
-          </button>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-1.5 rounded-full text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all hidden 2xl:flex items-center gap-1 whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> <span>預約</span>
           </a>
           <button
             type="button"
             onClick={() => setMobileMenuOpen((current) => !current)}
-            className="md:hidden border border-asteria-cream bg-white text-asteria-primary w-10 h-10 rounded-full text-lg font-bold flex shrink-0 items-center justify-center shadow-sm"
+            className="xl:hidden border border-asteria-cream bg-white text-asteria-primary w-10 h-10 rounded-full text-lg font-bold flex shrink-0 items-center justify-center shadow-sm"
             aria-label={mobileMenuOpen ? '收起選單' : '打開選單'}
             aria-expanded={mobileMenuOpen}
           >
@@ -213,14 +201,13 @@ const Navbar = () => {
         </div>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-asteria-cream/70 bg-[#FFF9F0]/95 px-3 py-3 shadow-lg">
-          <div className="ml-auto w-full max-w-[320px] rounded-2xl border border-asteria-cream bg-white px-4 py-3 shadow-xl">
-            <div className="grid">
+        <div className="xl:hidden absolute right-3 top-[72px] z-[60] w-[min(21rem,calc(100vw-1.5rem))] rounded-2xl border border-asteria-cream bg-white p-2 shadow-2xl">
+            <div className="grid gap-1">
               <a href="/about/" onClick={closeMobileMenu} className={mobileLinkClass}>
                 <span><i className="fa-regular fa-heart mr-2 text-asteria-primary"></i>關於我們</span>
                 <i className="fa-solid fa-chevron-right text-[10px] text-stone-300"></i>
               </a>
-              <a href="/#oracle" onClick={(event) => { closeMobileMenu(); goHomeSection('oracle')(event); }} className={mobileLinkClass}>
+              <a href="/oracle/" onClick={closeMobileMenu} className={mobileLinkClass}>
                 <span><i className="fa-regular fa-star mr-2 text-asteria-primary"></i>每日指引</span>
                 <i className="fa-solid fa-chevron-right text-[10px] text-stone-300"></i>
               </a>
@@ -232,66 +219,43 @@ const Navbar = () => {
                 <span><i className="fa-solid fa-wand-magic-sparkles mr-2 text-asteria-primary"></i>服務</span>
                 <i className="fa-solid fa-chevron-right text-[10px] text-stone-300"></i>
               </a>
-              <a href="/#reviews" onClick={(event) => { closeMobileMenu(); goHomeSection('reviews')(event); }} className={mobileLinkClass}>
+              <a href="/reviews/" onClick={closeMobileMenu} className={mobileLinkClass}>
                 <span><i className="fa-regular fa-comment-dots mr-2 text-asteria-primary"></i>好評</span>
                 <i className="fa-solid fa-chevron-right text-[10px] text-stone-300"></i>
               </a>
             </div>
-            <div className="mt-3 grid gap-2">
-              <a href={spaceHref} onClick={(event) => { closeMobileMenu(); goSpaceEntry(spaceHash)(event); }} className={mobileSpaceLinkClass}>
-                <span><i className="fa-regular fa-user mr-2"></i>{spaceLabel}</span>
-                <i className="fa-solid fa-chevron-right text-xs text-white/60"></i>
-              </a>
-              {role && (
+            {role && (
+              <div className="mt-1 grid gap-1 border-t border-asteria-cream/60 pt-1">
                 <button
                   type="button"
                   onClick={() => {
                     closeMobileMenu();
                     void clearSpaceSession();
                   }}
-                  className="flex items-center justify-between gap-2 rounded-xl border border-red-100 bg-white px-3.5 py-2.5 text-sm font-bold text-red-500"
+                  className="flex h-10 items-center justify-between gap-3 rounded-xl px-3 text-sm font-bold text-red-500 transition-colors hover:bg-red-50"
                 >
                   <span><i className="fa-solid fa-arrow-right-from-bracket mr-2"></i>登出</span>
                   <i className="fa-solid fa-chevron-right text-xs text-red-200"></i>
                 </button>
-              )}
-              <button
-                type="button"
-                onClick={() => {
-                  closeMobileMenu();
-                  toggleNotice();
-                }}
-                className="flex items-center justify-between gap-2 rounded-xl border border-asteria-cream bg-asteria-cream/20 px-3.5 py-2.5 text-sm font-bold text-stone-600"
-              >
-                <span><i className="fa-regular fa-bell mr-2 text-asteria-primary"></i>{showNotice ? '收起公告' : '顯示公告'}</span>
-                <i className="fa-solid fa-chevron-right text-xs text-stone-300"></i>
-              </button>
-            </div>
-            <div className="mt-3 flex flex-wrap gap-2 border-t border-asteria-cream/60 pt-3">
-              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-8 flex-1 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-orange-400 px-3 text-xs font-bold text-white">
-                IG
+              </div>
+            )}
+            <div className="mt-2 grid grid-cols-2 gap-2 border-t border-asteria-cream/60 pt-2">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#25D366] px-3 text-xs font-bold text-white">
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-8 flex-1 items-center justify-center rounded-full bg-[#25D366] px-3 text-xs font-bold text-white">
-                WhatsApp
+              <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#2AABEE] px-3 text-xs font-bold text-white">
+                <i className="fa-brands fa-telegram"></i> Telegram
               </a>
-              <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-8 flex-1 items-center justify-center rounded-full bg-[#2AABEE] px-3 text-xs font-bold text-white">
-                TG
-              </a>
-              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-8 flex-1 items-center justify-center rounded-full bg-[#1877F2] px-3 text-xs font-bold text-white">
-                FB
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#1877F2] px-3 text-xs font-bold text-white">
+                <i className="fa-brands fa-facebook-f"></i> Facebook
               </a>
             </div>
-          </div>
         </div>
       )}
-      {showNotice && (
       <div className="bg-asteria-dark text-white">
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
-          <span className="font-bold whitespace-nowrap">官方聯絡入口</span>
-          <span className="text-white/80 whitespace-nowrap">可以用以下方法搵我哋：</span>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-gradient-to-r from-pink-500 to-orange-400 text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
-            <i className="fa-brands fa-instagram"></i> Instagram
-          </a>
+          <span className="font-bold whitespace-nowrap">IG 帳號暫停通知</span>
+          <span className="text-white/80 whitespace-nowrap">請改用以下官方方法聯絡：</span>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
@@ -301,9 +265,11 @@ const Navbar = () => {
           <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#2AABEE] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-telegram"></i> Telegram
           </a>
+          <a href={spaceHref} onClick={goSpaceEntry(spacePath)} className="inline-flex max-w-full items-center justify-center gap-1 bg-white text-asteria-primary px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
+            <i className="fa-regular fa-user"></i> Asteria Space
+          </a>
         </div>
       </div>
-      )}
     </nav>
   );
 };
@@ -338,14 +304,11 @@ const Hero = () => (
                 <i className="fa-solid fa-bullhorn"></i>
               </div>
               <div>
-                <div className="font-bold text-asteria-dark mb-1">官方聯絡方法</div>
+                <div className="font-bold text-asteria-dark mb-1">IG 帳號暫停通知</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  Instagram 已恢復使用。你可以用 IG、WhatsApp、Facebook、Telegram 或 Asteria Space 聯絡我哋。
+                  Instagram 暫時未能使用。請改用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡我哋，避免失聯。
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-orange-400 text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
-                    <i className="fa-brands fa-instagram"></i> Instagram
-                  </a>
                   <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-whatsapp"></i> WhatsApp
                   </a>
@@ -355,7 +318,7 @@ const Hero = () => (
                   <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-2 bg-[#2AABEE] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-telegram"></i> Telegram
                   </a>
-                  <a href="/#register" className="inline-flex items-center justify-center gap-2 bg-asteria-dark text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-110 transition-all whitespace-nowrap">
+                  <a href="/space/" className="inline-flex items-center justify-center gap-2 bg-asteria-dark text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-110 transition-all whitespace-nowrap">
                     <i className="fa-regular fa-user"></i> Asteria Space
                   </a>
                 </div>
@@ -368,20 +331,20 @@ const Hero = () => (
               <div>
                 <div className="font-bold text-asteria-dark mb-1">請留低你的聯絡資料</div>
               </div>
-              <a href="/#register" className="bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shrink-0">
+              <a href="/space/" className="bg-asteria-dark text-white px-5 py-3 rounded-xl font-bold shadow-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shrink-0">
                 <i className="fa-regular fa-user"></i> 登入 Space
               </a>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="/#register" className="bg-asteria-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+            <a href="/space/" className="bg-asteria-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all">
               <i className="fa-regular fa-address-card"></i> 留資料 / 登入 Space
             </a>
             <a href="/services/" className="btn-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 group">
               <i className="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i> 查看儀式分類
             </a>
-            <a href="/#oracle" className="bg-white text-asteria-primary border-2 border-asteria-yellow/70 px-8 py-4 rounded-xl font-bold hover:bg-asteria-yellow/20 transition-all flex items-center justify-center gap-2">
+            <a href="/oracle/" className="bg-white text-asteria-primary border-2 border-asteria-yellow/70 px-8 py-4 rounded-xl font-bold hover:bg-asteria-yellow/20 transition-all flex items-center justify-center gap-2">
               <i className="fa-solid fa-star"></i> 今日指引
             </a>
           </div>
@@ -826,7 +789,56 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       const haystack = `${post.title} ${post.summary} ${post.category} ${post.tags.join(' ')}`.toLowerCase();
       return matchesCategory && (!normalizedArticleSearch || haystack.includes(normalizedArticleSearch));
     });
-    const homePosts = posts.slice(0, 4);
+
+    const stableHash = (value: string) =>
+      value.split('').reduce((total, char) => total + char.charCodeAt(0), 0);
+
+    const rotatePosts = (items: TeachingPost[], seed: number) => {
+      if (!items.length) return [];
+      const offset = Math.abs(seed) % items.length;
+      return [...items.slice(offset), ...items.slice(0, offset)];
+    };
+
+    const scoreRelatedPost = (source: TeachingPost, candidate: TeachingPost) => {
+      let score = 0;
+      if (source.category === candidate.category) score += 8;
+
+      const sourceTags = new Set(source.tags || []);
+      score += (candidate.tags || []).filter((tag) => sourceTags.has(tag)).length * 4;
+
+      const sourceText = `${source.title} ${source.summary}`.toLowerCase();
+      for (const tag of candidate.tags || []) {
+        if (sourceText.includes(tag.toLowerCase())) score += 1;
+      }
+
+      return score;
+    };
+
+    const getRelatedPosts = (currentId: number | null, count: number, offset = 0) => {
+      const current = posts.find((post) => post.id === currentId);
+      const candidates = posts.filter((post) => post.id !== currentId);
+      if (!current) return rotatePosts(candidates, offset).slice(0, count);
+
+      const seed = current.id + stableHash(current.category || '') + offset * 17;
+      const rotatedCandidates = rotatePosts(candidates, seed);
+
+      return [...rotatedCandidates]
+        .sort((a, b) => {
+          const scoreDiff = scoreRelatedPost(current, b) - scoreRelatedPost(current, a);
+          if (scoreDiff !== 0) return scoreDiff;
+          return ((a.id + seed) % 23) - ((b.id + seed) % 23);
+        })
+        .slice(0, count);
+    };
+
+    const getHomePosts = () => {
+      const byCategory = articleCategories
+        .filter((category) => category !== '全部')
+        .flatMap((category, index) => rotatePosts(posts.filter((post) => post.category === category), index * 11).slice(0, 1));
+      return Array.from(new Map([...byCategory, ...rotatePosts(posts, 9)].map((post) => [post.id, post])).values()).slice(0, 4);
+    };
+
+    const homePosts = getHomePosts();
 
     const makeArticleHref = (post: any) => `/articles/${post.id}/`;
     const pathMatch = fullPage ? window.location.pathname.match(/^\/articles\/(\d+)\/?$/) : null;
@@ -834,7 +846,10 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const articleMatch = pathMatch || hashMatch;
     const activeId = articleMatch ? Number(articleMatch[1] === 'article' ? articleMatch[2] : articleMatch[1]) : null;
     const activePost = posts.find((post) => post.id === activeId);
-    const relatedPosts = posts.filter((post) => post.id !== activeId).slice(0, 3);
+    const relatedCalloutPost = getRelatedPosts(activeId, 1, 2)[0];
+    const relatedPosts = getRelatedPosts(activeId, 5)
+      .filter((post) => post.id !== relatedCalloutPost?.id)
+      .slice(0, 3);
     const isCaseLibrary = fullPage && window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase() === 'cases';
     const siteUrl = 'https://asteria-tarot.com';
 
@@ -865,25 +880,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       const cleanSummary = post.summary.replace(/[\[\]【】]/g, '').replace(/\s+/g, ' ').trim();
       const base = `${cleanSummary} Asteria 感情拯救所提供復合挽回、斷聯冷淡、曖昧相處、感情占卜、塔羅分析與關係修復方向。`;
       return base.slice(0, 155);
-    };
-
-    const extractArticleFaqs = (html: string) => {
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const faqHeading = Array.from(doc.querySelectorAll('h2')).find((heading) => heading.textContent?.includes('常見問題'));
-      if (!faqHeading) return [];
-      const faqs: Array<{ question: string; answer: string }> = [];
-      let node = faqHeading.nextElementSibling;
-      while (node) {
-        if (node.tagName === 'H2') break;
-        if (node.tagName === 'H3') {
-          const question = (node.textContent || '').trim();
-          const answerNode = node.nextElementSibling;
-          const answer = answerNode?.tagName === 'P' ? (answerNode.textContent || '').replace(/\s+/g, ' ').trim() : '';
-          if (question && answer) faqs.push({ question, answer });
-        }
-        node = node.nextElementSibling;
-      }
-      return faqs.slice(0, 4);
     };
 
     useEffect(() => {
@@ -920,7 +916,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       const previous = document.getElementById('asteria-dynamic-article-schema');
       previous?.remove();
       if (activePost) {
-        const faqs = extractArticleFaqs(activePost.content);
         const articleImages = [
           absoluteUrl(activePost.coverImage),
           ...getEditorialImages(activeId).map((image) => absoluteUrl(image.src))
@@ -963,16 +958,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
             ]
           }
         ];
-        if (faqs.length) {
-          graph.push({
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer }
-            }))
-          });
-        }
         const script = document.createElement('script');
         script.id = 'asteria-dynamic-article-schema';
         script.type = 'application/ld+json';
@@ -1088,9 +1073,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       );
     };
 
-    const ArticleRelatedCallout = ({ currentId }: { currentId: number | null }) => {
-      const pool = posts;
-      const recommendation = pool.find((post) => post.id !== currentId) || pool[0];
+    const ArticleRelatedCallout = ({ recommendation }: { recommendation?: TeachingPost }) => {
       if (!recommendation) return null;
       return (
         <aside className="my-8 md:my-10 rounded-2xl border border-asteria-cream bg-[#FFF8EC] p-5 md:p-6">
@@ -1160,7 +1143,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                   <React.Fragment key={`${activePost.id}-${index}`}>
                     <div className="article-body" dangerouslySetInnerHTML={{ __html: segment }}></div>
                     {index < 3 && <ArticleInlineImage index={index} />}
-                    {index === 0 && <ArticleRelatedCallout currentId={activeId} />}
+                    {index === 0 && <ArticleRelatedCallout recommendation={relatedCalloutPost} />}
                   </React.Fragment>
                 ))}
               </div>
@@ -1841,7 +1824,7 @@ const Reviews = () => (
 const ReviewsPage = () => (
   <main className="pt-48 md:pt-32 pb-20 bg-asteria-blue/10 min-h-screen">
     <div className="container mx-auto px-6">
-      <a href="/#reviews" onClick={goHomeSection('reviews')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+      <a href="/reviews/" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
         <i className="fa-solid fa-arrow-left"></i> 返回首頁好評
       </a>
       <div className="text-center mb-12">
@@ -2141,7 +2124,8 @@ const RegisterPage = () => {
           window.localStorage.setItem('asteriaCurrentCustomerId', account.user_id);
         }
 
-        window.location.hash = account.role === 'staff' ? '#inbox' : '#portal';
+        window.history.pushState(null, '', account.role === 'staff' ? '/staff/' : '/space/');
+        window.dispatchEvent(new Event('asteria-route-change'));
         return;
       } catch (error) {
         setLoginError(error instanceof Error ? error.message : '登入資料不正確。');
@@ -4027,9 +4011,6 @@ const Footer = () => (
         我們致力於運用白魔法與塔羅智慧，為你在迷惘中找到出口。
       </p>
       <div className="flex justify-center gap-4 mb-6">
-        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Instagram" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition-all shadow-sm">
-          <i className="fa-brands fa-instagram text-xl"></i>
-        </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-whatsapp text-xl"></i>
         </a>
@@ -4041,9 +4022,6 @@ const Footer = () => (
         </a>
       </div>
       <div className="mx-auto mb-8 grid gap-2 text-sm text-stone-500 max-w-md">
-        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
-          Instagram：@asteria.crystal.tarot
-        </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
           WhatsApp：5941 3688
         </a>
@@ -4182,6 +4160,19 @@ const App = () => {
         <Navbar />
         <main className="pt-48 md:pt-32 bg-[#FFFDF8] min-h-screen">
           <Services />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    );
+  }
+
+  if (page === 'oracle') {
+    return (
+      <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
+        <Navbar />
+        <main className="pt-48 md:pt-32 bg-[#FFFDF8] min-h-screen">
+          <Oracle />
         </main>
         <Footer />
         <FloatingWhatsApp />
