@@ -46,12 +46,14 @@ const setSeoMeta = ({
   description,
   canonical,
   image = DEFAULT_SEO_IMAGE,
+  imageAlt = 'Asteria 感情拯救所',
   robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 }: {
   title: string;
   description: string;
   canonical: string;
   image?: string;
+  imageAlt?: string;
   robots?: string;
 }) => {
   document.title = title;
@@ -68,7 +70,7 @@ const setSeoMeta = ({
   setMeta('meta[property="og:description"]', 'content', description);
   setMeta('meta[property="og:url"]', 'content', canonical);
   setMeta('meta[property="og:image"]', 'content', image);
-  setMeta('meta[property="og:image:alt"]', 'content', 'Asteria 感情拯救所');
+  setMeta('meta[property="og:image:alt"]', 'content', imageAlt);
   setMeta('meta[name="twitter:title"]', 'content', title);
   setMeta('meta[name="twitter:description"]', 'content', description);
   setMeta('meta[name="twitter:image"]', 'content', image);
@@ -611,7 +613,7 @@ const Oracle = () => {
       
       <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
         <h2 className="text-3xl font-bold text-gray-800 mb-2">宇宙解憂信箱</h2>
-        <p className="text-gray-500 mb-10">心裡想著那個讓你困擾的人或事，抽一張牌睇清今日感情方向。</p>
+        <p className="text-gray-500 mb-10">心裡想著那個讓你困擾的人或事，免費抽一張今日感情指引；抽完可以直接 WhatsApp 帶埋牌面問我哋。</p>
 
         <div className="glass-card rounded-3xl p-8 md:p-12 min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500 shadow-2xl bg-white/50">
 
@@ -914,6 +916,29 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       return phrases.slice(0, 7);
     };
 
+    const getArticleSeoHook = (post?: TeachingPost | null) => {
+      const haystack = `${post?.title || ''} ${post?.summary || ''} ${post?.category || ''} ${(post?.tags || []).join(' ')}`;
+      if (/復合|挽回|前任|分手/.test(haystack)) {
+        return '分手後放唔低、想知仲有冇復合機會，先睇清對方心態、分手原因同下一步應唔應該主動。';
+      }
+      if (/斷聯|冷淡|少覆|失聯|不讀不回|已讀不回/.test(haystack)) {
+        return '對方突然冷淡、少覆 message、已讀不回或斷聯時，先整理壓力位，再決定點樣開口最穩陣。';
+      }
+      if (/曖昧|暗戀|桃花|單身|脫單/.test(haystack)) {
+        return '曖昧卡住、暗戀唔知對方有冇意思，先分清楚吸引、互動節奏同可推進的時機。';
+      }
+      if (/第三者|新歡|出軌|介入/.test(haystack)) {
+        return '遇到第三者、前任有新歡或關係被介入時，先睇清對方真實重心同你仲可以點穩住局面。';
+      }
+      if (/溝通|訊息|message|回覆|勸|說話|聊天/.test(haystack)) {
+        return '唔知訊息點覆、怕講錯說話或越解釋越遠，可以先用相處教學整理語氣、界線同回覆策略。';
+      }
+      if (/儀式|能量|占卜|塔羅|牌/.test(haystack)) {
+        return '想用香港塔羅占卜或愛情儀式睇清感情能量，先整理問題核心，再揀合適方向處理。';
+      }
+      return '如果你喺感情入面覺得迷惘，可以先由文章整理情緒、對方心態、相處模式同下一步方向。';
+    };
+
     const buildSeoKeywords = (post?: TeachingPost | null) => {
       const searchIntents = [
         '復合', '挽回', '挽回前任', '分手後點算', '失戀', '放唔低前任',
@@ -933,9 +958,9 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
           ? 'Asteria 感情拯救所客人個案長文庫，整理復合、斷聯、冷淡、第三者與關係修復案例。'
           : 'Asteria 感情拯救所相處教學，整理復合挽回、分手失戀、斷聯冷淡、曖昧第三者、感情占卜與日常相處方法。';
       }
-      const cleanSummary = post.summary.replace(/[\[\]【】]/g, '').replace(/\s+/g, ' ').trim();
+      const title = post.title.replace(/[\[\]【】]/g, '').replace(/\s+/g, ' ').trim();
       const phrases = getArticleSearchPhrases(post).slice(0, 3).join('、');
-      const base = `${cleanSummary} 如果你正在搜尋${phrases}，Asteria 以相處教學、香港塔羅占卜與愛情儀式方向幫你整理下一步。`;
+      const base = `${title}｜${getArticleSeoHook(post)} 搜尋${phrases}時，Asteria 會以相處教學、香港塔羅占卜與愛情儀式方向幫你拆解。`;
       return base.slice(0, 155);
     };
 
@@ -953,13 +978,19 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       const coverImage = absoluteUrl(activePost?.coverImage);
       const keywords = buildSeoKeywords(activePost);
 
-      setSeoMeta({ title, description, canonical, image: coverImage });
+      setSeoMeta({
+        title,
+        description,
+        canonical,
+        image: coverImage,
+        imageAlt: activePost ? `${activePost.title}｜${activePost.category}｜Asteria 相處教學` : 'Asteria 感情拯救所'
+      });
       const setMeta = (selector: string, attr: 'content' | 'href', value: string) => {
         const element = document.querySelector(selector);
         if (element) element.setAttribute(attr, value);
       };
       setMeta('meta[name="keywords"]', 'content', keywords);
-      setMeta('meta[property="og:image:alt"]', 'content', activePost?.title || 'Asteria 感情拯救所');
+      setMeta('meta[property="og:image:alt"]', 'content', activePost ? `${activePost.title}｜${activePost.category}｜Asteria 相處教學` : 'Asteria 感情拯救所');
 
       const previous = document.getElementById('asteria-dynamic-article-schema');
       previous?.remove();
@@ -1060,7 +1091,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       return (
         <div className={`${hero ? 'aspect-[16/9] md:aspect-[2.2/1]' : compact ? 'aspect-[1.15/1]' : 'aspect-[4/3]'} relative overflow-hidden bg-[#FFF8EC]`}>
           {!failed ? (
-            <img src={cover.src} alt={cover.caption} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
+            <img src={cover.src} alt={`${post.title}｜${post.category}｜Asteria 相處教學封面`} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-[#FFF8EC] text-asteria-primary">
               <i className="fa-regular fa-image text-3xl"></i>
@@ -1109,7 +1140,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         <figure className="article-figure my-10 md:my-14 overflow-hidden rounded-[24px] md:rounded-[32px] border border-asteria-cream/70 bg-white shadow-sm">
           <div className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] bg-[#FFF8EC]">
             {!failed ? (
-              <img src={image.src} alt={image.caption} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
+              <img src={image.src} alt={`${activePost?.title || 'Asteria 相處教學'} 內文圖片：${image.caption}`} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
             ) : (
               <div className="w-full h-full flex items-center justify-center text-asteria-primary">
                 <i className="fa-regular fa-image text-3xl"></i>
@@ -1139,6 +1170,31 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         </aside>
       );
     };
+
+    const ArticleActionBox = ({ post }: { post: TeachingPost }) => (
+      <aside className="my-10 md:my-14 rounded-[26px] border border-asteria-cream/80 bg-white p-6 md:p-7 shadow-sm">
+        <div className="grid md:grid-cols-[1fr_auto] gap-5 items-center">
+          <div>
+            <div className="text-sm font-bold text-asteria-primary mb-2">睇完仍然唔知下一步？</div>
+            <h2 className="text-2xl font-bold text-asteria-dark mb-3">可以用你自己的對話再拆一次</h2>
+            <p className="text-stone-500 leading-relaxed">
+              文章幫你整理方向；如果你想知道自己個 case 應該點覆、點退、點推進，可以直接 WhatsApp 我哋睇情況。
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row md:flex-col gap-3">
+            <a href="/oracle/" className="inline-flex items-center justify-center gap-2 rounded-xl border border-asteria-cream bg-[#FFF8EC] px-4 py-3 font-bold text-asteria-primary hover:bg-asteria-cream/40 transition-colors">
+              <i className="fa-regular fa-star"></i> 抽每日指引
+            </a>
+            <a href="/services/" className="inline-flex items-center justify-center gap-2 rounded-xl border border-asteria-cream bg-white px-4 py-3 font-bold text-asteria-primary hover:bg-[#FFF8EC] transition-colors">
+              <i className="fa-solid fa-wand-magic-sparkles"></i> 睇服務方向
+            </a>
+            <a href={makeWhatsappUrl(`你好，我睇完《${post.title}》，想問我自己的情況可以點處理。`)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 font-bold text-white hover:brightness-95 transition-all">
+              <i className="fa-brands fa-whatsapp"></i> WhatsApp 問我哋
+            </a>
+          </div>
+        </div>
+      </aside>
+    );
 
     if (fullPage && isCaseLibrary) {
       return (
@@ -1191,9 +1247,9 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 <aside className="mb-10 rounded-[24px] border border-asteria-cream/80 bg-[#FFF8EC] p-5 md:p-6">
                   <div className="text-xs font-bold tracking-[0.2em] text-asteria-primary mb-3">常見搜尋情境</div>
                   <p className="text-stone-600 leading-relaxed mb-4">
-                    如果你正在搜尋
+                    你可能係因為
                     <span className="font-bold text-asteria-dark"> {articleSearchPhrases.slice(0, 3).join('、')} </span>
-                    呢類問題，呢篇會先幫你整理方向；如果想睇清對方心態、訊息點覆或下一步，可以再 WhatsApp 我哋。
+                    呢類問題而搵到呢篇。先睇完文章整理脈絡；如果想逐句 review 對話，再 WhatsApp 我哋會更準。
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {articleSearchPhrases.map((phrase) => (
@@ -1210,6 +1266,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                     {index === 0 && <ArticleRelatedCallout recommendation={relatedCalloutPost} />}
                   </React.Fragment>
                 ))}
+                <ArticleActionBox post={activePost} />
               </div>
             </div>
 

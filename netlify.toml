@@ -28,71 +28,85 @@
   from = "/teaching"
   to = "/teaching/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/teaching.html"
   to = "/teaching/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/services"
   to = "/services/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/services.html"
   to = "/services/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/reviews"
   to = "/reviews/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/reviews.html"
   to = "/reviews/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/about"
   to = "/about/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/about.html"
   to = "/about/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/cases"
   to = "/cases/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/cases.html"
   to = "/cases/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/oracle"
   to = "/oracle/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/articles/:id"
   to = "/articles/:id/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/article-:id"
   to = "/articles/:id/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/article/:id"
   to = "/articles/:id/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/*"

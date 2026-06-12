@@ -206,11 +206,33 @@ function articleSearchPhrases(post) {
   return phrases.slice(0, 7);
 }
 
+function articleSeoHook(post) {
+  const haystack = `${post?.title || ''} ${post?.summary || ''} ${post?.category || ''} ${(post?.tags || []).join(' ')}`;
+  if (/復合|挽回|前任|分手/.test(haystack)) {
+    return '分手後放唔低、想知仲有冇復合機會，先睇清對方心態、分手原因同下一步應唔應該主動。';
+  }
+  if (/斷聯|冷淡|少覆|失聯|不讀不回|已讀不回/.test(haystack)) {
+    return '對方突然冷淡、少覆 message、已讀不回或斷聯時，先整理壓力位，再決定點樣開口最穩陣。';
+  }
+  if (/曖昧|暗戀|桃花|單身|脫單/.test(haystack)) {
+    return '曖昧卡住、暗戀唔知對方有冇意思，先分清楚吸引、互動節奏同可推進的時機。';
+  }
+  if (/第三者|新歡|出軌|介入/.test(haystack)) {
+    return '遇到第三者、前任有新歡或關係被介入時，先睇清對方真實重心同你仲可以點穩住局面。';
+  }
+  if (/溝通|訊息|message|回覆|勸|說話|聊天/.test(haystack)) {
+    return '唔知訊息點覆、怕講錯說話或越解釋越遠，可以先用相處教學整理語氣、界線同回覆策略。';
+  }
+  if (/儀式|能量|占卜|塔羅|牌/.test(haystack)) {
+    return '想用香港塔羅占卜或愛情儀式睇清感情能量，先整理問題核心，再揀合適方向處理。';
+  }
+  return '如果你喺感情入面覺得迷惘，可以先由文章整理情緒、對方心態、相處模式同下一步方向。';
+}
+
 function buildDescription(post) {
-  const summary = stripHtml(post.summary || '').replace(/[\[\]【】]/g, '');
-  const body = stripHtml(post.content || '');
+  const title = cleanTitle(post.title || '');
   const phrases = articleSearchPhrases(post).slice(0, 3).join('、');
-  const text = `${summary || body} 如果你正在搜尋${phrases}，Asteria 以相處教學、香港塔羅占卜與愛情儀式方向幫你整理下一步。`;
+  const text = `${title}｜${articleSeoHook(post)} 搜尋${phrases}時，Asteria 會以相處教學、香港塔羅占卜與愛情儀式方向幫你拆解。`;
   return text.replace(/\s+/g, ' ').trim().slice(0, 155);
 }
 
@@ -331,7 +353,7 @@ function articleMeta(post) {
     description,
     keywords,
     image: post.coverImage,
-    imageAlt: cleanTitle(post.title),
+    imageAlt: `${cleanTitle(post.title)}｜${post.category}｜Asteria 相處教學封面`,
     ogType: 'article',
     schemaGraph: graph
   };
