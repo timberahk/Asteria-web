@@ -34,6 +34,41 @@ const LOGO_SRC = "/asteria-logo.jpg";
 const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
+const SITE_URL = "https://asteria-tarot.com";
+const DEFAULT_SEO_IMAGE = `${SITE_URL}${LOGO_SRC}`;
+
+const setSeoMeta = ({
+  title,
+  description,
+  canonical,
+  image = DEFAULT_SEO_IMAGE,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+}: {
+  title: string;
+  description: string;
+  canonical: string;
+  image?: string;
+  robots?: string;
+}) => {
+  document.title = title;
+  const setMeta = (selector: string, attr: 'content' | 'href', value: string) => {
+    const element = document.querySelector(selector);
+    if (element) element.setAttribute(attr, value);
+  };
+
+  setMeta('meta[name="description"]', 'content', description);
+  setMeta('link[rel="canonical"]', 'href', canonical);
+  setMeta('meta[name="robots"]', 'content', robots);
+  setMeta('meta[name="googlebot"]', 'content', robots.replace('max-video-preview:-1', '').replace(/\s+,/g, ','));
+  setMeta('meta[property="og:title"]', 'content', title);
+  setMeta('meta[property="og:description"]', 'content', description);
+  setMeta('meta[property="og:url"]', 'content', canonical);
+  setMeta('meta[property="og:image"]', 'content', image);
+  setMeta('meta[property="og:image:alt"]', 'content', 'Asteria 感情拯救所');
+  setMeta('meta[name="twitter:title"]', 'content', title);
+  setMeta('meta[name="twitter:description"]', 'content', description);
+  setMeta('meta[name="twitter:image"]', 'content', image);
+};
 
 type SpaceSessionRole = 'customer' | 'staff' | null;
 
@@ -306,7 +341,7 @@ const Hero = () => (
               <div>
                 <div className="font-bold text-asteria-dark mb-1">IG 帳號暫停通知</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  Instagram 暫時未能使用。請改用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡我哋，避免失聯。
+                  IG 暫時停用。請用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡我哋。
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
@@ -851,11 +886,10 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       .filter((post) => post.id !== relatedCalloutPost?.id)
       .slice(0, 3);
     const isCaseLibrary = fullPage && window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase() === 'cases';
-    const siteUrl = 'https://asteria-tarot.com';
 
     const absoluteUrl = (url?: string) => {
-      if (!url) return `${siteUrl}${LOGO_SRC}`;
-      return url.startsWith('http') ? url : `${siteUrl}${url}`;
+      if (!url) return DEFAULT_SEO_IMAGE;
+      return url.startsWith('http') ? url : `${SITE_URL}${url}`;
     };
 
     const buildSeoKeywords = (post?: TeachingPost | null) => {
@@ -886,7 +920,9 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       if (!fullPage) return;
       const title = activePost
         ? `${activePost.title}｜Asteria 感情拯救所`
-        : '相處教學｜Asteria 感情拯救所';
+        : isCaseLibrary
+          ? '客人個案長文｜Asteria 感情拯救所'
+          : '相處教學｜Asteria 感情拯救所';
       const description = buildSeoDescription(activePost);
       const canonical = activePost
         ? `https://asteria-tarot.com/articles/${activeId}/`
@@ -894,24 +930,13 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       const coverImage = absoluteUrl(activePost?.coverImage);
       const keywords = buildSeoKeywords(activePost);
 
-      document.title = title;
-
+      setSeoMeta({ title, description, canonical, image: coverImage });
       const setMeta = (selector: string, attr: 'content' | 'href', value: string) => {
         const element = document.querySelector(selector);
         if (element) element.setAttribute(attr, value);
       };
-
-      setMeta('meta[name="description"]', 'content', description);
       setMeta('meta[name="keywords"]', 'content', keywords);
-      setMeta('link[rel="canonical"]', 'href', canonical);
-      setMeta('meta[property="og:title"]', 'content', title);
-      setMeta('meta[property="og:description"]', 'content', description);
-      setMeta('meta[property="og:url"]', 'content', canonical);
-      setMeta('meta[property="og:image"]', 'content', coverImage);
       setMeta('meta[property="og:image:alt"]', 'content', activePost?.title || 'Asteria 感情拯救所');
-      setMeta('meta[name="twitter:title"]', 'content', title);
-      setMeta('meta[name="twitter:description"]', 'content', description);
-      setMeta('meta[name="twitter:image"]', 'content', coverImage);
 
       const previous = document.getElementById('asteria-dynamic-article-schema');
       previous?.remove();
@@ -1185,7 +1210,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               <div>
                 <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
                 <h1 className="text-4xl font-bold text-asteria-dark mb-3">相處教學</h1>
-                <p className="text-stone-500 max-w-2xl">用 IG 圖文感覺慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
+                <p className="text-stone-500 max-w-2xl">用圖文方式慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
               </div>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
                 <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
@@ -4119,6 +4144,64 @@ const App = () => {
       window.removeEventListener('asteria-session-change', handleSessionChange);
     };
   }, []);
+
+  useEffect(() => {
+    if (page === 'teaching') return;
+
+    const pageSeo: Record<AppPage, { title: string; description: string; canonical: string; robots?: string }> = {
+      home: {
+        title: 'Asteria 感情拯救所｜復合挽回・相處教學・感情占卜・愛情儀式',
+        description: 'Asteria 感情拯救所提供感情占卜、塔羅分析、復合挽回、斷聯冷淡、曖昧第三者、愛情儀式與日常相處教學。IG 暫停期間請用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡。',
+        canonical: `${SITE_URL}/`,
+      },
+      about: {
+        title: '關於我們｜Asteria 感情拯救所',
+        description: '認識 Asteria 感情拯救所：不只提供占卜與儀式，亦會陪你整理分手、復合、斷聯、冷淡、曖昧與相處問題，教你下一步點做。',
+        canonical: `${SITE_URL}/about/`,
+      },
+      services: {
+        title: '服務項目｜感情占卜・塔羅分析・愛情儀式｜Asteria',
+        description: 'Asteria 服務包括感情占卜、塔羅分析、曖昧 plan、拍拖 plan、暗戀 plan、復合 plan、單身 plan、愛情儀式與關係能量調整。',
+        canonical: `${SITE_URL}/services/`,
+      },
+      oracle: {
+        title: '每日指引｜Asteria 感情拯救所',
+        description: 'Asteria 每日指引，陪你在感情混亂、分手失戀、復合挽回、斷聯冷淡與曖昧不安時整理情緒和方向。',
+        canonical: `${SITE_URL}/oracle/`,
+      },
+      reviews: {
+        title: '真實好評｜Asteria 感情拯救所',
+        description: 'Asteria 真實好評與客人回饋，整理復合、斷聯、冷淡、曖昧、感情占卜、塔羅分析與愛情儀式相關見證。',
+        canonical: `${SITE_URL}/reviews/`,
+      },
+      register: {
+        title: 'Asteria Space 登入｜私人聯絡空間',
+        description: '登入 Asteria Space，查看訊息、上傳截圖、更新聯絡資料，與 Asteria 保持私人聯絡。',
+        canonical: `${SITE_URL}/space/`,
+        robots: 'noindex, nofollow',
+      },
+      portal: {
+        title: 'Asteria Space｜會員私人空間',
+        description: 'Asteria Space 會員私人空間。',
+        canonical: `${SITE_URL}/space/`,
+        robots: 'noindex, nofollow',
+      },
+      admin: {
+        title: 'Asteria Space Admin',
+        description: 'Asteria Space staff area.',
+        canonical: `${SITE_URL}/staff/`,
+        robots: 'noindex, nofollow',
+      },
+      inbox: {
+        title: 'Asteria Staff Inbox',
+        description: 'Asteria Space staff inbox.',
+        canonical: `${SITE_URL}/staff/`,
+        robots: 'noindex, nofollow',
+      },
+    };
+
+    setSeoMeta(pageSeo[page]);
+  }, [page, routeKey]);
 
   const protectedPage = page === 'register' || page === 'portal' || page === 'admin' || page === 'inbox';
 
