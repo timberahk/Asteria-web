@@ -46,7 +46,7 @@ const searchIntents = [
 
 const staticPages = [
   {
-    route: '/teaching',
+    route: '/teaching/',
     title: '相處教學｜復合挽回・分手失戀・斷聯冷淡・曖昧相處｜Asteria 感情拯救所',
     description: 'Asteria 相處教學整理復合挽回、分手失戀、斷聯冷淡、曖昧第三者、感情占卜與日常相處方法，陪你拆解訊息、情緒同下一步。',
     keywords: '相處教學, 感情教學, 復合挽回, 分手失戀, 斷聯冷淡, 曖昧, 第三者, 訊息點覆, 感情占卜',
@@ -59,7 +59,7 @@ const staticPages = [
     }
   },
   {
-    route: '/services',
+    route: '/services/',
     title: '服務項目｜感情占卜・塔羅分析・愛情儀式・相處指引｜Asteria 感情拯救所',
     description: 'Asteria 服務包括感情占卜、塔羅分析、復合挽回、愛情儀式、關係修復與相處教學，按個案方向整理下一步。',
     keywords: '感情占卜, 愛情占卜, 塔羅分析, 復合挽回, 愛情儀式, 感情儀式, 關係修復, 相處教學',
@@ -73,7 +73,7 @@ const staticPages = [
     }
   },
   {
-    route: '/about',
+    route: '/about/',
     title: '關於我們｜Asteria 感情拯救所｜不只占卜，也陪你學識相處',
     description: 'Asteria 感情拯救所不只提供感情占卜與愛情儀式，亦會手把手教你訊息點覆、關係點修補、失戀情緒點穩住。',
     keywords: 'Asteria 感情拯救所, asteria.crystal.tarot, Asteria IG 香港, 感情指引, 情緒支援, 相處教學',
@@ -86,7 +86,7 @@ const staticPages = [
     }
   },
   {
-    route: '/cases',
+    route: '/cases/',
     title: '客人個案與好評見證｜復合・斷聯・冷淡・關係修復｜Asteria 感情拯救所',
     description: 'Asteria 客人個案與好評見證，整理復合挽回、斷聯冷淡、第三者、關係修復與愛情儀式後的真實回饋。',
     keywords: 'Asteria 好評, 客人見證, 復合成功, 關係修復, 斷聯復聯, 愛情儀式好評, 感情占卜好評',
@@ -99,7 +99,7 @@ const staticPages = [
     }
   },
   {
-    route: '/reviews',
+    route: '/reviews/',
     title: '客人真實好評庫｜感情占卜・愛情儀式・關係修復見證｜Asteria 感情拯救所',
     description: 'Asteria 客人真實好評庫，收錄感情占卜、塔羅分析、愛情儀式、復合挽回與關係修復後的客人回饋見證。',
     keywords: 'Asteria 好評, 客人真實好評, 感情占卜好評, 愛情儀式好評, 復合好評, 關係修復見證',
@@ -109,6 +109,19 @@ const staticPages = [
       name: 'Asteria 客人真實好評庫',
       description: '感情占卜、塔羅分析、愛情儀式、復合挽回與關係修復客人回饋。',
       url: `${siteUrl}/reviews/`
+    }
+  },
+  {
+    route: '/oracle/',
+    title: '每日感情指引｜愛情塔羅・復合挽回・對方想法｜Asteria 感情拯救所',
+    description: 'Asteria 每日感情指引，用塔羅與感情問題方向，陪你整理復合挽回、對方想法、斷聯冷淡、曖昧相處同下一步。',
+    keywords: '每日感情指引, 愛情塔羅, 感情占卜, 對方想法, 復合挽回, 斷聯冷淡, 曖昧相處, Asteria Tarot',
+    image: logoUrl,
+    schema: {
+      '@type': 'WebPage',
+      name: 'Asteria 每日感情指引',
+      description: '用每日感情指引整理復合、挽回、斷聯、曖昧與對方想法。',
+      url: `${siteUrl}/oracle/`
     }
   }
 ];
@@ -299,7 +312,7 @@ function writeRoute(route, html) {
 }
 
 function articleMeta(post) {
-  const route = `/articles/${post.id}`;
+  const route = `/articles/${post.id}/`;
   const canonical = `${siteUrl}${canonicalPath(route)}`;
   const title = `${cleanTitle(post.title)}｜Asteria 感情拯救所`;
   const description = buildDescription(post);
@@ -369,7 +382,7 @@ function main() {
     writeRoute(page.route, applyMeta(baseHtml, page));
   }
   for (const post of posts) {
-    writeRoute(`/articles/${post.id}`, applyMeta(baseHtml, articleMeta(post)));
+    writeRoute(`/articles/${post.id}/`, applyMeta(baseHtml, articleMeta(post)));
   }
   console.log(`Prerendered SEO HTML for ${staticPages.length} static routes and ${posts.length} articles.`);
 }

@@ -37,14 +37,14 @@ const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
 const SITE_URL = "https://asteria-tarot.com";
 const DEFAULT_SEO_IMAGE = `${SITE_URL}${LOGO_SRC}`;
-const DEFAULT_WHATSAPP_MESSAGE = '你好，我喺 Asteria 網站睇到服務，想先做免費初步評估。我的情況是：';
+const DEFAULT_WHATSAPP_MESSAGE = '你好，我喺 Asteria 網站睇到你哋，想了解感情分析／儀式方向。我的情況係：';
 const SPACE_INVITE_MESSAGE = '你好，我想開通 Asteria Space，請問可以俾我專屬邀請碼嗎？';
 const makeWhatsappUrl = (message?: string) => {
   const text = message?.trim();
   return text ? `${WHATSAPP_URL}?text=${encodeURIComponent(text)}` : WHATSAPP_URL;
 };
 const makeServiceWhatsappMessage = (service?: string) =>
-  `你好，我想了解${service ? `「${service}」` : 'Asteria 的感情服務'}，想先做免費初步評估。我的情況是：`;
+  `你好，我喺網站睇到${service ? `「${service}」` : 'Asteria 嘅感情服務'}，想了解適合我的感情方向。我嘅情況係：`;
 
 const setSeoMeta = ({
   title,
@@ -132,7 +132,7 @@ const goHome = (event?: React.MouseEvent<HTMLAnchorElement>) => {
 
 const goHomeSection = (section: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
-  window.history.pushState(null, '', `/${window.location.search}#${section}`);
+  window.history.pushState(null, '', `/${window.location.search}`);
   window.dispatchEvent(new Event('asteria-route-change'));
   requestAnimationFrame(() => {
     document.getElementById(section)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -424,7 +424,7 @@ const Hero = () => (
 
             <div className="space-y-3">
               <div className="bg-[#FFF8EC] border border-asteria-cream/70 rounded-xl p-4 text-sm text-stone-600 leading-relaxed">
-                「你而家最需要未必係追問答案，而係知道下一步點樣做先唔會再消耗自己。」
+                感情卡住時，可以先整理近況，再睇清楚下一步點處理。
               </div>
               <div className="grid grid-cols-3 gap-2 text-center text-xs font-bold text-asteria-primary">
                 <div className="bg-asteria-yellow/35 rounded-xl py-3">復合</div>
@@ -432,7 +432,7 @@ const Hero = () => (
                 <div className="bg-asteria-blue/35 rounded-xl py-3">清理</div>
               </div>
               <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
-                <i className="fa-brands fa-whatsapp"></i> WhatsApp 免費初步評估
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp 講低近況
               </a>
             </div>
           </div>
@@ -688,7 +688,7 @@ const Oracle = () => {
                 </div>
 
                 <a href={makeWhatsappUrl(oracleMessage)} target="_blank" rel="noreferrer" className="btn-primary w-full py-4 rounded-xl font-bold shadow-lg shadow-amber-200 flex items-center justify-center gap-2 text-lg animate-pulse hover:animate-none">
-                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 查詢我的牌面
+                    <i className="fa-brands fa-whatsapp"></i> WhatsApp 帶埋牌面問我哋
                 </a>
                 
                 <button 
@@ -1177,24 +1177,18 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     };
 
     const ArticleActionBox = ({ post }: { post: TeachingPost }) => (
-      <aside className="my-10 md:my-14 rounded-[26px] border border-asteria-cream/80 bg-white p-6 md:p-7 shadow-sm">
-        <div className="grid md:grid-cols-[1fr_auto] gap-5 items-center">
-          <div>
-            <div className="text-sm font-bold text-asteria-primary mb-2">睇完仍然唔知下一步？</div>
-            <h2 className="text-2xl font-bold text-asteria-dark mb-3">可以用你自己的對話再拆一次</h2>
-            <p className="text-stone-500 leading-relaxed">
-              文章幫你整理方向；如果你想知道自己個 case 應該點覆、點退、點推進，可以直接 WhatsApp 我哋睇情況。
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row md:flex-col gap-3">
-            <a href="/oracle/" className="inline-flex items-center justify-center gap-2 rounded-xl border border-asteria-cream bg-[#FFF8EC] px-4 py-3 font-bold text-asteria-primary hover:bg-asteria-cream/40 transition-colors">
-              <i className="fa-regular fa-star"></i> 抽每日指引
+      <aside className="mt-12 md:mt-16 border-t border-asteria-cream/70 pt-8">
+        <div className="max-w-2xl">
+          <p className="text-sm font-bold text-asteria-primary mb-2">想我哋幫你睇清下一步？</p>
+          <p className="text-stone-500 leading-relaxed">
+            如果你想我哋幫你 review 訊息、對方反應或關係狀態，可以 WhatsApp 講低近況；我哋會先幫你整理局面，再睇適合用占卜、相處教學定儀式方向。
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a href={makeWhatsappUrl(`你好，我睇完《${post.title}》，想請你哋幫我睇下感情局面。我的情況係：`)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-bold text-white hover:brightness-95 transition-all">
+              <i className="fa-brands fa-whatsapp"></i> WhatsApp 講低近況
             </a>
-            <a href="/services/" className="inline-flex items-center justify-center gap-2 rounded-xl border border-asteria-cream bg-white px-4 py-3 font-bold text-asteria-primary hover:bg-[#FFF8EC] transition-colors">
-              <i className="fa-solid fa-wand-magic-sparkles"></i> 睇服務方向
-            </a>
-            <a href={makeWhatsappUrl(`你好，我睇完《${post.title}》，想問我自己的情況可以點處理。`)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 font-bold text-white hover:brightness-95 transition-all">
-              <i className="fa-brands fa-whatsapp"></i> WhatsApp 問我哋
+            <a href="/services/" className="inline-flex items-center justify-center gap-2 rounded-full border border-asteria-cream bg-white px-5 py-3 text-sm font-bold text-asteria-primary hover:bg-[#FFF8EC] transition-colors">
+              睇服務方向
             </a>
           </div>
         </div>
@@ -1230,7 +1224,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 
     if (fullPage && activePost) {
       const articleSegments = getArticleSegments(activePost.content);
-      const articleSearchPhrases = getArticleSearchPhrases(activePost);
       return (
         <main className="pt-56 md:pt-40 pb-20 bg-[#FFFDF8] min-h-screen">
           <article className="container mx-auto px-6 max-w-4xl">
@@ -1249,21 +1242,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold text-asteria-dark leading-tight mb-5">{activePost.title}</h1>
                 <p className="text-lg md:text-xl text-stone-500 leading-relaxed mb-10 max-w-3xl">{activePost.summary}</p>
-                <aside className="mb-10 rounded-[24px] border border-asteria-cream/80 bg-[#FFF8EC] p-5 md:p-6">
-                  <div className="text-xs font-bold tracking-[0.2em] text-asteria-primary mb-3">常見搜尋情境</div>
-                  <p className="text-stone-600 leading-relaxed mb-4">
-                    你可能係因為
-                    <span className="font-bold text-asteria-dark"> {articleSearchPhrases.slice(0, 3).join('、')} </span>
-                    呢類問題而搵到呢篇。先睇完文章整理脈絡；如果想逐句 review 對話，再 WhatsApp 我哋會更準。
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {articleSearchPhrases.map((phrase) => (
-                      <span key={phrase} className="rounded-full bg-white px-3 py-1.5 text-xs font-bold text-asteria-primary border border-asteria-cream/70">
-                        {phrase}
-                      </span>
-                    ))}
-                  </div>
-                </aside>
                 {articleSegments.map((segment, index) => (
                   <React.Fragment key={`${activePost.id}-${index}`}>
                     <div className="article-body" dangerouslySetInnerHTML={{ __html: segment }}></div>
@@ -1314,7 +1292,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                 <p className="text-stone-500 max-w-2xl">用圖文方式慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
               </div>
               <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl font-bold shadow-sm hover:brightness-95 transition-all">
-                <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp 搵我哋睇方向
               </a>
             </div>
 
@@ -1419,7 +1397,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 
           <div className="text-center mt-10">
               <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 bg-white px-5 py-2 rounded-full shadow-sm hover:shadow transition-all text-sm font-bold">
-                <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp 搵我哋睇方向
               </a>
           </div>
   
@@ -1544,7 +1522,7 @@ const SearchIntentSection = () => {
   ];
 
   return (
-    <section className="py-18 bg-[#FFFDF8]" aria-labelledby="search-intent-title">
+    <section className="pt-16 md:pt-20 pb-18 bg-[#FFFDF8]" aria-labelledby="search-intent-title">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="mb-8">
           <div>
@@ -1823,9 +1801,9 @@ const Services = () => {
 
           <div className="grid gap-3 md:grid-cols-3 text-left mb-10">
             {[
-              ['01', 'WhatsApp 講低近況', '簡單講你而家嘅關係狀態、想處理咩，我哋會先睇方向。'],
-              ['02', 'Asteria 初步了解', '先判斷適合塔羅分析、相處策略，定係儀式配搭，唔會一入嚟就硬銷。'],
-              ['03', '確認方向後作實', '方向清楚後先安排付款同跟進，令你知道自己下一步點行。']
+              ['01', 'WhatsApp 講低感情狀況', '唔需要一開始就揀儀式或牌陣，先簡單講低你同對方而家去到邊一步。'],
+              ['02', 'Asteria 先做初步了解', '我哋會先睇你係復合、斷聯、冷淡、曖昧定第三者問題，再判斷適合塔羅分析、相處策略，定係儀式配搭。'],
+              ['03', '確認方向後先作實', '方向清楚後先安排付款同跟進，唔會未了解就叫你亂買。']
             ].map(([step, title, desc]) => (
               <div key={step} className="rounded-2xl border border-asteria-cream bg-white/80 p-4 shadow-sm">
                 <div className="text-xs font-bold text-amber-600 mb-2">{step}</div>
@@ -1855,7 +1833,7 @@ const Services = () => {
               </div>
 
               <a href={makeWhatsappUrl(makeServiceWhatsappMessage(item.title))} target="_blank" rel="noreferrer" className="w-full text-center border-2 border-asteria-yellow/60 text-asteria-primary py-2.5 rounded-xl font-bold hover:bg-asteria-primary hover:text-white transition-all text-sm group-hover:shadow-md mt-auto">
-                WhatsApp 免費初步評估
+                WhatsApp 了解方向
               </a>
             </div>
           ))}
@@ -1888,10 +1866,10 @@ const Services = () => {
         <div className="mt-12 text-center bg-asteria-yellow/30 p-6 rounded-2xl max-w-2xl mx-auto border border-asteria-yellow/50">
            <p className="text-gray-700 text-sm md:text-base mb-4">
              <i className="fa-solid fa-circle-info text-yellow-500 mr-2"></i>
-             唔肯定自己適合邊種？可以先 WhatsApp 做免費初步評估。
+             睇完服務仍然唔肯定應該點揀？先 WhatsApp 講低情況，我哋會幫你做初步判斷。
            </p>
            <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-sm font-bold text-white hover:brightness-95 transition-all">
-             <i className="fa-brands fa-whatsapp"></i> WhatsApp 免費初步評估
+             <i className="fa-brands fa-whatsapp"></i> 立即 WhatsApp 尋找你的解決方案
            </a>
         </div>
 
@@ -1957,7 +1935,7 @@ const Reviews = () => (
           <i className="fa-regular fa-images"></i> 查看更多好評
         </a>
         <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold bg-white px-6 py-2 rounded-full shadow-sm hover:shadow transition-all">
-          <i className="fa-brands fa-whatsapp"></i> 直接 WhatsApp 聯絡
+          <i className="fa-brands fa-whatsapp"></i> WhatsApp 搵我哋睇方向
         </a>
       </div>
     </div>
@@ -1967,8 +1945,8 @@ const Reviews = () => (
 const ReviewsPage = () => (
   <main className="pt-48 md:pt-32 pb-20 bg-asteria-blue/10 min-h-screen">
     <div className="container mx-auto px-6">
-      <a href="/reviews/" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
-        <i className="fa-solid fa-arrow-left"></i> 返回首頁好評
+      <a href="/" className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-8">
+        <i className="fa-solid fa-arrow-left"></i> 返回首頁
       </a>
       <div className="text-center mb-12">
         <div className="text-sm font-bold text-asteria-primary mb-2">Asteria Reviews</div>
@@ -2352,7 +2330,7 @@ const RegisterPage = () => {
               <div>
                 <div className="font-bold text-asteria-dark">{mode === 'login' ? '登入' : '用邀請碼開通'}</div>
                 <p className="text-sm text-stone-500 leading-relaxed">
-                  {mode === 'login' ? '請輸入 account 名及密碼。' : 'Asteria 會提供專屬邀請碼，填完即可開通私人空間。'}
+                  {mode === 'login' ? '請輸入 account 名及密碼。' : '有專屬邀請碼就可以自己開通 Space；未有碼可以先 WhatsApp 我哋。'}
                 </p>
               </div>
             </div>
@@ -2385,7 +2363,7 @@ const RegisterPage = () => {
           <div className="text-sm text-stone-500 text-center">
             未有邀請碼？
             <a href={makeWhatsappUrl(SPACE_INVITE_MESSAGE)} target="_blank" rel="noreferrer" className="ml-1 font-bold text-green-600 underline underline-offset-4">
-              WhatsApp 搵 Asteria
+              WhatsApp 申請邀請碼
             </a>
           </div>
         </div>
