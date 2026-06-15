@@ -890,10 +890,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const articleMatch = pathMatch || hashMatch;
     const activeId = articleMatch ? Number(articleMatch[1] === 'article' ? articleMatch[2] : articleMatch[1]) : null;
     const activePost = posts.find((post) => post.id === activeId);
-    const relatedCalloutPost = getRelatedPosts(activeId, 1, 2)[0];
-    const relatedPosts = getRelatedPosts(activeId, 5)
-      .filter((post) => post.id !== relatedCalloutPost?.id)
-      .slice(0, 3);
+    const relatedPosts = getRelatedPosts(activeId, 5).slice(0, 3);
     const isCaseLibrary = fullPage && window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase() === 'cases';
 
     const absoluteUrl = (url?: string) => {
@@ -1157,25 +1154,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       );
     };
 
-    const ArticleRelatedCallout = ({ recommendation }: { recommendation?: TeachingPost }) => {
-      if (!recommendation) return null;
-      return (
-        <aside className="my-8 md:my-10 rounded-2xl border border-asteria-cream bg-[#FFF8EC] p-5 md:p-6">
-          <div className="text-xs font-bold tracking-[0.2em] text-asteria-primary mb-3">你可能也想睇</div>
-          <a href={makeArticleHref(recommendation)} className="grid md:grid-cols-[160px_1fr] gap-4 items-center group">
-            <ArticleCover post={recommendation} compact />
-            <div>
-              <h3 className="text-xl font-bold text-asteria-dark leading-snug group-hover:text-asteria-primary transition-colors">{recommendation.title}</h3>
-              <p className="text-sm text-stone-500 leading-relaxed mt-2 line-clamp-3">{recommendation.summary}</p>
-              <div className="text-sm font-bold text-asteria-primary mt-3 inline-flex items-center gap-2">
-                繼續閱讀 <i className="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </a>
-        </aside>
-      );
-    };
-
     const ArticleActionBox = ({ post }: { post: TeachingPost }) => (
       <aside className="mt-12 md:mt-16 border-t border-asteria-cream/70 pt-8">
         <div className="max-w-2xl">
@@ -1246,7 +1224,6 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
                   <React.Fragment key={`${activePost.id}-${index}`}>
                     <div className="article-body" dangerouslySetInnerHTML={{ __html: segment }}></div>
                     {index < 3 && <ArticleInlineImage index={index} />}
-                    {index === 0 && <ArticleRelatedCallout recommendation={relatedCalloutPost} />}
                   </React.Fragment>
                 ))}
                 <ArticleActionBox post={activePost} />

@@ -208,6 +208,7 @@ function articleSearchPhrases(post) {
   };
   const haystack = `${post?.title || ''} ${post?.summary || ''} ${post?.category || ''} ${(post?.tags || []).join(' ')}`;
 
+  if (/吸引力法則|顯化|許願/.test(haystack)) add('吸引力法則愛情', '顯化好愛情', '吸引正緣');
   if (/復合|挽回|前任|分手/.test(haystack)) add('分手後點算', '挽回前任', '復合機會');
   if (/斷聯|冷淡|少覆|失聯|不讀不回|已讀不回/.test(haystack)) add('對方冷淡', '少覆 message', '斷聯後如何開口');
   if (/曖昧|暗戀|桃花|單身|脫單/.test(haystack)) add('曖昧關係點推進', '對方有冇意思', '暗戀塔羅');
@@ -221,6 +222,9 @@ function articleSearchPhrases(post) {
 
 function articleSeoHook(post) {
   const haystack = `${post?.title || ''} ${post?.summary || ''} ${post?.category || ''} ${(post?.tags || []).join(' ')}`;
+  if (/吸引力法則|顯化|許願/.test(haystack)) {
+    return '吸引力法則不是單靠許願等愛情出現，而是幫你看清想要的關係、調整狀態、守住界線，再用行動吸引真正合適的人。';
+  }
   if (/復合|挽回|前任|分手/.test(haystack)) {
     return '分手後放唔低、想知仲有冇復合機會，先睇清對方心態、分手原因同下一步應唔應該主動。';
   }
