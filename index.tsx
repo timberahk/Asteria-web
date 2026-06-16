@@ -89,6 +89,40 @@ const isGenericSpaceName = (name?: string | null) => {
 };
 
 const getStoredSpaceRole = () => window.localStorage.getItem('asteriaCurrentRole') as SpaceSessionRole;
+const ORACLE_VISITOR_ID_KEY = 'asteriaOracleVisitorId';
+
+const getHongKongDateKey = () => {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Asia/Hong_Kong',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(new Date());
+  const value = (type: Intl.DateTimeFormatPartTypes) => parts.find((part) => part.type === type)?.value || '';
+  return `${value('year')}-${value('month')}-${value('day')}`;
+};
+
+const getOracleVisitorId = () => {
+  const existing = window.localStorage.getItem(ORACLE_VISITOR_ID_KEY);
+  if (existing) return existing;
+
+  const generated = window.crypto?.randomUUID?.() || [
+    Date.now().toString(36),
+    Math.random().toString(36).slice(2),
+    Math.random().toString(36).slice(2)
+  ].join('-');
+  window.localStorage.setItem(ORACLE_VISITOR_ID_KEY, generated);
+  return generated;
+};
+
+const hashOracleSeed = (seed: string) => {
+  let hash = 2166136261;
+  for (let index = 0; index < seed.length; index += 1) {
+    hash ^= seed.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+};
 
 const clearStoredSpaceAccount = () => {
   window.localStorage.removeItem('asteriaCurrentRole');
@@ -587,21 +621,22 @@ const Oracle = () => {
     }, 1500);
   };
 
-  const getReading = (_selectedTopic: string) => {
+  const getReading = (selectedTopic: string) => {
     try {
-      useFallback();
+      useFallback(selectedTopic);
     } catch (err) {
       console.error("Oracle error:", err);
-      useFallback();
+      useFallback(selectedTopic);
     } finally {
       setLoading(false);
     }
   };
 
-  const useFallback = () => {
-      // Improved randomness for fallback
-      const randomIndex = Math.floor(Math.random() * fallbackReadings.length);
-      const random = fallbackReadings[randomIndex];
+  const useFallback = (selectedTopic: string) => {
+      const visitorId = getOracleVisitorId();
+      const dateKey = getHongKongDateKey();
+      const stableIndex = hashOracleSeed(`${visitorId}:${dateKey}:${selectedTopic}`) % fallbackReadings.length;
+      const random = fallbackReadings[stableIndex];
       setReading(random);
       setStep('result');
   };
@@ -618,7 +653,7 @@ const Oracle = () => {
       
       <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
         <h2 className="text-3xl font-bold text-gray-800 mb-2">宇宙解憂信箱</h2>
-        <p className="text-gray-500 mb-10">心裡想著那個讓你困擾的人或事，免費抽一張今日感情指引；抽完可以直接 WhatsApp 帶埋牌面問我哋。</p>
+        <p className="text-gray-500 mb-10">心裡想著那個讓你困擾的人或事，免費抽一張今日感情指引；同一部電話今日同一範疇會保留同一張，明日再換。</p>
 
         <div className="glass-card rounded-3xl p-8 md:p-12 min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500 shadow-2xl bg-white/50">
 
@@ -647,11 +682,14 @@ const Oracle = () => {
           {/* Step 2: Drawing Animation */}
           {step === 'drawing' && (
             <div className="flex flex-col items-center justify-center animate-fade-in py-10">
-              <div className="relative w-32 h-48 mb-8">
-                <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-yellow rounded-xl border-4 border-white shadow-xl animate-ping opacity-20"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-asteria-primary to-asteria-yellow rounded-xl border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
-                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:16px_16px] opacity-20"></div>
-                   <i className="fa-solid fa-star-of-david text-4xl text-white animate-spin-slow"></i>
+              <div className="relative w-44 h-64 sm:w-52 sm:h-72 mb-8">
+                <div className="absolute -inset-4 rounded-[2rem] bg-asteria-yellow/25 blur-2xl animate-pulse"></div>
+                <div className="absolute inset-0 rounded-[1.65rem] border border-asteria-yellow/50 bg-gradient-to-br from-asteria-primary via-[#8f5a39] to-asteria-dark shadow-2xl shadow-amber-900/20 flex items-center justify-center overflow-hidden">
+                   <div className="absolute inset-3 rounded-[1.25rem] border border-white/30"></div>
+                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:18px_18px] opacity-20"></div>
+                   <div className="absolute inset-x-8 top-10 h-px bg-white/35"></div>
+                   <div className="absolute inset-x-8 bottom-10 h-px bg-white/35"></div>
+                   <i className="fa-solid fa-star-of-david text-6xl text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.7)] animate-spin-slow"></i>
                 </div>
               </div>
               <p className="text-asteria-primary font-bold animate-pulse text-lg">Asteria 正在連結你的能量...</p>
@@ -663,9 +701,20 @@ const Oracle = () => {
           {step === 'result' && reading && (
             <div className="w-full text-center animate-fade-in max-w-lg mx-auto flex flex-col items-center">
                 {/* Card Visual - Centered */}
-                <div className="w-32 h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border-[4px] border-double border-yellow-200 shadow-2xl flex items-center justify-center relative overflow-hidden mb-6 group transform hover:scale-105 transition-transform duration-500">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:16px_16px] opacity-30"></div>
-                    <i className={`${reading.icon} text-5xl text-yellow-100 drop-shadow-[0_0_15px_rgba(253,224,71,0.6)]`}></i>
+                <div className="relative w-52 h-72 sm:w-60 sm:h-[21rem] mb-7 group transform hover:scale-[1.03] transition-transform duration-500">
+                    <div className="absolute -inset-4 rounded-[2rem] bg-asteria-yellow/25 blur-2xl opacity-80"></div>
+                    <div className="absolute inset-0 rounded-[1.75rem] bg-gradient-to-br from-[#2b211d] via-[#6d452f] to-[#1b1716] border-[5px] border-double border-yellow-200 shadow-2xl shadow-amber-900/25 flex items-center justify-center overflow-hidden">
+                        <div className="absolute inset-3 rounded-[1.25rem] border border-yellow-100/40"></div>
+                        <div className="absolute inset-6 rounded-2xl border border-white/15"></div>
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.45)_1px,transparent_0)] [background-size:18px_18px] opacity-25"></div>
+                        <div className="absolute top-7 left-1/2 h-10 w-px -translate-x-1/2 bg-yellow-100/45"></div>
+                        <div className="absolute bottom-7 left-1/2 h-10 w-px -translate-x-1/2 bg-yellow-100/45"></div>
+                        <div className="absolute left-7 top-1/2 h-px w-10 -translate-y-1/2 bg-yellow-100/45"></div>
+                        <div className="absolute right-7 top-1/2 h-px w-10 -translate-y-1/2 bg-yellow-100/45"></div>
+                        <div className="absolute top-6 left-6 text-yellow-100/70 text-xs tracking-[0.22em] font-eng">ASTERIA</div>
+                        <div className="absolute bottom-6 right-6 text-yellow-100/70 text-xs tracking-[0.22em] font-eng">ORACLE</div>
+                        <i className={`${reading.icon} text-7xl sm:text-8xl text-yellow-100 drop-shadow-[0_0_24px_rgba(253,224,71,0.72)]`}></i>
+                    </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">{reading.card_name}</h3>
@@ -695,7 +744,7 @@ const Oracle = () => {
                     onClick={resetOracle}
                     className="text-gray-400 hover:text-asteria-primary text-sm mt-4 transition-colors underline decoration-dotted"
                 >
-                    再抽一張
+                    重選範疇
                 </button>
             </div>
           )}
