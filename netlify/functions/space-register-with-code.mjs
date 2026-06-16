@@ -10,17 +10,59 @@ import {
 
 const usernamePattern = /^[a-z0-9._-]{3,32}$/;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const defaultInviteCodes = ['asteria-space-2026'];
 
 const getInviteCodes = () =>
-  String(process.env.SPACE_INVITE_CODES || '')
-    .split(',')
-    .map((code) => code.trim().toLowerCase())
-    .filter(Boolean);
+  [
+    ...defaultInviteCodes,
+    ...String(process.env.SPACE_INVITE_CODES || '')
+      .split(',')
+      .map((code) => code.trim().toLowerCase())
+      .filter(Boolean)
+  ];
 
 const isValidInviteCode = (value) => {
   const codes = getInviteCodes();
   if (codes.length === 0) return false;
   return codes.includes(String(value || '').trim().toLowerCase());
+};
+
+const findAuthUserByEmail = async (admin, email) => {
+  let page = 1;
+  while (page < 20) {
+    const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
+    if (error) throw error;
+    const user = (data.users || []).find((item) => item.email === email);
+    if (user) return user;
+    if (!data.users || data.users.length < 1000) return null;
+    page += 1;
+  }
+  return null;
+};
+
+const ensureCustomerRows = async (admin, { userId, username, authEmail, label, contactEmail }) => {
+  const { error: accountError } = await admin.from('user_accounts').upsert({
+    user_id: userId,
+    username,
+    auth_email: authEmail,
+    role: 'customer',
+    label,
+    contact_email: contactEmail
+  }, { onConflict: 'user_id' });
+  if (accountError) throw accountError;
+
+  const { error: profileError } = await admin.from('profiles').upsert({
+    id: userId,
+    display_name: label,
+    self_name: label,
+    contact_email: contactEmail
+  }, { onConflict: 'id' });
+  if (profileError) throw profileError;
+
+  const { error: threadError } = await admin
+    .from('message_threads')
+    .upsert({ customer_id: userId }, { onConflict: 'customer_id' });
+  if (threadError) throw threadError;
 };
 
 export const handler = async (event) => {
@@ -72,35 +114,22 @@ export const handler = async (event) => {
       }
     });
 
-    if (createError || !created?.user) {
+    let authUser = created?.user || null;
+    if (createError || !authUser) {
       const message = String(createError?.message || '');
-      if (message.toLowerCase().includes('already')) return json(409, { error: '呢個 Account 名已經有人用，請換另一個。' });
-      throw createError || new Error('建立 account 失敗。');
+      if (!message.toLowerCase().includes('already')) throw createError || new Error('建立 account 失敗。');
+      authUser = await findAuthUserByEmail(admin, authEmail);
+      if (!authUser) return json(409, { error: '呢個 Account 名已經有人用，請換另一個。' });
     }
 
-    const userId = created.user.id;
-    const { error: accountError } = await admin.from('user_accounts').insert({
-      user_id: userId,
+    const userId = authUser.id;
+    await ensureCustomerRows(admin, {
+      userId,
       username,
-      auth_email: authEmail,
-      role: 'customer',
+      authEmail,
       label,
-      contact_email: contactEmail
+      contactEmail
     });
-    if (accountError) throw accountError;
-
-    const { error: profileError } = await admin.from('profiles').upsert({
-      id: userId,
-      display_name: label,
-      self_name: label,
-      contact_email: contactEmail
-    }, { onConflict: 'id' });
-    if (profileError) throw profileError;
-
-    const { error: threadError } = await admin
-      .from('message_threads')
-      .upsert({ customer_id: userId }, { onConflict: 'customer_id' });
-    if (threadError) throw threadError;
 
     const { data: sessionData, error: tokenError } = await admin.auth.admin.generateLink({
       type: 'magiclink',

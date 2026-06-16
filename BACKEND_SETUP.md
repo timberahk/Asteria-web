@@ -47,7 +47,7 @@ SPACE_INVITE_CODES=客人自助開通邀請碼，多個用英文逗號分隔
 ```
 
 `VITE_` 開頭會俾 browser 用，可以公開。`SUPABASE_SERVICE_ROLE_KEY` 只可以放 Netlify Environment Variables / server function，唔可以寫入網頁或 GitHub。
-`SPACE_INVITE_CODES` 只會在 Netlify Function server side 使用，不會放入前端 bundle。例子：`SPACE_INVITE_CODES=ASTERIA-2026-SPACE`。
+`SPACE_INVITE_CODES` 只會在 Netlify Function server side 使用，不會放入前端 bundle。系統已內置一個可用專屬碼：`ASTERIA-SPACE-2026`。如果想加其他碼，可以在 Netlify env 設：`SPACE_INVITE_CODES=VIP-LOVE-2026,CLIENT-ONLY-2026`。
 
 ## 私隱規則
 
