@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import WebSocket from 'ws';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
@@ -23,6 +24,9 @@ export const assertEnv = () => {
 export const getAdminClient = () => {
   assertEnv();
   return createClient(supabaseUrl, serviceRoleKey, {
+    realtime: {
+      transport: WebSocket
+    },
     auth: {
       persistSession: false,
       autoRefreshToken: false
@@ -33,6 +37,9 @@ export const getAdminClient = () => {
 export const getAnonClient = () => {
   assertEnv();
   return createClient(supabaseUrl, supabaseAnonKey, {
+    realtime: {
+      transport: WebSocket
+    },
     auth: {
       persistSession: false,
       autoRefreshToken: false
