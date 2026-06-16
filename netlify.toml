@@ -70,6 +70,46 @@
   force = true
 
 [[redirects]]
+  from = "/space"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/space/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/staff"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/staff/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/articles/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/teaching/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/cases/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
