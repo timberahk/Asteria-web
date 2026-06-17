@@ -181,6 +181,26 @@ const goSpaceEntry = (path: string) => (event: React.MouseEvent<HTMLAnchorElemen
 };
 
 type AppPage = 'home' | 'teaching' | 'about' | 'services' | 'oracle' | 'reviews' | 'register' | 'portal' | 'admin' | 'inbox';
+type SpaceView = 'dashboard' | 'chat' | 'profile' | 'updates' | 'journal';
+
+const parseSpaceViewSlug = (slug: string): SpaceView => {
+  const cleanSlug = slug.trim().toLowerCase();
+  if (cleanSlug === 'chat' || cleanSlug === 'inbox' || cleanSlug === 'messages') return 'chat';
+  if (cleanSlug === 'updates' || cleanSlug === 'relationship') return 'updates';
+  if (cleanSlug === 'journal') return 'journal';
+  if (cleanSlug === 'profile') return 'profile';
+  return 'dashboard';
+};
+
+const getSpaceViewFromLocation = (): SpaceView => {
+  const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+  if (cleanPath.startsWith('space/')) {
+    return parseSpaceViewSlug(cleanPath.replace(/^space\//, ''));
+  }
+  return 'dashboard';
+};
+
+const getSpaceViewPath = (view: SpaceView) => view === 'dashboard' ? '/space/' : `/space/${view}/`;
 
 const getRoutePage = (): AppPage => {
   const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
@@ -189,7 +209,7 @@ const getRoutePage = (): AppPage => {
   if (cleanPath === 'services') return 'services';
   if (cleanPath === 'oracle') return 'oracle';
   if (cleanPath === 'reviews') return 'reviews';
-  if (cleanPath === 'space' || cleanPath === 'login') return 'register';
+  if (cleanPath === 'space' || cleanPath.startsWith('space/') || cleanPath === 'login') return 'register';
   if (cleanPath === 'staff') return 'inbox';
 
   const rawHash = window.location.hash || '';
@@ -2408,7 +2428,7 @@ const SpacePortalPage = () => {
   const [chatImageFiles, setChatImageFiles] = useState<File[]>([]);
   const [backendThreadId, setBackendThreadId] = useState<string | null>(null);
   const [spaceMessage, setSpaceMessage] = useState('');
-  const [spaceView, setSpaceView] = useState<'dashboard' | 'chat' | 'profile' | 'updates' | 'journal'>('dashboard');
+  const [spaceView, setSpaceView] = useState<SpaceView>(getSpaceViewFromLocation);
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [passwordMessage, setPasswordMessage] = useState('');
@@ -2483,10 +2503,20 @@ const SpacePortalPage = () => {
     setViewerIndex(0);
   };
 
-  const openSpaceView = (view: typeof spaceView) => {
+  const resetSpaceViewMessages = (view: SpaceView) => {
     if (view === 'updates') setRelationshipEntryMessage('');
     if (view === 'journal') setJournalEntryMessage('');
+  };
+
+  const openSpaceView = (view: SpaceView) => {
+    const nextPath = getSpaceViewPath(view);
+    resetSpaceViewMessages(view);
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState(null, '', nextPath);
+      window.dispatchEvent(new Event('asteria-route-change'));
+    }
     setSpaceView(view);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const setEntryStatusMessage = (entry: PortalEntry, message: string) => {
@@ -2506,6 +2536,21 @@ const SpacePortalPage = () => {
     if (isBackendConfigured) return;
     savePortalCustomers(customers);
   }, [customers]);
+
+  useEffect(() => {
+    const syncSpaceView = () => {
+      const nextView = getSpaceViewFromLocation();
+      resetSpaceViewMessages(nextView);
+      setSpaceView(nextView);
+    };
+    window.addEventListener('popstate', syncSpaceView);
+    window.addEventListener('asteria-route-change', syncSpaceView);
+    syncSpaceView();
+    return () => {
+      window.removeEventListener('popstate', syncSpaceView);
+      window.removeEventListener('asteria-route-change', syncSpaceView);
+    };
+  }, []);
 
   useEffect(() => {
     if (spaceView !== 'chat') return;
