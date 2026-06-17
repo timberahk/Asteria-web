@@ -2272,7 +2272,7 @@ const RegisterPage = () => {
   const handleSystemLogin = async () => {
     setLoginError('');
     if (isBackendConfigured) {
-      try {
+    try {
         const account = await loginWithUsername(loginUsername.trim(), loginPassword.trim());
         storeSpaceAccount(account);
 
@@ -2483,6 +2483,20 @@ const SpacePortalPage = () => {
     setViewerIndex(0);
   };
 
+  const openSpaceView = (view: typeof spaceView) => {
+    if (view === 'updates') setRelationshipEntryMessage('');
+    if (view === 'journal') setJournalEntryMessage('');
+    setSpaceView(view);
+  };
+
+  const setEntryStatusMessage = (entry: PortalEntry, message: string) => {
+    if (entry.type === 'mood') {
+      setJournalEntryMessage(message);
+      return;
+    }
+    setRelationshipEntryMessage(message);
+  };
+
   const jumpCustomerChatDate = (scope: string) => {
     const ok = scrollToChatDate(scope, activeCustomer?.messages || [], chatJumpDate);
     setChatJumpMessage(ok ? `已跳到 ${formatDisplayDate(chatJumpDate)}` : `當日未有訊息：${formatDisplayDate(chatJumpDate)}`);
@@ -2660,6 +2674,7 @@ const SpacePortalPage = () => {
       }
       setRelationshipText('');
       setRelationshipEntryMessage('關係 update 已儲存。');
+      setJournalEntryMessage('');
     } catch (error) {
       setRelationshipEntryMessage(error instanceof Error ? error.message : '關係 update 暫時儲存唔到。');
     }
@@ -2700,6 +2715,7 @@ const SpacePortalPage = () => {
         }
       }
       setJournalEntryMessage('心靈日記已儲存。');
+      setRelationshipEntryMessage('');
     } catch (error) {
       setJournalEntryMessage(error instanceof Error ? error.message : '心靈日記暫時儲存唔到。');
     }
@@ -2734,9 +2750,9 @@ const SpacePortalPage = () => {
       setEditingEntryId(null);
       setEditingEntryDate('');
       setEditingEntryText('');
-      setEntryMessage('內容已更新。');
+      setEntryStatusMessage(entry, '內容已更新。');
     } catch (error) {
-      setEntryMessage(error instanceof Error ? error.message : '內容暫時更新唔到。');
+      setEntryStatusMessage(entry, error instanceof Error ? error.message : '內容暫時更新唔到。');
     }
   };
 
@@ -2744,12 +2760,12 @@ const SpacePortalPage = () => {
     if (!canEditEntry(entry)) return;
     const confirmed = window.confirm('確定刪除呢段內容？');
     if (!confirmed) return;
-    try {
+      try {
       if (isBackendConfigured) await deleteSpaceEntry(String(entry.id));
       removeLocalEntry(entry.id);
-      setEntryMessage('內容已刪除。');
+      setEntryStatusMessage(entry, '內容已刪除。');
     } catch (error) {
-      setEntryMessage(error instanceof Error ? error.message : '內容暫時刪除唔到。');
+      setEntryStatusMessage(entry, error instanceof Error ? error.message : '內容暫時刪除唔到。');
     }
   };
 
@@ -2819,7 +2835,7 @@ const SpacePortalPage = () => {
     setProfileMessage('資料已更新。');
     setIsEditingProfile(false);
     setSpaceMessage('');
-    setSpaceView('dashboard');
+    openSpaceView('dashboard');
   };
 
   if (isSpaceLoading) {
@@ -2886,7 +2902,7 @@ const SpacePortalPage = () => {
           <section className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden flex flex-col h-[calc(100vh-9rem)] min-h-[640px] sm:min-h-[700px] max-h-[980px] min-w-0">
             <div className="px-4 py-3 border-b border-asteria-cream/70 flex items-center justify-between gap-4 shrink-0">
               <div className="min-w-0">
-                <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
+                <button onClick={() => openSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回 Space
                 </button>
                 <div className="font-bold text-asteria-dark">Inbox · {(activeCustomer?.messages || []).length} 則訊息</div>
@@ -2976,7 +2992,7 @@ const SpacePortalPage = () => {
     return (
       <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+          <button onClick={() => openSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
           </button>
           <section className="bg-white border border-asteria-cream/70 rounded-2xl p-4 sm:p-5 md:p-6 shadow-sm mb-6 overflow-hidden">
@@ -3052,7 +3068,7 @@ const SpacePortalPage = () => {
     return (
       <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
         <div className="container mx-auto px-6 max-w-7xl">
-          <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+          <button onClick={() => openSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
           </button>
           <div className="grid lg:grid-cols-[1fr_340px] gap-6 items-start">
@@ -3111,7 +3127,7 @@ const SpacePortalPage = () => {
     return (
       <main className="pt-36 md:pt-28 pb-20 bg-[#FFFDF8] min-h-screen">
         <div className="container mx-auto px-6 max-w-3xl">
-          <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
+          <button onClick={() => openSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold mb-6">
             <i className="fa-solid fa-arrow-left"></i> 返回 Space
           </button>
           <section className="bg-white border border-asteria-cream/70 rounded-2xl p-6 md:p-8 shadow-sm">
@@ -3274,7 +3290,7 @@ const SpacePortalPage = () => {
 
           {spaceView === 'dashboard' && (
             <div className="grid md:grid-cols-3 gap-4">
-              <button onClick={() => setSpaceView('chat')} className="bg-asteria-dark text-white rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:brightness-110 transition-all">
+              <button onClick={() => openSpaceView('chat')} className="bg-asteria-dark text-white rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:brightness-110 transition-all">
                 <div>
                   <div className="text-sm text-white/70">Message Thread</div>
                   <div className="text-2xl font-bold">Inbox</div>
@@ -3282,7 +3298,7 @@ const SpacePortalPage = () => {
                 </div>
                 <i className="fa-solid fa-arrow-right text-2xl"></i>
               </button>
-              <button onClick={() => setSpaceView('updates')} className="bg-white border border-asteria-cream/70 text-asteria-dark rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:border-asteria-primary transition-all">
+              <button onClick={() => openSpaceView('updates')} className="bg-white border border-asteria-cream/70 text-asteria-dark rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:border-asteria-primary transition-all">
                 <div>
                   <div className="text-sm text-stone-400">Relationship</div>
                   <div className="text-2xl font-bold">關係 update</div>
@@ -3290,7 +3306,7 @@ const SpacePortalPage = () => {
                 </div>
                 <i className="fa-solid fa-timeline text-2xl text-asteria-primary"></i>
               </button>
-              <button onClick={() => setSpaceView('journal')} className="bg-[#FFF8EC] border border-asteria-cream/70 text-asteria-dark rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:border-asteria-primary transition-all">
+              <button onClick={() => openSpaceView('journal')} className="bg-[#FFF8EC] border border-asteria-cream/70 text-asteria-dark rounded-2xl p-5 md:p-6 shadow-sm text-left flex items-center justify-between gap-4 hover:border-asteria-primary transition-all">
                 <div>
                   <div className="text-sm text-stone-400">Journal</div>
                   <div className="text-2xl font-bold">心靈日記</div>
@@ -3305,7 +3321,7 @@ const SpacePortalPage = () => {
           <div className="bg-white border border-asteria-cream/70 rounded-2xl shadow-sm overflow-hidden">
             <div className="p-5 md:p-6 border-b border-asteria-cream/70 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
-                <button onClick={() => setSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
+                <button onClick={() => openSpaceView('dashboard')} className="inline-flex items-center gap-2 text-asteria-primary font-bold text-sm mb-2">
                   <i className="fa-solid fa-arrow-left"></i> 返回 Space
                 </button>
                 <div className="text-sm text-stone-400">Message Thread</div>
@@ -4347,6 +4363,11 @@ const App = () => {
         description: 'Asteria 感情拯救所提供感情占卜、塔羅分析、復合挽回、斷聯冷淡、曖昧第三者、愛情儀式與日常相處教學。IG 暫停期間請用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡。',
         canonical: `${SITE_URL}/`,
       },
+      teaching: {
+        title: '感情教學文章｜Asteria 感情拯救所',
+        description: 'Asteria 感情教學文章，整理復合挽回、斷聯冷淡、曖昧第三者、關係修復與日常相處溝通方向。',
+        canonical: `${SITE_URL}/teaching/`,
+      },
       about: {
         title: '關於我們｜Asteria 感情拯救所',
         description: '認識 Asteria 感情拯救所：不只提供占卜與儀式，亦會陪你整理分手、復合、斷聯、冷淡、曖昧與相處問題，教你下一步點做。',
@@ -4412,7 +4433,7 @@ const App = () => {
     return (
       <div className="antialiased selection:bg-asteria-primary selection:text-white font-sans text-gray-800">
         <Navbar />
-        <Blog fullPage key={routeKey || 'teaching'} />
+        <Blog fullPage />
         <Footer />
         <FloatingWhatsApp />
       </div>
