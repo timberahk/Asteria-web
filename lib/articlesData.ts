@@ -141,21 +141,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/003-long-distance-relationship/02-asian-couple-station-goodbye.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/003-long-distance-relationship/03-asian-woman-dinner-video-call.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/003-long-distance-relationship/04-asian-man-night-train-longing.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -189,21 +189,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/004-rational-partner-argument/02-asian-woman-feeling-unheard.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/004-rational-partner-argument/03-asian-couple-sofa-understanding.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/004-rational-partner-argument/04-asian-man-overthinking-desk.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -237,21 +237,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/02-asian-woman-after-formal-date.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/03-asian-woman-questioning-checklist.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/04-asian-couple-comfortable-park.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -285,21 +285,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/006-control-disguised-as-care/02-asian-woman-phone-privacy-pressure.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/006-control-disguised-as-care/03-asian-woman-window-boundaries.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/006-control-disguised-as-care/04-asian-friends-support-cafe.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -333,21 +333,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/02-asian-woman-values-notebook.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/03-asian-couple-park-compromise.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/04-asian-woman-window-clarity.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -381,21 +381,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/02-asian-woman-phone-uncertainty-night.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/03-asian-man-avoidant-after-work.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/04-asian-couple-waterfront-uncertain-talk.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -429,21 +429,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/009-cold-war-freeze-response/02-asian-woman-pause-before-speaking.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/009-cold-war-freeze-response/03-asian-couple-floor-safe-talk.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/009-cold-war-freeze-response/04-hands-near-reconnection-cafe.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -477,21 +477,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/010-relationship-cracks-repair/02-asian-couple-kitchen-apology.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/010-relationship-cracks-repair/03-asian-couple-rain-umbrella-repair.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/010-relationship-cracks-repair/04-asian-woman-cafe-journal-tarot.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -525,21 +525,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/02-asian-woman-first-attraction-street.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/03-asian-couple-outdoor-cafe-date.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/04-asian-couple-seaside-attachment.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -573,21 +573,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/02-asian-woman-writing-feelings.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/03-asian-couple-cafe-direct-talk.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/04-asian-couple-after-honest-talk.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -621,21 +621,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/02-asian-couple-night-ambiguous-walk.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/03-asian-couple-cafe-define-relationship.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/04-asian-couple-crossing-commitment.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -669,21 +669,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/02-asian-woman-dinner-emotional-distance.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/03-asian-couple-kitchen-mutual-sharing.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/04-asian-couple-balcony-reconnection.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -717,21 +717,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/02-asian-couple-home-imbalance.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/03-asian-woman-cafe-self-worth.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/04-asian-couple-table-restoring-balance.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -765,21 +765,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/016-emotional-value-practical-support/02-asian-couple-kitchen-shared-tasks.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/016-emotional-value-practical-support/03-asian-couple-planner-ask-before-helping.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/016-emotional-value-practical-support/04-asian-woman-park-support-boundaries.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -813,27 +813,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/02-asian-woman-window-respectful-space.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？常見相處誤區",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/03-asian-couple-park-patient-companionship.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？常見相處誤區",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/04-asian-man-cafe-self-boundary.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？常見相處誤區",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你以為在幫對方，其實正在增加壓力？3 個常見相處誤區",
+    "coverCaption": "Asteria 相處教學：你以為在幫對方，其實正在增加壓力？常見相處誤區",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -861,21 +861,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/018-care-becoming-pressure/02-asian-woman-train-autonomy.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/018-care-becoming-pressure/03-asian-couple-cafe-share-not-control.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/018-care-becoming-pressure/04-asian-couple-park-same-side.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -909,21 +909,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/02-asian-woman-desk-reflection-patterns.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/03-asian-couple-floor-learning-together.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/04-asian-couple-walking-growth-path.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -957,21 +957,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/02-asian-man-cafe-two-cups-reflection.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/03-asian-former-couple-bench-postmortem.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/04-asian-woman-sunset-repair-uncertain.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -1276,7 +1276,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "警號",
     "summary": "當你發現自己愛得太辛苦、太委屈，可能你不只是「戀愛腦」，而係陷入一場「創傷迷戀」！清醒吧！一起來看看怎樣能令自己愛得更有尊嚴！",
-    "content": "<p>遇到「愛到委屈自己值得嗎」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「感情付出不對等」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>「感情付出不對等」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「感情付出不對等」要把界線說清楚</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「感情付出不對等」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>不對等的付出，要先看自己失去了甚麼</h2>\n<p>如果「愛到委屈自己值得嗎」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「愛到委屈自己值得嗎」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「愛到委屈自己值得嗎」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「愛到委屈自己值得嗎」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "content": "<p>遇到「感情付出不對等」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「感情付出不對等」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>「感情付出不對等」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「感情付出不對等」要把界線說清楚</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「感情付出不對等」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>不對等的付出，要先看自己失去了甚麼</h2>\n<p>如果「感情付出不對等」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「感情付出不對等」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「感情付出不對等」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「感情付出不對等」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
     "sourceIg": "",
     "date": "2025-08-08",
     "tags": [
@@ -1293,27 +1293,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-5617687.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
+        "caption": "內文配圖：感情付出不對等？你正在委屈自己的警號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-sitting-on-a-bench-while-looking-at-a-woman-5617687/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6642914.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
+        "caption": "內文配圖：感情付出不對等？你正在委屈自己的警號",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/an-upset-couple-standing-near-the-door-6642914/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4308048.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
+        "caption": "內文配圖：感情付出不對等？你正在委屈自己的警號",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/crop-serious-ethnic-couple-with-crossed-arms-on-couch-4308048/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：愛到委屈自己值得嗎？關係不對等的警號",
+    "coverCaption": "Asteria 相處教學：感情付出不對等？你正在委屈自己的警號",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -1900,7 +1900,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-shield-heart",
     "imageLabel": "復合",
     "summary": "冷戰等於迴避型人格？其實唔係所有會冷戰嘅人都係迴避型人格，只係對方唔想面對問題、唔識處理問題、唔識溝通，所以先用「冷處理」解決。面對呢類人要點應對？一齊睇圖學嘢。",
-    "content": "<p>遇到「情侶冷戰點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「冷戰後要不要主動聯絡」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「冷戰後要不要主動聯絡」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「冷戰後要不要主動聯絡」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「情侶冷戰點算」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>越想靠近「冷戰後要不要主動聯絡」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>對方退後時，先分清冷靜、逃避還是切斷：回到「冷戰後要不要主動聯絡」來看</h2>\n<p>如果你正面對「情侶冷戰點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>情侶冷戰點算？分清冷靜、逃避與拒絕溝通</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>情侶冷戰點算？分清冷靜、逃避與拒絕溝通</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>情侶冷戰點算？分清冷靜、逃避與拒絕溝通</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "content": "<p>遇到「冷戰後要不要主動聯絡」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「冷戰後要不要主動聯絡」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「冷戰後要不要主動聯絡」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「冷戰後要不要主動聯絡」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「冷戰後要不要主動聯絡」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>越想靠近「冷戰後要不要主動聯絡」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>對方退後時，先分清冷靜、逃避還是切斷：回到「冷戰後要不要主動聯絡」來看</h2>\n<p>如果你正面對「冷戰後要不要主動聯絡」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>冷戰後要不要主動聯絡？分清冷靜、逃避與拒絕溝通</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>冷戰後要不要主動聯絡？分清冷靜、逃避與拒絕溝通</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>冷戰後要不要主動聯絡？分清冷靜、逃避與拒絕溝通</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
     "date": "2026-03-15",
     "tags": [
@@ -1917,27 +1917,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-6643019.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+        "caption": "內文配圖：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/upset-woman-standing-in-the-hallway-in-an-apartment-with-a-man-dressing-to-go-out-6643019/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6669802.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+        "caption": "內文配圖：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/love-people-woman-broken-6669802/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7341894.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+        "caption": "內文配圖：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
         "credit": "Photo by cottonbro studio on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-sad-woman-looking-at-her-cellphone-while-sitting-on-a-bed-7341894/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+    "coverCaption": "Asteria 相處教學：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -2157,21 +2157,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/02-asian-woman-mirror-self-care.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/03-asian-woman-cafe-new-chapter.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/04-asian-couple-cafe-reconciliation.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -2860,7 +2860,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "警號",
     "summary": "對於你好愛嗰個人，你哋嘅關係可能曾經好平等，但係唔知從幾時開始，佢嘅位置開始比你高階，你哋之間嘅愛情，變得越嚟越不對等。當我哋越愛一個人，就越容易放下過往嘅堅持，處處為佢著想、為佢付出。但其實越係咁樣，你哋嘅關係就越係唔對等！想知點解會咁？",
-    "content": "<p>遇到「愛到委屈自己值得嗎」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「總是遷就對方好累」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>遷就到失去自己就是警號</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>看付出是否有來有往</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>「總是遷就對方好累」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>先守住界線，再看對方有沒有真正改變：回到「總是遷就對方好累」來看</h2>\n<p>如果「愛到委屈自己值得嗎」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「愛到委屈自己值得嗎」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「愛到委屈自己值得嗎」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「愛到委屈自己值得嗎」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "content": "<p>遇到「總是遷就對方好累」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「總是遷就對方好累」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>遷就到失去自己就是警號</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>看付出是否有來有往</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>「總是遷就對方好累」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>先守住界線，再看對方有沒有真正改變：回到「總是遷就對方好累」來看</h2>\n<p>如果「總是遷就對方好累」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「總是遷就對方好累」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「總是遷就對方好累」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「總是遷就對方好累」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
     "sourceIg": "",
     "date": "2023-08-24",
     "tags": [
@@ -2877,27 +2877,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-36766891.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
+        "caption": "內文配圖：總是遷就對方好累？關係失衡時要看清的界線",
         "credit": "Photo by Vitaly Gariev on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-lying-apart-in-bed-unhappy-36766891/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6870546.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
+        "caption": "內文配圖：總是遷就對方好累？關係失衡時要看清的界線",
         "credit": "Photo by Gustavo Fring on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-having-an-argument-6870546/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5617747.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
+        "caption": "內文配圖：總是遷就對方好累？關係失衡時要看清的界線",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-touching-the-woman-s-elbow-while-having-an-argument-5617747/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：愛到委屈自己值得嗎？關係不對等的警號",
+    "coverCaption": "Asteria 相處教學：總是遷就對方好累？關係失衡時要看清的界線",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -3100,7 +3100,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-heart",
     "imageLabel": "復合",
     "summary": "所有男人都曾經遇到嘅難題：「女朋友明明發緊嬲，但又唔出聲，乜都唔講，淨係黑曬面，到底想點？」今次嘅女朋友說明書就話曬俾你知，到底女人為乜要咁做！一齊。",
-    "content": "<p>遇到「情侶冷戰點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「冷戰變成斷聯前，如何用低壓」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先看對方是否仍願意談「冷戰變成斷聯前，如何用低壓」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「情侶冷戰點算」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>別讓「冷戰變成斷聯前，如何用低壓」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先判斷「冷戰變成斷聯前，如何用低壓」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>面對「冷戰變成斷聯前，如何用低壓方式打」，先不要把修補變成追逼</h2>\n<p>如果你正面對「情侶冷戰點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「情侶冷戰點算」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「情侶冷戰點算」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「情侶冷戰點算」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "content": "<p>遇到「冷戰變成斷聯前」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「冷戰變成斷聯前，如何用低壓」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先看對方是否仍願意談「冷戰變成斷聯前，如何用低壓」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「冷戰變成斷聯前」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>別讓「冷戰變成斷聯前，如何用低壓」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先判斷「冷戰變成斷聯前，如何用低壓」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>面對「冷戰變成斷聯前，如何用低壓方式打」，先不要把修補變成追逼</h2>\n<p>如果你正面對「冷戰變成斷聯前」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「冷戰變成斷聯前」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「冷戰變成斷聯前」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「冷戰變成斷聯前」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
     "sourceIg": "",
     "date": "2024-11-08",
     "tags": [
@@ -3117,27 +3117,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11037195.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+        "caption": "內文配圖：冷戰變成斷聯前，如何用低壓方式打開對話",
         "credit": "Photo by Takuya Hozumi on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-woman-in-gray-dress-11037195/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8727412.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+        "caption": "內文配圖：冷戰變成斷聯前，如何用低壓方式打開對話",
         "credit": "Photo by Tima Miroshnichenko on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-woman-in-red-long-sleeve-shirt-8727412/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8820970.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+        "caption": "內文配圖：冷戰變成斷聯前，如何用低壓方式打開對話",
         "credit": "Photo by Khoa Võ on Pexels",
         "creditUrl": "https://www.pexels.com/photo/sad-young-woman-with-clasped-hands-on-a-rainy-day-8820970/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+    "coverCaption": "Asteria 相處教學：冷戰變成斷聯前，如何用低壓方式打開對話",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -3261,21 +3261,21 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/by_article/001-block-read-no-contact/02-asian-couple-cold-war-sofa.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/001-block-read-no-contact/03-asian-woman-careful-message-cafe.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/by_article/001-block-read-no-contact/04-asian-couple-distance-riverside.jpg",
-        "caption": "Asteria 原創文章配圖",
+        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
         "credit": "",
         "creditUrl": "",
         "prompt": ""
@@ -4348,7 +4348,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
     "summary": "拍拖初期，大家成日好有好多嘢講，但一齊耐咗，好多情侶都會越嚟越冇計傾。你以為咁樣只係好小事？但其實可能係造成分手嘅大地雷！到底要點樣面對「越拍越冇嘢講」呢個問題？一齊嚟睇吓啦！",
-    "content": "<p>遇到「感情變淡點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>越想靠近「對方慢慢冷淡」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>不要把「對方慢慢冷淡」的沉默都當成一樣</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>先處理「對方慢慢冷淡」最核心一步</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>不要只聽一句，要看「對方慢慢冷淡」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>讓「對方慢慢冷淡」有空間回氣</h2>\n<p>如果你正面對「感情變淡點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「感情變淡點算」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「感情變淡點算」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「感情變淡點算」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "content": "<p>遇到「對方慢慢冷淡」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>越想靠近「對方慢慢冷淡」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>不要把「對方慢慢冷淡」的沉默都當成一樣</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>先處理「對方慢慢冷淡」最核心一步</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>不要只聽一句，要看「對方慢慢冷淡」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>讓「對方慢慢冷淡」有空間回氣</h2>\n<p>如果你正面對「對方慢慢冷淡」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「對方慢慢冷淡」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「對方慢慢冷淡」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「對方慢慢冷淡」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
     "sourceIg": "",
     "date": "2025-06-04",
     "tags": [
@@ -4365,27 +4365,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11014402.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：對方慢慢冷淡？容易令人抽離的互動模式",
         "credit": "Photo by Yudha Aprilian on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-having-conversation-while-sitting-at-the-park-11014402/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8405558.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：對方慢慢冷淡？容易令人抽離的互動模式",
         "credit": "Photo by Los Muertos Crew on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-talking-on-the-phone-together-8405558/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8151713.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：對方慢慢冷淡？容易令人抽離的互動模式",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-standing-near-the-wooden-door-while-drinking-coffee-8151713/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡點算？4 個令對方慢慢抽離的行為",
+    "coverCaption": "Asteria 相處教學：對方慢慢冷淡？容易令人抽離的互動模式",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -4845,27 +4845,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-31530221.jpg",
-        "caption": "內文配圖：你一直原諒，對方卻一直不改？別再替他找藉口",
+        "caption": "內文配圖：對方一直道歉但不改？原諒前要看清的事",
         "credit": "Photo by Oliver Dohrn on Pexels",
         "creditUrl": "https://www.pexels.com/photo/portrait-of-a-young-couple-in-casual-attire-31530221/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-27028314.jpg",
-        "caption": "內文配圖：你一直原諒，對方卻一直不改？別再替他找藉口",
+        "caption": "內文配圖：對方一直道歉但不改？原諒前要看清的事",
         "credit": "Photo by Anastasia Nagibina on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-jumping-on-bed-27028314/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-10893298.jpg",
-        "caption": "內文配圖：你一直原諒，對方卻一直不改？別再替他找藉口",
+        "caption": "內文配圖：對方一直道歉但不改？原諒前要看清的事",
         "credit": "Photo by HONG SON on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-wearing-white-tops-hugging-10893298/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你一直原諒，對方卻一直不改？別再替他找藉口",
+    "coverCaption": "Asteria 相處教學：對方一直道歉但不改？原諒前要看清的事",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5068,7 +5068,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-regular fa-comments",
     "imageLabel": "心理",
     "summary": "你有沒有經歷過咁樣嘅關係？雙方曖昧到一個位，忍唔住、唔小心出現咗抱抱、Kiss、同床共枕，甚至性行為嘅超友誼關係。你以為經過呢個階段，就可以正式成為佢嘅女朋友，點知過咗一段時間，佢仍然無動於衷、冇任何表示，到底佢當你係乜？",
-    "content": "<p>面對「太快發生關係會影響愛情嗎」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>把「太早親密會否扣分」由想像拉回行動</h2>\n<p>「太快發生關係會影響愛情嗎」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>別讓「太早親密會否扣分」變成單方面推進</h2>\n<p>好的曖昧不是你一直追，對方一直接收。你可以給機會，但也要讓對方付出一部分努力，這樣才看得出關係是否真的有發展。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>別只憑感覺判斷「太早親密會否扣分」</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「太早親密會否扣分」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>不要只看表面，先拆「太早親密會否扣分」卡在哪一步</h2>\n<p>如果你正在經歷「太快發生關係會影響愛情嗎」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>太快發生關係會影響愛情嗎</strong>」入面，曖昧卡住或對方唔表態應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>「<strong>太快發生關係會影響愛情嗎</strong>」入面，我主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇「<strong>太快發生關係會影響愛情嗎</strong>」對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "content": "<p>面對「太早親密會否扣分」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>把「太早親密會否扣分」由想像拉回行動</h2>\n<p>「太早親密會否扣分」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>別讓「太早親密會否扣分」變成單方面推進</h2>\n<p>好的曖昧不是你一直追，對方一直接收。你可以給機會，但也要讓對方付出一部分努力，這樣才看得出關係是否真的有發展。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>別只憑感覺判斷「太早親密會否扣分」</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「太早親密會否扣分」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>不要只看表面，先拆「太早親密會否扣分」卡在哪一步</h2>\n<p>如果你正在經歷「太早親密會否扣分」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>太早親密會否扣分</strong>」入面，曖昧卡住或對方唔表態應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>「<strong>太早親密會否扣分</strong>」入面，我主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇「<strong>太早親密會否扣分</strong>」對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
     "date": "2023-07-01",
     "tags": [
@@ -5085,27 +5085,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11016967.jpg",
-        "caption": "內文配圖：太快發生關係會影響愛情嗎？避免變成酒肉關係",
+        "caption": "內文配圖：太早親密會否扣分？避免關係停在酒肉階段",
         "credit": "Photo by Chu Cuong on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-young-couple-looking-at-each-other-11016967/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-9062138.jpg",
-        "caption": "內文配圖：太快發生關係會影響愛情嗎？避免變成酒肉關係",
+        "caption": "內文配圖：太早親密會否扣分？避免關係停在酒肉階段",
         "credit": "Photo by QUIN Bridal on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-sitting-beside-a-window-while-having-coffee-9062138/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4651230.jpg",
-        "caption": "內文配圖：太快發生關係會影響愛情嗎？避免變成酒肉關係",
+        "caption": "內文配圖：太早親密會否扣分？避免關係停在酒肉階段",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-sitting-on-the-bed-4651230/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：太快發生關係會影響愛情嗎？避免變成酒肉關係",
+    "coverCaption": "Asteria 相處教學：太早親密會否扣分？避免關係停在酒肉階段",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5325,27 +5325,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-33893084.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡不是突然發生：關係降溫前的細節",
         "credit": "Photo by Daniil Kondrashin on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-enjoying-a-fall-evening-outdoors-33893084/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-14036056.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡不是突然發生：關係降溫前的細節",
         "credit": "Photo by Quang Nguyen Vinh on Pexels",
         "creditUrl": "https://www.pexels.com/photo/boy-and-a-girl-wearing-traditional-clothes-talking-in-front-of-a-building-entrance-14036056/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-36180297.jpg",
-        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
+        "caption": "內文配圖：感情變淡不是突然發生：關係降溫前的細節",
         "credit": "Photo by Supriyanto  Katiman on Pexels",
         "creditUrl": "https://www.pexels.com/photo/casual-conversation-in-modern-cafe-setting-36180297/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡點算？4 個令對方慢慢抽離的行為",
+    "coverCaption": "Asteria 相處教學：感情變淡不是突然發生：關係降溫前的細節",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5356,7 +5356,7 @@ export const teachingPosts: TeachingPost[] = [
     "icon": "fa-solid fa-shield-heart",
     "imageLabel": "心理",
     "summary": "有冇試過間唔中都會好易因為一啲小事而發脾氣，但其實你都唔知自己點解會嬲得咁快，甚至會懷疑自己係咪情緒有問題？到底係咩一回事？",
-    "content": "<p>「用發脾氣換關注有用嗎」會牽動很多不安，越亂越要先分清事實、猜測和感受。當你看清自己真正需要的是安慰、承諾、空間還是答案，下一步就不會只被情緒推著走。</p> <h2>不要把一刻心動當成全部證據</h2>\n<p>心動、習慣和依賴很容易混在一起。處理「用發脾氣換關注有用嗎」時，要看長期相處是否舒服，而不只是某一刻很想靠近。 你可以先把腦入面的劇情寫出來，再逐句問自己：這是事實、推測，還是我害怕發生的結果？分開之後，情緒會比較容易落地。</p> <h2>讓自己先回到穩定狀態：回到「用情緒測試對方有用嗎」來看</h2>\n<p>情緒最高漲時做的決定，通常最容易後悔。先睡一覺、寫低感受，或者找人整理，再決定要不要發訊息。 情緒不是錯，但情緒最高漲時最容易講錯話。先讓自己回到穩定狀態，再決定要不要發訊息，通常會少很多後悔。</p> <h2>處理「用情緒測試對方有用嗎」不要把猜測當答案</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。 如果你需要的是安全感，就不要只用質問去換答案；可以改成表達你希望對方怎樣回應，這樣對方比較知道如何接住你。</p> <h2>面對「用情緒測試對方有用嗎」，先停下反覆試探</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。 當你不再把所有價值感交給對方反應決定，就會更容易看見這段關係是否真的適合，而不是只被一刻心動或不甘心帶走。</p> <h2>情緒很滿時，先讓自己回到穩定：回到「用情緒測試對方有用嗎」來看</h2>\n<p>如果你被「用發脾氣換關注有用嗎」拉到很亂，先給自己一點時間回到穩定。你可以把感受寫低、分清事實和猜測，再決定要不要同對方談。當你不再被即時焦慮推著走，很多原本看似一定要立刻處理的事，會變得更清楚，也更容易選到不後悔的做法。</p>\n<h2>常見問題</h2>\n<h3>「用發脾氣換關注有用嗎」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「用發脾氣換關注有用嗎」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「用發脾氣換關注有用嗎」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "content": "<p>「用情緒測試對方有用嗎」會牽動很多不安，越亂越要先分清事實、猜測和感受。當你看清自己真正需要的是安慰、承諾、空間還是答案，下一步就不會只被情緒推著走。</p> <h2>不要把一刻心動當成全部證據</h2>\n<p>心動、習慣和依賴很容易混在一起。處理「用情緒測試對方有用嗎」時，要看長期相處是否舒服，而不只是某一刻很想靠近。 你可以先把腦入面的劇情寫出來，再逐句問自己：這是事實、推測，還是我害怕發生的結果？分開之後，情緒會比較容易落地。</p> <h2>讓自己先回到穩定狀態：回到「用情緒測試對方有用嗎」來看</h2>\n<p>情緒最高漲時做的決定，通常最容易後悔。先睡一覺、寫低感受，或者找人整理，再決定要不要發訊息。 情緒不是錯，但情緒最高漲時最容易講錯話。先讓自己回到穩定狀態，再決定要不要發訊息，通常會少很多後悔。</p> <h2>處理「用情緒測試對方有用嗎」不要把猜測當答案</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。 如果你需要的是安全感，就不要只用質問去換答案；可以改成表達你希望對方怎樣回應，這樣對方比較知道如何接住你。</p> <h2>面對「用情緒測試對方有用嗎」，先停下反覆試探</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。 當你不再把所有價值感交給對方反應決定，就會更容易看見這段關係是否真的適合，而不是只被一刻心動或不甘心帶走。</p> <h2>情緒很滿時，先讓自己回到穩定：回到「用情緒測試對方有用嗎」來看</h2>\n<p>如果你被「用情緒測試對方有用嗎」拉到很亂，先給自己一點時間回到穩定。你可以把感受寫低、分清事實和猜測，再決定要不要同對方談。當你不再被即時焦慮推著走，很多原本看似一定要立刻處理的事，會變得更清楚，也更容易選到不後悔的做法。</p>\n<h2>常見問題</h2>\n<h3>「用情緒測試對方有用嗎」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「用情緒測試對方有用嗎」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「用情緒測試對方有用嗎」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
     "sourceIg": "",
     "date": "2025-06-21",
     "tags": [
@@ -5373,27 +5373,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-4651032.jpg",
-        "caption": "內文配圖：用發脾氣換關注有用嗎？避免把對方越推越遠",
+        "caption": "內文配圖：用情緒測試對方有用嗎？小心把愛越推越遠",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-taking-pictures-in-bed-4651032/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8055516.jpg",
-        "caption": "內文配圖：用發脾氣換關注有用嗎？避免把對方越推越遠",
+        "caption": "內文配圖：用情緒測試對方有用嗎？小心把愛越推越遠",
         "credit": "Photo by Annushka  Ahuja on Pexels",
         "creditUrl": "https://www.pexels.com/photo/portrait-of-a-couple-embracing-8055516/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6944040.jpg",
-        "caption": "內文配圖：用發脾氣換關注有用嗎？避免把對方越推越遠",
+        "caption": "內文配圖：用情緒測試對方有用嗎？小心把愛越推越遠",
         "credit": "Photo by Vlada Karpovich on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-preparing-food-in-the-kitchen-6944040/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：用發脾氣換關注有用嗎？避免把對方越推越遠",
+    "coverCaption": "Asteria 相處教學：用情緒測試對方有用嗎？小心把愛越推越遠",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5547,8 +5547,8 @@ export const teachingPosts: TeachingPost[] = [
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "曖昧",
-    "summary": "身邊總有啲女仔會覺得男友出街時冷淡，但一講到床上親密就好熱情，喺床上總係花盡心思討自己歡心，講盡甜言蜜語。但完事卻瞬間開啟「聖人模式」，變得冷淡難接近，唔通呢類男人，只係當自己係SP？",
-    "content": "<p>遇到「不想淪為炮友」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先判斷「曖昧太久無進展」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>「曖昧太久無進展」不用一次過逼出完整答案</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>用行動判斷「曖昧太久無進展」</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>留住步伐才看得清「曖昧太久無進展」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先分清「曖昧太久無進展」是靠近還是享受曖昧</h2>\n<p>如果你正面對「不想淪為炮友」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>不想淪為炮友？如何由曖昧關係走向真正情侶</strong>」入面，對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>遇到「<strong>不想淪為炮友？如何由曖昧關係走向真正情侶</strong>」時，我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我睇「<strong>不想淪為炮友？如何由曖昧關係走向真正情侶</strong>」呢類情況？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
+    "summary": "曖昧太久無進展時，最辛苦不是沒有心動，而是關係一直沒有名份。先看對方有沒有投入時間、主動安排和清楚界線，再決定要推進、放慢還是收回期待。",
+    "content": "<p>曖昧太久無進展，最容易令人一邊有希望，一邊又很不安。你們可能會聊天、會見面、會關心對方，但每次講到關係定位，對方就含糊帶過。這種不確定感會慢慢消耗你，因為你不知道自己應該繼續投入，還是其實只是停在對方舒服的位置。</p>\n<h2>先看對方有沒有把你放進生活</h2>\n<p>真正想發展的人，不會只在無聊時出現。你要看他會否主動安排下一次見面、記得你講過的事、願意交代自己的狀態，而不是只在氣氛好時講幾句曖昧說話。</p>\n<p>如果每次都是你開話題、你約時間、你配合他的節奏，這段曖昧很可能只是靠你一個人維持。關係要走向情侶，至少要有來有往，而不是你一直猜他到底有沒有意思。</p>\n<h2>不要用更多付出換一個名份</h2>\n<p>很多人在曖昧卡住時，會下意識做更多：更快回覆、更體貼、更遷就，甚至不敢問清楚，怕一問就破壞氣氛。但如果對方本身沒有打算承擔，你做得越多，只會令自己越被動。</p>\n<p>你可以保持溫柔，但不需要把全部主動權交出去。適度放慢，反而可以看清對方會否補上。如果你退一步後，對方完全沒有行動，那就是一個很重要的答案。</p>\n<h2>用低壓方式確認關係方向</h2>\n<p>推進不等於逼對方即刻承諾。你可以用輕一點但清楚的方式表達，例如「我覺得我哋相處幾好，但我唔想一直停喺唔清唔楚的位置，你點睇？」這類說法比質問更容易讓對方真實回應。</p>\n<p>重點不是要他即場說出完美答案，而是看他有沒有正面面對。如果他永遠逃避、轉話題、用甜言蜜語安撫你，卻沒有任何實際安排，曖昧就很難自然變成穩定關係。</p>\n<h2>分清慢熱和不想負責</h2>\n<p>慢熱的人未必會很快確認關係，但通常會有穩定投入；不想負責的人則會享受親近，卻避開定位。兩者最大的分別，是你能否在相處裡感到越來越清楚，而不是越來越混亂。</p>\n<p>如果對方一直給你希望，又一直不讓關係落地，你就要替自己設一個觀察期限。不是要用期限威脅對方，而是提醒自己不要無限期等一個沒有行動的人。</p>\n<h2>想由曖昧走向情侶，要保留自己的節奏</h2>\n<p>曖昧要升級，不是靠你一個人用力推。你可以表達好感，也可以給對方空間，但同時要看他是否願意用行動接住你。真正值得發展的人，會讓關係慢慢變清楚，而不是讓你一直靠猜。</p>\n<p>如果你已經很不安，可以先停一停，把最近的互動、主動程度、見面安排和對方對未來的態度寫下來。當你不再只看一兩句甜話，就會更容易分辨這段曖昧有沒有走向情侶的可能。</p>\n<h2>常見問題</h2>\n<h3>曖昧太久無進展，係咪代表對方冇意思？</h3>\n<p>不一定。有些人是慢熱或需要時間觀察，但如果對方長期只享受曖昧、不安排見面、不回應關係方向，就要小心他可能沒有打算認真發展。</p>\n<h3>我應該直接問清楚關係嗎？</h3>\n<p>可以，但建議用低壓方式講清自己的感受和需要，而不是質問對方。你要看的不是他當刻答得多好聽，而是之後有沒有實際行動令關係更清楚。</p>\n<h3>Asteria 可以點幫我判斷呢段曖昧？</h3>\n<p>我哋可以幫你拆對方訊息、見面節奏和行動投入，睇清楚對方係慢熱、有顧慮，定其實只想停留喺曖昧舒服區。</p>",
     "sourceIg": "",
     "date": "2024-06-28",
     "tags": [
@@ -5565,28 +5565,28 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8560426.jpg",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
+        "caption": "內文配圖：曖昧太久無進展？由不確定關係走向情侶的做法",
         "credit": "Photo by Timur Weber on Pexels",
         "creditUrl": "https://www.pexels.com/photo/portrait-of-a-couple-together-8560426/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4150443.jpg",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
+        "caption": "內文配圖：曖昧太久無進展？由不確定關係走向情侶的做法",
         "credit": "Photo by Mid.art_for.memories on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-on-date-4150443/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6643008.jpg",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
+        "caption": "內文配圖：曖昧太久無進展？由不確定關係走向情侶的做法",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-holding-the-man-s-hands-while-he-is-looking-away-6643008/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：不想淪為炮友？如何由曖昧關係走向真正情侶",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
+    "coverCaption": "Asteria 相處教學：曖昧太久無進展？由不確定關係走向情侶的做法",
+    "inlineCaption": "曖昧要升級，不只看甜不甜，還要看對方有沒有用行動令關係變清楚。"
   },
   {
     "id": 117,
@@ -5661,27 +5661,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8374279.jpg",
-        "caption": "內文配圖：你們適合結婚嗎？婚前必看的關係判斷重點",
+        "caption": "內文配圖：婚前關係不安點算？判斷是否適合走長遠",
         "credit": "Photo by AI25.Studio  AI GENERATIVE on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-working-with-laptop-in-living-room-8374279/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6789142.jpg",
-        "caption": "內文配圖：你們適合結婚嗎？婚前必看的關係判斷重點",
+        "caption": "內文配圖：婚前關係不安點算？判斷是否適合走長遠",
         "credit": "Photo by cottonbro studio on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-close-up-shot-of-a-couple-lying-down-on-a-bed-6789142/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7671449.jpg",
-        "caption": "內文配圖：你們適合結婚嗎？婚前必看的關係判斷重點",
+        "caption": "內文配圖：婚前關係不安點算？判斷是否適合走長遠",
         "credit": "Photo by Ivan S on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-in-gray-jacket-sitting-on-black-chair-7671449/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你們適合結婚嗎？婚前必看的關係判斷重點",
+    "coverCaption": "Asteria 相處教學：婚前關係不安點算？判斷是否適合走長遠",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5709,27 +5709,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8836421.jpg",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
+        "caption": "內文配圖：情緒太滿令伴侶退縮？親密關係的修復方法",
         "credit": "Photo by Los Muertos Crew on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-in-the-coffee-shop-8836421/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7964174.jpg",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
+        "caption": "內文配圖：情緒太滿令伴侶退縮？親密關係的修復方法",
         "credit": "Photo by Felicity Tai on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-talking-in-the-hallway-while-holding-papers-7964174/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4307638.jpg",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
+        "caption": "內文配圖：情緒太滿令伴侶退縮？親密關係的修復方法",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/cheerful-couple-having-conversation-on-bed-4307638/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：另一半受不了你的情緒？親密關係中的情緒修復方法",
+    "coverCaption": "Asteria 相處教學：情緒太滿令伴侶退縮？親密關係的修復方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -5805,27 +5805,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-35696948.jpg",
-        "caption": "內文配圖：覺得對方唔夠愛你？先看清關係變淡的真正原因",
+        "caption": "內文配圖：對方不像以前熱情？分清變淡、壓力與抽離",
         "credit": "Photo by Thái Trường Giang on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-enjoying-nature-on-rock-formation-in-vietnam-35696948/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7963834.jpg",
-        "caption": "內文配圖：覺得對方唔夠愛你？先看清關係變淡的真正原因",
+        "caption": "內文配圖：對方不像以前熱情？分清變淡、壓力與抽離",
         "credit": "Photo by Felicity Tai on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-wearing-a-long-sleeves-holding-a-notebook-7963834/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8794813.jpg",
-        "caption": "內文配圖：覺得對方唔夠愛你？先看清關係變淡的真正原因",
+        "caption": "內文配圖：對方不像以前熱情？分清變淡、壓力與抽離",
         "credit": "Photo by Hồng Xuân Viên on Pexels",
         "creditUrl": "https://www.pexels.com/photo/female-friends-wearing-traditional-dress-8794813/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：覺得對方唔夠愛你？先看清關係變淡的真正原因",
+    "coverCaption": "Asteria 相處教學：對方不像以前熱情？分清變淡、壓力與抽離",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
@@ -6742,13 +6742,13 @@ export const teachingPosts: TeachingPost[] = [
   },
   {
     "id": 141,
-    "title": "渣男警號點分辨？曖昧期要避開的危險信號",
+    "title": "媽寶男有咩徵兆？拍拖前要看清的危險信號",
     "category": "關係危機",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
     "imageLabel": "警號",
-    "summary": "拍拖前，佢話屋企人對佢嚟講好重要，你以為佢只係孝順、有責任感；但一齊之後，佢事事以佢屋企優先；同居後又唔會負起做家頭細務嘅責任。你有冇諗過你嘅另一半可能係「媽寶男」？到底「媽寶」係咪隱性？又可以點喺拍拖前就分辨出對方有冇「媽寶男」徵兆？",
-    "content": "<p>媽寶男可能一開始係暖男 會令你感覺佢離唔開你 會激發起你嘅母性，媽寶男可能會令你覺得佢好孝順，誤以為佢很有責任感，係個可以付託終身嘅對象，咁到底呢種男人係咪有跡可尋。</p>\n<p>最常見行為係「<strong>永遠都覺得係人哋嘅錯</strong>」 面對自己嘅行為毫無責任感，無法正視自己嘅錯，更加唔識得得改善 生活、職場上即使有任何差錯，都會因為毫無責任心，而將錯誤怪罪於他人 唔會正視自己嘅問題。</p>\n<h2>跡象2 靠父母資助</h2>\n<p>佢望落對外光鮮亮麗 但其實使費經常靠父母資助 出門在外成日「<strong>打腫臉充胖子</strong>」，平時對屋企人唔會好理會，但遇到有物慾望時，就會軟硬兼施 將把父母當係提款機、許願池，希望藉此得到想要嘅好處、物質需求。</p>\n<h2>看清「渣男警號點分辨」信號後，要回到行動和界線</h2>\n<p>好多人啱啱識媽寶男 往往會誤會對方係個孝順男人，佢哋會成日將屋企人掛喺嘴邊 有時甚至會話「<strong>我媽未來都係是你阿媽啊！</strong>」，「<strong>我阿媽話覺得你個妝太濃，你不如唔好化啦！</strong>」 諸如此類嘅台詞，都是媽寶男經常掛喺嘴邊。</p>\n<p>慢慢相處先發現 原來佢係個隱性媽寶男 咁又應該點樣</p>\n<p>即Check同媽寶男嘅相處技巧；🔎 唔好一開始就同對方屋企人「<strong>爭地位</strong>」；🔎 拒絕被對方情緒勒索，俾佢獨自面對錯誤；🔎 適時嘅正向引導，鼓勵佢勇於表達意見；🔎 劃清界線、區分彼此嘅生活事務同分工。</p>\n<h2>常見問題</h2>\n<h3>曖昧期點樣分辨危險信號？</h3>\n<p>看他是否責任感薄弱、界線混亂、說法前後不一，或者只在想得到好處時靠近你。</p>\n<h3>遇到渣男警號，應該再觀察還是抽身？</h3>\n<p>如果只是小誤會可以觀察；但如果牽涉欺騙、控制、金錢利用或長期不尊重，就要先保護自己。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
+    "summary": "媽寶男不一定一開始就明顯，他可能看起來孝順、溫柔、很需要你，但相處久了才發現他缺乏界線、凡事聽屋企人、遇事不願承擔。拍拖前要先看清這些危險信號。",
+    "content": "<p>媽寶男最容易令人誤判，因為一開始他可能很溫柔、很依賴你，也很常把屋企人掛在嘴邊。你會以為這代表他孝順、有責任感，但真正相處後才發現，他不是重視家庭，而是沒有建立自己的界線和承擔能力。</p>\n<h2>第一個徵兆：凡事都要屋企人批准</h2>\n<p>孝順和沒有主見是兩回事。健康的伴侶可以尊重父母意見，但最後仍然會自己判斷、自己承擔。如果他每件事都要問屋企人，甚至把你們的決定交給父母裁決，關係很容易變成三方拉扯。</p>\n<p>你要留意他會不會用「我媽話」來否定你，例如你的打扮、工作、生活習慣，甚至你們約會和未來安排。這不是單純聽意見，而是把屋企人的標準放到你身上。</p>\n<h2>第二個徵兆：出事時永遠不是自己的責任</h2>\n<p>媽寶男常見問題不是只愛媽媽，而是未學識承擔。遇到衝突時，他可能會怪你太敏感、怪父母逼他、怪環境不配合，總之很少真正面對自己的選擇。</p>\n<p>如果一個人連小事都不願認錯，長遠關係裡遇到金錢、同居、婚姻或家庭問題時，他就更容易逃避。愛情不能只靠你包容，他也要有能力站出來處理問題。</p>\n<h2>第三個徵兆：家庭界線長期混亂</h2>\n<p>有些人會很自然把另一半拉入家庭規則，例如要求你配合他屋企人的喜好、節日安排、生活方式，卻從來沒有問你是否舒服。久而久之，你會覺得自己不是在和他拍拖，而是在適應整個家庭。</p>\n<p>真正成熟的伴侶，會在你和家人之間做好橋樑，而不是要你自己去承受壓力。如果他每次都叫你忍、叫你配合，卻不願替你說一句公道話，這個位置就需要重新評估。</p>\n<h2>第四個徵兆：靠依賴包裝成深情</h2>\n<p>媽寶男有時會令你覺得自己很被需要，因為他甚麼都想問你、依賴你、要你照顧他情緒。但被需要不等於被愛，長遠來看，你可能會變成他的第二個照顧者。</p>\n<p>拍拖不是要你接手養大一個人。你可以支持對方成長，但不能替他承擔所有選擇。如果他只想被照顧，卻不願一起建立成熟關係，你會越愛越累。</p>\n<h2>遇到媽寶男，先守住自己的界線</h2>\n<p>不要一開始就同對方屋企人爭地位，也不要急著證明自己比他家人重要。比較穩陣的做法，是觀察他有沒有能力獨立決定、尊重你的感受，以及在衝突中願不願意承擔。</p>\n<p>你可以溫和講清界線，例如哪些事屬於你們兩個人的決定，哪些家庭意見可以聽但不應直接控制你。真正值得走長遠的人，會願意學習平衡，而不是永遠叫你讓步。</p>\n<h2>常見問題</h2>\n<h3>媽寶男同孝順男有咩分別？</h3>\n<p>孝順男會尊重家人，但仍然有自己的判斷和承擔；媽寶男則容易把家人意見放到你們關係之上，甚至要求你無條件配合。</p>\n<h3>拍拖初期點樣分辨媽寶男？</h3>\n<p>看他遇到衝突時會否自己處理、是否凡事問父母、會不會把家庭要求直接壓到你身上，以及有沒有清楚保護你們兩個人的界線。</p>\n<h3>Asteria 可以點幫我判斷呢段關係？</h3>\n<p>我哋可以幫你拆對方家庭界線、責任感和相處模式，睇清楚佢係單純重視家庭，定係未有能力建立成熟伴侶關係。</p>",
     "sourceIg": "https://www.instagram.com/p/C68jnkByhvx/",
     "date": "2024-05-14",
     "tags": [
@@ -6765,28 +6765,28 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-6669840.jpg",
-        "caption": "內文配圖：如何識別渣男？感情中容易被忽略的危險信號",
+        "caption": "內文配圖：媽寶男有咩徵兆？拍拖前要看清的危險信號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-sitting-back-to-back-6669840/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4308053.jpg",
-        "caption": "內文配圖：如何識別渣男？感情中容易被忽略的危險信號",
+        "caption": "內文配圖：媽寶男有咩徵兆？拍拖前要看清的危險信號",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/thoughtful-man-talking-to-upset-woman-on-couch-4308053/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5617757.jpg",
-        "caption": "內文配圖：如何識別渣男？感情中容易被忽略的危險信號",
+        "caption": "內文配圖：媽寶男有咩徵兆？拍拖前要看清的危險信號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-in-black-long-sleeve-shirt-walking-away-feeling-upset-5617757/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：如何識別渣男？感情中容易被忽略的危險信號",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
+    "coverCaption": "Asteria 相處教學：媽寶男有咩徵兆？拍拖前要看清的危險信號",
+    "inlineCaption": "真正要看的不是他是否重視家人，而是他能否在關係裡有界線和承擔。"
   },
   {
     "id": 142,
@@ -6909,27 +6909,27 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-2204949.jpg",
-        "caption": "內文配圖：一吵架就提分手點算？避免衝動毀掉關係",
+        "caption": "內文配圖：吵架衝口講分手？修復傷害前要先做的事",
         "credit": "Photo by Kha Ruxury on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-leaning-on-glass-2204949/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-31048773.jpg",
-        "caption": "內文配圖：一吵架就提分手點算？避免衝動毀掉關係",
+        "caption": "內文配圖：吵架衝口講分手？修復傷害前要先做的事",
         "credit": "Photo by Minh Tran on Pexels",
         "creditUrl": "https://www.pexels.com/photo/emotional-woman-sitting-indoors-in-distress-31048773/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-11153501.jpg",
-        "caption": "內文配圖：一吵架就提分手點算？避免衝動毀掉關係",
+        "caption": "內文配圖：吵架衝口講分手？修復傷害前要先做的事",
         "credit": "Photo by chunhsien shih on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-leaning-on-concrete-platform-11153501/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一吵架就提分手點算？避免衝動毀掉關係",
+    "coverCaption": "Asteria 相處教學：吵架衝口講分手？修復傷害前要先做的事",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
