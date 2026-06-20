@@ -2646,7 +2646,7 @@ const repairAttachmentActionCardsHtml = (html = '') => html.replace(
   }
 );
 
-const sectionCardHeadingPattern = /原因|方法|徵兆|警號|真相|心態|階段|禁忌|地雷|判斷|分辨|做法|應對|處理|點樣|如何|為什麼|為甚麼|點解|可以|不要|唔好|記住|關鍵|特徵|秘訣|指南|攻略|修復|重建|建立|表達|溝通|界線|自我反思|改變思維|培養信任|展示真實|創造情感|累積信任|分享細節|自我保護|幻想破滅|逃避型依附/u;
+const sectionCardHeadingPattern = /原因|方法|徵兆|警號|真相|心態|階段|禁忌|地雷|判斷|分辨|做法|應對|處理|點樣|如何|為什麼|為甚麼|點解|唔好|記住|關鍵|特徵|秘訣|指南|攻略|修復|重建|建立|表達|溝通|界線|自我反思|改變思維|培養信任|展示真實|創造情感|累積信任|分享細節|自我保護|幻想破滅|逃避型依附/u;
 const excludedSectionCardHeading = /^(感情拯救所話你知|感情拯救所，告訴你|重點速讀|Asteria 小提醒|常見問題|建議內部連結|科學點解釋|心理學家將愛情分為三個階段|點樣由吸引變依戀|那到底要怎樣分辨|你可以先觀察三個位置|冷暴力|為甚麼有些男人會用沉默|面對冷暴力|不是所有沉默|再看深一層|下一步不要急著做錯|再觀察|再整理|再判斷|再拆深一點)/u;
 
 const repairSectionCardsHtml = (html = '') => html.replace(
@@ -3036,6 +3036,12 @@ const replaceGenericDepthHtml = (html = '', article = {}) => {
   out = out
     .replace(/(<div class="article-section-card"><p>少一點用否定句回應對方的分享，先接住感受，再表達自己的看法。讚賞要具體，例如看見對方做了甚麼努力，而不是空泛地說「<strong>你好叻<\/strong>」。當你自己情緒很滿時，先停一停，不要把不安變成責備。當男人在你面前感到放鬆、被理解、被尊重，他自然會更願意靠近你。但你也要記住，情緒價值不是單方面服務，而是兩個人都願意令彼此相處得更安心。<\/p><\/div>)\s*<h2>可以先做的三件事：少一點用否定句回應對方的分享<\/h2>\s*<p>少一點用否定句回應對方的分享，先接住感受，再表達自己的看法。讚賞要具體，例如看見對方做了甚麼努力，而不是空泛地說「<strong>你好叻<\/strong>」。當你自己情緒很滿時，先停一停，不要把不安變成責備。當男人在你面前感到放鬆、被理解、被尊重，他自然會更願意靠近你。但你也要記住，情緒價值不是單方面服務，而是兩個人都願意令彼此相處得更安心。<\/p>/g, '$1')
     .replace(/<h2>可以先做的三件事：少一點用否定句回應對方的分享<\/h2>\s*<p>少一點用否定句回應對方的分享，先接住感受，再表達自己的看法。讚賞要具體，例如看見對方做了甚麼努力，而不是空泛地說「<strong>你好叻<\/strong>」。當你自己情緒很滿時，先停一停，不要把不安變成責備。當男人在你面前感到放鬆、被理解、被尊重，他自然會更願意靠近你。但你也要記住，情緒價值不是單方面服務，而是兩個人都願意令彼此相處得更安心。<\/p>/g, '');
+  if (/拆解 4 大情緒勒索金句/.test(out)) {
+    out = out
+      .replace(/<div class="article-section-card"><p>(正常情緒表達[\s\S]*?你唔咁做就係唔愛我<\/strong>」。)<\/p><\/div>/g, '<p>$1</p>')
+      .replace(/<ul class="article-highlight-list">[\s\S]*?<\/ul>/, '<ul class="article-highlight-list"><li>情緒勒索會用愛、內疚或離開威脅你順從</li><li>愛一個人不等於每件事都要答應</li><li>真正健康的關係會尊重你的拒絕和界線</li></ul>')
+      .replace(/<p>第一句：「我咁做都係因為太愛你」：([\s\S]*?)<\/p>/, '<h3>第一句：「<strong>我咁做都係因為太愛你</strong>」</h3>\n<p>$1</p>');
+  }
   const core = stripHtml(out.split(/<h2 class="article-highlight-title">重點速讀<\/h2>|<h2>Asteria 小提醒<\/h2>|<h2>常見問題<\/h2>/)[0] || '').replace(/\s+/g, '').trim();
   if (depth && core.length < 520 && !out.includes(depth)) {
     out = out.replace(/(<h2 class="article-highlight-title">重點速讀<\/h2>|<h2>Asteria 小提醒<\/h2>|<h2>常見問題<\/h2>)/, `${depth}\n$1`);
@@ -3053,6 +3059,34 @@ const removeRepeatedParagraphsHtml = (html = '') => {
     if (key.length > 28) seen.add(key);
     return match;
   });
+};
+
+const specificArticleMarkdown = (idKey) => {
+  if (idKey !== '111') return '';
+  return [
+    '## 你有冇試過喺戀愛入面覺得心很累？',
+    '明明單身時，你可以好清醒、好有自信；但一進入關係，就開始變得畏首畏尾。你怕自己講錯一句、拒絕一次，對方就會生氣、冷淡，甚至話你不夠愛。',
+    '如果伴侶經常用愛、犧牲、失望或者離開來令你順從，這未必只是普通情緒化，而可能是情緒勒索。情緒勒索最可怕的地方，是它表面看似深情，實際上卻慢慢令你失去界線。',
+    '## 拆解 4 大情緒勒索金句',
+    '### 第一句：「我咁做都係因為太愛你」',
+    '這句說話聽落好似深情，但潛台詞可能是：如果你拒絕我，就是拒絕我的愛。對方將自己的控制包裝成愛，令你覺得不順從就是不知好歹。',
+    '真正健康的愛，不需要用愛做理由去壓迫你。愛可以表達需要，但不應該要求你犧牲感受、自由或者底線去證明自己。',
+    '### 第二句：「你真心愛我就要咁做」',
+    '這句是很典型的愛意綁架。它將一個具體要求變成感情考試，好像你只要不照做，就代表你不愛、不夠投入、不值得被信任。',
+    '你要分清楚，愛一個人不等於每件事都要答應。你可以重視對方，也可以有自己的節奏、選擇和拒絕權。',
+    '### 第三句：「我放棄一切只為永遠同你一齊」',
+    '表面上這句像是很大的付出，但如果對方用自己的犧牲來令你內疚，就會變成另一種壓力。潛台詞是：我為你做了這麼多，所以你欠我。',
+    '感情入面可以有付出，但付出不應變成債務。真正成熟的關係，是雙方自願選擇靠近，而不是一方用犧牲逼另一方償還。',
+    '### 第四句：「如果我討厭你，早就走咗啦」',
+    '這句說話會令人覺得，對方願意留下已經是一種恩賜，你應該感恩，不應再要求更多。但其實，留在關係入面不等於有好好愛你，也不等於可以貶低你。',
+    '如果一段關係要靠「我都未走」來證明愛，代表真正的尊重和照顧可能已經不足。你值得的是被珍惜，而不是被提醒自己很幸運才沒有被拋低。',
+    '## 怎樣分辨情緒表達同情緒勒索？',
+    '正常情緒表達，會講自己的感受和需要，例如「我聽到你咁講會難過」。情緒勒索則會令你覺得自己有罪，迫你用順從去安撫對方，例如「你唔咁做就係唔愛我」。',
+    '你可以問自己三個問題：對方有沒有容許你拒絕？有沒有尊重你的界線？每次溝通後，你是更清楚彼此需要，還是更害怕做錯？答案會幫你看清這段互動是否健康。',
+    '## Asteria 感情拯救所話你知',
+    '情緒勒索是一種慢性消耗，會慢慢蠶食你的自信。你不需要即刻反擊，但要開始建立心理邊界：先停低、看清對方真正要求，再用溫柔但堅定的方式回應。',
+    '如果你長期被這類說話困住，不妨先整理最近幾次對話，分清哪些是感受表達，哪些是勒索句式。當你看得清模式，就比較容易重新拿回關係入面的主導權。'
+  ].join('\n\n');
 };
 
 const joinParagraphSentences = (parts = []) => {
@@ -3691,7 +3725,7 @@ const orderedFiles = [...order.filter((file) => allMdFiles.includes(file)), ...a
 const articles = orderedFiles.map((file, index) => {
   const raw = fs.readFileSync(path.join(sourceDir, file), 'utf8');
   const idKey = file.match(/^(\d+)/)?.[1] || String(index + 1).padStart(3, '0');
-  const rawForContent = Number(idKey) >= 87 && webReadyRawMap.has(idKey)
+  const rawForContent = Number(idKey) >= 87 && idKey !== '111' && webReadyRawMap.has(idKey)
     ? webReadyRawMap.get(idKey)
     : raw;
   const [frontmatter, body] = parseFrontmatter(rawForContent);
@@ -3699,7 +3733,7 @@ const articles = orderedFiles.map((file, index) => {
   const titleSource = articleTitleOverrides.get(idKey) || webReadyTitleMap.get(idKey) || frontmatter.seo_title || frontmatter.title || titles.get(file) || h1 || file.replace(/\.md$/, '');
   const title = cleanSeoDisplayTitle(titleSource);
   const category = inferCategory(title, frontmatter.category);
-  const cleaned = repairGeneratedArticleMarkdown(polishSpecificArticleMarkdown(`${idKey} ${title}`, cleanMarkdown(body, title)));
+  const cleaned = specificArticleMarkdown(idKey) || repairGeneratedArticleMarkdown(polishSpecificArticleMarkdown(`${idKey} ${title}`, cleanMarkdown(body, title)));
   const preliminaryContent = markdownToHtml(cleaned);
   const summary = makeSummary({ frontmatter, preliminaryContent, title, category });
   const bodyMarkdown = removeDuplicateIntro(cleaned, summary);
