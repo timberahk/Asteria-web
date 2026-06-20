@@ -22,22 +22,16 @@ export type TeachingPost = {
 export const teachingPosts: TeachingPost[] = [
   {
     "id": 1,
-    "title": "5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+    "title": "5 個愛情迷思的科學解釋：一見鍾情、熱戀期與分手心痛原來有根據",
     "category": "戀愛心理",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
     "imageLabel": "心理",
-    "summary": "[愛情科學] 愛情會令你沖暈頭腦？😮‍ 面對愛情，自己突如其來嘅舉動、諗法，都令自己變得唔認識自己。到底愛上一個人，係咪真係會令自己改變？定抑或，一切只係大腦作祟？！ 一齊由科學角度睇愛情啦",
-    "content": "<p>5個愛情的小迷思 原來有科學根據！</p>\n<div class=\"article-insight\">\n      <div class=\"article-insight-label\">真相</div>\n      <p>最初由友情開始，慢慢產生好感、依戀情緒，大腦管控愛情嘅回路會突然被觸發，有觸動&amp;心動的感覺，令你愛上佢</p>\n      <div class=\"article-insight-label article-insight-label-soft\">Fact Check Point</div>\n      <p>唔係所有愛情都係一見鍾情！慢慢累積嘅愛情反而能細水長流！</p>\n    </div>\n<h2>現象：每次拍拖都好快變淡，激情好快會消失</h2>\n<div class=\"article-insight\">\n      <div class=\"article-insight-label\">真相</div>\n      <p>起初拍拖時身體會產生苯乙胺、多巴胺等愛情激素，但平均30個月就消失，激情會趨於平淡，之後就變釋出内啡肽，主要用作穩定/維持關係之用</p>\n      <div class=\"article-insight-label article-insight-label-soft\">Fact Check Point</div>\n      <p>建議係熱戀期完之前，學識維繫同相處，搵到溝通的方式頻率，感情先可以長遠發展</p>\n    </div>\n<h2>親密、依賴同分手痛感都有生理原因</h2>\n<div class=\"article-insight\">\n      <div class=\"article-insight-label\">真相</div>\n      <p>身體親密接觸後大腦會出現催產素，降低危機意識、人與人嘅界線消失，變得更加依賴對方</p>\n      <div class=\"article-insight-label article-insight-label-soft\">Fact Check Point</div>\n      <p>To 發展中的你，唔好親密接觸後，就覺得對方可信！保持觀察！大腦危機意識下降並唔等同生活中嘅安全感上升</p>\n    </div>\n<div class=\"article-insight\">\n      <div class=\"article-insight-label\">真相</div>\n      <p>大腦記得拍拖嘅甜蜜，令神經元互相連結交流，如果分手後體會唔到，神經元連結中斷，大腦就會釋出「<strong>心好痛</strong>」嘅訊息</p>\n      <div class=\"article-insight-label article-insight-label-soft\">Fact Check Point</div>\n      <p>分手唔等於世界末日。除咗自己慢慢消化，也可以找可信的人陪你整理感受。</p>\n    </div>\n<h2>常見問題</h2>\n<h3>這些愛情迷思真的有科學根據嗎？</h3>\n<p>有些現象可以用大腦荷爾蒙、依附感和記憶連結去理解，但不代表每段關係都可以只靠科學公式判斷。科學可以幫你看清反應來源，真正選擇仍要回到相處和行動。</p>\n<h3>知道愛情有生理反應，對拍拖有咩幫助？</h3>\n<p>它會提醒你不要把一刻心動、依賴或分手痛感當成全部答案。當你知道大腦會放大某些感覺，就更容易慢下來，看清對方是否真的適合長久相處。</p>\n<h3>Asteria 可以怎樣幫我分清心動、依賴同真正適合？</h3>\n<p>可以幫你整理相處模式、對方行動和你自己的情緒反應，分清是短暫上頭、習慣依賴，還是真的有穩定發展的可能。</p>",
-    "sourceIg": "https://www.instagram.com/p/CsI8l15SETR/",
+    "summary": "愛情不只是感覺，也牽涉大腦化學反應。Asteria 以 5 個常見愛情迷思，拆解日久生情、熱戀期變淡、親密後依賴與分手心痛背後的心理與生理原因。",
+    "content": "<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思一</span><span>明明佢唔係你鍾意嗰類，但竟然日久生情</span></h2>\n<p>很多人以為愛情一定要一開始就心動，但其實不是所有愛情都是一見鍾情。有些關係是由友情、熟悉感和相處安全感慢慢累積出來。當你和一個人長時間相處，大腦會逐步建立依戀和好感。你開始習慣對方的存在，也開始在互動中感受到安心和被理解。到某一刻，大腦管控愛情的回路被觸發，就會出現心動、觸動，甚至「<strong>原來我鍾意佢</strong>」的感覺。所以日久生情並不是不浪漫。相反，慢慢累積出來的愛情，有時比一開始很強烈的吸引更能細水長流，因為它建立在真實相處，而不只是第一眼的想像。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思二</span><span>每次拍拖都好快變淡，激情好快會消失</span></h2>\n<p>熱戀期的強烈感覺，很多時候和苯乙胺、多巴胺等愛情激素有關。剛開始拍拖時，這些化學反應會令人覺得對方特別吸引，見面很開心，訊息一來就心跳加速。</p>\n<p>但激情本來就有週期。當關係進入穩定期，大腦不會永遠維持最高刺激狀態，激情會慢慢回落，之後更多是靠內啡肽和穩定依附去維持關係。</p>\n<p>這不代表不愛了，而是關係由「<strong>上頭</strong>」進入「<strong>相處</strong>」。真正重要的，是在熱戀期過去之前，慢慢建立溝通方法、相處節奏和安全感。否則激情一退，兩個人就會誤以為感情消失。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思三</span><span>成日掛住佢，諗起都好開心</span></h2>\n<p>當你掛住一個人、看到他的相、想起你們的甜蜜片段，大腦的快樂中樞會分泌多巴胺。這種反應會令人感覺興奮、期待，也會令你不自覺想再得到更多對方的回應。所以有時你不是單純「<strong>好理性地選擇想他</strong>」，而是大腦記住了那種快樂感，令你反覆想靠近。這種感覺甚至有點像上癮：越得到甜蜜，越想再得到下一次。明白這點，可以幫你在心動時保持一點距離。掛住一個人不一定代表他適合你；你仍然要看對方是否穩定、尊重你，以及你們相處是否真的舒服。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思四</span><span>發生親密接觸後，更加依賴佢</span></h2>\n<p>親密接觸後，大腦會釋放催產素。催產素會令人更容易感到親近、信任和依賴，也會降低危機意識，令你覺得彼此界線拉近了。</p>\n<p>這解釋了為甚麼有些人發生親密接觸後，會突然更放不低、更想確認關係，甚至把身體親密誤解成情感承諾。</p>\n<p>但親密接觸帶來的依賴感，不等於對方一定可靠，也不等於關係已經穩定。對發展中的關係來說，仍然要保持觀察：對方平日是否尊重你、是否有交代、是否願意用行動承擔，而不是只靠一刻親密去判斷。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思五</span><span>分手後，個心真係會痛</span></h2>\n<p>分手後覺得心痛，不是你誇張，也不是你太脆弱。拍拖時，大腦會記住你們的甜蜜經驗，神經元之間會建立連結。當關係突然中斷，這些熟悉的刺激消失，大腦就會感受到強烈落差。有些研究亦指出，失戀時大腦活躍的痛感區域，和身體受傷時有相似之處。換句話說，分手後「<strong>個心好痛</strong>」不只是形容詞，而是真實的身心反應。所以分手不等於世界末日，但也不需要逼自己即刻沒事。除了慢慢消化，也可以找可信的人陪你整理情緒、看清關係問題，讓自己一步步由痛感入面回到現實生活。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>明明佢唔係你鍾意嗰類，但竟然日久生情。</li><li>每次拍拖都好快變淡，激情好快會消失。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你覺得關係變淡，先不要急著判定感情完結。可以先看你們是否仍願意安排時間、回應彼此需要，以及一起嘗試新的相處方式。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
     "date": "2023-05-12",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-27067373.jpg",
     "coverCredit": "Photo by Anastasia Nagibina on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-on-couch-and-holding-hands-27067373/",
@@ -65,27 +59,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：5 個愛情迷思你可能一直信錯：原來戀愛真的有科學根據",
+    "coverCaption": "Asteria 相處教學：5 個愛情迷思的科學解釋：一見鍾情、熱戀期與分手心痛原來有根據",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 2,
-    "title": "為什麼你總是勸不動對方？90% 關係問題都卡在這一步",
-    "category": "溝通相處",
+    "title": "【一見鍾情】初見心動可以變真愛嗎？由吸引到依戀的關鍵",
+    "category": "曖昧桃花",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "溝通",
-    "summary": "勸不動對方，往往不是你講得不夠多，而是對方一開始已經聽到壓力。把道理拆成具體事件、感受和一個可做到的請求，才有機會令對方真正接收。",
-    "content": "<p>你明明想幫關係變好，但越講對方越抗拒，最後變成你像在說教，他像在防守。勸不動的關鍵，很多時不是道理錯，而是你一開口已經令對方覺得自己被否定。當對方先聽到壓力，他就很難再聽到你真正的需要。</p>\n<h2>先選一件最需要處理的事</h2>\n<p>不要一次過翻舊帳、講性格、講未來。先揀一個具體情境，例如遲覆、失約、講話語氣，對方才知道你真正想改善的是甚麼。</p>\n<p>如果你一開始就說「你成日都係咁」，對方會忙住保護自己；但如果你說「上星期三你答應打電話但沒有交代」，事情會落地很多。</p>\n<h2>把道理變成感受和請求</h2>\n<p>「你應該要改」會令人防衛；「上次你突然消失，我會很不安，下次可否先講一聲」會清楚很多。對方聽到做法，才有機會改。</p>\n<p>好的表達不是把自己放低，而是把要求講到對方知道下一步怎樣做。感受讓他明白你受傷，請求讓他知道可以怎樣修補。</p>\n<h2>不要用反問逼對方認錯</h2>\n<p>反問看似有力，其實容易變成審問。想對方聽入耳，可以少問「點解你成日咁」，多講「我希望下次可以點」。</p>\n<p>很多人被反問時不會反省，只會急著解釋。你越想迫他承認，他越想證明自己不是錯；對話就會離真正問題越來越遠。</p>\n<h2>留時間讓對方消化</h2>\n<p>有些人不是不在乎，而是即場反應慢。講完重點後留一點空白，觀察他之後有沒有回來回應，比即時逼答案更準。</p>\n<p>如果對方一時沉默，你可以說「你可以諗一陣，但我希望今晚再傾返」。這樣既不是放任，也不是追到對方完全關機。</p>\n<h2>看行動，不只看當刻認同</h2>\n<p>真正有用的溝通，不是對方當下說知道，而是同類情況再出現時有沒有調整。這才是你判斷關係能否改善的重點。</p>\n<p>如果他每次都說明白，但下次仍然一樣，你要看的不是他口才，而是他是否願意承擔後續行動。溝通的目的不是贏，是讓關係有變化。</p>\n<h2>常見問題</h2>\n<h3>我應該點樣開口？</h3>\n<p>用「事件、感受、希望」三步講，不要一開始就定性對方人格。開場越具體，對方越難逃入辯論。</p>\n<h3>對方一聽就逃避點算？</h3>\n<p>先縮短訊息，只講一個最核心位置；如果仍然長期逃避，就要看他是否願意承擔關係問題。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你 review 對話，拆邊句會令對方防衛，並整理更容易被聽見的表達。</p>",
+    "imageLabel": "曖昧",
+    "summary": "有冇試過遇到一個自己第一眼見到已經好鍾意、對佢有feel嘅人。",
+    "content": "<h2>有啲人話一見鍾情就好似中咗頭獎</h2>\n<p>一眼望埋去就知道對方係命中注定！但都有啲好理性嘅人覺得，呢啲只係大腦俾你嘅錯覺，過咗激情期就會打回原形，你又點睇？一見鍾情係電視劇先會出現嘅劇情？係你腦補出嚟嘅浪漫故事？定真係一段愛情嘅開始？</p><h2>科學點解釋？</h2>\n<p>你見到一個人高大、好陽光嘅人，你可能會覺得佢溫柔、善良、有責任感。但實際上你根本唔識佢、唔熟悉佢。你所以為嘅佢嘅優點都係你自己腦補出嚟。其實呢啲係一種投射效應（Projection Bias），一見鍾情有時唔係因為對方真係咁完美。而可能因為你想像對方係你理想嘅對象。要真正愛上佢，當然都係要深入咁再同佢相處。先會確認自己係咪真係愛對佢。</p><h2>費洛蒙令你覺得你鍾意佢！</h2>\n<p>有冇試過遇到一個人覺得佢有陣好香嘅味？嗰種味唔係來自佢嘅香水或者body cream。但就總覺得特別吸引，令你忍唔住想接近對方。其實呢個係同費洛蒙有關，有研究話女人對某啲男人身上嘅天然氣味會特別有好感。而嗰啲氣味其實與基因多樣性有關。所以一見鍾情可能唔止係眼緣，仲可能係你嘅身體「聞」到咗合適嘅對象。</p><h2>一見鍾情，有機會變成真愛？</h2>\n<p>啲人一見鍾情之後：真係可以發展出穩定長久嘅感情！但個關鍵係：一見鍾情本身唔代表真愛，真正嘅愛係要透過相處同了解建立出嚟。你一開始可能好鐘意一個人，但當你深入了解佢，你可能會發現佢性格、價值觀同你完全唔夾。亦有可能原本只係一見鍾情，後來發展出深厚嘅感情，變成真正嘅愛情。</p><h2>心理學家將愛情分為三個階段</h2>\n<div class=\"article-stage-timeline\">\n<div class=\"article-stage-card\"><span>1</span><strong>慾望 Lust</strong><p>最初的身體吸引和好奇，令你想靠近對方。</p></div>\n<div class=\"article-stage-card\"><span>2</span><strong>吸引 Attraction</strong><p>開始被對方特質牽動，想了解更多，也容易出現心動感。由短暫吸引走向信任、親密感和穩定連結。首先要建立出真正嘅親密感同信任。但前提係雙方願意深入了解對方，願意磨合、肯一齊經歷唔同嘅事情。建立更穩定嘅情感連結。依戀關係建立喺信任之上。一見鍾情可能係一段愛情嘅起點，但要將短暫激情變成長久嘅依戀，變成一段穩定嘅感情，就需要更深嘅層次，唔好以為只要你對對方一見鍾情，只需要等待佢嘅接近就得，亦唔好覺得一見鍾情係大腦作怪、不切實際。</p>\n<p>唔好覺得唔會有好結果，因為喺感情嘅世界，有時係你只要搵啱方法、適時主動出擊。係會有好嘅回報。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有啲人話一見鍾情就好似中咗頭獎。</li><li>科學點解釋</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
-    "date": "2023-10-10",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-04-11",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6214264.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/cheerful-asian-couple-smiling-and-chatting-on-street-6214264/",
@@ -113,891 +101,777 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：為什麼你總是勸不動對方？90% 關係問題都卡在這一步",
+    "coverCaption": "Asteria 相處教學：【一見鍾情】初見心動可以變真愛嗎？由吸引到依戀的關鍵",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 3,
-    "title": "Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
+    "title": "【情侶溝通】點解對方總係唔明你？拆解「讀心術迷思」",
     "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
-    "summary": "Long D = 愛真係會慢慢消失？點樣先可以維繫到感情？定期Facetime、傾電話係咪就足夠？仲有冇其他方法？",
-    "content": "<p>每日 FaceTime、傾電話、報告行蹤就等於維持到感情，每日例行式講：「<strong>今日食咗乜嘢？</strong>」 「<strong>返工忙唔忙？</strong>」，「<strong>你嗰邊有咩特別事發生？</strong>」。</p>\n<p>並唔係真正嘅連結 咁樣落去久而久之就會變成有講同冇講一樣，愛就會慢慢減弱，真正令愛保持鮮活嘅係 情感交流 + 共同向前 + 安全依附感 即係要點樣做。</p>\n<p>睇埋落去啦！</p>\n<h2>訂立長遠共同目標 避免短期渴望</h2>\n<p>好多人 Long D 最後玩完 唔係因為唔愛，而係因為睇唔到終點，喺心理學層面有個理論叫Future Projection，一段關係係需要未來投射，所以要令呢段感情維持到，你哋要一齊計劃未來，例如至少要知幾時見面？幾時喺同一個城市生活。</p>\n<p>大家嘅職生活規劃可以點樣配合？</p>\n<p>咁樣即使目標仲未達成 但只要有方向就會有力量繼續一齊行落去</p>\n<h2>遠距離不是只靠報備，而是要建立共同方向</h2>\n<p>反而係喺感到孤單、壓力大、心情低落時 冇另一半喺身邊更加易覺得寂寞，更易受誘惑 加上如果淨係靠對方去填補空虛 感情就會好易失衡，所以先以同性朋友作為寄託 去抒發自己嘅情緒、空虛嘅時候，同時將感受坦白講俾伴侶知而唔係收收埋埋。</p>\n<p>而係雙方真心嘅情感交流，一齊創造共同經歷，一齊考慮未來方向。只要兩個人都願意投入，距離未必會輕易拆散你哋；但如果只有一方努力，關係就會慢慢失衡。</p>\n<h2>常見問題</h2>\n<h3>Long D 一定會令感情變淡嗎？</h3>\n<p>不一定。真正影響關係的不是距離本身，而是你哋有冇共同方向、固定見面計劃，以及情緒低落時是否仍願意互相交代。</p>\n<h3>遠距離戀愛最先要傾清楚咩？</h3>\n<p>先傾見面頻率、未來城市安排、每日聯絡方式同衝突時點樣停一停再傾。Long D 最怕不是少見，而是完全睇唔到下一步。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DXRs2YGma_R/",
-    "date": "2026-04-18",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/003-long-distance-relationship/01-asian-woman-night-video-call.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "summary": "嘗試換個角度，停落嚟，諗一諗，呢種諗法喺一段感情入面，真係健康咩。",
+    "content": "<h2>你或者你嘅另一半，有冇試過咁諗？</h2>\n<p>喺親密關係入面，你或者對方有冇講過類似說話：「<strong>你愛我，就應該知道我諗緊乜啦！</strong>」，如果乜都要我講出嚟，咁就冇意思啦！你有冇意識到，呢種諗法，其實係一種，「<strong>毒性迷思</strong>」。</p><h2>試吓幫大家演化成情境題</h2>\n<p>當你突然唔出聲、望落有啲嬲，你嘅另一半問你：「你唔明點解你嬲？你可唔可以話我知？」，你聽完好燥咁話：「你愛我就應該知道嬲乜！」，有冇覺得呢個場面好熟口熟面，不論你係嬲嗰個，定係被嬲嗰個。</p>\n<h2>好多人，尤其係拍拖好多年拖嘅情侶</h2>\n<p>甚至係夫妻：都會有呢種「毒性迷思」，覺得大家一齊咗咁多年，對方好理所當然地，應該喺另一半皺個眉、黑個面、唔出聲。</p><p>即使乜都唔講，就應該知道自己諗緊乜，就應該知道自己當下嘅所有情緒，咁樣就是最完美嘅另一半。</p>\n<h2>但事實真係咁？</h2>\n<p>其實要令愛情長跑維持得更好，最好嘅訣竅應該係直球對決，而唔係假定對方對你100%瞭如指掌！唔好總係認為對方理所當然地，應該知道自己諗緊乜，冇人有讀心術，要猜測人哋諗緊乜嘅做法，令呢段感情好攰、好受折磨。</p><h2>好好說話、直接表明需求</h2>\n<p>唔好出陷阱題俾對方，唔好嘗試測試對方，唔好講嘢轉彎抹角，咁樣唔止為難另一半、都係內耗緊自己。如果你內心已經有答案，咁樣照心入面嗰句講出嚟，唔好Keep住測試對方，測試佢了解唔了解你、估唔估得中你嘅答案。</p><h2>咁要點講先啱？</h2>\n<p>「你想唔想見我？」，「我想同你出街，不如約聽日？」，「如果你咁鍾意搵friend就去隨便你」，「我其實想要你陪我，但如果你想搵friend，咁可唔可以12點前返嚟陪我」。</p>\n\n<p>「你冇理由唔知道我嬲乜？」，「我嬲係因為你唔記得之前應承咗今日同我出街」。</p>\n<h2>感情拯救所話你知</h2>\n<p>冇人係有義務100%了解你，冇人係一定會讀到你個心，喺一段戀愛入面，大家都係為了快樂、幸福。而唔係為咗互相折磨，如果兩個人彼此相愛，點解就唔可以坦然地同對方說出自己嘅想法，當然，坦誠需要時間累積。對方都會能夠慢慢地真正讀懂你嘅內心。所以直接同對方講出內心諗法，咁先係有效率嘅溝通。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你或者你嘅另一半，有冇試過咁諗。</li><li>好多人，尤其係拍拖好多年拖嘅情侶。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "sourceIg": "",
+    "date": "2024-06-19",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8560663.jpg",
+    "coverCredit": "Photo by Timur Weber on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/02-asian-couple-station-goodbye.jpg",
-        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【情侶溝通】點解對方總係唔明你？拆解「讀心術迷思」",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/03-asian-woman-dinner-video-call.jpg",
-        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-36812991.jpg",
+        "caption": "內文配圖：【情侶溝通】點解對方總係唔明你？拆解「讀心術迷思」",
+        "credit": "Photo by Vitaly Gariev on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/003-long-distance-relationship/04-asian-man-night-train-longing.jpg",
-        "caption": "內文配圖：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20479952.jpg",
+        "caption": "內文配圖：【情侶溝通】點解對方總係唔明你？拆解「讀心術迷思」",
+        "credit": "Photo by Alexander Mass on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：Long D 會令感情變淡嗎？遠距離戀愛維繫方法",
+    "coverCaption": "Asteria 相處教學：【情侶溝通】點解對方總係唔明你？拆解「讀心術迷思」",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 4,
-    "title": "T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-    "category": "溝通相處",
+    "title": "【恐怖情人警號】大男人定控制狂？5 個徵兆教你分辨",
+    "category": "關係危機",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "溝通",
-    "summary": "同另一半嗌交，佢淨係同你講道理，但唔識氹你？係咪因為佢太T人？想睇點同呢類人相處？",
-    "content": "<p>T 人 = Thinking（思考型） 處事講邏輯、講分析、講效率，樣樣都用理性去睇 T 人嘅邏輯係 有情緒 = 要解決。</p>\n<p>佢哋會以為拆解問題、分析成因 就等於「<strong>我對你好</strong>」=「<strong>對件事好</strong>」</p>\n<p>佢就係好冷靜咁分析問題 拎事實出嚟拆解、叫你「<strong>理性啲</strong>」，你明知你唔係想贏一場理論比賽，你只係想對方攬吓你、重視你嘅感受，但佢就淨係識同你講道理、講邏輯，你嗰刻唔單止覺得冇被安慰 仲會開始懷疑自己係咪太情緒化，係咪真係太麻煩。</p>\n<h2>愛你= 講道理=解決問題</h2>\n<p>其實佢未必唔在乎你 只係對於佢嚟講 講道理就係佢哋解決問題嘅方法，佢唔係唔愛你，只係覺得解決咗問題咪等於我對你好，但你當下最想要嘅唔係解決方案，而係一啲安慰 到底要點先令佢改變咁T嘅習慣？</p>\n<h2>讓理性伴侶知道甚麼才算安慰</h2>\n<p>T 型人通常唔係唔想對你好 而係佢哋真係唔知道點樣先叫做好，佢哋要見到實例，先會知道原來呢啲行為係有效、有意義，所以可以試吓同佢分享你感受到「<strong>被安慰</strong>」嘅時刻，T人會記得「<strong>做咗呢啲＝有效</strong>」，對佢哋嚟講係實際又正面嘅「<strong>教學指令</strong>」。</p>\n<p>佢哋會記住有用嘅 feedback 之後就會更願意重複做</p>\n<p>雙方價值觀、性格傾向唔同 往往就會忽略對方嘅感受 白魔法儀式可幫你哋更加理解彼此嘅感受，增強你哋之間嘅情感連結 令對方更容易理解你嘅感受 睇到大家真正嘅需要，可以令雙方更加淸晰地表達大家嘅需求 減少誤解、衝突，拉近距離、減少隔閡。</p>\n<h2>常見問題</h2>\n<h3>面對「T 人吵架只講道理怎麼辦」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「T 人吵架只講道理怎麼辦」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「T 人吵架只講道理怎麼辦」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DLhmW-FppTE/",
-    "date": "2025-06-30",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/004-rational-partner-argument/01-asian-couple-dining-table-tension.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "imageLabel": "警號",
+    "summary": "睇韓劇成日見到霸總人設嘅男主角，覺得佢哋大男人、有控制慾得嚟又好man，但如果你嘅另一半係霸道、控制慾勁強又冇自信嘅多疑型恐怖情人，你仲會唔會願意同佢一齊。",
+    "content": "<h2>面對自己嘅另一半</h2>\n<p>你會唔會有種窒息嘅感覺？佢所說嘅每一句說話，都令你內心有憂鬱、有壓力，你嘅私人空間越嚟越少，事事都要同佢報告，你所有行為都要按照佢嘅喜好、意願。一旦有咩唔順佢意：佢就會大發脾氣，甚至威脅你，你以為呢啲行為只係大男人？但可能你係同緊一個恐怖情人拍拖！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">特徵 1</span><span>控制慾強烈</span></h2>\n<p>控制慾強烈：以你為生活中心，同樣會要求你將佢排喺心中嘅第一順位。喺戀愛初期，你可能會以為呢類控制行為係愛你嘅表現。但當相處時間耐咗，你會發現佢對你嘅控制範圍會越擴越大。甚至變得蠻橫無理。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">特徵 2</span><span>慣性貶低另一半</span></h2>\n<p>慣性貶低另一半：恐怖情人內心缺乏安全感、自尊，成日都會習慣地貶低另一半，好鍾意言語侮辱、公開羞恥你，想透過削弱你嘅自尊心同自信，進而展現自己嘅自信、價值比你高。自己等於受害者：一旦出現爭執，或者有咩嘢同你出現意見分歧，總係認為自己先係受害者，經常覺得自己受到你嘅攻擊，甚至係受到身邊其他人嘅攻擊，佢嘅判斷力有問題，是非分得唔清楚，好易會混淆因果，好鍾意常將錯誤歸咎俾你。</p>\n<p>大家靜落嚟，認真思考吓：你覺得拍拖係為咗乜嘢？我相信大多數人嘅答案都係尋求幸福、快樂。咁你試諗吓：既然你嘅另一半不但俾唔到幸福、快樂你。你不斷妥協、違背自己嘅意願，呢段關係中嘅角色變得不對等，仲令你生活喺間斷嘅恐懼之中，甚至以後出現嗌交嘅時候，佢哋會透過各種手段嚟達到他們嘅目的。可能會以死相逼，亦可能威脅你要同歸於盡，咁樣，係咪仲要繼續一齊？</p><h2>感情拯救所話你知</h2>\n<p>面對大男人情人：同佢哋相處只需要學識適合地嗲佢、讚佢。唔好硬碰硬就可以順利地同佢哋溝通。但對於恐怖情人就係另一個局面，有時即使你想順從佢哋、自己認錯。佢哋都未必接受，甚至會質疑你嘅用意、繼而貶低你。要同佢哋相處有時真係要冒住好大嘅險。所以真係要諗清諗楚，認真分辨吓到底你嘅另一半，係純粹只係大男人，定其實係一個恐怖情人！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>控制慾強烈</li><li>面對恐怖情人，但自己唔捨得分手。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "sourceIg": "",
+    "date": "2024-09-29",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8560663.jpg",
+    "coverCredit": "Photo by Timur Weber on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/02-asian-woman-feeling-unheard.jpg",
-        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-36812991.jpg",
+        "caption": "內文配圖：【恐怖情人警號】大男人定控制狂？5 個徵兆教你分辨",
+        "credit": "Photo by Vitaly Gariev on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/03-asian-couple-sofa-understanding.jpg",
-        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8036689.jpg",
+        "caption": "內文配圖：【恐怖情人警號】大男人定控制狂？5 個徵兆教你分辨",
+        "credit": "Photo by SHVETS production on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/004-rational-partner-argument/04-asian-man-overthinking-desk.jpg",
-        "caption": "內文配圖：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-17637241.jpg",
+        "caption": "內文配圖：【恐怖情人警號】大男人定控制狂？5 個徵兆教你分辨",
+        "credit": "Photo by K on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：T 人吵架只講道理怎麼辦？讓理性伴侶聽見你的感受",
+    "coverCaption": "Asteria 相處教學：【恐怖情人警號】大男人定控制狂？5 個徵兆教你分辨",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 5,
-    "title": "條件完美但不合適？為何好對象未必適合你",
-    "category": "戀愛心理",
+    "title": "【兩性心理】女人太強會令對方不安？拆解男人自卑心結",
+    "category": "情緒修復",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "心理",
-    "summary": "明明另一半嘅條件好符合自己嘅擇偶要求，但大家一齊咗之後，點解感情都係會越嚟越差？一齊睇圖學嘢",
-    "content": "<p>拍拖之前，你會同朋友講：「<strong>佢嘅條件真係好啱我！</strong>」，但奇怪嘅係一齊生活耐咗之後 你開始覺得越嚟越唔對路，成日覺得「<strong>好似唔係我想像中嗰回事</strong>」 究竟問題出喺邊。</p>\n<p>但當關係進入穩定期、同居期 或者長期相處之後，你開始見到一啲之前冇諗過嘅嘢；💔 原來佢處理情緒嘅方式好差；💔 原來佢唔擅長溝通；💔 原來佢對金錢、家庭嘅睇法同你差好遠；💔 原來佢唔係你想像中咁體貼 呢個時候 失望就會出現。</p>\n<p>其實唔一定係揀錯 而係你一開始睇嘅唔係相處本身，因為我哋好習慣用條件揀人 外表、收入、職業、學歷、家庭背景，所以一開始你會覺得佢好完美 只係因為佢符合你嘅擇偶條件。</p>\n<h2>人嘅需要係會改變</h2>\n<p>人嘅需要唔係一成不變 可能你20幾歲時最想要嘅係：✔ 對你好；✔ 專一／關係穩定；✔ 肯花費時間喺你身上，但到30幾歲 你可能更需要：✔ 情緒理解；✔ 價值觀契合；✔ 一齊面對生活壓力嘅能力。</p>\n<h2>條件之外，真正要看相處能不能落地</h2>\n<p>你唔開心已經係一個好重要嘅訊號，愛情唔係揀「<strong>最優秀、條件最符合你理想嘅人</strong>」，而係揀一個可以同你過日子，可以處理雙方情緒、共同面對現實嘅人 條件可以幫你篩選對象，但永遠唔可以保證幸福，真正Keep得住一段長久關係嘅 唔係「<strong>佢嘅條件夠唔夠好</strong>」。</p>\n<p>而係你哋一齊生活 係唔係越嚟越穩定</p>\n<p>如果條件上好合適，但情感上一直好勉強，先唔好急住怪自己唔識感恩。有時問題唔係你要求太多，而係你哋嘅情感頻率、本質需要同生活節奏唔一致。揀另一半唔可以只靠條件，因為真正決定能否走遠嘅，是相處時能不能安心、自然同互相承托。</p>\n<h2>常見問題</h2>\n<h3>條件好但相處唔開心，應該點判斷？</h3>\n<p>先睇不開心係短期磨合，定係長期價值觀、情緒支援同生活節奏唔夾。如果你一直要壓低需要先維持和平，就唔應該只用條件說服自己。</p>\n<h3>點樣分清「要求太高」同「真的不適合」？</h3>\n<p>要求太高通常可以透過溝通調整；真的不適合會令你長期不安、委屈，甚至越相處越不像自己。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DWTyGWmCfVk/",
-    "date": "2026-03-25",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/01-asian-couple-polite-cafe-distance.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "imageLabel": "療癒",
+    "summary": "女人工作能力強、賺錢比男朋友多出很多，怎樣平衡大家嘅關係。",
+    "content": "<h2>女人的工作能力強、賺錢能力強</h2>\n<p>就一定會影響愛情！有些男人會覺得「<strong>自尊受挫</strong>」，有時女方容易變成「<strong>決策主導</strong>」，大家角色不對等會容易出現摩擦。</p><h2>女人賺錢多過男人</h2>\n<p>關係未必就會不平衡、不對等，因為重點並不在於大家的收入，而是大家怎樣相處，錢只係一個工具，但尊重&amp;理解才維繫關係的基礎。真正嘅平衡是：尊重彼此角色，欣賞對方嘅付出，找到相處方式而非比較輸贏，聽起來很容易，但到底要怎樣做？女人因為工作能力強、收入比男朋友高。就會出現一個隱藏問題，大家開始以金錢衡量愛情而忽略了情感嘅交流。但愛情的平衡與金錢無關，而是彼此感受到被需要、被欣賞，女人要學會放手，不需要所有都自己扛起。</p>\n<p>男人要學會承認自己獨有價值而非單純用金錢證明。</p><h2>作為男朋友</h2>\n<p>收入較低時容易出現自尊低/自卑。但愛情的價值並非以金錢衡量，可以嘗試肯定自身的獨特價值、發揮責任感與支持。並透過坦誠溝與女朋友通建立安全感。真正的吸引力從來不在收入，而在於能否令伴侶感到安心。</p><h2>面對一個將你推開</h2>\n<p>只因為「<strong>自覺不配</strong>」的人，最難不是說服他，而是令佢真正看得起自己，如果你覺得大家關係因收入差距而失衡。「<strong>我無法提供你想要的生活</strong>」，「<strong>你值得一個能令你豐富無憂生活的人</strong>」，有些男士會因為自己的收入比女朋友低而自卑。你試過安慰、解釋、堅持，但每次說得越多他就越是後退，他不夠自信相信自己可以愛人、可以被愛。但這不是因為他不夠愛你，只是他不敢去愛。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>女人的工作能力強、賺錢能力強</li><li>很多時候</li><li>作為男朋友</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
+    "sourceIg": "",
+    "date": "2025-11-02",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8036689.jpg",
+    "coverCredit": "Photo by SHVETS production on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/02-asian-woman-after-formal-date.jpg",
-        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【兩性心理】女人太強會令對方不安？拆解男人自卑心結",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/03-asian-woman-questioning-checklist.jpg",
-        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【兩性心理】女人太強會令對方不安？拆解男人自卑心結",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/005-perfect-on-paper-not-compatible/04-asian-couple-comfortable-park.jpg",
-        "caption": "內文配圖：條件完美但不合適？為何好對象未必適合你",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070516.jpg",
+        "caption": "內文配圖：【兩性心理】女人太強會令對方不安？拆解男人自卑心結",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：條件完美但不合適？為何好對象未必適合你",
+    "coverCaption": "Asteria 相處教學：【兩性心理】女人太強會令對方不安？拆解男人自卑心結",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 6,
-    "title": "「為你好」可能係控制？感情操控 5 個警號",
-    "category": "關係危機",
+    "title": "【分手前兆】感情亮紅燈的 4 個徵兆：冷淡、逃避與失望",
+    "category": "復合挽回",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "警號",
-    "summary": "佢成日都話係為你好，但你有冇諗過，其實佢嘅行為係一種操控？一齊睇吓你身邊嘅另一半，有冇呢類潛在操控嘅傾向啦。",
-    "content": "<p>遇到「「為你好」可能係控制」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「為你好可能係控制」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>為你好不應該令你越來越不敢說話</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>看控制行為是否反覆出現</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「為你好可能係控制」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「為你好可能係控制」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。</p> <h2>不要把包容變成一個人硬撐</h2>\n<p>如果「「為你好」可能係控制」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「為你好可能係控制」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「為你好可能係控制」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「為你好可能係控制」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "imageLabel": "復合",
+    "summary": "但老土啲咁講，「冰封三尺非一日之寒」，對方想分手，其實先有徵兆，只係差在你feel唔feel到、識唔識觀察。",
+    "content": "<h2>有冇試過</h2>\n<p>明明覺得自己同另一半嘅感情冇乜問題。但佢突然間話想分手，令你好震驚？其實當一段感情去到盡頭之前，往往都會出現一啲「<strong>徵兆</strong>」！種種嘅徵兆都代表住：你漸漸地從佢嘅生活圈入面被推得越嚟越遠。呢啲種種都是「<strong>唔再愛</strong>」嘅徵兆。只係你冇認真留意到！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">徵兆 1</span><span>分享欲減少</span></h2>\n<p>分享欲可以反映到一個人對你在唔在乎。以前你哋會成日互相分享大家嘅生活瑣事。佢既願意聽你講、亦願意主動同你講。而家佢都冇乜意欲同你分享佢嘅生活。當你主動問起，佢只會淡淡然咁講，「<strong>冇乜特別</strong>」、「<strong>冇乜好講</strong>」、「<strong>唔記得咗講</strong>」，當佢分享欲逐漸減少，你會感覺自己慢慢被排除喺佢嘅生活圈外。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">徵兆 2</span><span>排斥溝通、拒絕解決問題</span></h2>\n<p>肯磨合、嘗試一齊解決問題可以令感情升溫。以前出現意見分歧會無限包容、退讓。就算有摩擦都會想諗辦法慢慢傾，而家開始變得唔想同你溝通，有問題連發脾氣都懶，淨係喺度逃避、由得你自己唔開心。只係會講：「<strong>算啦算啦</strong>」、「<strong>同你講都冇用</strong>」，咁意味住佢已經放棄修補關係，已經唔想再努力，佢對呢段感情都已經失去任何期待。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">徵兆 3</span><span>小小事就動怒</span></h2>\n<p>真正嘅愛係情人眼裡出西施，以前佢會包容你嘅一切，就算有嫌棄都係講笑、唔會對感情造成傷害。而家開始對你嫌東嫌西，一啲小事就大發雷霆，唔再好似以往咁樣對你萬般包容。呢啲零容忍、眼中得返對你嘅煩厭。好有可能就係唔再愛你嘅前兆。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">徵兆 4</span><span>迴避肢體接觸</span></h2>\n<p>肢體接觸係判斷對唔對你嘅最直觀方法。以前佢會鍾意痴住你：經常拖手、抱、Kiss、想有親密行為。而家唔單止減少要求想有親密行為。亦減少主動對你有肢體接觸，甚至會避開你嘅肢體接觸，或者敷衍了事，呢種情況可能佢對你嘅愛意已經減少咗好多。甚至可能佢嘅心入面已經有其他人存在。</p><h2>對住個同你一齊咗一段時間嘅另一半</h2>\n<p>大家出現嘅溝通變少、相處時冇乜嘢好講。</p>\n<p>「聞」到情感疏遠嘅味道，又唔係一時三刻/突然間出現，而可能係一個月嚟都係呢個狀態，以上種種「唔對路」嘅情況，就要盡快挽救，試吓主動同對方傾吓你嘅諗法，或者同我哋幫手做吓儀式，消除你哋重新連接嘅障礙，重燃對方嘅愛意、你嘅吸引力，令你哋重新修補關係。</p>\n<h2>感情拯救所話你知</h2>\n<p>感情要維持得好：係需要雙方一齊努力，如果你及早察覺到有分手嘅徵兆，就要快啲採取行動，咁先可以挽救關係，雖然每段關係都有挑戰、有冷淡期。但只要透過好好溝通、一齊努力，就一定可以搵到適合你哋嘅解決方法。唔使下下都要行到去分手嗰一步！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有冇試過</li><li>分享欲減少</li><li>對住個同你一齊咗一段時間嘅另一半。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果對方突然 Block 或已讀不回，先不要直接當成無得救。更重要是分清他是在逃避壓力、保護自己，還是真的想切斷關係，再決定下一步。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2025-03-23",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/006-control-disguised-as-care/01-asian-couple-boundary-tension-hallway.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-12-22",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20804849.jpg",
+    "coverCredit": "Photo by Tuba Nur Dogan on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/02-asian-woman-phone-privacy-pressure.jpg",
-        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【分手前兆】感情亮紅燈的 4 個徵兆：冷淡、逃避與失望",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/03-asian-woman-window-boundaries.jpg",
-        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【分手前兆】感情亮紅燈的 4 個徵兆：冷淡、逃避與失望",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/006-control-disguised-as-care/04-asian-friends-support-cafe.jpg",
-        "caption": "內文配圖：「為你好」可能係控制？感情操控 5 個警號",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070516.jpg",
+        "caption": "內文配圖：【分手前兆】感情亮紅燈的 4 個徵兆：冷淡、逃避與失望",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：「為你好」可能係控制？感情操控 5 個警號",
+    "coverCaption": "Asteria 相處教學：【分手前兆】感情亮紅燈的 4 個徵兆：冷淡、逃避與失望",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 7,
-    "title": "感情磨合要磨到幾時？判斷值得繼續還是該停下",
-    "category": "戀愛心理",
+    "title": "【分手後聯絡】繼續搵前任會自斷復合機會嗎？",
+    "category": "復合挽回",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "心理",
-    "summary": "所謂嘅「磨合」，到底應該去到邊個程度？一對情侶好難100% Match 每一段感情、每一對關係都需要互相磨合先可以走到最後！但過分嘅「磨合」可能其實係雙方嘅警號，又或者係其他一方以「磨合」之名，行「情感霸凌」之實！感情「磨合」大揭秘，不改變就是不夠愛？",
-    "content": "<p>遇到「感情磨合要磨到幾時」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>磨合不等於無限退讓</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>看問題有沒有真的被修正</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>先分清「感情磨合要磨到幾時」裡誰需要承擔</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>從自己的狀態判斷「感情磨合要磨到幾時」</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>把未來想像拉回現實相處</h2>\n<p>如果「感情磨合要磨到幾時」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「感情磨合要磨到幾時」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「感情磨合要磨到幾時」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「感情磨合要磨到幾時」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "imageLabel": "復合",
+    "summary": "好多客人搵我哋做諮詢、做儀式時，都會好糾結於「到底分咗手，仲應唔應該同對方聯絡。",
+    "content": "<h2>分手後，到底仲應唔應該同舊情人聯絡？</h2>\n<p>每一種選擇都有它嘅代價！我哋嘅情感關係建立於對對方嘅情感依賴。如果你選擇繼續同對方聯絡，代價就係有機會會藕斷絲連，如果你選擇同對方斷絕來往，代價就係你失去友情同情感，咁究竟聯絡與否係建基於乜嘢因素？</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">因素 1</span><span>分手後嘅空間</span></h2>\n<p>分手後嘅一段時間內：給予彼此足夠嘅空間、時間，有助於雙方理清思緒、面對傷痛、自我反省呢段時間可以幫助大家更好處理情緒。</p><p>避免情感上嘅衝突和混亂。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">因素 2</span><span>情感恢復</span></h2>\n<p>我哋喺分手後需要一段時間嚟適應新狀態。重新建立自己嘅身份、生活，喺呢過程中，如果同舊情人過度聯絡，可能會影響個人的成長、獨立。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">因素 3</span><span>關係再建</span></h2>\n<p>雖然分手後繼續聯絡可能可以維持友好關係。但喺雙方都做好心理準備之前，呢種聯絡可能會導致情感上嘅混亂同痛苦。所以喺考慮恢復聯絡之前，雙方都應該確保自己已經處理好分手帶嚟的情緒困擾。</p><h2>最緊要你清楚自己做緊乜！</h2>\n<p>最緊要你知道聯絡嘅目的！如果你非要選擇聯絡對方，喺要非常有意識，知道自己喺聯繫關係中究竟發生咩事。有人同前度斷聯後就會粉身碎骨，所以他們在面對失去一段感情後，內心仲有股力量，覺得同前度嘅牽絆仲喺度，所以先想同對方繼續聯絡，但咁樣諗法係唔可以接受！</p><h2>聯絡前嘅真空期</h2>\n<p>我哋建議同前度聯絡前要有真空期。即係你確定你對這個人已經去依附了。你確定當你發生重大事件時，呢個人已經唔係你第一個會聯絡嘅人，如果你確認對方已經從你嘅核心圈慢慢被推到外面。咁到時你先適合再同佢聯絡，再適合同佢做返朋友，因為你對佢唔會再有以前嘅情感依賴。</p><h2>感情拯救所話你知</h2>\n<p>所以如果你要選擇聯絡對方，就要喺非常有自我意識時，已經裝備好你自己時再聯絡，因為你好知道自己做緊乜。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>分手後，到底仲應唔應該同舊情人聯絡。</li><li>情感恢復</li><li>關係再建</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2023-06-16",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/01-asian-couple-dining-table-tension.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-04-19",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20045413.jpg",
+    "coverCredit": "Photo by Mustafa Bodur on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/02-asian-woman-values-notebook.jpg",
-        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【分手後聯絡】繼續搵前任會自斷復合機會嗎？",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/03-asian-couple-park-compromise.jpg",
-        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070516.jpg",
+        "caption": "內文配圖：【分手後聯絡】繼續搵前任會自斷復合機會嗎？",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/007-relationship-adjustment-when-to-stop/04-asian-woman-window-clarity.jpg",
-        "caption": "內文配圖：感情磨合要磨到幾時？判斷值得繼續還是該停下",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【分手後聯絡】繼續搵前任會自斷復合機會嗎？",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情磨合要磨到幾時？判斷值得繼續還是該停下",
+    "coverCaption": "Asteria 相處教學：【分手後聯絡】繼續搵前任會自斷復合機會嗎？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 8,
-    "title": "對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-    "category": "戀愛心理",
+    "title": "【分手復合】被分手後如何重新振作？4 個步驟找回吸引力",
+    "category": "復合挽回",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "心理",
-    "summary": "「暫時做朋友」可能是冷靜、留後路，也可能是委婉抽離。重點不是急著追問答案，而是看對方是否仍保留互動、會否主動交代，以及你是否被困在等待。",
-    "content": "<p>對方說暫時做朋友，最折磨人的地方是它不像正式分手，也不像繼續拍拖。你會忍不住想追問到底還有沒有機會，但太急追答案，反而容易把對方推得更遠。這句說話真正要看的，不是字面，而是他之後的行動和界線。</p>\n<h2>分清冷靜期還是退場方式</h2>\n<p>真正的冷靜期通常仍有交代、有界線、有時間感；如果對方只說做朋友，卻沒有任何下一步，很可能是在慢慢退出。</p>\n<p>你可以觀察他會不會主動交代為何需要退後、需要多久、期間怎樣相處。如果全部都模糊，只叫你不要迫他，這就不是健康冷靜。</p>\n<h2>不要把朋友身份當成無限等待</h2>\n<p>你可以給空間，但不代表要一直用伴侶心態照顧對方。先定清楚自己可以等多久、接受甚麼互動，才不會越等越失衡。</p>\n<p>很多人最痛苦的位置，是明明已被降級，卻仍然做著伴侶的付出。你要問自己：這個朋友身份，是讓關係喘息，還是讓你被吊住？</p>\n<h2>看他有沒有主動維持連繫</h2>\n<p>如果只有你主動、你關心、你製造話題，而對方只是被動回應，這段「朋友」關係可能只是保留你，不是修補你們。</p>\n<p>一個仍然有心的人，就算需要空間，也會有基本溫度。他未必日日找你，但不會讓你一直猜自己是否還存在。</p>\n<h2>保持溫度，但收回追問</h2>\n<p>暫時最忌日日問「我哋算點」。可以保持簡短自然的互動，同時觀察對方會不會自己靠近。</p>\n<p>你可以用低壓訊息維持連繫，例如分享近況或一句關心，但不要每次對話都變成審判關係。對方的自然反應，往往比被逼出來的答案更真。</p>\n<h2>用界線保護自己</h2>\n<p>如果朋友身份令你更痛苦，可以坦白講你需要距離。不是鬧脾氣，而是不讓自己長期卡在模糊位置。</p>\n<p>真正的界線不是懲罰對方，而是提醒自己：我可以愛你，但不能一直在沒有身份、沒有承諾、沒有方向的位置消耗。</p>\n<h2>常見問題</h2>\n<h3>暫時做朋友係咪一定無機會？</h3>\n<p>不一定，但要看對方有沒有保留真實投入，而不是只想降低你的期待。</p>\n<h3>我應該繼續主動嗎？</h3>\n<p>可以低頻、低壓，但不要用伴侶式付出換一個未確認的答案。</p>\n<h3>塔羅可以睇到咩？</h3>\n<p>可以整理對方心態、關係仍有沒有修補空間，以及你下一步應該靠近還是退後。</p>",
+    "imageLabel": "復合",
+    "summary": "但如果一直係咁，只會令自己更hurt，更加對自己、對愛情冇信心。",
+    "content": "<h2>被分手後，會唔會有呢啲感覺？</h2>\n<p>見到人哋幸福就覺得自己好孤單，覺得自己唔夠好先被分手，覺得自己係loser，每日都諗：「我到底仲值唔值得被愛？」，但一直處於低谷，成個怨婦咁，等於扼殺復合/搵到新戀情嘅機會！</p>\n\n<p>一直冇自信、埋怨：只會趕走身邊嘅人，因為冇人會對一個0自信嘅怨婦有興趣！</p>\n\n<h2>雖然有時就算你嘗試叫自己振作</h2>\n<p>可惜每次努力完：好似都仲係喺原地打轉，仍然處於自己懷疑嘅階段，將分手嘅罪名、原因攬上身，認為係自己有錯先會被分，自信心跌到落低谷，但其實呢一切只是過程，並唔代表結局，我哋一齊將你早已離家出走嘅自信心捉返屋企啦！明知自己個心好傷，但都keep住壓制自己。唔俾自己喊，不過療傷第一步係要接納自己嘅脆弱。唔好每天扮堅強、chur自己要振作。越壓抑情緒、越有無力感，請你先允許自己大喊一場，正視自己嘅脆弱，先可以真正開始療傷。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">Step 2</span><span>重建儀式感</span></h2>\n<p>每日都要俾自己一啲特別嘅禮物，唔一定係要買嘢、物質上嘅禮物，可以俾自己去一間好好食嘅餐廳，（但千祈唔好去同前度食過嘅餐廳），俾自己同陌生人傾偈嘅機會，或者每天至少要用10幾分鐘好好打扮自己。</p>\n\n<p>形成敢於面對鏡望自己嘅自信，咁就慢慢地從內到外嘅信心，搵返自己美好嘅一面。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">Step 3</span><span>離開自己嘅固有圈子</span></h2>\n<p>分手後千祈唔好俾孤單吞噬你，你可以開始認識新朋友，唔一定要係異性，同性都可以，喺冇人知道你被分手嘅情況下，同其他人自然咁交流，話題唔會再局限於被安慰嘅內容，有時候，新嘅圈子可能會帶嚟全新嘅自己。要搵返已離開嘅自己，最緊要就係學識欣賞自己，聽落好似好老土又好難，但每日做小小，其實好容易、好work，嘗試每日對著鏡講「<strong>我值得最好</strong>」，講吓講吓，其實就會成真，你嘅自信心就會慢慢返嚟，只要自己識得欣賞自己，總會有人識欣賞你嘅好。</p>\n<p>分手唔係人生嘅句點：而係可以幫你搵到更好嘅自己，呢個只係一個起點！當然，如果你自己療傷後，發現呢段感情走向分手呢個結局，真係好可惜，如果你都係想同對方重歸於好，都唔係冇方法嘅！或者可以俾到啲指引、甚至輔助。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>雖然有時就算你嘗試叫自己振作</li><li>大喊一場</li><li>重建儀式感</li><li>欣賞自己</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2023-06-09",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/008-temporarily-friends-meaning/01-asian-couple-cafe-emotional-distance.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2025-01-19",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8560663.jpg",
+    "coverCredit": "Photo by Timur Weber on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/02-asian-woman-phone-uncertainty-night.jpg",
-        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070516.jpg",
+        "caption": "內文配圖：【分手復合】被分手後如何重新振作？4 個步驟找回吸引力",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/03-asian-man-avoidant-after-work.jpg",
-        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【分手復合】被分手後如何重新振作？4 個步驟找回吸引力",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/008-temporarily-friends-meaning/04-asian-couple-waterfront-uncertain-talk.jpg",
-        "caption": "內文配圖：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【分手復合】被分手後如何重新振作？4 個步驟找回吸引力",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方說「暫時做朋友」代表什麼？是真冷靜還是留後路",
+    "coverCaption": "Asteria 相處教學：【分手復合】被分手後如何重新振作？4 個步驟找回吸引力",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 9,
-    "title": "情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-    "category": "溝通相處",
+    "title": "【復合判斷】分手後還有聯絡，是否代表仍有機會？",
+    "category": "復合挽回",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "一嗌交，佢就唔講嘢？咁係因為佢想冷靜下，或抑係因為佢懶得溝通？定其實兩樣都唔係⁠？",
-    "content": "<p>明明只係普通嗌交 對方下一秒即刻沉默、面無表情 甚至行開唔理你 點問都唔答、點講都冇反應</p>\n<p>🔎 佢唔想溝通；🔎 佢懶得理我；🔎 佢唔再愛我 但其實喺心理學層面，呢種反應叫 Freeze Response（凍結模式），係創傷被觸發之後嘅自動保護機制。</p>\n<p>而係一種「<strong>舊傷觸發機制</strong>」 呢類所謂嘅「<strong>舊傷</strong>」唔係純粹嗌交引致，而係你touch到對方一啲傷口，例如原生家庭問題/情傷而引發嘅問題而致導對方：💔 頭腦空白俾唔到反應；💔 驚講錯會令關係爆煲，佢沉默其實係佢唔識處理呢啲問題。</p>\n<p>所以想用佢嘅方法盡力保護呢段關係嘅方式</p>\n<h2>千祈唔好咁樣做</h2>\n<p>🚫 唔好威脅分手；🚫 唔好逼對方即刻解釋；🚫 唔好講「<strong>你永遠都係咁</strong>」 因為咁樣逼佢只會令佢「凍」得更嚴重，更收埋自己。</p>\n<h2>沉默背後要看是冷靜、逃避還是受傷</h2>\n<p>情緒高漲時強行溝通只會破壞關係 有效嘅做法係用暫停（Time-out）制度，唔係逃避，而係約好休息時間再嚟處理 所以要事先講好規則，每次嗌交唔想傾落去就停一陣，可能抖幾個鐘或者半日，再返嚟傾。</p>\n<p>對方嗌交時唔講嘢 ≠ 冷漠 / 唔愛你，佢需要嘅唔係逼供、唔係指責 亦唔係你主動道歉，而係獲得安全感同你嘅真心理解，當對方感覺到有安全感，先會慢慢放低戒心，同你真正溝通。</p>\n<h2>常見問題</h2>\n<h3>面對「情侶冷戰點算」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「情侶冷戰點算」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「情侶冷戰點算」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DW_gjlRGUM7/",
-    "date": "2026-04-11",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/009-cold-war-freeze-response/01-asian-couple-sofa-silence.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "imageLabel": "復合",
+    "summary": "和平分手後繼續keep住曖昧，到底係仲有機會復合，定可能只係放唔低。",
+    "content": "<h2>和平分手後仍有小曖昧</h2>\n<p>大家依舊每日聯絡，可能雙方尚未完全放下，或者因為大家都習慣有對方的存在。但是持續這樣是否代表可能有機會再復合。還是只是大家都單純地無法斷絕來往？</p><h2>你們分手後有再認真溝通過嗎？</h2>\n<p>如果分手後大家有再坦誠討論當初分開的原因。大多只是彼此互Flirt，就會有意復合，其實最後都可能會再分手。如果分手後只有你一方持續主動，每次都是你主動聯絡，對方多數只是被動回應，這樣往往意味著只是你未能放手，是你一廂情願，真正存在復合可能通常是雙方均有行動與表態。而非單方的獨角戲。</p><h2>導致分手的根源要怎樣解決？</h2>\n<p>時間不一定能沖淡所有隔閡，即刻分手後，大家仍處於曖昧關係。大家都明知對方都不捨得這段感情。所以仍然想復合，但當初令感情瓦解的關鍵問題未被處理。即使復合了，仍有極大機會重蹈覆轍。分手仍然會重演。</p><h2>如果你們分手後仍然處於雙方都曖昧的階級</h2>\n<p>大家都心知肚明，都感覺到大家有意復合，不應馬上因為情感上的一時衝動，而決定復合，在作出決定前，不如先想想：決心會處理好當初分手的根源，復合是因為仍然相愛，而非因為習慣。</p>\n\n<p>身邊人的提醒/意見。</p>\n<h2>和平分手聽起來很體面卻往往最令人不甘心</h2>\n<p>因為你明白大家分開並非因為不再愛。而是因為覺得自己無法成為一個「<strong>足夠好</strong>」的伴侶。要解決這個問題，單憑心靈上的渴求是不足以成事，重新打開一條彼此理解、情感重新流動的路。讓你們能打開內心、疏理思維，有辦法解決當目前的問題。</p><h2>感情拯救所，告訴你</h2>\n<p>有聯絡不等於有未來：持續曖昧不代表一定要復合，但如果你們雙方心裡仍然不捨得對方。如果你們都願意面對問題、解決問題。只要雙方都有心，這段關係總會有機會重生。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>如果你們分手後仍然處於雙方都曖昧的階級。</li><li>和平分手聽起來很體面卻往往最令人不甘心。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
+    "date": "2025-09-05",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8070516.jpg",
+    "coverCredit": "Photo by Ron Lach on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/02-asian-woman-pause-before-speaking.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【復合判斷】分手後還有聯絡，是否代表仍有機會？",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/03-asian-couple-floor-safe-talk.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【復合判斷】分手後還有聯絡，是否代表仍有機會？",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/009-cold-war-freeze-response/04-hands-near-reconnection-cafe.jpg",
-        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【復合判斷】分手後還有聯絡，是否代表仍有機會？",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
+    "coverCaption": "Asteria 相處教學：【復合判斷】分手後還有聯絡，是否代表仍有機會？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 10,
-    "title": "感情有裂痕就無得救？修復關係前要看清的事",
-    "category": "復合挽回",
+    "title": "【親密關係】分享慾點樣影響感情？生活細節才是親密關鍵",
+    "category": "溝通相處",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "復合",
-    "summary": "感情已經出現裂縫，是否一定代表會分手？如果還來嘗試修復感情，到底還有用嗎？看看我們的意見吧！",
-    "content": "<p>遇到「感情有裂痕就無得救」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「感情有裂痕就無得救」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>不要被「感情有裂痕就無得救」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>從回覆判斷「感情有裂痕就無得救」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「感情有裂痕就無得救」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>越想靠近「感情有裂痕就無得救」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>不要只看表面，先拆「感情有裂痕就無得救」卡在哪一步</h2>\n<p>如果你正面對「感情有裂痕就無得救」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>感情有裂痕就無得救</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>感情有裂痕就無得救</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>感情有裂痕就無得救</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "溝通",
+    "summary": "但其實一對情侶嘅分享欲，往往會影響佢哋之間嘅長遠發展。",
+    "content": "<h2>好多人都覺得一對情侶建立信任</h2>\n<p>很多人以為信任一定要通過重大事件嚟測試。例如大家要一齊面對危機，但實際上，培養信任往往始於一啲看似無關痛癢嘅日常小事。而呢啲習慣係始於同你嘅另一半分享無謂嘢。一齊嚟睇吓：點解分享生活小事咁重要啦！</p><h2>展示真實嘅自己</h2>\n<p>生活中一啲似乎好瑣碎嘅小事，可以反映出我哋嘅性格、習慣，例如：飲食習慣、食物偏好，旅行時鍾意hea定chur，生活小習慣，例如朝早起身時會做乜嘢先、臨瞓前要做嘅乜。當你願意同對方分享呢啲細節，就等於展示咗真實嘅自己，令對方可以更加了解你，亦會知道第日你唔開心、嬲嘅時候。應該要點氹你、點維繫到呢段關係。</p><h2>創造情感聯繫</h2>\n<p>同另一半分享生活中啲細節，傾吓啲看似好無謂嘅小事，例如：返工發生嘅事、出街見到嘅一啲令人印象深刻嘅事。唔好以為講呢啲嘢，對方會冇興趣、呢啲嘢唔關對方事。但其實嗰啲對話通常輕鬆又自在，喺輕鬆嘅氛圍下可以幫雙方建立更深嘅聯繫。每一次嘅小對話都係一個機會，俾對方知道你嘅諗法同感受，加深你哋之間嘅感情聯繫。</p><h2>累積信任感</h2>\n<p>建立信任唔係一朝一夕就可以完成。而係需要時間慢慢去累積，傾下小事係一個好好嘅開始，當你同對方分享生活中啲瑣碎事，例如：今日發生咗咩搞笑嘅事、分享下自己最近嘅感受。喺呢種反覆嘅小事交流，雙方會感受到對方嘅真誠，知道對方乜都願意同自己講，久而久之就可以慢慢建立信任。</p><h2>分享細節建立記憶</h2>\n<p>透過細心觀察、分享雙方生活中嘅細節。可以喺關鍵時刻展現雙方嘅關心，例如：同對方分享自己鍾意嘅嘢食。記住對方鍾意食嘅食物：當你喺之後嘅行動中表現出你有記住呢啲細節。例如突然買俾佢食、俾個驚喜佢，對方一定會感受到你對佢嘅重視，可以增進佢對你嘅感情。</p><h2>分享完，就OK？</h2>\n<p>分享小事：並唔代表齋講完就算，當雙方互相分享期間，可能會包含咗好多微小嘅承諾，例如：應承一齊去上次提起嗰間新開嘅餐廳。或者幫對方買啲佢好想要嘅嘢，當大家分享完、聆聽完，有喺呢種小承諾上履行、付諸實行。可以為對方帶嚟安全感、累積信任。令大家喺未來面對更大挑戰時發揮作用。</p><h2>感情拯救所話你知</h2>\n<p>唔好以為小事冇得分享，好多時候，一啲微不足道嘅事情，都可以俾對方感受到你真誠坦率嘅一面。無形中拉近咗你哋之間嘅距離，唔單止係分享日常生活上嘅小事，仲可以你嘅感受、想法、經歷、夢想。種種嘅分享欲：都可以令大家之間嘅關係更加close！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>好多人都覺得一對情侶建立信任</li><li>累積信任感</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-09-28",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/010-relationship-cracks-repair/01-asian-woman-window-regret-phone.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-11-22",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20479952.jpg",
+    "coverCredit": "Photo by Alexander Mass on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/02-asian-couple-kitchen-apology.jpg",
-        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【親密關係】分享慾點樣影響感情？生活細節才是親密關鍵",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/03-asian-couple-rain-umbrella-repair.jpg",
-        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【親密關係】分享慾點樣影響感情？生活細節才是親密關鍵",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/010-relationship-cracks-repair/04-asian-woman-cafe-journal-tarot.jpg",
-        "caption": "內文配圖：感情有裂痕就無得救？修復關係前要看清的事",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-36812991.jpg",
+        "caption": "內文配圖：【親密關係】分享慾點樣影響感情？生活細節才是親密關鍵",
+        "credit": "Photo by Vitaly Gariev on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情有裂痕就無得救？修復關係前要看清的事",
+    "coverCaption": "Asteria 相處教學：【親密關係】分享慾點樣影響感情？生活細節才是親密關鍵",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 11,
-    "title": "一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
+    "title": "【成年人愛情】年紀越大越難心動？拆解心動變少的真正原因",
     "category": "戀愛心理",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "心理",
-    "summary": "有冇試過遇到一個自己第一眼見到已經好鍾意、對佢有feel嘅人？一見鍾情係一種強烈嘅情感吸引，有人會覺得係假象，好快就會唔愛，但亦有人由一開始嘅一見鍾情，到後來發展到一段穩定嘅感情。如果你都遇到一個令你一見鍾情嘅人，又應該點把握？",
-    "content": "<p>一眼望埋去就知道對方係命中注定。</p>\n<p>但都有啲好理性嘅人覺得，呢啲只係大腦俾你嘅錯覺，過咗激情期就會打回原形，你又點睇？</p>\n<p>一見鍾情係電視劇先會出現嘅劇情？</p>\n<p>係你腦補出嚟嘅浪漫故事？</p>\n<p>定真係一段愛情嘅開始？</p>\n<p>你見到一個人高大、好陽光嘅人，你可能會覺得佢溫柔、善良、有責任感，但實際上你根本唔識佢、唔熟悉佢，你所以為嘅佢嘅優點都係你自己腦補出嚟，其實呢啲係一種投射效應（Projection Bias），一見鍾情有時唔係因為對方真係咁完美，而可能因為你想像對方係你理想嘅對象。</p>\n<p>要真正愛上佢，當然都係要深入咁再同佢相處，先會確認自己係咪真係愛對佢。</p> <h2>費洛蒙令你覺得你鍾意佢</h2>\n<p>有冇試過遇到一個人覺得佢有陣好香嘅味？</p>\n<p>嗰種味唔係來自佢嘅香水或者body cream 但就總覺得特別吸引，令你忍唔住想接近對方，其實呢個係同費洛蒙有關，有研究話女人對某啲男人身上嘅天然氣味會特別有好感，而嗰啲氣味其實與基因多樣性有關，所以一見鍾情可能唔止係眼緣，仲可能係你嘅身體「聞」到咗合適嘅對象。</p>\n<p>啲人一見鍾情之後，真係可以發展出穩定長久嘅感情！</p>\n<p>但個關鍵係：一見鍾情本身唔代表真愛，真正嘅愛係要透過相處同了解建立出嚟，你一開始可能好鐘意一個人，但當你深入了解佢，你可能會發現佢性格、價值觀同你完全唔夾，亦有可能原本只係一見鍾情，後來發展出深厚嘅感情，變成真正嘅愛情。</p> <h2>由一見鍾情走到真愛，中間要建立依戀</h2>\n<h3>心理學家將愛情分為三個階段</h3>\n<p>慾望，（Lust），吸引（Attraction），依戀（Attachment），而一見鍾情就係吸引階段，要發展成真正愛情嘅「<strong>依戀</strong>」階段，首先要建立出真正嘅親密感同信任，但前提係雙方願意深入了解對方，願意磨合、肯一齊經歷唔同嘅事情。</p>\n<p>建立更穩定嘅情感連結</p>\n<p>強化心靈連結，用儀式加強雙方靈魂共鳴，令對方潛意識對你產生更深層次嘅熟悉感，唔只係表面吸引，而係想深入了解你，建立信任，依戀關係建立喺信任之上，白魔法儀式潛移默化咁增加對方對你嘅信任令對方更容易願意投入長遠關係。</p> <h2>不要把第一眼的投射當成全部真相</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。</p> <h2>心動之後仍要看相處能否落地</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。</p> <h2>保持好感，同時保留觀察空間</h2>\n<p>你可以在乎對方反應，但不要把所有價值感交給對方決定。當你知道自己真正想要什麼，才不會每一次波動都被拉走。</p>\n<h2>常見問題</h2>\n<h3>「<strong>一見鍾情可以變真愛嗎</strong>」入面，曖昧卡住或對方唔表態應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>「<strong>一見鍾情可以變真愛嗎</strong>」入面，我主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇「<strong>一見鍾情可以變真愛嗎</strong>」對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "summary": "年紀越大越難心動，未必是你變冷淡，而是你更清楚代價、標準和現實。成年人愛情變難，是因為心動不再足夠支撐全部。",
+    "content": "<h2>你更懂得保護自己</h2>\n<p>受過傷之後，人會自然變得謹慎。這不是壞事，只要不是把所有可能性都關掉，就是成熟的一部分。</p>\n<p>長大後的謹慎，很多時來自你終於知道自己承受不起再一次亂愛。這份保護可以幫你避開錯的人，但如果過度，就會連值得了解的人也擋在門外。</p>\n<h2>標準變清楚，選擇自然變少</h2>\n<p>你不再只看外表和心動，也會看相處、責任感、生活節奏。選擇少了，不代表沒有愛，只代表你不想再亂選。</p>\n<p>以前只要有 feel 就可以開始，現在你會看生活節奏、價值觀、情緒成熟度。這不是你變現實，而是你明白心動要能落地，才可能走得長。</p>\n<h2>生活太滿會削弱心動空間</h2>\n<p>工作、家庭、壓力佔據太多能量時，就算遇到不錯的人，也未必有心力投入。心動需要空間，不只是對象。</p>\n<p>如果你每天已經被工作和責任填滿，自然很難再對一個新人打開心力。這時候未必是你不想愛，而是你需要先為愛情留一點空間。</p>\n<h2>不要把慢熱當成無感</h2>\n<div class=\"article-section-card\"><p>成年人愛情很多時不是一秒爆發，而是相處後慢慢放心。給自己時間觀察，不用急著判斷有沒有火花。</p><p>慢熱不等於無感，有時只是你不再被刺激感牽著走。可以給自己幾次相處時間，看對方會否令你慢慢放鬆，而不是用第一眼決定全部。</p></div><h2>真正適合的人會令你安心又想靠近</h2>\n<p>心動仍然重要，但長久關係還需要舒服、尊重和穩定。你要找的不是刺激，而是能一起生活的人。</p>\n<p>成年人的心動可能安靜很多，不一定像年輕時那樣上頭。真正值得留意的，是你和對方相處後會否更自在、更清醒，而不是更焦慮。</p>\n<h2>用行動判斷「年紀越大越難心動」</h2>\n<div class=\"article-section-card\"><p>你可以用「年紀越大越難心動」去觀察三件事：對方會否主動安排、會否把你介紹進生活圈、會否在你稍微後退時補上。曖昧要看行動，不只看氣氛。</p><p>處理「<strong>年紀越大越難心動</strong>」時，可以主動一次，但要讓對方也付出。你可以提出清楚邀約或界線，再觀察對方會否接住，而不是你一個人把關係推完整。</p></div>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>真正適合的人會令你安心又想靠近。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2025-04-11",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/011-love-at-first-sight-real-love/01-asian-first-eye-contact-bookstore.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-04-13",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8442219.jpg",
+    "coverCredit": "Photo by Ron Lach on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/02-asian-woman-first-attraction-street.jpg",
-        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20479952.jpg",
+        "caption": "內文配圖：【成年人愛情】年紀越大越難心動？拆解心動變少的真正原因",
+        "credit": "Photo by Alexander Mass on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/03-asian-couple-outdoor-cafe-date.jpg",
-        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【成年人愛情】年紀越大越難心動？拆解心動變少的真正原因",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/011-love-at-first-sight-real-love/04-asian-couple-seaside-attachment.jpg",
-        "caption": "內文配圖：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【成年人愛情】年紀越大越難心動？拆解心動變少的真正原因",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一見鍾情可以變真愛嗎？讓初見心動延續的關鍵",
+    "coverCaption": "Asteria 相處教學：【成年人愛情】年紀越大越難心動？拆解心動變少的真正原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 12,
-    "title": "為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-    "category": "溝通相處",
+    "title": "【委屈型戀愛】以為忍讓就是愛？你的犧牲可能正在白費",
+    "category": "情緒修復",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "溝通",
-    "summary": "有冇試過埋怨另一半估唔到你諗乜？但你真係覺得佢必須要洞悉你內心？嘗試換個角度，停落嚟，諗一諗，呢種諗法喺一段感情入面，真係健康咩？",
-    "content": "<p>喺呢段親密關係入面，會唔會曾同講過以下類似嘅說話，你愛我，就應該知道我諗緊乜啦。</p>\n<p>如果乜都要我講出嚟，咁就冇意思啦！</p>\n<p>你，有冇意識到，呢種諗法，其實係一種，「<strong>毒性迷思</strong>」</p>\n<p>當你突然唔出聲、望落有啲嬲，你嘅另一半問你：「<strong>你唔明點解你嬲？你可唔可以話我知？</strong>」，你聽完好燥咁話：「<strong>你愛我就應該知道嬲乜！</strong>」，有冇覺得呢個場面好熟口熟面，不論你係嬲嗰個，定係被嬲嗰個。</p> <h2>拍拖越耐，越容易以為對方應該懂</h2>\n<p>甚至係夫妻，都會有呢種「<strong>毒性迷思</strong>」，覺得大家一齊咗咁多年，對方好理所當然地，應該喺另一半皺個眉、黑個面、唔出聲，即使乜都唔講，就應該知道自己諗緊乜，就應該知道自己當下嘅所有情緒，咁樣就是最完美嘅另一半。</p> <h2>把「為什麼你不說對方就不懂」收窄成一句清楚表達</h2>\n<p>唔好出陷阱題俾對方，唔好嘗試測試對方，唔好講嘢轉彎末角，咁樣唔止為難另一半、都係內耗緊自己，如果你內心已經有答案，咁樣照心入面嗰句講出嚟，唔好Keep住測試對方 Check佢了唔了解你、估唔估得中你嘅答案。</p>\n<ul><li>「<strong>你想唔想見我？</strong>」</li></ul>\n<p>「<strong>我想同你出街，不如約聽日？</strong>」</p>\n<ul><li>「<strong>如果你咁鍾意搵friend就去隨便你</strong>」</li></ul>\n<p>「我其實想要你陪我，但如果你想搵friend，咁可唔可以12點前返嚟陪我」</p>\n<ul><li>「<strong>你冇理由唔知道我嬲乜？</strong>」</li></ul>\n<p>「<strong>我嬲係因為你唔記得之前應承咗今日同我出街</strong>」</p> <h2>把暗示變成對方聽得明的日常說法</h2>\n<p>很多長遠問題不是靠一句承諾解決。「為什麼你不說對方就不懂」要看時間安排、家庭界線、生活壓力和未來方向，因為真正能走下去的關係，要承托得到日常。</p>\n<p>你可以先提出一個具體安排，再看對方是否願意一起調整。行動比說法更能反映對方是否真的想同行。</p> <h2>不要期待對方自動讀懂情緒</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。</p> <h2>把暗示改成清楚請求</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p> <h2>先講一件最想被理解的事</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n<h2>常見問題</h2>\n<h3>「<strong>為什麼你不說對方就不懂</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>為什麼你不說對方就不懂</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>為什麼你不說對方就不懂</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "imageLabel": "療癒",
+    "summary": "當你有另一半，就會發現同佢一齊，總有啲嘢要忍讓、要妥協，你可能會因為佢而做唔到一啲自己想做嘅事，令你覺得受委屈。",
+    "content": "<h2>你好愛佢</h2>\n<p>但喺呢段關係入面，你經常都覺得自己受好多委屈，你覺得對佢嘅愛可以 cover 你所承受嘅委屈。你嘅愛多過你哋之間嘅衝突同差異。咁，到底呢段關係係咪可以繼續？係咪可以相安無事到永遠？</p><h2>試諗吓</h2>\n<p>雖然你哋可能經常嗌交、諸多不合。但你認為對方俾你嘅愛、俾你嘅情緒價值。係你冇辦法由其他人身上獲得，所以你甘願為佢委屈自己，因為你覺得即使喺呢段咁樣嘅關係、咁樣嘅狀態下。你依然可以搵到幸福快樂嘅自己，如果係咁，你可以繼續維持呢段關係。</p><h2>但係！</h2>\n<p>如果喺呢段關係當中，大多時候你都係充滿不安、擔憂、痛苦、委屈。而開心、可以安心地做你自己嘅時間越嚟越少。你知道喺這段關係入面，你犧牲咗某一部分嘅自己，而且呢個犧牲並唔係你自己想要嘅犧牲。身處咁樣嘅關係：你會經歷好多憂鬱嘅負面情緒。</p><h2>委屈 vs. 包容，你分清楚未？</h2>\n<p>好多人都話愛一個人當然需要包容。或者你會有錯覺，覺得自己唔係受委屈，而只係包容對方。但包容唔代表無限退讓，當你次次都為對方壓抑自己嘅感受。委屈自己去迎合對方：咁已經唔係愛，而係犧牲，真正健康嘅愛情係互相理解，而唔係一方不斷讓步，另一方理所當然接受，愛，絕對唔係將就！</p><h2>可能你會覺得好複雜</h2>\n<p>但係，試吓合埋眼，問吓自己你同佢一齊嘅呢段時間。有冇變得越嚟越鍾意自己，有冇呈現出更多唔同嘅自我面向（self-expansion），會唔會變得越嚟越唔滿意自己，覺得自己嘅力量來越嚟越微弱，當你認真諗一諗，或許你會發現，一直以嚟，答案都好清晰，只是你一直缺乏勇氣做決定，亦都唔識點樣尋求幫助啫！</p><h2>喺感情入面長期感到委屈</h2>\n<p>可能源自溝通不足或者雙方期望唔一致。放心！呢啲都係有方法解決嘅！我哋提供專業嘅關係指導，幫學習有效嘅溝通技巧，改善同另一半嘅相處模式，重建健康嘅關係，幫你哋嘅關係注入新嘅活力，緩和彼此之間嘅問題，令你哋嘅關係更穩定。</p><h2>感情拯救所話你知</h2>\n<p>愛情係雙向嘅流動：唔係忍讓就會幸福！長期只有一方受委屈、妥協，而另一方一直都理所當然接受，感情好快就變質，當你feel到你喺關係中長期感到委屈。可能就係時候重新調整你哋相處嘅方式！如果你面對緊類似情況、需要更多嘅指引。我會幫搵到最適合嘅解決方法！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>愛得深不等於要長期委屈</li><li>先問自己在關係裡是否仍然幸福</li><li>不安需要回到關係真實狀態</li><li>委屈 vs. 包容，你分清楚未。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2024-06-19",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/012-partner-cannot-read-mind/01-asian-couple-misunderstanding-apartment.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2025-03-27",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8070516.jpg",
+    "coverCredit": "Photo by Ron Lach on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/02-asian-woman-writing-feelings.jpg",
-        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8036689.jpg",
+        "caption": "內文配圖：【委屈型戀愛】以為忍讓就是愛？你的犧牲可能正在白費",
+        "credit": "Photo by SHVETS production on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/03-asian-couple-cafe-direct-talk.jpg",
-        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【委屈型戀愛】以為忍讓就是愛？你的犧牲可能正在白費",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/012-partner-cannot-read-mind/04-asian-couple-after-honest-talk.jpg",
-        "caption": "內文配圖：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【委屈型戀愛】以為忍讓就是愛？你的犧牲可能正在白費",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：為什麼你不說對方就不懂？伴侶無法讀懂你的真正原因",
+    "coverCaption": "Asteria 相處教學：【委屈型戀愛】以為忍讓就是愛？你的犧牲可能正在白費",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 13,
-    "title": "不想淪為炮友？如何由曖昧關係走向真正情侶",
-    "category": "曖昧桃花",
+    "title": "【婚後關係】生小朋友後感情變淡？重新拉近夫妻距離的方法",
+    "category": "戀愛心理",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "曖昧",
-    "summary": "信任開始動搖時，先看清眼前的信號。",
-    "content": "<p>面對「不想淪為炮友」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「不想淪為炮友」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>守住界線才看得清「不想淪為炮友」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>從時間安排看「不想淪為炮友」</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>把「不想淪為炮友」由想像拉回行動</h2>\n<p>「不想淪為炮友」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>想推進「不想淪為炮友」，先不要太快交出全部主動權</h2>\n<p>如果你正在經歷「不想淪為炮友」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>點樣分清「不想淪為炮友」係真心定只係曖昧？</h3>\n<p>看對方是否願意穩定投入、主動安排和承擔方向。曖昧可以很甜，但沒有行動配合，就很容易只停留在氣氛。</p>\n<h3>處理「不想淪為炮友」時主動會否太急？</h3>\n<p>主動本身不是問題，無界線才是問題。可以主動一次，但要留空間看對方是否願意接住，而不是你一個人推完整段關係。</p>\n<h3>塔羅可以怎樣看「不想淪為炮友」？</h3>\n<p>可以。塔羅可以幫你整理對方狀態、你在關係中的位置，以及下一步應該推進、放慢還是收回。</p>",
+    "imageLabel": "心理",
+    "summary": "我哋收到唔少已婚客人嘅諮詢，表示自從結咗婚，或者生咗小朋友之後，同另一半嘅關係越嚟緊淡，唔知係自己變咗，定係另一半變咗。",
+    "content": "<h2>作為有BB嘅家庭</h2>\n<p>你而家係咪面對緊呢個處境？留給彼此嘅時間越來越少，冇曬對雙方親暱嘅稱呼，用「<strong>爸爸/媽媽</strong>」代替。容易將挫折發洩喺對方身上，將精力、注意力都只focus喺BB身上。</p><h2>有好多已婚又有小朋友嘅夫妻都話：</h2>\n<p>自從有小朋友之後：夫妻之間嘅情況唔同咗，而家唔只係兩個人、而係三個人，雙方都要付出大量注意力、精力喺小朋友身上。</p><p>變相好似多咗個第三者：令你哋嘅感情變得越嚟越淡！</p>\n\n<h2>我冇咁多時間/精力/錢去理對方</h2>\n<p>對方會明白我嘅：問題係出喺佢度，而唔係我，對方肯改，咁我咪改囉，對方將問題誇大咗啫，面對呢啲情況，至少其中一方嘅內心，一定係好似上述咁諗、一定有好多藉口。</p><p>但呢啲只係自己缺乏改善關係決心嘅理由。</p>\n<h2>BB就好似夫妻間出現嘅第三者咁</h2>\n<p>當有一方將所有愛、關注都俾曬BB，夫妻間嘅感情就會越嚟越淡，變到好似一對同屋主咁！但呢種關係其實好危險，因為會令雙方嘅愛情氛圍越嚟越少。加上對於對方嘅關心減低，當有一方受到外嚟誘惑，本身變淡變脆弱嘅關係就會更加容易崩塌。</p><h2>雖有小朋友嘅夫妻</h2>\n<p>可能真係好難抽到時間出去，重拾以前拍拖嘅日子，但有幾樣嘢一定要記住！</p>\n\n<p>調情：打情罵俏、氹對方開心，為婚姻生活增加興奮感，要有身體接觸，攬、Kiss、拖一手，提醒彼此互相珍惜嘅舉動，傾偈，話題唔好淨係圍繞BB，都應該有兩個人之間嘅話題。</p><h2>當夫妻可能因為長期缺乏溝通</h2>\n<div class=\"article-section-card\"><p>大家嘅專注力都喺度BB度，令感覺漸漸淡化、令彼此失去連結。</p><p>就要借助外界力量，打開你哋之間嘅溝通渠道，等對方更容易接受你嘅訊息，重新喚起對方心中對你嘅感覺，令對方再次感受到你嘅存在，重新喚起對呢段感情嘅重視。</p></div><h2>感情拯救所話你知</h2>\n<p>其實唔止係有小朋友嘅夫妻先會出現呢啲問題。當家庭中，或者一對couple之中。有其中一方嘅專注力長期喺其他嘢度。例如自己嘅事業、寵物，都會令雙方嘅感情消減變淡，如果發現自己身處呢個情況，唔好就咁由得佢，任由情況發酵，唔好以為大家只要有感情，就冇問題，因為咁樣只會令雙方越變越淡！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有好多已婚又有小朋友嘅夫妻都話：</li><li>我冇咁多時間/精力/錢去理對方。</li><li>BB就好似夫妻間出現嘅第三者咁。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-01-02",
-    "tags": [
-      "信任危機",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/013-situationship-to-real-relationship/01-asian-woman-morning-uncertainty.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2025-01-11",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20804849.jpg",
+    "coverCredit": "Photo by Tuba Nur Dogan on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/02-asian-couple-night-ambiguous-walk.jpg",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【婚後關係】生小朋友後感情變淡？重新拉近夫妻距離的方法",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/03-asian-couple-cafe-define-relationship.jpg",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8442219.jpg",
+        "caption": "內文配圖：【婚後關係】生小朋友後感情變淡？重新拉近夫妻距離的方法",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/013-situationship-to-real-relationship/04-asian-couple-crossing-commitment.jpg",
-        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20479952.jpg",
+        "caption": "內文配圖：【婚後關係】生小朋友後感情變淡？重新拉近夫妻距離的方法",
+        "credit": "Photo by Alexander Mass on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：不想淪為炮友？如何由曖昧關係走向真正情侶",
+    "coverCaption": "Asteria 相處教學：【婚後關係】生小朋友後感情變淡？重新拉近夫妻距離的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 14,
-    "title": "什麼都分享仍然不親密？你們可能少了這種連結",
-    "category": "溝通相處",
+    "title": "【情緒相處】用發脾氣換關注？點解只會令對方更想逃",
+    "category": "情緒修復",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "溝通",
-    "summary": "有冇試過喺一段關係入面，你無論咩事都會同對方講、同佢分享，但係你仍然感覺大家嘅關係好似都係冇變得更加親近？點解會咁？",
-    "content": "<p>就是乜都要同對方講，咁樣高度透明自己嘅心聲，就係增進彼此認識，令讓彼此關係更深刻嘅方式，但如果你發現，你大小事都同對方講，但你哋嘅關係冇變得更加親密，那代表呢段關係嘅流動性、相互性有啲問題。</p>\n<p>你哋嘅關係冇特別平衡，好可能就係你單方面講，對方只係被動接收，想知自己係點同對方交流，最簡單嘅判斷方式，係分辨你在每次講嘅時候，係「<strong>分享</strong>」？係「<strong>炫耀</strong>」？定係「<strong>抱怨</strong>」？</p> <h2>分享不是倒晒所有事，而是建立連結</h2>\n<p>有思考過講嘢過程，有助情感連結，純粹話俾對方知最近發生咩事，冇打算從對方身上「<strong>索取</strong>」啲乜嘢，炫耀，呢個係一種「<strong>索取認可</strong>」嘅過程，大部分會傾自己嘅成就、物質生活，在乎被對方聚焦、肯定、羨慕，注意力喺自己身上、而非對方，抱怨，係一種「<strong>索取安慰</strong>」嘅討拍過程。</p>\n<p>想喺對方身上得到「<strong>唔係你錯</strong>」嘅安撫，容易陷入受害者狀態，冇喺在交談中真正連結對方。</p> <h2>分享之後有沒有被回應，才決定親密感</h2>\n<p>即係佢嘅真正諗法係：「講出自己嘅真實想法有咩用？反正得到嘅結果一定係唔好。」，佢內心係因為早前嘅創傷出現羞恥感，令佢對其他所有情緒嘅表達都遭到抑制。</p>\n<p>阻礙咗你哋嘅關係更親密，咁當下你可以做嘅，就係只有鼓勵，鼓勵佢表達自我感覺，鼓勵佢多啲同你分享，循序漸進咁開解佢，情況先會慢慢有改善。</p> <h2>真正親密不是講很多，而是有來有往</h2>\n<p>「<strong>什麼都分享仍然不親密</strong>」通常不是靠一次深夜長談解決，而是看日常有沒有被記得、被回應、被放在心上。親密感是很多細節累積出來的安全感。</p>\n<p>你可以先提出一個具體、容易做到的小安排，例如固定相處時間、主動分享近況，或者在忙碌時留一句交代。小回應穩定下來，關係才會慢慢升溫。</p> <h2>分享太多不等於真的有交流</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。</p> <h2>把日常分享變成情感回應</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p> <h2>先由一個真實感受開始</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n<h2>常見問題</h2>\n<h3>「<strong>什麼都分享仍然不親密</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>什麼都分享仍然不親密</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>什麼都分享仍然不親密</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "imageLabel": "療癒",
+    "summary": "有冇試過間唔中都會好易因為一啲小事而發脾氣，但其實你都唔知自己點解會嬲得咁快，甚至會懷疑自己係咪情緒有問題。",
+    "content": "<h2>你嬲嘅唔係件事</h2>\n<p>而係被忽略嘅感覺！有時同另一半嗌交：表面上係對方遲覆、冇聽你講嘢，但你真正嬲嘅係嗰種「<strong>我喺你心入面好似唔重要</strong>」嘅感覺。你覺得自己被忽視，覺得自己唔被對方重視，所以你內心先用發脾氣嘅方法，嘗試換取被重視嘅感覺。</p><h2>有啲情緒並唔係由當下事情引起</h2>\n<p>而係觸發咗你以前曾經經歷過嘅情緒。例如係失望、冷落、不安，可能你以前拍過拖時試過經常俾人忽略。可能係你細個成日比人話，呢啲負面嘅情緒嘅經歷，就會默默咁儲喺你心入面，變成一種「<strong>情緒記憶</strong>」，所以而家你遇到同類情況，就算只係一件小事，你都會即刻發火、即刻起曬鋼。</p><h2>你雖然表達嘅係暴躁嘅情緒</h2>\n<div class=\"article-section-card\"><p>但你真正想講嘅係需求，只係唔知應該用咩方法表達，你唔係想鬧人，你只係想有人在乎自己，但唔識用平靜方式講出嚟，一唔小心，你嘅情緒就會變成衝突。</p><p>唔小心用攻擊式語氣講出嚟。</p></div><h2>你以為發脾氣可以嚇到對方、威脅到佢、留得住佢</h2>\n<p>於是你諗住大聲啲、激烈啲，對方就會怕失去你、就會聽你講、會重視你。但呢種用情緒留住另一半，用脾氣搵存在感嘅行為，其實好可能同你細個嘅經歷有關，以為可以一喊一鬧，啲大人先會停低手頭嘅嘢去關注你。你無意識咁以為原來「<strong>發脾氣</strong>」先可以被重視。久而久之就將呢個模式帶咗入感情世界。</p><h2>脾氣唔係留住另一半嘅工具</h2>\n<p>越係試圖想用脾氣去留住人，對方就越會想離開你，因為對方感受到嘅唔係「<strong>我對你好重要</strong>」，而係感受到你施加嘅壓力、指責，所以唔好再靠情緒去證明自己值得被愛。真正會留低嘅人：係因為你願意用真心講自己嘅感覺。而唔係靠爆炸嚇返嚟！</p><h2>禁止自己發脾氣等於好情人？</h2>\n<p>成日因為小事而發脾氣的確係唔好。但忍住唔好自己發脾氣唔等於就係好嘅另一半。有時你會以為收埋情緒、唔嬲、唔出聲。就等於成熟、體諒、係個好情人，但其實你唔係唔嬲，只係選擇將情緒攬曬落自己身上，為咗唔影響關係而影響咗自己情緒。長期壓抑最終只會變成突然爆發、會內耗。會令你喺關係入面越嚟越冇自我。</p><h2>感情拯救所話你知</h2>\n<p>脾氣絕對唔係一種保護色，都唔會係用嚟留住另一半嘅工具，唔好怕真心講出你嘅需求會冇人理。唔好怕講需要會顯得自己好麻煩，感情世界入面絕對唔係夠激烈就可以令對方注意你。唔係要嬲得夠多對方就會驚你走、就會留低。反而發太多脾氣：會令對方更加覺得你煩、更加想走人。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有啲情緒並唔係由當下事情引起</li><li>你以為發脾氣可以嚇到對方、威脅到佢、留得住佢。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2024-05-30",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/014-sharing-but-not-intimate/01-asian-couple-sofa-one-sided-sharing.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2025-06-21",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20804849.jpg",
+    "coverCredit": "Photo by Tuba Nur Dogan on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/02-asian-woman-dinner-emotional-distance.jpg",
-        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【情緒相處】用發脾氣換關注？點解只會令對方更想逃",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/03-asian-couple-kitchen-mutual-sharing.jpg",
-        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070516.jpg",
+        "caption": "內文配圖：【情緒相處】用發脾氣換關注？點解只會令對方更想逃",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/014-sharing-but-not-intimate/04-asian-couple-balcony-reconnection.jpg",
-        "caption": "內文配圖：什麼都分享仍然不親密？你們可能少了這種連結",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8036689.jpg",
+        "caption": "內文配圖：【情緒相處】用發脾氣換關注？點解只會令對方更想逃",
+        "credit": "Photo by SHVETS production on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：什麼都分享仍然不親密？你們可能少了這種連結",
+    "coverCaption": "Asteria 相處教學：【情緒相處】用發脾氣換關注？點解只會令對方更想逃",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 15,
-    "title": "愛到委屈自己值得嗎？關係不對等的警號",
-    "category": "關係危機",
+    "title": "【情侶吵架】成日嗌交就要分手嗎？先看修復能力",
+    "category": "復合挽回",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "警號",
-    "summary": "當你有另一半，就會發現同佢一齊，總有啲嘢要忍讓、要妥協，你可能會因為佢而做唔到一啲自己想做嘅事，令你覺得受委屈。但如果總係你喺度配合對方，無限妥協、受盡委屈，呢段關係仲應唔應該繼續？",
-    "content": "<p>遇到「愛到委屈自己值得嗎」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「愛到委屈自己值得嗎」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>「愛到委屈自己值得嗎」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「愛到委屈自己值得嗎」要把界線說清楚</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「愛到委屈自己值得嗎」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>先分清這是包容，還是你長期委屈自己</h2>\n<p>如果「愛到委屈自己值得嗎」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「愛到委屈自己值得嗎」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「愛到委屈自己值得嗎」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「愛到委屈自己值得嗎」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "imageLabel": "復合",
+    "summary": "呢句說話聽落好簡單，好直接，但真係咁黑白咩。",
+    "content": "<h2>一齊時間耐咗，一定會出現爭拗</h2>\n<p>一旦嗌交嘅次數多咗：你或者對方都可能會覺得好煩，當你問朋友，佢哋總會叫你分手，因為你哋唔夾。但其實有時係咪真係咁唔夾呢？要唔夾成點，先真係要分？</p><h2>點樣先知道係值得繼續：對方願意溝通、有改變</h2>\n<div class=\"article-section-card\"><p>對方願意溝通、有改變：唔係話次次都即刻改變，而且令你好滿意。</p><p>但起碼你講完佢聽得入耳，佢會諗、會試，佢肯改、肯聽，咁代表重視你，真正重視你嘅人，唔係從來唔犯錯，而係犯咗錯之後，會因為愛你，佢會努力變得更好。</p></div><h2>點樣先知道係值得繼續：雖然價值觀有出入但底線一致</h2>\n<p>雖然價值觀有出入但底線一致，一段感情好難有兩個完全一模一樣嘅人。大家一定會有啲地方唔同，你鍾意儲錢，佢鍾意享受，你鍾意穩定，佢鍾意刺激，大家價值觀相差太遠，係好容易嗌交、覺得唔夾。但其實呢啲唔夾唔係死罪，只要大家喺根本底線上係一致，呢啲生活上嘅出入其實可以慢慢磨合。真正長久嘅關係，絕對唔係靠「<strong>大家一模一樣</strong>」。</p><h2>點樣先知道係值得繼續：嗌完交後依然想解決而唔係當冇事/逃避</h2>\n<p>嗌完交後依然想解決而唔係當冇事/逃避。重點唔係有冇嗌交：而係嗌完交之後，大家仲有冇心去解決問題。真正值得繼續落去嘅關係，係即使嬲緊，心底都係諗緊點先會好返。會想一齊諗方法解決，會各自冷靜後主動講話想傾清楚，而唔係氹返對方就當冇事發生，就算你哋嗌交嗌得好大鑊，只要最後都想坐低認真講返清楚，咁呢段感情就仲有價值、仲有得救！</p><h2>點樣為之可能要分手：對方根本唔願意為關係努力</h2>\n<p>對方根本唔願意為關係努力，如果對方只想你遷就自己，遇到矛盾或者問題都一一無視，冇心經營、冇心傾吓點解決、拒絕溝通。咁可能係因為佢根本唔想為呢段感情努力。或者佢想冷暴力對待你，令你自己忍受唔住，提出分手先，不過呢啲情況都唔係100%冇得救嘅！</p><h2>點樣為之可能要分手：對方根本唔覺得自己有問題</h2>\n<p>對方根本唔覺得自己有問題，如果每次嗌交，對方嘅第一反應唔係諗下自己有冇問題，而係即刻反過來話你情緒化、你小器。可能係因為佢唔知自己有問題，喺佢眼中永遠都係你錯，或者就算知，都係死都唔肯面對，一個唔覺得自己有問題、唔肯面對自己問題嘅人。係冇可能同你一齊成長：而呢段感情都比較難行到落去，其實呢個情況，都有機會係佢未開竅。</p><h2>感情拯救所話你知</h2>\n<p>如果你每次一遇到唔夾就話放棄，咁你一世都只會喺關係初段遊走，永遠搵唔到個可以拍得耐拖嘅人，但如果你每次都強迫自己忍耐，咁你最終只會迷失自己，關鍵唔係分唔分手，而係睇清楚你哋到底係真係唔夾，定係未搵到一個好嘅方法幫手</p>\n\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>一齊時間耐咗，一定會出現爭拗</li><li>點樣先知道係值得繼續</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2025-03-27",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/01-asian-woman-mirror-self-doubt.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2025-06-15",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20045413.jpg",
+    "coverCredit": "Photo by Mustafa Bodur on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/02-asian-couple-home-imbalance.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【情侶吵架】成日嗌交就要分手嗎？先看修復能力",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/03-asian-woman-cafe-self-worth.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070516.jpg",
+        "caption": "內文配圖：【情侶吵架】成日嗌交就要分手嗎？先看修復能力",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/015-self-sacrifice-unequal-love/04-asian-couple-table-restoring-balance.jpg",
-        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【情侶吵架】成日嗌交就要分手嗎？先看修復能力",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：愛到委屈自己值得嗎？關係不對等的警號",
+    "coverCaption": "Asteria 相處教學：【情侶吵架】成日嗌交就要分手嗎？先看修復能力",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 16,
-    "title": "另一半受不了你的情緒？親密關係中的情緒修復方法",
-    "category": "溝通相處",
+    "title": "【情侶相處】成日對住另一半就燥底？5 個破壞關係的原因",
+    "category": "戀愛心理",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "溝通",
-    "summary": "情侶之間嘅「支援功能」係一段關係中嘅關鍵因素？但要點先可以做到關係嘅支援？淨係提供情緒價值就夠？",
-    "content": "<p>但其實呢啲只係情緒價值嘅一部分，真正能令關係長久嘅其實是行動層面嘅支援。</p>\n<p>心理學家提出過一個伴侶理論，支援性功能模型（Supportive Functions Model），一段穩定健康嘅關係除咗情感依附，更重要係彼此可唔可以喺對方嘅成長同挑戰中提供實際支援。</p> <h2>點解支援感咁緊要</h2>\n<p>當伴侶能互相提供非壓迫式支援、雙方嘅依附感同滿意度會顯著提升、對生活嘅掌控感同動力也更強、關係面對壓力時都唔會咁易瓦解，呢啲信任唔係靠甜言蜜語建立，都唔係提供情緒價值俾對方就夠，而係靠一次次真誠嘅行動同感受累積嘅安全感。</p> <h2>真正的支援，不只是安慰，而是減輕對方負擔</h2>\n<p>喺關係入面，支援感唔係代表你要對方無限量接住你所有情緒，也唔係你一直猜對方想要咩。更穩定的做法，是先問清楚：對方現在需要安慰、空間、實際幫忙，還是只想有人靜靜聽。</p>\n<p>如果對方返工太忙、精神已經很繃緊，你可以先處理一件具體小事，例如分擔家務、準備膳食、安排時間，或者把自己的情緒先寫低再溝通。這些行動會比一味要求對方「理解我」更容易建立安全感。</p>\n<h2>情緒修復要由「你哄我」變成「我們一起穩住」</h2>\n<p>如果你每次不安都只想對方即時安撫，對方很快會覺得自己變成照顧者。更健康的做法，是先承認自己的情緒，再講清楚你需要的是陪伴、空間、實際幫忙，還是只是想被聽見。</p>\n<p>真正的支援不是互相消耗，而是兩個人都知道自己可以怎樣出力。當你能把情緒和要求分開，對方比較容易靠近，你亦不會因為一次回應不夠好就全盤崩潰。</p>\n<p>你亦可以同對方約定一個低壓訊號，例如：「我而家有啲亂，想你聽我講十分鐘，不用即刻解決。」當對方知道自己需要做什麼，情緒對話就不會每次都變成壓力測試。</p> <h2>先承認情緒，不要急住爭輸贏</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。</p> <h2>把崩潰背後的需要講清楚</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p> <h2>先修補一個最常爆發的位置</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n<h2>常見問題</h2>\n<h3>「<strong>另一半受不了你的情緒</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>另一半受不了你的情緒</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>另一半受不了你的情緒</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "imageLabel": "心理",
+    "summary": "雖然喺戀愛關係入面，溝通係維持大家嘅感情嘅關鍵，但有啲時候，即使幾句言語，都可能會令你對另一半無名火起，覺得佢好煩、好討厭，面對住佢，可能會令你不禁懷疑，自己對另一半嘅感情是否已經消失。",
+    "content": "<h2>有冇試過</h2>\n<p>每當聽到另一半講嘢、對你囉唆，你就會好容易覺得無名火起，你會覺得佢好討厭、好麻煩，你會唔想再聽佢講嘢，每次遇到呢啲時候，係咪就會忍唔住質疑自己，唔通對佢已經冇愛？其實又唔一定：即刻睇到點解你會有呢種錯覺啦！</p><h2>溝通疲乏</h2>\n<p>經過長時間嘅相處：可能會出現溝通上嘅疲乏，因為隨住時間推移，大家或者會對對方嘅言語免疫，甚至產生厭煩，有時會因對方一句說話或者一啲舉動。觸發我哋內心深處嘅某種不安、不滿。喚醒咗「<strong>躁底情緒</strong>」而覺得對方好煩。但咁並唔代表你已經唔再愛佢。</p><h2>爭執太多</h2>\n<p>如果經常因為一啲小事而嗌交，心情都好易變得壓抑，甚至會因為咁而有壓力，內心就會釋放出負能量、焦慮感，負面情緒狀態會慢慢地「<strong>洗你腦</strong>」，當爭執過多又無法解決時，你可能會因為呢啲煩躁感，誤以為自己已經唔愛佢，但其實你只係覺得未解決嘅問題太煩厭。當你唔擅長將感受、需求清楚地表達出嚟。</p>\n<p>就會覺得「<strong>佢唔了解我</strong>」、「<strong>佢唔夠好</strong>」，諸如此類嘅諗法就會積壓喺心底，最終用負面情緒嘅形式爆發，喺爆發嘅當下，你亦會認定自己唔再愛對方，但其實只係因為你唔講清楚，對方又唔明白你嘅諗法先出現矛盾。只要妥善溝通，「<strong>唔愛佢</strong>」嘅錯覺都會慢慢消失。</p><h2>期望落差</h2>\n<p>每人對另一半都一定預設咗期望，不過如果你嘅期望Set得太高，另一半又未能滿足到你，你就好易覺得失望、嬲，繼而質問佢點解達唔到你嘅期望，呢個時候，另一半嘅答案往往會唔小心「<strong>火上加油</strong>」，進而令到你開始懷疑自己對佢嘅感情。當你細個喺原生家庭面對父母時，同佢哋嘅相處出現問題，令你一直感到到好多負面嘅情緒，你會下意識地覺得一旦同父母相處就會發火。</p>\n<p>到你成長咗之後：原生家庭嘅壓力依然喺你嘅潛意識。所以一旦你喺另一半身上feel到父母嘅影子。例如面對佢對你嘅囉唆，你就會又無名火起，將對父母嘅討厭錯誤地投射喺佢身上。</p><h2>感情拯救所話你知</h2>\n<p>當發現自己對另一半嘅言語、行為反應過度不妨俾啲時間自己。</p>\n<p>等你內心先冷靜落嚟：停落來思考清楚，究竟呢種情緒嘅根源係乜嘢，諗清楚自己內心嘅真實感受，唔好因為一時火遮眼，覺得對方好煩、唔想同佢相處，而認定係「愛嘅消逝」，衝動地提出分手，反而應該重新思考、調整你哋嘅關係！</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有冇試過</li><li>溝通疲乏</li><li>爭執太多</li><li>無效溝通</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-12-31",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/016-emotional-value-practical-support/01-asian-couple-after-work-gentle-support.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-09-15",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20479952.jpg",
+    "coverCredit": "Photo by Alexander Mass on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/02-asian-couple-kitchen-shared-tasks.jpg",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【情侶相處】成日對住另一半就燥底？5 個破壞關係的原因",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/03-asian-couple-planner-ask-before-helping.jpg",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【情侶相處】成日對住另一半就燥底？5 個破壞關係的原因",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/016-emotional-value-practical-support/04-asian-woman-park-support-boundaries.jpg",
-        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8442219.jpg",
+        "caption": "內文配圖：【情侶相處】成日對住另一半就燥底？5 個破壞關係的原因",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：另一半受不了你的情緒？親密關係中的情緒修復方法",
+    "coverCaption": "Asteria 相處教學：【情侶相處】成日對住另一半就燥底？5 個破壞關係的原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 17,
-    "title": "你以為在幫對方，其實正在增加壓力？常見相處誤區",
-    "category": "溝通相處",
+    "title": "【短戀原因】次次拍拖都好快散？破解拍短拖的感情模式",
+    "category": "戀愛心理",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "都市人壓力大，久唔久都會心情差、情緒低落，甚至憂鬱，如果撞正身邊嘅伴侶都有呢個情況，作為另一半嘅人，又應該點同佢哋相處？",
-    "content": "<p>當伴侶情緒低落、工作壓力大，或者一開口就話「唔想講」，你可能會好自然想幫佢分析、俾建議、叫佢振作。但有時你愈用力幫，對方反而愈覺得被催促，甚至覺得你唔明白佢。</p><h2>先分清：佢需要安慰，定係需要方法？</h2><p>有些人低落時想要的是被陪伴，不是立刻聽解決方案。你可以先問：「你想我陪你呻，定係想一齊諗方法？」這句比直接教對方應該點做更容易被接收。</p><h2>不要把關心變成催促</h2><p>「你唔好咁諗啦」「你應該積極啲」表面是鼓勵，但聽起來可能像否定。對方真正需要的，可能是先被承認：辛苦是合理的，低落不是錯。</p><h2>幫忙之前，先問對方願不願意</h2><p>如果你想替對方安排、提醒、介入問題，最好先問清楚。未經同意的幫忙，有時會令對方覺得被控制；被尊重的幫忙，先會變成支持。</p><h2>把支持縮細，對方會更容易接受</h2><p>與其一次過要求對方改變狀態，不如只做一件很細的事，例如陪佢食飯、陪佢散步、讓佢休息半小時。壓力大的時候，細而穩定的陪伴，比大道理更有用。</p><h2>看對方是否仍願意讓你靠近</h2><p>如果你已經放輕語氣、降低壓力，對方仍然完全拒絕溝通，這就不只是你幫得夠不夠好的問題，而是你們需要重新理解彼此的相處方式。</p><h2>好的支持，是讓對方覺得仍然有選擇</h2><p>人在壓力大的時候，最怕的不一定是沒有人幫，而是連自己的節奏都被拿走。你越急著安排、分析、推他好起來，對方越可能覺得自己連低落的空間都沒有。真正有支援感的陪伴，會先讓對方知道：你可以慢慢講，我不會急著修理你。</p><p>當對方感覺自己仍然有選擇，他才比較願意接受你的靠近。你可以提供兩三個輕量選項，例如陪伴、實際幫忙、或者暫時安靜一下，讓對方自己選。這種尊重，往往比一大堆建議更能令關係穩住。</p><h2>常見問題</h2><p><strong>伴侶心情差，我應該不停開解嗎？</strong><br/>不用。先確認對方想被安慰還是想聽方法，否則開解太多反而會變成壓力。</p><p><strong>我明明想幫佢，點解佢會嫌煩？</strong><br/>因為幫忙如果沒有先得到對方同意，容易被感覺成催促或控制。先問一句，效果會好很多。</p><p><strong>如果佢長期拒絕我關心，是否代表不愛？</strong><br/>未必，但代表你們的情緒溝通模式需要調整。可以先觀察他是否只是在低潮期退縮，還是長期不願意讓你靠近。</p>",
+    "imageLabel": "心理",
+    "summary": "次次拍拖都好快就散，每段關係都keep唔長。",
+    "content": "<h2>戀愛節奏太急</h2>\n<p>而家唔止時代節奏急促，連拍拖都被影響，轉移去Fast Love，好多人習慣喺交友App識另一半。大家都少咗時間好好認識彼此，有時會唔太想磨合，反而淨仔想要一拍即合，變相即使大家之間有矛盾，你或者對方都冇嗰種「<strong>要fix好</strong>」嘅心態。一有唔夾就覺得要分享。</p><h2>容易同其他人比較</h2>\n<p>我哋平日用咗好多時間喺social media。會成日睇到其他情侶相處嘅Post/Reels，好易會產生各種焦慮，成日都想同其他人比較、同自己嘅前度比較。但比較係一段關係嘅殺手，太多嘅比較會經常挑剔你嘅另一半。對佢形成大量不滿：覺得佢呢樣唔好、嗰樣又唔好，久而久之就會事事不滿，對每一任都唔滿意、每一任拍拖一排都想散。</p><h2>期望值太高</h2>\n<p>每人都有自己嘅擇偶條件，現代人對戀愛嘅期望值、擇偶要求愈嚟愈高。大家都想搵到尋找完美嘅另一半，但對於「<strong>合適</strong>」嘅定義就變得非常狹窄。一旦發現對方唔符合自己心中嘅標準。或者大家嘅關係出現一啲小問題，都會成為分手嘅原因。</p><h2>缺乏深度連結</h2>\n<p>而家嘅人拍拖，好容易一唔小心就陷入「<strong>假性親密</strong>」，真正嘅親密關係係你同另一半之間有深刻、自由、互相回應嘅連結。但係而家雙方好多時都係缺乏深度連結。大家嘅關係都避開咗雙方嘅坦誠，冇真正接納、自願地為呢段感情，為對方真心地付出，唔敢投入過多真心、冇深度嘅溝通連結。令大家嘅關係一旦遇到麻煩，就好似風咁，一吹就散。</p><h2>過份依賴/過度控制另一半</h2>\n<p>如果你每次拍拖都好依賴另一半，會令自己缺乏獨立性格，時間一耐，喺對方眼中就會變得「<strong>唔可愛</strong>」，如果你係太鍾意控制另一半，對方亦會覺得你唔夠相信佢，你自己對呢段關係都冇失去信心，無論係過分依賴定過分控制，都會慢慢消耗彼此嘅感情，令呢段關係越嚟越脆弱，一有咩事就只會諗到要分手。好老土咁講：每段關係都會有起伏，唔好因為一啲小問題就輕易放棄，要學識用正面嘅心態去面對感情上嘅挑戰。同你嘅另一半互相磨合：將每次爭執都視之為增進彼此嘅理解同信任嘅機會。</p>\n<p>唔好隨便輕易地覺得大家就係唔夾、唔想再同佢一齊呢啲諗法。</p><h2>感情拯救所話你知</h2>\n<p>有時你可能冇發現：戀愛而家好似變咗一個快餐，無論係情感上定係時間上，都快得過頭，令你好多時拍拖都覺得越拍就越空虛。越空虛就越覺得可以放棄呢段感情。以致每次拍拖好似都唔長久，不如停一停，嘗試唔好咁急住戀愛，諗清楚要想點要一段點樣嘅感情、點樣嘅另一半！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>期望值太高</li><li>點樣解決次次拍拖都好短嘅問題</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-06-04",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/017-helping-partner-without-pressure/01-asian-couple-sofa-quiet-presence.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-10-15",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20804849.jpg",
+    "coverCredit": "Photo by Tuba Nur Dogan on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/02-asian-woman-window-respectful-space.jpg",
-        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？常見相處誤區",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【短戀原因】次次拍拖都好快散？破解拍短拖的感情模式",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/03-asian-couple-park-patient-companionship.jpg",
-        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？常見相處誤區",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8442219.jpg",
+        "caption": "內文配圖：【短戀原因】次次拍拖都好快散？破解拍短拖的感情模式",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/017-helping-partner-without-pressure/04-asian-man-cafe-self-boundary.jpg",
-        "caption": "內文配圖：你以為在幫對方，其實正在增加壓力？常見相處誤區",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20479952.jpg",
+        "caption": "內文配圖：【短戀原因】次次拍拖都好快散？破解拍短拖的感情模式",
+        "credit": "Photo by Alexander Mass on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你以為在幫對方，其實正在增加壓力？常見相處誤區",
+    "coverCaption": "Asteria 相處教學：【短戀原因】次次拍拖都好快散？破解拍短拖的感情模式",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 18,
-    "title": "你越替對方著想，對方越有壓力？關係失衡的真正原因",
+    "title": "【情侶吵架】次次翻舊帳？為何你總是放不下以前的傷",
     "category": "溝通相處",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
     "imageLabel": "溝通",
-    "summary": "你想對方好，是不是就會勸對方做你覺得是正確的選擇？但是在一段親密關係中，最容易破壞愛的，往往不是傷害性的言語或行為，而是「我希望你做對的事」這種出於關心的期望！為什麼？立即看下圖吧！",
-    "content": "<p>遇到「你越替對方著想，對方越有壓力」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「你越替對方著想，對方越有壓」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>關心不應變成替對方做決定</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>把好意講成對方接得住的方式</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「你越替對方著想，對方越有壓」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>不安不是錯，但要先把需要講清楚：回到「你越替對方著想，對方越有壓」來看</h2>\n<p>如果「你越替對方著想，對方越有壓力」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「<strong>你越替對方著想，對方越有壓力</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>你越替對方著想，對方越有壓力</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>你越替對方著想，對方越有壓力</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "summary": "喺同另一半嗌交時，有冇試過無意中翻舊賬、提起佢上次嘅錯誤。",
+    "content": "<h2>「<strong>你成日都做錯架啦！你上次咪又係咁</strong>」</h2>\n<p>你，或者你另一半，有冇喺嗌交時講過類似說話？人在爭執中：難免想用最犀利言詞嚟傷害對方，用嚟證明自己先係啱嘅，證明對方所做嘅係錯嘅，但往往呢種「<strong>翻舊賬</strong>」嘅行為。會令大家互相傷害，令關係變得更加差。點解人喺一段感情中總係鍾意喜歡翻舊賬？</p><h2>心理學研究：反映渴望需求</h2>\n<p>當情緒波動時，記憶會recall過去嘅情緒、相關事件。負面情緒主導時會諗起過去嘅不滿。翻舊賬嘅背後：係因為內心深處有未被滿足嘅期望、焦慮。</p><h2>強迫性重復</h2>\n<p>人會不斷重溫痛苦嘅經歷，試圖從中搵到解脫、或者提醒自己。每次嗌交時提到過去嘅事，其實係向對方表達「<strong>你欠我嘅</strong>」呢種意思。試圖用強迫性重復嘅方式，令對方記住自己曾經做錯。</p><h2>教而不善</h2>\n<p>如果曾經向對方表達過自己嘅喜惡。表明俾佢知：你唔希望佢做某種行為，但當你講完，佢並冇改善，依然都係「<strong>教而不善</strong>」，咁唯一嘅方法，只可以係不斷提起相關嘅事。令對方願意改善。</p><h2>雖然被翻舊賬嗰一方</h2>\n<p>的確有做錯嘅地方：但作為翻起舊賬呢一方，呢種行為其實都會好影響雙方嘅感情。喺每一次衝突時，嘗試先停一停，俾彼此2分鐘時間冷靜處理，可以有效減少舊賬嘅機會。</p><h2>有時翻舊賬嘅根源係在於無法達成共識</h2>\n<p>大家都身在事件中，大家都有盲點，有時未必知道自己咁做係啱定錯，亦會唔了解對方真正感受，甚至大家都被負能量圍繞，要真正令問題得以解決，可以請第三方幫手，避免再出現經常翻舊賬呢啲情緒化嘅衝突。翻舊賬往往源於安全感嘅缺失，希望通過對方嘅愧疚嚟彌補自己嘅不安。但係每一次嘅翻舊賬，對你哋嘅感情嚟講，都係一個大大嘅重創，記住，嗌交並非只係用嚟俾你提醒對方有錯。而係用嚟溝通，而每次溝通嘅目的，係要更好地表達你嘅期許，而唔係透過壓低對方嚟抬高自己！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你成日都做錯架啦！你上次咪又係咁。</li><li>強迫性重復</li><li>教而不善</li><li>有時翻舊賬嘅根源係在於無法達成共識。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-08-20",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/018-care-becoming-pressure/01-asian-couple-advice-pressure-table.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-12-14",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-20479952.jpg",
+    "coverCredit": "Photo by Alexander Mass on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/018-care-becoming-pressure/02-asian-woman-train-autonomy.jpg",
-        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【情侶吵架】次次翻舊帳？為何你總是放不下以前的傷",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/018-care-becoming-pressure/03-asian-couple-cafe-share-not-control.jpg",
-        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【情侶吵架】次次翻舊帳？為何你總是放不下以前的傷",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/018-care-becoming-pressure/04-asian-couple-park-same-side.jpg",
-        "caption": "內文配圖：你越替對方著想，對方越有壓力？關係失衡的真正原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-36812991.jpg",
+        "caption": "內文配圖：【情侶吵架】次次翻舊帳？為何你總是放不下以前的傷",
+        "credit": "Photo by Vitaly Gariev on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你越替對方著想，對方越有壓力？關係失衡的真正原因",
+    "coverCaption": "Asteria 相處教學：【情侶吵架】次次翻舊帳？為何你總是放不下以前的傷",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 19,
-    "title": "你們是不適合，還是不夠努力？判斷關係能否磨合",
+    "title": "【關係壓力】你以為幫緊對方，其實可能正在增加壓力",
     "category": "戀愛心理",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "心理",
-    "summary": "一段關係出現問題時，最難分清到底是不適合，還是雙方其實仍然有磨合空間。真正要看的不是吵了幾多次，而是問題有沒有被理解、責任有沒有被承擔，以及兩個人是否仍願意一起調整。",
-    "content": "<p>很多人一吵架就會問：「我哋係咪根本唔適合？」但不適合和不夠努力是兩件事。前者是價值觀、生活方向或底線長期衝突；後者可能只是溝通方式、情緒反應或相處節奏未成熟。</p><h2>先看問題是否一直重複</h2><p>如果每次吵架都圍繞同一件事，而事後沒有任何新做法，只是道歉、冷靜、再重演，這就不是普通磨合，而是模式卡住。</p><h2>看雙方是否都願意承擔一部分責任</h2><p>值得繼續的關係，不一定是沒有問題，而是兩個人都願意看見自己可以改的部分。如果永遠只有一方道歉、一方配合，時間久了就會變成消耗。</p><h2>分清底線問題和習慣差異</h2><p>遲回訊息、表達方式不同、需要私人空間，可能可以磨合；欺騙、冷暴力、長期貶低、反覆越界，就不是單靠努力可以解決。</p><h2>不要用「再努力一點」掩蓋不適合</h2><p>如果你已經長期溝通、調整、退讓，但對方仍然沒有任何行動，這時候要問的不是你還能不能再忍，而是這段關係是否仍能讓你安心做自己。</p><h2>真正的磨合會讓關係更清楚</h2><p>健康的磨合會令你們更了解彼此，而不是令你越來越混亂。當每一次衝突後都能多一點共識，這段關係就仍然有修補空間。</p><h2>努力應該令你們更靠近，而不是更不像自己</h2><p>判斷一段關係值不值得磨合，可以留意自己努力之後的狀態。健康的努力會令你更懂得表達、更清楚底線、更知道兩個人怎樣配合；不健康的努力，則會令你越來越不敢說、不敢要、不敢做自己。</p><p>所以答案不只是「再試多一陣」。你可以給關係時間，但也要設定觀察方向：下一次衝突後有沒有新做法？對方有沒有主動承擔？你有沒有比以前更安心？如果所有答案都是否定，停下來重新評估，不等於你不夠愛。</p><h2>常見問題</h2><p><strong>經常吵架是否代表不適合？</strong><br/>不一定。要看吵架後有沒有新共識和新行動。如果每次都原地循環，才需要認真評估。</p><p><strong>怎樣判斷問題能不能磨合？</strong><br/>看它是習慣差異還是底線衝突，再看雙方是否都願意調整。</p><p><strong>如果只有我一個人努力，應該繼續嗎？</strong><br/>長期單方面努力會令關係失衡。你可以再清楚表達一次需要，但也要守住自己的底線。</p>",
+    "summary": "都市人壓力大，久唔久都會心情差、情緒低落，甚至憂鬱，如果撞正身邊嘅伴侶都有呢個情況，作為另一半嘅人，又應該點同佢哋相處。",
+    "content": "<h2>當你嘅另一半情緒低落、好憂鬱</h2>\n<p>喺度愁眉苦臉，你會點做？搵方法氹佢開心：不停問佢發生咩事，叫對方有問題要同佢講，不停討論研究問題，勢要問清楚。</p><h2>心理學家曾經做過一個實驗</h2>\n<p>請過好多夫婦或情侶嚟模擬場景，假設其中一個遇到問題，另外一個要提供幫助，分咗3個情況。</p>\n\n<p>1. 抱住佢，溫情地陪伴，2. 同佢傾偈，無意中話「我有個朋友也遇到同樣問題，他會咗做……」，3.同佢分析問題，提出自己嘅建議「你應該……」。</p>\n<h2>經過測試</h2>\n<p>前面兩種方法可以降低伴侶嘅焦慮感。而最後一種通常起到舒緩情緒嘅作用。反而可能引起不必要嘅爭執，事實證明，當另一半最初出現情緒低落、面對難關時。最需要嘅係你窩心陪伴、窩心嘅語言。其實佢當下唔需要你即時幫佢解決問題。</p><h2>當另一半嘅情緒問題成為日常</h2>\n<p>你要點做？1. 允許對方有「<strong>負面</strong>」情緒。喺一段關係中，當其中一方深陷負面情緒，都有一項共同特性：「<strong>唔係要即刻解決低落根源，而係要被理解</strong>」，但偏偏另一方往往會設法解決對方嘅問題。係咁不斷地提供建議：但其實一段健康嘅關係，係藏著「<strong>正面</strong>」&amp;「<strong>負面</strong>」情緒、思維。嘗試將對方嘅低落視作日常抱怨、低潮。千萬唔好阻止對方有負面情緒。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>保持沈默唔代表唔愛</span></h2>\n<p>無論你有幾愛另一半，當佢處於情緒低潮期，都應該同佢要保持一段健康嘅「<strong>距離</strong>」，所謂嘅「<strong>距離</strong>」唔代表唔理佢。而係有時候可以沈默地看待對方嘅情緒。唔好釋出「<strong>我知你有情緒問題，我體諒你</strong>」嘅意識。因為對方都唔會想你「<strong>覺得我有情緒病</strong>」，冇長期明確地釋出你嘅同理心，唔一定代表「<strong>冷漠</strong>」或者「<strong>唔愛</strong>」，其實只要靜靜地陪伴亦都係一種「愛」。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>接納並體驗對方嘅情況</span></h2>\n<p>有時另一半出現情緒低潮，會想自己一個人冷靜吓，甚至對於有憂鬱症或者PTSD嘅人。</p>\n\n<p>對即時訊息有恐懼：所以成日都很遲先覆msg，甚至可能會已讀不回，作為另一半，必須體諒對方需要更多空間，更重要係多啲對方磨合、溝通。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 4 點</span><span>漫長嘅陪伴期</span></h2>\n<p>陪伴期首要任務係陪伴對方，若對方情緒低落嚴重、有憂鬱徵兆。咁陪佢搵可信賴嘅治療師、聽佢分享生活。都係陪伴期可以維持關係嘅催化劑。你可以從學習同對方共處過程中成長。你唔一定永遠係「<strong>給予者</strong>」(Giver)，對方也唔一定係「<strong>接受者</strong>」(Taker)，而係可以互相照顧，令呢段關係唔會因為對方嘅情緒問題而中斷。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 5 點</span><span>你嘅同理心會帶來傷害</span></h2>\n<p>當另一半情緒低落，你會想要施予「同理心」，喺好容易喺傾聽同陪伴過程中，一唔小心就被對方嘅情緒影響，連自己都深陷抑鬱、低潮之中，所以最緊要係要先意識到，「對方嘅情緒會傷害到自己」，你要提高「自我意識」，發現自己會唔會受到對方情緒影響。</p>\n\n<p>避免跟住佢一齊陷入低潮。</p>\n<h2>感情拯救所話你知</h2>\n<p>我哋經常將另一半嘅快樂幸福為自己嘅責任。一旦對方處於「<strong>負面消極</strong>」，就好容易會深陷有毒嘅情緒，覺得自己要為佢哋解決問題，但其實當對方嘅情緒問題成為日常。你只需令佢感受到：你會同佢一齊「<strong>承擔</strong>」佢情緒同問題。都已經好足夠：唔使因為對方嘅低潮而令自己都唔快樂。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>當你嘅另一半情緒低落、好憂鬱</li><li>經過測試</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2024-11-29",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/01-asian-couple-kitchen-stuck-mindset.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-06-04",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8442219.jpg",
+    "coverCredit": "Photo by Ron Lach on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/02-asian-woman-desk-reflection-patterns.jpg",
-        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20479952.jpg",
+        "caption": "內文配圖：【關係壓力】你以為幫緊對方，其實可能正在增加壓力",
+        "credit": "Photo by Alexander Mass on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/03-asian-couple-floor-learning-together.jpg",
-        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【關係壓力】你以為幫緊對方，其實可能正在增加壓力",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/019-incompatible-or-growth-mindset/04-asian-couple-walking-growth-path.jpg",
-        "caption": "內文配圖：你們是不適合，還是不夠努力？判斷關係能否磨合",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20045413.jpg",
+        "caption": "內文配圖：【關係壓力】你以為幫緊對方，其實可能正在增加壓力",
+        "credit": "Photo by Mustafa Bodur on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你們是不適合，還是不夠努力？判斷關係能否磨合",
+    "coverCaption": "Asteria 相處教學：【關係壓力】你以為幫緊對方，其實可能正在增加壓力",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 20,
-    "title": "分手未必是性格不合：真正令關係走不下去的原因",
-    "category": "復合挽回",
+    "title": "【創傷迷戀】為何你總是委屈自己？拆解怕失去背後的不安全感",
+    "category": "情緒修復",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "復合",
-    "summary": "先別急著追問答案：真正要看的，是對方為何退後。",
-    "content": "<p>遇到「分手未必是性格不合」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先判斷「分手未必是性格不合」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>「分手未必是性格不合」不用一次過逼出完整答案</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>用行動判斷「分手未必是性格不合」</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>留住步伐才看得清「分手未必是性格不合」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>想修補「分手未必是性格不合」，先判斷仲有沒有窗口</h2>\n<p>如果你正面對「分手未必是性格不合」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「分手未必是性格不合」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「分手未必是性格不合」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「分手未必是性格不合」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "療癒",
+    "summary": "當你發現自己愛得太辛苦、太委屈，可能你不只是「戀愛腦」，而係陷入一場「創傷迷戀」。",
+    "content": "<h2>你是否曾經有過這種感覺：</h2>\n<p>愛上一個人後，整個世界就只剩下對方。事事都以對方為中心：甘願為對方犧牲所有，對方失聯但你卻不敢追問，反而怪自己是否做錯。明知對方可能有其他曖昧對象仍然死心塌地。你以為這是「<strong>戀愛腦</strong>」？錯了！你不是「<strong>戀愛腦</strong>」，你是「<strong>創傷迷戀</strong>」。</p><h2>什麼是創傷迷戀？</h2>\n<p>不是單純的「<strong>愛得深</strong>」，而是源自內心的不安全感與依附焦慮。你怕失去對方，所以潛意識會用極端的投入、討好、付出。用這些手段去維持關係：令自己在這段感情中獲得安全感，簡單來說，你愛的並不是對方本身，而是透過對方獲得「<strong>被需要</strong>」、「<strong>被接納</strong>」的感覺。</p><h2>為何會出現創傷迷戀？</h2>\n<p>曾在成長中缺乏穩定的愛與關注，曾經歷過被拋棄、忽略或背叛，被灌輸「<strong>只有夠好才值得被愛</strong>」的觀念。這些經歷令你在潛意識地重複「<strong>怕被拋棄</strong>」的焦慮。令你的愛情落入一場不斷討好對方。不斷證明自己值得被愛的無限Loop。</p><h2>當你發現自己很容易陷入戀愛腦</h2>\n<p>不妨靜下來問自己：「<strong>我是真的愛對方這個人，還是我太怕失去他、怕孤單？</strong>」，但其實，愛情不應該是一場證明自己有價值的考驗。而是兩個人互相付出、互相遷就、互相扶持。如果只有一方不斷地因為所謂的戀愛腦。而不斷地付出、討好對方，那就不會是一段好的感情關係。</p><h2>當你長期處於創傷式的戀愛模式中</h2>\n<p>你會發現自己極度缺乏安全感，情緒反覆、容易陷入焦慮與自我懷疑。但這些都不是你的錯！而是你過往經歷累積下來的情緒創傷。尚未被處理與清理。</p><h2>想改變自己？</h2>\n<p>重整你的情感能量場：清除創傷遺留下來的情緒包袱，重建自我價值與安全感，減少在關係中的過度依賴與討好傾向。找回屬於你的愛情界線：我們的儀式不會為你強行留住任何人。但它可以先幫你「<strong>留住自己</strong>」！</p><h2>感情拯救所，告訴你</h2>\n<p>如果在感情中一味討好對方、失去自己。到最後，你只會連對方都失去！真正的愛情：不是委屈自己去討好對方，而是懂得照顧自己，同時建立一段互相尊重的關係。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>當你發現自己很容易陷入戀愛腦</li><li>當你長期處於創傷式的戀愛模式中。</li><li>想改變自己</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2023-10-25",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/01-asian-woman-window-old-messages.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2025-08-08",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8070516.jpg",
+    "coverCredit": "Photo by Ron Lach on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/02-asian-man-cafe-two-cups-reflection.jpg",
-        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8036689.jpg",
+        "caption": "內文配圖：【創傷迷戀】為何你總是委屈自己？拆解怕失去背後的不安全感",
+        "credit": "Photo by SHVETS production on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/03-asian-former-couple-bench-postmortem.jpg",
-        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-20804849.jpg",
+        "caption": "內文配圖：【創傷迷戀】為何你總是委屈自己？拆解怕失去背後的不安全感",
+        "credit": "Photo by Tuba Nur Dogan on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/020-breakup-not-personality-mismatch/04-asian-woman-sunset-repair-uncertain.jpg",
-        "caption": "內文配圖：分手未必是性格不合：真正令關係走不下去的原因",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【創傷迷戀】為何你總是委屈自己？拆解怕失去背後的不安全感",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手未必是性格不合：真正令關係走不下去的原因",
+    "coverCaption": "Asteria 相處教學：【創傷迷戀】為何你總是委屈自己？拆解怕失去背後的不安全感",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 21,
-    "title": "你們適合結婚嗎？婚前必看的關係判斷重點",
-    "category": "長期關係",
+    "title": "【偽關心地雷】你用關心包住批評？3 句最傷人的說話",
+    "category": "溝通相處",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "長久",
-    "summary": "適不適合結婚，不只看愛不愛，還要看價值觀、金錢觀、衝突處理和生活責任。婚前真正要判斷的，是你們能否一起面對日常壓力。",
-    "content": "<p>想結婚不代表關係已經準備好。婚姻會把平日的小問題放大，尤其是金錢、家庭、責任分工和吵架方式。婚前看清楚，不是唱淡愛情，而是確保你們不是只適合拍拖，卻未必適合一起承受生活。</p>\n<h2>看衝突後能不能修補</h2>\n<p>每對伴侶都會吵架，關鍵是吵完之後能否回來傾、承認問題、一起找做法。如果每次都冷戰或逃避，婚後壓力會更大。</p>\n<p>婚姻不是沒有衝突，而是衝突後仍然能回到同一隊。如果一有問題就消失、封鎖、推責任，將來面對住屋、家庭和金錢壓力時會更辛苦。</p>\n<h2>金錢觀要講到具體</h2>\n<p>收入、儲蓄、消費、借貸、家用，不適合只靠感覺。婚前講清楚現實安排，比婚後靠忍耐安全。</p>\n<p>你不需要一開始就計到每一蚊，但至少要知道大家對儲錢、享受、投資、借錢給家人有沒有重大差異。錢不是俗，錢是婚姻裡很現實的安全感。</p>\n<h2>家庭界線要一致</h2>\n<p>結婚不只是兩個人，還有雙方家庭。要看對方能否在父母、伴侶和自己之間保持合理界線。</p>\n<p>如果每次家庭衝突都要你忍、你退、你扮無事，婚後很容易變成長期委屈。伴侶未必能完全隔絕家庭壓力，但至少要願意和你站在同一邊處理。</p>\n<h2>生活責任不是誰幫誰</h2>\n<p>家務、情緒照顧、計劃未來都不是一方「幫手」。如果長期只有一個人承擔，婚後很容易變成怨氣。</p>\n<p>婚前可以留意他會不會主動處理生活細節，而不是只在你開口後才做。共同生活最考驗的，往往不是浪漫，而是日復日的小責任。</p>\n<h2>不要用婚禮掩蓋關係問題</h2>\n<p>婚禮可以很美，但不能修補根本不穩的關係。真正要看的是婚禮之後，你們能否一起過日子。</p>\n<p>如果你心底其實一直覺得不安，不要用「結了婚就會好」安慰自己。婚姻會放大原本的相處模式，而不是自動把人變成熟。</p>\n<h2>常見問題</h2>\n<h3>拍拖開心是否代表適合結婚？</h3>\n<p>不一定。拍拖重感覺，婚姻更考驗責任、協調和長期穩定。</p>\n<h3>婚前最應該傾咩？</h3>\n<p>金錢、家庭界線、住屋、子女、家務分工和衝突處理。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>可以幫你整理伴侶狀態、關係風險和婚前需要看清楚的位置。</p>",
+    "imageLabel": "溝通",
+    "summary": "有時以為自己關心緊人，但其實係「關心中帶有攻擊」。",
+    "content": "<h2>拍拖有時最傷人嘅唔係嗌交</h2>\n<p>亦唔係冷戰：而係嗰啲你以為係關心嘅說話，但對方其實唔係咁覺得，甚至聽完個心好唔舒服，感受你嘅到「隱形攻擊」，或者你自己未必覺得嗰啲說話係攻擊。</p><p>但對方聽落，已經受咗傷。</p>\n<h2>重複嘅窩心提醒其實係一種壓力</h2>\n<p>有時你以為係窩心嘅關心，但幾隔幾日講一次，聽落就變成壓力。同一句提醒講得太多，就唔再係溫柔。而係一種無聲嘅逼迫，試想像吓，當你搵緊工，對方日日問：「<strong>搵工搵成點？唔好hea咁耐喎</strong>」，呢啲嘢說話睇落係提點，實際上當你不停重複，每隔一排就問。唔想面對嘅事，會令人壓力更大、自信更低。</p><h2>包住冷水嘅「<strong>忠告</strong>」其實係一種否定式關心</h2>\n<p>有啲說話，你以為係關心、係俾嘅實用建議。但其實係否定、係潑緊冷水，例如當對方興高采烈分享佢嘅創業夢想。但你第一句就話唔得，因為佢冇經驗、冇資本、唔係做老細嘅材料。呢啲唔係忠告，而係潑冷水，會令你好似永遠都唔夠好、做咩都唔啱。就算你只係為佢好，但對方聽落都唔會開心。</p><h2>不經意嘅馬後炮其實係一種「<strong>指責式關心</strong>」</h2>\n<p>有啲所謂嘅關心，只係換個方式話你錯，唔係支持，而係指責，試想像下，當你病咗，佢話：「<strong>早就叫你著多件衫啦，又唔聽我講</strong>」，「<strong>早叫你啦</strong>」呢啲說話其實唔係安慰。而係傷口上撒鹽、係補刀，真正嘅關心，會先安慰對方，而唔會喺你受傷/跌低時先踩一腳，證明自己係啱。再講啲關心嘅說話。</p><h2>試吓回想，自己同另一半相處過程中</h2>\n<p>會唔會唔小心犯咗「<strong>將攻擊誤以為係關心</strong>」嘅錯誤？我哋知你唔係特登想傷害對方，只係習慣咗用理性分析，但就忽略咗—感情入面，語氣、同理心，其實比道理更加緊要！但唔使自責、唔使標籤自己係壞人。下次講嘢前先停一停，問下自己，你而家想講嘅說話。係想證明自己係啱嘅：定純粹想關心佢，再改變自己嘅說話方式，溫柔啲、放低啲姿態去講。</p><h2>如果你發現對方係呢種人，咁點做？</h2>\n<p>設立界線：試吓講「我知道你為我好，但你咁講我會唔舒服」，唔好硬食，唔好勉強笑住收落肚，因為你有權表達你唔鍾意嘅說話，唔好不斷合理化對方嘅說話，唔好要同自己講：「佢冇惡意」、「佢關心我」，你feel到佢嘅關心有指責成份/用錯方法。</p><p>就俾坦誠話佢知，佢先會改變！</p>\n<h2>感情拯救所話你知</h2>\n<p>唔係每一句攻擊都會大聲吆喝、講啲難聽嘅說話。有啲攻擊，係不經意笑笑口講出嚟。自己以為係關心對話而講，但對方聽落就hard feeling。記住：真心關心人唔係靠講得精準，而係講得令對方舒服，有時，一句溫柔嘅說話比十句忠告更有效。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>重複嘅窩心提醒其實係一種壓力</li><li>包住冷水嘅，忠告，其實係一種否定式關心。</li><li>不經意嘅馬後炮其實係一種，指責式關心。</li><li>試吓回想，自己同另一半相處過程中。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-02-19",
-    "tags": [
-      "關係進展",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-06-08",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560663.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
@@ -1025,27 +899,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你們適合結婚嗎？婚前必看的關係判斷重點",
+    "coverCaption": "Asteria 相處教學：【偽關心地雷】你用關心包住批評？3 句最傷人的說話",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 22,
-    "title": "你不捨得的是對方，還是習慣？分手前必看的自我檢查",
+    "title": "【磨合期心理】你哋唔適合定唔夠努力？思維決定關係走向",
     "category": "戀愛心理",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
     "imageLabel": "心理",
-    "summary": "一段維持嘅好多年嘅愛情，失去咗戀愛新鮮感，進入感情穩定期，但喺呢度時候，有時不禁會停落嚟問自己：「我係咪真係仲愛佢？喺呢段感情入面，點先為之愛？點為之變咗習慣同依賴？」，你有冇呢個迷思？對於愛情長跑緊嘅你而言，係咪已經分唔清對另一半仲存有愛，定係已經習慣咗佢嘅存在呢？本文從戀愛心理角度拆解關係訊號、",
-    "content": "<p>遇到「你不捨得的是對方，還是習慣」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「你不捨得的是對方，還是習慣」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>不要被「你不捨得的是對方，還是習慣」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>從回覆判斷「你不捨得的是對方，還是習慣」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「你不捨得的是對方，還是習慣」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>越想靠近「你不捨得的是對方，還是習慣」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>「你不捨得的是對方，還是習慣」不能只靠你一個人推</h2>\n<p>如果你正面對「你不捨得的是對方，還是習慣」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>你不捨得的是對方，還是習慣</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>你不捨得的是對方，還是習慣</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>你不捨得的是對方，還是習慣</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "summary": "喺一段感情入面，我哋有時可能會知道自己「唔夠好」，尤其係當面對困難或分歧嘅時候。",
+    "content": "<h2>同另一半有衝突、矛盾時，你會點諗？</h2>\n<div class=\"article-compare-grid\"><div class=\"article-compare-card\"><span>A：</span><p>佢真係好麻煩，我同佢唔夾！點先可以搵到個啱我嘅另一半？定係點先可以令佢改變？大家好似有啲唔夾，要點先可以再磨合吓，令大家相處再好啲？我要點改善？呢兩種唔同嘅諗法正正係代表緊唔同嘅感情心態。唔同嘅思維方式會影響我哋喺感情中嘅結局！「<strong>定型心態</strong>」係「<strong>可遇、可改變</strong>」嘅！當你長期覺得「<strong>愛情無法長久</strong>」，而呢種負面信念係透過反覆嘅失敗經驗建立。但當遇到一個真正關心你，願意為你付出嘅伴侶，會打破你之前嘅定型心態，慢慢去建立成長心態，改變為相信愛情可以長久。</p><h2>再用心理學角度為大家透析下！</h2>\n<p>認知行為意識：人嘅心態心態受思維影響，類似「<strong>吸引力法則</strong>」，改變到唔健康嘅思維模式，情緒同心態都可以跟住改變，重塑大腦連結，心理學上嘅「<strong>神經可塑性</strong>」（neuroplasticity），概念。反映大腦可以透過經驗去改變其結構同連結。當一個人經歷持續正面、成長，大腦會慢慢將呢種正面信念內化成新嘅心態。</p><h2>定型心態 vs 成長心態：有啲人覺得自己嘅性格、能力同埋特質係天生整定</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>定型心態</span><p>有啲人覺得自己嘅性格、能力同埋特質係天生整定。</p></div><div class=\"article-point-card\"><span>覺得係改唔到嘅</span><p>無論佢自己點努力都冇用，當佢同另一半之間出現嘅衝突、問題。就會覺得係「<strong>唔夾</strong>」、覺得自己本身就係咁。認為關係入面嘅摩擦、誤解、唔滿意。全部都係自己改變唔到嘅事實，呢種心態會令佢遇到問題就更加想放棄。唔想靠自己改變去改善、修補關係。覺得要改變，就應該係對方去改變。</p><h2>定型心態 vs 成長心態</h2>\n<p>成長心態：有成長心態嘅人會相信自己嘅能力同特質可以透過學習、努力去提升。呢種諗法會令佢更加願意面對挑戰。從感情中發生過經歷過嘅事中學習成長。佢會明白伴侶之間應該互相體諒，互相努力去適應對方，如果大家出現問題就應該喺關係中磨合。唔會出現一種「<strong>我哋就係唔夾</strong>」啲諗法。堅持應該由根源解決問題。</p><h2>既然成長心態咁緊要</h2>\n<p>咁要點樣訓練自己有呢種心態？接受改變：感情入面嘅變化係無可避免，無論係外在環境定係內在情感都會有變。要嘗試接受改變、當呢啲改變係推動關係進步嘅機會。例如遇到意見唔夾嘅時候，可以當係了解對方點諗嘅機會，未必一定係壞事。</p><h2>從錯誤中學習</h2>\n<p>喺感情中，學識從錯誤中成長好重要。當出現問題、誤解，唔好一開始就怪責對方，或者選擇逃避，反而應該冷靜咁了解清楚，睇下問題嘅根源喺邊，呢種態度唔單止幫助雙方更了解彼此。仲可以令到關係更加有深度，咁遇到挑戰都唔會容易被打散。</p><h2>尋求協助</h2>\n<p>有時有「<strong>定型心態</strong>」但又唔知要點改變。自己身處喺盲點入面：又或者當身處「<strong>定型心態</strong>」盲點嘅人係對方。可能搵人幫手係最快嘅方法，試吓透過旁人嘅提點，又或者搵我哋做下儀式，清除啲負面情感同能量，都可以幫你同對方改善心態、維繫關係。</p><h2>感情拯救所話你知</h2>\n<p>有啲人對愛情有過份理想化嘅期待。成日覺得「<strong>真正啱嘅另一半</strong>」應該天生就同自己完全夾。唔需要特別磨合去維持關係，抱住一種「<strong>啱嘅人就一定明白我</strong>」嘅心態。所以當同另一半出現矛盾，就只會覺得大家磨合唔到、夾唔好。然後放棄呢段關係、再去搵下一個。但其實呢個世界又點可能有呢啲免費午餐。唔好抱住呢種「<strong>定型心態</strong>」去處理感情。嘗試吓俾啲空間自己成長，擴闊對感情關係嘅諗法先啦！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>同另一半有衝突、矛盾時，你會點諗。</li><li>定型心態 vs 成長心態</li><li>尋求協助</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-04-30",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-11-29",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6643024.jpg",
     "coverCredit": "Photo by Alena Darmel on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-woman-in-cream-sweater-behind-a-person-in-black-vest-6643024/",
@@ -1073,27 +941,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你不捨得的是對方，還是習慣？分手前必看的自我檢查",
+    "coverCaption": "Asteria 相處教學：【磨合期心理】你哋唔適合定唔夠努力？思維決定關係走向",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 23,
-    "title": "你越好對方越不珍惜？付出失衡的感情陷阱",
+    "title": "【愛與習慣】你唔捨得佢，是因為愛還是害怕失去熟悉感？",
     "category": "戀愛心理",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
     "imageLabel": "心理",
-    "summary": "遇到「你越好對方越不珍惜」時，先分清表面行為、真正情緒同互動模式，再決定應該溝通、觀察、修補定守住界線。",
-    "content": "<p>你越努力照顧對方，對方反而越習慣你付出，關係就會慢慢失衡。真正要看的不是你夠不夠好，而是你的付出有沒有被珍惜、界線有沒有被尊重。</p> <h2>先看你的好是否變成理所當然</h2>\n<p>一次談話未必即刻改變關係。重點是之後同類情況再出現時，對方有沒有願意調整，你自己又有沒有守住更穩定的表達方式。 真正改善關係的說話，要同時有溫度和界線：既不把對方逼到角落，也不把自己的需要全部收回去。</p> <h2>把付出和討好分開</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。 你可以先寫低原本想發的句子，再刪走「你一定」「你從來」「你根本」這類字眼，換成具體事件和一個清楚請求，對方會較容易聽入耳。</p> <h2>講出需要，而不是用更多付出換回應</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。 好的溝通不是壓住自己，也不是一次過爆出所有委屈，而是讓對方知道你受傷的位置，同時知道下一次可以怎樣做得好一點。</p> <h2>重新建立付出的界線</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。 如果對方一聽就反駁，先不要急著加碼解釋。你可以暫停一下，等對方消化，再用更短的句子回到核心，避免對話變成互相防衛。</p> <h2>付出有沒有被珍惜，要看對方如何回應</h2>\n<p>如果「你越好對方越不珍惜」已經反覆發生，重點不是贏一場道理，而是令下一次對話不再重演同一個模式。你可以先準備一句短而清楚的開場，再觀察對方是否願意接住；若對方有回應，再逐步講深一點。這樣既保留你的立場，也不會一開始就把對方推到防衛位置。</p>\n<h2>常見問題</h2>\n<h3>「你越好對方越不珍惜」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「你越好對方越不珍惜」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「你越好對方越不珍惜」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "summary": "一段維持嘅好多年嘅愛情，失去咗戀愛新鮮感，進入感情穩定期，但喺呢度時候，有時不禁會停落嚟問自己：「我係咪真係仲愛佢。",
+    "content": "<h2>愛情長跑咗一段時間</h2>\n<p>激情被消耗：你有冇試過暗中反思，到底自己係仲愛緊另一半，定其實只係習慣佢嘅存在？要判斷自己係咪真係仲愛對方，定還是只是習慣對方，可以考慮以下幾個因素！</p><h2>關係中嘅犧牲 &amp; 奉獻</h2>\n<div class=\"article-compare-grid article-compare-grid-labelled\"><div class=\"article-compare-card\"><span>真愛</span><p>通常會表現為願意為對方付出，願意犧牲自己嘅利益同舒適度。你可能會對佢缺乏奉獻精神，唔願意為佢犧牲自己嘅利益。即使已經一齊咗好多年，你仍然好鍾意同佢傾計，願意時刻同佢分享生活。你唔係特別鍾意同佢傾偈，甚至佢同你講嘢時，你會諗，「<strong>點解要同我講呢啲，我唔想聽</strong>」。你唔單止會依賴佢，而且你係只想依賴佢，你需要佢給予你嘅安定感，都享受你依賴佢、佢又依賴你嘅感覺。你唔習慣孤單，無論做任何嘢都唔可以一個人，習慣佢喺你身邊照顧你，但諗深一層，其實你只需要一個照顧你嘅人。</p>\n<p>基於道德上、良心上嘅罪惡感，基於害怕孤單嘅恐懼無助感，令你唔敢就此放手，你唔敢想像自己嘅離開，會唔會帶俾對方傷害？會唔會成為人哋口中只顧自己嘅自私人？但其實，當發現自己真係習慣，而非真愛對方，但只可以用對方耗損到彼此枯竭，都唔放手，更加係大錯特錯！</p><h2>感情拯救所話你知</h2>\n<p>我哋冇辦法總係只對對方負責，我哋真正能夠負責、給予交代嘅，就只有自己！一段愛情要俾彼此最無可被取代嘅支持、愛但如果呢段關係變咗習慣為主。又點可以有最真實嘅接觸呢？當一段關係跑咗好多年，當你自己覺得好迷惘時，不如試吓對自己誠實啲，選擇為自己嘅人生「<strong>選擇真實</strong>」。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>分清真愛與習慣性依賴</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
     "sourceIg": "",
-    "date": "2023-11-24",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-04-30",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-9410266.jpg",
     "coverCredit": "Photo by Henry Lai on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-looking-at-each-other-9410266/",
@@ -1121,27 +983,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你越好對方越不珍惜？付出失衡的感情陷阱",
+    "coverCaption": "Asteria 相處教學：【愛與習慣】你唔捨得佢，是因為愛還是害怕失去熟悉感？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 24,
-    "title": "你一直原諒，對方卻一直不改？別再替他找藉口",
-    "category": "溝通相處",
+    "title": "【愛情錯覺】你是真的喜歡他，還是享受被愛的感覺？",
+    "category": "戀愛心理",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "溝通",
-    "summary": "當另一半對你唔夠好，甚至語言或者行為暴力對待你，你仲會唔會願意留喺呢段關係入面？如果你願意，甚至覺得係愛嘅表現，咁樣你可能係有斯德哥爾摩症候群！想知自己係咪咁？",
-    "content": "<p>明知道大家真係唔適合，但又搵盡藉口，將唔適合當作磨合期，貪戀呢段關係中些微嘅溫存、陪伴，就算對方背叛、傷害你，就算對方語言或者行為暴力對待你，但你仍然冇辦法一走了之，死心塌地咁愛對方、為佢護航，究竟點解你會咁執著。</p>\n<p>其實你可能已經不知不覺地患上「<strong>愛情斯德哥爾摩症候群</strong>」</p>\n<p>受害者對佢嘅綁匪產生咗同情、支持，受威脅、傷害時會不自覺尋求情感安慰，仲會將施害者嘅行為合理化，呢種心理防衛機制令佢喺困境中尋找安全感，形成一種扭曲嘅情感連結，有啲人喺一段唔健康、有傷害性嘅關係中無法自拔，當一個人喺感情中受到威脅、貶低、操控。</p>\n<p>可能會因為恐懼/孤獨感，產生對伴侶嘅依賴，將對方嘅唔正當行為合理化，一直以為自己仲好愛佢，所以離唔開佢。</p> <h2>別把傷害誤認成愛</h2>\n<p>當另一半對你表現出暴力或者情感操控，你可能會因為對佢嘅依賴，而選擇忽視呢啲行為，甚至認為佢呢啲行為係出於愛，呢種情感依賴會令你覺得如果離開佢，就會失去所有嘅安全感和愛，從而令你繼續忍受呢段健康嘅關係。</p> <h2>先停止替對方找藉口</h2>\n<p>如果你對自己嘅價值感唔夠認同，就會影響喺愛情中嘅選擇，覺得自己嘅價值係透過愛情嚟體現，就算另一半操控你、貶低你，或者有暴力的行為，你可能仍然會抱住，「<strong>只要我夠好，佢就會改變</strong>」嘅幻想，期望透過自己嘅付出，令對方改變、認可你、愛你，但呢種心態會令你不斷喺痛苦又不健康嘅關係中掙扎。</p>\n<p>加害者嘅行為，有時係來自於被害者嘅縱容，就係因為你無止盡咁寬恕佢，容忍佢一次又一次嘅傷害，先令自己越陷越深、無法抽離，要擺脫斯德哥爾摩症候群，不妨先靜落嚟諗清諗楚，唔好再合理化另一半錯誤嘅行為，要認知到自己而家正正係受到傷害。</p>\n<p>先可以中止愛情中嘅斯德哥爾摩症候群！</p> <h2>不要把包容變成縱容</h2> <p>處理「你一直原諒，對方卻一直不改」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p> <h2>看道歉之後有沒有真正行動</h2>\n<p>「你一直原諒，對方卻一直不改」最怕不是一次衝突，而是同類事情不斷重複。你可以記低事件、對方解釋、之後有沒有修正，這會比單靠感覺更清楚。</p>\n<p>如果每次都是你消化、你原諒、你降低要求，而對方沒有實際改變，下一步就不是再忍，而是先守住自己的底線。</p> <h2>不要替傷害找浪漫理由</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。</p> <h2>把底線講清楚，而不是一直吞下去</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p> <h2>原諒前先問自己還有沒有被尊重</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n<h2>常見問題</h2>\n<h3>「<strong>你一直原諒，對方卻一直不改</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>你一直原諒，對方卻一直不改</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>你一直原諒，對方卻一直不改</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "imageLabel": "心理",
+    "summary": "有冇試過一種情況係：我哋容易對鍾意自己嘅人產生好感。",
+    "content": "<h2>有冇試過</h2>\n<p>當有人向你表白，或者對你表達好感或欣賞嘅感覺，你即使本身唔算特別對佢有feel，都會留意多咗對方，然後慢慢地會不自覺地對佢產生好感。其實人係會更容易鍾意咗鍾意自己在先嘅人！</p><h2>戀愛補償效應</h2>\n<p>當人哋話鍾意你嘅時候，佢嘅鍾意會令你對佢有一種期待、包容。亦會你覺得佢好獨特：同時會令你自己都覺得自己係好獨特。補償咗自己內心覺得不足之處，對自己增加咗自信，而你亦會覺得佢對你產生忠誠、奉獻感。呢種情感正好補償咗你嘅缺失。</p><h2>「<strong>補償</strong>」係一種心理防禦機制</h2>\n<p>獲得一個人嘅愛意：代表緊你得到咗佢嘅認同，亦會產生錯覺，誤以為你欣賞佢對你嘅認同，以至將錯覺誤以為你內心都欣然自己。</p><p>從而構成咗你對佢嘅情感「補償」，不自覺地透過鍾意對方嚟補上缺口。</p>\n\n<h2>呢種感情</h2>\n<p>其實同大眾熟悉啲「<strong>吊橋效應</strong>」好近似。吊橋效應：當女仔身處危機環境，男仔好似英雄咁出現並拯救佢，咁女仔好容會不自覺地心動加速，對他產生情愫，誤以為係愛嘅感覺。</p><h2>係愛，定係感動？</h2>\n<p>好多人都分唔清自己到底係「<strong>真·鍾意</strong>」，定係遇到個稍微對你好嘅人就拼命捉緊佢。過度迷戀「<strong>被愛嘅感覺</strong>」，沉浸喺「<strong>時時刻刻被關照</strong>」嘅飄飄然幸福感。於是陷入感情中無法自拔，有啲人係特別易追，因為只要對方對佢表現出基本嘅鍾意。唔使幾耐兩個人就會喺埋一齊！</p><h2>點樣克服補償心理？</h2>\n<div class=\"article-section-card\"><p>唔好因為對佢嘅愛意產生感動，就輕易應承同佢一齊，唔好淨係聽佢點講，睇吓佢到底係咪一個表裏一致嘅人。</p><p>唔好單單吸收對方對你嘅愛意，要諗清楚自己係咪真係對佢有feel，如果依然好糾結，不妨先疏遠佢一排，睇吓自己會唔會經常掛住佢，測試吓自己對佢是否有愛意。</p></div><h2>唔單止「<strong>感情補償</strong>」</h2>\n<p>原來仲有以下因素：被追求時嘅半推半就，當對追求者未有明確情況，但不論對方、旁人都高於積極鼓吹呢段關係。好易喺熱烘烘嘅戀愛氣氛下半推半就開展感情。認知失調心理：人都係稍微有啲自戀、覺得自己都不錯。會覺得「<strong>咁鍾意我嘅人都肯定係優秀嘅</strong>」，投射到自己心入面就會誤以為自己都對追求者有好感。</p><h2>感情拯救所話你知</h2>\n<p>過度渴望親密關係：不去思考到底點樣先係真正嘅愛，雖然聽落好勇敢，甚至可以真係搵到一段真愛，但亦好易遇到錯嘅人，呢個時候記得及時止損，唔好令自己受傷害，亦不要為咗補償人哋嘅愛而戀愛。</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有冇試過</li><li>呢種感情</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-11-15",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-06-13",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6669850.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-man-talking-to-a-woman-6669850/",
@@ -1169,27 +1025,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你一直原諒，對方卻一直不改？別再替他找藉口",
+    "coverCaption": "Asteria 相處教學：【愛情錯覺】你是真的喜歡他，還是享受被愛的感覺？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 25,
-    "title": "總是愛上像父母的人？童年陰影如何影響擇偶",
+    "title": "【關係界線】你愈原諒他愈不改？別再替對方找藉口",
     "category": "戀愛心理",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
     "imageLabel": "心理",
-    "summary": "總是愛上像父母的人，未必是巧合。童年熟悉的相處模式會影響你覺得甚麼是愛、甚麼是安全，也會令你重複被同一類人吸引。",
-    "content": "<p>有些人明知某種伴侶會令自己受傷，卻一次又一次被相似的人吸引。這不代表你命不好，而是童年建立的熟悉感，可能被大腦誤認成安全感。當你看清自己為甚麼被某類人拉住，才有機會不再重複同一個愛情劇本。</p>\n<h2>熟悉不等於適合</h2>\n<p>如果你從小習慣追逐忽冷忽熱的愛，長大後遇到穩定的人反而可能覺得無聊。你要學會分清熟悉感和真正被愛。</p>\n<p>熟悉感會令你覺得「我知道點樣同呢種人相處」，即使那種相處很累。適合的人未必一開始最刺激，但會讓你慢慢放下防備。</p>\n<h2>你可能在重演未完成的渴望</h2>\n<p>有些人會不自覺想從伴侶身上拿回童年缺失的肯定，例如被看見、被選擇、被保護。這份渴望很真，但伴侶未必有能力補回全部。</p>\n<p>如果你每次都被冷淡、難取悅、情緒不穩的人吸引，可能不是你喜歡痛苦，而是你很想證明：這一次我終於可以被這類人好好愛。</p>\n<h2>留意自己被哪種特質吸引</h2>\n<p>是對方成熟、可靠、溫柔，還是只是像某個你一直想證明自己值得被愛的人？看清吸引力來源，才有選擇。</p>\n<p>你可以回想過去幾段關係：最初吸引你的點，最後是否也成為最傷你的點。這條線索通常很重要。</p>\n<h2>不要把拯救當成愛</h2>\n<p>如果你總想改變冷淡、逃避或情緒不穩的人，可能是在重複童年裡「只要我夠好，對方就會愛我」的模式。</p>\n<p>愛一個人不等於要把自己變成治療師。當你一直拯救對方，卻沒有人照顧你，你就會在關係裡慢慢失去自己。</p>\n<h2>新的關係需要新的安全感</h2>\n<p>真正健康的愛，未必一開始很刺激，但會讓你越來越安定。學會接受穩定，也是走出舊模式的一步。</p>\n<p>你可以慢慢練習選擇那些說到做到、情緒穩定、願意溝通的人。起初可能不習慣，但那種不刺激，可能正是你以前沒有得到過的安全。</p>\n<h2>常見問題</h2>\n<h3>愛上像父母的人係咪一定有問題？</h3>\n<p>不一定，但如果同一種痛苦重複出現，就值得整理背後模式。</p>\n<h3>我可以點樣打破循環？</h3>\n<p>先記錄自己被甚麼吸引，再觀察這種吸引最後帶來安全還是消耗。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你拆關係模式、依附需要和下一步選擇，避免只靠情緒判斷。</p>",
+    "summary": "當另一半對你唔夠好，甚至語言或者行為暴力對待你，你仲會唔會願意留喺呢段關係入面。",
+    "content": "<h2>有時候身處於唔健康、飽受折磨嘅關係</h2>\n<p>明知道大家真係唔適合：但又搵盡藉口，將唔適合當作磨合期，貪戀呢段關係中些微嘅溫存、陪伴。就算對方背叛、傷害你，就算對方語言或者行為暴力對待你。但你仍然冇辦法一走了之，死心塌地咁愛對方、為佢護航，究竟點解你會咁執著？其實你可能已經不知不覺地患上「<strong>愛情斯德哥爾摩症候群</strong>」。</p><h2>咩係斯德哥爾摩症候群？</h2>\n<p>受害者對佢嘅綁匪產生咗同情、支持。受威脅、傷害時會不自覺尋求情感安慰。仲會將施害者嘅行為合理化，呢種心理防衛機制令佢喺困境中尋找安全感。形成一種扭曲嘅情感連結，有啲人喺一段唔健康、有傷害性嘅關係中無法自拔。當一個人喺感情中受到威脅、貶低、操控。可能會因為恐懼/孤獨感，產生對伴侶嘅依賴，將對方嘅唔正當行為合理化，一直以為自己仲好愛佢，所以離唔開佢。</p><h2>其實可能係你嘅錯覺！</h2>\n<p>當另一半對你表現出暴力或者情感操控。你可能會因為對佢嘅依賴，而選擇忽視呢啲行為，甚至認為佢呢啲行為係出於愛，呢種情感依賴會令你覺得如果離開佢。就會失去所有嘅安全感和愛，從而令你繼續忍受呢段健康嘅關係。</p><h2>其實可能係社會嘅錯！</h2>\n<p>社會文化上對愛情嘅某啲期望，例如「愛就要忍耐」，都會加深呢種錯誤嘅諗法，令你覺得喺呢段關係入面，係要忍耐、要磨合，所以就算你喺段感情中面對痛苦，受到對方嘅傷害，不論係冷暴力、言語傷害、行為傷害。</p>\n\n<p>你都仍然會選擇留喺呢段有害嘅感情。</p>\n<h2>其實可能係你嘅錯！</h2>\n<p>如果你對自己嘅價值感唔夠認同，就會影響喺愛情中嘅選擇，覺得自己嘅價值係透過愛情嚟體現。就算另一半操控你、貶低你，或者有暴力的行為，你可能仍然會抱住，「<strong>只要我夠好，佢就會改變</strong>」嘅幻想。期望透過自己嘅付出：令對方改變、認可你、愛你，但呢種心態會令你不斷喺痛苦又不健康嘅關係中掙扎。</p><h2>喺一段惡性循環嘅關係中</h2>\n<p>加害者嘅行為：有時係來自於被害者嘅縱容，就係因為你無止盡咁寬恕佢，容忍佢一次又一次嘅傷害，先令自己越陷越深、無法抽離，要擺脫斯德哥爾摩症候群，不妨先靜落嚟諗清諗楚，唔好再合理化另一半錯誤嘅行為，要認知到自己而家正正係受到傷害。</p><p>先可以中止愛情中嘅斯德哥爾摩症候群！</p>\n<h2>感情拯救所話你知</h2>\n<p>「愛情係會令人麻目」、「愛情係一言難盡」，坊間個個都係咁講，但呢啲所謂嘅說話，其實唔可以apply落所有關係入面。</p>\n\n<p>若果只係單方面放大對方僅有嘅一絲絲溫柔。</p>\n<p>選擇忘記其餘100次傷害，呢段感情只會逐漸失衡，越嚟越唔對等，你所受嘅傷害都只會越嚟越多，最後會變到連自己去失去埋，如果你覺得自己可能身處於咁樣嘅關係中。</p>\n\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有時候身處於唔健康、飽受折磨嘅關係。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-11-15",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-13377182.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-walking-on-beach-13377182/",
@@ -1217,27 +1067,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：總是愛上像父母的人？童年陰影如何影響擇偶",
+    "coverCaption": "Asteria 相處教學：【關係界線】你愈原諒他愈不改？別再替對方找藉口",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 26,
-    "title": "你想被重視，對方卻說不想寵壞你？需求落差點處理",
-    "category": "戀愛心理",
+    "title": "【冷暴力分手】佢唔係忙，只是在慢慢避開你？",
+    "category": "關係危機",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "男人對女人說：「我想把你訓練成獨當一面的戰士。」你認為這是愛的表現，還是一種隱形的壓力？當愛情變成一場「改造計劃」，你還敢放心做回真正的自己嗎？",
-    "content": "<p>有位男人對女朋友表示：「香港太多公主了！我不想將你養成公主，我需要訓練你成為一名戰士」，「<strong>你不可以太過依賴我，你應該要獨立</strong>」 明明你只想說出自己內心需要，明明你只想對方要重視你 卻被說你不夠獨立、太公主、太港女。</p>\n<p>希望另一半能更成熟、成長得更快 實際上卻可能是在施加無形的壓力，在親密關係中以「<strong>為你好</strong>」之名 要求另一半必須獨立、理性、收斂情緒，甚至將對方表達需求的行為視作「<strong>不成熟</strong>」的表現 從而要求、調教她成為更「<strong>獨立</strong>」的人。</p>\n<h2>愛不是訓練，你不需要被改造成另一個人</h2>\n<p>戀愛並非課堂 更不是訓練營</p>\n<p>女人並不需要被男人「<strong>調教</strong>」 也不是應該被男人塑造的對象 而應該是被男人願意用心照顧、理解、愛錫的對象</p>\n<h2>讓「你想被重視，對方卻說不想寵」由指責變成清楚請求</h2>\n<p>要你成為戰士 不容許你示弱 而讓你感到有點難過 請先問自己：「<strong>我能否安心做真正的自己嗎？</strong>」，若你無法坦然做回自己，請勇於表達 如果對方聽完你的感受 仍然不改變 那就考慮離開對方吧。</p>\n<p>因為真正的獨立是懂得離開令你委屈的地方</p>\n<p>女人是值得被愛錫的</p>\n<p>你不需要成為任何人手下獨當一面的戰士。你真正需要的，是一個願意接納你原本樣貌的人；即使知道你並不完美，也不會強行將你與他人比較、不會把愛變成訓練。這才是真正愛你。</p>\n<h2>常見問題</h2>\n<h3>面對「你想被重視」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「你想被重視」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「你想被重視」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DN-kB26iaFi/",
-    "date": "2025-09-01",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "警號",
+    "summary": "對方對你冷暴力，越嚟越冷漠，冷漠到你都覺得佢係想分手，但偏偏佢又冇講出口。",
+    "content": "<h2>拍拖嗰陣，最怕唔係大吵大鬧</h2>\n<p>而係對方突然冷淡、無故疏遠，態度變得冷漠，但佢雖然唔再主動搵你，不過又一直又唔主動講分手，呢種行為係咪令你覺得好迷惘？其實佢係等緊你開口：想俾自己一個合理嘅離場方式，呢種「<strong>冷暴力</strong>」式分手係佢哋唔想做壞人。想逼到你忍唔住先講分手！</p><h2>徵狀 1 慢慢減少對你嘅關心</h2>\n<p>呢類人唔會即刻消失：或者突然間對你莫不關心，而係會慢慢抽離，令你一步步習慣冇佢嘅感覺，令你慢慢唔再鍾意佢，佢以前會主動關心你，但而家連基本關心都冇，甚至你主動搵佢都敷衍咗事，淨係覆「<strong>哦、係咩？</strong>」、「<strong>OK</strong>」，對話開始變得冷淡，唔再主動關心、參與你嘅生活。以前佢對你嘅msg係秒回，但慢慢佢變成幾個鐘先覆，甚至會已讀不回。當你問佢點解，佢只會話：「<strong>忙緊</strong>」，但明明佢又會有時間同friend食飯、出街。</p>\n<p>當你約佢出街，佢會搵藉口推搪話冇時間，總之就唯獨係對你就特別「忙」，對你有「<strong>選擇性忽略</strong>」，越嚟越少出現在你生活入面，嘗試從你嘅人生入面，慢慢消失。</p><h2>徵狀 3 負面互動</h2>\n<p>有啲人表面上冇話要分手，但行為同語氣開始出現明顯改變，佢表面上會照理你，但成日同你嗌交、貶低你、踩你痛處。你同佢提出建議，佢只會反擊：「<strong>你識咩啫？</strong>」，呢啲負面互動令你覺得自己做咩都錯。持續嘅批評行為同負面互動模式（「<strong>批評-，防衛循環</strong>」），目的係令你覺得挫敗同唔被愛，最終忍唔住提出分手。</p><h2>冷暴力等於溫柔？</h2>\n<p>其實咁係一種逃避！有啲人唔敢正面提出分手，因為佢哋想避免內疚感，又或者佢哋唔想做衰人，所以選擇用冷暴力去逼你講分手，但呢種方式，其實係對你造成更大嘅心理傷害，因為你會不停懷疑自己係咪做錯咗啲咩。令你處於慢性傷害嘅loop入面。</p><h2>對方冷暴力，你應該點做？</h2>\n<p>穩定自己嘅情緒：當對方對你冷暴力，唔代表你要變得低聲下氣，唔好用負面情緒對抗負面情緒，要保持自己嘅步調，俾對方感受到你有你嘅價值，增強情感連結，引導你哋之間嘅感情能量流動，令讓對方再次感受到你嘅存在同溫柔。</p><p>重新燃起愛情之火。</p>\n<h2>感情拯救所話你知</h2>\n<p>另一半對你冷暴力：但咁並唔代表你無能為力！相反，你要學識點樣穩定自己，提升自己嘅價值感，令你用正能量影響對方、逆轉關係！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>徵狀 1 慢慢減少對你嘅關心</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
+    "date": "2025-05-05",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4650283.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/photo-of-couple-lying-on-bed-4650283/",
@@ -1265,27 +1109,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你想被重視，對方卻說不想寵壞你？需求落差點處理",
+    "coverCaption": "Asteria 相處教學：【冷暴力分手】佢唔係忙，只是在慢慢避開你？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 27,
-    "title": "感情付出不對等？你正在委屈自己的警號",
-    "category": "關係危機",
+    "title": "【溝通障礙】佢唔識溝通定拒絕溝通？分辨關係卡位",
+    "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "警號",
-    "summary": "當你發現自己愛得太辛苦、太委屈，可能你不只是「戀愛腦」，而係陷入一場「創傷迷戀」！清醒吧！一起來看看怎樣能令自己愛得更有尊嚴！",
-    "content": "<p>遇到「感情付出不對等」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「感情付出不對等」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>「感情付出不對等」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「感情付出不對等」要把界線說清楚</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「感情付出不對等」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>不對等的付出，要先看自己失去了甚麼</h2>\n<p>如果「感情付出不對等」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「感情付出不對等」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「感情付出不對等」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「感情付出不對等」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "imageLabel": "溝通",
+    "summary": "個個都話「情侶之間溝通好重要」、「要溝通先可以表達自己內心想法」，但萬一遇著個另一半係無法好好溝通嘅人，又可以點做。",
+    "content": "<h2>「<strong>我同你真係冇辦法溝通！</strong>」</h2>\n<p>你或者另一半，有冇咁樣講過？但其實⋯，除非呢段關係係僅建基於雙方肉體嘅吸引力。雙方只靠親密行為嚟溝通交流，否則冇可能存在「<strong>對方係一個無法溝通嘅人</strong>」呢種情況。</p><h2>「<strong>溝通</strong>」呢件事</h2>\n<div class=\"article-section-card\"><p>唔只係要「開口講嘢」，仲牽涉到複雜嘅動機同內在課題，如果你覺得自己感情出問題，而原因係「對方無法溝通」，不妨諗清楚，到底問題係出在「溝通」，定係另有原因？</p></div><h2>你覺得佢係「<strong>無法溝通</strong>」？</h2>\n<p>但你有冇諗過其實佢係「<strong>拒絕溝通</strong>」？有可能係對方想迴避同你溝通時產生嘅衝突。所以先會選擇拒絕溝通，當佢拒絕對話、唔聽你講嘢、hea應你。就會出現「<strong>佢講極都唔明、溝通唔到</strong>」嘅錯覺。以為佢係個「<strong>溝通唔到</strong>」、「<strong>悟性差</strong>」嘅人。但其實純粹只係佢唔想同你溝通。</p><h2>點解會出現「<strong>拒絕溝通</strong>」？</h2>\n<div class=\"article-section-card\"><p>你有冇諗過，你嘅「同佢溝通」只係「換個包裝嘅說服」，例如：當對方想同你呻吓返工嘅事。</p><p>呻完半輪你就同佢講「份份工都辛苦啦，我返工都好辛苦」，你對佢啲否定、你嘅自我中心，會令佢對於「同你溝通」失去興趣。</p></div><h2>有啲表面睇落似係「<strong>無法溝通</strong>」嘅另一半</h2>\n<div class=\"article-section-card\"><p>其實係「溝通意願不足」，原因可能係佢唔夠/唔再愛你，所以遇到問題懶處理，甚至可能會過度自我為中心，覺得世界只有人哋圍住佢轉，冇佢要妥協或理解他人嘅餘地，所以當喺感情關係中出現問題，佢一律都係「拒絕溝通」，直至另一半向佢妥協為止，呢類情況一係就分手，一係就用其他方法令佢改變！</p></div><h2>但萬一你嘅另一半真係「<strong>悟性差</strong>」而無法溝通？</h2>\n<p>當佢表達能力好差、唔正向，明明可以好好咁講，但又偏偏要用挑毛病嘅方式講，呢個情況係最樂觀、最有機會改善關係。佢「<strong>意願有餘，能力不足</strong>」、有時會講多錯多。例如：「我哋都已經兩個禮拜冇見，點解你聽日放假都唔肯出街？唔通你就咁唔想見到我？」</p><h2>作為成熟嘅另一半</h2>\n<p>聽到佢咁講，要先冷靜落嚟，試吓問佢:，「我返咗咁多日工好攰，我都好想見到你，咁不如你嚟我屋企搵我？」，要溫和地表達自己嘅內心感受，能夠提出折衷嘅需求，同時唔會為另一半添加壓力、會尊重對方想法」，咁先唔會因為另一半啲不善辭令，令呢段關係又要添加幾次爭執、破壞感情。有時候覺得另一半無法溝通，試吓唔好淨係一味怪責佢，要諗吓當佢溝通唔到嘅情況下，到底自己有冇好好地同佢進行有效嘅溝通。我哋唔應該只單方面期待伴侶具備「<strong>好好說話、易溝通</strong>」嘅能力。</p>\n<p>自己也要具備同等嘅能力，否則就等同將「<strong>經營關係</strong>」嘅責任交俾對方。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有啲表面睇落似係，無法溝通，嘅另一半。</li><li>但萬一你嘅另一半真係，悟性差，而無法溝通。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-08-08",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-07-26",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4308049.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/sad-young-indian-woman-avoiding-talking-to-husband-while-sitting-on-sofa-4308049/",
@@ -1293,47 +1131,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-5617687.jpg",
-        "caption": "內文配圖：感情付出不對等？你正在委屈自己的警號",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-sitting-on-a-bench-while-looking-at-a-woman-5617687/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6642914.jpg",
-        "caption": "內文配圖：感情付出不對等？你正在委屈自己的警號",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/an-upset-couple-standing-near-the-door-6642914/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4308048.jpg",
-        "caption": "內文配圖：感情付出不對等？你正在委屈自己的警號",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/crop-serious-ethnic-couple-with-crossed-arms-on-couch-4308048/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情付出不對等？你正在委屈自己的警號",
+    "coverCaption": "Asteria 相處教學：【溝通障礙】佢唔識溝通定拒絕溝通？分辨關係卡位",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 28,
-    "title": "你是在關心，還是在批評？3 個偽關心地雷",
-    "category": "溝通相處",
+    "title": "【相處邊界】對方嫌你太黐身？學識親密關係界線感",
+    "category": "戀愛心理",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "溝通",
-    "summary": "有時以為自己關心緊人，但其實係「關心中帶有攻擊」！我哋喺成長過程中，可能未必學過點樣講「體貼嘅說話」，有時你只係想幫對方、想佢快啲好返，但講出嚟嘅語氣就變咗令佢難受、覺得受攻擊。你唔係無情，而係未學識點樣用同理心去表達愛啫！一齊睇吓你有冇不自覺地犯咗錯？本文從相處溝通角度拆解關係訊號、應對方法與挽回",
-    "content": "<p>遇到「你是在關心，還是在批評」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「你是在關心，還是在批評」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「你是在關心，還是在批評」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「你是在關心，還是在批評」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「你是在關心，還是在批評」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>先把「你是在關心，還是在批評」縮細到可以處理</h2>\n<p>如果你正面對「你是在關心，還是在批評」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<p>最後可以問自己一個簡單問題：如果今天不急著用情緒行動，下一個最穩陣的小步是甚麼？可能是先不發長訊息、先觀察一次對方反應，或者把想講的說話改成更短、更清楚。這樣做不是壓抑自己，而是令你有機會用較清醒的狀態處理關係。</p>\n<h2>常見問題</h2>\n<h3>為什麼我明明是關心，對方仍然覺得我在批評？</h3>\n<p>因為對方聽到的未必是你的出發點，而是你的語氣、字眼和壓迫感。先接住感受，再講擔心，會比較容易被理解。</p>\n<h3>「為你好」這句是不是一定不能講？</h3>\n<p>不是不能講，但如果後面接的是指責或命令，對方就會有壓力。最好改成具體感受，例如「我擔心你會太辛苦」。</p>\n<h3>如果對方真的需要改，我應該怎樣提醒？</h3>\n<p>用「我觀察到」「我有點擔心」「我們可不可以試試」去代替「你應該」。提醒要留空間，對方才不會一聽就防衛。</p>",
+    "imageLabel": "心理",
+    "summary": "當兩個人交往時感情雖親密，是否就代表可以沒有界線感。",
+    "content": "<h2>我們聽過不少客人表示</h2>\n<p>覺得自己的另一半跟異性、前度缺乏邊界感。但「<strong>邊界感</strong>」真的只是朋友、前度才需要嗎？其實：你跟你的另一半，也同樣需要邊界感！</p><h2>或許，你會問：</h2>\n<p>「<strong>既然都在戀愛了，為什麼還需要建立邊界感？</strong>」，但其實，邊界感是一段健康的戀愛關係的基礎。能讓雙方更尊重彼此：能讓大家更了解對方，保持邊界感是維持親密關係的前提。對方想說的事，專注聆聽，對方不想說的事，別再追問，那麼，情侶之間的邊界感，到底要怎樣設置呢？</p><h2>情緒界線</h2>\n<p>並非所有情緒都需要另一半負責！伴侶可以陪伴你面對情緒，但並非你情緒的承受者與垃圾桶，別把所有負面情緒都推給對方承受。設置好你的情緒界線：學會自我消化部分情緒，適當地表達感受，而非將情緒發洩在對方身上。</p><h2>私隱界線</h2>\n<p>無需事事交代過問：在一段關係中，雙方雖然對另一半有知情權，但不等於需要無限度地交代所有細節。信任應透過日常相處與理解自然建立。而非透過不斷監察與盤問換來安全感。過度追問對方的行蹤與細節，會令私隱界線變得濛糊，還會削弱彼此的信任基礎。</p><h2>親密界線</h2>\n<p>你想要 =/= 我想要，每人對於親密行為及社交互動的接受程度都不同。作為另一半應尊重彼此的舒適範圍。而非以「<strong>你是我另一半</strong>」作為要求對方配合的理由。或以此作為壓力來源：要求對方在不情願下進行親密舉動。或以此要求對方與自己的朋友成為朋友。或與自已的家人親近。</p><h2>可以有邊界感</h2>\n<div class=\"article-section-card\"><p>但不可以用邊界線進行PUA，建立邊界感是為了讓彼此感到自在、被尊重。</p><p>而不是用來控制對方的行為，當「邊界」變成了「要求你遷就我的不安」，當「尊重」變成了「只准你按我期望去做」，這就已經失去界線的本意，真正健康的界線，應該是雙方共同討論、協調出來，而非單方面訂立規則，讓對方被動服從。</p></div><h2>感情拯救所，告訴你</h2>\n<p>情侶之間的確需要有邊界感，擁有界線的關係並不代表缺乏安全感。反而是真正大人的戀愛的成熟表現。當你懂得建立界線，才能在關係中保有彼此的尊重與空間。讓愛情長久而不窒息：兩個人都可以安心地依靠彼此。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>情緒界線</li><li>私隱界線</li><li>親密界線</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2025-06-08",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-07-24",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7671356.jpg",
     "coverCredit": "Photo by Ivan S on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-having-a-conversation-7671356/",
@@ -1361,27 +1193,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你是在關心，還是在批評？3 個偽關心地雷",
+    "coverCaption": "Asteria 相處教學：【相處邊界】對方嫌你太黐身？學識親密關係界線感",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 29,
-    "title": "你一直付出但對方不領情？假性努力的感情陷阱",
+    "title": "【男人心理】佢對你不如從前？拆解男人愛情扣分法",
     "category": "戀愛心理",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
     "imageLabel": "心理",
-    "summary": "遇到「你一直付出但對方不領情」時，先分清表面行為、真正情緒同互動模式，再決定應該溝通、觀察、修補定守住界線。",
-    "content": "<p>你以為自己已經做了很多，但對方仍然沒有感覺，很多時是因為付出沒有落在對方真正需要的位置。假性努力最消耗人的地方，是你越做越累，對方卻只感到壓力。</p> <h2>先分清付出，還是討好</h2>\n<p>一次談話未必即刻改變關係。重點是之後同類情況再出現時，對方有沒有願意調整，你自己又有沒有守住更穩定的表達方式。 好的溝通不是壓住自己，也不是一次過爆出所有委屈，而是讓對方知道你受傷的位置，同時知道下一次可以怎樣做得好一點。</p> <h2>不要用辛苦程度證明愛</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。 如果對方一聽就反駁，先不要急著加碼解釋。你可以暫停一下，等對方消化，再用更短的句子回到核心，避免對話變成互相防衛。</p> <h2>把你的委屈講成具體需要</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。 真正改善關係的說話，要同時有溫度和界線：既不把對方逼到角落，也不把自己的需要全部收回去。</p> <h2>把努力放回對方接收得到的位置</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。 你可以先寫低原本想發的句子，再刪走「你一定」「你從來」「你根本」這類字眼，換成具體事件和一個清楚請求，對方會較容易聽入耳。</p> <h2>假性努力最怕做很多，卻不是對方真正需要</h2>\n<p>如果「你一直付出但對方不領情」已經反覆發生，重點不是贏一場道理，而是令下一次對話不再重演同一個模式。你可以先準備一句短而清楚的開場，再觀察對方是否願意接住；若對方有回應，再逐步講深一點。這樣既保留你的立場，也不會一開始就把對方推到防衛位置。</p>\n<h2>常見問題</h2>\n<h3>「你一直付出但對方不領情」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「你一直付出但對方不領情」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「你一直付出但對方不領情」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "summary": "你有冇覺得另一半開始不如初相識時咁浪漫、溫柔、體貼、事事呵護備至。",
+    "content": "<h2>如果你嘅另一半</h2>\n<p>一開始好有熱情、你心情唔好會陪你傾電話。成日都會讚下你、買禮物氹你，但一齊耐咗就間唔時就對你嫌三嫌四、挑剔你。咁可能佢心目中有一個揮之不去嘅。「<strong>減分機制</strong>」：同另一半相處時鍾意挑毛病，可能佢腦中經常出現呢啲念頭，原來佢同我想像中嘅唔一樣，其實佢都不過如此啫，佢嘅缺點比我預期中多。</p><h2>減分機制</h2>\n<p>佢好易睇到對方唔夠好嘅地方、挑剔對方。於是就開始扣佢分：有啲男人係由100分開始扣你分。喺逐漸扣分嘅情況下，佢會覺得自己好似冇以前咁鍾意你。扣到最後先會講分手：相反有啲男人係行加分制，可能佢一開始冇咁鍾意你，但隨住相處時間越嚟越多，就會慢慢對你加分、越嚟越鍾意你。</p><h2>點解會有減分機制？</h2>\n<p>減分機制係一個自我保護機制，係對方心目中、腦海中自自然然萌生嘅機制。用嚟保護自己唔會再受更多嘅傷害而出現。出現減分機制最主要嘅原因在於，有一個曾經令佢失望嘅童年/屋企人。或者因為過往嘅情史，而喺嗰個過程當中，對方感到過度失望、受傷，導致佢喺親密關係入面會採用減分原則。</p><h2>當佢開始笑住咁話</h2>\n<p>你最近好似黐身，最近你條腰好似粗咗喎，佢講到呢類台詞時，就代表佢嘅減分機制其實已經啟動。可能連佢自己都冇意識到，但呢刻喺他眼中，你已經唔再係當初咁完美。</p><h2>男人對你嘅減分機制一旦啟動</h2>\n<p>總會有啲蛛絲馬跡：要仔細觀察，如果你feel到你嘅另一半可能有「減分機制」，你要試圖話俾佢知，當佢見到你做咗啲令佢有些小失望嘅舉動。</p><p>唔好覺得唔好意思開口講，或者以為講咗都冇用。</p>\n<h2>正視問題！</h2>\n<p>想要好好根治佢嘅減分機制，唔會令每段感情都變成「<strong>短命種</strong>」，就需要好好正視傷口，諗清楚究竟係邊一段關係帶俾佢痛苦。然後再開始去學習、感受，話俾自己聽，唔係人人好似嗰個令佢受傷嘅人一樣。用健康、正面嘅方式同你討論、互動。只有真係講出嚟：問題先會解決！</p><h2>感情拯救所話你知</h2>\n<p>戀愛唔係表白咗就一勞永逸，戀愛中，大部分男人都係先熱後冷。因為佢哋天性就係玩減分制嘅物種。只有高低之分：尤其對於曾經有情感創傷嘅男人嚟講。佢嘅減分機制會比其他男人嚴重，要令佢好快咁解決減分機制係冇可能。但可以透過我哋嘅儀式，幫佢減少負能量，重新搵返愛情熱度。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>減分機制</li><li>正視問題</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>看男人心態時，不要只聽他一刻怎樣講，也要看他之後有沒有做到、願不願意承擔，以及你在相處裡是否感到安心。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2023-11-09",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-05-19",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-1036381.jpg",
     "coverCredit": "Photo by Phil Nguyen on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-laughing-together-1036381/",
@@ -1409,27 +1235,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你一直付出但對方不領情？假性努力的感情陷阱",
+    "coverCaption": "Asteria 相處教學：【男人心理】佢對你不如從前？拆解男人愛情扣分法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 30,
-    "title": "你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+    "title": "【真愛判斷】佢對你真心定假意？5 招看清實際行動",
     "category": "戀愛心理",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
     "imageLabel": "心理",
-    "summary": "有冇試過一種情況係：我哋容易對鍾意自己嘅人產生好感？本來係毫無「愛意」感覺嘅人，對方甚至唔係自己擇偶條件嘅人，但當當發現對方鍾意自己之後，自己好似越嚟越覺得對方唔錯，慢慢對對方產生好感？呢種情感到底係點嚟？",
-    "content": "<p>當有人向你表白 或者對你表達好感或欣賞嘅感覺，你即使本身唔算特別對佢有feel 都會留意多咗對方 然後慢慢地會不自覺地對佢產生好感，其實人係會更容易鍾意咗鍾意自己在先嘅人。</p>\n<p>當人地話鍾意你嘅時候 佢嘅鍾意會令你對佢有一種期待、包容，亦會你覺得佢好獨特，同時會令你自己都覺得自己係好獨特 補償咗自己內心覺得不足之處，對自己增加咗自信，而你亦會覺得佢對你產生忠誠、奉獻感，呢種情感正好補償咗你嘅缺失。</p>\n<h2>「<strong>補償</strong>」係一種心理防禦機制</h2>\n<p>獲得一個人嘅愛意 代表緊你得到咗佢嘅認同，亦會產生錯覺，誤以為你欣賞佢對你嘅認同 以至將錯覺誤以為你內心都欣然自己，從而構成咗你對佢嘅情感「<strong>補償</strong>」，不自覺地透過鍾意對方嚟補上缺口。</p>\n<h2>被愛的感動，不等於你真的想選他</h2>\n<p>唔好因為對佢嘅愛意產生感動 就輕易應承同佢一齊，唔好淨係聽佢點講，睇吓佢到底係咪一個表裏一致嘅人，唔好單單吸收對方對你嘅愛意，要諗清楚自己係咪真係對佢有feel，如果依然好糾結，不妨先疏遠佢一排 睇吓自己會唔會經常掛住佢 測試吓自己對佢是否有愛意。</p>\n<p>原來仲有以下因素；🔎 被追求時嘅半推半就，當對追求者未有明確情況，但不論對方、旁人都高於積極鼓吹呢段關係，好易喺熱烘烘嘅戀愛氣氛下半推半就開展感情；🔎 認知失調心理 人都係稍微有啲自戀、覺得自己都不錯 會覺得「<strong>咁鍾意我嘅人都肯定係優秀嘅</strong>」。</p>\n<p>投射到自己心入面就會誤以為自己都對追求者有好感</p>\n<h2>常見問題</h2>\n<h3>被追求感動，是否等於我也喜歡他？</h3>\n<p>不一定。被重視會令人有好感，但你仍要分清是感動、補償、自信被填滿，還是真正想了解和選擇這個人。</p>\n<h3>如果我分不清喜歡還是享受被愛，可以點做？</h3>\n<p>先放慢答應關係的速度，觀察沒有被追捧時你是否仍想靠近對方，以及你是否欣賞他本人，而不只是欣賞他對你好。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/C8KOQuVyluM/",
-    "date": "2024-06-13",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "summary": "佢口口聲聲話愛你，但同你feel到嘅又有啲唔一樣，你硬係覺得怪怪地，但又講唔出係邊度出咗問題。",
+    "content": "<h2>「<strong>我愛你</strong>」呢句說話</h2>\n<p>有時同實際行動、內心感受會唔一樣。當你嘅另一半所做嘅行為，同我哋聽到嘅甜密說話唔一致，心裡面就會有疑問，究竟呢種愛係唔係真愛？究竟佢真係愛我定假愛我？到底要點分辨？</p><h2>曖昧期</h2>\n<p>當處於曖昧不明嘅關係中，成日俾人感覺你哋已經好似情侶，但一旦你想進一步確認下關係，對方就開始支支吾吾，既唔會主動表白，亦唔會俾機會你向佢表白，當你想要個清晰嘅答案，但對方一直唔願意表態，不過又依然做曬情侶會同你做嘅行為。</p>\n\n<h2>熱戀期</h2>\n<p>喺熱戀期會對你呈現短暫熱情，你哋嘅熱戀期好短暫，通常佢只會出現一陣嘅熱情，之後好快就變得好冷漠，經常唔覆你msg，甚至有時消失得無影無蹤，但當你暗示或明示想同佢有親密行為時。</p>\n\n<p>佢又好快就現身，仲表示得好熱情，呢種情況就代表佢對你嘅感情唔係好真誠。</p>\n\n<h2>相處時</h2>\n<p>同你相處時不斷強調自己嘅付出，每當稍微為你付出小小就成日掛喺嘴邊。例如：為咗同你去旅行而請假，我賺少好多錢。例如：我因為你同屋企人嘈交，你點報答我？係咁強調自己為呢段感情付出、犧牲好多。其實目的係想換取更多你嘅回報，一旦你俾唔到佢想要嘅回報，就會開始貶低、打壓你、PUA你。</p><h2>相處時：佢為咗氹你會向你許下一堆承諾</h2>\n<p>佢為咗氹你會向你許下一堆承諾，仲有好多係不切實際嘅承諾，有短期承諾、有長期承諾，例如：寧願唔打機都要同你出多啲街。例如：以後想同你結婚、想俾幸福你。但卻一直唔肯履行承諾，永遠都係僅限於承諾，從來都冇任何實際行動俾你見到。</p><h2>爭執時</h2>\n<p>每次嗌交或者大家嘅諗法有衝突，佢都唔會正視問題，當每問題、衝突出現時，佢通常都會第一時間選擇逃避，就算你主動想搵佢傾，佢都係Keep住扭扭擰擰、支支吾吾。完全feel唔到佢有心想解決問題。一直採取順其自然、避得就避嘅態度。</p><h2>感情拯救所話你知</h2>\n<p>喺感情上面，你更相信行動定係定言語？</p>\n\n<p>好多人口口聲聲講愛對方，但都係流於表面嘅「假裝愛你」，可能係習慣有喺佢身邊，亦可能係為咗喺你身上獲取好處，要分辨佢對你係「真愛」定「假愛」，要能靠你嘅雪亮眼睛、洞察力，睇你睇清睇楚。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>真心要看不同階段的行動</li><li>熱情之外要看穩定投入</li><li>日常相處最能反映真心</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "2024-08-30",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-20738319.jpg",
     "coverCredit": "Photo by Febry  Arya on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/husband-and-wife-lying-on-a-bed-in-their-bedroom-and-loooking-at-each-20738319/",
@@ -1457,27 +1277,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你是真的喜歡他，還是只享受被愛？3 個判斷方法",
+    "coverCaption": "Asteria 相處教學：【真愛判斷】佢對你真心定假意？5 招看清實際行動",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 31,
-    "title": "一句話就能控制你情緒？小心感情操控與家暴前兆",
-    "category": "關係危機",
+    "title": "【甜言蜜語】男人講好聽說話可信嗎？看清說話與行動",
+    "category": "溝通相處",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "警號",
-    "summary": "經歷緊家暴又唔敢話俾人知？另一半越嚟越得寸進尺，令你好痛苦？想擺脫對方帶來嘅傷害同陰影，到底要點做？",
-    "content": "<p>如果一句說話就能令你整個人崩潰，或者對方經常用威脅、羞辱、冷暴力、控制社交去令你聽話，這已經不只是普通吵架，而可能是感情操控，甚至是家暴前兆。</p><h2>先承認：被操控不是你的錯</h2><p>很多人會怪自己太敏感、太情緒化，但如果對方反覆用恐嚇、貶低、消失、封鎖或限制自由去控制你，你的不安其實是身體在提醒你有危險。</p><h2>先保護自己，再談修補</h2><p>面對控制和暴力，第一步不是討好對方，也不是急著證明自己夠愛，而是確保自己安全。必要時請先找可信朋友、家人或專業支援。</p><h2>把威脅和控制行為記錄下來</h2><p>如果對方有恐嚇、跟蹤、逼迫、搶手機、限制你見朋友等行為，請保留訊息、日期和事件。記錄不是為了報復，而是讓你不再被對方一句「你記錯」帶走。</p><h2>不要把傷害包裝成磨合</h2><p>磨合是雙方互相理解和調整，不是其中一方長期被壓低、被威脅、被迫聽話。如果你越來越害怕表達，這不是健康關係。</p><h2>安全永遠比維持關係重要</h2><p>如果你擔心提出分開會引發更大衝突，請不要單獨處理。先安排安全出口，讓身邊可信的人知道你的情況，再決定下一步。</p><h2>需要時尋求外界協助</h2><p>感情操控和家暴不應只靠自己硬撐。你可以先向信任的人求助，也可以尋找本地社福、法律或心理支援，讓自己有更穩妥的保護。</p><h2>離開傷害關係時，要先安排安全，而不是只靠勇氣</h2><p>如果你已經感覺到害怕，請不要把自己推去單獨攤牌。控制型關係最危險的時候，往往是你開始設界線或準備離開的時候。你需要的不是再說服對方明白，而是讓自己有支援、有紀錄、有可以退開的空間。</p><p>可以先把重要證件、金錢、訊息紀錄和可信任聯絡人整理好，讓至少一個安全的人知道你的情況。感情可以慢慢想清楚，但安全要先放在最前面；當你不再孤立，才有力量判斷下一步。</p><h2>常見問題</h2><p><strong>對方只是講氣話，算不算操控？</strong><br/>一次情緒失控和長期威脅控制不同。重點是行為是否反覆出現，並令你越來越害怕表達自己。</p><p><strong>我還愛對方，是否代表應該留下？</strong><br/>愛不等於要承受傷害。當安全受到威脅時，先保護自己比維持關係更重要。</p><p><strong>如果我怕分開後對方報復，怎麼辦？</strong><br/>不要獨自處理。先告訴可信任的人，保存紀錄，必要時尋求專業或法律協助。</p>",
+    "imageLabel": "溝通",
+    "summary": "男人成日把口浪過油、對住你講好多甜言蜜語，但係講太多，到底係咪真係好事。",
+    "content": "<h2>有冇人對你講過⋯</h2>\n<ul><li>見到你難過令我好心痛</li></ul>\n<ul><li>你會搵到比我更好嘅人</li></ul>\n<ul><li>我愛你，我乜都聽你話</li></ul>\n<p>聽落好貼心，但其實唔等於真心。男人平均每日講大話6次，總計一生會講至少12萬次大話！男人同女人一齊：構成咗一個虛虛實實嘅情感世界，但只係講甜言蜜語，卻從來冇付出實際行動，咁樣嘅男人係唔可靠。</p><h2>雖然男人識偽裝</h2>\n<p>但把口「<strong>浪過油</strong>」唔係天生就識。佢嘅甜言蜜語或謊言，佢想係想⋯，俾女人見到：一個有愛心、有責任感嘅好男人形象。佢嘅甜言蜜語或謊言可能係久經訓練、為勢所逼！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 1</span><span>自我防衛機制</span></h2>\n<p>男人嘅理智化（Intellectualization），係一種心理防衛機制，為保護自己唔受外界攻擊，無意識地做出保護自己嘅行為，講大話就係其中一種，合理化自己說謊行為，用甜言蜜語去化妝說話，幫自己去辯解，尋求心理撫慰。</p>\n<h2>情感失語症</h2>\n<p>佢過去嘅感情關係中，可能因為有情感失語症（Alexithymia），不擅長氹女朋友而被投訴、被分手。</p>\n\n<p>為咗唔想重覆犯錯：佢必須會學習點講甜言蜜語，但卻未識好好掌握，照板煮碗，跟足網上教學嚟講，令你以為佢係個過分口花嘅人。</p><h2>錯誤嘅社會認知</h2>\n<p>傳統理論認為：左邊大腦負責邏輯和語言，右邊大腦負責藝術、直覺，而大多科學家都認為大多女人偏向鍾意聽甜言蜜語。令男人覺得想獲得女人好感，就要多講甜言蜜語，所以不顧對方是否需要，逼自己狂講甜言蜜語，陷入「<strong>討好型人格</strong>」困境。</p><h2>甜言蜜語 vs 真心說話</h2>\n<p>鑑別大法：所有說話都唔可以盡信，睇實際行動唔非淨係聽佢講，關心唔係靠把口，即使講你係我最重視嘅人，雖然大部分女仔都鍾意聽，但都要觀察佢嘅行動，eg，你唔舒服時，佢直接會帶你睇醫生，而非叫你去睇醫生。</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>研究發現</li><li>情感失語症</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-11-28",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2023-08-29",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5617782.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-walking-away-from-the-man-5617782/",
@@ -1505,27 +1319,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一句話就能控制你情緒？小心感情操控與家暴前兆",
+    "coverCaption": "Asteria 相處教學：【甜言蜜語】男人講好聽說話可信嗎？看清說話與行動",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 32,
-    "title": "曖昧不等於喜歡你：如何判斷對方是真心還是玩玩下",
-    "category": "曖昧桃花",
+    "title": "【比較心理】見朋友幸福就妒忌？其實你可能不滿意自己",
+    "category": "戀愛心理",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "曖昧",
-    "summary": "信任開始動搖時，先看清眼前的信號。",
-    "content": "<p>面對「曖昧不等於喜歡你」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「曖昧不等於喜歡你」需要界線，不只靠感覺</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「曖昧不等於喜歡你」不只看氣氛，也看行動</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>「曖昧不等於喜歡你」未清楚前，先放慢期待</h2>\n<p>「曖昧不等於喜歡你」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>自然互動才看得清「曖昧不等於喜歡你」</h2>\n<p>好的曖昧不是你一直追，對方一直接收。你可以給機會，但也要讓對方付出一部分努力，這樣才看得出關係是否真的有發展。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>先分清「曖昧不等於喜歡你」是靠近還是享受曖昧</h2>\n<p>如果你正在經歷「曖昧不等於喜歡你」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>點樣分清「曖昧不等於喜歡你」係真心定只係曖昧？</h3>\n<p>看對方是否願意穩定投入、主動安排和承擔方向。曖昧可以很甜，但沒有行動配合，就很容易只停留在氣氛。</p>\n<h3>處理「曖昧不等於喜歡你」時主動會否太急？</h3>\n<p>主動本身不是問題，無界線才是問題。可以主動一次，但要留空間看對方是否願意接住，而不是你一個人推完整段關係。</p>\n<h3>塔羅可以怎樣看「曖昧不等於喜歡你」？</h3>\n<p>可以。塔羅可以幫你整理對方狀態、你在關係中的位置，以及下一步應該推進、放慢還是收回。</p>",
+    "imageLabel": "心理",
+    "summary": "見到朋友升職、拍拖、買樓，你有冇試過心入面有啲唔舒服。",
+    "content": "<h2>你個friend開心share</h2>\n<p>話佢最近拍拖好sweet、返工又升職。</p>\n<p>你明明係好朋友，雖然口講「嘩～恭喜你啊！」，但心入面竟然唔係咁開心，反而有啲唔舒服，甚至有啲妒忌，自己唔係為佢開心，而係陷咗入比較，到底係咪因為自己太虛偽？</p>\n\n<h2>你唔係妒忌佢，只係唔滿意自己</h2>\n<p>當你自己正喺谷底，但朋友事事順利，你唔係唔想佢好，只不過係當你見到佢好，就會諗返自己幾唔掂，你妒忌嘅，其實唔係佢幸福，而係嬲自己嘅唔順利，所以先會有種「<strong>點解佢可以咁好，而我仲係咁辛苦？</strong>」嘅妒忌心。大家都有自己人生要過，好多時，喺人生入面就係會被比較。就係你自己唔同個friend比較。都有會其他人攞你同佢嚟比較，細個俾老師比較成績，大個就俾人問：「<strong>你搵幾多錢呀？聽聞你個friend係咪升職啦喎？</strong>」，慢慢地，就會變成好似自己嘅存在係「<strong>襯托</strong>」對方有幾成功。</p>\n<p>而自己內心都會不自覺地慢慢拎佢同你比較。當佢過得比你好好多，你就會不自覺地覺得唔係咁開心。</p><h2>你係個好人，所以先會內疚</h2>\n<p>你知你唔應該妒忌對方，所以一邊唔開心，一邊又自責，覺得自己係咪太小器？覺得自己唔係個好朋友？但其實你會咁諗反而證明你係有良心、有感情。你唔係唔想祝福人，你唔想唔想替你個friend開心。你只係想有日自己都可以過得好啲。所以，放心啦！你唔係衰人，你只係太攰、太想被肯定。</p><h2>咁到底要點樣處理朋友之間嘅比較心：可以咁做～</h2>\n<div class=\"article-section-card\"><p>可以咁做～，認真咁正視自己嘅情緒，唔需要否認、更唔需要自責，將注意力收返自己身上，你只需要對得住你自己嘅生活。</p></div><h2>咁到底要點樣處理朋友之間嘅比較心：唔好咁做～</h2>\n<div class=\"article-section-card\"><p>唔好咁做～，唔好逼自己講「我真係替你開心」，如果你未ready唔講都冇問題。</p><p>因為講假說話只會令自己內耗，唔好將佢當敵人，暗暗想超越佢，咁樣會令你哋關係變質，你快樂唔應該建基於對方輸上面，唔好將所有嘢都忍住唔講，就算自己羨慕、妒忌對方，都唔需要老實同佢交代。</p></div><h2>感情拯救所話你知</h2>\n<p>你唔係唔想哋過得好，只係當自己仲喺谷底，就真係笑唔出嚟、好難替人哋開心。呢種心情，唔係虛偽亦唔係妒忌心重。而係一種「<strong>我都想被肯定</strong>」嘅渴望。你唔係壞人，都唔係唔夠朋友，所以千祈唔好因為自己唔識替對方嘅順利開心。而覺得自己係個壞人！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你個friend開心share</li><li>你唔係妒忌佢，只係唔滿意自己</li><li>咁到底要點樣處理朋友之間嘅比較心</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-01-23",
-    "tags": [
-      "信任危機",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-07-18",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8559988.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-man-approaching-his-partner-8559988/",
@@ -1553,27 +1361,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：曖昧不等於喜歡你：如何判斷對方是真心還是玩玩下",
+    "coverCaption": "Asteria 相處教學：【比較心理】見朋友幸福就妒忌？其實你可能不滿意自己",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 33,
-    "title": "冷暴力分手有得救嗎？拆解對方避開你的原因",
-    "category": "關係危機",
+    "title": "【關係優先次序】他見朋友多過見你？判斷你在他心中的位置",
+    "category": "溝通相處",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "警號",
-    "summary": "對方對你冷暴力，越嚟越冷漠，冷漠到你都覺得佢係想分手，但偏偏佢又冇講出口？咁擺明就係佢唔想做壞人，係想逼你講分手啦！一齊嚟睇吓呢類人有啲咩特徵。",
-    "content": "<p>遇到「冷暴力分手有得救嗎」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「冷暴力分手有得救嗎」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「冷暴力分手有得救嗎」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>「冷暴力分手有得救嗎」要把界線說清楚</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>「冷暴力分手有得救嗎」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>面對「冷暴力分手有得救嗎」，先不要把修補變成追逼</h2>\n<p>如果「冷暴力分手有得救嗎」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「<strong>冷暴力分手有得救嗎</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>冷暴力分手有得救嗎</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>冷暴力分手有得救嗎</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "溝通",
+    "summary": "他見朋友多過見你，不一定代表你不重要，但一定反映時間分配和優先次序。重點是他是否願意安排你，而不是只在有空時才想起你。",
+    "content": "<h2>先看是偶然還是長期模式</h2>\n<p>一次和朋友聚會不代表問題；但如果長期重要日子、休息時間、情緒需要都輪不到你，就值得談。如果他偶爾和朋友聚會，你可以給空間；但如果每次你有需要都排在最後，那就不是單純社交，而是優先次序問題。</p><h2>不要把所有社交都當威脅</h2>\n<div class=\"article-section-card\"><p>健康關係不需要完全黏在一起。你要看的是他有沒有平衡，而不是要求他放棄朋友。</p><p>伴侶有自己的朋友圈是健康的，重點是他有沒有讓你感到被安排。你不是要佔據全部時間，而是想知道自己不是永遠等候補位。</p></div><h2>講出你需要被安排</h2>\n<p>可以直接講：「我不是不讓你見朋友，但我希望你也會主動安排我們的時間。」這比冷戰更清楚。直接講需要比冷戰有效，因為很多人真的沒有意識到你在等。你要的不是禁止他見朋友，而是希望他也主動經營你們。</p><h2>看他會否主動補回</h2>\n<p>如果他真的重視你，知道你不舒服後會調整時間，而不是只說你小器。補回可以是主動約下一次、解釋安排、在重要日子預留時間。若他只說你小器，卻從不調整，你的不安就有現實根據。</p><h2>你也要保留自己的生活</h2>\n<p>不要把所有空檔都留給他。當你有自己的節奏，也更容易看清他是否真的願意靠近。</p>\n<p>當你有自己的生活，你會比較不容易被他的安排牽著走。這不是鬥冷淡，而是讓你保留自我，也更清楚看見他有沒有主動靠近。</p>\n<h2>把「他見朋友多過見你」講成可被接住的話。</h2>\n<p>你可以回看「他見朋友多過見你」最近一次對話：第一句是否已經帶責備、你有沒有一次講太多、對方防衛後你有沒有越追越急。找到卡位，才知道句子要怎樣改。</p>\n<p>處理「<strong>他見朋友多過見你</strong>」時，先把句子縮短。由「<strong>你永遠都係咁</strong>」改成「<strong>剛才那件事令我不安，我想下次可以提早講</strong>」，對方會更容易接收到你的需要。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>把他見朋友多過見你講成可被接住的話。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-05-05",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-07-13",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8559951.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-having-a-problem-8559951/",
@@ -1601,27 +1403,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：冷暴力分手有得救嗎？拆解對方避開你的原因",
+    "coverCaption": "Asteria 相處教學：【關係優先次序】他見朋友多過見你？判斷你在他心中的位置",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 34,
-    "title": "他是不懂溝通，還是拒絕溝通？一眼分清原因",
+    "title": "【親密感不足】事事分享仍不親密？可能你分享錯方向",
     "category": "溝通相處",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
     "imageLabel": "溝通",
-    "summary": "個個都話「情侶之間溝通好重要」、「要溝通先可以表達自己內心想法」，但萬一遇著個另一半係無法好好溝通嘅人，又可以點做？",
-    "content": "<p>你 / 另一半，有冇咁樣講過</p>\n<p>但其實⋯ 除非呢段關係係僅建基於雙方肉體嘅吸引力，雙方只靠親密行為嚟溝通交流，否則冇可能存在「<strong>對方係一個無法溝通嘅人</strong>」呢種情況。</p>\n<p>唔只係要「<strong>開口講嘢</strong>」，仲牽涉到複雜嘅動機同內在課題，如果你覺得自己感情出問題，而原因係「<strong>對方無法溝通</strong>」，不妨諗清楚，到底問題係出在「<strong>溝通</strong>」，定係另有原因。</p> <h2>你覺得佢係「<strong>無法溝通</strong>」</h2>\n<p>但你有冇諗過其實佢係「<strong>拒絕溝通</strong>」？</p>\n<p>有可能係對方想迴避同你溝通時產生嘅衝突，所以先會選擇拒絕溝通，當佢拒絕對話、唔聽你講嘢、hea應你，就會出現「<strong>佢講極都唔明、溝通唔到</strong>」嘅錯覺，以為佢係個「<strong>溝通唔到</strong>」、「<strong>悟性差</strong>」嘅人，但其實純粹只係佢唔想同你溝通。</p> <h2>不懂溝通的人會笨拙，但仍會嘗試</h2>\n<p>當佢表達能力好差、唔正向，明明可以好好咁講，但又偏偏要用挑毛病嘅方式講，呢個情況係最樂觀、最有機會改善關係，佢「<strong>意願有餘，能力不足</strong>」、有時會講多錯多，例如：「我哋都已經兩個禮拜冇見，點解你聽日放假都唔肯出街？唔通你就咁唔想見到我？」</p>\n<p>聽到佢咁講，要先冷靜落嚟，試吓問佢: 「我返咗咁多日工好攰，我都好想見到你，咁不如你嚟我屋企搵我？」，要溫和地表達自己嘅內心感受，能夠提出折衷嘅需求，同時唔會為另一半添加壓力、會尊重對方想法」，咁先唔會因為另一半啲不善辭令。</p>\n<p>令呢段關係又要添加幾次爭執、破壞感情。</p> <h2>拒絕溝通的人會逃避、反擊或轉移焦點</h2>\n<p>處理「<strong>他是不懂溝通，還是拒絕溝通</strong>」時，重點不是把所有委屈一次過倒出來，而是先收窄成一件事、一個感受、一個希望。講得越清楚，對方越少機會只聽到指責。</p>\n<p>你可以先把原本想傳的訊息改短：先講事件，再講感受，最後提出一個具體做法。這樣不是壓低自己，而是令你的需要更容易被接住。</p> <h2>用一件事測試他是否願意修補</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。</p> <h2>不要把每次失敗都怪自己不會講</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p> <h2>下一步要看態度，不只是看口才</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n<h2>常見問題</h2>\n<h3>「<strong>他是不懂溝通，還是拒絕溝通</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>他是不懂溝通，還是拒絕溝通</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>他是不懂溝通，還是拒絕溝通</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "summary": "有冇試過喺一段關係入面，你無論咩事都會同對方講、同佢分享，但係你仍然感覺大家嘅關係好似都係冇變得更加親近。",
+    "content": "<h2>好多人以為維繫關係</h2>\n<p>就是乜都要同對方講，咁樣高度透明自己嘅心聲，就係增進彼此認識，令讓彼此關係更深刻嘅方式，但如果你發現，你大小事都同對方講，但你哋嘅關係冇變得更加親密，那代表呢段關係嘅流動性、相互性有啲問題！你哋嘅關係冇特別平衡，好可能就係你單方面講，對方只係被動接收，想知自己係點同對方交流，最簡單嘅判斷方式，係分辨你在每次講嘅時候，係「<strong>分享</strong>」？係「<strong>炫耀</strong>」？定係「<strong>抱怨</strong>」？有思考過講嘢過程：有助情感連結，純粹話俾對方知最近發生咩事，冇打算從對方身上「<strong>索取</strong>」啲乜嘢。</p>\n<p>炫耀：呢個係一種「<strong>索取認可</strong>」嘅過程。大部分會傾自己嘅成就、物質生活。在乎被對方聚焦、肯定、羨慕，注意力喺自己身上、而非對方，抱怨，係一種「<strong>索取安慰</strong>」嘅討拍過程。想喺對方身上得到「<strong>唔係你錯</strong>」嘅安撫。容易陷入受害者狀態：冇喺在交談中真正連結對方。</p><h2>當然</h2>\n<p>唔係所有問題都一定出喺你身上，有時溝通極，對方都反應唔大，雙方冇真正嘅互動同情感連結，以致你哋嘅關係冇變得更緊要，好可能係因為對方嘅「情感超脫 Emotional detachment」，情緒超脫者冇乜同他人深刻交往嘅能力。</p>\n\n<p>佢哋喺一段關係中，有時就好似一個情緒無能者。</p>\n<h2>如果喺同佢交往過程中</h2>\n<p>你有以下呢啲感受，咁佢他好可能就係一個情感超脫者。</p>\n\n<p>極少同你分享自己嘅情緒或感受，喺佢身上你會感受到強烈疏離感，佢冇對你哋嘅關係做出長遠承諾，你同佢一齊時，佢嘅注意力唔係放在當下，有時會有心事重重嘅感覺。</p>\n\n<h2>如果你嘅另一半係咁</h2>\n<p>即係佢嘅真正諗法係：「講出自己嘅真實想法有咩用？反正得到嘅結果一定係唔好。」，佢內心係因為早前嘅創傷出現羞恥感。</p>\n\n<p>令佢對其他所有情緒嘅表達都遭到抑制。</p>\n<h2>對於呢類型嘅另一半</h2>\n<p>阻礙咗你哋嘅關係更親密，咁當下你可以做嘅，就係只有鼓勵，鼓勵佢表達自我感覺，鼓勵佢多啲同你分享，循序漸進咁開解佢，情況先會慢慢有改善。好多人以為只要Keep住乜都同另一半講。所有嘢都講一餐：咁就代表大家有溝通、有交流，關係就會昇華，但其實有講嘢並唔代表有真正嘅情感流動。要令關係更親密，不妨先喺源頭搵吓，問題係出現喺你身上，定係對方身上，針對源頭再慢慢解決。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>咁係因為你哋彼此嘅情感冇真正對流。</li><li>親密感不是分享越多越好</li><li>分享前要分清對方能否承接</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-07-26",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-05-30",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8780508.jpg",
     "coverCredit": "Photo by Afif Ramdhasuma on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-man-and-woman-arguing-while-pointing-fingers-8780508/",
@@ -1649,27 +1445,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他是不懂溝通，還是拒絕溝通？一眼分清原因",
+    "coverCaption": "Asteria 相處教學：【親密感不足】事事分享仍不親密？可能你分享錯方向",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 35,
-    "title": "對方嫌你太黐身？親密關係中的安全距離怎麼拿捏",
-    "category": "戀愛心理",
+    "title": "【感情變淡】拍拖耐咗無話題？別把冷淡誤當默契",
+    "category": "復合挽回",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "心理",
-    "summary": "當兩個人交往時感情雖親密，是否就代表可以沒有界線感？有些人會認為：「我們是情侶，應該可以無話不談、無事不問、無所不做。」但其實作為成年人，真正成熟的親密關係，反而是建立在清晰界線之上！",
-    "content": "<p>覺得自己的另一半跟異性、前度缺乏邊界感 但「<strong>邊界感</strong>」真的只是朋友、前度才需要嗎</p>\n<p>其實 你跟你的另一半 也同樣需要邊界感！</p>\n<p>「<strong>既然都在戀愛了，為什麼還需要建立邊界感？</strong>」，但其實， 邊界感是一段健康的戀愛關係的基礎 能讓雙方更尊重彼此，能讓大家更了解對方 保持邊界感是維持親密關係的前提，對方想說的事，專注聆聽 對方不想說的事，別再追問 那麼，情侶之間的邊界感。</p>\n<p>到底要怎樣設置呢？</p>\n<h2>❤️‍🔥 情緒界線</h2>\n<p>並非所有情緒都需要另一半負責</p>\n<p>伴侶可以陪伴你面對情緒 但並非你情緒的承受者與垃圾桶，別把所有負面情緒都推給對方承受，設置好你的情緒界線，學會自我消化部分情緒 適當地表達感受，而非將情緒發洩在對方身上。</p>\n<h2>回到「對方嫌你太黐身」本身，要看這幾個判斷位</h2>\n<p>但不可以用邊界線進行PUA 建立邊界感是為了讓彼此感到自在、被尊重，而不是用來控制對方的行為，當「<strong>邊界</strong>」變成了「<strong>要求你遷就我的不安</strong>」，當「<strong>尊重</strong>」變成了「<strong>只准你按我期望去做</strong>」，這就已經失去界線的本意，真正健康的界線 應該是雙方共同討論、協調出來。</p>\n<p>而非單方面訂立規則，讓對方被動服從</p>\n<p>情侶之間的確需要有邊界感。擁有界線並不代表缺乏安全感，反而是真正成熟關係的表現。當你懂得建立界線，關係才可以保有彼此的尊重與空間，讓兩個人都能安心依靠彼此，而不是靠壓迫或退讓維持親密。</p>\n<h2>常見問題</h2>\n<h3>面對「對方嫌你太黐身」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「對方嫌你太黐身」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「對方嫌你太黐身」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DMezcavyFWD/",
-    "date": "2025-07-24",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "復合",
+    "summary": "拍拖初期，大家成日好有好多嘢講，但一齊耐咗，好多情侶都會越嚟越冇計傾。",
+    "content": "<h2>你有冇試過呢啲情況：</h2>\n<p>同另一半一齊坐喺度、各自玩電話，完全冇傾計。傾計永遠圍繞住食咗乜嘢、做咗乜嘢。覺得一齊咁耐，已經冇嘢要傾，其實對於愛情長跑嘅情侶嚟講，已經好了解對方 =/= 唔需要傾計。因為長期冇連結就，大家嘅感情會慢慢變得無感、越嚟越淡。</p><h2>點解愛情長跑嘅情侶會越拍越「<strong>冇聲氣</strong>」？</h2>\n<p>拍拖耐咗習慣沉默相處，變得唔再主動分享。太了解對方生活，話題已經冇乜火花。興趣唔同，怕講嘅嘢對方無興趣就乾脆唔講。單方面溝通，對方成日只係「哦」「嗯」回應。傾計模式出現問題，大家講嘢習慣唔同。其中一方冇心經營感情，用冷處理方式對待。想令大家唔會好似住喺同一間屋嘅陌生人。可以試吓用以下呢啲方法！</p><h2>開放式提問，令對方更願意講</h2>\n<p>唔好淨係問「<strong>係定唔係</strong>」、「<strong>忙唔忙</strong>」，試吓傾計時問：「<strong>最近返工有冇邊啲嘢令你覺得好癡線/好有挑戰？</strong>」，開放式問題等於幫對方開口講嘢，唔係為咗搵答案，而係為咗搵連結。當你唔再用「<strong>係定唔係</strong>」去傾計。你哋之間嘅溝通自然會更加close。</p><h2>多啲亂up分享</h2>\n<p>多啲「無目的式對話」，有時一齊耐咗，好難下下有深入嘅嘢要講。</p>\n\n<p>但其實有時傾計唔一定要有結果，唔好每次講嘢都為咗解決問題，可以純粹講吓啲八卦嘢、無謂嘢，例如「今日睇到條Reels，條友好似你」，其實隨口分享都可以係親密嘅開始。</p>\n\n<h2>如果一方鍾意分享生活入面啲雞毛蒜皮小事</h2>\n<p>改變傾計嘅重點、節奏：但另一方就比較直接，覺得應該講重點。會變成一個想傾偈，另一個想快快講完。令溝通模式對唔上：所以最緊要係改變大家嘅溝通模式。要搵個時間，坦誠咁講出嚟，了解大家鍾意點傾計，然後慢慢磨合！</p><h2>增加生活嘅儀式感</h2>\n<p>感情會變得平淡，有時唔係因為唔愛。而係因為冇咗愛嘅儀式感，試吓同對方整個「<strong>每月小任務</strong>」，例如一齊試吓煮嘢、做未挑戰嘅運動、互相寫信。咁已經可以令大家有共鳴、有互動、有話題。生活嘅儀式感，其實唔止係浪漫嘅表現。仲係一種「<strong>創造對話</strong>」嘅機會。透過呢啲有心思嘅舉動：自然會帶出有溫度嘅交流。</p><h2>感情拯救所話你知</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>拍拖耐咗</span><p>話題會變少係正常，但你哋願唔願意為彼此打開多啲內心。</p></div><div class=\"article-point-card\"><span>多啲主動創造連結</span><p>就係關係能唔能夠長久嘅關鍵，有嘢傾、有互動，呢段感情先唔會因為喺埋一齊太耐。</p></div></div>\n<p>而慢慢變淡、關係變疏離！</p>\n\n\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>點解愛情長跑嘅情侶會越拍越，冇聲氣。</li><li>如果一方鍾意分享生活入面啲雞毛蒜皮小事。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你覺得關係變淡，先不要急著判定感情完結。可以先看你們是否仍願意安排時間、回應彼此需要，以及一起嘗試新的相處方式。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
+    "sourceIg": "",
+    "date": "2025-06-04",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4713168.jpg",
     "coverCredit": "Photo by Ferdy Jayadi on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-wearing-hijab-sitting-beside-man-holding-a-pillow-4713168/",
@@ -1697,27 +1487,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方嫌你太黐身？親密關係中的安全距離怎麼拿捏",
+    "coverCaption": "Asteria 相處教學：【感情變淡】拍拖耐咗無話題？別把冷淡誤當默契",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 36,
-    "title": "伴侶經常挑剔你點算？挑剔式相處的化解方法",
-    "category": "溝通相處",
+    "title": "【爛桃花心理】為何你總是遇到錯的人？拆解 4 個吸引渣男的相處模式",
+    "category": "關係危機",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "溝通",
-    "summary": "在一段關係中，對方不斷挑剔你，其實是因為對你有期望？是因為他期望你成為更好的人？但事實是，他對你一直挑剔，並不一定等於對你有很多期望！",
-    "content": "<p>伴侶經常挑剔，最傷的不是一句批評，而是你慢慢變得不敢做自己。要化解挑剔式相處，先要分清對方是在提出需要，還是在用貶低控制你。</p> <h2>先分清建議和挑剔</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。 你可以先寫低原本想發的句子，再刪走「你一定」「你從來」「你根本」這類字眼，換成具體事件和一個清楚請求，對方會較容易聽入耳。</p> <h2>不要把每句批評都吞成自責</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。 好的溝通不是壓住自己，也不是一次過爆出所有委屈，而是讓對方知道你受傷的位置，同時知道下一次可以怎樣做得好一點。</p> <h2>用具體例子講出你受傷的位置</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。 如果對方一聽就反駁，先不要急著加碼解釋。你可以暫停一下，等對方消化，再用更短的句子回到核心，避免對話變成互相防衛。</p> <h2>看他是否願意調整說話方式</h2>\n<p>反問有時看似讓對方思考，實際上會令對方覺得被審問。想改善「伴侶經常挑剔你點算」，最好把問題收窄成一句清楚、可回答的表達。 真正改善關係的說話，要同時有溫度和界線：既不把對方逼到角落，也不把自己的需要全部收回去。</p> <h2>先守住界線，再看對方有沒有真正改變：回到「伴侶經常挑剔你點算」來看</h2>\n<p>如果「伴侶經常挑剔你點算」已經反覆發生，重點不是贏一場道理，而是令下一次對話不再重演同一個模式。你可以先準備一句短而清楚的開場，再觀察對方是否願意接住；若對方有回應，再逐步講深一點。這樣既保留你的立場，也不會一開始就把對方推到防衛位置。</p>\n<h2>常見問題</h2>\n<h3>遇到「伴侶經常挑剔你點算」，我應該點樣開口？</h3>\n<p>遇到「伴侶經常挑剔你點算」，可以先講具體事件，再講自己的感受，最後提出一個可做到的小希望。不要一開始就定性對方人格，否則對方很容易立即防衛。</p>\n<h3>處理「伴侶經常挑剔你點算」時，對方一聽就逃避點算？</h3>\n<p>處理「伴侶經常挑剔你點算」時，可以先把訊息縮短，只處理一個重點。對話壓力低一點，對方才較願意留下來聽。</p>\n<h3>Asteria 的相處教學可以點樣幫到「伴侶經常挑剔你點算」？</h3>\n<p>Asteria 可以按「伴侶經常挑剔你點算」的情況幫你 review 對話，逐句拆邊句會推遠對方、邊句可以降低壓力，再整理更容易被聽見的表達方式。</p>",
+    "imageLabel": "警號",
+    "summary": "其實你有冇諗過，你嘅爛桃花係由你自己嘅性格一手造成。",
+    "content": "<p>如果你總是遇到爛桃花，問題未必只是運氣不好。有些人會被不穩定、不負責任、只講不做的人吸引，並不是因為自己想受傷，而是內心某些相處模式，會令你比較容易心軟、比較容易替對方找藉口，也比較難在早期抽身。</p>\n<p>這篇不是要你責怪自己，而是幫你看清楚：為甚麼明知對方不適合，你仍然會被牽住走；為甚麼對方給少少甜頭，你就會忍不住再給機會；又為甚麼有些人一靠近你，就很容易佔你便宜。</p>\n<h2>共依附會令你明知不適合，仍然捨不得離開</h2>\n<p>所謂共依附，不是單純太愛一個人，而是你很容易把自己的價值感，綁在一段關係有沒有被需要、被選擇、被挽留上。當你心裡很怕失去，就算遇到爛桃花，也可能會覺得「<strong>有總好過無</strong>」。</p>\n<p>於是即使對方忽冷忽熱、承諾很多但行動很少，或者你其實沒有那麼喜歡他，你仍然會因為不想孤單、不想被放棄，而繼續給對方機會。這樣不是你傻，而是你太習慣用關係證明自己值得被愛。</p>\n<h2>自信不足，會令你過度包容錯的人</h2>\n<p>如果你常常覺得自己不夠好，很容易會把對方的少少關心放大成愛。你會擔心一旦拒絕、離開、設界線，就再沒有人願意要你，所以即使對方表現很差，你都會不停幫他解釋。</p>\n<p>但真正健康的感情，不需要你靠委屈自己去換。你可以體諒一個人，但不代表要長期容忍失望；你可以給機會，但不代表要把自己的底線一再降低。</p>\n<h2>太心軟，容易令爛桃花誤會自己有機會</h2>\n<p>有些人不是刻意曖昧，而是太不懂拒絕。對方約你，你不好意思推；對方訴苦，你忍不住安慰；對方越界，你怕尷尬所以笑一笑帶過。這些反應在你心裡只是禮貌，但在某些人眼中，可能會被解讀成有機會。所以面對你不想發展的人，溫柔不代表要含糊。越早講清楚，越能避免對方繼續試探，也越能保護自己不被拖進不必要的情感糾纏。</p><h2>不要迷信爛桃花面相，真正要看你的界線</h2>\n<div class=\"article-section-card\"><p>坊間會講爛桃花面相，但感情裡真正重要的，通常不是外貌，而是你的界線是否清楚。容易吸引爛桃花的人，往往不是因為長相有問題，而是太容易被甜言蜜語打動、太怕拒絕人、太快相信對方已經改變。</p><p>如果你想減少爛桃花，第一步不是改變外表，而是改變篩選方式。不要只看對方有沒有追你、會不會講好聽說話，而要看他是否尊重你、是否言行一致、是否願意在你拒絕時仍然保持分寸。</p></div><h2>感情拯救所話你知</h2>\n<p>爛桃花不一定是無緣無故靠近你。有時候，是你太容易被需要感打動，太容易在早期放低界線，才令不適合的人一直留在你身邊。</p>\n<p>真正要改的，不是令自己變冷漠，而是學會在心軟之前先問自己：我是真的喜歡這個人，還是只是害怕失去一個選擇？當你開始懂得篩選、拒絕和保護自己，爛桃花自然會少很多。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>共依附會令你明知不適合，仍然捨不得離開。</li><li>自信不足，會令你過度包容錯的人。</li><li>太心軟，容易令爛桃花誤會自己有機會。</li><li>不要迷信爛桃花面相，真正要看你的界線。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2025-11-11",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-03-30",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4307721.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-couple-chatting-while-sitting-in-doorway-of-veranda-4307721/",
@@ -1745,27 +1529,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：伴侶經常挑剔你點算？挑剔式相處的化解方法",
+    "coverCaption": "Asteria 相處教學：【爛桃花心理】為何你總是遇到錯的人？拆解 4 個吸引渣男的相處模式",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 37,
-    "title": "他對你不像以前了？男人感情扣分的 5 個細節",
-    "category": "戀愛心理",
+    "title": "【情緒溝通】只是想呻兩句，為何他覺得你在吵架？",
+    "category": "溝通相處",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "心理",
-    "summary": "你有冇覺得另一半開始不如初相識時咁浪漫、溫柔、體貼、事事呵護備至？佢係咪開始對你感到煩厭？明明你同佢之間冇出現第三者，但好明顯feel到你哋愛情逐漸消失緊，何解呢？如果你嘅另一半有呢啲徵狀，係咪就等於佢係一個渣男？其實又未必！其實一切關鍵在於男人慣用嘅「拍拖減分機制」。 本文從戀愛心理角度拆解關係訊",
-    "content": "<p>一開始好有熱情、你心情唔好會陪你傾電話 成日都會讚下你、買禮物氹你，但一齊耐咗就間唔時就對你嫌三嫌四、挑剔你 咁可能佢心目中有一個揮之不去嘅，「<strong>減分機制</strong>」 同另一半相處時鍾意挑毛病 可能佢腦中經常出現呢啲念頭：；🔎 原來佢同我想像中嘅唔一樣。</p>\n<p>🔎 其實佢都不過如此啫 🔎 佢嘅缺點比我預期中多</p>\n<p>佢好易睇到對方唔夠好嘅地方、挑剔對方 於是就開始扣佢分，有啲男人係由100分開始扣你分，喺逐漸扣分嘅情況下，佢會覺得自己好似冇以前咁鍾意你 扣到最後先會講分手，相反有啲男人係行加分制，可能佢一開始冇咁鍾意你，但隨住相處時間越嚟越多。</p>\n<p>就會慢慢對你加分、越嚟越鍾意你</p>\n<h2>點解會有減分機制</h2>\n<p>減分機制係一個自我保護機制 係對方心目中、腦海中自自然然萌生嘅機制，用嚟保護自己唔會再受更多嘅傷害而出現，出現減分機制最主要嘅原因在於，有一個曾經令佢失望嘅童年/屋企人，或又者因為過往嘅情史，而喺嗰個過程當中，對方感到過度失望、受傷 導致佢喺親密關係入面會採用減分原則。</p>\n<h2>回到「他對你不像以前了」本身，要看這幾個判斷位</h2>\n<p>總會有啲蛛絲馬跡 要仔細觀察 如果你feel到你嘅另一半可能有「<strong>減分機制</strong>」，你要試圖話俾佢知，當佢見到你做咗啲令佢有些小失望嘅舉動，唔好覺得唔好意思開口講，或者以為講咗都冇用。</p>\n<p>想要好好根治佢嘅減分機制 唔會令每段感情都變成「<strong>短命種</strong>」，就需要好好正視傷口 諗清楚究竟係邊一段關係帶俾佢痛苦，然後再開始去學習、感受 話俾自己聽 唔係人人好似嗰個令佢受傷嘅人一樣，用健康、正面嘅方式同你討論、互動 只有真係講出嚟 問題先會解決！</p>\n<h2>常見問題</h2>\n<h3>對方不像以前熱情，就一定是不愛嗎？</h3>\n<p>未必。要看是熱戀期自然回落、生活壓力，還是他開始長期挑剔、扣分、冷淡和失去耐性。</p>\n<h3>遇到感情扣分機制，可以點溝通？</h3>\n<p>不要只求對方變回以前，可以先講具體事件：「最近你常常挑我小錯，我會覺得自己一直被否定。」再看他是否願意修正互動。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/C7J79vjSZ7r/",
-    "date": "2024-05-19",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "溝通",
+    "summary": "一段有建設性嘅關係，雙方應該要令對方覺得呢段關係係安全、令人放鬆，喺出現壓力或危機時，另一半會關心、支持、保護自己。",
+    "content": "<h2>再相愛嘅兩個人</h2>\n<p>都總有睇不慣對方行為嘅時候，都總有想向對方表達不滿、抱怨嘅時候。但有時表達方法出現，分唔清，抱怨 vs 指責，出現隱性攻擊，好易將一段關係推向死局。</p><h2>抱怨（complaint）vs 指責（criticize）</h2>\n<p>指責係導致伴侶分手嘅一個主要原因。抱怨唔係：指責係消極而值得警惕嘅，抱怨係積極而具建設性嘅，—— （Gottman, 2000）。</p><h2>點解有咁大區別呢？</h2>\n<p>因為抱怨係可能有建設性嘅！</p>\n<p>例如：「我們已經好耐都冇一齊去旅行，我唔想再聽你講『抽唔出時間』。」，就某問題提出意見時，係「對事不對人」，當然，對方可能會對抱怨感到憤怒。</p>\n\n<p>因為被講中咗，但其實當一個人抱怨時，本身都包含請求、被需要嘅情緒，佢唔係為咗貶低、打壓對方，而係希望對方可以注意到問題並改進。</p>\n\n<h2>抱怨時，請記得⋯</h2>\n<p>唔好變成一個慣性抱怨者，如果抱怨嘅問題一個接一個，咁抱怨就唔再是有益，而只係會對你哋嘅關係造成傷害，持續抱怨同一個問題，當你發現自己持續對同一個問題進行抱怨。咁代表對方可能唔太願意照顧你嘅感受。唔太重視同你嘅關係，所以無意為你作出調整。</p><h2>指責係消極、係一種評判（judgement）</h2>\n<p>當你指責對方時，係對佢持有負面結論，再利用呢個結論攻擊對方，例如：「你成日都唔願意俾時間、唔願意使錢俾我哋一齊去旅行，你永遠都將時間同錢用喺冇用啲事、用喺外人身上，我哋冇得出去玩都係你嘅錯！」。</p>\n\n<p>指責係冇進步取向：只係一種包括輕視嘅攻擊，當你指責對方方時，雙方地位係唔對等嘅，係以一種高高在上嘅姿態去控訴。</p><h2>點樣正確處理感情中嘅抱怨？</h2>\n<div class=\"article-compare-grid article-compare-grid-labelled\"><div class=\"article-compare-card\"><span>抱怨嘅人</span><p>，時刻提醒自己「<strong>對事不對人</strong>」，喺對方抱怨時先唔好急住否認，如果你面對抱怨嘅第一感覺係憤怒、否認。代表抱怨有可能講中咗：你可以針對對方抱怨嘅內容嚟檢視自己。指責嘅人：唔好覺得對方既然犯錯就應該被責備。嘗試用有建設性嘅抱怨代替指責，再用冷靜分析代替抱怨，對方犯錯時，你可唔可以用有效方式進行應對，先係是你哋關係成長嘅關鍵，被指責嘅人：等你哋情緒平靜咗，你可以誠實地向對方表達自己嘅諗法。</p>\n<p>再向對方提出具體的要求，例如：「我唔喜歡你話我懶，你可以告訴我下次具體應該點做，而唔係一味批評我。」。</p><h2>感情拯救所話你知</h2>\n<p>無論係你對另一半，定係你自己遭受負面評價嘅時候，喺想嗌交、想投訴、發脾氣前，不妨先停一停、冷靜下，嘗試用「抱怨」取代「指責」，呢啲舉動都會影響到呢段關係可以行到幾遠。</p>\n\n<p>不妨都搵我哋幫手啦！</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>抱怨（complaint）vs 指責（criticize）</li><li>指責係消極、係一種評判（judgement）</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "sourceIg": "",
+    "date": "2024-04-05",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-34961556.jpg",
     "coverCredit": "Photo by Dwi Setyo on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-enjoying-wine-in-modern-living-room-34961556/",
@@ -1793,27 +1571,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他對你不像以前了？男人感情扣分的 5 個細節",
+    "coverCaption": "Asteria 相處教學：【情緒溝通】只是想呻兩句，為何他覺得你在吵架？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 38,
-    "title": "他是真心還是假意？5 個細節看出對方有沒有認真愛你",
-    "category": "戀愛心理",
+    "title": "【交友 App 界線】拍拖後仍玩交友 App，代表變心嗎？",
+    "category": "關係危機",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "心理",
-    "summary": "佢口口聲聲話愛你，但同你feel到嘅又有啲唔一樣，你硬係覺得怪怪地，但又講唔出係邊度出咗問題？不如就等我哋幫你Fact Check吓啦",
-    "content": "<p>有時同實際行動、內心感受會唔一樣，當你嘅另一半所做嘅行為 同我哋聽到嘅甜密說話唔一致，心裡面就會有疑問 究竟呢種愛係唔係真愛。</p>\n<p>究竟佢真係愛我定假愛我？</p>\n<p>到底要點分辨？</p>\n<p>當處於曖昧不明嘅關係中 成日俾人感覺你哋已經好似情侶，但一旦你想進一步確認下關係，對方就開始支支吾吾 既唔會主動表白，亦唔會俾機會你向佢表白，當你想要個清晰嘅答案，但對方一直唔願意表態，不過又依然做曬情侶會同你做嘅行為。</p>\n<h2>🔎 熱戀期</h2>\n<p>喺熱戀期會對你呈現短暫熱情 你哋嘅熱戀期好短暫 通常佢只會出現一陣嘅熱情，之後好快就變得好冷漠，經常唔覆你msg 甚至有時消失得無影無蹤，但當你暗示或明示想同佢有親密行為時，佢又好快就現身 仲表示得好熱情，呢種情況就代表佢對你嘅感情唔係好真誠。</p>\n<h2>回到「他是真心還是假意」本身，要看這幾個判斷位</h2>\n<p>佢為咗氹你會向你許下一堆承諾 仲有好多係不切實際嘅承諾，有短期承諾、有長有承諾 eg：寧願唔打機都要同你出多啲街，eg：以後想同你結婚、想俾幸福你，但卻一直唔肯履行承諾 永遠都係僅限於承諾 從來都冇任何實際行動俾你見到。</p>\n<p>每次嗌交或者大家嘅諗法有衝突，佢都唔會正視問題 當每問題、衝突出現時，佢通常都會第一時間選擇逃避 就算你主動想搵佢傾，佢都係Keep住扭扭擰擰、支支吾吾 完全feel唔到佢有心想解決問題，一直採取順其自然、避得就避嘅態度。</p>\n<h2>常見問題</h2>\n<h3>甜言蜜語可以相信嗎？</h3>\n<p>可以聽，但不要只靠甜言蜜語判斷真心。真正認真的人，會在時間安排、承諾、衝突修補和界線上保持一致。</p>\n<h3>點樣分辨真心和假意？</h3>\n<p>看他是否講得出也做得到，尤其在你有需要、你們有衝突，或事情不再新鮮時，他是否仍願意投入。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/C_SynC1S17T/",
-    "date": "2024-08-30",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "警號",
+    "summary": "拍拖後仍玩交友 App，不一定只有一個答案，但一定涉及界線和安全感。要看他是否隱瞞、是否仍主動配對，以及你們有沒有清楚關係定義。",
+    "content": "<h2>先確認你們的關係定義</h2>\n<p>如果已經確認拍拖或排他，繼續用交友 App 就不是小事。若關係仍模糊，也要談清楚雙方期待。</p>\n<p>如果你們已經有排他共識，交友 App 就不是普通娛樂，而是會直接動搖安全感。關係定義越清楚，這件事的界線也越清楚。</p>\n<h2>看他是忘記刪除還是持續活躍</h2>\n<p>帳號存在和持續配對、聊天、更新照片是不同層次。你要看行為，而不是只聽一句解釋。有人是真的忘記刪除，有人是繼續保留選擇。你可以看登入時間、互動痕跡和他事後態度，而不是只聽一句「<strong>我無用</strong>」。</p><h2>不要被「<strong>你太敏感</strong>」帶走</h2>\n<div class=\"article-section-card\"><p>你介意是合理的，因為這牽涉信任。健康溝通應該回到界線，而不是把問題推成你小器。</p><p>當你提出合理不安，對方若只說你小器，問題就被轉移了。真正成熟的處理，應該是一起確認界線，而不是讓你懷疑自己。</p></div><h2>提出清楚底線</h2>\n<p>你可以直接講明：如果我們是認真關係，我不能接受繼續使用交友 App。底線要具體，才不會一直模糊。底線講清楚後，就要看他是否願意配合。不是你要控制他，而是認真關係本來就需要對容易越界的地方有共識。</p><h2>看他是否願意用行動修補</h2>\n<p>真正重視你的人，會願意刪除、交代和重建信任；只靠辯解卻沒有行動，就要小心。刪 App 只是第一步，重建信任還需要後續一致行動。如果他刪完又偷偷用，這就不是誤會，而是誠信問題。</p><h2>為「拍拖後仍玩交友 App 代表咩」守住底線。</h2>\n<p>你可以把「拍拖後仍玩交友 App 代表咩」寫成事件表：發生了什麼、對方怎樣解釋、之後有沒有行動修正。如果每次都只是你心軟，而對方沒有變，問題就不是你不夠包容。</p>\n<p>處理「<strong>拍拖後仍玩交友 App 代表咩</strong>」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>為拍拖後仍玩交友 App 代表咩守住底線。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "sourceIg": "",
+    "date": "2024-02-29",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6213395.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-on-deckchair-in-street-making-heart-shape-with-raised-arms-6213395/",
@@ -1841,27 +1613,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他是真心還是假意？5 個細節看出對方有沒有認真愛你",
+    "coverCaption": "Asteria 相處教學：【交友 App 界線】拍拖後仍玩交友 App，代表變心嗎？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 39,
-    "title": "傾傾下突然消失？Ghosting 背後的心理與應對方法",
-    "category": "戀愛心理",
+    "title": "【患得患失】單身時自信，為何戀愛後反而不安？",
+    "category": "情緒修復",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "心理",
-    "summary": "你又有冇俾人Ghosting過。Ghosting = 曖昧對象毫無預兆、突然訊息電話統統不回、十問十唔應、似鬼咁消失咗，但到底有咩原因令對方Ghosting你？每段曖昧關係都有種唔確定嘅感覺，但而家啲人對感情好速食，未必個個都想花時間慢慢發展，亦有啲人淨係。",
-    "content": "<p>面對「傾傾下突然消失」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「傾傾下突然消失」要看穩定投入</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>不要替「傾傾下突然消失」腦補承諾</h2>\n<p>「傾傾下突然消失」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「傾傾下突然消失」要有來有往</h2>\n<p>好的曖昧不是你一直追，對方一直接收。你可以給機會，但也要讓對方付出一部分努力，這樣才看得出關係是否真的有發展。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>「傾傾下突然消失」要看行動，不只看感覺</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>面對「傾傾下突然消失」，先停一停追問</h2>\n<p>如果你正在經歷「傾傾下突然消失」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「傾傾下突然消失」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「傾傾下突然消失」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「傾傾下突然消失」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "imageLabel": "療癒",
+    "summary": "一個人生活得好好，很開心又有自信，但一拍拖就缺乏自信又患得患失。",
+    "content": "<h2>一個人時的你</h2>\n<p>自信快樂：拍拖後的你，敏感又不安，當你一個人生活自信、自由又開心。但進入戀愛關係就變得不安、敏感、患得患失。你，不適合拍拖嗎？</p><h2>你未拍拖時</h2>\n<p>生活步調、情緒、決定權，全部由你決定，你對自己有主導權，當你進入戀愛後，就要考慮對方、需要磨合、等待回應。會不自覺地把情感安全感交到對方手上。</p><h2>拍拖時的「<strong>情感依賴</strong>」令你易受對方態度影響</h2>\n<p>一句話就足以影響你一日心情，會怕對方不再愛你、會離開你，你越投入越怕失去、越唔似自己，你不是不適合戀愛，而是未準備好用一種「成熟而穩定」的方式進入關係。</p>\n\n<p>先試著學習建立一段平衡的關係吧！</p>\n<h2>維持個人空間、自主</h2>\n<p>建立情感界限：為雙方保留足夠的空間，親密關係不等同於時刻陪伴，彼此需要適當的距離&amp;獨立，保留自己的社交圈子、興趣愛好&amp;生活節奏。</p><p>別因害怕對方不悅而過度壓抑自身的需求&amp;情緒。</p>\n<h2>不要用另一半來證明自己的價值</h2>\n<div class=\"article-section-card\"><p>別將感情變成你唯一的價值來源，要建立穩定的內在價值感，多與自己對話、了解自己真實感受。</p><p>培養獨立的生活重心：不要為討好任何人而做，要時刻提醒自己值得被好好愛，所以不需要靠另一半去肯定自己，別把對方想得那麼高、那麼重要、那麼不可或缺。</p></div><h2>建立雙向溝通機制</h2>\n<p>學會辨識、回應情緒信號，學識察覺自己是否有伴隨情緒壓抑或情感疲勞。戀愛並非單方面滿足對方的需要，而是要有雙向流動的溝通，所以應該定期檢視彼此的感受&amp;期望。對於自己出現的情緒：以溝通的方式，與對方和平地討論。找出平衡的方法。</p><h2>感情拯救所，告訴你</h2>\n<p>如果你發現戀愛使你失去自信，先不用急於結束這感情，也不要否定自己的價值，而是應當把握這個機會，重新認識自己、改變自己，同時好好學習與另一半的正確相處方式。</p>\n\n<p>建立一段能令你好好做自己，又能過得幸福快樂的關係。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你未拍拖時</li><li>拍拖時的，情感依賴，令你易受對方態度影響。</li><li>不要用另一半來證明自己的價值</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2025-02-20",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-10-14",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-26832102.jpg",
     "coverCredit": "Photo by Andy Lee on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/holding-hands-couple-running-in-park-26832102/",
@@ -1889,27 +1655,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：傾傾下突然消失？Ghosting 背後的心理與應對方法",
+    "coverCaption": "Asteria 相處教學：【患得患失】單身時自信，為何戀愛後反而不安？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 40,
-    "title": "冷戰後要不要主動聯絡？避免越等越遠的處理方法",
-    "category": "復合挽回",
+    "title": "【關係修復】一直原諒對方卻不改？別再替他找藉口",
+    "category": "溝通相處",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "復合",
-    "summary": "冷戰等於迴避型人格？其實唔係所有會冷戰嘅人都係迴避型人格，只係對方唔想面對問題、唔識處理問題、唔識溝通，所以先用「冷處理」解決。面對呢類人要點應對？一齊睇圖學嘢。",
-    "content": "<p>遇到「冷戰後要不要主動聯絡」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「冷戰後要不要主動聯絡」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「冷戰後要不要主動聯絡」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「冷戰後要不要主動聯絡」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「冷戰後要不要主動聯絡」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>越想靠近「冷戰後要不要主動聯絡」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>對方退後時，先分清冷靜、逃避還是切斷：回到「冷戰後要不要主動聯絡」來看</h2>\n<p>如果你正面對「冷戰後要不要主動聯絡」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>冷戰後要不要主動聯絡？分清冷靜、逃避與拒絕溝通</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>冷戰後要不要主動聯絡？分清冷靜、逃避與拒絕溝通</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>冷戰後要不要主動聯絡？分清冷靜、逃避與拒絕溝通</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "溝通",
+    "summary": "當另一半對你唔夠好，甚至語言或者行為暴力對待你，你仲會唔會願意留喺呢段關係入面？如果你願意，甚至覺得係愛嘅表現，咁樣你可能係有斯德哥爾摩症候群！",
+    "content": "<h2>別把傷害誤認成愛</h2>\n<p>當另一半對你表現出暴力或者情感操控，你可能會因為對佢嘅依賴，而選擇忽視呢啲行為，甚至認為佢呢啲行為係出於愛，呢種情感依賴會令你覺得如果離開佢，就會失去所有嘅安全感和愛，從而令你繼續忍受呢段健康嘅關係。</p>\n<h2>先停止替對方找藉口</h2>\n<p>如果你對自己嘅價值感唔夠認同，就會影響喺愛情中嘅選擇，覺得自己嘅價值係透過愛情嚟體現，就算另一半操控你、貶低你，或者有暴力的行為，你可能仍然會抱住，「<strong>只要我夠好，佢就會改變</strong>」嘅幻想，期望透過自己嘅付出，令對方改變、認可你、愛你，但呢種心態會令你不斷喺痛苦又不健康嘅關係中掙扎。</p>\n<p>加害者嘅行為，有時係來自於被害者嘅縱容，就係因為你無止盡咁寬恕佢，容忍佢一次又一次嘅傷害，先令自己越陷越深、無法抽離，要擺脫斯德哥爾摩症候群，不妨先靜落嚟諗清諗楚，唔好再合理化另一半錯誤嘅行為，要認知到自己而家正正係受到傷害。</p>\n<p>先可以中止愛情中嘅斯德哥爾摩症候群！</p>\n<h2>不要把包容變成縱容</h2>\n<div class=\"article-section-card\"><p>處理「<strong>你一直原諒，對方卻一直不改</strong>」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p></div><h2>看道歉之後有沒有真正行動</h2>\n<p>「<strong>你一直原諒，對方卻一直不改</strong>」最怕不是一次衝突，而是同類事情不斷重複。你可以記低事件、對方解釋、之後有沒有修正，這會比單靠感覺更清楚。</p>\n<p>如果每次都是你消化、你原諒、你降低要求，而對方沒有實際改變，下一步就不是再忍，而是先守住自己的底線。</p>\n<h2>不要替傷害找浪漫理由</h2>\n<div class=\"article-section-card\"><p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「<strong>你成日都係咁</strong>」改成一件具體事件，對話會比較容易繼續。</p></div><h2>把底線講清楚，而不是一直吞下去</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p>\n<h2>原諒前先問自己還有沒有被尊重</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>把底線講清楚，而不是一直吞下去。</li><li>原諒前先問自己還有沒有被尊重</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2026-03-15",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-11-15",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6669780.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-sad-woman-using-smartphone-6669780/",
@@ -1917,47 +1677,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-6643019.jpg",
-        "caption": "內文配圖：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/upset-woman-standing-in-the-hallway-in-an-apartment-with-a-man-dressing-to-go-out-6643019/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6669802.jpg",
-        "caption": "內文配圖：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/love-people-woman-broken-6669802/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7341894.jpg",
-        "caption": "內文配圖：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "Photo by cottonbro studio on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-sad-woman-looking-at-her-cellphone-while-sitting-on-a-bed-7341894/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：冷戰後要不要主動聯絡？避免越等越遠的處理方法",
+    "coverCaption": "Asteria 相處教學：【關係修復】一直原諒對方卻不改？別再替他找藉口",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 41,
-    "title": "分享慾會影響親密度嗎？令關係升溫的聊天細節",
-    "category": "溝通相處",
+    "title": "【媽寶男警號】長不大的男人比渣男更可怕？分辨媽寶男特徵",
+    "category": "關係危機",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "你同另一半平時多唔多嘢講？係咪咩都講一餐？定係你覺得唔需要事無大小都同佢分享？但其實一對情侶嘅分享欲，往往會影響佢哋之間嘅長遠發展！想同另一半建立起更好嘅關係，可以先由日常分享開始。",
-    "content": "<p>很多人以為信任一定要通過重大事件嚟測試，例如大家要一齊面對危機，但實際上，培養信任往往始於一啲看似無關痛癢嘅日常小事，而呢啲習慣係始於同你嘅另一半分享無謂嘢，一齊嚟睇吓，點解分享生活小事咁重要啦。</p>\n<p>生活中一啲似乎好瑣碎嘅小事，可以反映出我哋嘅性格、習慣，例如：飲食習慣、食物偏好，旅行時鍾意hea定chur 生活小習慣，例如朝早起身時會做乜嘢先、臨瞓前要做嘅乜，當你願意同對方分享呢啲細節，就等於展示咗真實嘅自己，令對方可以更加了解你。</p>\n<p>亦會知道第日你唔開心、嬲嘅時候，應該要點氹你、點維繫到呢段關係。</p> <h2>創造情感聯繫</h2>\n<p>同另一半分享生活中啲細節，傾吓啲看似好無謂嘅小事，例如：返工發生嘅事、出街見到嘅一啲令人印象深刻嘅事，唔好以為講呢啲嘢，對方會冇興趣、呢啲嘢唔關對方事，但其實嗰啲對話通常輕鬆又自在，喺輕鬆嘅氛圍下可以幫雙方建立更深嘅聯繫，每一次嘅小對話都係一個機會。</p>\n<p>俾對方知道你嘅諗法同感受，加深你哋之間嘅感情聯繫。</p> <h2>分享慾其實是在建立日常連結</h2>\n<p>透過細心觀察、分享雙方生活中嘅細節，可以喺關鍵時刻展現雙方嘅關心，例如：同對方分享自己鍾意嘅嘢食，記住對方鍾意食嘅食物，當你喺之後嘅行動中表現出你有記住呢啲細節，例如突然買俾佢食、俾個驚喜佢，對方一定會感受到你對佢嘅重視。</p>\n<p>可以增進佢對你嘅感情</p>\n<p>分享小事，並唔代表齋講完就算，當雙方互相分享期間，可能會包含咗好多微小嘅承諾，例如：應承一齊去上次提起嗰間新開嘅餐廳，或者幫對方買啲佢好想要嘅嘢，當大家分享完、聆聽完，有喺呢種小承諾上履行、付諸實行，可以為對方帶嚟安全感、累積信任，令大家喺未來面對更大挑戰時發揮作用。</p> <h2>對方回應的方式會影響你想不想再分享</h2>\n<p>「<strong>分享慾會影響親密度嗎</strong>」通常不是靠一次深夜長談解決，而是看日常有沒有被記得、被回應、被放在心上。親密感是很多細節累積出來的安全感。</p>\n<p>你可以先提出一個具體、容易做到的小安排，例如固定相處時間、主動分享近況，或者在忙碌時留一句交代。小回應穩定下來，關係才會慢慢升溫。</p> <h2>不要把分享變成匯報功課</h2>\n<p>對方最容易防衛的，往往不是你的需要，而是聽到自己被定性。把「你成日都係咁」改成一件具體事件，對話會比較容易繼續。</p> <h2>把「你都不聽」換成想被回應的需要</h2>\n<p>你可以講出自己受傷的位置，但不要一次過倒出所有舊帳。先講感受，再講希望對方下一次可以怎樣做，對方才知道怎樣回應。</p> <h2>由一個小日常重新打開話題</h2>\n<p>很多關係不是無得傾，而是一開口就太大包圍。先處理最核心的一句說話或一個行為，比同時追究所有問題更有效。</p>\n<h2>常見問題</h2>\n<h3>「<strong>分享慾會影響親密度嗎</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>分享慾會影響親密度嗎</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>分享慾會影響親密度嗎</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "imageLabel": "警號",
+    "summary": "拍拖前，佢話屋企人對佢嚟講好重要，你以為佢只係孝順、有責任感；但一齊之後，佢事事以佢屋企優先；同居後又唔會負起做家頭細務嘅責任。",
+    "content": "<h2>媽寶男嘅錯覺</h2>\n<p>媽寶男可能一開始係暖男，會令你感覺佢離唔開你，會激發起你嘅母性，媽寶男可能會令你覺得佢好孝順，誤以為佢很有責任感，係個可以付託終身嘅對象，咁到底呢種男人係咪有跡可尋？</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">跡象 1</span><span>好鍾意怪罪他人</span></h2>\n<p>最常見行為係「永遠都覺得係人哋嘅錯」，面對自己嘅行為毫無責任感，無法正視自己嘅錯，更加唔識得得改善，生活、職場上即使有任何差錯，都會因為毫無責任心，而將錯誤怪罪於他人，唔會正視自己嘅問題。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">跡象 2</span><span>靠父母資助</span></h2>\n<p>佢望落對外光鮮亮麗，但其實使費經常靠父母資助，出門在外成日「打腫臉充胖子」，平時對屋企人唔會好理會，但遇到有物慾望時，就會軟硬兼施，將把父母當係提款機、許願池，希望藉此得到想要嘅好處、物質需求。</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">跡象 3</span><span>唔會為自己做決定</span></h2>\n<p>佢哋自細就喺屋企倍受寵愛，幾乎唔需要開口，身邊嘅人早就為佢打點好一切，唔使自己做重大決擇，令佢冇辦法獨立做任何選擇、決定。</p>\n\n<p>小至生活瑣事：大至兩人感情之間嘅選擇同決定，都需要旁人嘅意見作為引導。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">跡象 4</span><span>孝順嘅錯覺</span></h2>\n<p>好多人啱啱識媽寶男：往往會誤會對方係個孝順男人，佢哋會成日將屋企人掛喺嘴邊，有時甚至會話「<strong>我媽未來都係是你阿媽啊！</strong>」，「<strong>我阿媽話覺得你個妝太濃，你不如唔好化啦！</strong>」，諸如此類嘅台詞，都是媽寶男經常掛喺嘴邊。慢慢相處先發現：原來佢係個隱性媽寶男，咁又應該點樣？唔好一開始就同對方屋企人「<strong>爭地位</strong>」，拒絕被對方情緒勒索，俾佢獨自面對錯誤。適時嘅正向引導，鼓勵佢勇於表達意見。</p>\n<p>劃清界線、區分彼此嘅生活事務同分工。</p><h2>感情拯救所話你知</h2>\n<p>呢個世界有一種渣男係被養出嚟嘅！而呢種渣男就叫做媽寶男。佢地自細都俾屋企人過度照顧、被睇得太多。好容易會形成自我中心：淨係focus喺自己嘅諗法，只顧自己嘅情感而忽略、無視咗另一半。甚至因為唔會喺感情上做決擇，好易陷入糾纏不清嘅關係，所以喺開始一段感情之前，不如先觀察清楚，睇清楚佢會唔會係「<strong>隱性媽寶</strong>」，再諗吓係咪真係要同佢一齊。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>靠父母資助</li><li>孝順嘅錯覺</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-11-22",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-05-14",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5225295.jpg",
     "coverCredit": "Photo by Samson Katt on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/happy-diverse-couple-having-breakfast-at-table-5225295/",
@@ -1985,27 +1739,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分享慾會影響親密度嗎？令關係升溫的聊天細節",
+    "coverCaption": "Asteria 相處教學：【媽寶男警號】長不大的男人比渣男更可怕？分辨媽寶男特徵",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 42,
-    "title": "分手前有咩徵兆？4 個感情亮紅燈的信號",
-    "category": "復合挽回",
+    "title": "為取悅男人壓抑自己？Pick Me Girl 的感情陷阱",
+    "category": "戀愛心理",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "復合",
-    "summary": "另一半冇啦啦話要分手，嚇你一跳？但老土啲咁講，「冰封三尺非一日之寒」，對方想分手，其實先有徵兆，只係差在你feel唔feel到、識唔識觀察。一齊睇吓暴風雨前夕會發生咩事啦！",
-    "content": "<p>遇到「分手前有咩徵兆」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>「分手前有咩徵兆」還有沒有對話空間？</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「分手前有咩徵兆」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>修補「分手前有咩徵兆」要留空間</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>分清「分手前有咩徵兆」是冷靜還是退場</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>把「分手前有咩徵兆」拆成下一個小決定</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>如果仍想處理「分手前有咩徵兆」，先看對方接不接得住</h2>\n<p>如果你正面對「分手前有咩徵兆」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「分手前有咩徵兆」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「分手前有咩徵兆」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「分手前有咩徵兆」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "心理",
+    "summary": "為取悅男人而壓抑自己，短期好像更容易被喜歡，長期卻會失去界線。Pick Me Girl 的陷阱，是把被選中看得比被尊重更重要。",
+    "content": "<h2>不要把低需求當成優點</h2>\n<div class=\"article-section-card\"><p>不敢要求、不敢介意、不敢失望，不代表你成熟，只可能代表你害怕一有需要就被放棄。</p><p>低需求有時不是成熟，而是你太怕自己一開口就不被喜歡。真正愛你的人，不會只在你沒有需要時才覺得你值得愛。</p></div><h2>被選中不等於被尊重</h2>\n<p>對方喜歡你乖、順、好安排，不代表他真正看見你。健康關係應該容得下你的想法和界線。如果一段關係只欣賞你的配合，卻容不下你的感受，那份喜歡其實很脆弱。你要的不是被選中一下，而是長期被尊重。</p><h2>停止和其他女生比較</h2>\n<p>Pick Me 心態常常建立在「<strong>我比其他女生懂事</strong>」。但愛情不是比賽，你不需要踩低別人來證明自己值得愛。</p>\n<p>把自己放到和其他女生對立的位置，會令你越來越離不開男性認可。真正的自信，不需要靠證明自己比別人更乖、更特別來成立。</p>\n<h2>練習講出真實感受</h2>\n<p>你可以溫和，但不要消失自己。從小事開始講想法，觀察對方是否尊重你的不同。真實感受可以從小事開始講，例如想去哪裡食飯、介意某句說話。對方如何回應這些小需要，會透露他是否能接住更深的你。</p><h2>選擇讓你更像自己的人</h2>\n<p>真正適合的關係，不會要求你長期扮無所謂。你可以被愛，也可以有需要。讓你更像自己的人，會令你慢慢放鬆，而不是一直演出完美女友。你不用靠壓抑自己來換愛，因為那樣換來的愛也不穩。</p><h2>把「為取悅男人壓抑自己」從情緒拉回事實。</h2>\n<p>你可以先把「為取悅男人壓抑自己」分成三欄：實際發生的事、你腦中補上的意思、你身體和情緒的反應。分開之後，你會更容易知道下一步要溝通還是先穩住自己。</p>\n<p>處理「<strong>為取悅男人壓抑自己</strong>」時，先不要即時回訊息或下決定。給自己一段冷靜時間，再用最少一句說話表達需要，會比被情緒推著走更有力量。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>把為取悅男人壓抑自己從情緒拉回事實。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
     "sourceIg": "",
-    "date": "2024-12-22",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-07-18",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560377.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-having-a-misunderstanding-8560377/",
@@ -2033,27 +1781,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手前有咩徵兆？4 個感情亮紅燈的信號",
+    "coverCaption": "Asteria 相處教學：為取悅男人壓抑自己？Pick Me Girl 的感情陷阱",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 43,
-    "title": "分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
-    "category": "復合挽回",
+    "title": "【性愛關係】約親都想上床？分辨他愛你還是只當你是床伴",
+    "category": "曖昧桃花",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "復合",
-    "summary": "先別急著追問答案：真正要看的，是對方為何退後。",
-    "content": "<p>遇到「分手後怎樣重新站起來」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>越想靠近「分手後怎樣重新站起來」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>不要把「分手後怎樣重新站起來」的沉默都當成一樣</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>先處理「分手後怎樣重新站起來」最核心一步</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>不要只聽一句，要看「分手後怎樣重新站起來」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>處理「分手後怎樣重新站起來」前，先把節奏慢下來</h2>\n<p>如果你正面對「分手後怎樣重新站起來」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「分手後怎樣重新站起來」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「分手後怎樣重新站起來」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「分手後怎樣重新站起來」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "曖昧",
+    "summary": "身邊總有啲女仔會覺得男友出街時冷淡，但一講到床上親密就好熱情，喺床上總係花盡心思討自己歡心，講盡甜言蜜語。",
+    "content": "<h2>如果佢只對親密接觸有興趣，要先看清楚</h2>\n<p>有些女生會發現，對方平日約會時表現冷淡，約他看戲、食飯或和朋友一起出街，他總是興趣不大、說自己忙；但只要地點換成酒店、屋企過夜或旅行，他又突然變得很有時間。</p>\n<h2>這種落差會令人很混亂</h2>\n<p>他到底是真的愛你，只是不擅長日常約會，還是其實只把這段關係放在親密接觸的位置？判斷重點不是他床上有多熱情，而是他在床以外有沒有投入你、尊重你，和願意把你放進他的生活。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">想法 1</span><span>性大於理性</span></h2>\n<p>「性」 &gt; 「理性」，大家要認清一個概念，男人對「性」一定都有所渴望，對於女人都有想要征服嘅慾望，所以好多時都係用下半身思考，「性」 &gt; 「理性」，佢哋會忽略咗女方嘅諗法，只集中於自己嘅渴求，當佢需求進行親密接觸時，就會想見另一半、想約另一半，而唔會考慮對方係咪都有呢個需要、慾望。</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">想法 2</span><span>分不清性慾定愛情</span></h2>\n<p>無法分清楚對你係性慾定愛情，有研究發現「控制愛情嘅大腦區域都同樣控制住性慾」，而「性慾實際上可以轉化為愛情」，對男人嚟講，會有種喺發生性行為後覺得自己戀愛緊嘅輕飄飄嘅錯覺。</p>\n\n<p>亦因為咁，當佢對你產生性慾後，大家有性行為後，佢會更加留戀、渴求呢種感覺，好容易演化成每次出完街都想有親密接觸嘅情況。</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">想法 3</span><span>把親密接觸當成完整約會</span></h2>\n<p>「<strong>有親密接觸等於完整約會模式</strong>」，有啲男人會覺得情侶之間要表現愛意。最好嘅方法就係透過性行為去表達。因為床上嘅親密會令愛情昇溫，佢哋好堅信「<strong>性都係愛嘅一部分</strong>」，所以出完街後做親密接觸，就係一個「<strong>完整嘅約會模式</strong>」。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">想法 4</span><span>性和愛可以分開</span></h2>\n<p>性等於性；愛等於愛：基於男、女生理結構唔同，男人嘅性慾較易牽動係個不爭嘅事實。過往嘅心理學研究顯示：男人喺性同愛喺某種程度上係並唔同步。所以有可能發生男人將性同愛分開嘅情況。換句話說：佢可能身體對你有強烈的渴望，但並唔代表佢係深愛你，正因為咁先會出現佢對住你時，腦中只能專注喺親密接觸上。</p><div class=\"article-check-compare\">\n<div class=\"article-check-panel article-check-panel--positive\">\n<h3>唔只係床伴的訊號</h3>\n<div class=\"article-checklist__item\"><span>✓</span><p>有將你介紹俾佢嘅兄弟、朋友、屋企人。</p></div>\n<div class=\"article-checklist__item\"><span>✓</span><p>願意花心思花揀你想食嘅食物。</p>\n</div>\n<div class=\"article-checklist__item\"><span>✓</span><p>企圖更了解你、會問你好多個人嘅問題。</p></div>\n<div class=\"article-checklist__item\"><span>✓</span><p>會對你做啲浪漫、貼心嘅小舉動。</p>\n</div>\n<div class=\"article-checklist__item\"><span>✓</span><p>主動同你談及未來嘅計劃，而當中提及你。</p></div>\n<div class=\"article-checklist__item\"><span>✓</span><p>好願意同你傾偈、分享佢自己嘅生活。</p></div>\n<div class=\"article-checklist__item\"><span>✓</span><p>發生性行為前會花時間喺前戲、討好你。</p></div>\n<div class=\"article-checklist__item\"><span>✓</span><p>完事後會陪埋你身邊、喺床上一齊休息。</p></div>\n</div>\n<div class=\"article-check-panel article-check-panel--warning\">\n<h3>只想親密接觸的警號</h3>\n<div class=\"article-checklist__item\"><span>!</span><p>每次約會只係想去你屋企、佢屋企，唔想出街。</p></div>\n<div class=\"article-checklist__item\"><span>!</span><p>唔會經常帶埋你去見佢嘅朋友、屋企人。</p></div>\n<div class=\"article-checklist__item\"><span>!</span><p>冇興趣深入打聽你嘅過去、探討你嘅未來。</p></div>\n<div class=\"article-checklist__item\"><span>!</span><p>喺性愛中一味只顧滿足自己、唔願做前戲。</p></div>\n<div class=\"article-checklist__item\"><span>!</span><p>每次親熱都只係只顧自己快速完事。</p></div>\n<div class=\"article-checklist__item\"><span>!</span><p>過份強調性愛而無法接受你嘅婉拒。</p></div>\n</div>\n</div><h2>感情拯救所話你知</h2>\n<p>男人會有一種「<strong>性都係愛嘅一部分</strong>」嘅堅持。覺得呢個係佢哋表達、宣洩愛嘅一部分。作為佢嘅另一半：如果佢覺得佢每次出街都只係渴求性。咁就應該開口同佢表達你嘅諗法，真正愛你、唔係只當你係SP嘅人。係會理解你嘅諗法：但若果你講完佢都冇改變，或者你需要重新審視下佢平時嘅行為。並尋求其他解決方法啦！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>如果佢只對親密接觸有興趣，要先看清楚。</li><li>性大於理性</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2024-01-18",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-06-28",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8527680.jpg",
     "coverCredit": "Photo by Rizky Sabriansyah on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/girl-resting-her-chin-on-her-hands-8527680/",
@@ -2081,27 +1823,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手後怎樣重新站起來？把情傷變成成長的 4 個方法",
+    "coverCaption": "Asteria 相處教學：【性愛關係】約親都想上床？分辨他愛你還是只當你是床伴",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 44,
-    "title": "分手後應唔應該繼續搵前任？避免自斷復合機會",
-    "category": "復合挽回",
+    "title": "【出軌跡象】另一半早有警號？6 個蛛絲馬跡要留意",
+    "category": "關係危機",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "復合",
-    "summary": "好多客人搵我哋做諮詢、做儀式時，都會好糾結於「到底分咗手，仲應唔應該同對方聯絡？」其實只要你內心夠強大，知道自己做緊乜，咁聯絡都冇乜問題。",
-    "content": "<p>遇到「分手後應唔應該繼續搵前任」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先判斷「分手後應唔應該繼續搵前任」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>「分手後應唔應該繼續搵前任」不用一次過逼出完整答案</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>用行動判斷「分手後應唔應該繼續搵前任」</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>留住步伐才看得清「分手後應唔應該繼續搵前任」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>想修補「分手後應唔應該繼續搵前任」，先判斷仲有沒有窗口</h2>\n<p>如果你正面對「分手後應唔應該繼續搵前任」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>分手後應唔應該繼續搵前任</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>分手後應唔應該繼續搵前任</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>分手後應唔應該繼續搵前任</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "警號",
+    "summary": "關鍵就係在於你夠唔夠敏銳、敢唔敢面對、有冇搵到方法解決。",
+    "content": "<h2>好多人知道另一半出軌時</h2>\n<p>除咗傷心：可能都會話，「<strong>我真係完全估唔到佢會出軌，完全睇唔出！</strong>」，但其實，出軌唔係一朝一夕嘅事，而係一步一步嘅過程，有啲人其實早就喺言行之中，透露咗唔再專注於你哋關係，出軌，係有蛛絲馬跡可以發現！最明顯、最易觀察到嘅，一定係佢部電話！以前佢未出軌時，電話會周圍擺，唔介意俾你見到，當佢出軌後，部電話一定跟身，甚至開始特別保護電話，例如：個Mon貼用防偷窺貼、用電話時打側擺。</p>\n<p>心理學研究話：當人進入防備模式，大腦會自然選擇保護「<strong>秘密載體</strong>」，而電話正正就係記錄曖昧行蹤最重要嘅工具。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">警號 2</span><span>前言不對後語</span></h2>\n<p>尋日同你講，今晚約咗大學同學食飯。但食完返嚟，轉頭又話係同幾個同事食飯咋。當你一問多兩句，佢就會起曬鋼咁怪責你：「<strong>你咁多問題做乜？記錯咋嘛！大驚小怪！</strong>」，講嘅嘢唔一致，就代表有啲嘢佢唔想俾你知，或者記錯自己作過嘅劇本！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">警號 3</span><span>突然送啲好唔襯你嘅禮物</span></h2>\n<p>喺冇乜前設下，突然送禮物俾你，但你收到後，好明顯知道份禮物唔啱你。例如收到對耳環，但一戴落去就知顏色唔襯你款式又唔係你平時會揀嗰啲。因為有啲人會買兩份一樣嘅禮物，一份送俾你，另一份送俾「佢」！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">警號 4</span><span>佢身邊出現唔屬於你嘅小物件</span></h2>\n<p>你見到佢個袋掛住個可愛公仔，問佢咩嚟，佢話：「朋友送嘅」、「屋企人旅行手信」，但你明知佢平時唔鍾意掛公仔，更加冇講過最近有人送禮物，甚至有時你會發現佢袋入面有啲hand cream之類你未見過、又唔似係佢會用嘅嘢。</p>\n\n<p>呢啲唔屬於你，亦唔屬於佢嘅嘢，咁就好大機會係另一個人留低。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">警號 5</span><span>無啦啦開始打扮</span></h2>\n<p>以前佢明明話「用清水洗面都得啦」，但近排突然問你用邊啲護膚品好用。</p>\n\n<p>仲開始做Gym、去修眉，甚至開始買多咗衫，明顯係開始打扮，但同你出街時又唔見佢咁姿整，擺明係成日自己偷偷變靚，雖然突然轉性唔係壞事，但如果呢啲改變完全唔關你，咁就真係好可疑啦！</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">警號 6</span><span>佢屋企人講咗啲你唔知嘅故事</span></h2>\n<p>有日佢阿媽笑住同你講：「多謝你送個餅畀我呀，好好味！」，而你明明係冇送過，但佢阿媽好堅持咁話：「唔係你咩？佢話係佢女朋友送㗎。」，呢啲情況，可能係佢攞你個名去掩飾其他人送嘅嘢。</p>\n\n<p>怕屋企人懷疑！</p>\n<h2>感情拯救所話你知</h2>\n<p>雖然唔係所有出軌都有以上明顯嘅行為。但出軌從來唔係一夜之間，而係由心開始抽離，然後慢慢言行變得前後矛盾，多咗好多奇奇怪怪嘅行為，我哋唔係要你多疑，而係從日常生活入面觀察佢嘅行為。睇清楚佢有冇異樣：然後再及時搵方法解決！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>警號1 冇啦啦特別保錫住部電話。</li><li>警號4 佢身邊出現唔屬於你嘅小物件。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-04-19",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-05-10",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6669788.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-with-hands-on-head-bowing-down-on-cellphone-6669788/",
@@ -2129,75 +1865,63 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手後應唔應該繼續搵前任？避免自斷復合機會",
+    "coverCaption": "Asteria 相處教學：【出軌跡象】另一半早有警號？6 個蛛絲馬跡要留意",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 45,
-    "title": "分手後想復合點做？4 個重新振作與挽回步驟",
-    "category": "復合挽回",
+    "title": "【渣男技巧】從單身即地獄 3 看懂常見曖昧操控手法",
+    "category": "關係危機",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "復合",
-    "summary": "被狠狠地飛咗之後，你會點做？自怨自艾、沉醉喺失去嘅傷痛之中？定係咒罵對方？但如果一直係咁，只會令自己更hurt，更加對自己、對愛情冇信心！想幫自己搵返失去咗嘅自信？",
-    "content": "<p>遇到「分手後想復合點做」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>把「分手後想復合點做」拆成下一個小決定</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>「分手後想復合點做」要看後續行動</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>先穩住自己，再看「分手後想復合點做」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>「分手後想復合點做」還有沒有對話空間？</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「分手後想復合點做」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>面對「分手後想復合點做」，先不要把修補變成追逼</h2>\n<p>如果你正面對「分手後想復合點做」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>分手後想復合點做</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>分手後想復合點做</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>分手後想復合點做</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "警號",
+    "summary": "韓國Netflix超人氣節目《單身即地獄：第三季》製造咗好多話題性嘅經典時刻，尤其係男嘉賓李官熙「一拖三」、「一揀三」嘅行為大家嘅飯後話題。",
+    "content": "<h2>有睇過《單身即地獄3》嘅話</h2>\n<p>應該唔會忘記李官熙呢位自信爆棚嘅男嘉賓。</p>\n<p>佢自認為愛可以「公平分配」，節目中直指，佢可以同時將愛分俾3個女嘉賓：崔慧善 33%愛，尹廈情 33%愛，金奎利 33%愛，而自己仲可以擁有1%保留權，呢種糾纏關係令人瞠目結舌，甚至滿頭黑人問號，如果唔想現實中遇到呢類「中伏男」，咁要留意啲乜？</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">防伏 1</span><span>留意過度自信嘅高姿態</span></h2>\n<p>高挑有型嘅李官熙：喺節目剛開始就同幾名女嘉賓成功配對。當其他嘉賓問佢對哪位有好感，佢用手指指點名咗3位女嘉賓，用「<strong>她、她、她</strong>」稱呼，唔叫對方個名、用「<strong>點名式</strong>」嘅叫法。就好似自己高高在上咁，呢種過於自信、自大嘅行為好易令人反感。</p><div class=\"article-fact-card\">\n<span class=\"article-fact-card__label\">Fact Check</span>\n<p>所以一定要仔細觀察。自信嘅男人絕對冇問題：但過於自信，以變成自大，連基本尊重、禮貌都冇做足，就會令人卻步，如果你遇到相當有自信嘅男人，要留意、觀察下佢有冇嗰種，「<strong>高傲嘅過度自信</strong>」，一旦有，不如你諗清楚先決定要唔要繼續同佢發展。溫馨提示：只有靚仔先有「<strong>高傲嘅過度自信</strong>」？唔一定！有部分「<strong>普普男</strong>」都有呢種情況。</p></div><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">防伏 2</span><span>小心出現鍾意考驗你感情嘅If Boy</span></h2>\n<p>李官熙喺節目中表示：雖然佢對於主動嘅女性會抱有好感。但問題係，即便女嘉賓明確表達鍾意佢。佢仍然會創造無盡嘅「<strong>如果</strong>」嚟考驗對方。一直喺度用情境題不斷測試女嘉賓。呢種似乎永遠對女人抱持懷疑態度。嘗試考驗對方嘅行為：令佢喺節目中對佢有好感嘅女嘉賓崔慧善最後都黑面。直接請李官熙選擇其他女嘉賓。</p><div class=\"article-fact-card\">\n<span class=\"article-fact-card__label\">Fact Check</span>\n<p>與其做咁多測試：不如嘗試俾彼此更多信任、空間。部分男人處理感情謹慎係正常，尤其喺認識階段，有好多疑問、想了解對方嘅價值觀。避免後續價值觀、期待值落差，但如果佢無止境測試你嘅愛意，你可能就要諗清楚，到底佢真係謹慎，定係對你處於猶豫不決嘅狀態，溫馨提示，不論男女，呢種做法會直接令萌芽中嘅情感消失。</p></div><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">防伏 3</span><span>明顯有過度嘅佔有欲、小器</span></h2>\n<p>節目後期，李官熙同女嘉賓曹旻志火速發展。喺最後一次天堂島選擇中，佢直接指明曹旻志為約會對象、再限制對方嘅選擇。但曹旻志未按照佢嘅期望作出回應。於是李官照唔願再同對方溝通，仲對佢好冷漠，以致整喊咗個女仔，場面極為狗血。</p><div class=\"article-fact-card\">\n<span class=\"article-fact-card__label\">Fact Check</span>\n<p>所以唔好一律將佢嘅佔有欲當成負面行為。如果個男人喺認識階段，就過度干涉你嘅生活，冇適當俾你空間同尊重，出現過度嘅佔有欲，你要考慮下喺未發展成情侶時，係咪應該逃之夭夭！溫馨提示：但係適當地表達在乎感，向你表現出佢對你嘅嘅小小佔有欲。係會令人感到甜蜜。</p></div><h2>感情拯救所話你知</h2>\n<p>實境戀綜中難免夾雜住節目效果，可能李官熙喺節目中嘅表現被「綜藝化」，但佢性格不足之處係無可否認，呢種男人亦非Oppa獨有，香港都有唔少男人係咁，所以要喺確認關係前，先觀察清楚。</p>\n\n<p>或者問吓人意見，避免「當局者迷」，如果你確認關係前都好迷惘。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>小心出現鍾意考驗你感情嘅If Boy</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2025-01-19",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/01-asian-woman-morning-heartbreak.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "date": "2024-03-16",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-36812991.jpg",
+    "coverCredit": "Photo by Vitaly Gariev on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/02-asian-woman-mirror-self-care.jpg",
-        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8036689.jpg",
+        "caption": "內文配圖：【渣男技巧】從單身即地獄 3 看懂常見曖昧操控手法",
+        "credit": "Photo by SHVETS production on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/03-asian-woman-cafe-new-chapter.jpg",
-        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-17637241.jpg",
+        "caption": "內文配圖：【渣男技巧】從單身即地獄 3 看懂常見曖昧操控手法",
+        "credit": "Photo by K on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/002-breakup-recovery-reconciliation/04-asian-couple-cafe-reconciliation.jpg",
-        "caption": "內文配圖：分手後想復合點做？4 個重新振作與挽回步驟",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8560663.jpg",
+        "caption": "內文配圖：【渣男技巧】從單身即地獄 3 看懂常見曖昧操控手法",
+        "credit": "Photo by Timur Weber on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/couple-after-argument-8560663/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手後想復合點做？4 個重新振作與挽回步驟",
+    "coverCaption": "Asteria 相處教學：【渣男技巧】從單身即地獄 3 看懂常見曖昧操控手法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 46,
-    "title": "分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
-    "category": "復合挽回",
+    "title": "【同居指南】情侶同居前要想清楚的甜蜜陷阱與現實問題",
+    "category": "長期關係",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "復合",
-    "summary": "和平分手後繼續keep住曖昧，到底係仲有機會復合，定可能只係放唔低？點知大家仲有冇機會，定只係keep係拖泥帶水？",
-    "content": "<p>遇到「分手後仲有聯絡代表有機會復合嗎」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「分手後仲有聯絡代表有機會復」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>不要被「分手後仲有聯絡代表有機會復」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>從回覆判斷「分手後仲有聯絡代表有機會復」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「分手後仲有聯絡代表有機會復合嗎」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>「分手後仲有聯絡代表有機會復」不能只靠你一個人推</h2>\n<p>如果你正面對「分手後仲有聯絡代表有機會復合嗎」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<p>最後可以問自己一個簡單問題：如果今天不急著用情緒行動，下一個最穩陣的小步是甚麼？可能是先不發長訊息、先觀察一次對方反應，或者把想講的說話改成更短、更清楚。這樣做不是壓抑自己，而是令你有機會用較清醒的狀態處理關係。</p>\n<h2>常見問題</h2>\n<h3>「<strong>分手後仲有聯絡代表有機會復合嗎</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>分手後仲有聯絡代表有機會復合嗎</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>分手後仲有聯絡代表有機會復合嗎</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "長久",
+    "summary": "對方提出同居，或者你開始諗同另一半搬埋一齊。",
+    "content": "<h2>同居不是只得甜蜜，也是一場生活測試</h2>\n<p>很多情侶一想到同居，都會先想起甜蜜畫面：收工回家有人等你食飯，不開心時有人陪，想見面就不用再約時間。這些確實是同居吸引人的地方，但同居不只是浪漫安排，而是兩個人真正把生活重疊在一起。</p>\n<p>當你們住在同一個空間，金錢、家務、私隱、生活習慣和衝突處理方式都會被放大。拍拖時可以避開的細節，同居後每日都會出現，所以在搬到一起之前，一定要先看清楚自己是否準備好面對現實磨合。</p>\n<h2>金錢安排要先講清楚</h2>\n<p>同居後一定會牽涉錢：租金、水電煤、傢俬電器、日用品、買餸和外食開支，到底是 AA、按收入比例分，還是由其中一方負責多一些，都需要在同居前講清楚。</p><p>講錢未必浪漫，但不講才最容易傷感情。尤其是一起買了大型傢俬或電器，如果將來分開，東西怎樣處理、誰拿走、是否需要補錢，都應該有基本共識。清楚不是計較，而是減少日後因為模糊而爆發爭執。</p>\n<h2>私人空間會比想像中少</h2>\n<p>同居後，個人空間會變得很有限。以前吵架後可以各自回家冷靜，現在可能同一間屋、同一張床，想避開都不容易。你想靜一靜時，對方可能就在旁邊；你想做自己的事，對方也可能看得到。</p>\n<h2>所以同居前要先討論</h2>\n<p>大家需要多少獨處時間？吵架後可不可以暫時不說話？家中有沒有一個位置可以讓彼此冷靜？這些安排看似小事，但會直接影響你們能不能在同一個屋簷下舒服相處。</p>\n<h2>生活習慣會被放大</h2>\n<p>拍拖時大家通常會把最好的一面留給對方，但同居後，真實生活習慣很難再收起來。有人睡覺打鼻鼾，有人不愛收拾，有人煮完飯不洗碗，有人很在意廁所和房間整潔，這些都會變成每日要面對的細節。</p>\n<p>重點不是對方一定要完美，而是你能否接受，以及對方是否願意調整。如果某些習慣已經令你很反感，就不要期待同居後自然變好；相反，距離近了，摩擦通常只會更明顯。</p>\n<h2>家務分工要具體，不要靠自覺</h2>\n<div class=\"article-section-card\"><p>很多同居爭執，都不是因為不愛，而是因為日常責任分配不清。誰洗碗？誰倒垃圾？誰洗廁所？誰負責買日用品？如果全部靠「<strong>到時先算</strong>」，最後很容易變成其中一方默默承擔，另一方覺得自己沒有問題。</p><p>同居前可以先列出固定家務，再按大家時間、能力和習慣分配。男人不要假設女人一定會煮飯做家務，女人也不要假設男人一定會修理電器。真正成熟的同居，是把生活責任講清楚，而不是靠想像。</p></div><h2>同居不等於已經準備結婚</h2>\n<p>同居可以讓你更了解對方，也可以提早看到婚後可能出現的磨合位。但同居不等於結婚承諾，更不代表對方一定已經準備好下一步。</p>\n<p>如果你心底其實把同居當成結婚倒數，就更加要提前溝通清楚。不要默默設 deadline，然後等對方沒有跟上時才失望。真正穩定的關係，需要雙方都清楚知道同居的目的、期待和未來方向。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>同居不是只得甜蜜，也是一場生活測試。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題關乎長期安排，重點不是逼對方即刻承諾，而是看你們能否坦白談未來、責任和現實限制。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
     "sourceIg": "",
-    "date": "2025-09-05",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-12-07",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560252.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/portrait-of-a-woman-8560252/",
@@ -2225,27 +1949,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：分手後仲有聯絡代表有機會復合嗎？3 個判斷重點",
+    "coverCaption": "Asteria 相處教學：【同居指南】情侶同居前要想清楚的甜蜜陷阱與現實問題",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 47,
-    "title": "別讓「感建分」毀掉愛情：太快判死刑前先看這幾點",
-    "category": "戀愛心理",
+    "title": "【放閃心理】情侶越放閃越幸福嗎？拆解社交平台背後的不安",
+    "category": "情緒修復",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "心理",
-    "summary": "忍委屈、忍唔開心——忍到關係變哂質都仲死頂。去到呢一代，又變成另一個極端：感建分。「唔開心？分手囉。」，「佢咁樣？放生佢啦。」，一個盲目啞忍，一個絕情放棄。但其實仲有一個方法，就係「修補」。好多人一有問題，就急住換人：聲稱成年人的世界只篩選，不教育。",
-    "content": "<p>遇到「別讓「感建分」毀掉愛情」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「別讓感建分毀掉愛情」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先看對方是否仍願意談「別讓感建分毀掉愛情」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「別讓「感建分」毀掉愛情」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>別讓「別讓感建分毀掉愛情」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先判斷「別讓感建分毀掉愛情」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>先看這是短暫扣分，還是真的不適合</h2>\n<p>如果你正面對「別讓「感建分」毀掉愛情」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>別讓「感建分</strong>」毀掉愛情」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>別讓「感建分</strong>」毀掉愛情」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>別讓「感建分</strong>」毀掉愛情」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "療癒",
+    "summary": "有時喺IG見到成日放閃嘅情侶，以為佢哋好幸福，點知過咗冇耐，就發現佢哋分咗手。",
+    "content": "<h2>拖手影相</h2>\n<p>情侶對戒：Story互Tag，成個Social Media都係閃到眼殘嘅content。越放閃、關係係咪必然係越sweet？放閃背後：有冇可能其實係不安嘅代名詞？</p><h2>曬恩愛等於自我確認</h2>\n<p>好多情侶瘋狂喺IG呢啲Social Media上面放閃。可能係想自我確認，Confirm自己「<strong>我係被愛緊嘅</strong>」，尤其係喺段關係唔太穩陣嗰陣，有啲人會更加想靠放閃嚟穩定情緒、自我說服。因為佢覺得段感情越唔穩定，內心就會越驚，於是當自己越唔肯定就會越想說服自己。假想佢身處喺一段幸福嘅關係入面。</p><h2>恩愛人設</h2>\n<p>有啲情侶明明成日冷戰、嗌交、溝通有問題。但仍然會喺IG上放閃狂tag對方。因為唔想俾其他人知佢哋有問題，想令其他人相信「<strong>我哋嘅感情仲好好地</strong>」，當佢越係冇信心，就越係想外界validate自己同另一半嘅關係。想人哋羨慕你，想人哋覺得你好幸福。</p><h2>但係！</h2>\n<p>唔好一竹篙打一船人，有啲人曬恩愛並唔係為咗炫耀或者證明自己好幸福。而係真心想紀錄當下，而且有研究話，喺social media紀錄情侶之間嘅生活。可以加強伴侶間嘅承諾感，提升安全感 &amp; 滿足感，所以適當地放閃，都係一件好事。</p><h2>而係你係咪發自內心去分享</h2>\n<p>重點唔係放唔放閃：當你哋係處於舒服、自然、穩定嘅關係狀況。而且彼此都肯喺social media放閃。咁呢啲曬恩愛就唔會係假，而係因為你哋相處得開心，所以想記錄低，你被愛、所以想分享，呢啲係最真、最自然嘅放閃。</p><h2>你想放閃，但另一半唔鍾意？</h2>\n<p>唔係代表佢唔愛你，只係佢愛嘅方式唔係公開型。</p>\n<p>有啲人愛得深，但表達方式內斂，相愛唔係要佢肯做你鍾意嘅方式，而係大家搵到一個平衡位，就算佢唔想po大家嘅相，都可以由你po，試吓問對方：「你介唔介意我自己 po？我唔 tag你都得」，令對方知道你尊重佢，同時又唔壓抑自己想分享嘅感受。</p>\n<h2>感情拯救所話你知</h2>\n<p>一段關係健唔健康：唔係靠social media上面你哋嘅合照獲得幾多like。亦唔係靠你哋多唔多喺social media上面放閃。而係靠你喺日常入面有冇被尊重，你喺呢段關係入面有冇被理解，同對方一齊係咪夠安心，老實講，你唔使日日放閃，因為你日日都感受到大家嘅愛，你亦都唔需要向其他人證明自己被愛。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>放閃不等於關係穩定</li><li>形象越完美，越要看私下相處</li><li>不安需要回到關係真實狀態</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-07-06",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-16235192.jpg",
     "coverCredit": "Photo by Eduardo Barrientos on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/kissing-couple-on-white-background-16235192/",
@@ -2273,27 +1991,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：別讓「感建分」毀掉愛情：太快判死刑前先看這幾點",
+    "coverCaption": "Asteria 相處教學：【放閃心理】情侶越放閃越幸福嗎？拆解社交平台背後的不安",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 48,
-    "title": "情傷後如何自我修復？治癒內心的實用步驟",
-    "category": "情緒修復",
+    "title": "【吵架地雷】情侶嗌交 5 大禁區：踩中容易傷感情",
+    "category": "溝通相處",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "療癒",
-    "summary": "一場突發嘅意外，令自己一夜之間就失去咗另一半後，到底應該點樣自我recover、點樣先可以治癒自己嘅內心？",
-    "content": "<p>所承受嘅痛同普通分手完全唔同 嗰種感覺可能會係整個人生嘅天崩地裂，明明前一日仲好好地 但第二日你要接受，你最愛嘅人再唔會出現。</p>\n<p>絕對唔係一時三刻就能夠處理 我哋都明白你內心嘅傷害 知道你而家需要嘅係正確嘅治癒流程</p>\n<h2>情傷修復有階段，不需要逼自己即刻好返</h2>\n<h3>第一階段：震盪期（Shock）</h3>\n<p>突發意外之後人會進入震盪狀態 反應麻木、好似唔真實，呢個階段唔需要逼自己堅強，你唯一需要做嘅係；✔ 有正常休息；✔ 俾人陪住；✔ 唔好做重大決定 身體同大腦仲未 catch up 到現實係正常，唔好逼自己接受現實。</p>\n<h3>第二階段：深層悲傷</h3>\n<p>當震盪慢慢減退 真正嘅痛就會湧上嚟 好多人成日卡住喺呢個階段係因為，唔敢喊、唔敢諗、唔敢講、唔敢承認佢走咗，所以你可以做嘅係；❤️‍🩹 搵信任嘅人聽你講；❤️‍🩹唔好壓抑、盡情喊。</p>\n<h3>第三階段：重建</h3>\n<p>重建期嘅核心唔係忘記 而係理解、整合，你要慢慢咁帶住悲傷向前行，要開始搵返你以前你鍾意做嘅嘢，或者投入一啲你本身嘅能力 搵要啲新嘅可能性，例如學啲新技能、開拓新嘅圈子，搵返社交支援，當你搵返自己嘅身份，你自然會踏入重建期。</p>\n<h3>第四階段：新生</h3>\n<p>到咗呢個階段 你會可以慢慢提起佢 分辨到佢嘅人生同你嘅人生，然後將佢放喺心入面 而唔係生活中心 重新學識點樣帶住過去嘅事去生活。</p>\n<p>你唔需要急住逼自己 recover，亦唔需要壓抑悲傷。如果行到某一個階段覺得自己卡住，可以先停低照顧情緒，再用日記、傾訴或專業支援慢慢整理下一步。</p>\n<h2>慢慢重建生活，才是真正復原</h2>\n<p>情傷修復不是逼自己忘記，而是把生活重心一點一點放回自己身上。當你開始重新安排日常、找回興趣、照顧睡眠和情緒，你會慢慢發現，復原不是某一天突然不痛，而是你不再只被這段關係定義。</p>\n<h2>常見問題</h2>\n<h3>情傷修復要幾耐先正常？</h3>\n<p>沒有固定時間。有人幾星期好一點，有人需要幾個月甚至更長。重點不是快，而是你有沒有慢慢恢復睡眠、生活節奏和自我價值感。</p>\n<h3>如果一直走不出情傷，第一步可以做咩？</h3>\n<p>先不要逼自己忘記，可以把情緒分成思念、不甘心、失落和害怕，再逐步處理。你需要的是修復，不是立刻變得沒事。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
+    "imageLabel": "溝通",
+    "summary": "不論係情侶定係夫婦，「床頭打交床尾和」係咪真係必然。",
+    "content": "<h2>同另一半嗌交時</h2>\n<p>當大家都處於火遮眼嘅情況，可能會無心講出啲好傷人嘅說話，或者做出啲你以為OK，但卻令對方好傷心或好嬲嘅行為，呢啲種種都可能會令對方心碎，甚至影響你哋嘅關係，齊齊避開地雷區啦！</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 1</span><span>嗌交就係要贏！</span></h2>\n<p>好多人一嗌交就淨係想贏，但咁樣只會傷感情，其實嗌交唔係為咗贏，而係透過爭執後嘅溝通解決問題，試下停一停、聽下雙方嘅諗法，唔好一味淨係諗住要嗌贏對方，即使錯嘅係對方，都可以俾個落台階佢，唔好只顧自己感受，否則大家嘅關係只會越來越疏遠。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 2</span><span>死要面子！</span></h2>\n<p>明明自己有錯：但當感覺到對方嬲咗、被對方不斷指責。</p><p>就會唔想認錯，仲話對方指責自己係唔啱嘅行為，但咁樣只會令問題更複雜，認錯唔係失敗，避免燥底、放低身段、主動認錯，唔好淨係死要面、唔俾人鬧得，反而能夠令彼此更快解決問題。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 3</span><span>沉默當冇事！</span></h2>\n<p>如果因為太嬲而唔出聲，諗住沉默就可以令對方自動認錯，又或者就算自己嬲緊對方，但都唔會講出嚟、想等對方自己發現佢做錯。其實咁樣只會令問題加劇，沉默唔係解決問題嘅辦法，如果你嬲咗對方就唔好收收埋埋，試下坦誠表達自己嘅感受，咁樣先可以避免誤會加深！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 4</span><span>太嬲Block埋對方！</span></h2>\n<p>一嬲就一直唔應機、block埋對方。唔俾對方有機會同自己討論或者道歉。令雙方失去溝通嘅渠道：對方可能唔知道你為乜嬲，或者想Say Sorry都冇機會。呢種逃避只會令情緒堆積，最終變成更大嘅衝突，即使有矛盾都應該冷靜落嚟，俾彼此有表達感受嘅空間，咁樣先可以重建信任同理解。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 5</span><span>錯誤嘅攤牌時機！</span></h2>\n<p>有時一嬲起上嚟：會忍唔住喺公眾場合或者朋友面前爆發。但咁樣唔單止會雙方尷尬，亦容易將情緒放大，講出嚟嘅說話都可能會更尖銳，令矛盾更加激化，要嗌交一定要私下處理，搵一個安靜嘅地方「<strong>開波</strong>」攤牌。等雙方可以喺私下解決分歧。</p><h2>感情拯救所話你知</h2>\n<p>記住！有啲說話一旦講咗出嚟就收唔返，有啲行為一旦做咗就後悔都冇用，同另一半嗌交的確係避無可避，但千萬唔好俾一時嘅衝動毀咗你哋嘅感情。溝通係解決問題嘅關鍵！試下冷靜啲：過咗風頭火勢後，雙方再慢慢表達自己嘅感受，先可以將嗌交變成提升關係嘅途徑。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>死要面子</li><li>沉默當冇事</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-09-25",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6690784.jpg",
     "coverCredit": "Photo by Hải Nguyễn on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-using-a-cellphone-6690784/",
@@ -2321,27 +2033,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情傷後如何自我修復？治癒內心的實用步驟",
+    "coverCaption": "Asteria 相處教學：【吵架地雷】情侶嗌交 5 大禁區：踩中容易傷感情",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 49,
-    "title": "什麼都要你想？卸膊型伴侶的心理與應對方法",
-    "category": "戀愛心理",
+    "title": "【吸引力法則】可以招來好愛情嗎？先避開常見誤區",
+    "category": "曖昧桃花",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "心理",
-    "summary": "你愈幫，佢愈唔用腦。關係失衡係責任錯配，需要重新平衡翻。所以唔好再幫佢諗啦，健康嘅關係係要一齊建立㗎。一齊拆解下佢地唔用腦嘅心理啦。",
-    "content": "<p>約食飯你揀、去邊玩你決定、 連嘈交之後點和好，都係你開口諗方法</p>\n<p>呢件事，未必單純係對方懶。</p>\n<p>其實呢個係一種長期形成嘅互動模式 對方習慣咗「<strong>等你諗</strong>」， 將「<strong>思考責任</strong>」推哂比你。</p>\n<p>而你亦不知不覺親手將佢變成巨嬰 成為卸膊機制嘅推手。</p>\n<p>當對方話「<strong>我唔識</strong>」、「<strong>你幫我啦</strong>」，你最後都幫佢做埋 久而久之 佢大腦會學到一件事：「<strong>我唔做，都會有你幫我完成</strong>」，呢個就係心理學入面嘅「強化循環 (Reinforcement Loop) 」 你每一次接手 都等於訓練緊佢繼續唔需要負責。</p>\n<h2>卸膊心理2:</h2>\n<p>人天生會傾向「<strong>用最少能量生活</strong>」 思考、計劃、記憶全部都好費神，如果關係入面一直有人幫手處理，對方就會自然選擇：「<strong>唔用腦都冇問題</strong>」，但結果係能量成本全部都轉移咗去你身上。</p>\n<h2>回到「什麼都要你想」本身，要看這幾個判斷位</h2>\n<p>1.持續守住界線 → 穩定嘅反應，先會慢慢改變呢種依賴模式，當你開始收手，未必即刻見到改變，對方亦都可能會唔習慣 但呢個過程本身就係要慢慢重新調整界線，一定要比啲時間同耐性呀。</p>\n<p>如果你想修補一段令你筋疲力盡嘅關係，第一步不是繼續接手所有責任，而是讓對方知道：關係需要兩個人一齊用腦、一齊承擔。</p>\n<h2>常見問題</h2>\n<h3>伴侶什麼都要我想，是懶還是不重視？</h3>\n<p>兩者都有可能。要看他是能力不足、不懂安排，還是明知你辛苦仍然把責任推給你。</p>\n<h3>卸膊型伴侶可以點樣溝通？</h3>\n<p>不要只說「你可唔可以主動啲」，而是把責任講清楚，例如邊件事由誰決定、幾時完成、做不到要如何補救。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DYAD0qsmQ6p/",
-    "date": "2026-05-06",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "曖昧",
+    "summary": "吸引力法則不是單靠許願等愛情出現，而是幫你看清自己想要的關係、調整狀態、守住界線，再用行動吸引真正合適的人。",
+    "content": "<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">誤區一</span><span>以為只要許願，對方就會自動靠近</span></h2>\n<p>願望本身不是問題，問題是願望太空泛，最後只變成每日等訊息、等奇蹟、等對方突然改變。真正落地的吸引力法則，應該由「<strong>我要佢愛我</strong>」變成「<strong>我想要一段怎樣被對待的關係</strong>」。</p>\n<p>你可以具體寫低你想要的相處狀態，例如對方願意溝通、有穩定回應、尊重界線、願意共同解決問題。當你把願望寫成可觀察的行為，你會更清楚分辨眼前的人是否真的適合，而不是只被一時甜蜜牽住。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">誤區二</span><span>把高頻率變成不准自己難過</span></h2>\n<p>有些人會以為吸引好愛情就一定要保持開心、不能焦慮、不能失落。結果明明很受傷，仍然逼自己假裝沒事，甚至怪自己「<strong>是不是負能量太重，所以吸引不到對的人</strong>」。這樣反而會令情緒更壓抑。</p>\n<p>真正的高頻率不是永遠笑著，而是你願意誠實面對自己的感受。你可以承認自己想念、失望、不安，同時不讓這些情緒控制你的行動。先安定自己，再決定要不要主動、等待還是收回，這才是比較成熟的吸引力。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">誤區三</span><span>只想吸引對方，卻忘記自己值得被好好對待</span></h2>\n<p>如果你的願望只圍繞「<strong>令佢返嚟</strong>」「<strong>令佢覆我</strong>」「<strong>令佢只愛我</strong>」，你很容易把自己的價值交到對方反應手上。對方一冷淡，你就覺得自己不夠好；對方一熱情，你又立刻把所有底線放低。</p>\n<p>好愛情不是靠你不停降低標準換來。你可以喜歡一個人，也要記得看他是否有能力穩定愛你、尊重你、珍惜你。吸引力法則最重要的部分，不是叫你追得更用力，而是提醒你不要離開自己太遠。</p>\n<h2>真正有效的吸引力，是重新回到自己身上</h2>\n<p>當你把焦點由「<strong>佢幾時會愛我</strong>」轉回「<strong>我想成為怎樣的人、我想過怎樣的關係</strong>」，你的狀態會開始不一樣。你會較少用恐懼做決定，也不會一有風吹草動就亂傳訊息、亂試探、亂猜測。</p>\n<p>這種穩定感會影響你的說話方式、選擇方式和相處方式。你不需要扮神秘，也不需要用冷暴力測試對方；你只是慢慢變得更清楚自己，知道甚麼值得靠近，甚麼應該放慢。</p>\n<h2>願望要配合行動，也要觀察現實</h2>\n<p>吸引力法則不是逃避現實，而是令你更有方向地行動。如果你想脫單，就要讓自己有機會認識人；如果你想修補關係，就要先看清你們卡住的位置；如果你想復合，也要判斷對方是否仍有窗口，而不是只靠想像支撐自己。</p>\n<p>你可以保留願望，但同時觀察對方行動。對方是否有穩定回應？是否願意溝通？是否只在孤單時才找你？當願望和現實放在一起看，你會更容易分辨這段關係是可以推進，還是只是在消耗你的期待。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>以為只要許願，對方就會自動靠近。</li><li>只想吸引對方，卻忘記自己值得被好好對待。</li><li>真正有效的吸引力，是重新回到自己身上。</li><li>願望要配合行動，也要觀察現實</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "sourceIg": "",
+    "date": "2024-02-14",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5184202.jpg",
     "coverCredit": "Photo by Bethany Ferr on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-in-yellow-crew-neck-t-shirt-beside-a-woman-5184202/",
@@ -2369,27 +2075,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：什麼都要你想？卸膊型伴侶的心理與應對方法",
+    "coverCaption": "Asteria 相處教學：【吸引力法則】可以招來好愛情嗎？先避開常見誤區",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 50,
-    "title": "對方出軌前有跡象嗎？6 個容易忽略的變心信號",
-    "category": "關係危機",
+    "title": "【男人心理】如何讓男人離不開你？先懂他的情感需求",
+    "category": "戀愛心理",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "警號",
-    "summary": "出軌絕對唔係一日造成！但出軌對象嘅行為變化絕對係有跡可尋。關鍵就係在於你夠唔夠敏銳、敢唔敢面對、有冇搵到方法解決！",
-    "content": "<h2>信任開始動搖時，先看清眼前的信號：回到「對方出軌前有跡象嗎」來看</h2>\n<p>除咗傷心 可能都會話：「<strong>我真係完全估唔到佢會出軌，完全睇唔出！</strong>」，但其實 出軌唔係一朝一夕嘅事 而係一步一步嘅過程 有啲人其實早就喺言行之中，透露咗唔再專注於你哋關係 出軌，係有蛛絲馬跡可以發現。</p>\n<p>最明顯、最易觀察到嘅 一定係佢部電話</p>\n<p>以前佢未出軌時 電話會周圍擺 唔介意俾你見到，當佢出軌後，部電話一定跟身 甚至開始特別保護電話 eg：個Mon貼用防偷窺貼、用電話時打側擺，心理學研究話，當人進入防備模式 大腦會自然選擇保護「<strong>秘密載體</strong>」，而電話正正就係記錄曖昧行蹤最重要嘅工具。</p>\n<h2>🧨 警號2 前言不對後語</h2>\n<p>尋日同你講 今晚約咗大學同學食飯，但食完返嚟 轉頭又話係同幾個同事食飯咋，當你一問多兩句 佢就會起曬鋼咁怪責你：「<strong>你咁多問題做乜？記錯咋嘛！大驚小怪！</strong>」，講嘅嘢唔一致 就代表有啲嘢佢唔想俾你知，或者記錯自己作過嘅劇本。</p>\n<h2>信號清楚後，為「對方出軌前有跡象嗎」定界線</h2>\n<p>以前佢明明話「<strong>用清水洗面都得啦</strong>」，但近排突然問你用邊啲護膚品好用 仲開始做Gym、去修眉，甚至開始買多咗衫，明顯係開始打扮 但同你出街時又唔見佢咁姿整 擺明係成日自己偷偷變靚，雖然突然轉性唔係壞事，但如果呢啲改變完全唔關你。</p>\n<p>咁就真係好可疑啦！</p>\n<p>有日佢阿媽笑住同你講：「<strong>多謝你送個餅畀我呀，好好味！</strong>」，而你明明係冇送過 但佢阿媽好堅持咁話：「<strong>唔係你咩？佢話係佢女朋友送㗎。</strong>」，呢啲情況 可能係佢攞你個名去掩飾其他人送嘅嘢 怕屋企人懷疑。</p>\n<h2>常見問題</h2>\n<h3>出軌前一定有明顯跡象嗎？</h3>\n<p>不一定。有些變化很細，例如手機界線突然改變、情緒疏離、行蹤含糊、親密感下降。重點是多個信號是否同時反覆出現。</p>\n<h3>發現可疑信號應該直接質問嗎？</h3>\n<p>可以先整理事實，不要只靠情緒推測。開口時講具體觀察和感受，避免一開始就定罪，否則對方很容易轉移焦點。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DJdh1yHplSG/",
-    "date": "2025-05-10",
-    "tags": [
-      "信任危機",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "講起「情緒價值」，好多人第一時間會諗：女仔最需要俾人氹、被理解，但其實，男人先係最渴望有人俾佢滿滿嘅情緒價值，佢哋內心深處，係好想被肯定、被支持，只係佢哋唔慣講、唔識表達，你又有冇提供足夠嘅情緒價值俾另一半。",
+    "content": "<h2>講起「<strong>情緒價值</strong>」</h2>\n<p>女仔最需要俾人氹、被理解，但其實，男人先係最渴望有人俾佢滿滿嘅情緒價值。佢哋內心深處，係好想被肯定、被支持，只係佢哋唔慣講、唔識表達，你又有冇提供足夠嘅情緒價值俾另一半？</p><h2>男人咁堅強等於唔需要情緒價值？</h2>\n<p>其實男人都需要被認同、被理解、被支持。佢哋喺社會上成日被定型為：「<strong>堅強</strong>」、「<strong>識解決問題</strong>」，但冇人問佢哋：「<strong>你今日開唔開心？</strong>」、「<strong>辛唔辛苦？</strong>」，所以就算佢內心好攰都唔敢講出口。因為怕俾人覺得軟弱，但咁唔代表佢哋唔需要情緒價值。</p><h2>情緒價值等於無形魅力</h2>\n<p>如果你識俾情緒價值俾另一半，男人會由心感受到溫暖，佢會覺得「你唔止係鍾意我，仲係明白我」，係你吸引佢、令佢離唔開你嘅無形魅力。</p>\n\n<p>佢會對你更加依賴，會將你放喺心入面最重要嘅位置，甚至唔想失去你，咁樣嘅關係之下，你哋嘅感情就自然會更加穩定！</p>\n\n<h2>男人需要嘅情緒價值？</h2>\n<div class=\"article-compare-grid article-compare-grid-labelled\"><div class=\"article-compare-card\"><span>被肯定、被崇拜</span><p>渴望有心認同自己嘅能力、價值。想喺自己遇到困擾時，有人對自己提供情感上嘅支持。男人內心深處有一種「<strong>保護者</strong>」嘅本能，所以俾佢感受到他嘅存在對你係不可或缺。咁到底要點做？一齊睇落去啦！</p><h2>稱讚佢而非奉旨覺得佢應該要做！</h2>\n<p>男人需要認同感：當佢付出咗努力時，如果你能夠留意到佢做咗啲乜，再開口讚佢，佢覺得自己被重視，例如：佢收工返屋企仲煮埋飯俾你。</p><p>「嘩？你終於記得要煮飯俾我？」，「嘩！今日食得好滿足，多謝你對我咁好」。</p>\n<h2>成為佢情緒上嘅「<strong>避風港</strong>」</h2>\n<p>男人失意嘅時候：比任何時候都需要你嘅陪伴，佢希望你唔嫌棄佢、唔批評佢，令佢feel到「<strong>就算我唔好，你都仲係度</strong>」，就算佢嘅生活上、工作上失意、做得唔好。你都願意繼續俾鼓勵佢、支持佢，例如：佢工作壓力大/返工唔順利。「<strong>你咁廢架？點解咁都搞唔掂？</strong>」，「我信你會有辦法解決，唔使急，慢慢嚟，我會一直喺你身邊！」。</p><h2>佢做錯事都要幫佢搵落台階</h2>\n<p>好多男人自尊心重：當佢做錯決定、失咗手，內心已經有內疚同挫敗，如果你第一時間鬧佢、數佢不是，會將佢推到防禦模式，令佢覺得「你唔明我，你唔尊重我」，但如果你先認同佢當下感受、唔批評佢失敗。</p><p>佢會feel 到「你係理解佢、站喺佢嗰邊」，就會更重視你，例如：佢投資失利蝕咗錢，「都叫咗你唔識就唔好亂買股票，而家蝕曬啦！」，「唔好因為一次蝕錢就自責，呢次唔好彩啫，唔代表下次都咁黑仔！」。</p>\n<h2>感情拯救所話你知</h2>\n<p>俾男人情緒價值：唔係要你犧牲自己，亦唔係代表要你講違背良心嘅說話。或者要將自己嘅地位擺到好低，而係要透過理解佢、肯定佢，令佢覺得自己喺你面前可以放低防備。做返最真嘅自己：而你亦會因為咁樣，可以慢慢成為佢生命中無可取代嘅人。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>男人咁堅強等於唔需要情緒價值</li><li>男人也需要被肯定和需要</li><li>稱讚佢而非奉旨覺得佢應該要做</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>看男人心態時，不要只聽他一刻怎樣講，也要看他之後有沒有做到、願不願意承擔，以及你在相處裡是否感到安心。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "sourceIg": "",
+    "date": "2025-04-18",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560743.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-thinking-8560743/",
@@ -2417,27 +2117,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方出軌前有跡象嗎？6 個容易忽略的變心信號",
+    "coverCaption": "Asteria 相處教學：【男人心理】如何讓男人離不開你？先懂他的情感需求",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 51,
-    "title": "對方事事反駁你？反駁型人格背後的輸不起心理",
-    "category": "溝通相處",
+    "title": "【第一次約會】初次 Dating 有咩禁忌？提高拍拖成功率",
+    "category": "曖昧桃花",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "溝通",
-    "summary": "無論你講啲乜，都總係俾另一半反駁？到底佢係鍾意反對你，定係有「反駁性人格」？自己又可以點同呢種另一半相處？",
-    "content": "<p>無論你講乜 佢都一定要反駁</p>\n<p>明明你只係想同佢想傾吓偈 但對方總係不自覺地會自動進入辯論模式，令每次溝通都變成比賽 呢種「<strong>反駁型人格</strong>」真係好難相處！</p>\n<p>Personality） 係一種習慣性以反對、挑戰他人觀點作為自我存在確認嘅人格傾向，對方未必真係想爭輸贏，只係想透過「<strong>反駁</strong>」來證明自己有主見 想證明自己嘅想法唔會俾他人左右，但喺感情入面，呢種慣性反駁就會變成情感疏離。</p>\n<h2>與反駁型人格嘅另一半嘅相處之道</h2>\n<p>建議，1️⃣ 不要急住「<strong>說服</strong>」對方 對反駁型人格嘅人嚟講，「<strong>被說服</strong>」＝「輸」，所以當你越想解釋清楚，對方就越想反駁 所以你應該將對話轉成「<strong>分享式</strong>」語氣，「<strong>我只係想分享另一個角度嘅可能性</strong>」，「<strong>你講得好啱，不過我想提出另一個想法</strong>」。</p>\n<p>令對方唔會一嚟就用防禦姿態去回應</p>\n<h2>把「對方事事反駁你」講成對方聽得懂的說法</h2>\n<p>「<strong>反駁</strong>」並非對方嘅單純嘅攻擊，而是一種防衛機制，呢種反駁行為，其實是內在係想表達：「<strong>請你明白我、請你肯定我</strong>」，所以你應該先回應對方嘅情緒需求，令對方感受到俾你理解同接納，咁佢就會慢慢降低防衛心，你哋真正嘅溝通先會開始。</p>\n<p>同反駁型人格相處 其實並唔需要事事都讓步到底，而係應該要學識喺對抗中維持連結 當你不再驚對方會反駁，亦都唔會單單係想要一個人想贏過對方 咁對方都會開始學識點同你好好溝通！</p>\n<h2>常見問題</h2>\n<h3>面對「對方事事反駁你」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「對方事事反駁你」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「對方事事反駁你」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DUyCNI4kjm4/",
-    "date": "2026-02-15",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "曖昧",
+    "summary": "喺展開一段關係之前，女仔會觀察對方嘅人品、考慮佢嘅條件先決定要不要在同佢喺埋一齊，但其實男人亦同樣會觀察女人，再決定係咪真係想同佢一齊、長遠發展。",
+    "content": "<h2>無論你拍過幾多次拖</h2>\n<p>或者自以為係「戀愛高手」，同男人初次Dating，可能會無意中踩中地雷，如果你想初次約會後，仲有下次機會，記得留意以下Tips！</p>\n\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 1</span><span>相機食先、IG行先</span></h2>\n<p>個個女仔都係Foodie，總係想打卡、影下美食、Po下IG，但如果你同個男仔去食嘢，就淨係掛住幫食物影相，講究擺位構圖、搵filter，影到啲嘢食凍晒、搞一大輪都未食得。</p>\n\n<p>仲要叫佢幫你影埋打卡相，最後只會冷落咗佢，所以唔好只重視將食物Po上IG，因為所食嘅嘢唔係重點，約會嘅人同感覺先係最重要。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 2</span><span>過分身體接觸</span></h2>\n<p>唔係個個男人都接受到主動嘅女仔。第一次約會盡量唔好太多肢體互動。例如主動攬佢、拖佢隻手，如果有太多肢體觸碰嘅小動作，好容易會令對方覺得你很猴擒、隨便。甚至會因為咁樣有唔自在嘅感覺。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 3</span><span>發放負能量</span></h2>\n<p>同心儀對象出街：心情一定係開心興奮，唔會有人想喺初次約會就聽對方放負。例如：講屋企人/公司壞話，好多女仔冇為意成日會講「<strong>但係</strong>」、「<strong>不過</strong>」、「<strong>反正</strong>」呢啲偏負面嘅轉折語。例如：佢：「<strong>聽日我哋再約出嚟玩</strong>」，你：「<strong>但係聽日天氣唔好喎</strong>」，對方咁熱情，點知你成盤冷水照頭淋。會令佢覺得你唔想再應約。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 4</span><span>噴香水</span></h2>\n<p>第一次約會女仔會精心打扮，可能都會噴下香水，但就算香水只係好清新、淡味，都唔建議噴，因為你唔知個男仔會唔會對味道敏感。如果佢有鼻敏感，喺約會過程中因為聞到你嘅香水而唔舒服。雖然唔會直接扣你分：但會影響佢腦海中對約會嘅愉快度。令佢產生「<strong>同你Dating其實都唔係好開心</strong>」嘅錯感。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">禁忌 5</span><span>談及避忌話題</span></h2>\n<p>喺對方冇詢問嘅前提下，有意無意地提到你嘅前度，或者問佢嘅前度嘅事，好易會令佢對你嘅印象大打折扣，同屋企人嘅話題，都建議避免主動談及，因為你唔知道佢同屋企人關係如何。萬一佢同屋企人關係唔好，你又提及相關嘅問題會令佢陷入負面回憶。影響到接下嚟成個約會嘅情緒、觀感。</p><h2>如果約會非常順利</h2>\n<p>你會發現你哋雙方會逐漸有「<strong>動作同步</strong>」，例如：同時大笑、把身體往前傾、開始表現自我。一旦出現呢啲同步動作：彼此就會產生一種和諧感，表現出大家心理嘅自在，到時先再有進一步嘅交流、肢體接觸都唔遲！</p><h2>感情拯救所話你知</h2>\n<p>如果你發現同個心儀對象出完一次街。好似就再冇下文：可能係唔覺意犯咗上述嘅禁忌，不過放心！你仲有挽救機會。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>發放負能量</li><li>第一次約會重點是舒服得體</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "sourceIg": "",
+    "date": "2024-03-22",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7188524.jpg",
     "coverCredit": "Photo by Eren Li on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/photo-of-man-and-woman-chilling-in-the-balcony-7188524/",
@@ -2465,27 +2159,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方事事反駁你？反駁型人格背後的輸不起心理",
+    "coverCaption": "Asteria 相處教學：【第一次約會】初次 Dating 有咩禁忌？提高拍拖成功率",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 52,
-    "title": "另一半低潮想一個人靜下？不打擾也能陪伴的方法",
-    "category": "戀愛心理",
+    "title": "【出軌修復】貪玩出軌後想補救？4 招重建信任",
+    "category": "關係危機",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "心理",
-    "summary": "你越想幫，佢反而越想退？ 其實問題未必係你唔夠關心，而係當對方處於低潮，你關心嘅方式有時會變成佢眼中嘅「壓力源」。",
-    "content": "<p>💣 不斷追問原因 💣 俾好多建議 💣 逼佢快啲「<strong>振作</strong>」，但佢嘅反應係將自己越收越埋，甚至開始話「<strong>我想靜下</strong>」，其實未必係你做錯啲咩，而係對方嘅「<strong>防禦Mode On</strong>」。</p>\n<p>當一個人處於低潮，大腦會偏向「<strong>防禦狀態</strong>」，對建議同壓力特別敏感，呢個時候，方式比內容更重要 方法1：情緒價值 &gt;，解決問題 試下將「<strong>你應該點做</strong>」改為共感式回應：。</p>\n<ul><li>「<strong>聽得出你呢排真係好攰</strong>」</li></ul>\n<ul><li>「<strong>feel到你好辛苦，我喺度</strong>」</li></ul>\n<p class=\"article-keyline\">重點： 俾對方感受⭕️「<strong>被理解</strong>」 ❌「<strong>被評價</strong>」 心理學稱之為「<strong>情緒共感</strong>」—— 當防禦感消失，你講嘅嘢佢先會聽得入耳</p>\n<h2>方法2：用陪伴取代逼迫</h2>\n<p>「<strong>你要振作</strong>」、「<strong>唔好再諗</strong>」呢類說話， 其實係否定緊對方嘅感受，令壓力疊加</p>\n<p>Instead!/ 進行低負擔嘅陪伴 e.g.一齊食飯、散步 唔需要每次都 deep talk 透過穩定出現，建立「<strong>你就喺身邊</strong>」嘅安全感。</p>\n<h2>「另一半低潮想一個人靜下」表面是情緒，底層是需要</h2>\n<p>對方低潮時，如果你跟住一齊焦慮、緊張 情緒會互相感染，加劇整體壓力 保持原有節奏：唔需要為咗對方犧牲自己</p>\n<p>當你情緒穩定，對方先會感受到安全感，而唔係多一個需要處理嘅情緒來源</p>\n<p>千祈唔好心急要佢即刻好返呀 如果你已經試過好多方法都無所適從，唔好自己一個人頂住 幫你分析你哋嘅情況，支持對方之餘唔再消耗自己。</p>\n<h2>常見問題</h2>\n<h3>面對「另一半低潮想一個人靜下」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「另一半低潮想一個人靜下」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「另一半低潮想一個人靜下」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
+    "imageLabel": "警號",
+    "summary": "我哋收到嘅諮詢好多都係有關「伴侶出軌，我應該點做。",
+    "content": "<h2>一次「<strong>無心之失</strong>」</h2>\n<p>因為貪玩、貪新鮮而出軌，被另一半發現之後，喺被怪責同自我譴責嘅無限loop中。明明個心想補救：但另一半對自己仍然感到失望，面對分手嘅關口，呢段感情到底係咪真係完全冇彎轉？如果想補救，到底仲有冇可能？</p><h2>即使你喺關係中真係出軌</h2>\n<p>都唔意味住呢段關係必然會結束！其實你仍然可以積極地修復關係，出軌後嘅補救修復可以分成四個階段。階段一：贖罪，階段二：信任，階段三：溝通，階段四：依戀。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段一</span><span>贖金</span></h2>\n<p>出軌後需要真誠地各你嘅另一半表達歉意。但呢個時候嘅道歉，不只係講一句、講幾次「<strong>對唔住</strong>」就可以當冇嘢。仲要許下承諾、保證不會再次出軌。同時自己會做啲乜嘢嚟保證自己唔會再犯。最好當著另一半面前同出軌對象斷絕往來。然後要真誠地聆聽另一半嘅指責，因為被出軌嘅人需要釋放自己被背叛後嘅憤怒、傷心。先可以繼續同你好好地溝通。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段二</span><span>信任</span></h2>\n<p>出軌會傷害到另一半對你嘅信任感。佢哋會開始懷疑你係咪仲係一個可靠嘅伴侶。而一份關係好難喺不斷質疑中繼續落去。要重新贏得另一半嘅信任，你需要做出比平常更撫慰對方，更能拉近距離嘅行為，例如：俾佢睇自己嘅通話記錄，俾佢掌握你全部行蹤，增加同佢相處嘅時間，透過俾對方掌握自己嘅所有活動，用行動證明自己以後嘅清白，慢慢地重新獲得另一半對你嘅信任。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段三</span><span>溝通</span></h2>\n<p>透過溝通嚟了解雙方對關係嘅期望、恐懼。加深對彼此嘅了解：好多人即使可以同另一半繼續一齊。但自己同對方都唔敢喺事後談論今次出軌。但一味地壓抑情緒係冇辦法令情緒消失。所以應該喺另一半情緒許可嘅情況下。同談論今次嘅錯誤：俾佢發問佢想知道嘅問題，並避免談論一啲令對方唔開心、傷心嘅細節。好好地真誠溝通令大家維持喺同一個頻調。關係都會慢慢有所改善。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段四</span><span>依戀</span></h2>\n<p>呢個階段必須靠雙方一齊努力先可以做到。透過表達愛意嘅日常慣例，例如：經常向對方表達感謝，積極地回應對方嘅溝通，雙方一起做生活計劃，令雙方feel到自己都對彼此嘅生活有參與感。尤其係令對方知道你對佢仲存在依戀。俾佢知道你需要佢：雙方加深彼此嘅連結，先可以令關係變得更加親密。</p><h2>感情拯救所話你知</h2>\n<p>不論你係出軌嗰一方抑或係被出軌嗰一方。要記住，出軌只係人生中嘅一次經歷。而呢段經歷會令人痛苦，亦可能會演變成一段關係嘅結束，但咁唔代表你人生會結束，出軌嘅嗰方，嘗試下付出努力同真誠。或者有機會打動對方、修復關係，被出軌嘅嗰一方，喺面對呢個殘酷現實下，亦唔好只帶住憎恨過活，無論係邊一方，人，終於都係要Move In。生活先可以繼續。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>出軌修復不能只靠補償</li><li>信任要靠持續行動重建</li><li>修復要講清責任與界線</li><li>親密連結要慢慢修補</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-08-25",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-1004016.jpg",
     "coverCredit": "Photo by Min An on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-facing-body-of-water-and-building-1004016/",
@@ -2513,27 +2201,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：另一半低潮想一個人靜下？不打擾也能陪伴的方法",
+    "coverCaption": "Asteria 相處教學：【出軌修復】貪玩出軌後想補救？4 招重建信任",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 53,
-    "title": "另一半像情緒巨嬰？別再替他承擔所有負面情緒",
-    "category": "溝通相處",
+    "title": "【男人心底話】看懂他沒說出口的情感需求",
+    "category": "戀愛心理",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "溝通",
-    "summary": "另一半係「情緒巨嬰」，成日都將佢嘅負面情緒負擔轉嫁俾自己，我應該點樣做？",
-    "content": "<p>你另一半一唔開心就搵你發洩 你返到屋企就要接收佢嘅怨氣、壓力、委屈 好似你就係佢嘅情緒垃圾桶</p>\n<p>佢講完會舒服曬 但你就成晚心悶、情緒被吸乾 你唔係佢嘅治療師 你只係想拍拖 而唔係負責佢全部負面嘅情緒</p>\n<p>自我情緒調節能力低 將內在壓力轉嫁俾身邊最親近嘅人，以為「<strong>接受我所有情緒</strong>」=「<strong>真愛</strong>」，佢哋完全冇能力消化自己嘅壓力，有小小唔開心就只係識搵伴侶頂住，但愛情唔係交換痛苦，而應該係互相陪伴。</p>\n<h2>點解佢咁對你</h2>\n<p>❤️‍🩹 原生家庭冇人教佢點管理情緒；❤️‍🩹，關係裏面過度依賴你嘅情緒穩定；❤️‍🩹 將另一半視為「<strong>情緒避雷針</strong>」（Emotional Dumping）；❤️‍🩹 佢根本唔知自己有問題、從未被逼學習自我調節。</p>\n<h2>處理「另一半像情緒巨嬰」前先拆真正想要甚麼</h2>\n<p>其實你雖然係佢嘅另一半 但唔係乜都要接收，你可以講得好溫柔 但都要清楚地反達俾佢知 「<strong>我關心你，但你而家咁樣情緒倒落我度，我會撐唔住</strong>」，「<strong>如果你想傾，我哋可以傾問題，而唔係發洩</strong>」，令佢明白 你唔需要承受佢全部嘅情緒。</p>\n<p>為另一半提供情緒支援 ≠ 情緒吸收 作為另一半唔代表你要做佢情緒嘅垃圾處理桶，如果你吸收咗佢嘅負能量，咁你會越來越攰 關係會變得越嚟越唔健康，最後個結果往往可能會更加差！</p>\n\n<h2>常見問題</h2>\n<h3>面對「另一半像情緒巨嬰」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「另一半像情緒巨嬰」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「另一半像情緒巨嬰」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
+    "imageLabel": "心理",
+    "summary": "男人心底話未必是不愛說，而是他未必懂得用情緒語言表達。看懂他沒說出口的需求，要同時看行動、壓力和他願不願意讓你靠近。",
+    "content": "<h2>沉默不一定等於不在乎</h2>\n<p>有些人壓力大時會先退後，不懂即時安撫你。但如果他退後後願意回來交代，和完全消失是兩回事。</p>\n<p>有些人遇到壓力時會先關起自己，不代表他完全沒有感受。但如果沉默變成長期逃避，讓你永遠猜不到他的心，那就會傷害關係。</p>\n<h2>看他怎樣表達重視</h2>\n<div class=\"article-section-card\"><p>有些人少講甜言蜜語，但會用行動安排、解決問題、記得你的需要。你要看他的愛語，而不是只用一種標準判斷。</p><p>你可以留意他是否會用實際行動照顧你，例如記得你的事、安排時間、在你需要時出現。不是每個人都擅長說愛，但行動也不能長期空白。</p></div><h2>分清不懂講和不想講</h2>\n<p>不懂講的人可以慢慢引導；不想講的人會長期拒絕溝通，甚至把你的需要說成麻煩。兩者差很遠。</p>\n<p>不懂講的人，被溫和引導後會慢慢多說一點；不想講的人，會把所有溝通都推開。你要分清他是需要時間，還是根本不打算讓你進入。</p>\n<h2>不要用猜測代替溝通</h2>\n<div class=\"article-section-card\"><p>你可以溫和問：「你剛才沉默，是需要時間，還是不想談？」給對方選項，比逼他立刻坦白更容易打開。</p><p>猜測會令你越來越焦慮，也會令對方覺得被審問。給他幾個選項，有時比逼他講「<strong>真心話</strong>」更容易令他開口。</p></div><h2>看他是否讓你進入他的世界</h2>\n<p>真正有心的人，即使不擅長表達，也會慢慢讓你知道他的壓力、想法和界線。</p>\n<p>一個真正在乎你的人，未必即刻講很多，但會讓你看見他願意嘗試。你要看的不是他是否完美表達，而是他有沒有慢慢向你打開。</p>\n<h2>把「男人心底話其實是什麼」講成可被接住的話。</h2>\n<p>你可以回看「男人心底話其實是什麼」最近一次對話：第一句是否已經帶責備、你有沒有一次講太多、對方防衛後你有沒有越追越急。找到卡位，才知道句子要怎樣改。</p>\n<p>處理「<strong>男人心底話其實是什麼</strong>」時，先把句子縮短。由「<strong>你永遠都係咁</strong>」改成「<strong>剛才那件事令我不安，我想下次可以提早講</strong>」，對方會更容易接收到你的需要。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>把男人心底話其實是什麼講成可被接住的話。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>看男人心態時，不要只聽他一刻怎樣講，也要看他之後有沒有做到、願不願意承擔，以及你在相處裡是否感到安心。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2023-12-04",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6669847.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-sitting-beside-the-crying-woman-6669847/",
@@ -2561,27 +2243,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：另一半像情緒巨嬰？別再替他承擔所有負面情緒",
+    "coverCaption": "Asteria 相處教學：【男人心底話】看懂他沒說出口的情感需求",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 54,
-    "title": "另一半說受不了你的情緒？先分清表達與情緒勒索",
-    "category": "溝通相處",
+    "title": "【尊重界線】無阻止等於尊重嗎？你可能一直理解錯了",
+    "category": "戀愛心理",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "溝通",
-    "summary": "另一半成日話頂唔順你嘅情緒？唔俾你喊、唔俾你嬲、唔俾你唔開心，搞到你最後以為自己先係問題？ 但其實問題唔係你太多情緒，而係佢承受唔到情緒。想改變佢就",
-    "content": "<p>關於向另一半分享負面情緒嘅話題，但其實唔係話完全唔可以向對方傾訴負面情緒，有唔開心時，當然都要適當地傾訴 之但係 有時 有啲另一半會因為自己承受唔到你嘅負面情緒，而唔俾你舒發你嘅負面心情。</p>\n<p>「<strong>你情緒起伏太大，我真係頂唔順</strong>」 「<strong>可唔可以理性啲？</strong>」 你係咪會以為係自己有問題</p>\n<p>甚至開始壓抑情緒？</p>\n<p>但其實你有情緒唔係問題 問題係對方唔識承受、唔識或者唔想處理你嘅情緒</p>\n<h2>不過佢之所以會出現呢啲反應</h2>\n<p>其實係有原因；💬 「<strong>唔好又喊啦</strong>」 其實係驚你嘅情緒會爆；💬 「<strong>你又嬲？</strong>」 其實係佢承受唔到壓力；💬 「<strong>可唔可以正常啲？</strong>」 其實係佢唔識安撫；💬 「<strong>我唔想傾，你好煩</strong>」 其實係佢想冷靜吓。</p>\n<h2>先看「另一半說受不了你的情緒」背後真正需要</h2>\n<p>所以你講嘅說話唔可以淨係指責 而係要令佢明白你想同佢一齊承擔、一齊成長</p>\n<ul><li>「<strong>你令我好唔開心！</strong>」</li></ul>\n<p>✔「<strong>我哋遇到咗啲問題，我想你幫手一齊處理</strong>」 改變語感先可以減低對方嘅防衛心 令佢更易handle到你嘅情緒</p>\n<p>只係佢情緒承載力太低又唔識安撫，但呢啲唔係講一兩句就改到，不過可以靠儀式去調整佢嘅磁場同能量；✨ 打開佢嘅共感能力；✨ 提升承載負面情緒嘅能量；✨ 感受到你嘅情緒而唔係被嚇親；✨ 令佢唔再逃避，而係更願意陪伴。</p>\n\n<h2>常見問題</h2>\n<h3>面對「另一半說受不了你的情緒」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「另一半說受不了你的情緒」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「另一半說受不了你的情緒」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
+    "imageLabel": "心理",
+    "summary": "情侶之間嘅互相尊重，就只係尊重對方嘅興趣、生活咁簡單。",
+    "content": "<h2>你自問係咪一個識尊重另一半嘅人？</h2>\n<p>喺你眼中，「<strong>尊重另一半</strong>」到底應該係點做？尊重對方嘅興趣？唔干涉對方太多生活、交友？或者，你一直以為嘅「<strong>尊重</strong>」其實喺佢眼中。並唔係最理想嘅「<strong>尊重</strong>」。</p><h2>互相尊重唔止係「<strong>你鍾意就好</strong>」</h2>\n<p>好多時候：大家講到情侶之間要互相尊重，都會話，「<strong>佢鍾意就好啦，我唔會阻止</strong>」，例如：男朋友鍾意打機，女朋友唔會干涉。例如：或者女朋友鍾意Shopping，男朋友都唔會鬧。但咁樣真係夠？</p><h2>呢種尊重只係停留喺表面</h2>\n<p>純粹係「<strong>唔阻住對方做自己鍾意嘅嘢</strong>」，但兩個人相處唔應該只係各玩各，而係要真正理解對方嘅需求，而係要去聆聽對方嘅需求，了解佢內心真正想要嘅嘢，了解佢呢個喜好嘅原因，了解佢唔同時間嘅感受，因為好多時候，兩個人相處出問題，唔係因為興趣唔同，而係因為其中一方覺得自己嘅感受冇被理解。尊重 = 「<strong>聆聽</strong>」 =/= 表面上聽對方講咩。而係要帶住理解嘅心去聽，而唔係一味齋聽、但內心又想為自己辯解。</p>\n<p>試想像吓，當對方話：「<strong>你成日掛住自己啲嘢，冇理過我感受</strong>」，你內心第一時間會諗：「<strong>我邊有？</strong>」，但把口又違心咁講：「<strong>咁我要點做？</strong>」，咁其實你自己已經先築起咗防備心。已經冇真真正正咁尊重對方嘅需求。接落嚟，無論佢講乜，你都只會係左耳入右耳出。</p><h2>咁我應該點做？</h2>\n<p>真正嘅聆聽，係用心感受對方嘅情緒。正確嘅做法係先停一停，唔好急住反駁。試下換位思考：理解對方點解會有呢個感受，而唔係純粹應酬幾句，唔好一味講「<strong>你想我點</strong>」，而係試下認同對方嘅感受，令對方覺得自己被理解、被尊重，令對方知道，你真係有用個心聽佢講嘢。</p><h2>真正嘅尊重係要願意作出改變</h2>\n<p>真正嘅聆聽：唔止係聽對方講咩，而係理解佢點解會咁講，而且願意作出改變，呢個先係真正嘅尊重！例如：對方嘅需求係希望多啲相處時間。咁你可以試下喺打機之前先陪佢，或者定期安排一啲「<strong>兩個人專屬嘅時間</strong>」，一齊散步、睇戲，咁對方就會覺得自己嘅感受係被尊重。</p><h2>記住！</h2>\n<p>千祈唔好用自己方式去定義有冇尊重對方需求。因為每個人嘅標準都唔同，你覺得OK冇問題嘅嘢，對方未必一定同你一樣諗法，所以你先要學識用心聆聽、用心尊重。慢慢學識發現對方真正需求，理解到對方有啲嘅需求並唔係無理取鬧。而係佢真正內心嘅感受！</p><h2>感情拯救所話你知</h2>\n<p>尊重唔係「<strong>我接受你做你自己</strong>」就夠。</p>\n<p>而係願意停一停，識去聆聽、識去理解對方嘅感受，尊重對方嘅感受，當你開始尊重對方嘅感受，對方先會學識尊重你，呢啲先係真正互相尊重嘅關係，而只有當雙方都感受到被尊重，呢段感情先會長久。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你自問係咪一個識尊重另一半嘅人。</li><li>真正嘅尊重，係要先放低防備心</li><li>尊重不是不表態，而是守住界線</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-02-28",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4307639.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/smiling-couple-resting-on-bed-and-talking-4307639/",
@@ -2609,27 +2285,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：另一半說受不了你的情緒？先分清表達與情緒勒索",
+    "coverCaption": "Asteria 相處教學：【尊重界線】無阻止等於尊重嗎？你可能一直理解錯了",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 55,
-    "title": "大男人定恐怖情人？5 個控制慾警號",
-    "category": "關係危機",
+    "title": "【婚姻心動】結婚後遇到心動對象？4 個問題看清內心",
+    "category": "情緒修復",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "警號",
-    "summary": "睇韓劇成日見到霸總人設嘅男主角，覺得佢哋大男人、有控制慾得嚟又好man，但如果你嘅另一半係霸道、控制慾勁強又冇自信嘅多疑型恐怖情人，你仲會唔會願意同佢一齊？",
-    "content": "<p>遇到「大男人定恐怖情人」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>控制慾不是愛得深的證明</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>看他是否尊重你的界線</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>先分清「大男人定恐怖情人」裡誰需要承擔</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>從自己的狀態判斷「大男人定恐怖情人」</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>面對「大男人定恐怖情人」，界線清楚但不用攻擊</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 健康的修補需要雙方一起承擔。</p> <h2>先保護自己，再判斷這段關係能否修補</h2>\n<p>如果「大男人定恐怖情人」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「大男人定恐怖情人」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「大男人定恐怖情人」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「大男人定恐怖情人」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "imageLabel": "療癒",
+    "summary": "唔知大家最近有冇睇Netflix嘅台劇《童話故事下集》，如果好似女主角咁，喺結婚後遇到令自己心動嘅人，你有冇諗過自己會點處理。",
+    "content": "<h2>一世人流流長</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>結完婚之後</span><p>可能都有機會遇到另一個令自己心動嘅人。</p></div><div class=\"article-point-card\"><span>呢類情況一啲都唔罕見</span><p>畢竟人係有感情同慾望嘅動物，但點樣處理呢種感覺，可能係一種挑戰！你夠唔夠膽話自己結婚後，100%肯定唔會對其他人心動？萬一唔小心地心動咗：又其實點處理？</p><h2>了解自己嘅感受</h2>\n<div class=\"article-section-card\"><p>先問下自己：呢種心動係一時衝動，定係因為現有婚姻入面有啲缺失，因為有時我哋會將新鮮感錯誤當成「愛」，有心理學研究話新鮮感會刺激多巴胺分泌。</p><p>令人產生興奮同快樂：但呢種感覺通常都係短暫，你對「新嘅人」心動，其實好大機會源自你對而家個另一半嘅不滿/失望。</p></div><h2>反思現有嘅婚姻生活</h2>\n<p>不如嘗試檢視你同伴侶嘅關係，諗吓係咪因為長時間相處而冇咗激情？定係有啲未被滿足嘅情感需要？抑或係因為現實生活嘅矛盾令關係變咗？如果係，咁呢個心動其實係提醒你要重燃同伴侶之間嘅火花。而唔係放棄婚姻，事實上，好多時候，婚姻問題係可以透過溝通同努力解決！</p><h2>認清心動帶嚟嘅後果</h2>\n<p>喺心理學入面，有一個「<strong>即時快感同長遠滿足</strong>」嘅概念。簡單啲講：即時快感會令人忽略長遠後果，但做出衝動嘅決定之後，當事人往往會帶嚟內疚、後悔情緒。所以，記得考慮清楚，如果跟隨呢份心動而出軌，對自己、伴侶、甚至家庭會有咩影響！</p><h2>學識管理誘惑</h2>\n<p>假設你係30歲結婚：一世人流流長，長命嘅話，都仲要對住你嘅另一半50-60年。冇可能完全唔會對其他人人動，既然誘惑係生活中無可避免嘅一部分。點樣應對先係最緊要！保持距離係避免進一步發展嘅關鍵。如果呢段心動已經影響到你嘅婚姻生活。不妨考慮搵專業嘅輔導員，幫你調整內心同尋找合適嘅方法！</p><h2>感情拯救所話你知</h2>\n<p>無論你而家心入面有幾亂，都要記住：要諗清楚先作出選擇，成熟嘅愛情係需要勇氣、智慧、責任。</p>\n\n<p>唔好因為一時混亂，而作出令自己後悔嘅決定，如果你需要更多嘅指引，或者個心真係好混亂，我會幫你睇清內心，搵到屬於自己嘅答案！</p>\n\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>不如嘗試檢視你同伴侶嘅關係</li><li>假設你係30歲結婚</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題關乎長期安排，重點不是逼對方即刻承諾，而是看你們能否坦白談未來、責任和現實限制。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2024-09-29",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-03-13",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560842.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-arguing-8560842/",
@@ -2657,27 +2327,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：大男人定恐怖情人？5 個控制慾警號",
+    "coverCaption": "Asteria 相處教學：【婚姻心動】結婚後遇到心動對象？4 個問題看清內心",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 56,
-    "title": "女人太強會嚇走對方？拆解男人自卑與靠近恐懼",
-    "category": "溝通相處",
+    "title": "【結婚心理】結婚是愛情墳墓嗎？想同對方結婚要點做",
+    "category": "長期關係",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "溝通",
-    "summary": "女人工作能力強、賺錢比男朋友多出很多，怎樣平衡大家嘅關係？",
-    "content": "<p>就一定會影響愛情</p>\n<p>💔 有些男人會覺得「<strong>自尊受挫</strong>」 💔 有時女方容易變成「<strong>決策主導</strong>」 💔 大家角色不對等會容易出現摩擦</p>\n<p>關係未必就會不平衡、不對等 因為重點並不在於大家的收入，而是大家怎樣相處 錢只係一個工具，但尊重&amp;理解才維繫關係的基礎。</p>\n<h2>愛情要平衡不等於收入要平等</h2>\n<p>真正嘅平衡是；❤️ 尊重彼此角色；❤️ 欣賞對方嘅付出；❤️ 找到相處方式而非比較輸贏 聽起來很容易，但到底要怎樣做。</p>\n<h2>回到「女人太強會嚇走對方」本身，要看這幾個判斷位</h2>\n<p>只因為「<strong>自覺不配</strong>」的人 最難不是說服他，而是令佢真正看得起自己 如果你覺得大家關係因收入差距而失衡，可以透過愛情白魔法儀式作出小改變 如進行負能量釋放儀式清理自我設限，解除「<strong>配不上你</strong>」的潛意識障礙。</p>\n<p>「<strong>我無法提供你想要的生活</strong>」 「<strong>你值得一個能令你豐富無憂生活的人</strong>」，有些男士會因為自己的收入比女朋友低而自卑，你試過安慰、解釋、堅持 但每次說得越多他就越是後退，他不夠自信相信自己可以愛人、可以被愛，但這不是因為他不夠愛你。</p>\n<p>只是他不敢去愛。如果對方長期因自卑而後退，你可以給支持，但不能代替他建立自我價值。真正能走下去的關係，要讓兩個人都不用縮小自己。</p>\n<h2>常見問題</h2>\n<h3>女人太強真的會嚇走男人嗎？</h3>\n<p>真正穩定的人不會因為你有能力就退縮。問題通常不是你太強，而是對方把你的獨立理解成自己不被需要。</p>\n<h3>如果對方因為我強勢而自卑，可以點相處？</h3>\n<p>可以給對方參與和被需要的位置，但不要為了安撫他而縮小自己。健康關係應該讓兩個人都可以發光。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DQjMk1hkgSM/",
-    "date": "2025-11-02",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "長久",
+    "summary": "好多人未考慮清楚結婚原因，但就因為世俗眼光而喺適婚年齡急住結婚，不過你有冇諗過，你喺「合適」嘅時候結婚，你嘅結婚對象又係唔係「適合」嘅人呢。",
+    "content": "<h2>想結婚之前，先問自己為甚麼想結</h2>\n<div class=\"article-section-card\"><p>很多人去到某個年紀，就開始被身邊人問：「<strong>拍咗咁耐，幾時結婚？</strong>」也有人因為快到 30 幾歲，開始擔心自己是不是落後了、是不是應該快點找個人安定下來。</p><p>但結婚是一個很長遠的決定，不應該只是因為年齡、家人催促、朋友陸續結婚，或者覺得拍拖多年就應該有交代。真正重要的是，你是否清楚自己為甚麼想結婚，以及眼前這個人是否真的適合和你一起生活。</p></div><h2>婚姻不是幸福保證，而是一種共同承擔</h2>\n<p>很多人以為結婚代表愛情修成正果，但婚姻本身不會自動帶來幸福。它會帶來身份、承諾和生活上的綁定，但能不能幸福，仍然取決於兩個人平日怎樣相處、怎樣溝通、怎樣面對壓力。</p>\n<p>如果你只是想透過結婚換取安全感、保障或社會認同，就要小心。因為婚姻不能代替真正的信任，也不能修補一段本來已經長期失衡的關係。</p>\n<h2>不要為了達成年齡目標而找結婚對象</h2>\n<div class=\"article-section-card\"><p>有些人是先想結婚，然後才急著找一個符合條件的人。這不一定完全錯，但如果你只是在追一個人生進度，就很容易忽略對方是否真的適合你。</p><p>你要問自己的不是「<strong>我幾時可以結婚</strong>」，而是「<strong>我想和怎樣的人建立生活</strong>」。如果只是為了不想輸給別人、不想被家人催、不想被標籤成剩女或失敗者，這種壓力很容易令你做出倉促決定。</p></div><h2>拍拖多年，也要重新審視對方是否適合婚姻</h2>\n<p>如果你們已經愛情長跑，對方自然會被視為最可能的結婚對象。但拍拖多年不等於一定適合結婚，因為婚姻要看的，是更現實的相處能力。</p>\n<h2>你可以問自己</h2>\n<div class=\"article-section-card\"><p>同佢一起是否真的快樂？你們有沒有共同話題和生活方向？你能否接受他的缺點？他是否也能包容你？你在這段關係裡能不能做回自己？你們是否信任對方、關係是否平等、未來規劃是否一致？</p><p>這些問題比「<strong>拍咗幾耐</strong>」更重要。時間只能證明你們曾經一起走過一段路，不能自動證明你們適合走進婚姻。</p></div><h2>如果只是被催婚，先停一停</h2>\n<p>社會常常把結婚包裝成一個標準答案，好像到某個年紀就應該完成。但婚姻不是交功課，也不是用來向別人證明你有人要。</p>\n<p>如果你其實對自己想要的人生、感情狀態和婚姻期待仍然很迷茫，就不要因為外界催促而急著答應。比起趕著結婚，更重要的是知道自己想過怎樣的生活，以及眼前的人是否願意和你一起承擔那種生活。</p>\n<h2>想同佢結婚，可以先這樣做</h2>\n<div class=\"article-section-card\"><p>如果你真的想和對方結婚，不要只用暗示、埋怨或等對方猜。你可以找一個平靜時間，坦白講自己對未來的想法，問對方對結婚、家庭、金錢、居住安排和人生節奏有甚麼看法。</p><p>真正適合結婚的人，不一定會即刻給你完美答案，但他會願意認真面對這些問題。如果對方長期逃避、敷衍，或者只叫你不要想太多，你就要看清楚：你想要的是婚姻，而他可能只想維持現狀。</p></div>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>想結婚之前，先問自己為甚麼想結。</li><li>婚姻不是幸福保證，而是一種共同承擔。</li><li>不要為了達成年齡目標而找結婚對象。</li><li>拍拖多年，也要重新審視對方是否適合婚姻。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題關乎長期安排，重點不是逼對方即刻承諾，而是看你們能否坦白談未來、責任和現實限制。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
+    "sourceIg": "",
+    "date": "2024-07-04",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-9345627.jpg",
     "coverCredit": "Photo by Anna Pou on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-in-yellow-scoop-neck-shirt-smiling-9345627/",
@@ -2705,27 +2369,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：女人太強會嚇走對方？拆解男人自卑與靠近恐懼",
+    "coverCaption": "Asteria 相處教學：【結婚心理】結婚是愛情墳墓嗎？想同對方結婚要點做",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 57,
-    "title": "你可能正在無意識破壞感情：5 個常見自毀行為",
-    "category": "戀愛心理",
+    "title": "【Ghosting 心理】傾傾吓突然消失？拆解對方不回的原因",
+    "category": "溝通相處",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "心理",
-    "summary": "好多人都喺無意識中破壞緊自己同另一半嘅感情而不自知！我哋話你知有啲咩係「無意識破壞關係」嘅舉動，同埋要點樣去修復啦！一齊睇圖學嘢",
-    "content": "<p>例如出軌、金錢/價值觀完全唔夾 但其實真正破壞關係嘅 多數係雙方嘅一啲無意識行為，大家都感情變差都唔係因為唔愛 而係因為雙方唔覺得自己有做錯。</p>\n<p>💬 「<strong>算啦，我唔講，你都唔明</strong>」，你無意識地默認對方應該會明白你嘅需要，或者覺得即使你講出聲佢都唔會100%明白/100%做到，（Mind Reading Expectation，｜讀心預期），但親密關係係由兩個獨立個體組成。</p>\n<p>冇溝通就要求「<strong>完美夾到</strong>」基本冇可能 長期落去會變成表面睇落係把口呻幾句 但其實內心就積落唔好唔開心嘅負面情緒</p>\n<p><strong>Step 1：覺察自己真正想要乜</strong></p>\n<p><strong>Step 2：用溫和、清晰嘅方式表達需求</strong></p>\n<p>唔好扭扭擰擰或者扮體諒扮好人</p>\n<p><strong>Step 3：用非暴力溝通處理衝突</strong></p>\n<p>表達你嘅真實感受、唔好怕講完對方會嬲 然後提出你嘅具體請求/需求</p>\n<h2>💔 過度索取</h2>\n<p>包括情緒依賴、反覆驗證對方愛唔愛你；🔎 對方少少冷淡 你就覺得佢唔愛你；🔎 成日反覆問對方 「<strong>你仲愛我嗎？</strong>」；🔎 如果收不到對方嘅回應 情緒就會好大波動，其實你可能係因為童年未獲足夠被愛嘅感覺，所以而家大個咗就更加想感受到被愛。</p>\n<p>想將童年缺乏嘅愛投射到另一半身上</p>\n<h2>先看「你可能正在無意識破壞感情」背後真正需要</h2>\n<p><strong>Step 1：建立「<strong>內在安全感</strong>」而唔係靠外在驗證</strong></p>\n<p>例如清除自己嘅負能量、情緒調節</p>\n<p><strong>Step 2：建立健康嘅互動節奏</strong></p>\n<p>唔好淨係用「<strong>推拉關係</strong>」嚟確認對方情感</p>\n<p>只係大部分人都無意識咁做、唔知自己有咁樣做 直到雙方關係好攰、好敏感 先知原來大家有咁樣嘅相處模式 但呢啲問題係可以被治癒、被調整、被修復嘅</p>\n<p>如果你唔肯定自己有冇陷入同類模式，可以先把最近幾次衝突寫低，睇清自己係咪反覆用同一種方式推開對方。</p>\n<h2>常見問題</h2>\n<h3>無意識破壞感情通常有咩表現？</h3>\n<p>常見是反覆試探、未講先防衛、用冷淡測試對方、把小事放大成不愛，或者在關係變穩時突然想逃。</p>\n<h3>發現自己有自毀模式，可以點停低？</h3>\n<p>先記低觸發點：你是在害怕被拋棄、害怕太親密，還是害怕自己不值得被愛？看清恐懼，才有機會選擇新的反應。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
+    "imageLabel": "溝通",
+    "summary": "最近好興講「Ghosting」，你又有冇俾人Ghosting過。",
+    "content": "<h2>最近好興講「<strong>Ghosting</strong>」</h2>\n<p>Ghosting = 曖昧對象毫無預兆、突然訊息電話統統不回、十問十唔應、似鬼咁消失咗。但到底有咩原因令對方Ghosting你？</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 1</span><span>⃣ 純粹enjoy flirting</span></h2>\n<p>每段曖昧關係都有種唔確定嘅感覺。但而家啲人對感情好速食，未必個個都想花時間慢慢發展，亦有啲人淨係enjoy 曖昧，一旦其中一方開始想攞個清楚答案。有啲人就會覺得壓力大，甚至選擇直接Ghosting，默默地結束曖昧關係。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 2</span><span>⃣ 怕承諾、想逃避</span></h2>\n<p>對方未必係唔鍾意你、只係唔想負責。或者仲未諗清楚自己想要啲乜，覺得呢段關係未去到想承諾長遠發展嘅時候。就會下意識選擇「<strong>冷處理</strong>」，佢覺得與其將事情「<strong>講清楚</strong>」，不如直接消失就算，所以如果你個曖昧對象無啦啦突然消失。可能唔係你做錯咗啲咩，而係佢發現「<strong>你係認真</strong>」，但佢又唔知點樣面對，最後唯有選擇Ghosting你。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 3</span><span>⃣ 冇情感共鳴</span></h2>\n<p>曖昧關係入面：雙方嘅投入未必一致，有時其中一方開始愈嚟愈認真，但另一方就未必有同樣感覺，覺得彼此缺乏「情感共鳴」，呢個時候，對方就會想抽身，慢慢減少回應、避免俾對方錯覺，等對方自己「識做」，慢慢明白係時候要退場。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 4</span><span>⃣ 搵到新target</span></h2>\n<p>而家啲人玩交友app好平常，同時同幾個人曖昧已經係常態，只要雙方未有「講明」關係，對方想同幾多人曖昧，其實都冇得管，所以一旦遇到個更吸引自己嘅人，有啲人就會選擇將之前嘅曖昧對象擱置。</p>\n\n<p>直接進行「<strong>替換策略</strong>」！</p>\n<h2>俾人Ghosting 我要點應對？</h2>\n<p>唔好過於質疑自己、唔好不斷追究到底。試搵吓啲積極嘅方法應對，例如用儀式重建你哋已斷聯嘅關係。重新喚醒對方對你嘅興趣同好感，提升你喺對方心目中嘅吸引力，又或者透過儀式逐啲逐啲咁扭變對方思維。令佢不斷諗起你、冇辦法忘記咗，將你喺佢心目中嘅重要性大大提高。重新吸引到佢返嚟、將心專注返喺你身上。</p><h2>感情拯救所話你知</h2>\n<p>啱啱萌芽嘅戀愛關係、曖昧緊嘅男女。都有機會被ghosting，呢啲時候難免會滿肚冤屈、情緒低落。但沉醉喺失落同冤屈入面係最蠢嘅方法！俾有好感嘅對象Ghosting肯定係難過。但有時候我們可以做嘅，就只有轉換心情，或者更積極搵方法收復失地！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>最近好興講 Ghosting</li><li>⃣ 純粹enjoy flirting</li><li>俾人Ghosting 我要點應對。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果對方突然 Block 或已讀不回，先不要直接當成無得救。更重要是分清他是在逃避壓力、保護自己，還是真的想切斷關係，再決定下一步。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-02-20",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-18258195.jpg",
     "coverCredit": "Photo by Phạm Tuấn Hải on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-on-the-promenade-by-the-sea-18258195/",
@@ -2753,27 +2411,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你可能正在無意識破壞感情：5 個常見自毀行為",
+    "coverCaption": "Asteria 相處教學：【Ghosting 心理】傾傾吓突然消失？拆解對方不回的原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 58,
-    "title": "想男人主動哄你？讓對方願意靠近的表達方法",
-    "category": "溝通相處",
+    "title": "【復合階段】想同前度重新開始？5 個必經階段要知道",
+    "category": "復合挽回",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "溝通",
-    "summary": "想男人主動哄你，不是要你壓低需要，而是要把需要講到對方聽得明。少一點試探，多一點具體指引，對方才知道怎樣靠近。",
-    "content": "<p>你想被哄，其實不只是想聽幾句好聽說話，而是想確認自己在對方心入面仍然重要。很多女生最委屈的位，是明明只是想被抱一抱、被安撫一下，最後卻變成自己好似很麻煩。想男人主動哄你，重點不是變得更卑微，而是令對方聽得明你真正需要甚麼。</p>\n<h2>先承認自己想被安撫</h2>\n<p>想被哄不是幼稚，而是親密關係裡很正常的情緒需要。人受傷時會想被看見、被接住，這不是錯。</p>\n<p>問題通常不在於你想被哄，而在於你怎樣表達這個需要。如果你一開始就用冷戰、反話或攻擊，對方接收到的會是壓力，而不是「我需要你靠近」。</p>\n<h2>把反話換成直接需要</h2>\n<p>「你唔使理我」很容易被當真，尤其是本身不太懂情緒語言的人。他可能真的退後，然後你會更覺得自己不被重視。</p>\n<p>可以試著講得直接一點：「我而家不是想吵架，我只是有點受傷，想你陪我講幾句。」這句說話比試探更清楚，也給了對方一條可以靠近你的路。</p>\n<h2>不要期待對方自動猜中</h2>\n<p>有些人不是不愛，而是不知道你要的是安慰、解釋、道歉，還是陪伴。他可能以為幫你分析問題就是關心，但你其實只是想先被抱住。</p>\n<p>你可以直接給方向，例如：「你不用即刻解決，我想你先聽我講完。」當你講清楚需要，對方才有機會學會怎樣哄你，而不是每次都猜錯。</p>\n<h2>看他是否願意學習</h2>\n<p>一次不懂可以慢慢教，但如果你已經講過很多次，他仍然用「你又嚟」去否定你，就要看清這不是木訥，而是不願意接住。</p>\n<p>願意學的人，未必一開始做得很好，但會記得你說過甚麼，下一次會試著靠近一點。長期只叫你不要想太多的人，給不到你真正的情緒安全。</p>\n<h2>被哄之後也要回到問題本身</h2>\n<p>安撫可以令情緒降溫，但真正修補仍要處理令你受傷的事件。否則每次都是哭、哄、和好，然後同一件事再發生。</p>\n<p>你可以先接受安撫，等情緒穩定後再講：「剛才我舒服了，但我仍想傾返件事。」這樣既不否定他的安慰，也不讓真正問題被甜言蜜語蓋過。</p>\n<h2>常見問題</h2>\n<h3>我想被哄係咪太依賴？</h3>\n<p>不一定。健康關係本來需要互相安撫，重點是不要用試探代替表達，也不要把所有安全感都交給對方一個人負責。</p>\n<h3>對方好木訥點算？</h3>\n<p>可以直接講你需要甚麼安撫方式，再看他有沒有願意學。如果你講得很清楚，他仍然完全不理，問題就不是木訥。</p>\n<h3>Asteria 可以幫我寫訊息嗎？</h3>\n<p>可以幫你把委屈改成較容易被接住的表達，既保留你的感受，也降低對方一聽就防衛的機會。</p>",
+    "imageLabel": "復合",
+    "summary": "但有時過於急進，都未必係一件好事，復合，係應該按步就班，而唔係靠住一股衝動嘅情緒，話復合就復合。",
+    "content": "<h2>無論係邊一方提出分手</h2>\n<p>雙方都會經歷情緒低潮期，喺呢段時間入面，大家出現情緒波動係不可避免，首要係要俾空間自己，宣洩你嘅情緒，亦都要俾啲空間對方，等佢可以宣洩佢嘅情緒，當情緒逐漸穩定落嚟之後，先再諗係咪要進入下一個階段：考慮復合。呢個係最關鍵嘅一步！要清楚地諗清楚分手嘅原因，理解自己、理解對方，諗下呢段關係中，出現咗啲咩問題。自己喺邊啲地方做得唔好，如果你哋可以能夠重新開始，要諗下有邊啲地方可以改進，反思完先會搵到出路，反思完先會避免復合後又重蹈覆轍。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">Stage 2</span><span>嘗試獨立</span></h2>\n<p>反思完，先唔好急於聯絡對方，要先嘗試下自己獨自生活，學習下喺冇對方嘅情況，自己嘅生活會係點，諗下係唔係真係好想同對方復合，亦都要透過自己生活，確認自己唔係單純地想依賴對方，嚟填補內心嘅空虛，而係真係愛佢，所以先想再同返佢一齊。如果你自己生活咗一段短時間，仍然覺得呢段關係值得挽回，咁就要重新同對方建立有效嘅溝通。而呢個溝通要有合適嘅時間、態度配合。</p>\n<p>唔好一味急於尋求結果、一嚟就話想復合。而係要先專注聆聽對方嘅感受、想法。大家互相了解彼此真實諗法同深層傷疤。互相反省喺過往相處嘅過程中，出現咗哪啲問題、要點樣改善。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">Stage 4</span><span>試探復合</span></h2>\n<p>你哋可以試吓重新開始約會，但先嘗試用朋友之間聚會嘅感覺開始。慢慢地重新建立親密感：而唔係一開始就要即時返去以前最親密嘅時期。先盡量營造輕鬆愉快嘅氛圍，避免造成過度壓力、過度期待，先好好觀察彼此，睇吓大家係咪真係已經準備好重啟呢段關係。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">Stage 5</span><span>正式復合</span></h2>\n<p>如果大家都確認想重新開始，呢個階段嘅挑戰在於，要點樣長期維繫復合後嘅關係，避免過去出現過嘅問題、困局再次出現。唔使時時刻刻記住過去嘅失誤，但要時時刻刻記得大家溝通過嘅內容。雙方都要更加注重溝通、協調，有問題要即刻拎出嚟傾，唔好收收埋埋，亦要識得好好體諒對方。</p><h2>感情拯救所話你知</h2>\n<p>好多人分手後好快就會後悔，可能隔咗一兩日，甚至幾個鐘，就要求同對方復合，但雙方可能礙於仲相愛、習慣對方存在。種種嘅原因而應承復合：但就冇好好溝通過雙方分開嘅原因。同埋點樣再避免重蹈覆轍，最後又要面臨再次分手嘅局面，所以與其急於要求復合，倒不如先思考清楚，再定好復合嘅方法、步驟啦！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>嘗試獨立</li><li>重建溝通</li><li>試探復合</li><li>正式復合</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2023-12-08",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-10-31",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7339202.jpg",
     "coverCredit": "Photo by cottonbro studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/two-people-meeting-on-a-cafe-7339202/",
@@ -2801,27 +2453,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想男人主動哄你？讓對方願意靠近的表達方法",
+    "coverCaption": "Asteria 相處教學：【復合階段】想同前度重新開始？5 個必經階段要知道",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 59,
-    "title": "大男人要怎樣相處？讓他願意聽你的溝通策略",
+    "title": "【需求表達】想同對方講需要，但他總是不聽怎麼辦？",
     "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
-    "summary": "和大男人相處，最難不是他有主見，而是他不願意聽。要讓對方聽見你，需要既不硬碰，也不把自己需要收起。",
-    "content": "<p>大男人不一定等於壞伴侶，有些人只是習慣用主導方式處理關係。但如果他的主導變成不尊重、不聽你感受，你就需要用更清楚的界線和表達保護自己。</p>\n<h2>分清有主見和控制</h2>\n<p>有主見是能提出想法，也願意聽你；控制是所有事都要跟他的方式，並把你的不同意見說成麻煩。</p>\n<p>真正困難的不是他有主見，而是你每次表達不同意見時，都好像要先準備一場辯論。你要處理的不是輸贏，而是讓他知道你的感受和選擇同樣需要被放在桌面上。</p>\n<h2>不要用硬碰硬開場</h2>\n<p>一開始就否定他，很容易令對方進入防衛。可以先承認他的出發點，再清楚講你不能接受的位置。</p>\n<p>強勢的人通常很怕被否定，所以開場太硬會令他立即反擊。你可以先承認他的考慮，再把自己的底線講清楚，這樣不是遷就，而是令對話有機會繼續。</p>\n<h2>把感受講成具體影響</h2>\n<p>與其說「你太大男人」，不如說「你直接替我決定時，我會覺得自己不被尊重」。具體影響較容易令對方聽見。</p>\n<p>具體影響比標籤更有力，因為「大男人」三個字只會令他想反駁。當你講到某件事如何令你覺得不被尊重，他才比較容易看見自己的行為造成甚麼後果。</p>\n<h2>界線要穩，不要講完又退</h2>\n<p>如果某些事你真的不能接受，就要一致地守住。每次講完又算，對方會覺得問題不大。</p>\n<p>界線不是講一次就算，而是每次同類情況出現時都一致。你越穩，對方越清楚這不是你一時情緒，而是關係裡需要被尊重的位置。</p>\n<h2>看他是否尊重你的選擇</h2>\n<p>真正適合的人，即使性格強勢，也會願意調整；完全不聽的人，問題就不只是溝通技巧。</p>\n<p>如果他只是習慣強勢，但願意調整，關係仍然有空間；如果他把你的每個需要都說成麻煩，那就不是溝通技巧不足，而是尊重不足。</p>\n<h2>常見問題</h2>\n<h3>大男人係咪一定唔適合？</h3>\n<p>不一定，要看他是否願意尊重你，而不是只要你配合。</p>\n<h3>我應該點講先唔會激嬲佢？</h3>\n<p>先講具體事件和你的感受，再講你希望下次怎樣處理。</p>\n<h3>塔羅可以睇到咩？</h3>\n<p>可以看對方心態、控制慾來源，以及你應該溝通還是守界線。</p>",
+    "summary": "有冇試過間唔中都會好易因為一啲小事而發脾氣，但其實你都唔知自己點解會嬲得咁快，甚至會懷疑自己係咪情緒有問題。",
+    "content": "<h2>你嬲嘅唔係件事</h2>\n<p>而係被忽略嘅感覺！有時同另一半嗌交：表面上係對方遲覆、冇聽你講嘢，但你真正嬲嘅係嗰種「<strong>我喺你心入面好似唔重要</strong>」嘅感覺。你覺得自己被忽視，覺得自己唔被對方重視，所以你內心先用發脾氣嘅方法，嘗試換取被重視嘅感覺。</p><h2>有啲情緒並唔係由當下事情引起</h2>\n<p>而係觸發咗你以前曾經經歷過嘅情緒。例如係失望、冷落、不安，可能你以前拍過拖時試過經常俾人忽略。可能係你細個成日比人話，呢啲負面嘅情緒嘅經歷，就會默默咁儲喺你心入面，變成一種「<strong>情緒記憶</strong>」，所以而家你遇到同類情況，就算只係一件小事，你都會即刻發火、即刻起曬鋼。</p><h2>你雖然表達嘅係暴躁嘅情緒</h2>\n<div class=\"article-section-card\"><p>但你真正想講嘅係需求，只係唔知應該用咩方法表達，你唔係想鬧人，你只係想有人在乎自己，但唔識用平靜方式講出嚟，一唔小心，你嘅情緒就會變成衝突。</p><p>唔小心用攻擊式語氣講出嚟。</p></div><h2>你以為發脾氣可以嚇到對方、威脅到佢、留得住佢</h2>\n<p>於是你諗住大聲啲、激烈啲，對方就會怕失去你、就會聽你講、會重視你。但呢種用情緒留住另一半，用脾氣搵存在感嘅行為，其實好可能同你細個嘅經歷有關，以為可以一喊一鬧，啲大人先會停低手頭嘅嘢去關注你。你無意識咁以為原來「<strong>發脾氣</strong>」先可以被重視。久而久之就將呢個模式帶咗入感情世界。</p><h2>脾氣唔係留住另一半嘅工具</h2>\n<p>越係試圖想用脾氣去留住人，對方就越會想離開你，因為對方感受到嘅唔係「<strong>我對你好重要</strong>」，而係感受到你施加嘅壓力、指責，所以唔好再靠情緒去證明自己值得被愛。真正會留低嘅人：係因為你願意用真心講自己嘅感覺。而唔係靠爆炸嚇返嚟！</p><h2>禁止自己發脾氣等於好情人？</h2>\n<p>成日因為小事而發脾氣的確係唔好。但忍住唔好自己發脾氣唔等於就係好嘅另一半。有時你會以為收埋情緒、唔嬲、唔出聲。就等於成熟、體諒、係個好情人，但其實你唔係唔嬲，只係選擇將情緒攬曬落自己身上，為咗唔影響關係而影響咗自己情緒。長期壓抑最終只會變成突然爆發、會內耗。會令你喺關係入面越嚟越冇自我。</p><h2>感情拯救所話你知</h2>\n<p>脾氣絕對唔係一種保護色，都唔會係用嚟留住另一半嘅工具，唔好怕真心講出你嘅需求會冇人理。唔好怕講需要會顯得自己好麻煩，感情世界入面絕對唔係夠激烈就可以令對方注意你。唔係要嬲得夠多對方就會驚你走、就會留低。反而發太多脾氣：會令對方更加覺得你煩、更加想走人。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有啲情緒並唔係由當下事情引起</li><li>你以為發脾氣可以嚇到對方、威脅到佢、留得住佢。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-01-06",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-05-18",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7963833.jpg",
     "coverCredit": "Photo by Felicity Tai on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-talking-to-each-other-7963833/",
@@ -2849,27 +2495,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：大男人要怎樣相處？讓他願意聽你的溝通策略",
+    "coverCaption": "Asteria 相處教學：【需求表達】想同對方講需要，但他總是不聽怎麼辦？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 60,
-    "title": "總是遷就對方好累？關係失衡時要看清的界線",
-    "category": "關係危機",
+    "title": "【溝通錯配】你愈想被理解，他為何愈退縮？",
+    "category": "溝通相處",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "警號",
-    "summary": "對於你好愛嗰個人，你哋嘅關係可能曾經好平等，但係唔知從幾時開始，佢嘅位置開始比你高階，你哋之間嘅愛情，變得越嚟越不對等。當我哋越愛一個人，就越容易放下過往嘅堅持，處處為佢著想、為佢付出。但其實越係咁樣，你哋嘅關係就越係唔對等！想知點解會咁？",
-    "content": "<p>遇到「總是遷就對方好累」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「總是遷就對方好累」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>遷就到失去自己就是警號</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>看付出是否有來有往</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>「總是遷就對方好累」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>先守住界線，再看對方有沒有真正改變：回到「總是遷就對方好累」來看</h2>\n<p>如果「總是遷就對方好累」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「總是遷就對方好累」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「總是遷就對方好累」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「總是遷就對方好累」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
+    "imageLabel": "溝通",
+    "summary": "越想對方了解你，卻發現自己越說越多，對方就越走越遠，覺得自己被誤解、被冷落，甚至懷疑自己太煩。",
+    "content": "<h2>你試過這樣嗎？</h2>\n<p>明明只想對方了解你內心真正感受。但越說越多自己的想法，對方卻仍然沉默，或者越來越冷淡，令你開始。</p><h2>你：希望馬上獲得共鳴、被理解</h2>\n<p>對方：需要時間整理情緒&amp;思考方式。當你向對方傾訴所有感受、不安，對方可能無法即時理解、沒有太多回應。於是你會因為對方沒有回應而生氣。而對方都可以不理解為什麼你要生氣。令大家產生誤解、越走越遠，背後其實是「<strong>互動模式不對等</strong>」的溝通錯配。</p><h2>溝通頻率不同並不代表對方不關心你！</h2>\n<p>而是溝通錯配，大家互動模式不對等，情緒外露：傾向用言語表達壓力&amp;不安。理性分析：傾向壓抑情緒避免衝突。當這兩種模式碰撞會容易出現溝通錯配。對方太冷淡、太不在乎：對方太敏感、太情緒化，其實彼此都沒有錯，只是缺乏理解與協調。要改變，其實也不難！</p><h2>溝通上有共鳴是理解對方頻率的開始！</h2>\n<div class=\"article-section-card\"><p>理解、接納對方的溝通節奏，並不代表你要壓抑自己的需要，而是學會選擇對的時間，用適合對方的方式說出來，就讓我們教你3個方法，去改善溝通頻率不一致的情況！</p></div><h2>觀察對方狀態</h2>\n<p>表達情緒之前先主動詢問對方：「<strong>現在是時候討論嗎？</strong>」，學習觀察對方當下的情緒狀態不代表壓抑自己。而是選擇一個對方更容易接收的時機。才能避免對話內容變成壓力，也能讓對方感受到你的尊重，對方自自然然就會願意聽，也願意分享他的想法。</p><h2>與其一次過訴苦，講出所有不滿與委屈</h2>\n<p>表達重點而非情緒傾瀉：不如先聚焦一至兩個你最想對方明白的感受。將情緒整理成清晰、有重點的訊息。令對方更容易理解和接收，而不會感到壓力或混亂。</p><h2>設身處地的思維</h2>\n<p>情緒外露的人：嘗試放慢語速、調整語氣，表達後給予對方空間，耐心等待對方的回應，傾向理性分析的人，多觀察自己在情緒對話中容易逃避或壓抑的反應。</p><p>學習在尚未準備好深入討論時，簡單回應一兩句，讓對方感受到被接納與重視。</p>\n<h2>感情拯救所，告訴你</h2>\n<p>很多人以為愛就是無所不談、即時共鳴。所以想與對方多分享、多表達自己的想法。但有時候越想被理解就容易被誤解。越用力靠近反而被越推越遠，但你不是太敏感，對方也不是太冷淡，只是你們的溝通頻率真的不一樣，只要彼此肯退一步，留意對方的節奏、調整自己的方式。就能慢慢建立起屬於你們的對話節奏。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你：希望馬上獲得共鳴、被理解</li><li>溝通頻率不同並不代表對方不關心你。</li><li>溝通上有共鳴是理解對方頻率的開始。</li><li>與其一次過訴苦，講出所有不滿與委屈。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2023-08-24",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-08-15",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4308055.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/upset-young-indian-couple-having-argument-while-sitting-on-couch-4308055/",
@@ -2877,47 +2517,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-36766891.jpg",
-        "caption": "內文配圖：總是遷就對方好累？關係失衡時要看清的界線",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "Photo by Vitaly Gariev on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-lying-apart-in-bed-unhappy-36766891/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6870546.jpg",
-        "caption": "內文配圖：總是遷就對方好累？關係失衡時要看清的界線",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "Photo by Gustavo Fring on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-having-an-argument-6870546/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-5617747.jpg",
-        "caption": "內文配圖：總是遷就對方好累？關係失衡時要看清的界線",
+        "caption": "內文配圖：愛到委屈自己值得嗎？關係不對等的警號",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-touching-the-woman-s-elbow-while-having-an-argument-5617747/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：總是遷就對方好累？關係失衡時要看清的界線",
+    "coverCaption": "Asteria 相處教學：【溝通錯配】你愈想被理解，他為何愈退縮？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 61,
-    "title": "佔有慾太強點算？測出不安來源與改善方法",
-    "category": "情緒修復",
+    "title": "【報備與控制】想對方一直報備，是關心還是控制？",
+    "category": "關係危機",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "療癒",
-    "summary": "佔有慾太強，表面是愛得深，背後可能是不安、失控感或過去受傷。要改善，不是靠控制對方，而是建立更穩的安全感和界線。",
-    "content": "<p>你可能很怕失去，所以想知道對方在哪裡、跟誰一起、為甚麼未回覆。但佔有慾如果變成監控，關係會越來越緊，對方也會越來越想逃。</p>\n<h2>先看佔有慾從哪裡來</h2>\n<p>是對方真的有曖昧行為，還是你一不安就想控制？分清事實和想像，才知道要處理關係，還是處理自己的焦慮。</p>\n<p>你可以問自己：我現在不安，是因為有真實事件，還是因為腦入面已經開始補劇情？分得清這兩者，才不會把所有焦慮都變成對方的罪名。</p>\n<h2>控制不能製造忠誠</h2>\n<p>查電話、限制社交、逼對方報備，短期可能令你安心，長期卻會破壞信任。忠誠要靠自願，不是靠監視。</p>\n<p>越想控制，對方越想保留空間；越保留空間，你又越不安，最後變成惡性循環。信任不是完全不介意，而是知道哪些位置需要交代，哪些位置要放手。</p>\n<h2>把要求變成可接受的界線</h2>\n<p>你可以講清楚你介意甚麼，例如和曖昧對象單獨見面、隱瞞行程；但不要把所有正常社交都變成威脅。</p>\n<p>健康界線應該是雙方都能理解的，例如不隱瞞曖昧聯絡、不單獨做容易誤會的事。它不是要求對方切斷所有社交，而是建立彼此安心的規則。</p>\n<h2>建立自己的生活重心</h2>\n<p>當你的情緒只圍著對方轉，任何小變化都會被放大。讓自己有朋友、工作、興趣，安全感會比較穩。</p>\n<p>當你的生活只剩下等對方回覆，每一次已讀不回都會變成大事。把注意力拉回工作、朋友和興趣，不是裝不在乎，而是讓自己不要被焦慮牽住。</p>\n<h2>看對方是否願意給穩定感</h2>\n<p>改善佔有慾不只是你一個人的事。若對方長期模糊、欺瞞、忽冷忽熱，你的不安也有現實原因。</p>\n<p>如果對方本身行為一直模糊，你不能只責怪自己佔有慾強。真正的改善，是你學會穩住自己，同時對方也願意給出足夠清楚和一致的行動。</p>\n<h2>常見問題</h2>\n<h3>佔有慾強係咪代表好愛？</h3>\n<p>不一定。愛會想靠近，但控制通常來自不安。</p>\n<h3>我應該要求對方報備嗎？</h3>\n<p>可以有基本交代，但不應變成全天候監控。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你分清現實警號和內在焦慮，再整理較健康的表達方式。</p>",
+    "imageLabel": "警號",
+    "summary": "你覺得拍拖之後，應該幾多程度上報備先係合理。",
+    "content": "<h2>你同另一半拍拖</h2>\n<p>有冇要求過佢出街要同你報備？有啲人會覺得報備係基本尊重，但亦有啲人就覺得係控制，因為覺得每次同朋友見面都要同另一半報備。就好似同緊監護人一齊！你又有冇俾人咁投訴過？</p><h2>報備等於尊重，但=/=請示！</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>健康報備</span><p>報備等於主動分享，報備 =/= 請求批准，例如：另一半約咗friend食飯。</p></div></div><p>如果你要求佢同你講清楚去邊度食、有咩人一齊食。仲要佢問准咗你，先可以去，但呢樣就唔係對方向你報備，而係要佢連同friend嘅聚會都要等你批核。令變咗失去生活自主權。</p><h2>報備方式等於反映關係狀態</h2>\n<div class=\"article-section-card\"><p>如果雙方本身信任感強，報備就只係一種日常交流，但如果有一方成日都疑神疑鬼，過問太多細節，例如：「今晚有冇異性去？」，或者「Facetime我睇下你係咪真係喺度」，咁就唔係單純嘅報備，而係缺乏安全感/控制慾太強，想監控另一半嘅行蹤、對另一半冇信任。</p></div><h2>報備等於雙向，但=/=單向</h2>\n<p>有啲人會覺得，另一半要向自己報備，但自己就唔需要同佢報備，但其實咁樣係unfair，因為健康嘅關係應該係互相尊重，而唔係單方面嘅要求，如果只有一方一味地要求對方報備。</p>\n\n<p>好可能係出自對嗰一方嘅不信任，喺呢個情況下，咁其實呢段關係已經失衡！</p>\n\n<h2>唔報備等於唔夠愛</h2>\n<p>如果你覺得你真係咁愛我，咁點解唔可以俾我知道你去邊？但其實愛一個人，並唔代表要24小時監察對方，而係要互相信任，唔係要對方時刻交代行蹤嚟證明忠誠。如果你因為對方無即時報備就對佢有懷疑。甚至無理取鬧：咁只係因為你嘅不安感太重。</p><h2>「<strong>啱啱好</strong>」嘅報備係⋯？</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>坦誠嘅日常溝通</span><p>只要你哋平時有溝通，會互相關心對方今日做過啲咩，就可以減少對另一半嘅不安/不信度。</p></div><div class=\"article-point-card\"><span>Set好界線</span><p>就算係情侶都應該有自己嘅空間同私隱。唔好太過執著細節，唔好要另一半事無大小都要對你一五一十咁匯報。了解對方真正需要：如果係因為安全感低而要求另一半報備。咁其實問題唔係報備本身，而係你可能內心有好強嘅不安感，你應該由增強信任應入手，而唔係單靠報備嚟令自己安心！</p><h2>感情拯救所話你知</h2>\n<p>拍拖並唔代表失去自由！如果你覺得「<strong>時時刻刻</strong>」嘅報備係MUST，咁某程度上可能係一種控制，係對呢段關係嘅唔信任，長此落去，喺呢段關係入面，報備會變成一種壓力，而唔係一種關愛！甚至可以話係一種「<strong>變態嘅愛</strong>」，呢段感情亦都唔會穩定，應該即刻搵方法解決自己嘅不信任感！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有冇要求過佢出街要同你報備？</li><li>一段健康嘅戀愛關係</li><li>如果雙方本身信任感強</li><li>如果你覺得你真係咁愛我</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2023-10-03",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-04-25",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6964854.jpg",
     "coverCredit": "Photo by cottonbro studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-standing-in-front-of-her-phone-6964854/",
@@ -2945,27 +2579,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：佔有慾太強點算？測出不安來源與改善方法",
+    "coverCaption": "Asteria 相處教學：【報備與控制】想對方一直報備，是關心還是控制？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 62,
-    "title": "對方忽冷忽熱係咪變心？拆解間歇性冷漠真相",
-    "category": "關係危機",
+    "title": "【愛得太用力】為何付出愈多反而推走對方？",
+    "category": "戀愛心理",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "警號",
-    "summary": "有冇試過覺得另一半有時會對你忽冷忽熱？呢啲時候，你係咪會好自然地覺得，佢可能係出軌，或者可能唔再愛你？但其實有時啲嘢，未必咁片面，話唔定潛藏其他可能性！",
-    "content": "<p>eg：有時覆msg覆得好慢 甚至唔覆 eg：喺街度又成日想同你保持距離，eg：唔鍾意對你表達愛意 eg：有時又突然錫到你暈，面對咁樣嘅另一半 你會唔會懷疑：；💬 「<strong>佢係咪唔夠愛我？</strong>」、；💬「<strong>如果真心在乎我，點解佢會咁冷淡？</strong>」。</p>\n<p>好可能係間歇性冷漠 一般嚟講 我哋好理所當然地自認為，一個真心愛自己嘅人，會時刻保持熱情、照顧我們嘅情緒，但實際上 另一半係可能會有間歇冷淡，而喺呢個行為背後，可能蘊藏著更多深層原因，而唔係單單「<strong>唔夠愛</strong>」。</p>\n<h2>咩係「<strong>間歇性冷漠</strong>」</h2>\n<p>所謂嘅「<strong>間歇性冷漠</strong>」 就係一種非持續性 偶爾會對另一半表現冷淡嘅行為；📌對方有時回應得慢啲；📌冇乜情感表達少咗；📌有意無意地保持距離 間歇性冷漠嘅行為，好易會令另一半喺感情上覺得遭受忽冷忽熱，雖然呢種表現可能會令對方覺非常受傷。</p>\n<h2>信號清楚後，為「對方忽冷忽熱係咪變心」定界線</h2>\n<p>有啲人會希望喺愛入面保持清醒 唔會畀自己變咗沉船仔，鍾意有啲啲抽離感 確保自己唔會因為愛情而消耗太多精力同情緒，間中冷淡唔一定代表佢唔愛你。</p>\n<p>但你唔可以俾「<strong>間歇性冷漠</strong>」變成一種習慣，如果呢種冷漠變成咗一種「<strong>常態</strong>」，就會開始對親密關係造成負面影響 太多嘅冷漠唔，單止會令對方覺得不安、無所適從，仲會慢慢侵蝕彼此之間嘅感情基礎 甚至引發不信任，令關係變得脆弱。</p>\n<h2>常見問題</h2>\n<h3>忽冷忽熱一定代表變心嗎？</h3>\n<p>不一定，但代表關係裡有不穩定。可能是壓力、逃避親密，也可能是投入下降。你要看冷熱是否反覆、是否有解釋和補救。</p>\n<h3>對方忽冷忽熱時，我應該追問嗎？</h3>\n<p>不要一開始就追到很緊，可以先用低壓方式講感受，再觀察他之後是否願意穩定回應。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DEcJ8rkSCmb/",
-    "date": "2025-01-05",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "妳一直以為多付出一點，多體諒對方，這段感情就會幸福長遠嗎。",
+    "content": "<h2>很多人以為多忍耐、多包容</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>感情就會更穩定</span><p>但事實是無止境的付出會令你越來越累。</p></div><div class=\"article-point-card\"><span>幸福卻離你越來越遠</span><p>愛情是雙向而非一個人苦苦支撐，只有一個人的愛情會令這段關係竹失去平衡。真正的愛是彼此的真心給予，而不是犧牲自我去迎合對方，如果發現自己越是付出越是失去自我。這可能是一個警號提醒你停下腳步。思考這樣的付出是否健康、是否值得。</p><h2>設立健康的感情界線</h2>\n<div class=\"article-section-card\"><p>為這段感情設下界線不是冷漠，而是讓彼此都有空間呼吸，清楚知道自己的底線與需求，不讓對方輕易越界，才能在這段愛情中保護自我，能讓感情長久而又不會感受到很辛苦。</p></div><h2>勇敢表達內心的感受</h2>\n<div class=\"article-section-card\"><p>不要因為怕爭執或怕失去對方，而把委屈悶在心入面，因為這樣做其實不會換來更深的愛。</p><p>也不會讓對方覺得你善解人意，反而會令自己陷入孤獨。</p></div><h2>正常付出：有互動、有回饋、不會長期消耗自己</h2>\n<p>有互動感，不會長期消耗自己，你真心想做而非因為怕對方生氣才做。會得到對方的感謝/回饋，有自己的認同感。</p><h2>非正常付出：因為害怕失去而犧牲自己</h2>\n<p>不是因為自己想做，而是因為怕對方生氣才做。對方幾乎沒有回應/回饋/感謝，為了遷就對方而犧牲自己，即使已經身心俱疲仍無法say no。一旦對方冷淡，你就覺得自己沒有價值。</p><h2>感情拯救所，告訴你</h2>\n<p>愛情需要付出：但更需要平衡，你的愛情不應該是靠無限的忍耐換來。而是雙方共同用心經營的結果，想改善這段關係的平衡點，可以嘗試用儀式能幫你釋放積壓的情緒。重整能量場，讓你重新找回內在力量。也讓這段關係重回正軌。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>確認自己的付出是出於愛而非討好。</li><li>正常付出</li><li>非正常付出</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "2025-10-18",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-18989855.jpg",
     "coverCredit": "Photo by Tùng Sơn on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-standing-outdoors-18989855/",
@@ -2993,27 +2621,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方忽冷忽熱係咪變心？拆解間歇性冷漠真相",
+    "coverCaption": "Asteria 相處教學：【愛得太用力】為何付出愈多反而推走對方？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 63,
-    "title": "對方突然無感覺係咪變心？關係冷淡的原因",
-    "category": "關係危機",
+    "title": "【感情變淡】感情耐咗一定變淡嗎？4 個行為令他慢慢抽離",
+    "category": "戀愛心理",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "警號",
-    "summary": "坊間稱「只要發現另一半做出啲令人幻滅嘅行為，而導致鍾意佢、愛佢嘅感覺消失」呢種舉動為「蛙化現象」，但出現「蛙化現象」係咪就等於可以考慮呢段感情？",
-    "content": "<p>遇到「對方突然無感覺係咪變心」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先分清無感覺是冷卻，還是真的變心</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>觀察他是否仍然願意回應</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要用追問把距離推得更遠</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>看冷淡背後有沒有壓力或逃避</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「對方突然無感覺係咪變心」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>面對「對方突然無感覺係咪變心」，先停一停追問</h2>\n<p>如果你正面對「對方突然無感覺係咪變心」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>對方突然無感覺係咪變心</strong>」入面，對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>遇到「<strong>對方突然無感覺係咪變心</strong>」時，我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我睇「<strong>對方突然無感覺係咪變心</strong>」呢類情況？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
+    "imageLabel": "心理",
+    "summary": "有時拍拖耐咗/曖昧太耐，會feel到對方好似對你越嚟越冇興趣、感情變淡，呢啲情況，你第一直覺係咪認為對方另有新歡。",
+    "content": "<h2>「<strong>點解我哋會越嚟越疏遠？</strong>」</h2>\n<p>會feel到對方好似對你越嚟越冇興趣、感情變淡。呢啲情況：你第一直覺係咪認為對方另有新歡？但其實好多時係細節出咗問題，因為你有啲習慣或者行為可能慢慢消磨自己嘅吸引力。一齊嚟睇吓有冇啲係你中咗招！</p><h2>頹Look</h2>\n<p>無論你覺得自己係靚仔/靚女，抑或係普通樣，外表其實都好重要！好多時開頭會好care自己個樣、衣著。但而家？你回想下有冇唔太注重自己嘅外表。可能著衫好hea，連頭都懶得梳。對方梗係覺得冇新鮮感啦！</p><h2>過度依賴對方</h2>\n<p>對於拍緊拖嘅人嚟講：可能會想同另一半有多啲時間時間。但如果成日要對方陪，經常唔俾私人空間對方，無論咩嘢事要問對方意見，連剪頭髮、見朋友都要對方同你一齊。咁樣會令對方覺得好煩。</p><h2>負能量爆炸</h2>\n<p>無疑，另一半係應該同你一齊分擔煩惱。但如果你成日呻工作壓力、呻生活唔開心。長期負能量超標：你整個人都被低氣壓圍繞，失去曬吸引力，仲會令另一半覺得壓力好大，覺得同你一齊唔再感受到開心，反而係伴隨住一大堆嘅煩惱，影響埋佢嘅情緒，久而久之，就令佢覺得你唔再係佢開心嘅源頭。甚至會想逐漸疏遠你。</p><h2>忽略對方感受</h2>\n<p>成日諗住自己開心、唔認真聽對方講嘢。都冇顧慮對方感受：忽略對方嘅需要，或者對方為咗你默默做咗好多，但你完全冇留意，甚至視為理所當然。會令對方覺得被冷落、唔被重視，令對方覺得自己嘅努力冇價值，慢慢就會對你失去熱情，亦會覺得你失去吸引力，係個唔稱職嘅另一半。</p><h2>想提升自己嘅吸引力，可以點做？</h2>\n<p>注重外表、儀容：偶然安排小驚喜或者禮物，適當地保持自己嘅神秘感，多啲溝通、多啲善意地表達關心，學啲簡單嘅新嘢，保持成長嘅狀態。提升情緒管理能力，主動解決矛盾。學啲簡單嘅新嘢，保持成長嘅狀態。</p><h2>感情拯救所話你知</h2>\n<p>人嘅吸引力係需要持續經營！如果你中咗以上嘅任何一樣，都唔使太灰心，因為改變永遠唔會遲，亦總有方法可以重燃返對方對你嘅愛意。前提係只要你願意作出少許改變，再配合儀式嘅進行，用提升戀愛熱度嘅儀式，幫你強化愛情、情感重新昇華！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>頹Look</li><li>負能量爆炸</li><li>想提升自己嘅吸引力，可以點做</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-08-17",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-02-11",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560023.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-giving-bad-news-to-a-young-couple-8560023/",
@@ -3041,27 +2663,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方突然無感覺係咪變心？關係冷淡的原因",
+    "coverCaption": "Asteria 相處教學：【感情變淡】感情耐咗一定變淡嗎？4 個行為令他慢慢抽離",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 64,
-    "title": "覺得對方唔夠愛你？先看清關係變淡的真正原因",
-    "category": "戀愛心理",
+    "title": "經常訊息轟炸 情緒失控 你愛她但覺得累？ 教你學識與焦慮型相處",
+    "category": "溝通相處",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "心理",
-    "summary": "覺得對方唔夠愛你，未必等於關係已經完結。先分清係表達方式變少、生活壓力令熱情下降，還是對方真的長期沒有修補行動，才知道應該溝通、觀察還是守住底線。",
-    "content": "<p>覺得對方唔夠愛你，最辛苦的地方通常不是一兩句說話，而是你感覺自己慢慢不再被放在心上。以前會主動報備、會哄你、會想見你；現在回覆變慢、語氣變淡、約見面也像例行公事。這種落差會令人很容易下結論：是不是不愛了？是不是變心了？</p>\n<p>但關係變淡有很多原因，不一定每一種都代表對方已經放棄。真正要看的是：這種冷淡是暫時狀態、表達方式不同，還是對方已經長期不願意為關係付出。</p> <h2>先分清：佢係少咗愛，定係少咗表達？</h2>\n<p>有些人愛你的方式不是日日講甜言蜜語，而是用行動、安排、照顧或陪伴去表達。如果你需要的是語言上的肯定，而對方習慣用實際行動表達，你就會很容易覺得他不夠愛你。</p>\n<p>所以第一步不是逼對方即刻證明愛，而是回頭看：他有沒有仍然關心你的生活？有沒有記得你的需要？有沒有在重要時候願意出現？如果表達方式不同，問題是需要翻譯；如果連基本行動都沒有，才是更深的警號。</p> <h2>生活壓力會令熱情下降，但不等於感情消失</h2>\n<p>工作壓力、家庭壓力、情緒低落、生活節奏改變，都會令一個人短期內少了熱情。對方未必是不愛你，而是能量不夠，連自己也顧不好。</p>\n<p>但壓力不能永遠成為忽略你的理由。你可以觀察他在壓力過後有沒有回來修補，有沒有向你交代，有沒有願意重新調整相處節奏。真正有心的人，就算狀態不好，也會在有能力時讓你知道你仍然重要。</p> <h2>你越追問，對方越退後，關係就會更似變淡</h2>\n<p>當你很不安時，自然會想問：你係咪唔愛我？你係咪變咗？你到底想點？可是如果每次靠近都變成審問，對方可能會因為壓力而退後，然後你又更覺得他冷淡。</p>\n<p>這就會形成一個循環：你越沒有安全感，越想確認；對方越覺得被追逼，越想避開。最後真正令關係變淡的，未必是一開始沒有愛，而是你們已經失去舒服溝通的方式。</p> <h2>真正要留意的是：佢有冇修補行動</h2>\n<p>一句甜言蜜語不代表關係穩定，一次冷淡也不代表感情完結。更值得看的，是對方在你表達不安之後，有沒有願意理解、調整和修補。</p>\n<p>如果他會聽、會嘗試改、會在之後用行動回應，代表關係仍然有空間。相反，如果他長期只叫你不要想太多，卻沒有任何實際改變，你的不安就不是玻璃心，而是關係真的缺少承接。</p> <h2>點樣開口，先唔會變成審問？</h2>\n<p>你可以把「你都唔愛我」換成更具體的說法，例如：最近你少了主動找我，我會有點不安；我想知道你是太忙，還是我們的相處有甚麼需要調整。這樣講，對方比較容易聽到你的感受，而不是只聽到指責。</p>\n<p>溝通的目的不是逼對方立即交答案，而是看對方願不願意一起面對問題。如果他願意接住，你們就可以慢慢調整；如果他完全逃避，你也會更清楚自己在這段關係入面的位置。</p> <h2>如果長期得你一個人努力，就要守住底線</h2>\n<p>關係變淡可以修補，但前提是兩個人都願意。你可以溫柔，可以給時間，也可以嘗試用更好的方式表達；但不應該長期只有你一個人檢討、一個人等待、一個人撐住整段關係。</p>\n<p>如果你已經清楚講出需要，而對方仍然沒有任何行動，下一步就不是再問他愛不愛，而是問自己：這段關係是否仍然讓我被珍惜、被尊重、被好好對待。</p>\n<h2>常見問題</h2>\n<h3>對方少覆 message 係咪代表唔愛我？</h3>\n<p>不一定。要看少覆是短期壓力、工作忙，還是長期逃避。如果他雖然忙，但仍會交代、補回、安排時間，未必等於不愛；如果長期消失又不修補，就要認真看清。</p>\n<h3>佢以前好熱情，依家冷淡，係咪變心？</h3>\n<p>熱情下降可能是關係進入穩定期，也可能是情緒或生活壓力影響。真正要分辨的是：他冷淡之後有沒有仍然投入，有沒有在你需要時出現，有沒有願意改善相處。</p>\n<h3>Asteria 可以點幫我判斷係冷淡期定真係變淡？</h3>\n<p>可以按你們最近的對話、回覆頻率、見面狀態和衝突模式，幫你拆清楚對方是暫時退後、壓力太大，還是關係投入已經下降，再整理下一步應該點樣講、點樣做。</p>",
+    "imageLabel": "溝通",
+    "summary": "另一半太痴身，是否因為對方缺乏安全感。",
+    "content": "<h2>你試過遇到以下情況嗎？</h2>\n<p>工作期間收到數十個來自另一半的訊息。一直被問你為何沒有回覆覆，又經常追問甚麼時候能再見面，明明今天才約會，卻在明天又說自己太想念你，問今日能否再見面，雖然聽起來看是so sweet。但有時會覺得對方太「<strong>痴身</strong>」，到底對方是缺乏安全感？或者本身有「<strong>依附焦慮</strong>」？</p><h2>安全感不足 vs 依附焦慮</h2>\n<p>安全感不足：有時對方過份依賴未必源於性格問題。而可能是因為曾經在關係中經歷某些事件。令對方產生疑慮：擔心你對這段關係其實並不在意，應對方法，只要你願意主動解釋清楚，給予實際的承諾與穩定的行動支持。這些情況都可以慢慢改善。</p><h2>依附焦慮</h2>\n<p>是一種深層的情感模式：源自早期經歷或長期關係中的不安。親密關係極度敏感：經常擔心被忽視、被拋棄，即使作為另一半的你並無異常表現。對方仍可能出現過度聯絡、情緒勒索、測試你愛不愛自己的行為。特徵：一日未覆訊息就焦慮不安，經常懷疑你變心，喜歡「<strong>測試</strong>」你是否重視自己。</p><h2>你要怎樣對應有依附焦慮的另一半？</h2>\n<p>單靠承諾未必有效：因為對方的不安是內化的，所以需要更多耐性、更多溝通，甚至建議對方尋求專業協助，釐清自己對關係的依附模式，而你都要學懂設定健康界線，避免自己被對方的情緒綁架！工作日可以每日固定時間回覆訊息。預告空檔，忙之前先和對方說清楚，讓對方有心理準備，強化連結，定期表達感受，肯定對方在你心目中的價值。以為只要多溝通，你們雙方的連結就會相應穩固？不一定！</p>\n<p>也許要再依靠外界能量的加持！由能量層面傳遞你內心未能言喻的愛 &amp; 關懷。打開對方內在的接收頻率，讓他/她感受到你仍然重視對方。淡化過去的怨氣或誤解，重拾彼此之間的連結。提升彼此心靈上的共鳴與理解，比起單靠口頭分享感受，儀式等於一個沉默但有力的能量訊號。重新打開一條可以被理解的感情通道。</p><h2>感情拯救所，告訴你</h2>\n<p>面對一個「<strong>痴身</strong>」的另一半，有不少人都會覺得很煩躁，但你要記得：對方「<strong>痴身</strong>」並不是為了特意煩著你。也不是對你極不信任的表現，而是因為內心的想不安未有人真正照顧過。所以才會出現依附焦慮，只要好好安慰、穩定好你們雙方的連結。情況一定會有所改善。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>依附焦慮</li><li>你要怎樣對應有依附焦慮的另一半。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2023-07-12",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-09-20",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7592756.jpg",
     "coverCredit": "Photo by Miriam Alonso on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-asian-couple-looking-at-each-other-7592756/",
@@ -3089,27 +2705,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：覺得對方唔夠愛你？先看清關係變淡的真正原因",
+    "coverCaption": "Asteria 相處教學：經常訊息轟炸 情緒失控 你愛她但覺得累？ 教你學識與焦慮型相處",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 65,
-    "title": "冷戰變成斷聯前，如何用低壓方式打開對話",
-    "category": "復合挽回",
+    "title": "【道歉技巧】只說對不起不夠？真正平息伴侶情緒的方法",
+    "category": "溝通相處",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "復合",
-    "summary": "所有男人都曾經遇到嘅難題：「女朋友明明發緊嬲，但又唔出聲，乜都唔講，淨係黑曬面，到底想點？」今次嘅女朋友說明書就話曬俾你知，到底女人為乜要咁做！一齊。",
-    "content": "<p>遇到「冷戰變成斷聯前」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「冷戰變成斷聯前，如何用低壓」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先看對方是否仍願意談「冷戰變成斷聯前，如何用低壓」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「冷戰變成斷聯前」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>別讓「冷戰變成斷聯前，如何用低壓」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先判斷「冷戰變成斷聯前，如何用低壓」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>面對「冷戰變成斷聯前，如何用低壓方式打」，先不要把修補變成追逼</h2>\n<p>如果你正面對「冷戰變成斷聯前」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「冷戰變成斷聯前」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「冷戰變成斷聯前」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「冷戰變成斷聯前」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "溝通",
+    "summary": "道歉只說對不起不夠，真正平息伴侶情緒，需要承認傷害、理解對方感受，並提出可見的補救行動。",
+    "content": "<h2>先承認具體傷害</h2>\n<p>不要只說「<strong>對不起啦</strong>」。要講清楚你知道自己哪個行為令對方受傷，對方才會覺得你不是敷衍。</p>\n<p>具體承認會令對方知道你真的有聽見，而不是只想快點過關。例如講出「<strong>我昨晚沒有交代就消失，令你很不安</strong>」，比一句對不起有力量得多。</p>\n<h2>不要急著解釋自己原因</h2>\n<div class=\"article-section-card\"><p>解釋可以之後再講，但一開始就辯解，對方會覺得你在推責任。先接住情緒，再談背景。</p><p>很多道歉失敗，是因為一開始就急著解釋自己不是故意。你可以有原因，但先讓對方感覺被理解，之後再談背景，效果會完全不同。</p></div><h2>讓對方知道你聽明白</h2>\n<p>可以重述對方感受，例如「<strong>你會覺得我無視你，這點我明白</strong>」。被理解，比被要求快點原諒更重要。重述對方感受不是背稿，而是讓他知道你有站在他的角度看一次。人在被理解後，情緒才比較容易慢慢放下。</p><h2>提出下一次做法</h2>\n<div class=\"article-section-card\"><p>真正有力量的道歉，要有行動。例如下次提前交代、停止某個行為、補回造成的影響。</p><p>下一次做法要具體，否則道歉很快變成空話。可以講清楚你會提前交代、停止某個行為，或怎樣補回今次造成的影響。</p></div><h2>接受信任需要時間</h2>\n<p>你道歉了，不代表對方要立刻沒事。給時間讓信任慢慢回來，也是修補的一部分。對方未即刻好返，不代表你的道歉沒有用。信任受傷後需要時間，你願意穩定地做出改變，才是最能平息情緒的部分。</p><h2>把「道歉只說對不起不夠」講成可被接住的話。</h2>\n<p>你可以回看「道歉只說對不起不夠」最近一次對話：第一句是否已經帶責備、你有沒有一次講太多、對方防衛後你有沒有越追越急。找到卡位，才知道句子要怎樣改。</p>\n<p>處理「<strong>道歉只說對不起不夠</strong>」時，先把句子縮短。由「<strong>你永遠都係咁</strong>」改成「<strong>剛才那件事令我不安，我想下次可以提早講</strong>」，對方會更容易接收到你的需要。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>把道歉只說對不起不夠講成可被接住的話。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-11-08",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-08-02",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6643023.jpg",
     "coverCredit": "Photo by Alena Darmel on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-sad-woman-standing-in-front-of-a-man-leaning-on-the-wall-6643023/",
@@ -3117,47 +2727,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11037195.jpg",
-        "caption": "內文配圖：冷戰變成斷聯前，如何用低壓方式打開對話",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "Photo by Takuya Hozumi on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-woman-in-gray-dress-11037195/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8727412.jpg",
-        "caption": "內文配圖：冷戰變成斷聯前，如何用低壓方式打開對話",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "Photo by Tima Miroshnichenko on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-woman-in-red-long-sleeve-shirt-8727412/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8820970.jpg",
-        "caption": "內文配圖：冷戰變成斷聯前，如何用低壓方式打開對話",
+        "caption": "內文配圖：情侶冷戰點算？分清冷靜、逃避與拒絕溝通",
         "credit": "Photo by Khoa Võ on Pexels",
         "creditUrl": "https://www.pexels.com/photo/sad-young-woman-with-clasped-hands-on-a-rainy-day-8820970/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：冷戰變成斷聯前，如何用低壓方式打開對話",
+    "coverCaption": "Asteria 相處教學：【道歉技巧】只說對不起不夠？真正平息伴侶情緒的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 66,
-    "title": "對方一講就起鋼？防禦性傾聽的原因與解法",
-    "category": "溝通相處",
+    "title": "【戀愛白紙】對方母胎單身？教直男談戀愛的相處方法",
+    "category": "曖昧桃花",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "溝通",
-    "summary": "人與人之間嘅溝通真係一個好大嘅學問，尤其同身邊最親近嘅另一半，有時講得自己講咗嘅嘢，佢都聽唔入耳，或者佢聽你講咗一半就已經唔想到聽、有啲「起鋼」？唔係因為佢冇耐性聽你講、唔係因為佢唔愛你，而係因為佢有「防禦式傾聽」嘅習慣！",
-    "content": "<p>有啲人，無論點同佢解釋都好 佢都係半信半疑 仲好似成日覺得你講嘅嘢針對佢咁，甚至你隨口講句嘢，佢都可能會覺得受傷 其實佢呢啲就係「<strong>防禦式傾聽</strong>」嘅表現。</p>\n<p>但佢嘅另一半可能會feel到佢有呢啲表現；📌 覺得對方啲說話有骨，覺得委屈：「<strong>佢點解可以咁講嘢傷我心？</strong>」；📌 成日喺對方啲話度搵出邊句係喺鬧緊自助餐；📌 總覺得對方「<strong>話中有話</strong>」，自認好叻可以聽出佢背後嘅意思。</p>\n<p>📌對方未講完，佢已經忍唔住準備即刻反駁佢啲「<strong>指控</strong>」</p>\n<h2>防禦性傾聽點樣傷害你哋嘅感情</h2>\n<p>🔎 自我辯護 有時候會忍唔住幫自己搵藉口，但喺保護自己嘅時候，就好容易聽唔明對方真正想表達嘅意思；🔎 反將對方一軍，有時候因為會因為唔想再聽對方講落去，而選擇反過嚟返鬧對方、將責任推到佢度，但咁只會令關係更加僵；🔎 回避問題 有時候會突然轉話題、或者乾脆唔出聲。</p>\n<p>當係對抗自己感受到嘅攻擊 但會阻礙真正嘅溝通</p>\n<h2>把「對方一講就起鋼」講成對方聽得懂的說法</h2>\n<p>避免直接批評：用「我」開頭嘅表達方式！</p>\n<p>直接批評會令佢哋感到被攻擊 從而更加防守 避免用批判式語言，轉而用「我」作為開頭 將焦點放喺自己嘅感受，而唔係對方嘅錯誤。</p>\n<ul><li>「<strong>你每次都唔理我講嘢，我唔鍾意咁樣</strong>」</li></ul>\n<p>⭕️ 「<strong>我有時覺得自己嘅感受好似冇被聽到，有啲難過</strong>」</p>\n<p>開場清晰表達善意 令對方明白你嘅溝通目的唔係針對佢，而係想共同解決問題或者表達自己嘅感受，咁樣可以降低對方防備心 用感受帶動對方理解你嘅立場 又唔會令佢覺得有壓力。</p>\n<ul><li>「<strong>其實我唔係想鬧你，但我想講你咁樣做唔係咁好</strong>」</li></ul>\n<p>⭕️「我希望我哋嘅關係可以更好，所以想了解下我哋可以點樣配合得好啲」</p>\n<h2>常見問題</h2>\n<h3>面對「對方一講就起鋼」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「對方一講就起鋼」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「對方一講就起鋼」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DEHMDgSSQ4q/",
-    "date": "2024-12-28",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "曖昧",
+    "summary": "大家有看過最近大熱的Netflix韓綜 《母胎單身大作戰》嗎。",
+    "content": "<h2>大家有看過最近大熱的Netflix韓綜</h2>\n<p>幾位從未拍過拖的「<strong>母胎單身</strong>」男女。想嘗試第一次戀愛，看著他們的舉動，有時真的覺得有些好笑，但如果你的另一半也是一個第一次拍拖的母胎單身。可能令你覺得有點困擾！</p><h2>母胎單身的另一半常有哪些相處盲點？</h2>\n<p>無意識自我中心：習慣只顧自己感受，未學會留意伴侶需要。對愛情有幻想，卻無現實經驗，以為相愛就自然會明白對方，所以遇到矛盾手足無措。逃避處理衝突：未學識有效溝通，出現問題時會冷處理或沉默。</p><h2>你作為另一半會出現哪些困擾？</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>缺乏被愛感覺</span><p>明明有拍拖，卻感覺不到對方「識點愛人」，扮演家長/戀愛導師，需要不斷教導與解釋，像「湊小朋友」一樣。</p></div><div class=\"article-point-card\"><span>對方過分迴避</span><p>未必明白你的情緒，只會用自己方式處理問題。和母胎單身的另一半拍拖，確實需要更多耐性、智慧！簡化溝通語言：要具體化情緒表達，不要只做暗示。因為對於沒有戀愛經驗的人，要用更具體方式說出你真正的需要。協助對方慢慢建立「<strong>情緒回應力</strong>」，令對方Get到你想要的是甚麼。</p><h2>鼓勵而非責備</h2>\n<p>第一次拍拖的人常常在「<strong>想對你好</strong>」&amp;「<strong>不知道怎樣做</strong>」之間徘徊。但如果對方每次犯錯都被你責怪，只會令對方更害怕、更退縮，用鼓勵代替批評，才能令對方慢慢進步、慢慢成長。</p><h2>不要預設對方「<strong>應該要懂</strong>」</h2>\n<p>對方沒有過往戀愛經驗：難以即時理解情緒暗示、愛情語言。甚至不知道「<strong>基本應該做甚麼</strong>」，與其覺得「<strong>點解你連呢啲都唔識</strong>」，不如明確講出你想要的支持與表達方式。愛是可以學習的。</p><h2>感情拯救所，告訴你</h2>\n<p>母胎單身並不代表不值得被愛，但戀愛從來都不應是由一方負責補課。另一方在自己的世界中學習拍拖，看著《母胎單身大作戰》中各位參加學習追求人生中的第一段愛情的過程時。你也要記住，愛是雙向的學習，不是單方面的教導與忍耐，所以雙方才要一起成長！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>大家有看過最近大熱的Netflix韓綜。</li><li>母胎單身的另一半常有哪些相處盲點。</li><li>與母胎單身的另一半的相處Tips</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "sourceIg": "",
+    "date": "2025-09-14",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5225296.jpg",
     "coverCredit": "Photo by Samson Katt on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/serious-multiracial-couple-drinking-coffee-in-street-cafe-5225296/",
@@ -3185,27 +2789,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方一講就起鋼？防禦性傾聽的原因與解法",
+    "coverCaption": "Asteria 相處教學：【戀愛白紙】對方母胎單身？教直男談戀愛的相處方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 67,
-    "title": "對方母胎單身點相處？教戀愛白紙建立親密關係",
+    "title": "【防禦性傾聽】對方成日一講就起鋼？溝通要先降防衛",
     "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
-    "summary": "另一半是第一次拍拖的母胎單身？與對方溝通、相處時，非常辛苦？到底應該怎樣才能與對方好好相處？",
-    "content": "<p>面對「對方母胎單身點相處」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「對方母胎單身點相處」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>守住界線才看得清「對方母胎單身點相處」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>從時間安排看「對方母胎單身點相處」</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>把「對方母胎單身點相處」由想像拉回行動</h2>\n<p>「對方母胎單身點相處」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>處理「對方母胎單身點相處」時，先讓互動變得自然</h2>\n<p>如果你正在經歷「對方母胎單身點相處」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>對方母胎單身點相處</strong>」其實係溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>面對「<strong>對方母胎單身點相處</strong>」，我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 會唔會教我點覆「<strong>對方母胎單身點相處</strong>」相關 message？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "summary": "對方成日一講就起鋼？溝通要先降防衛。",
+    "content": "<h2>你哋有冇試過啲咁嘅情況？</h2>\n<p>有啲人，無論點同佢解釋都好，佢都係半信半疑，仲好似成日覺得你講嘅嘢針對佢咁。甚至你隨口講句嘢：佢都可能會覺得受傷，其實佢呢啲就係「<strong>防禦式傾聽</strong>」嘅表現。</p><h2>有「<strong>防禦性傾聽</strong>」習慣嘅人好難自我察覺</h2>\n<p>但佢嘅另一半可能會feel到佢有呢啲表現。覺得對方啲說話有骨，覺得委屈：「<strong>佢點解可以咁講嘢傷我心？</strong>」，成日喺對方啲話度搵出邊句係喺鬧緊自助餐。總覺得對方「<strong>話中有話</strong>」，自認好叻可以聽出佢背後嘅意思。對方未講完，佢已經忍唔住準備即刻反駁佢啲「<strong>指控</strong>」。</p><h2>防禦性傾聽點樣傷害你哋嘅感情？</h2>\n<div class=\"article-compare-grid article-compare-grid-labelled\"><div class=\"article-compare-card\"><span>自我辯護</span><p>有時候會忍唔住幫自己搵藉口，但喺保護自己嘅時候，就好容易聽唔明對方真正想表達嘅意思。有時候因為會因為唔想再聽對方講落去。而選擇反過嚟返鬧對方、將責任推到佢度。但咁只會令關係更加僵，回避問題，有時候會突然轉話題、或者乾脆唔出聲。當係對抗自己感受到嘅攻擊，但會阻礙真正嘅溝通。</p><h2>人點解會進入防禦傾聽狀態？</h2>\n<p>唔成熟，未成熟嘅人難接受「<strong>每個人可以有唔同睇法</strong>」佢哋認為事情淨係得一個正確做法。所以唔同意見會被視為否定同攻擊。高敏感人群：對生活細節特別敏感，容易察覺他人話語中可能存在嘅攻擊或指責。會過度解讀啲語言同動作，低自我價值感，習慣於處處否定自己，將內心對自己嘅苛責、攻擊投射到他人身上。成日覺得周圍嘅人都攻擊自己。</p><h2>另一半有「 防禦性傾聽 」習慣，要點應對：避免直接批評</h2>\n<div class=\"article-section-card\"><p>避免直接批評：用「我」開頭嘅表達方式！</p><p>直接批評會令佢哋感到被攻擊，從而更加防守，避免用批判式語言，轉而用「我」作為開頭，將焦點放喺自己嘅感受，而唔係對方嘅錯誤，「你每次都唔理我講嘢，我唔鍾意咁樣」，「我有時覺得自己嘅感受好似冇被聽到，有啲難過」。</p></div><h2>另一半有「 防禦性傾聽 」習慣，要點應對：開場清晰表達善意</h2>\n<p>開場清晰表達善意：令對方明白你嘅溝通目的唔係針對佢。而係想共同解決問題或者表達自己嘅感受。咁樣可以降低對方防備心，用感受帶動對方理解你嘅立場，又唔會令佢覺得有壓力，「<strong>其實我唔係想鬧你，但我想講你咁樣做唔係咁好</strong>」，「我希望我哋嘅關係可以更好，所以想了解下我哋可以點樣配合得好啲」。</p><h2>感情拯救所話你知</h2>\n<p>如果我哋用「<strong>防禦式聽嘢</strong>」嚟溝通。好多時都會miss咗對方真正想講嘅意思。以後同另一半、甚至屋企人溝通時。嘗試下放低防備、放低前設，專心聽清楚對方想講乜，咁先可以建立更加深嘅連繫同理解。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有，防禦性傾聽，習慣嘅人好難自我察覺。</li><li>防禦性傾聽點樣傷害你哋嘅感情</li><li>另一半有，防禦性傾聽，習慣，要點應對</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2025-09-14",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-12-28",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7339201.jpg",
     "coverCredit": "Photo by cottonbro studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-giving-a-woman-a-pink-flower-on-a-cafe-7339201/",
@@ -3233,75 +2831,63 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方母胎單身點相處？教戀愛白紙建立親密關係",
+    "coverCaption": "Asteria 相處教學：【防禦性傾聽】對方成日一講就起鋼？溝通要先降防衛",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 68,
-    "title": "被 Block／已讀不回點算？斷聯原因與挽回方法",
+    "title": "【斷聯挽回】對方突然 Block 你？已讀不回時可以點做",
     "category": "復合挽回",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "復合",
-    "summary": "同另一半嗌大交/冷戰後，有冇試過俾對方Block咗？就算冇Block，對方都可能係對你嘅msg已讀不回。呢啲情況，你係咪會以為呢段感情已經玩完？但又唔一定嘅！",
-    "content": "<p>遇到「被 Block／已讀不回點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先判斷「被 Block／已讀不回點」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>「被 Block／已讀不回點」不用一次過逼出完整答案</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>用行動判斷「被 Block／已讀不回點」</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>留住步伐才看得清「被 Block／已讀不回點」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>想修補「被 Block／已讀不回點算」，先判斷仲有沒有窗口</h2>\n<p>如果你正面對「被 Block／已讀不回點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>被 Block／已讀不回點算</strong>」入面，對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>遇到「<strong>被 Block／已讀不回點算</strong>」時，我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我睇「<strong>被 Block／已讀不回點算</strong>」呢類情況？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
+    "summary": "同另一半嗌大交/冷戰後，有冇試過俾對方Block咗。",
+    "content": "<h2>冷戰/分手期間</h2>\n<p>冇啦啦對方Block咗你，呢啲情況，你會點諗？係咪多數覺得呢段感情9成9都冇得救。冇辦法挽回？其實又唔係Must！對方Block咗你：又或者就算佢冇Block你，但一直對你嘅msg已讀不回，佢嘅內容，有機會係有其他諗法。</p><h2>逃避壓力</h2>\n<p>對方可能因為情感波動過大，所以選擇已讀不回/ Block你呢啲做法。嚟暫時切斷聯繫：避免出現進一步嗌交或情緒傷害，但咁唔一定代表佢真係已經放低你。亦唔等於佢其實係想分手，而係希望俾自己空間，好好冷靜。</p><h2>幫自己療傷/保護自己</h2>\n<p>對方可能覺得如果keep住同你聯繫。可能會對佢造成心理負擔，甚至會令佢嘅傷害加深，所以選擇咗用Block你呢個方法。作為自我保護嘅方式：等自己有機會走出情緒困境，令自己冇咁hurt，自我冷靜完、恢復完，先可以繼續面對你哋嘅問題。</p><h2>唔知要點面對你</h2>\n<p>有時對方可能唔知道應該點樣表達自己嘅感受。所以當你哋嗌完大交之後，佢會對當下嘅局面覺得好無助，尤其係如果對方有「<strong>依賴型人格</strong>」嘅情況。佢覺得採取「<strong>逃避</strong>」嘅方式，直接透過斷聯嚟避免直接面對問題。「<strong>睇唔到、聽唔到</strong>」就當係冇事發生過。暫時唔需要再面對你：暫時切斷煩惱嘅根源。</p><h2>一時衝動</h2>\n<p>有時候Block人係一種衝動嘅行為。同Shopping一樣，都好容易唔小心失控，尤其係喺情緒失控嘅時候，當情緒穩定之後，佢可能就會重新考慮取消Block你嘅決定。所以真係唔使咁擔心！</p><h2>決絕嘅絕心</h2>\n<p>有時候Block係一種強烈嘅信號！因為咁可能係佢向你表明「<strong>我要結束這段關係</strong>」嘅意思。如果對方堅持keep住Block你。咁有可能係佢想俾你明白佢嘅取態。用行動話俾你知佢決絕嘅決心，但其實就算佢嘅立場咁決絕，亦唔代表100%冇任何挽回感情嘅可能！</p><h2>咁你可以點應對？</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>既然聯絡唔到對方</span><p>唯有搵common friend幫手！</p></div><div class=\"article-point-card\"><span>請佢哋以第三方角度</span><p>向對方轉達感受、用朋友身份了解對方諗法。甚至借由朋友把口開解對方，由朋友把口幫你講好說話，但記得唔好令朋友覺得有種夾喺中間嘅感覺！幫你打破溝通障礙：重新開啟同對方對話嘅機會，同時重新喚醒對方對你嘅興趣同好感。提升你喺對方心目中嘅吸引力同重要性。咁就可能突破斷聯嘅障礙。</p><h2>感情拯救所話你知</h2>\n<p>好多人以為一旦被Block、被斷聯。呢段感情就一定要close file。但其實斷聯時期你嘅舉動等於決定挽回嘅成敗。齋等對方回心轉意係唔夠，都要試吓主動出擊！借助外界力量，突破目前關係嘅阻滯。重新拉近返彼此嘅距離都好重要，咁樣先可以更快、更有效地打破斷聯嘅局面！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>逃避壓力</li><li>一時衝動</li><li>決絕嘅絕心</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果對方突然 Block 或已讀不回，先不要直接當成無得救。更重要是分清他是在逃避壓力、保護自己，還是真的想切斷關係，再決定下一步。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
     "date": "2025-01-27",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/by_article/001-block-read-no-contact/01-asian-woman-unread-message-window.jpg",
-    "coverCredit": "",
-    "coverCreditUrl": "",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-8070516.jpg",
+    "coverCredit": "Photo by Ron Lach on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/",
     "coverPrompt": "",
     "images": [
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/02-asian-couple-cold-war-sofa.jpg",
-        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8036689.jpg",
+        "caption": "內文配圖：【斷聯挽回】對方突然 Block 你？已讀不回時可以點做",
+        "credit": "Photo by SHVETS production on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/03-asian-woman-careful-message-cafe.jpg",
-        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-8070513.jpg",
+        "caption": "內文配圖：【斷聯挽回】對方突然 Block 你？已讀不回時可以點做",
+        "credit": "Photo by Ron Lach on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-woman-lying-on-the-bed-while-using-her-mobile-phone-8070513/",
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/by_article/001-block-read-no-contact/04-asian-couple-distance-riverside.jpg",
-        "caption": "內文配圖：被 Block／已讀不回點算？斷聯原因與挽回方法",
-        "credit": "",
-        "creditUrl": "",
+        "src": "/article-custom-images/stock_local/pexels-17637241.jpg",
+        "caption": "內文配圖：【斷聯挽回】對方突然 Block 你？已讀不回時可以點做",
+        "credit": "Photo by K on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：被 Block／已讀不回點算？斷聯原因與挽回方法",
+    "coverCaption": "Asteria 相處教學：【斷聯挽回】對方突然 Block 你？已讀不回時可以點做",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 69,
-    "title": "對方用開玩笑貶低你？判斷感情傷害與界線",
+    "title": "【自我價值】對方唔夠愛你，問題可能出在你怎樣看自己",
     "category": "戀愛心理",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
     "imageLabel": "心理",
-    "summary": "有些朋友總愛以講笑口吻重提你的傷痛，或對你的感情&伴侶評頭品足。這樣的人，還算是真正的朋友嗎？這樣的朋友，是不是時候要斷捨離呢？",
-    "content": "<p>遇到「對方用開玩笑貶低你」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>「對方用開玩笑貶低你」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>「對方用開玩笑貶低你」有沒有令你不像自己</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>「對方用開玩笑貶低你」要把界線說清楚</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>「對方用開玩笑貶低你」是磨合還是警號？</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>遇到「對方用開玩笑貶低你」，不要只聽解釋，要看行動</h2>\n<p>如果「對方用開玩笑貶低你」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「<strong>對方用開玩笑貶低你</strong>」可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>面對「<strong>對方用開玩笑貶低你</strong>」，我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 感情拯救所可以點樣幫「<strong>對方用開玩笑貶低你</strong>」？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "summary": "好多女仔成日都會問：點樣可以令男人愛上我。",
+    "content": "<h2>自我了解時間：</h2>\n<p>俾3秒時間你，諗自己有咩缺點？情緒易不穩？自卑冇自信？多疑？成日驚對方有人埋身?口是心非？想對方估中?強硬進取? chur?你可能好快就諗到好多自己的缺點。但優點呢？</p><h2>你都唔中意自己，又期望人哋中意你？</h2>\n<p>好多人連自己都覺得自己唔好，批評自己「無樣，無身材，脾氣差，情緒差」，卻期望對方欣賞你，愛你，想像一下，如果入到間鋪，個sales同你講。</p>\n\n<p>呢件嘢唔好睇，又易壞又難整，你又可以有咩期待呢。</p>\n<h2>好多人將愛自己的責任畀咗對方</h2>\n<p>通過不斷否定自己，去換對方肯定。但，點解要將評價你的權利，交比對方呢。事實上，係咪世界上有一個人覺得你唔好。就等於你真係唔好呢，相反，如果連你都相信自己好好/ 有能力更好。即使對方有差錯，你都唔會進入自我懷疑。</p><div class=\"article-tip-card\">\n<span class=\"article-tip-card__label\">Tips 1</span>\n<p>1）分析其他人的魅力：思考一下你接觸過的人，什麼的條件/特質你覺得非常欣賞。</p>\n\n<p>甚至相信係男人/女人都會愛上，例如：某人反應好快，次次都帶動到氣氛。</p>\n\n<p>例如：某人好識照顧人，煮嘢食又叻。</p>\n<p>搵出左特點之後，用盡你的努力去實現。</p>\n<p>令自己成為類似的人 -&gt; 依D就係理想中的自己。</p>\n</div><div class=\"article-tip-card\">\n<span class=\"article-tip-card__label\">Tips 2</span>\n<p>2）切勿單身就努力，拍拖就圍住對方轉。</p>\n<p>有D人一單身就不停衝事業/追求進步。</p>\n<p>一拍拖又痴返去伴侶度：心思時間擺哂落拍拖，其他嘢唔上心。</p>\n\n<p>一有差錯就大爆發，覺得自己一無所有。</p>\n<p>其實愛情係生活的點綴：無的時候你可以做過好好，有的時候就錦上添花，千祈唔好一拍拖就放棄所有嘢，共同成長先係愛情的真理。</p>\n\n</div><div class=\"article-tip-card\">\n<span class=\"article-tip-card__label\">Tips 3</span>\n<p>3）唔一定好過其他人先叫好，A方面，自己又唔夠A勁，B方面，自己又唔夠B好，-&gt; 自己事事不如人，好差咁，你拎自己差的方面去比較人哋的好。</p>\n\n<p>只會永遠覺得自己好差：你唔一定要好過其他人先叫好，比D信心!! 只要你覺得自己係好，就係好。</p>\n\n</div><div class=\"article-tip-card\">\n<span class=\"article-tip-card__label\">Tips 4</span>\n<p>4）做個有趣的人：當你嘅生活日日如是，無趣嘅生活會令你個人都變得無趣。</p>\n\n<p>最後變左日日圍住佢轉：掌握自己的生活，培養興趣、喺生活中搵樂趣，生活就會越嚟越多姿多彩，自己都會變得更Charming。</p>\n\n</div>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你都唔中意自己，又期望人哋中意你。</li><li>好多人將愛自己的責任畀咗對方</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2025-10-02",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2023-07-12",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-18989860.jpg",
     "coverCredit": "Photo by Tùng Sơn on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-man-brushing-hair-from-his-girlfriend-face-18989860/",
@@ -3329,27 +2915,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方用開玩笑貶低你？判斷感情傷害與界線",
+    "coverCaption": "Asteria 相處教學：【自我價值】對方唔夠愛你，問題可能出在你怎樣看自己",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 70,
-    "title": "對方總是不主動點算？讓關係重新有回應的方法",
-    "category": "溝通相處",
+    "title": "【復合機會】對方說不愛你就要死心嗎？先看真實狀態",
+    "category": "復合挽回",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "溝通",
-    "summary": "叫另一半處理屋企家頭細務、改下壞習慣、體諒自己多啲，但對方叫極都唔郁？見到佢咁樣，尤其自己生悶氣，不如搵吓方法，令佢改變啦！想知點做？",
-    "content": "<p>定係同另一半同居緊 相信都會遇到同一個情況，你成日都要做一大堆家務 叫另一半分擔下，但佢淨係喺度玩電話、睇劇 叫極都冇反應。</p>\n<p>佢太多壞習慣令你睇唔過眼 但講極佢都係態度依舊 講極都唔肯改？</p>\n<p>盡量每星期都要搵啲一齊做嘅家務 eg：兩個人一齊煮飯，除咗可以有兩個人相處時間之外，都可以俾大家有時間傾吓計，同埋俾另一半feel到當中嘅樂趣 尤其當兩個人一齊完成一件家務時，會更加有滿足感。</p>\n<h2>減少抱怨</h2>\n<p>當你總是嫌棄另一半做得唔好 佢都自然地會對自己冇自信心，覺得自己做完冇人認可，自己覺得好委屈 咁時間一耐就自自然然唔想再做，與其係咁，你不如試吓減少對另一半嘅抱怨，唔好成日都指責佢做得唔好 eg：佢偶然一次幫你按摩、喺你嚟M時俾暖水袋你。</p>\n<p>就得稱讚下啲佢做得好嘅嘢 俾返啲自信心佢 咁佢就會自自然然記得要體貼你多啲</p>\n<h2>處理「對方總是不主動點算」時先把句子說落地</h2>\n<p>好多人都有一個通病 就係你個另一半做乜，你都唔滿意，eg：當佢改左一個壞習慣 你又會話佢仲有幾10個壞習慣未改，不如試下調返轉諗，你可以欣賞佢肯改善嗰一半，就算對方淨係改左小小 都係一個好開始，同埋喺佢做好、做多咗之後讚下佢，希望佢會有進步。</p>\n<p>對方唔肯分擔家務、唔肯為你改變佢嘅壞習慣、唔似人哋嘅另一半咁體貼 由得你一個人好努力咁做 其實佢咁樣會唔會係唔愛我、唔珍惜我</p>\n<p>記住！</p>\n<p>唔好因為瑣碎事而懷疑佢對你嘅感情 好多夫妻、情侶嘅爭執都係源自生活細節嘅問題，當其中有一方配合唔到你，就會形成嗌交 傷害咗大家嘅感情，但其實「<strong>做唔做到你想佢做嘅事</strong>」 &amp; 「<strong>佢愛唔愛你</strong>」 絕對唔係成正比！</p>\n<h2>常見問題</h2>\n<h3>面對「對方總是不主動點算」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「對方總是不主動點算」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「對方總是不主動點算」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DBiu-NFSS7v/",
-    "date": "2024-10-25",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "復合",
+    "summary": "對方向你提出分手時，說出「我不愛你」，那是否代表你們之間已經沒有希望、不可復合。",
+    "content": "<h2>對方分手時明言：</h2>\n<p>「<strong>我不愛你了</strong>」：你是否即時覺得心碎，甚至認為沒有希望改變，但你又會否曾經懷疑過，這句話是否真的是他的真心話？並不完全是因為他真的不再愛你，而是因為種種壓力、種種情緒，令他選擇用最絕情的方式劃下句點。有時候：對方只是選擇把話說得比較絕，想令自己、令你死心，但其實未必真心想分手。</p><h2>情緒爆炸</h2>\n<p>當對方在爭執說「<strong>我不愛你</strong>」，其實是一種情緒的反應，「<strong>我不愛你了</strong>」這句話是激將法。想激起你的內疚、妥協，所以選擇「<strong>用最狠的說話</strong>」來讓你軟化、緊張、擔心。但他的愛不是不存在，只是被憤怒與委屈暫時掩蓋。</p><h2>不擅處理衝突</h2>\n<p>有些人不知道怎樣解釋內心複雜的情緒。他以為自己給不了你幸福，與其令你失望，不如乾脆切斷，所以就算內心很困惑、甚至難以割捨。但嘴巴卻只說「<strong>我不愛你</strong>」，這句話對他而言是一種自我保護機制。他以為用最直接的說話來「<strong>止痛</strong>」最好。以為這樣對你、對自己都好。</p><h2>你們還有復合的可能嗎？</h2>\n<p>關鍵在於觀察他在分手後的行為：他是否仍然願意維持聯絡？他是否表現出內心掙扎或矛盾，而非冷漠斷絕？這些行為可能代表他內心未必真的不愛你！</p><h2>真正的分手是沒有持續行動的！</h2>\n<p>即刻他說了「<strong>我不愛你，我想分手</strong>」，即刻大家當下斷聯了，但他當下的語氣、之後的蛛絲馬跡。令你知道他未必想真的不愛你，其實顯示他內心仍放不下，只是不懂得控制情緒與表達愛的方式。他需要一個落台階：讓他收回「<strong>我不愛你，我想分手</strong>」。</p><h2>感情拯救所，告訴你</h2>\n<p>真正的愛情是可以被調和與修復的。只要彼此之間仍存有感情，就仍有轉機的可能！儀式不是強求對方回頭：而是幫助你們打開重新理解彼此的機會之門。協助對方釋放內在的防衛情緒，願意放下倔強與逃避再回到你身邊。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>情緒爆炸</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
+    "date": "2025-08-04",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7593933.jpg",
     "coverCredit": "Photo by cottonbro studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-dating-7593933/",
@@ -3377,27 +2957,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方總是不主動點算？讓關係重新有回應的方法",
+    "coverCaption": "Asteria 相處教學：【復合機會】對方說不愛你就要死心嗎？先看真實狀態",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 71,
-    "title": "對方話不愛你就要放棄？判斷復合機會的關鍵",
+    "title": "【冷戰破解】對方嬲到黑面唔出聲？低壓打開溝通窗口",
     "category": "復合挽回",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
     "imageLabel": "復合",
-    "summary": "對方向你提出分手時，說出「我不愛你」，那是否代表你們之間已經沒有希望、不可復合？其實，對方說出「不愛」並不等同於這段關係已不能挽回，因為很多時候，純粹只是對方把話說得太決絕！",
-    "content": "<p>遇到「對方話不愛你就要放棄」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「對方話不愛你就要放棄」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先看對方是否仍願意談「對方話不愛你就要放棄」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「對方話不愛你就要放棄」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>別讓「對方話不愛你就要放棄」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先判斷「對方話不愛你就要放棄」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>處理「對方話不愛你就要放棄」前，先把節奏慢下來</h2>\n<p>如果你正面對「對方話不愛你就要放棄」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>對方話不愛你就要放棄</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>對方話不愛你就要放棄</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>對方話不愛你就要放棄</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "summary": "所有男人都曾經遇到嘅難題：「女朋友明明發緊嬲，但又唔出聲，乜都唔講，淨係黑曬面，到底想點。",
+    "content": "<h2>問10個男人</h2>\n<p>有10個都會話最怕女朋友嬲嗰陣唔出聲。因為唔出聲、冇反應，所以好難知佢嬲緊乜，亦唔知應該點樣氹返佢，但到底女人嬲嗰陣，點解會唔出聲？</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 1</span><span>對你失望/無奈</span></h2>\n<p>你哋爭執嘅內容，或者你做過嘅事，佢可能已經對你唔止講過一次，但你依然冇改進，令佢覺得失望，產生一種「無話可說」嘅情緒。</p>\n\n<p>覺得講咗你又唔聽：聽咗你又唔識，就算你識，你都唔一定會做，就算你會做，都唔一定做得好，尤其浪費自己嘅唇舌、浪費自己嘅期待。</p><p>咁不如收返把口、乜都唔講仲好。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 2</span><span>怕你覺得佢煩</span></h2>\n<p>如果呢個女朋友好珍惜你、好愛你。佢都會希望俾返個好嘅印象你，所以會好擔心如果佢對你諸多投訴。講得太多：你就會覺得佢好煩，覺得佢無理取鬧，由於為自己製造唔好嘅形象，咁倒不如乜都唔講，自己默默地嬲就算。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">原因 3</span><span>自我冷靜</span></h2>\n<p>有時係佢想令自己冷靜落嚟，一嚟佢怕自己講太多會情緒波動，唔小心喊咗出嚟，而佢當下其實唔想喺你面前喊，所以寧願唔出聲、自己靜一靜，亦都可能係覺得一旦再同你講嘢，佢會太嬲，怕會講咗啲好傷人嘅說話，傷害咗你嘅心靈，與其講多錯多，倒不如收下自己把口。有時女仔唔出聲：其實可能係希望另一半可以察覺到佢嘅情緒。希望另一半可以理解到佢嘅諗法，而唔需要下下都要用言語表達，因為女仔會覺得，咁樣可以令對方更加關心佢真實嘅感受。</p>\n<p>所以寧願用唔出聲呢個方法，嚟測試下男朋友，睇下對方明唔明、理唔理解到自己點解會嬲。</p><h2>想氹返嬲緊嘅女朋友，我要點做？</h2>\n<p>回想下自己有冇做錯啲乜，因應自己做得唔好嘅嘢先道歉，用溫柔嘅語氣同佢溝通，諗吓點避免自己再做錯，話佢知你會點避免自己再做錯，提出令佢消氣嘅方法，喺佢嬲完後一齊外出、放鬆穩定情緒。</p>\n\n<p>(例如：去食佢想食嘅嘢、睇場戲），持續自我反省。</p><h2>感情拯救所話你知</h2>\n<p>男人面對嬲緊但又唔出聲嘅女人，經常都以為唯一嘅解決方法就係「氹」，以為只要氹完就冇事，淨係識講「<strong>對唔住，係我錯，你唔好嬲</strong>」，但氹都唔一定可以令佢滿意，反而可能係一種吃力不討好嘅方式。而且都不利於你哋嘅親密關係，其實發緊嬲嘅女人，就好似是一隻正在著咗火嘅刺猬，你要做嘅唔係不是抆曬佢身上嘅刺。都唔係撲滅佢身上嘅火：而係擁抱佢，直到令佢覺得安全，佢到時就會露出柔軟嘅肚皮來擁抱返你。</p>\n<p>話你知佢嬲爆爆但又唔出聲嘅原因！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>自我冷靜</li><li>希望被理解</li><li>想氹返嬲緊嘅女朋友，我要點做</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果對方用沉默或冷戰表達不滿，先不要用追問逼答案。可以等情緒降溫後，用一句清楚又低壓的說話打開溝通窗口。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2025-08-04",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-11-08",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560034.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-woman-talking-to-a-therapist-8560034/",
@@ -3425,27 +2999,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方話不愛你就要放棄？判斷復合機會的關鍵",
+    "coverCaption": "Asteria 相處教學：【冷戰破解】對方嬲到黑面唔出聲？低壓打開溝通窗口",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 72,
-    "title": "如何識別渣男？感情中容易被忽略的危險信號",
+    "title": "【玩笑式貶低】對方總用講笑傷害你？別再強裝無事",
     "category": "關係危機",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
     "imageLabel": "警號",
-    "summary": "韓國Netflix超人氣節目《單身即地獄：第三季》製造咗好多話題性嘅經典時刻，尤其係男嘉賓李官熙「一拖三」、「一揀三」嘅行為大家嘅飯後話題。其實喺佢節目中嘅表現、同女嘉賓嘅相處中，除咗可以了解到唔同嘅戀愛心理，仲可以幫大家「防伏」，避免揀到「中伏男友」。一齊，本文從戀愛心理角度拆解關係訊號、應對方法",
-    "content": "<p>面對「如何識別渣男」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「如何識別渣男」要看行動，不只看感覺</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>面對「如何識別渣男」，不要太快交出主導權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>用界線看清「如何識別渣男」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>「如何識別渣男」要看穩定投入</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>先把「識別渣男」縮細到可以處理</h2>\n<p>如果你正在經歷「如何識別渣男」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>如何識別渣男？感情中容易被忽略的危險信號</strong>」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>如何識別渣男？感情中容易被忽略的危險信號</strong>」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>如何識別渣男？感情中容易被忽略的危險信號</strong>」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "summary": "有些朋友總愛以講笑口吻重提你的傷痛，或對你的感情&伴侶評頭品足。",
+    "content": "<h2>成長/生活的過程中</h2>\n<p>不只是物品&amp;伴侶需要斷捨離，連友情，有時也必須作出取捨，有些朋友表面上與你親近，但實際上，他們的言語和行為卻不斷傷害你。</p>\n\n<p>令你感到疲憊與自我懷疑，面對這類「有毒友情」或許你該要考慮放下了！</p>\n\n<h2>你身邊有沒有這類朋友：經常以講笑方式重提你曾經的創傷或難堪經歷</h2>\n<p>經常以講笑方式重提你曾經的創傷或難堪經歷。即使你已明確表達過不舒服但對方依然不加收斂。對你的感情選擇或人生方向多加批評與指點。態度上缺乏尊重、將你視為需要「<strong>被糾正</strong>」的人。</p><h2>你身邊有沒有這類朋友：你分享心事時</h2>\n<p>你分享心事時，對方不給予支持/理解。反而漠視、敷衍或轉為比較、批評。你要小心翼翼維繫這段關係，甚至常常感到疲累/質疑自己是否做錯了。</p><h2>你有沒有發現，每次見完這個朋友</h2>\n<p>你的情緒都會變差？你和對方分享心事後反而更自責？這根本就是「<strong>有毒友情</strong>」的警號。這樣的友情關係不會讓你成長，只會令你懷疑自己的價值。</p><h2>朋友之間和情侶一樣</h2>\n<p>的確都需要磨合與包容：但關係從來都應該是雙向的，如果只有你單方面維繫、妥協、忍耐。那已經不是友情：而是一場「<strong>失衡的有毒關係</strong>」。</p><h2>朋友不代表永遠要留下來</h2>\n<p>成長有時就是一個篩選過程，真正關心你的朋友，不會一直在你傷口上灑鹽，也不會一直批評你努力生活的選擇。友情，有時都是要做斷捨離，勇敢離開沒有尊重、沒有共鳴嘅友情。保留空間，與真心接納你嘅朋友相處。</p><h2>感情拯救所，告訴你</h2>\n<p>真正的友情應建立在尊重、信任&amp;彼此成就上。而不是傷害、嘲諷/貶低，當一段關係讓你感受到長期的不安與壓抑。那可能不再是健康的連結，而是一種消耗，與其勉強自己維繫一段不平等的友情。不如留一個更安靜、更寬闊的空間。讓真正理解你、尊重你的朋友與你相處。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你身邊有沒有這類朋友</li><li>你有沒有發現，每次見完這個朋友。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-03-16",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-10-02",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6736100.jpg",
     "coverCredit": "Photo by AI25.Studio  Studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-woman-crying-while-sitting-beside-a-man-6736100/",
@@ -3473,27 +3041,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：如何識別渣男？感情中容易被忽略的危險信號",
+    "coverCaption": "Asteria 相處教學：【玩笑式貶低】對方總用講笑傷害你？別再強裝無事",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 73,
-    "title": "年紀越大越難心動？成年人愛情變難的真正原因",
-    "category": "戀愛心理",
+    "title": "【主動相處】對方總是不主動？令他自動自覺的溝通方法",
+    "category": "溝通相處",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "心理",
-    "summary": "年紀越大越難心動，未必是你變冷淡，而是你更清楚代價、標準和現實。成年人愛情變難，是因為心動不再足夠支撐全部。",
-    "content": "<p>以前喜歡一個人可以很直接，長大後卻會想很多：時間、未來、價值觀、傷過的經驗。不是你不懂愛，而是你知道愛情不只靠感覺。</p>\n<h2>你更懂得保護自己</h2>\n<p>受過傷之後，人會自然變得謹慎。這不是壞事，只要不是把所有可能性都關掉，就是成熟的一部分。</p>\n<p>長大後的謹慎，很多時來自你終於知道自己承受不起再一次亂愛。這份保護可以幫你避開錯的人，但如果過度，就會連值得了解的人也擋在門外。</p>\n<h2>標準變清楚，選擇自然變少</h2>\n<p>你不再只看外表和心動，也會看相處、責任感、生活節奏。選擇少了，不代表沒有愛，只代表你不想再亂選。</p>\n<p>以前只要有 feel 就可以開始，現在你會看生活節奏、價值觀、情緒成熟度。這不是你變現實，而是你明白心動要能落地，才可能走得長。</p>\n<h2>生活太滿會削弱心動空間</h2>\n<p>工作、家庭、壓力佔據太多能量時，就算遇到不錯的人，也未必有心力投入。心動需要空間，不只是對象。</p>\n<p>如果你每天已經被工作和責任填滿，自然很難再對一個新人打開心力。這時候未必是你不想愛，而是你需要先為愛情留一點空間。</p>\n<h2>不要把慢熱當成無感</h2>\n<p>成年人愛情很多時不是一秒爆發，而是相處後慢慢放心。給自己時間觀察，不用急著判斷有沒有火花。</p>\n<p>慢熱不等於無感，有時只是你不再被刺激感牽著走。可以給自己幾次相處時間，看對方會否令你慢慢放鬆，而不是用第一眼決定全部。</p>\n<h2>真正適合的人會令你安心又想靠近</h2>\n<p>心動仍然重要，但長久關係還需要舒服、尊重和穩定。你要找的不是刺激，而是能一起生活的人。</p>\n<p>成年人的心動可能安靜很多，不一定像年輕時那樣上頭。真正值得留意的，是你和對方相處後會否更自在、更清醒，而不是更焦慮。</p>\n<h2>常見問題</h2>\n<h3>年紀大是否真的更難拍拖？</h3>\n<p>選擇和顧慮會多一點，但也更容易知道自己不想要甚麼。</p>\n<h3>無心動是否要放棄？</h3>\n<p>可以看相處後有沒有增加好感，不必用第一刻判死刑。</p>\n<h3>塔羅可以幫我睇咩？</h3>\n<p>可以整理你卡住的原因、對象是否值得了解，以及下一步應否打開自己。</p>",
+    "imageLabel": "溝通",
+    "summary": "叫另一半處理屋企家頭細務、改下壞習慣、體諒自己多啲，但對方叫極都唔郁。",
+    "content": "<h2>無論你係已經結咗婚</h2>\n<p>定係同另一半同居緊：相信都會遇到同一個情況，你成日都要做一大堆家務，叫另一半分擔下，但佢淨係喺度玩電話、睇劇，叫極都冇反應？佢太多壞習慣令你睇唔過眼，但講極佢都係態度依舊，講極都唔肯改？</p><h2>試吓一齊做！</h2>\n<p>盡量每星期都要搵啲一齊做嘅家務。例如：兩個人一齊煮飯，除咗可以有兩個人相處時間之外，都可以俾大家有時間傾吓計，同埋俾另一半feel到當中嘅樂趣。尤其當兩個人一齊完成一件家務時。會更加有滿足感。</p><h2>減少抱怨</h2>\n<p>當你總是嫌棄另一半做得唔好，佢都自然地會對自己冇自信心，覺得自己做完冇人認可，自己覺得好委屈，咁時間一耐就自自然然唔想再做，與其係咁，你不如試吓減少對另一半嘅抱怨，唔好成日都指責佢做得唔好，例如：佢偶然一次幫你按摩、喺你嚟M時俾暖水袋你。</p>\n\n<p>就可以稱讚下佢做得好嘅嘢，俾返啲自信心佢，咁佢就會自自然然記得要體貼你多啲。</p>\n\n<h2>家務清單</h2>\n<p>有啲人對家務完全冇概念，完全唔知應該由邊度開始做起，咁不如每星期都分配一個家務清單俾佢。上面清清楚楚咁寫曬要求另一半要做嘅家務。要簡單直接地列出嚟，例如：洗衫連晾衫、摺衫，記得唔好淨係寫洗衫，因為咁佢可能會覺得自己淨係負責洗就得。唔需要跟進其他步驟，呢張清單可以令佢無得走數之餘。對佢嚟講有張清單：感覺上會有終點、心理上都積極啲。</p><h2>睇開啲！</h2>\n<div class=\"article-point-grid\"><div class=\"article-point-card\"><span>好多人都有一個通病</span><p>就係你個另一半做乜，你都唔滿意，例如：當佢改左一個壞習慣，你又會話佢仲有幾10個壞習慣未改。</p></div><div class=\"article-point-card\"><span>不如試下調返轉諗</span><p>你可以欣賞佢肯改善嗰一半，就算對方淨係改左小小，都係一個好開始，同埋喺佢做好、做多咗之後讚下佢。希望佢會有進步。對方唔肯分擔家務、唔肯為你改變佢嘅壞習慣、唔似人哋嘅另一半咁體貼。由得你一個人好努力咁做，其實佢咁樣會唔會係唔愛我、唔珍惜我？記住！唔好因為瑣碎事而懷疑佢對你嘅感情。好多夫妻、情侶嘅爭執都係源自生活細節嘅問題。當其中有一方配合唔到你，就會形成嗌交，傷害咗大家嘅感情，但其實「<strong>做唔做到你想佢做嘅事</strong>」 &amp; 「<strong>佢愛唔愛你</strong>」，絕對唔係成正比！</p><h2>感情拯救所話你知</h2>\n<p>女人都想男人識主動幫你分擔一切。覺得呢個係男人嘅責任：但如果帶住一種調教、指責嘅心態。而唔係慢慢改變嘅心態去看待，當佢哋達唔到你嘅期待時，你就會更加失望，不如試下放寬自己個心態、唔好催逼。情況可能會有啲唔同。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>試吓一齊做</li><li>減少抱怨</li><li>家務清單</li><li>對方不主動時要先講清需要</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題來自日常分工或生活習慣，重點不是逼對方即刻變成你想像中的樣子，而是把需要講清楚、一起定出可做到的小改變，再看對方有沒有持續配合。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-04-13",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-10-25",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5225472.jpg",
     "coverCredit": "Photo by Samson Katt on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/crop-faceless-couple-embracing-against-brick-wall-5225472/",
@@ -3521,27 +3083,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：年紀越大越難心動？成年人愛情變難的真正原因",
+    "coverCaption": "Asteria 相處教學：【主動相處】對方總是不主動？令他自動自覺的溝通方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 74,
-    "title": "太快發生關係會影響愛情嗎？避免變成酒肉關係",
-    "category": "戀愛心理",
+    "title": "【忽冷忽熱】對你忽冷忽熱是變心嗎？拆解間歇性冷漠",
+    "category": "關係危機",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "太快發生關係不一定會毀掉愛情，真正影響的是雙方期待是否一致。若一方想認真、一方只想享受，就容易變成失衡。",
-    "content": "<p>親密關係本身不是錯，問題是發生之後你們有沒有更了解彼此，還是只剩下曖昧和身體吸引。太快不是原罪，模糊期待才最傷人。</p>\n<h2>先問自己想要的是甚麼</h2>\n<p>如果你想要穩定關係，就不要假裝自己只想玩玩。你越清楚自己的期待，越不容易在之後受傷。</p>\n<p>最容易受傷的情況，是你心裡其實想要認真，但嘴上說順其自然。身體可以很快靠近，但期待如果沒有講清楚，之後就會變成猜測和委屈。</p>\n<h2>看對方事後有沒有持續投入</h2>\n<p>真正有心的人，不會親密後就突然冷淡。要看他是否仍然關心、約見、傾未來，而不是只在想親近時出現。</p>\n<p>親密之後仍然願意約你、關心你、和你談生活的人，與只在想親近時出現的人很不同。不要只聽他說喜歡你，要看他是否仍把你放進日常。</p>\n<h2>不要用身體交換承諾</h2>\n<p>親密不能迫出愛，也不能保證對方認真。如果你用它換安全感，之後反而更容易不安。</p>\n<p>如果你希望用親密令對方更認真，通常只會令自己更不安。真正想認真經營的人，不需要靠你交出更多，才決定要不要珍惜你。</p>\n<h2>把界線講在前面</h2>\n<p>你可以有自己的節奏，不需要為了留住對方而勉強。能尊重你界線的人，才值得你繼續觀察。</p>\n<p>界線不是掃興，而是讓你知道自己在關係裡有選擇。能尊重你節奏的人，會讓你感到安心；一直催促你的人，可能更在乎自己的需要。</p>\n<h2>分清熱情和關係基礎</h2>\n<p>身體吸引可以很強，但關係要長久，仍然要看價值觀、溝通和責任感。</p>\n<p>一段關係有吸引力是好事，但如果只有身體連結，沒有情緒交流和生活投入，很快就會變空。你要看的，是親密之後有沒有更靠近彼此的心。</p>\n<h2>常見問題</h2>\n<h3>太快發生關係係咪一定會變淡？</h3>\n<p>不一定，要看事後互動是否仍然尊重和投入。</p>\n<h3>如果對方之後冷淡點算？</h3>\n<p>先不要追到失控，觀察他是否只在需要親密時才出現。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你判斷對方心態、關係風險和下一步應否拉開距離。</p>",
+    "imageLabel": "警號",
+    "summary": "有冇試過覺得另一半有時會對你忽冷忽熱。",
+    "content": "<h2>成日覺得另一半對你忽冷忽熱</h2>\n<p>例如：有時覆msg覆得好慢，甚至唔覆。例如：喺街度又成日想同你保持距離。例如：唔鍾意對你表達愛意，例如：有時又突然錫到你暈，面對咁樣嘅另一半，你會唔會懷疑：「<strong>佢係咪唔夠愛我？</strong>」，「<strong>如果真心在乎我，點解佢會咁冷淡？</strong>」。</p><h2>有時另一半呈現出忽冷忽熱嘅狀態</h2>\n<p>好可能係間歇性冷漠：一般嚟講，我哋好理所當然地自認為，一個真心愛自己嘅人，會時刻保持熱情、照顧我們嘅情緒。但實際上，另一半係可能會有間歇冷淡，而喺呢個行為背後，可能蘊藏著更多深層原因，而唔係單單「<strong>唔夠愛</strong>」。</p><h2>咩係「<strong>間歇性冷漠</strong>」？</h2>\n<p>所謂嘅「間歇性冷漠」，就係一種非持續性，偶爾會對另一半表現冷淡嘅行為，對方有時回應得慢啲，冇乜情感表達少咗，有意無意地保持距離，間歇性冷漠嘅行為，好易會令另一半喺感情上覺得遭受忽冷忽熱。</p>\n\n<p>雖然呢種表現可能會令對方覺非常受傷。</p>\n<h2>但其實有呢啲行為嘅人</h2>\n<p>佢哋有啲時候未必係故意嘅，可能係因為某啲心理原因影響咗，擔心親密關係太過緊密而無咗自己嘅私人空間。對感情發展有壓力：唔係好識點處理情感需求，對於有啲人嚟講，「<strong>間歇性冷漠</strong>」係一種防衛機制。用嚟保護自己。</p><h2>每個人喺愛情入面嘅表達都唔同</h2>\n<div class=\"article-section-card\"><p>有啲人會希望喺愛入面保持清醒，唔會畀自己變咗沉船仔，鍾意有啲啲抽離感，確保自己唔會因為愛情而消耗太多精力同情緒。</p><p>間中冷淡唔一定代表佢唔愛你！</p></div><h2>雖然極為間中嘅冷漠對關係成長有幫助</h2>\n<p>但你唔可以俾「<strong>間歇性冷漠</strong>」變成一種習慣。如果呢種冷漠變成咗一種「<strong>常態</strong>」，就會開始對親密關係造成負面影響。太多嘅冷漠唔：單止會令對方覺得不安、無所適從。仲會慢慢侵蝕彼此之間嘅感情基礎。甚至引發不信任：令關係變得脆弱！</p><h2>感情拯救所話你知</h2>\n<p>喺愛情入面，有時我哋需要啲冷靜同時間，冷漠有時其實係為咗令自己回歸理性。避免喺過度情緒化嘅狀態下，做出唔理智嘅行為，只要呢種習慣唔好變成常慣，或者另一半嘅間歇性冷漠冇同時伴隨一啲可疑嘅行為。其實都可以接受！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有時另一半呈現出忽冷忽熱嘅狀態。</li><li>每個人喺愛情入面嘅表達都唔同</li><li>雖然極為間中嘅冷漠對關係成長有幫助。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-02-07",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-01-05",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8943653.jpg",
     "coverCredit": "Photo by Anastasia  Shuraeva on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-carrying-a-woman-behind-his-back-8943653/",
@@ -3569,27 +3125,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：太快發生關係會影響愛情嗎？避免變成酒肉關係",
+    "coverCaption": "Asteria 相處教學：【忽冷忽熱】對你忽冷忽熱是變心嗎？拆解間歇性冷漠",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 75,
-    "title": "情侶同居前要諗清楚咩？同居陷阱與相處指南",
-    "category": "長期關係",
+    "title": "【愛意消失】點解好好地突然無感覺？關係降溫原因",
+    "category": "戀愛心理",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "長久",
-    "summary": "You want to move in with me？當感情進展到一定程度之後，有唔少情侶都會考慮同居。但是，喺同一個屋簷下生活，隨之而嚟嘅摩擦可以會成為情感關係嘅終極考驗。決定同另一半同居前，可能要先諗諗自己係咪真係適合。",
-    "content": "<p>「一收工返屋企就有人等你食飯，唔開心又隨時有人陪，好溫馨！」，「<strong>婚前同居過嘅人，離婚嘅機會都低啲！</strong>」，同居係親密卻現實嘅事，涉及嘅唔只係兩個人一齊住，仲有更多現實層面嘅嘢，你又有冇考量過呢。</p>\n<p>係人都知講錢就傷感情，但無奈地兩個人住埋一齊，就一定要面對呢個問題，要買新傢俱、電器，筆錢點攤分？</p>\n<p>萬一將來要分手，傢俱、電器點安排？</p>\n<p>平日食住、買餸，AA定一齊Share？</p>\n<p>雖然係會傷感情，但喺同居前一定要講清講楚！</p> <h2>失去嘅空間 &amp; 私隱</h2>\n<p>同居後「<strong>個人隱私</strong>」就會變成非常奢侈嘅事，兩個人住埋一齊，個人可以用嘅物理空間反而變細，另一半會隨時睇到你做緊乜，當想自己一個人靜吓時，隔嚟可能又隨時有個人喺度，就算大家嗌咗交，想有空間自己冷靜，現實上，間屋其實都冇咁嘅空間！</p> <h2>把期待講清楚，才不會日後靠猜</h2>\n<p>同居之後變成要每日面對柴米油盬，邊啲家務由邊個負責？</p>\n<p>統統都要有心理準備！</p>\n<p>男人唔好以為個個女人都會煮飯、做家務，女人唔好以為個個男人都會修理電器、通渠，同居前要先將大家識做、想做嘅家務分配講清楚，唔好喺同居後發覺唔對路，先嚟大吵大鬧！</p>\n<p>男又好、女又好，最緊要係自己儲定啲錢，唔好全部俾曬同居生活，幫自己留條後路、唔好成日計較邊個為屋企付出得多啲，計較太多，俾對方知道，好易嘈大鑊、要時不時為對方製造浪漫驚喜，否則好快進入老夫老妻關係，失去新鮮感。</p> <h2>同居前要把生活細節講到清楚</h2>\n<p>很多長遠問題不是靠一句承諾解決。「情侶同居前要諗清楚咩」要看時間安排、家庭界線、生活壓力和未來方向，因為真正能走下去的關係，要承托得到日常。</p>\n<p>你可以先提出一個具體安排，再看對方是否願意一起調整。行動比說法更能反映對方是否真的想同行。</p> <h2>家務、金錢和私人空間最容易累積怨氣</h2>\n<p>一件事未必代表全部，但同類事情反覆出現，就值得認真整理。看清模式後，才知道要溝通、調整，還是先保留距離。</p> <h2>先談最容易爆煲的生活規則</h2>\n<p>關係卡住時，最怕同時翻舊帳、追答案和要求承諾。先選最重要的一個位置處理，對方也比較容易接住。</p> <h2>把同居期待變成具體分工和界線</h2>\n<p>下一步不一定是大動作。可能只是一句低壓訊息、一個清楚界線，或者一次不急著追問的觀察。小步行，反而更容易看出方向。</p>\n<h2>常見問題</h2>\n<h3>「<strong>情侶同居前要諗清楚咩</strong>」入面，長期關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>「<strong>情侶同居前要諗清楚咩</strong>」可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理「<strong>情侶同居前要諗清楚咩</strong>」？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
+    "imageLabel": "心理",
+    "summary": "坊間稱「只要發現另一半做出啲令人幻滅嘅行為，而導致鍾意佢、愛佢嘅感覺消失」呢種舉動為「蛙化現象」，但出現「蛙化現象」係咪就等於可以考慮呢段感情。",
+    "content": "<h2>另一半、你鍾意嘅人如果咁樣做</h2>\n<p>你仲愛佢嗎？</p>\n<p>會拖住阿媽隻手行街，搭地鐵時唔俾錢衝閘，喺街同其他女仔搭訕，有玩交友App嘅習慣，好鍾意講人哋嘅事非，貪小便宜、買嘢講價，會經常un腳、撩鼻屎。</p>\n<h2>你有冇曾經遇過類似經驗：</h2>\n<p>明明同對方一齊前好鍾意佢，但一齊咁一排之前，會因為某些原因，或者上頁所提到，對方一啲唔太好嘅舉動。突然對佢覺得有啲反感、有啲討厭。覺得唔係咁愛佢？呢種心情曲線變化：其實係一種「<strong>蛙化現象</strong>」！到底，點解突然間覺得唔愛佢？</p><h2>自我保護</h2>\n<p>「可能是源自自我保護機制，當你目睹對方做咗啲不恰當嘅行為。例如：玩交友App、flirt女、唔上進、長期賭錢。呢啲都可能係你潛意識唔鍾意嘅行為。或者潛意識覺得有可能會傷害到自己未來。覺得呢類行為係破壞你哋感情嘅徵兆。所以用科學角度咁睇，我哋嘅大腦神經反應會尤其激烈，嘗試阻止我哋喺呢段感情更進一步。</p><h2>幻想破滅</h2>\n<div class=\"article-section-card\"><p>喺暗戀、熱戀階段中，我哋可能會「神化」對方，會覺得佢係完美無瑕，但當佢突然對我哋展露「唔完美」嘅一面。</p><p>即使只係一啲小事，但嗰種形象同你想像中差得太遠，就會有種幻想突然破滅嘅感覺，令你會有一種瞬間後退，突然失去對佢萬分崇拜嘅愛意。</p></div><h2>逃避型依附</h2>\n<p>對自身嘅不安都係出現「<strong>蛙化現象</strong>」嘅原因。可能你本身對感情極度欠缺信心，或最近你同另一半感情唔太好，呢種經驗都會加強我哋逃避對方嘅傾向。為咗避免失戀嘅痛楚：大腦就率先產生「<strong>我唔再鐘意呢個人</strong>」嘅意識指令。免得他日真係有感情問題時，令自己更加受傷。</p><h2>有呢種現象，唔通就要分手？</h2>\n<p>當對另一半出現「<strong>蛙化現象</strong>」嘅時候。或多或少都會有一兩瞬間覺得要分手。但其實有呢種現象、諗法，同「<strong>係咪要要繼續同佢一齊</strong>」係不同嘅概念。可能對方表現出來嘅係一種令你唔太鍾意。甚至令人反感嘅情緒、直覺反應，但並唔代表你真係唔再愛對方，亦唔等於要直接分手，而係應該同對方討論佢嘅行為，提出佢令你反感嘅舉動，再探討佢係咪願意改變！</p><h2>感情拯救所話你知</h2>\n<p>有人形容蛙化現象嘅過程，猶如「<strong>一粒屎壞咗一鍋粥</strong>」，嗰粒「屎」嘅發現，猶如「<strong>部分</strong>」破壞咗「<strong>整體</strong>」，但咁係咪代表要因為呢粒「屎」而放棄「<strong>整體</strong>」？其實又唔一定：呢個「<strong>蛙化過程</strong>」只係令你發現咗另一半一啲唔好嘅習慣/舉動。並唔等於要因為呢類小事而衝動放棄對方。不如認真諗諗再作決定！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>另一半、你鍾意嘅人如果咁樣做</li><li>自我保護</li><li>幻想破滅</li><li>逃避型依附</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-12-07",
-    "tags": [
-      "關係進展",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-08-17",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7864446.jpg",
     "coverCredit": "Photo by VAZHNIK on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-man-and-a-woman-playing-together-7864446/",
@@ -3617,27 +3167,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶同居前要諗清楚咩？同居陷阱與相處指南",
+    "coverCaption": "Asteria 相處教學：【愛意消失】點解好好地突然無感覺？關係降溫原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 76,
-    "title": "情侶吵架 5 大禁區：踩中一個都可能傷透關係",
-    "category": "復合挽回",
+    "title": "【擇偶條件】揀對象不能只靠感覺：真正重要的伴侶特質",
+    "category": "溝通相處",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "復合",
-    "summary": "不論係情侶定係夫婦，「床頭打交床尾和」係咪真係必然？其實唔一定！大家嗌交時情緒激動、怒氣衝天，好易講錯嘢、做錯決定，誤踏地雷，令大家關係觸礁。想避免因為嗌交而令呢段感情玩完，就記得圖學吓啦。",
-    "content": "<p>遇到「情侶吵架 5 大禁區」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「情侶吵架 5 大禁區」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「情侶吵架 5 大禁區」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「情侶吵架 5 大禁區」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「情侶吵架 5 大禁區」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>越想靠近「情侶吵架 5 大禁區」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>不要把「情侶吵架 5 大禁區」的沉默都當成一樣</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。</p>\n<h2>常見問題</h2>\n<h3>「情侶吵架 5 大禁區」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「情侶吵架 5 大禁區」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「情侶吵架 5 大禁區」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "溝通",
+    "summary": "A型人，嗌交後：願意氹你，但心有不甘、仲嬲嬲地，你做錯事：指責你嘅錯誤，佢做錯事：發自己脾氣之餘，可能會發埋你脾氣，對你嘅信任度：可能會唔小心有猜疑，對未來嘅諗法：見步行步，唔敢有太多諗法 B型人，嗌交後：願意氹你，會主動修復關係，你做錯事：指出你嘅錯誤，建議你要點改變，佢做錯事：主動承。",
+    "content": "<h2>呢兩種人，你會揀一個？</h2>\n<div class=\"article-choice-compare article-choice-table\"><div class=\"article-choice-head\"><span>比較位</span><span>A型人</span><span>B型人</span></div><div class=\"article-choice-row\"><span>嗌交後</span><p>願意氹你，但心有不甘、仲嬲嬲地</p><p>願意氹你，會主動修復關係</p></div><div class=\"article-choice-row\"><span>你做錯事</span><p>指責你嘅錯誤</p><p>指出你嘅錯誤，建議你要點改變</p></div><div class=\"article-choice-row\"><span>佢做錯事</span><p>發自己脾氣之餘，可能會發埋你脾氣</p><p>主動承擔錯誤</p></div><div class=\"article-choice-row\"><span>對你嘅信任度</span><p>可能會唔小心有猜疑</p><p>100%信任你</p></div><div class=\"article-choice-row\"><span>對未來嘅諗法</span><p>見步行步，唔敢有太多諗法。</p><p>有初步嘅構想。</p></div></div>\n<h2>年紀仲細嘅時候</h2>\n<p>成日都覺得「<strong>愛就係一切</strong>」，只要夠愛，對方係點都冇乜所謂、都可以容納。但當個人開始成熟，就會發現，一個情緒穩定、EQ夠高嘅另一半。其實仲緊要！</p><h2>情緒穩定等於盡量將問題大事化小</h2>\n<p>喺一段關係入面，嗌交、意見不合真係好常見，EQ高嘅另一半可以嘗試冷靜處理分歧。就算真係嗌大交時，都可以盡量避免極大嘅情緒波動，而唔係好似發癲咗情緒化地嘈嚟嘈去。亦可以避免衝突升級、講出過分傷人嘅說話。減少不必要嘅傷害：甚至會比較易喺火遮眼時clam down。將問題大事化小。</p><h2>情緒穩定等於包容你嘅情緒起伏</h2>\n<p>有時人總有emo嘅時候，人會出現一啲突如其來嘅「壞情緒」，搞到亂發脾氣，一個情緒穩定嘅另一半，喺呢個時候就好緊要，因為佢唔會咁容易受到情緒波動大嘅人影響到自己嘅情緒。</p>\n\n<p>唔會變到自己都燥埋一份，亦會包容你嘅情緒起伏。</p>\n<h2>情緒穩定等於唔toxic 嘅關係</h2>\n<p>情緒唔穩定嘅人：好容易將壓力、不滿呢類負面情緒。投射到另一半身上：但咁樣好易造成大家嘅關係變得緊張。而EQ高嘅人就識得自行消化負面情緒。就算返工或者生活上出現唔開心嘅嘢。佢都會識自己諗方法減少負面情緒。會消化完、將折半咗嘅負面嘢帶返屋企。咁就唔會令自己嘅另一半一齊承受太多「<strong>情緒毒素</strong>」。</p><h2>情緒穩定等於生活好幫手</h2>\n<p>當你遇到麻煩嘅時候，好易好似個盲頭烏蠅咁不知所措，一個情緒穩定嘅另一半，第一個反應通常係會諗辦法幫你解決問題。</p>\n\n<p>而唔係一味地怪責你「點解你咁蠢」，或者陪伴一齊呻嚟呻去，可以喺關鍵時刻冷靜咁幫你分析，絕對係個可靠嘅「合作夥伴」，就算問題唔可以幫你即刻解決，佢都識用盡佢嘅殺手鐧氹你，等你唔使帶住負面情緒過夜。</p>\n<h2>感情拯救所話你知</h2>\n<p>當你遇到一個好嘅另一半，你就會明白，原來一個情緒穩定嘅伴侶。係會成為你嘅光，為你嘅生活添加色彩。但唔係所有人，天生就係一個情緒好穩定嘅人，不論係你本人，抑或係另一半都係咁。所以要喺適當嘅時間，借助外在嘅儀式，幫你哋釋放負能量，營造更加積極嘅情緒氛圍，咁樣雙方嘅情緒同關係都係更穩定。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>情緒穩定等於盡量將問題大事化小。</li><li>情緒穩定等於包容你嘅情緒起伏</li><li>情緒穩定等於唔toxic 嘅關係。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-09-25",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-02-05",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6669810.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-wrapped-in-blanket-while-squatting-6669810/",
@@ -3665,30 +3209,24 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶吵架 5 大禁區：踩中一個都可能傷透關係",
+    "coverCaption": "Asteria 相處教學：【擇偶條件】揀對象不能只靠感覺：真正重要的伴侶特質",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 77,
-    "title": "情侶越放閃越幸福嗎？放閃背後的心理原因",
+    "title": "【親密升溫】如何一步步建立親密感？關係升溫指南",
     "category": "戀愛心理",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
     "imageLabel": "心理",
-    "summary": "有時喺IG見到成日放閃嘅情侶，以為佢哋好幸福，點知過咗冇耐，就發現佢哋分咗手。其實曬恩愛就等於幸福情侶？一段真正穩定嘅關係，係咪真係要靠放閃維持？到底係點？",
-    "content": "<p>見到一對情侶成日放閃，好容易令人覺得佢哋一定好幸福；但現實係，<strong>放閃只係一個公開畫面，唔等於整段關係嘅真實狀態</strong>。有啲人放閃係自然分享，有啲人係想記錄甜蜜，有啲人卻係想透過外界認同，去填補關係入面嘅不安。</p>\n<p>所以問題唔係「有冇放閃」本身，而係放閃背後嘅動機、你哋私底下嘅相處，以及對方係咪真係願意承擔關係。</p>\n<h2>放閃不等於幸福，但完全不公開也未必等於不愛</h2>\n<p>有啲人天生低調，唔習慣將感情放上社交平台；亦有啲人覺得關係越重要，越想保護私隱。呢類情況未必代表佢唔愛你，而係佢表達愛嘅方式未必係公開展示。</p>\n<p>但如果對方平時好活躍，朋友、生活、工作全部都會分享，唯獨避開你、避開關係、避開所有同你有關嘅痕跡，咁就唔可以只用「佢低調」三個字帶過。你要睇嘅係：佢係一向低調，定係只係對你低調。</p>\n<h2>真正要看的是私下相處，不是公開畫面</h2>\n<p>一段關係穩唔穩，唔係靠合照數量證明，而係睇對方私底下有冇照顧你感受、願唔願意溝通、遇到問題會唔會一齊處理。</p>\n<p>有啲情侶IG好甜，但私下長期冷暴力、逃避溝通、互相消耗；亦有啲情侶好少放閃，但會穩定陪伴、清楚交代、真心投入。公開畫面可以係參考，但唔應該成為你判斷幸福嘅唯一標準。</p>\n<h2>有些人越放閃，反而越需要被確認</h2>\n<p>當一個人內心好不安，佢可能會透過放閃去證明「我哋好好」、「我被愛」、「呢段關係仲存在」。呢種放閃未必係假，但背後可能有焦慮、比較心，或者對關係安全感不足。</p>\n<p>如果你發現自己每次見到別人放閃就好難受，甚至開始懷疑自己段關係，可能真正刺痛你嘅唔係人哋幸福，而係你自己關係入面有一個未被安撫嘅位置。</p>\n<h2>如果你介意對方不公開你，先分清低調定逃避</h2>\n<p>你可以先觀察三件事：第一，對方會唔會在現實生活中介紹你俾重要朋友認識；第二，佢會唔會避開所有同你有關嘅公開痕跡；第三，當你表達介意時，佢係願意理解，定係立即反過來怪你麻煩。</p>\n<p>如果對方只係低調，你哋仍然可以溝通出一個雙方舒服嘅界線；但如果佢長期隱藏你、避開承認你、又唔願意解釋原因，你就要認真睇清楚，呢段關係係被保護，定係被收藏。</p>\n<h2>穩定的愛，不靠放閃證明，也不怕被看見</h2>\n<p>真正穩定嘅關係，唔一定要每日公開曬恩愛；但當需要被看見、被承認、被尊重時，對方唔應該永遠逃避。放閃可以係甜蜜，但承擔、溝通同實際行動，先係關係真正嘅底。</p>\n<p>如果你卡住喺「佢係低調，定係唔想公開我」呢個位置，可以先整理你哋最近嘅互動、對方回應方式同你介意嘅原因。Asteria 可以幫你拆清楚對方心態、關係安全感同下一步應該點講，避免你一邊猜，一邊消耗自己。</p>\n<h2>常見問題</h2>\n<h3>情侶越放閃越幸福嗎？</h3>\n<p>唔一定。放閃可能係甜蜜分享，亦可能係想得到外界確認。真正幸福要看私下相處、溝通方式同雙方是否願意承擔。</p>\n<h3>對方不放閃，是不是代表不愛我？</h3>\n<p>未必。有啲人天生低調，但如果佢只係對你低調，甚至避開承認關係，就值得再觀察同溝通。</p>\n<h3>我很介意對方不公開我，可以怎樣開口？</h3>\n<p>可以先講感受，而唔係直接指責。例如：「我知道你可能比較低調，但我有時會覺得自己好似被收埋，我想知道你點睇公開關係呢件事。」</p>",
+    "summary": "好多啱啱/第一次拍拖嘅人，都係唔好識要應該點樣經營感情，唔知點同另一半喺心靈上、關係上更加親密。",
+    "content": "<h2>拍拖初期</h2>\n<p>無論係男定女，可能都會有種諗法，「<strong>想快啲同佢進入下一步</strong>」，「<strong>想同佢再close啲</strong>」，所謂嘅下一步，未必一定係身體上嘅親密接觸，亦代表緊大家嘅感情狀態、信任度。親密感、信任度亦唔係一日就有，而係透過一個循環過程慢慢build up。喺呢個語程入面，逐漸咁建立喺「<strong>逐步感受到安全感</strong>」嘅氛圍。所以呢個時候，最重要就係一步一步建立親密關係。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段一</span><span>漸進式分享，建立信任感</span></h2>\n<p>啱啱開始一段關係：最重要係先令大家習慣咗有對方嘅存在。先可以令大家舒服地相處，所以啱啱拍拖時，唔使太急住講深層次話題，同屋企人關係點？上一段/上幾段感情點結束？呢啲話題可以令雙方慢慢了解對方內心世界。可以令關係更進一步，但記住，分享要有節奏，唔好一次過講晒自己所有秘密，或者一次過問曬對方所有秘密，否則可能會嚇親對方！</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段二</span><span>肢體接觸，提升親密感</span></h2>\n<p>除咗言語交流：肢體接觸都係建立親密關係嘅關鍵步驟。可以大家熟絡程度，慢慢循漸漸進。</p><div class=\"article-step-grid article-phase-grid\"><div class=\"article-step-card\"><span>初期</span><p>拖手、攬</p></div><div class=\"article-step-card\"><span>中期</span><p>Kiss，發生親密行為，但記住，呢啲接觸一定要對方都覺得OK先得。唔好太心急！親密關唔係淨係靠講同親密行為，仲要一齊經歷唔同嘅事，一齊去旅行，體驗新事物，參與對方鍾意嘅活動，了解佢嘅世界。當你哋有共同回憶，感情會更加深厚。唔係淨係拍拖打卡咁簡單。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">階段三</span><span>照顧對方情緒，營造安全感</span></h2>\n<p>親密感唔係淨係開心時先有，而係當對方唔開心、冇安全感時，你嘅回應可唔可以令佢覺得安心，對方壓力大/情緒低落時會陪佢傾計、諗辦法解決。大家有矛盾時，你唔好鬧爆佢，而係冷靜溝通。做一個願意聆聽、包容對方情緒嘅另一半。佢就自然會更加信任你、依賴佢，親密感都會更加堅固！</p><h2>感情拯救所話你知</h2>\n<p>親密關係其實係一個循環，循序漸進咁慢慢推進，關係就會不斷升溫，親密感自然會愈嚟愈深！所以拍拖初期最重要嘅，唔係「<strong>幾快進展到下一步</strong>」，而係一步步營造舒適又安全嘅關係。等雙方都可以真正享受呢段感情。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>拍拖初期</li><li>不過，啱啱拍拖時兩個人可能有啲距離感。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2025-07-06",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-6214264.jpg",
-    "coverCredit": "Photo by Trần Long on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/cheerful-asian-couple-smiling-and-chatting-on-street-6214264/",
+    "date": "2025-03-07",
+    "tags": [],
+    "coverImage": "/article-custom-images/stock_local/pexels-5184886.jpg",
+    "coverCredit": "Photo by Bethany Ferr on Pexels",
+    "coverCreditUrl": "https://www.pexels.com/photo/people-in-tattoos-relaxing-on-beach-5184886/",
     "coverPrompt": "",
     "images": [
       {
@@ -3699,10 +3237,10 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       },
       {
-        "src": "/article-custom-images/stock_local/pexels-7743480.jpg",
+        "src": "/article-custom-images/stock_local/pexels-26990612.jpg",
         "caption": "內文配圖：情侶越放閃越幸福嗎？放閃背後的心理原因",
-        "credit": "Photo by Trần Long on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/asian-couple-holding-hands-and-smiling-in-sunny-yard-7743480/",
+        "credit": "Photo by Nay  Sa Muel on Pexels",
+        "creditUrl": "https://www.pexels.com/photo/young-couple-on-a-date-26990612/",
         "prompt": ""
       },
       {
@@ -3713,27 +3251,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶越放閃越幸福嗎？放閃背後的心理原因",
+    "coverCaption": "Asteria 相處教學：【親密升溫】如何一步步建立親密感？關係升溫指南",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 78,
-    "title": "想同前任重新開始？復合前必經的 5 個階段",
-    "category": "復合挽回",
+    "title": "【嫉妒不安】總擔心另一半有異性埋身？呷醋時點處理",
+    "category": "情緒修復",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "復合",
-    "summary": "愛情係要靠自己爭取！分手後想復合，都係要自己爭取。但有時過於急進，都未必係一件好事，復合，係應該按步就班，而唔係靠住一股衝動嘅情緒，話復合就復合。想知點樣復合先啱？點樣復合完先唔會再分手？",
-    "content": "<p>遇到「想同前任重新開始」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>「想同前任重新開始」還有沒有對話空間？</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「想同前任重新開始」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>修補「想同前任重新開始」要留空間</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>分清「想同前任重新開始」是冷靜還是退場</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>把「想同前任重新開始」拆成下一個小決定</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>「想同前任重新開始」要看後續行動</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。</p>\n<h2>常見問題</h2>\n<h3>「想同前任重新開始」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「想同前任重新開始」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「想同前任重新開始」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "療癒",
+    "summary": "令你經常忍唔住呷醋、妒忌，唔鍾意佢同異性走得太親密，咁係咪自己有問題。",
+    "content": "<h2>當另一半同異性朋友太多互動</h2>\n<p>作為佢嘅伴侶：總會忍唔住呷醋、有妒忌心，但同其他人呻，總會有人叫你唔應該擔心咁多！唔通，有妒忌之心真係有錯咩？</p><h2>妒忌本身唔一定係錯嘅</h2>\n<p>至於會唔會影響感情就取決於程度。只要唔過分影響大家之間嘅感情，其實並無不可！但當你發現自己因為妒忌而總係感到不安。對你嘅伴侶產生懷疑：或者嚴重影響你嘅日常生活，咁你可能要思考吓，自己係咪有需要調整心態！</p><h2>自我反思</h2>\n<p>每當你意識到自己又開始嫉妒時，可以試吓同自己講：「<strong>停一停！</strong>」，反思吓自己擔心緊乜，諗吓自己嘅妒忌同擔憂係咪有合理根據？當你學試反覆審視、監察自己嘅情緒。你可能會發現自己有啲妒忌情緒係過於衝動。從而可以漸漸學識控制自己嘅情緒反應。</p><h2>改變思維模式</h2>\n<p>好多時妒忌係因為你潛意識而影響到對事實嘅判斷。只相信自己眼睛睇到嘅嘢，先入為主地相信自己估嘅嘢，令你因為另一半同人哋看似親密嘅互動而呷醋。但事實係，呢類觀察好多時都係受主觀思維影響。例如：前度/身邊朋友出軌、你嘅自信不足、另一半有前科。呢啲都可能會影響咗你對呢段關係嘅判斷。增加咗你對妒忌心同猜疑，你嘗試改變思維模式，諗吓另一半係咪有向你表達出忠誠、愛意。話俾自己知：「<strong>我應該信任佢</strong>」，透過呢種積極嘅思考模式培養安全感。</p><h2>培養信任和溝通</h2>\n<p>嫉妒可能源自你冇辦法從另一半身上搵到100%安全感。喺呢個情況下，建立信任、積極溝通先係關鍵，喺調整自己心態嘅同時，最緊要係坦誠同另一半談論你嘅擔憂。雙方共同探討呢種情緒嘅來源、解決方法。例如誠實地話俾佢知。你對哪種行為比較執着、想佢改變。透過開放嘅溝通：先可以慢慢建立更強大嘅信任基礎。減少你不斷出現嘅妒忌感。</p><h2>妒忌心等於錯覺？</h2>\n<p>強烈嘅妒忌心會毀壞關係，但係如果呢份妒忌心係「事出必有因」呢？</p>\n\n<p>有種妒忌，其實係源自於有「合理嘅猜疑」，例如當你嘅另一半本身有前科，不論係佢曾經有出軌，或者佢好擅長/好鍾意flirt人。</p>\n\n<p>喺呢個前設下，當佢又同異性行得太親密，又或者即使佢冇前科，但行為舉止、習慣有改變，加上又同異性互動太close，咁你嘅妒忌心或者係一種直覺，需要好好搵出真相，而非一味地作自我心態調整。</p>\n<h2>感情拯救所話你知</h2>\n<p>喺感情關係中感到不安，覺得自己成日好易呷醋、冇安全感係好常見但當你發現自己總係陷入不安嘅諗法。但又唔知道應該點樣改變自己，甚至將呢種情緒收收埋埋，唔敢話俾另一半知，咁可能代表你嘅妒忌感已經為你嘅情緒帶來嚴重困擾。既然係咁，不如嘗試吓搵其他方法。透過第三方嘅途徑幫幫手。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>自我反思</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2024-10-31",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-08-10",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6670059.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/fashion-love-friends-women-6670059/",
@@ -3761,27 +3293,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想同前任重新開始？復合前必經的 5 個階段",
+    "coverCaption": "Asteria 相處教學：【嫉妒不安】總擔心另一半有異性埋身？呷醋時點處理",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 79,
-    "title": "想講需求但對方不耐煩？讓伴侶聽進去的說法",
-    "category": "溝通相處",
+    "title": "【金錢界線】伴侶問你借錢點算？不傷感情的處理方法",
+    "category": "戀愛心理",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "溝通",
-    "summary": "有冇試過間唔中都會好易因為一啲小事而發脾氣，但其實你都唔知自己點解會嬲得咁快，甚至會懷疑自己係咪情緒有問題？到底係咩一回事？",
-    "content": "<p>而係被忽略嘅感覺</p>\n<p>有時同另一半嗌交 表面上係對方遲覆、冇聽你講嘢，但你真正嬲嘅係嗰種「<strong>我喺你心入面好似唔重要</strong>」嘅感覺*，你覺得自己被忽視 覺得自己唔被對方重視，所以你內心先用發脾氣嘅方法 嘗試換取被重視嘅感覺。</p>\n<p>而係觸發咗你以前曾經經歷過嘅情緒，例如係失望、冷落、不安 可能你以前拍過拖時試過經常俾人忽略，可能係你細個成日比人話 呢啲負面嘅情緒嘅經歷，，就會默默咁儲喺你心入面 變成一種「<strong>情緒記憶</strong>」，所以而家你遇到同類情況。</p>\n<p>就算只係一件小事 你都會即刻發火、即刻起曬鋼</p>\n<h2>你雖然表達嘅係暴躁嘅情緒</h2>\n<p>但你真正想講嘅係需求 只係唔知應該用咩方法表達，你唔係想鬧人，你只係想有人在乎自己 但唔識用平靜方式講出嚟 一唔小心，你嘅情緒就會變成衝突，唔小心用攻擊式語氣講出嚟。</p>\n<h2>處理「想講需求但對方不耐煩」時先把句子說落地</h2>\n<p>越係試圖想用脾氣去留住人 對方就越會想離開你，因為對方感受到嘅唔係「<strong>我對你好重要</strong>」，而係感受到你施加嘅壓力、指責 所以唔好再靠情緒去證明自己值得被愛，真正會留低嘅人 係因為你願意用真心講自己嘅感覺，而唔係靠爆炸嚇返嚟。</p>\n<p>成日因為小事而發脾氣的確係唔好，但忍住唔好自己發脾氣唔等於就係好嘅另一半，有時你會以為收埋情緒、唔嬲、唔出聲，就等於成熟、體諒、係個好情人，但其實你唔係唔嬲 只係選擇將情緒攬曬落自己身上 為咗唔影響關係而影響咗自己情緒，長期壓抑最終只會變成突然爆發、會內耗。</p>\n<p>會令你喺關係入面越嚟越冇自我</p>\n<h2>常見問題</h2>\n<h3>面對「想講需求但對方不耐煩」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「想講需求但對方不耐煩」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「想講需求但對方不耐煩」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DJyEuIZSEwq/",
-    "date": "2025-05-18",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "伴侶問你借錢時，重點不是即刻答應或拒絕，而是先看清金額、用途、還款能力、過往責任感，以及你借出後會否令自己失去安全感。講錢可以有愛，但一定要有界線。",
+    "content": "<h2>先問清楚用途和還款時間</h2>\n<p>如果對方只說「<strong>幫幫我</strong>」但講不清用途、金額和還款日期，你就不應該急著答應。真正負責任的人，會願意把事情交代清楚，而不是用情緒逼你即刻幫。</p>\n<h2>不要用借錢證明自己有多愛</h2>\n<div class=\"article-section-card\"><p>感情入面可以互相扶持，但金錢不應該變成愛的考試。如果你心底其實很不安，卻因為怕失去對方而勉強借出，之後很容易由幫忙變成怨氣。</p></div><h2>小額可以幫忙，大額一定要寫清楚</h2>\n<div class=\"article-section-card\"><p>如果只是短期小額周轉，你可以按能力決定；但涉及較大金額，就要清楚寫低借款日期、金額、還款方式和時間。講清楚不是不信任，而是保護雙方關係。</p></div><h2>留意借錢後的態度</h2>\n<p>有些人借錢前很溫柔，借完之後就迴避、拖延、發脾氣，甚至反過來指責你計較。這種態度比借錢本身更值得你留意，因為它反映責任感和尊重。</p>\n<h2>拒絕時可以溫柔，但界線要清楚</h2>\n<div class=\"article-section-card\"><p>你可以說：「我明白你而家有困難，但呢個金額我暫時承擔唔到。我可以陪你諗其他方法。」溫柔不代表要犧牲自己，界線也不等於冷血。</p></div><h2>談錢最重要不是冷酷，而是不要讓曖昧變成壓力</h2>\n<div class=\"article-section-card\"><p>很多感情入面的金錢矛盾，都是因為一開始不好意思講清楚。你怕講得太實際會傷感情，對方可能也覺得既然是伴侶就不需要計較；但越含糊，日後越容易變成怨氣、誤會，甚至權力不平衡。</p><p>所以講錢時可以保持溫柔，但內容要具體。你可以同時表達關心和界線：我明白你有困難，我願意陪你想辦法，但這筆錢我最多能承擔多少、希望怎樣還、如果還不到會怎樣處理。清楚不是無情，而是讓感情不用被金錢拖垮。</p></div><h2>為「伴侶問你借錢點算」守住底線。</h2>\n<p>你可以把「伴侶問你借錢點算」寫成事件表：發生了什麼、對方怎樣解釋、之後有沒有行動修正。如果每次都只是你心軟，而對方沒有變，問題就不是你不夠包容。</p>\n<p>處理「<strong>伴侶問你借錢點算</strong>」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>小額可以幫忙，大額一定要寫清楚。</li><li>拒絕時可以溫柔，但界線要清楚</li><li>談錢最重要不是冷酷，而是不要讓曖昧變成壓力。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
+    "sourceIg": "",
+    "date": "2024-03-05",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6623734.jpg",
     "coverCredit": "Photo by cottonbro studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/romantic-couple-talking-on-the-bed-6623734/",
@@ -3809,27 +3335,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想講需求但對方不耐煩？讓伴侶聽進去的說法",
+    "coverCaption": "Asteria 相處教學：【金錢界線】伴侶問你借錢點算？不傷感情的處理方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 80,
-    "title": "想對方一直報備係關心定控制？安全感不足的警號",
-    "category": "關係危機",
+    "title": "【分手後界線】為何不應再和前任發生關係？復合前要避開",
+    "category": "復合挽回",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "警號",
-    "summary": "你覺得拍拖之後，應該幾多程度上報備先係合理？如果成日無論去邊度、同邊個去，都要同另一半報備，到底咁樣係sweet、係分享，定係猜疑？",
-    "content": "<p>有冇要求過佢出街要同你報備</p>\n<p>有啲人會覺得報備係基本尊重，但亦有啲人就覺得係控制，因為覺得每次同朋友見面都要同另一半報備，就好似同緊監護人一齊！</p>\n<p>你又有冇俾人咁投訴過？</p>\n<p>一段健康嘅戀愛關係，報備等於主動分享，報備 =/= 請求批准，例如：另一半約咗friend食飯，如果你要求佢同你講清楚去邊度食、有咩人一齊食，仲要佢問准咗你，先可以去，但呢樣就唔係對方向你報備，而係要佢連同friend嘅聚會都要等你批核，令變咗失去生活自主權。</p> <h2>報備方式等於反映關係狀態</h2>\n<p>如果雙方本身信任感強，報備就只係一種日常交流，但如果有一方成日都疑神疑鬼，過問太多細節，例如：「<strong>今晚有冇異性去？</strong>」，或者「<strong>Facetime我睇下你係咪真係喺度</strong>」，咁就唔係單純嘅報備，而係缺乏安全感/控制慾太強，想監控另一半嘅行蹤、對另一半冇信任。</p> <h2>報備應該帶來安心，不是監控</h2>\n<p>如果你覺得你真係咁愛我，咁點解唔可以俾我知道你去邊。</p>\n<p>但其實愛一個人，並唔代表要24小時監察對方，而係要互相信任，唔係要對方時刻交代行蹤嚟證明忠誠，如果你因為對方無即時報備就對佢有懷疑，甚至無理取鬧，咁只係因為你嘅不安感太重。</p>\n<p>坦誠嘅日常溝通，只要你哋平時有溝通，會互相關心對方今日做過啲咩，就可以減少對另一半嘅不安/不信度 Set好界線，就算係情侶都應該有自己嘅空間同私隱，唔好太過執著細節，唔好要另一半事無大小都要對你一五一十咁匯報，了解對方真正需要，如果係因為安全感低而要求另一半報備。</p>\n<p>咁其實問題唔係報備本身，而係你可能內心有好強嘅不安感，你應該由增強信任應入手，而唔係單靠報備嚟令自己安心！</p> <h2>安全感不足時先穩住自己</h2> <p>處理「想對方一直報備係關心定控制」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p> <h2>分清合理交代和失控查勤</h2>\n<p>「想對方一直報備係關心定控制」最怕不是一次衝突，而是同類事情不斷重複。你可以記低事件、對方解釋、之後有沒有修正，這會比單靠感覺更清楚。</p>\n<p>如果每次都是你消化、你原諒、你降低要求，而對方沒有實際改變，下一步就不是再忍，而是先守住自己的底線。</p> <h2>不要把控制當成重視</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。</p> <h2>給彼此空間也是信任的一部分</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。</p> <h2>用固定共識取代即時查問</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。</p>\n<h2>常見問題</h2>\n<h3>「<strong>想對方一直報備係關心定控制</strong>」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>想對方一直報備係關心定控制</strong>」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>想對方一直報備係關心定控制</strong>」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "imageLabel": "復合",
+    "summary": "分手後再和前任發生關係，最危險不是身體親密本身，而是會令界線、期待和復合判斷全部混亂。復合前要先看清對方是否真的想修補關係，而不是只在寂寞或習慣時回來靠近你。",
+    "content": "<h2>身體親密會放大復合幻想</h2>\n<p>分手後你本來已經很容易掛住對方，如果再發生關係，大腦會重新連結以前的甜蜜、依賴和安全感。你會更容易把一刻溫柔解讀成「<strong>我們還有機會</strong>」。</p>\n<p>但親密感不等於承諾。對方願意靠近你的身體，不代表他願意面對分手原因、修補問題，或者重新承擔一段關係。</p>\n<h2>最怕變成沒有身份的伴侶</h2>\n<p>分手後仍保持親密，很容易令你停留在一個尷尬位置：名義上已經分開，但情緒和身體上仍像伴侶。你會繼續期待、照顧、等待，但對方未必需要給你任何交代。</p>\n<p>這種狀態最消耗，因為你不是完全失去，也不是正式擁有。你越想靠親密留住對方，越容易把自己的界線交出去。</p>\n<h2>復合要看問題有沒有被處理</h2>\n<div class=\"article-section-card\"><p>如果你們分手是因為冷淡、欺騙、價值觀不合或長期衝突，那一次親密不會自動解決問題。真正的復合要看對方是否願意談清楚原因，承認責任，並提出之後怎樣相處。</p><p>如果對方只在寂寞時找你，事後又回到模糊、逃避和不交代，那這不是復合前奏，而是把你困在更難離開的位置。</p></div><h2>你可以先訂清楚界線</h2>\n<div class=\"article-section-card\"><p>如果你心裡其實想復合，可以先不要用身體親密去換答案。你可以清楚講：「如果我們要重新靠近，我想先談清楚關係方向，而不是只維持曖昧親密。」</p><p>界線不是懲罰對方，而是保護你自己不要在最脆弱的時候，又跌回一段沒有承諾的互動裡。</p></div><h2>真正值得回頭的人，會願意先修補</h2>\n<p>一個真的想復合的人，不會只想要親密和陪伴，卻避開責任。他會願意回到問題本身，聽你受傷的位置，也願意用行動令你重新安心。所以分手後是否要再靠近，不應該只問「<strong>我仲愛唔愛佢</strong>」，而要問「<strong>這次靠近會令關係更清楚，還是令我更混亂</strong>」。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>真正值得回頭的人，會願意先修補。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2025-04-25",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2023-09-20",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6303542.jpg",
     "coverCredit": "Photo by Klaus Nielsen on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/serious-multiethnic-couple-on-couch-6303542/",
@@ -3857,27 +3377,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想對方一直報備係關心定控制？安全感不足的警號",
+    "coverCaption": "Asteria 相處教學：【分手後界線】為何不應再和前任發生關係？復合前要避開",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 81,
-    "title": "你越解釋，對方越退縮？被誤解時的溝通方法",
-    "category": "溝通相處",
+    "title": "【分手療癒】點解分手特別難受？走入情感修復期的方法",
+    "category": "復合挽回",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "越想對方了解你，卻發現自己越說越多，對方就越走越遠，覺得自己被誤解、被冷落，甚至懷疑自己太煩？其實這並不是因為你說錯了甚麼，只是你與對方在溝通頻率上未能對接！",
-    "content": "<p>明明只想對方了解你內心真正感受，但越說越多自己的想法 對方卻仍然沉默，或者越來越冷淡 令你開始懷疑自己是不是太敏感、太煩？</p>\n<p>對方：需要時間整理情緒&amp;思考方式，當你向對方傾訴所有感受、不安，對方可能無法即時理解、沒有太多回應 於是你會因為對方沒有回應而生氣，而對方都可以不理解為什麼你要生氣，令大家產生誤解、越走越遠 背後其實是「<strong>互動模式不對等</strong>」的溝通錯配。</p>\n<p>而是溝通錯配 大家互動模式不對等；❤️ 情緒外露：傾向用言語表達壓力&amp;不安 💙 理性分析：傾向壓抑情緒避免衝突，當這兩種模式碰撞會容易出現溝通錯配；❤️對方太冷淡、太不在乎 💙對方太敏感、太情緒化，其實彼此都沒有錯 只是缺乏理解與協調 要改變，其實也不難！</p>\n<h2>🔎 溝通上有共鳴是理解對方頻率的開始</h2>\n<p>理解、接納對方的溝通節奏 並不代表你要壓抑自己的需要，而是學會選擇對的時間 用適合對方的方式說出來，就讓我們教你3個方法 去改善溝通頻率不一致的情況！</p>\n<h2>把「你越解釋，對方越退縮」講成對方聽得懂的說法</h2>\n<ul><li>設身處地的思維</li></ul>\n<p>情緒外露的人 嘗試放慢語速、調整語氣 表達後給予對方空間，耐心等待對方的回應，傾向理性分析的人 多觀察自己在情緒對話中容易逃避或壓抑的反應，學習在尚未準備好深入討論時，簡單回應一兩句 讓對方感受到被接納與重視。</p>\n<p>很多人以為愛就是無所不談、即時共鳴，所以想與對方多分享、多表達自己的想法，但有時候越想被理解就容易被誤解 越用力靠近反而被越推越遠，但你不是太敏感 對方也不是太冷淡，只是你們的溝通頻率真的不一樣 只要彼此肯退一步 留意對方的節奏、調整自己的方式。</p>\n<p>就能慢慢建立起屬於你們的對話節奏。好的溝通不是每次都要即時講清所有事，而是兩個人都願意學習用對方聽得懂的方式靠近。</p>\n<h2>常見問題</h2>\n<h3>面對「你越解釋」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「你越解釋」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「你越解釋」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DNX4F4hyi1j/",
-    "date": "2025-08-15",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "復合",
+    "summary": "分手之後，成日都有人話：「放低啦，下一個會更好。",
+    "content": "<h2>你有冇發現，今次失戀比以往更難捱？</h2>\n<p>「<strong>點解今次失戀，好似比以前更痛？</strong>」，「<strong>我諗我可能真係太愛佢！</strong>」，你有呢種感覺，其實係因為你同對方創造過太多深刻回憶。你哋當初對未來嘅憧憬有對方，而且你嘅生活已經習慣咗有佢嘅存在。因為有呢啲真摯感情嘅基礎，你先更加放唔低佢，不過都因為咁，你哋之間仲有牽絆。先可以重新連結！</p><h2>呢段關係曾經令你變得開心、自信</h2>\n<p>覺得自己被愛、值得被珍惜，而家對方暫時離開你，你可能會開始，人嘅自我價值感好大程度受外界影響。如果你喺感情中搵到自我認同，當關係遇到困難就可能會懷疑自己。但請記住：其實你值得被愛嘅特質一直都喺度。呢啲特質係唔會消失：對方都仲會有機會被你嘅特質吸引。只要有契機，你哋都仲可以重燃愛火。</p><h2>「<strong>依附理論</strong>」（Attachment Theory）</h2>\n<p>— 英國心理學家 John Bowlby。人對重要關係有根深柢固嘅情感依賴。分開等於暫時失去一個情感避風港。當一段關係遇到困難，你可能會覺得突然冇咗可以依靠嘅人。內心嘅安全感嘅來源都會突然消失。呢種「<strong>情感支柱</strong>」暫時動搖，先會令你感覺不安、迷失，如果喺過去呢段感情入面，你越依賴對方、越願意同佢分享內心。今次嘅痛苦就會感覺特別強烈，咁可以點做呢？</p><h2>接受當下嘅感受</h2>\n<p>每段感情嘅轉變都需要時間適應，一開始一定會感到唔習慣，但你唔需要迫自己即刻無事，因為允許自己去感受係好重要嘅，重點係：接受而唔係沉溺！</p>\n\n<p>唔好對自己講：「點解我仲喺度唔開心？」，你要明白，呢個只係一個過渡期，係等待轉機嘅必經過程，只要搵到契機，呢段感情都可以重新開始。</p><h2>暫時搵啲新嘅生活重心</h2>\n<p>當自己心情處於谷低，個心Keep住覺得好痛，孤獨感、失重感會令你一時之間唔識點同自己獨處。咁就試吓先俾一小段時間自己，分散自己嘅注意力，做啲一直想做但又始終冇行動嘅事情。例如去一個短嘅solo trip。先轉移自己悲傷情緒：等待心情reset後，再嘗試諗吓自己係咪重建呢段感情。</p><h2>感情拯救所話你知</h2>\n<p>暫時嘅分開唔代表你唔夠好，亦唔代表你哋唔適合對方，而係可能你哋嘅感情需要重新連結。繼而再調整溝通方式、改變原先嘅相處模式。記住！你而家嘅痛苦，正正反映你擁有深厚嘅情感，而呢種情感就係修復關係嘅重要基礎。等我哋幫你將呢份情感：轉化成重建關係嘅動力！</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你有冇發現，今次失戀比以往更難捱。</li><li>呢段關係曾經令你變得開心、自信。</li><li>依附理論，（Attachment Theory）</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
+    "date": "2025-04-05",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7964365.jpg",
     "coverCredit": "Photo by Felicity Tai on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/photo-of-a-woman-holding-a-white-ceramic-cup-7964365/",
@@ -3905,27 +3419,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你越解釋，對方越退縮？被誤解時的溝通方法",
+    "coverCaption": "Asteria 相處教學：【分手療癒】點解分手特別難受？走入情感修復期的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 82,
-    "title": "愛得太用力會推走對方？重回關係平衡的 4 個方法",
-    "category": "戀愛心理",
+    "title": "【男女溝通】點解佢總係唔明白你？5 個常見溝通差異",
+    "category": "溝通相處",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "妳一直以為多付出一點，多體諒對方，這段感情就會幸福長遠嗎？多忍耐、多包容=感情穩定？事實不一定是這樣！",
-    "content": "<p>你以為只要付出更多，感情就會更穩定；但事實是，無止境付出會令你越來越累，幸福卻離你越來越遠。愛情是雙向而非一個人苦苦支撐，只有一個人用力，這段關係就會慢慢失去平衡。</p>\n<p>真正的愛是彼此的真心給予 而不是犧牲自我去迎合對方，如果發現自己越是付出越是失去自我 這可能是一個警號提醒你停下腳步 思考這樣的付出是否健康、是否值得。</p>\n<h2>設立健康的感情界線</h2>\n<p>為這段感情設下界線不是冷漠 而是讓彼此都有空間呼吸，清楚知道自己的底線與需求，不讓對方輕易越界 才能在這段愛情中保護自我，能讓感情長久而又不會感受到很辛苦。</p>\n<h2>「愛得太用力會推走對方」表面是情緒，底層是需要</h2>\n<p>非正常；💔 不是因為自己想做 而是因為怕對方生氣才做；💔 對方幾乎沒有回應/回饋/感謝；💔 為了遷就對方而犧牲自己；💔 即使已經身心俱疲仍無法say no；💔 一旦對方冷淡，你就覺得自己沒有價值。</p>\n<p>愛情需要付出，但更需要平衡。你的愛情不應該靠無限忍耐換來，而是雙方共同用心經營的結果。想改善這段關係的平衡點，可以先把自己長期壓下來的情緒整理清楚，再慢慢把界線、需要和可承受的位置講出來。</p>\n<h2>收回過度付出，不等於不愛</h2>\n<p>當你開始收回過度付出，對方可能會不習慣，甚至覺得你變冷淡。這時候要記住，你不是不愛，而是把關係由單方面消耗，慢慢調整回兩個人都需要負責的位置。</p>\n<h2>常見問題</h2>\n<h3>愛得太用力，點解會推走對方？</h3>\n<p>因為對方感受到的可能不是愛，而是壓力、期待和被要求即時回應。愛如果沒有空間，很容易變成控制。</p>\n<h3>點樣由用力愛，回到平衡？</h3>\n<p>先把注意力收回自己，減少試探和追問，用清楚請求代替情緒爆發，再看對方是否願意自然靠近。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DP77cEkEtST/",
-    "date": "2025-10-18",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "溝通",
+    "summary": "男人同女人從小到大都存在互動差異、邏輯差異、語言表達方式差異，呢啲種種嘅差異，往往好易造成伴侶間嘅相處問題，溝通斷層，出現情感疏離。",
+    "content": "<div class=\"article-dialogue\"><div class=\"article-dialogue__bubble\"><p>點解你冇話我知？</p></div><div class=\"article-dialogue__bubble\"><p>其實都冇特別嘢，唔使講啦！</p></div><div class=\"article-dialogue__bubble\"><p>你應該先搵到啱嘅解決方法！</p></div><div class=\"article-dialogue__bubble\"><p>我唔需要解決方法，而係想你安慰我！</p></div></div><p>呢啲對話有冇熟悉嘅感覺？點解男女溝通總係有差異？社會學家分析：咁係因為男女看待世界、溝通邏輯有差異！</p><h2>男女面對世界嘅方式唔同</h2>\n<p>視自己係階層社會秩序中嘅個體，認為生活就係競賽嘅一部分，要維護獨立、避免失敗，視自己為連結網絡當中嘅個體，要努力同人建立「親密度」，要維護親密度、避免孤立，雖然男女都會在意「階級地位」同「親密度」，但看待嘅視角唔同、專注嘅力道唔一樣。</p>\n\n<h2>面對問題時對話內容冇交集</h2>\n<p>集中想提出解決方案：只想解決問題，只想男人重視、認同佢嘅感受，本身相互理解係對等嘅，所以先會形成連結感，亦都係一段關係中必需嘅嘢，但當男人只集中提出建議，就好易變咗唔對等，容易造成疏離。</p><h2>說話風格相差太多</h2>\n<p>男人嘅溝通方式通常係報告式，佢哋重視信息嘅傳遞同解決問題，可能會直接講出事情嘅重點，著重解決具體問題，認為表達情感會令事情更複雜，女人重視情感同連結，佢哋嘅對話多數係以投契式為主，希望通過交流嚟增強彼此之間嘅關係。</p>\n\n<p>會分享自己嘅感受、經歷，亦都想要對方理解佢哋嘅情緒。</p>\n<h2>男同女思維真係整定？</h2>\n<p>但而家好多男人都會願意表達自己嘅情感。重視同另一半之間嘅情感交流，佢哋都會希望獲得理解同支持，而唔只係單一地解決問題，不過好多女人都會忽視佢哋嘅情感需要。以為佢哋只係一味需要理性對待，亦有好多女人都偏重鍾意率直交流。唔鍾意隱藏情緒，想坦誠地面對問題，但男人總係以為佢哋只係唔肯講出心入面嘅說話。以為表面扮作冇事、扮瀟灑，而出現好多誤會。</p><h2>男同女，要點達到平衡？</h2>\n<p>不論男女：都應該先理解大家本身嘅差異，對於彼此嘅觀點、差異保持開放態度。咁先可以避免先入為主嘅判斷，而出現溝通斷層，另外，雙方都應該盡量用清晰明確嘅語言。唔好用模糊不清嘅表達方式，先可以減少喺溝通上出現嘅誤解、混淆。</p><h2>感情拯救所話你知</h2>\n<p>雖然男同女與生俱來就有好多唔同。呢啲差異會令大家溝通出現斷層，但只要大家願意正視，良好嘅溝通係維持健康關係嘅關鍵！下次對住你嘅另一半：覺得佢好Kam、難以溝通時，不如諗返我哋講過啲嘢，冷靜下、嘗試理解對方嘅需要，尊重彼此嘅感受，先可以打破溝通障礙。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>視自己係階層社會秩序中嘅個體</li><li>集中想提出解決方案</li><li>男人嘅溝通方式通常係報告式</li><li>但而家好多男人都會願意表達自己嘅情感。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "sourceIg": "",
+    "date": "2024-10-10",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-11019325.jpg",
     "coverCredit": "Photo by Vihok Chugiart on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-holding-coffee-cups-11019325/",
@@ -3953,27 +3461,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：愛得太用力會推走對方？重回關係平衡的 4 個方法",
+    "coverCaption": "Asteria 相處教學：【男女溝通】點解佢總係唔明白你？5 個常見溝通差異",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 83,
-    "title": "對方忘不了前任點算？判斷你還有沒有位置",
-    "category": "復合挽回",
+    "title": "【冷暴力心理】男人為什麼不溝通？沉默背後的真正原因",
+    "category": "關係危機",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "復合",
-    "summary": "同男朋友一齊咗一段時間，但發現佢冇完全忘記前度，令你好在意！看到佢周不時會睇ex嘅IG，甚至會like ex嘅相？先唔好滿腔怒火咁質問佢點解對前任念念不忘！不如諗吓點解佢會咁樣啦。",
-    "content": "<p>遇到「對方忘不了前任點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「對方忘不了前任點算」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先看對方是否仍願意談「對方忘不了前任點算」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「對方忘不了前任點算」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>別讓「對方忘不了前任點算」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先判斷「對方忘不了前任點算」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>處理「對方忘不了前任點算」前，先把節奏慢下來</h2>\n<p>如果你正面對「對方忘不了前任點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「對方忘不了前任點算」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「對方忘不了前任點算」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「對方忘不了前任點算」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "警號",
+    "summary": "遇到「男人為什麼常用冷暴力」時，先分清表面行為、真正情緒同互動模式，再決定應該溝通、觀察、修補定守住界線。",
+    "content": "<h2>冷暴力不是冷靜，而是切斷溝通</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p>\n<h2>先停止追問，避免被拖入消耗</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p>\n<h2>看他沉默後有沒有回來修補</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p>\n<h2>「<strong>男人為什麼常用冷暴力</strong>」不是你一個人的責任</h2>\n<div class=\"article-section-card\"><p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p></div><h2>面對冷暴力，要先守住界線再談修補</h2>\n<p>如果「<strong>男人為什麼常用冷暴力</strong>」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>為「男人為什麼常用冷暴力」守住底線。</h2>\n<div class=\"article-section-card\"><p>你可以把「男人為什麼常用冷暴力」寫成事件表：發生了什麼、對方怎樣解釋、之後有沒有行動修正。如果每次都只是你心軟，而對方沒有變，問題就不是你不夠包容。</p><p>處理「<strong>男人為什麼常用冷暴力</strong>」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p></div>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>冷暴力不是冷靜，而是切斷溝通</li><li>男人為什麼常用冷暴力，不是你一個人的責任。</li><li>面對冷暴力，要先守住界線再談修補。</li><li>為男人為什麼常用冷暴力守住底線。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果對方用沉默或冷戰表達不滿，先不要用追問逼答案。可以等情緒降溫後，用一句清楚又低壓的說話打開溝通窗口。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2023-07-17",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-05-04",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4392965.jpg",
     "coverCredit": "Photo by LML 6768 on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-in-white-tank-top-sitting-on-green-sofa-4392965/",
@@ -4001,27 +3503,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方忘不了前任點算？判斷你還有沒有位置",
+    "coverCaption": "Asteria 相處教學：【冷暴力心理】男人為什麼不溝通？沉默背後的真正原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 84,
-    "title": "感情變淡點算？4 個令對方慢慢抽離的行為",
-    "category": "戀愛心理",
+    "title": "【冷淡期修復】關係進入冷淡期怎麼辦？重新拉近距離的方法",
+    "category": "復合挽回",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "心理",
-    "summary": "你有冇試過，感覺自己同另一半越嚟越疏遠，吸引力好似冇咗？或者追求異性嘅時候，對方由頭熱情，後尾變得冷淡？有時問題未必淨係外表，而係生活中嘅細節逐漸令你失咗魅力！一齊睇圖了解吓你有冇呢啲問題啦。",
-    "content": "<p>遇到「感情變淡點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>「感情變淡點算」還有沒有對話空間？</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「感情變淡點算」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>修補「感情變淡點算」要留空間</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>分清「感情變淡點算」是冷靜還是退場</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>把「感情變淡點算」拆成下一個小決定</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>對方退後時，先分清冷靜、逃避還是切斷：回到「感情變淡點算」來看</h2>\n<p>如果你正面對「感情變淡點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「感情變淡點算」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「感情變淡點算」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「感情變淡點算」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "復合",
+    "summary": "遇到「關係進入冷淡期怎麼辦」時，先分清表面行為、真正情緒同互動模式，再決定應該溝通、觀察、修補定守住界線。",
+    "content": "<p>關係進入冷淡期，不一定代表你們已經不愛。很多感情去到穩定階段，都會由一開始的高熱度，慢慢變成日常陪伴。以前一有空就想見面、訊息秒回、甚麼小事都想分享；後來大家開始忙、開始累、開始覺得相處變得平淡，你自然會擔心：這段關係是不是正在變淡？</p>\n<p>真正需要分辨的，不是激情有沒有下降，而是你們還有沒有願意靠近對方。如果只是少了新鮮感，但仍然關心、仍然願意安排時間、仍然想解決問題，這段關係仍然有調整空間。但如果冷淡背後是長期忽視、逃避溝通、對你的感受完全沒有反應，就不能只用「<strong>冷淡期</strong>」三個字安慰自己。</p>\n<h2>冷淡期不是無愛，而是關係進入穩定期</h2>\n<p>熱戀期的心動很強，因為大腦會被新鮮感和期待感推動。可是沒有人可以永遠停留在熱戀最高點。當關係穩定下來，激情自然會回落，取而代之的是習慣、安全感和生活節奏。</p>\n<p>這個階段最容易誤會對方不再愛自己，因為感覺不像以前那麼濃烈。但成熟的愛情不是永遠刺激，而是在平淡裡仍然願意選擇對方。你要看的，是對方是否還願意回應你、理解你，以及一起為關係做一點調整。</p>\n<h2>先不要用焦慮逼對方證明愛你</h2>\n<div class=\"article-section-card\"><p>一覺得對方冷淡，很多人會忍不住追問：「<strong>你係咪唔愛我？</strong>」、「<strong>你係咪變咗？</strong>」這些問題背後其實是想要安全感，但對方聽起來很容易變成壓力，最後越問越冷。</p><p>比較好的做法，是先把情緒放慢一點，用具體感受代替指控。例如你可以說：「我最近覺得我哋少咗好好相處嘅時間，我有啲唔安。今個星期可唔可以留一晚一齊食飯？」這樣講，對方比較容易知道可以怎樣回應，而不是只感覺被審問。</p></div><h2>重新拉近距離，要由小互動開始</h2>\n<p>冷淡期不一定要靠很大的行動修補。很多時候，一段關係是由小互動慢慢回溫：一起吃一餐不看電話的飯、睡前講幾句真心話、每星期安排一個固定相處時間，或者重新分享日常裡的小事。</p>\n<p>重點不是活動有多浪漫，而是讓大家重新感覺到「<strong>我仍然在你生活裡</strong>」。如果你們已經很久沒有真正聊天，不需要一開口就談很深的問題，可以先由輕鬆、低壓、容易回應的互動開始。</p>\n<h2>要分清冷淡期，還是對方已經停止投入</h2>\n<p>如果你放慢之後，對方仍然願意回應、願意見面、願意一起改善，那多數只是關係需要重新經營。但如果你每次提出感受，對方都避開、敷衍、甚至怪你太煩，而他自己完全沒有任何行動，這就不只是普通冷淡期。</p>\n<p>一段關係可以平淡，但不能長期只有你一個人努力。你可以主動一次、溫柔表達一次、給對方一點空間，但也要看清楚他有沒有接住你的善意。</p>\n<h2>感情拯救所話你知</h2>\n<p>冷淡期不可怕，可怕的是兩個人都假裝沒事，然後讓距離越拉越遠。真正值得修補的關係，不是永遠熱烈，而是兩個人都願意在平淡裡重新靠近、重新更新相處方式。</p>\n<p>如果你已經試過表達、放慢、創造相處時間，但對方仍然完全沒有回應，就要認真想清楚：這段關係是需要經營，還是你正在一個人硬撐。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>冷淡期不是無愛，而是關係進入穩定期。</li><li>重新拉近距離，要由小互動開始</li><li>要分清冷淡期，還是對方已經停止投入。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你覺得關係變淡，先不要急著判定感情完結。可以先看你們是否仍願意安排時間、回應彼此需要，以及一起嘗試新的相處方式。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2025-02-11",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-02-03",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5225473.jpg",
     "coverCredit": "Photo by Samson Katt on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/cheerful-asian-couple-walking-on-sunny-street-5225473/",
@@ -4049,27 +3545,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡點算？4 個令對方慢慢抽離的行為",
+    "coverCaption": "Asteria 相處教學：【冷淡期修復】關係進入冷淡期怎麼辦？重新拉近距離的方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 85,
-    "title": "感情一定要男人負責、女人矜持？拆解戀愛角色迷思",
-    "category": "曖昧桃花",
+    "title": "【情感忽略】他聽你講嘢不耐煩？關係疏離的警號",
+    "category": "關係危機",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "曖昧",
-    "summary": "同人曖昧嘅你，係咪苦等緊對方開口表白？有結婚打算嘅你，係咪苦等緊男朋友求婚？作為女人，往往會不自覺地將好多責任撥咗去男人身上，因為你下意識地覺得種種事情都係「男人」呢個角色應該做嘅事，但其實咁樣係為佢哋添加咗好多壓力，甚至會影響你哋之間嘅感情！唔通性別定型真係感情劊子手？本文從戀愛心理角度拆解關係訊",
-    "content": "<p>面對「感情一定要男人負責、女人矜持」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「感情一定要男人負責、女人矜」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>守住界線才看得清「感情一定要男人負責、女人矜」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>從時間安排看「感情一定要男人負責、女人矜」</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>把「感情一定要男人負責、女人矜」由想像拉回行動</h2>\n<p>「感情一定要男人負責、女人矜持」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>角色迷思會令兩個人都被困住</h2>\n<p>如果你正在經歷「感情一定要男人負責、女人矜持」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>點樣分清「感情一定要男人負責、女人矜持」係真心定只係曖昧？</h3>\n<p>看對方是否願意穩定投入、主動安排和承擔方向。曖昧可以很甜，但沒有行動配合，就很容易只停留在氣氛。</p>\n<h3>處理「感情一定要男人負責、女人矜持」時主動會否太急？</h3>\n<p>主動本身不是問題，無界線才是問題。可以主動一次，但要留空間看對方是否願意接住，而不是你一個人推完整段關係。</p>\n<h3>塔羅可以怎樣看「感情一定要男人負責、女人矜持」？</h3>\n<p>可以。塔羅可以幫你整理對方狀態、你在關係中的位置，以及下一步應該推進、放慢還是收回。</p>",
+    "imageLabel": "警號",
+    "summary": "好多人以為自己「聽完」、「聽咗」就OK，但咁樣並唔係真正有效嘅聆聽，亦因為咁，雙方好易出現「溝通斷層」，甚至會令對方拒絕再同你溝通。",
+    "content": "<h2>覺得另一半周不時都拒絕同你溝通？</h2>\n<div class=\"article-section-card\"><p>但你有冇諗過呢個情況，係因為自己平日同佢相處嘅壞習慣造成？</p><p>當你感覺另一半拒絕同你溝通時，或許你不妨諗下，自己同佢日常相處，會唔會存在咗啲令對方被忽視/不耐煩/唔被重視嘅行為！</p></div><h2>你可能係⋯ 自我中心思維模式太強</h2>\n<p>過於關注自己當下嘅需求同感受，忽略咗另一半嘅立場，呢種自我中心嘅思維模式，會冇辦法真正關注到另一半嘅諗法、感受。</p>\n\n<p>導致大家嘅理解上出現斷層，例如：另一半同你呻返工辛苦，但你聽完冇即時給予正確嘅安慰，反正只係話因為佢工作太忙，令你都冇時間同佢一齊出街。</p>\n<h2>亦都可能係⋯ 認知偏差</h2>\n<p>人喺聆聽時會受到自身信念、情感影響。呢種係一個非常普遍嘅「<strong>認知偏差</strong>」，你聽佢講嘢時可能會根據自己嘅經驗、觀點。去理解佢說話嘅用意：而唔係根據佢所講嘅說話嘅嘅原意。令大家嘅想法同理解都出現偏差，例如：你追問對方幾時同你去旅行。佢話「<strong>又係呢個問題，你唔好再係咁追問</strong>」，你可能會覺得只要換個時間點再問就OK，而對方個意思其實係，「<strong>唔想去旅行，你唔好再問</strong>」，但你一直用自己嘅諗法去解讀，於是當你隔幾日又再問，對方就會嬲。</p><h2>雙方都有問題⋯習慣性反應</h2>\n<p>大家一齊太耐就會形成「<strong>習慣性反應</strong>」，當有一方仲表達緊嘅時候，另一方已經「<strong>自以為</strong>」預測到對方會講乜。所以喺聆聽過程中就冇咁專注，明明冇認真聽對方講嘢，但又自覺已經Get到曬佢說話嘅用意。例如：當你同另一半同居後要面對屋企嘅家務。其中一方對屋企嘅清潔同整理可能冇咁用心。而被對方囉唆，所以每當對方提及家務嘅嘢時，另一方因為聽得太多了，所以喺對方開始講嘢時就提前估緊佢想講乜。</p>\n<p>以為自己已經了解佢嘅諗法，而冇打算認真聆聽佢講嘅嘢。</p><h2>喺一段感情關係入面</h2>\n<p>「有效溝通、認真聆聽」，係維持親密嘅重要因素，但如果其中一方喺溝通時「聽而不聞」，就好易令彼此對呢段感情覺得挫敗。</p>\n\n<p>咁點先可以學識真正聆聽呢？</p>\n<h2>唔好成日急於回應</h2>\n<p>好多時候：當你聽到另一半開始講某啲說話時。腦海入面已經開始構思緊自己要點回應。但咁樣好容易Get錯對方講嘅嘢。亦會忽略咗對方嘅真實感受，試吓喺對方講完佢想講嘅嘢之後，先俾自己幾秒鐘嘅時間，去消化、理解佢講嘅嘢，然後先到回應佢。</p><h2>唔好加入主觀諗法</h2>\n<p>人好容易喺對方講嘢時：自己個腦就開始運轉，諗緊點回應對方、諗緊自己嘅意見。但真正有效嘅聆聽係「<strong>認真聽</strong>」，喺聽嘅過程就只係聽，唔需要加入主觀意見同自己前設嘅諗法。先清空自己嘅腦、接受佢講嘅所有內容。如果你喺聽嘅過程有咩唔明，就要等佢講完再仔細問清楚，睇吓佢講嘅嘢同你聽嘅嘢有冇出現落差。</p><h2>溝通唔單止係口講嘅說話</h2>\n<div class=\"article-section-card\"><p>注意身體語言：非語言嘅表達都好重要，當另一半講緊嘢時，要注意佢哋嘅面部表情、手勢、身體動作。</p><p>同時都要注視自己嘅身體動作，唔好一邊聽一邊玩手指、整頭髮，否則對方會覺得你冇認真聽佢講嘢。</p></div><h2>感情拯救所話你知</h2>\n<p>喺一段感情關係中，真正嘅聆聽，絕對唔單止係「<strong>用耳仔接收對方講嘅嘢</strong>」，更重要係「<strong>用腦、用心去理解佢講嘅嘢</strong>」！唔好因為自己嘅經驗、觀點，而對另一半講嘅說話有預設諗法，要確認自己喺聽完對方所講嘅說話之後。係咪有正確理解對方嘅意思，不過，聆聽係需要不斷練習、提升。以後喺同另一半嘅相處、溝通時，不妨慢慢練吓「<strong>真正嘅聆聽技巧</strong>」。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>覺得另一半周不時都拒絕同你溝通。</li><li>你可能係⋯ 自我中心思維模式太強。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2023-08-14",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2024-09-09",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-14349151.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-standing-in-front-of-a-bar-cafe-14349151/",
@@ -4097,27 +3587,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情一定要男人負責、女人矜持？拆解戀愛角色迷思",
+    "coverCaption": "Asteria 相處教學：【情感忽略】他聽你講嘢不耐煩？關係疏離的警號",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 86,
-    "title": "沒有大吵也會分手？慢性分手的徵兆與補救方法",
-    "category": "復合挽回",
+    "title": "【T 型伴侶】連吵架都講道理？3 招扭轉溝通方式",
+    "category": "溝通相處",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "復合",
-    "summary": "有人話一段感情，多數拍三年拖就會厭。咁點樣先可以安然渡過第三年，令段感情可以更耐？一齊睇圖學嘢。",
-    "content": "<p>遇到「沒有大吵也會分手」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先判斷「沒有大吵也會分手」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>「沒有大吵也會分手」不用一次過逼出完整答案</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>用行動判斷「沒有大吵也會分手」</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>留住步伐才看得清「沒有大吵也會分手」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>對方是否接得住，決定「沒有大吵也會分手」能否繼續</h2>\n<p>如果你正面對「沒有大吵也會分手」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>沒有大吵也會分手</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>沒有大吵也會分手</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>沒有大吵也會分手</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "溝通",
+    "summary": "同另一半嗌交，佢淨係同你講道理，但唔識氹你。",
+    "content": "<h2>有冇試過遇到啲另一半係大T人？</h2>\n<p>T 人 = Thinking（思考型），處事講邏輯、講分析、講效率，樣樣都用理性去睇，T 人嘅邏輯係，有情緒等於要解決。</p>\n\n<p>佢哋會以為拆解問題、分析成因，就等於「我對你好」=「對件事好」。</p>\n<h2>當你同佢發完脾氣、喊完一場</h2>\n<p>佢就係好冷靜咁分析問題，拎事實出嚟拆解、叫你「<strong>理性啲</strong>」，你明知你唔係想贏一場理論比賽，你只係想對方攬吓你、重視你嘅感受。但佢就淨係識同你講道理、講邏輯。你嗰刻唔單止覺得冇被安慰，仲會開始懷疑自己係咪太情緒化，係咪真係太麻煩。</p><h2>愛你等於講道理等於解決問題？</h2>\n<p>其實佢未必唔在乎你：只係對於佢嚟講，講道理就係佢哋解決問題嘅方法，佢唔係唔愛你，只係覺得解決咗問題咪等於我對你好。但你當下最想要嘅唔係解決方案，而係一啲安慰，到底要點先令佢改變咁T嘅習慣？</p><h2>主動表達你嘅感受</h2>\n<div class=\"article-section-card\"><p>你可以同佢講：「我知你想幫我解決問題，但我嬲嗰陣，唔係淨係想聽分析，我只係想你陪我、攬吓我」，T型人唔係唔愛你，只係未必識點應對情緒，你講得清楚，佢先會慢慢學識點樣做先啱你。</p><p>不過講一兩次係冇計：尤其係太T嘅大T人，係需要持之以恒咁樣，慢慢「洗佢腦」！</p></div><h2>讚佢做得好嘅地方</h2>\n<p>T 型人通常唔係唔想對你好，而係佢哋真係唔知道點樣先叫做好。佢哋要見到實例，先會知道原來呢啲行為係有效、有意義。所以可以試吓同佢分享你感受到「<strong>被安慰</strong>」嘅時刻。T人會記得「<strong>做咗呢啲＝有效</strong>」，對佢哋嚟講係實際又正面嘅「<strong>教學指令</strong>」，佢哋會記住有用嘅 feedback。之後就會更願意重複做。</p><h2>感情拯救所話你知</h2>\n<p>對於 T 型人嚟講：「<strong>處理好問題</strong>」就等於「<strong>為大家好</strong>」，雖然佢可能唔識啲咩情緒共鳴，但係只要你肯俾好多、好多耐性，慢慢教佢。佢會記住、佢遲早都會學識，感情唔係靠天生100% match。而係靠一次又一次磨合、溝通，先可以慢慢搵出屬於你哋之間最舒服嘅相處方式。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>有冇試過遇到啲另一半係大T人</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "2025-06-30",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6643728.jpg",
     "coverCredit": "Photo by Alena Darmel on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-sad-woman-in-black-plaid-long-sleeves-6643728/",
@@ -4145,27 +3629,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：沒有大吵也會分手？慢性分手的徵兆與補救方法",
+    "coverCaption": "Asteria 相處教學：【T 型伴侶】連吵架都講道理？3 招扭轉溝通方式",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 87,
-    "title": "經常吵架就代表不適合嗎？判斷感情能否修復",
-    "category": "溝通相處",
+    "title": "【公主病定依賴？】男朋友話「唔想寵壞你」？拆解男人拒絕付出的藉口",
+    "category": "戀愛心理",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "溝通",
-    "summary": "經常吵架不一定代表不適合，但若每次都重複傷害、無人修補，就會慢慢消耗感情。要看的是吵架後有沒有學會更好相處。",
-    "content": "<p>每段關係都會有衝突，真正決定能否走下去的，不是有沒有吵架，而是吵架的方式和吵完之後的修補能力。</p>\n<h2>看吵架內容是否重複</h2>\n<p>如果每次都因同一件事爆發，代表問題沒有真正處理。你們需要找根源，而不是只在情緒過後當無事。</p>\n<p>同一件事吵很多次，通常代表你們只是在吵表面，沒有碰到真正需求。也許表面是回覆慢，底層其實是安全感；表面是語氣，底層其實是尊重。</p>\n<h2>看有沒有攻擊人格</h2>\n<p>討論問題和攻擊人格不同。「這件事令我受傷」還有修補空間；「你根本有問題」會令關係越來越難回頭。</p>\n<p>人格攻擊會令對方覺得自己整個人被否定，於是很難再聽你的感受。把焦點放回事件，才有機會由互相傷害變成一起處理問題。</p>\n<h2>吵完之後是否有人回來修補</h2>\n<p>健康的伴侶不一定不吵，但會願意道歉、解釋、調整。若每次都冷戰到底，感情會被拖乾。</p>\n<p>修補可以很簡單，例如一句承認、一個補救、一個下次做法。怕的是吵完每個人都裝無事，傷口表面平靜，心裡其實越積越多。</p>\n<h2>不要用分手威脅換重視</h2>\n<p>一吵就講分手，短期可能令對方緊張，長期會破壞安全感。真正要講的是你需要甚麼改變。</p>\n<p>分手威脅會令關係安全感被慢慢掏空。你真正想說的可能是「我很怕再這樣下去」，這句比「不如分手」更接近你的需要。</p>\n<h2>判斷值不值得繼續</h2>\n<p>如果衝突後雙方都有成長，關係可以變穩；如果只有你退讓，這就不是磨合，而是消耗。</p>\n<p>值得繼續的關係，吵完會慢慢學懂對方；不值得的關係，吵完只會令你更怕表達。分別不在於有沒有衝突，而在於衝突後有沒有成長。</p>\n<h2>常見問題</h2>\n<h3>成日吵架是否一定不適合？</h3>\n<p>不一定，要看吵架後是否有修補和改變。</p>\n<h3>吵架時最應避免甚麼？</h3>\n<p>避免人格攻擊、翻舊帳、冷暴力和用分手威脅。</p>\n<h3>Asteria 可以點樣幫？</h3>\n<p>可以幫你拆衝突模式，判斷是可修補問題還是長期失衡。</p>",
+    "imageLabel": "心理",
+    "summary": "當男人說「我想訓練你獨立」、「唔想你變公主病」，這往往是「逃避責任」的包裝。",
+    "content": "<h2>先看常見情境</h2>\n<p>男人對女人說：「我想把你訓練成獨當一面的戰士」。你認為這是愛的表現，還是一種隱形的壓力？當你要求佢接送，或者想佢買禮物。佢就話：「我唔想寵到你變公主病」。結果你為了證明自己唔係港女，變成了女漢子，水自己換，燈泡自己通。</p><h2>真相</h2>\n<div class=\"article-section-card\"><p>他在 PUA 你，他在利用「<strong> 獨立 </strong>」這個光環，去掩飾佢嘅，「<strong> 懶惰 </strong>」，同，「<strong> 吝嗇 </strong>」。佢想找一個，「<strong> 零成本 </strong>」，嘅女朋友。既要你溫柔體貼，又要你獨立自主唔洗錢。這不是愛，這是，「<strong> 搵笨 </strong>」。</p><p>愛就是寵愛。真正愛你嘅人，恨不得將你寵壞，等無人搶得走你。佢唔會驚你變公主，佢只想做你嘅騎士。唔好被佢嘅歪理洗腦！</p></div><h2>再看深一層：男朋友話「<strong>唔想寵壞你</strong>」的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2023-05-27",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7964507.jpg",
     "coverCredit": "Photo by Felicity Tai on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-talking-on-a-doorway-7964507/",
@@ -4193,27 +3671,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：經常吵架就代表不適合嗎？判斷感情能否修復",
+    "coverCaption": "Asteria 相處教學：【公主病定依賴？】男朋友話「唔想寵壞你」？拆解男人拒絕付出的藉口",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 88,
-    "title": "一吵架就提分手點算？避免衝動毀掉關係",
+    "title": "【分手真相】分手原因未必係性格不合：揭開依戀創傷",
     "category": "復合挽回",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
     "imageLabel": "復合",
-    "summary": "「唔夾就分手」真係解決方法？定係你錯過咗可以成長嘅機會？成日聽人講：「你哋唔夾就分手啦！」，呢句說話聽落好簡單，好直接，但真係咁黑白咩？其實世上冇2個100%天生夾嘅人，只有兩個願意互相調整嘅人。你又會選擇直接分手，定諗辦法解決？",
-    "content": "<p>遇到「一吵架就提分手點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「一吵架就提分手點算」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「一吵架就提分手點算」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「一吵架就提分手點算」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「一吵架就提分手點算」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>越想靠近「一吵架就提分手點算」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>想修補「一吵架就提分手點算」，先判斷仲有沒有窗口</h2>\n<p>如果你正面對「一吵架就提分手點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>一吵架就提分手點算</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>一吵架就提分手點算</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>一吵架就提分手點算</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "summary": "真正導致分手的，通常是深層的「依戀模式 (Attachment Styles)」衝突。",
+    "content": "<p>先看常見情境，分手時，最常聽到嘅理由係：「<strong>我哋性格不合</strong>」。但回想一下，剛開始時，你哋明明覺得大家係天生一對？點解「<strong>互補</strong>」會變成「<strong>不合</strong>」？真相，唔係性格問題，係依戀問題，心理學發現，我們在愛情中的反應，源於童年同父母嘅關係。1. 焦慮型依戀 (Anxious)。特徵：好驚被控制，一感覺到壓力就想逃避，需要極高嘅獨立空間。口頭禪：「<strong>我想一個人靜下</strong>」。</p>\n<p>死亡組合，你越追（焦慮），佢越走（迴避）。你覺得佢冷血，佢覺得你煩膠。這不是性格不合，這是，「<strong>依戀系統</strong>」，的誤判。對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>再看深一層：分手原因未必係性格不合的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2025-06-15",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-12949776.jpg",
     "coverCredit": "Photo by Hoài  Nam on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/top-view-of-a-woman-lying-on-the-bed-with-photos-next-to-her-12949776/",
@@ -4241,27 +3713,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一吵架就提分手點算？避免衝動毀掉關係",
+    "coverCaption": "Asteria 相處教學：【分手真相】分手原因未必係性格不合：揭開依戀創傷",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 89,
-    "title": "一面對伴侶就燥底？5 個正在破壞關係的原因",
-    "category": "溝通相處",
+    "title": "【分手復合】前度話「暫時做朋友」係咩心態？解讀男人潛台詞",
+    "category": "復合挽回",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "雖然喺戀愛關係入面，溝通係維持大家嘅感情嘅關鍵，但有啲時候，即使幾句言語，都可能會令你對另一半無名火起，覺得佢好煩、好討厭，面對住佢，可能會令你不禁懷疑，自己對另一半嘅感情是否已經消失？究竟真相係點？",
-    "content": "<p>每當聽到另一半講嘢、對你囉唆，你就會好容易覺得無名火起，你會覺得佢好討厭、好麻煩，你會唔想再聽佢講嘢 每次遇到呢啲時候 係咪就會忍唔住質疑自己，唔通對佢已經冇愛。</p>\n<p>其實又唔一定 即刻睇到點解你會有呢種錯覺啦！</p>\n<p>經過長時間嘅相處 可能會出現溝通上嘅疲乏，因為隨住時間推移，大家或者會對對方嘅言語免疫 甚至產生厭煩，有時會因對方一句說話或者一啲舉動，觸發我哋內心深處嘅某種不安、不滿，喚醒咗「<strong>躁底情緒</strong>」而覺得對方好煩，但咁並唔代表你已經唔再愛佢。</p>\n<h2>🔎 爭執太多</h2>\n<p>如果經常因為一啲小事而嗌交 心情都好易變得壓抑 甚至會因為咁而有壓力，內心就會釋放出負能量、焦慮感，負面情緒狀態會慢慢地「<strong>洗你腦</strong>」，當爭執過多又無法解決時，你可能會因為呢啲煩躁感 誤以為自己已經唔愛佢，但其實你只係覺得未解決嘅問題太煩厭。</p>\n<h2>回到「一面對伴侶就燥底」本身，要看這幾個判斷位</h2>\n<p>每人對另一半都一定預設咗期望，不過如果你嘅期望Set得太高 另一半又未能滿足到你，你就好易覺得失望、嬲，繼而質問佢點解達唔到你嘅期望，呢個時候 另一半嘅答案往往會唔小心「<strong>火上加油</strong>」，進而令到你開始懷疑自己對佢嘅感情。</p>\n<p>當你細個喺原生家庭面對父母時 同佢哋嘅相處出現問題，令你一直感到到好多負面嘅情緒 你會下意識地覺得一旦同父母相處就會發火，到你成長咗之後 原生家庭嘅壓力依然喺你嘅潛意識，所以一旦你喺另一半身上feel到父母嘅影子，例如面對佢對你嘅囉唆。</p>\n<p>你就會又無名火起 將對父母嘅討厭錯誤地投射喺佢身上</p>\n<h2>常見問題</h2>\n<h3>一面對伴侶就燥底，是否代表不愛？</h3>\n<p>未必。可能是長期委屈、壓力累積、溝通模式太差，令你一見到對方就進入防衛。</p>\n<h3>點樣處理對伴侶的煩躁感？</h3>\n<p>先找出最常觸發你的幾件事，不要只怪自己脾氣差。把問題拆成具體事件，才知道要修補、休息還是重新設界線。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/C_8UCa4Sd0G/",
-    "date": "2024-09-15",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "復合",
+    "summary": "分手後男人提出「做朋友」，通常有 3 種心態：1. 減輕罪惡感、2. 當你係備胎 (食之無味棄之可惜)、3. 真的想由朋友做起慢慢觀察。",
+    "content": "<h2>先看常見情境</h2>\n<p>分手時，佢拋下一句：「<strong>我哋不如暫時做返朋友先？</strong>」，你個心即刻燃起希望：係咪即係仲有機會？千萬唔好開心得太早！對於男人黎講，「<strong>做朋友</strong>」往往係一個緩兵之計。心態 A (好人卡)：佢想做衰人，想慢慢淡出，等你無咁傷心。佢未搵到新女，留住你解悶/解決生理需求，搵到新嘅就踢開你。對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>再看深一層：前度話「<strong>暫時做朋友</strong>」係咩心態的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8466770.jpg",
     "coverCredit": "Photo by Anastasia  Shuraeva on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-a-woman-having-a-conversation-inside-a-classroom-8466770/",
@@ -4289,27 +3755,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一面對伴侶就燥底？5 個正在破壞關係的原因",
+    "coverCaption": "Asteria 相處教學：【分手復合】前度話「暫時做朋友」係咩心態？解讀男人潛台詞",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 90,
-    "title": "對方成日話順其自然？不想計劃未來的真正原因",
-    "category": "戀愛心理",
+    "title": "【分手療癒】分手後如何走出傷痛？利用「成長思維」將失戀變成升值期",
+    "category": "復合挽回",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "拍咗幾年拖，總會幻想同男朋友共組家庭、步入結婚階段。但無奈對方一直唔提及婚事，每次你一講起，佢只會話「順其自然」。所謂嘅「順其自然」，到底要等到幾時？到底佢唔承諾同你結婚，係經濟上嘅考量，定抑或佢根本只係想你做佢嘅「萬年女友」？想知對方提及結婚嘅真相？本文從戀愛心理角度拆解關係訊號、應對方法與挽回前",
-    "content": "<p>對方成日話「順其自然」，聽落好像很放鬆、很成熟，但如果每次一談未來、承諾、見家長、同居、結婚，對方都用這句帶過，你就要留意：他可能不是隨緣，而是不想面對下一步。</p>\n<p>真正健康的順其自然，是兩個人仍然有方向，只是不急於逼結果；但逃避式的順其自然，是永遠不講時間、不講安排、不講責任，讓你一直等在模糊位置。</p>\n<h2>順其自然，不等於沒有未來規劃</h2>\n<p>一段關係可以不用每件事都計到死，但至少要知道大家想不想往同一個方向走。例如是否想長遠發展、是否接受公開關係、未來生活節奏大概怎樣安排。這些不是逼婚，而是基本方向感。</p>\n<p>如果對方連最基本的方向都不願意談，只用「到時先算」打發你，你的不安就不是太敏感，而是關係真的缺少安全感。</p>\n<h2>留意他是放鬆，還是在避開責任</h2>\n<p>有些人說順其自然，是因為他需要時間觀察；有些人說順其自然，是因為他享受現在的好處，但不想承擔未來的責任。分別在於，他有沒有在其他地方用行動讓你安心。</p>\n<p>如果他平日穩定投入、願意安排時間、會讓你進入他的生活，順其自然可能只是節奏慢；但如果他忽冷忽熱、避開承諾、每次你一問就嫌你煩，這句話就可能是拖延。</p>\n<h2>把未來問題拆成具體小事</h2>\n<p>不要一開始就問「你到底會不會娶我」或「我們有沒有將來」。可以先問一件具體事，例如下個月見面安排、節日是否一起過、會不會介紹朋友認識、半年內是否有共同計劃。</p>\n<p>具體問題比較難用空話帶過。對方願不願意一起安排這些小事，往往比他口頭說「我有諗過未來」更有參考價值。</p>\n<h2>你可以接受慢，但不要接受一直模糊</h2>\n<p>每段關係都有自己的速度，你不需要因為別人進展快就逼自己焦慮。但如果你長期被放在不確定位置，問一次就被說壓迫，等久了又沒有任何實際進展，就要重新看清自己能否承受。</p>\n<p>成熟的關係不是即刻給承諾，而是即使未有完整答案，也願意和你一起討論下一步。真正想同行的人，不會只叫你順其自然，卻從來不讓你知道他想走去哪裡。</p>\n<h2>常見問題</h2>\n<h3>對方說順其自然，是不是代表不愛？</h3>\n<p>不一定。要看他是否仍然穩定投入、願意安排時間，以及是否願意談基本方向。如果只有享受當下，完全避開未來，就要小心。</p>\n<h3>我應該怎樣問未來，才不會太大壓力？</h3>\n<p>先問具體小事，例如見面安排、公開關係、節日計劃，而不是一開始追問終身承諾。具體問題更容易看清對方態度。</p>\n<h3>Asteria 可以點樣幫我分析這種關係？</h3>\n<p>可以幫你整理對方說法和行動是否一致，判斷他是慢熱、未準備好，還是一直用模糊話術拖住你。</p>",
+    "imageLabel": "復合",
+    "summary": "要走出傷痛，關鍵不是強迫自己忘記，而是進行「意義重構 (Reframing)」。",
+    "content": "<h2>分手最痛嘅</h2>\n<p>分手最痛嘅，唔係失去咗一個人，而係覺得「<strong> 我被否定咗 </strong>」、「<strong> 我係失敗者 </strong>」。好多人分手後會陷入自暴自棄，暴飲暴食或者不斷求復合。其實，這段時間係你人生最寶貴嘅，「<strong> 增值期 (Growth Period) </strong>」。如何利用分手令自己成長？第 1 點，容許自己悲傷 (Grieve Fully) 唔好扮無事！傷心係正常嘅生理反應。俾自己一個期限（例如 3 日），盡情喊、盡情頹。但期限一過，就要起身洗面。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>檢視感情模式 (Pattern Recognition)</span></h2>\n<p>冷靜落黎諗下。點解會分手？係咪溝通出問題？我係咪成日愛上同一類渣男？這不是為了自責，而是為了，「<strong> 除蟲 (Debug) </strong>」。搵出個 Bug，下一段感情先唔會重蹈覆轍。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>重建生活秩序 (Routine)</span></h2>\n<p>失戀會令生活大亂。你要由小事開始拎返，「<strong> 掌控感 </strong>」。例如：每日準時起身、每星期做兩次運動、學一樣新技能。當你發覺自己可以控制生活，自信就會返黎。</p>\n<h2>再看深一層：分手後如何走出傷痛的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>分手最痛嘅，唔係失去咗一個人，而係覺得，我被否定咗、我係失敗者。</li><li>檢視感情模式 (Pattern Recognition)</li><li>重建生活秩序 (Routine)</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2023-06-27",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4307967.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/happy-ethnic-couple-enjoying-time-together-at-home-4307967/",
@@ -4337,27 +3797,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方成日話順其自然？不想計劃未來的真正原因",
+    "coverCaption": "Asteria 相處教學：【分手療癒】分手後如何走出傷痛？利用「成長思維」將失戀變成升值期",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 91,
-    "title": "對方慢慢冷淡？容易令人抽離的互動模式",
-    "category": "溝通相處",
+    "title": "【心理測驗】你係咪恐怖情人？實測佔有慾指數！太強點算好？",
+    "category": "關係危機",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "溝通",
-    "summary": "拍拖初期，大家成日好有好多嘢講，但一齊耐咗，好多情侶都會越嚟越冇計傾。你以為咁樣只係好小事？但其實可能係造成分手嘅大地雷！到底要點樣面對「越拍越冇嘢講」呢個問題？一齊嚟睇吓啦！",
-    "content": "<p>遇到「對方慢慢冷淡」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>越想靠近「對方慢慢冷淡」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>不要把「對方慢慢冷淡」的沉默都當成一樣</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>先處理「對方慢慢冷淡」最核心一步</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>不要只聽一句，要看「對方慢慢冷淡」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>讓「對方慢慢冷淡」有空間回氣</h2>\n<p>如果你正面對「對方慢慢冷淡」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「對方慢慢冷淡」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「對方慢慢冷淡」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「對方慢慢冷淡」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "警號",
+    "summary": "適度的佔有慾是愛，過度的佔有慾是控制。",
+    "content": "<p>適度的佔有慾可以來自重視，但過度佔有就會變成控制。當你經常想 check 對方電話、限制對方社交，背後很多時不是愛得深，而是低自尊和缺乏安全感正在放大你的不安。「<strong>你去邊：同邊個去？幾點返？</strong>」，這三條問題，係咪你每日必問？愛一個人，自然會緊張佢。但如果緊張到令對方透唔過氣，咁就係，「<strong>佔有慾過強</strong>」。對方唔聽電話，你會奪命連環 Call（超過 5 次）。你會偷偷 Check 佢電話或 Social Media 的 Follow List。</p>\n<p>唔鍾意佢同異性朋友單獨食飯，就算係公事都會介意。如果你唔知佢行蹤，你會焦慮到做唔到嘢。你會要求佢刪除前度嘅所有聯絡方式。佛系戀人，小心對方覺得你唔在乎佢。正常範圍，你只係比較緊張呢段關係。危險警號，你可能已經有控制傾向，要先處理安全感。</p>\n<h2>記住</h2>\n<div class=\"article-section-card\"><p>「<strong>抓得越緊，流失得越快</strong>」。你要學識將注意力放返喺自己身上 (Self-focus)。當你生活精彩，你就唔會得閒理佢去咗邊。</p></div><h2>再看深一層：你係咪恐怖情人？實測佔有慾指數！太強點算好的真正訊號</h2>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>尊重不是不表態，而是守住界線</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2025-06-04",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-13111969.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-sitting-while-smiling-together-13111969/",
@@ -4365,47 +3819,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11014402.jpg",
-        "caption": "內文配圖：對方慢慢冷淡？容易令人抽離的互動模式",
+        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
         "credit": "Photo by Yudha Aprilian on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-having-conversation-while-sitting-at-the-park-11014402/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8405558.jpg",
-        "caption": "內文配圖：對方慢慢冷淡？容易令人抽離的互動模式",
+        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
         "credit": "Photo by Los Muertos Crew on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-talking-on-the-phone-together-8405558/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8151713.jpg",
-        "caption": "內文配圖：對方慢慢冷淡？容易令人抽離的互動模式",
+        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
         "credit": "Photo by RDNE Stock project on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-standing-near-the-wooden-door-while-drinking-coffee-8151713/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方慢慢冷淡？容易令人抽離的互動模式",
+    "coverCaption": "Asteria 相處教學：【心理測驗】你係咪恐怖情人？實測佔有慾指數！太強點算好？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 92,
-    "title": "為何總是遇到爛桃花？避開錯的人與吸引健康關係",
-    "category": "曖昧桃花",
+    "title": "【付出心理學】對佢好但佢唔領情？原來你一直做緊「假性努力」！",
+    "category": "戀愛心理",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "曖昧",
-    "summary": "爛桃花真係天生？越靚嘅女人就越容易惹到爛桃花埋身？其實你有冇諗過，你嘅爛桃花係由你自己嘅性格一手造成？",
-    "content": "<p>面對「為何總是遇到爛桃花」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「為何總是遇到爛桃花」需要界線，不只靠感覺</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「為何總是遇到爛桃花」不只看氣氛，也看行動</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>「為何總是遇到爛桃花」未清楚前，先放慢期待</h2>\n<p>「為何總是遇到爛桃花」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>自然互動才看得清「為何總是遇到爛桃花」</h2>\n<p>好的曖昧不是你一直追，對方一直接收。你可以給機會，但也要讓對方付出一部分努力，這樣才看得出關係是否真的有發展。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>先分清「為何總是遇到爛桃花」是靠近還是享受曖昧</h2>\n<p>如果你正在經歷「為何總是遇到爛桃花」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>為何總是遇到爛桃花</strong>」入面，曖昧卡住或對方唔表態應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>「<strong>為何總是遇到爛桃花</strong>」入面，我主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇「<strong>為何總是遇到爛桃花</strong>」對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "imageLabel": "心理",
+    "summary": "很多時候我們以為自己在為對方付出，其實是在「感動自己」。",
+    "content": "<h2>先看常見情境</h2>\n<p>「<strong>我為佢做咗咁多野，佢一句多謝都無！</strong>」，你每日早起幫佢煮早餐、幫佢執屋、提佢食藥。你覺得自己係 100 分女友。但佢竟然話：「<strong>我都無叫你做，係你自己要做咋嘛</strong>」。那一刻，你心都碎埋。</p>\n<h2>點解你的付出變成「<strong> 驢肝肺 </strong>」？</h2>\n<div class=\"article-section-card\"><p>因為你做緊，「<strong> 假性努力 </strong>」。你用你以為好嘅方式去愛佢，而唔係用佢想要嘅方式。</p></div><h2>例子</h2>\n<p>佢想要一個蘋果，你比咗一車香蕉佢。你話：「<strong> 香蕉好貴架，我千辛萬苦搵返黎 </strong>」。結果：佢唔會感動，只會覺得你塞住佢個門口，好煩。</p>\n<p>真正的努力，係「<strong>精準打擊</strong>」，你要比得，「準」，而唔係比得，「多」。做一件佢需要嘅事，勝過做十件佢唔需要嘅事。</p>\n<h2>再看深一層：對佢好但佢唔領情的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-03-30",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5637623.jpg",
     "coverCredit": "Photo by RDNE Stock project on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/elderly-couple-holding-hands-on-the-table-5637623/",
@@ -4433,27 +3881,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：為何總是遇到爛桃花？避開錯的人與吸引健康關係",
+    "coverCaption": "Asteria 相處教學：【付出心理學】對佢好但佢唔領情？原來你一直做緊「假性努力」！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 93,
-    "title": "男人心底話其實是什麼？看懂他沒說出口的需求",
-    "category": "戀愛心理",
+    "title": "【出軌心理學】男人變心係天性？拆解男人愛上第三者的 3 個真正原因",
+    "category": "關係危機",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "心理",
-    "summary": "男人心底話未必是不愛說，而是他未必懂得用情緒語言表達。看懂他沒說出口的需求，要同時看行動、壓力和他願不願意讓你靠近。",
-    "content": "<p>有些男人不是沒有感受，而是習慣把感受收起來，用沉默、忙碌或講道理代替表達。你想看懂他，就不能只聽他講了甚麼，也要看他怎樣做。</p>\n<h2>沉默不一定等於不在乎</h2>\n<p>有些人壓力大時會先退後，不懂即時安撫你。但如果他退後後願意回來交代，和完全消失是兩回事。</p>\n<p>有些人遇到壓力時會先關起自己，不代表他完全沒有感受。但如果沉默變成長期逃避，讓你永遠猜不到他的心，那就會傷害關係。</p>\n<h2>看他怎樣表達重視</h2>\n<p>有些人少講甜言蜜語，但會用行動安排、解決問題、記得你的需要。你要看他的愛語，而不是只用一種標準判斷。</p>\n<p>你可以留意他是否會用實際行動照顧你，例如記得你的事、安排時間、在你需要時出現。不是每個人都擅長說愛，但行動也不能長期空白。</p>\n<h2>分清不懂講和不想講</h2>\n<p>不懂講的人可以慢慢引導；不想講的人會長期拒絕溝通，甚至把你的需要說成麻煩。兩者差很遠。</p>\n<p>不懂講的人，被溫和引導後會慢慢多說一點；不想講的人，會把所有溝通都推開。你要分清他是需要時間，還是根本不打算讓你進入。</p>\n<h2>不要用猜測代替溝通</h2>\n<p>你可以溫和問：「你剛才沉默，是需要時間，還是不想談？」給對方選項，比逼他立刻坦白更容易打開。</p>\n<p>猜測會令你越來越焦慮，也會令對方覺得被審問。給他幾個選項，有時比逼他講「真心話」更容易令他開口。</p>\n<h2>看他是否讓你進入他的世界</h2>\n<p>真正有心的人，即使不擅長表達，也會慢慢讓你知道他的壓力、想法和界線。</p>\n<p>一個真正在乎你的人，未必即刻講很多，但會讓你看見他願意嘗試。你要看的不是他是否完美表達，而是他有沒有慢慢向你打開。</p>\n<h2>常見問題</h2>\n<h3>男人不講心底話是否代表不愛？</h3>\n<p>不一定，但長期拒絕溝通會影響關係安全感。</p>\n<h3>我可以點樣問先自然？</h3>\n<p>用低壓方式問具體狀態，不要一開始就審問他是否不愛。</p>\n<h3>塔羅可以睇到佢真實想法嗎？</h3>\n<p>可以協助整理他當下心態、壓力和關係投入程度。</p>",
+    "imageLabel": "警號",
+    "summary": "這通常不是因為第三者更美，而是源於「柯立芝效應 (Coolidge Effect)」——大腦對新伴侶的性喚起更高。",
+    "content": "<h2>就算當初愛得死去活來</h2>\n<p>就算當初愛得死去活來，時間都會令一切趨於平淡。就算身邊嘅另一半外貌標緻身材好，男人都有機會愛上其他女人！唔通男人變心真係預料之中？</p>\n<p>男人變心的 3 個殘酷真相。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>追求新鮮感 (Novelty)</span></h2>\n<p>科學上有個名詞叫，「<strong>柯立芝效應</strong>」。雄性哺乳類動物對於「<strong>新嘅異性</strong>」會有特別強烈嘅反應。這解釋了為什麼有些男人明明老婆好靚，都要去偷食一個樣貌平平嘅小三。因為「新」。所以「<strong>興奮</strong>」。他在家裡可能是個被嫌棄的老公（無洗碗、無做家務）。但在小三面前，他被視為英雄、大款、聰明人。男人需要這種，「<strong>英雄感</strong>」，來維持自尊。小三代表娛樂（飲酒、去玩）。他不是愛那個女人，他是愛那個，「<strong>無憂無慮的自己</strong>」。</p>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>再看深一層：男人變心係天性？拆解男人愛上第三者的 3 個真正原因的真正訊號</h2>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>追求新鮮感 (Novelty)</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2023-12-04",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-18120195.jpg",
     "coverCredit": "Photo by Jeffry Surianto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/holding-hands-couple-walking-on-beach-18120195/",
@@ -4481,27 +3923,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：男人心底話其實是什麼？看懂他沒說出口的需求",
+    "coverCaption": "Asteria 相處教學：【出軌心理學】男人變心係天性？拆解男人愛上第三者的 3 個真正原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 94,
-    "title": "擇偶只講 Feel 夠嗎？真正適合長久關係的條件",
-    "category": "戀愛心理",
+    "title": "【冷暴力】有覆機有見面但覺得好空虛？拆解「情感漠視」的 3 個隱性特徵",
+    "category": "關係危機",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "心理",
-    "summary": "喺愛情嘅世界入面，係咪真係咁老土地覺得「愛勝過一切？只有夠愛，對方係點都冇問題？」其實喺愛情嘅世界 ，情緒穩定嘅另一半，先係勝過一切！一齊睇圖了解吓點解啦",
-    "content": "<p>🧑🏻 A型人 嗌交後：願意氹你，但心有不甘、仲嬲嬲地，你做錯事：指責你嘅錯誤 佢做錯事：發自己脾氣之餘，可能會發埋你脾氣，對你嘅信任度：可能會唔小心有猜疑 對未來嘅諗法：見步行步，唔敢有太多諗法，👦🏻 B型人 嗌交後：願意氹你，會主動修復關係。</p>\n<p>你做錯事：指出你嘅錯誤，建議你要點改變 佢做錯事：主動承擔錯誤 對你嘅信任度：100%信任你 對未來嘅諗法：有初步嘅構想</p>\n<p>成日都覺得「<strong>愛就係一切</strong>」 只要夠愛，對方係點都冇乜所謂、都可以容納，但當個人開始成熟 就會發現 一個情緒穩定、EQ夠高嘅另一半，其實仲緊要。</p>\n<h2>👍🏻 情緒穩定 = 盡量將問題大事化小</h2>\n<p>喺一段關係入面 嗌交、意見不合真係好常見 EQ高嘅另一半可以嘗試冷靜處理分歧，就算真係嗌大交時，都可以盡量避免極大嘅情緒波動，而唔係好似發癲咗情緒化地嘈嚟嘈去，亦可以避免衝突升級、講出過分傷人嘅說話，減少不必要嘅傷害。</p>\n<p>甚至會比較易喺火遮眼時clam down 將問題大事化小</p>\n<h2>回到「擇偶只講 Feel 夠嗎」本身，要看這幾個判斷位</h2>\n<p>情緒唔穩定嘅人 好容易將壓力、不滿呢類負面情緒 投射到另一半身上，但咁樣好易造成大家嘅關係變得緊張，而EQ高嘅人就識得自行消化負面情緒，就算返工或者生活上出現唔開心嘅嘢，佢都會識自己諗方法減少負面情緒。</p>\n<p>會消化完、將折半咗嘅負面嘢帶返屋企 咁就唔會令自己嘅另一半一齊承受太多「<strong>情緒毒素</strong>」</p>\n<p>當你遇到麻煩嘅時候 好易好似個盲頭烏蠅咁不知所措 一個情緒穩定嘅另一半，第一個反應通常係會諗辦法幫你解決問題，而唔係一味地怪責你「<strong>點解你咁蠢</strong>」，或者陪伴一齊呻嚟呻去，可以喺關鍵時刻冷靜咁幫你分析，絕對係個可靠嘅「<strong>合作夥伴</strong>」。</p>\n<p>就算問題唔可以幫你即刻解決 佢都識用盡佢嘅殺手鐧氹你 等你唔使帶住負面情緒過夜</p>\n<h2>常見問題</h2>\n<h3>擇偶只講 Feel 夠唔夠？</h3>\n<p>Feel 可以開始一段關係，但未必支撐長久相處。長遠要看價值觀、責任感、情緒成熟度和生活節奏。</p>\n<h3>如果有 Feel 但條件不穩，應該點判斷？</h3>\n<p>不要只問自己有多心動，也要問：同佢一起生活會否安心？遇到壓力時他會否承擔？這些比一刻感覺更重要。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DFsgjb7SBZ8/",
-    "date": "2025-02-05",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "警號",
+    "summary": "「情感漠視 (Emotional Neglect)」比冷暴力更難察覺。",
+    "content": "<p>明明在一起，明明在一起。但又覺得很空虛？佢有覆你 message，每星期都有見面。但你總係覺得，「<strong>佢個心唔喺度</strong>」。是不是因為對方一直在漠視你的情感、有情感漠視的慣性？感情上的，情感漠視 (CEN) vs 冷暴力，到底有甚麼分別？情感漠視的 3 個特徵：1. 唔識接住你嘅情緒。「<strong>我今日返工好辛苦</strong>」。佢只會答：「<strong>咁辭職囉</strong>」。或者「<strong>係咁架啦</strong>」。佢完全忽略咗你背後想「<strong>被安撫</strong>」嘅需求，只係用邏輯去打發你。</p>\n<h2>佢潑冷水</h2>\n<p>「<strong>有咩咁好笑</strong>」。你傷心時，佢覺得你煩：「<strong>你又黎啦</strong>」。你在這段關係中，感覺不到，「<strong>情感流動</strong>」，似對住個機械人。但亦都無Deep Talk。你哋只係講柴米油鹽，從來唔講心事。危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>再看深一層：有覆機有見面但覺得好空虛的真正訊號</h2>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>佢潑冷水</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8055844.jpg",
     "coverCredit": "Photo by Annushka  Ahuja on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-family-inside-their-home-8055844/",
@@ -4529,27 +3965,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：擇偶只講 Feel 夠嗎？真正適合長久關係的條件",
+    "coverCaption": "Asteria 相處教學：【冷暴力】有覆機有見面但覺得好空虛？拆解「情感漠視」的 3 個隱性特徵",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 95,
-    "title": "怎樣讓男人更離不開你？先看懂他的心理需求",
+    "title": "【男人心理】男朋友成日信口開河？拆解「空頭支票」背後的 3 種心態",
     "category": "戀愛心理",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
     "imageLabel": "心理",
-    "summary": "原來男人先係最需要滿滿嘅情緒價值嘅人！但身處戀愛關係中，到底要怎樣為對方提供情緒價值呢？一齊睇圖學吓嘢啦。",
-    "content": "<p>好多人第一時間會諗：女仔最需要俾人氹、被理解，但其實，男人先係最渴望有人俾佢滿滿嘅情緒價值，佢哋內心深處，係好想被肯定、被支持，只係佢哋唔慣講、唔識表達，你又有冇提供足夠嘅情緒價值俾另一半。</p>\n<p>其實男人都需要被認同、被理解、被支持，佢哋喺社會上成日被定型為：「<strong>堅強</strong>」、「<strong>識解決問題</strong>」，但冇人問佢哋：「<strong>你今日開唔開心？</strong>」、「<strong>辛唔辛苦？</strong>」，所以就算佢內心好攰都唔敢講出口，因為怕俾人覺得軟弱，但咁唔代表佢哋唔需要情緒價值。</p> <h2>情緒價值等於無形魅力</h2>\n<p>如果你識俾情緒價值俾另一半，男人會由心感受到溫暖，佢會覺得「<strong>你唔止係鍾意我，仲係明白我</strong>」，係你吸引佢、令佢離唔開你嘅無形魅力，佢會對你更加依賴，會將你放喺心入面最重要嘅位置，甚至唔想失去你，咁樣嘅關係之下，你哋嘅感情就自然會更加穩定。</p> <h2>先看懂對方需要，再調整相處節奏</h2>\n<p>男人失意嘅時候，比任何時候都需要你嘅陪伴，佢希望你唔嫌棄佢、唔批評佢，令佢feel到「<strong>就算我唔好，你都仲係度</strong>」，就算佢嘅生活上、工作上失意、做得唔好，你都願意繼續俾鼓勵佢、支持佢，例如：佢工作壓力大/返工唔順利。</p>\n<ul><li>「<strong>你咁廢架？點解咁都搞唔掂？</strong>」</li></ul>\n<p>「我信你會有辦法解決，唔使急，慢慢嚟，我會一直喺你身邊！」</p>\n<p>好多男人自尊心重，當佢做錯決定、失咗手，內心已經有內疚同挫敗，如果你第一時間鬧佢、數佢不是，會將佢推到防禦模式，令佢覺得「<strong>你唔明我，你唔尊重我</strong>」，但如果你先認同佢當下感受、唔批評佢失敗，佢會feel 到「<strong>你係理解佢、站喺佢嗰邊</strong>」</p>\n<p>就會更重視你，例如：佢投資失利蝕咗錢。</p>\n<ul><li>「<strong>都叫咗你唔識就唔好亂買股票，而家蝕曬啦！</strong>」</li></ul>\n<p>「唔好因為一次蝕錢就自責，呢次唔好彩啫，唔代表下次都咁黑仔！」</p> <h2>把「怎樣讓男人更離不開你」拆成事件、猜測和感受</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。</p> <h2>別讓「怎樣讓男人更離不開你」變成逼對方證明愛</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。</p> <h2>不要讓「怎樣讓男人更離不開你」決定你的價值感</h2>\n<p>你可以在乎對方反應，但不要把所有價值感交給對方決定。當你知道自己真正想要什麼，才不會每一次波動都被拉走。</p>\n<h2>常見問題</h2>\n<h3>「<strong>怎樣讓男人更離不開你</strong>」係咪代表我太情緒化？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>因為「<strong>怎樣讓男人更離不開你</strong>」好辛苦時，可以點樣先穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理「<strong>怎樣讓男人更離不開你</strong>」？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
+    "summary": "男朋友成日信口開河？拆解「空頭支票」背後的 3 種心態。",
+    "content": "<h2>「<strong>下次帶你去旅行</strong>」、「<strong>下次買比你</strong>」、「<strong>我下次會改</strong>」</h2>\n<p>「<strong>下次帶你去旅行</strong>」、「<strong>下次買比你</strong>」、「<strong>我下次會改</strong>」。這些說話聽落好熟？男朋友成日應承完你，轉頭就唔記得，或者諸多藉口推搪？這種，「<strong>得個講字</strong>」，的行為，令你好失望，覺得佢無口齒。</p>\n<p>點解佢成日開空頭支票？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>為了應付當下 (Conflict Avoidance)</span></h2>\n<p>當你投訴或者提出要求時，佢覺得好煩。為了令你即刻收聲，佢會隨口講：「<strong>好啦好啦，下次改</strong>」。這不是承諾，這是，「<strong>止痛藥</strong>」。佢只係想盡快結束這場對話。佢好想做個好男友。所以佢唔識拒絕你。佢真心想帶你去旅行。但佢無考慮實際情況（無錢/無假）。這種係，「<strong>有心無力</strong>」，雖然出發點係好。但結果一樣令你失望。佢覺得就算唔兌現，你都唔會走：既然無後果，點解要咁辛苦去改？感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<h2>再看深一層：男朋友成日信口開河的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>下次帶你去旅行、下次買比你、我下次會改。</li><li>為了應付當下 (Conflict Avoidance)</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>看男人心態時，不要只聽他一刻怎樣講，也要看他之後有沒有做到、願不願意承擔，以及你在相處裡是否感到安心。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2025-04-18",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7743480.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/asian-couple-holding-hands-and-smiling-in-sunny-yard-7743480/",
@@ -4577,27 +4007,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：怎樣讓男人更離不開你？先看懂他的心理需求",
+    "coverCaption": "Asteria 相處教學：【男人心理】男朋友成日信口開河？拆解「空頭支票」背後的 3 種心態",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 96,
-    "title": "吸引力法則可以招來好愛情嗎？先避開這些誤區",
-    "category": "曖昧桃花",
+    "title": "【見家長攻略】第一次見對方父母點著？送禮／對答／禁忌全教學！",
+    "category": "長期關係",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "曖昧",
-    "summary": "吸引力法則不是單靠許願等愛情出現，而是幫你看清自己想要的關係、調整狀態、守住界線，再用行動吸引真正合適的人。",
-    "content": "<p>吸引力法則可以幫你招來好愛情嗎？可以，但前提不是坐著等對方突然出現，也不是用正能量壓住所有不安。真正有用的吸引力，是你開始看清自己想要甚麼、適合甚麼，以及甚麼關係不應該再消耗你。</p> <p>很多人一聽到吸引力法則，就會以為只要不停想著對方、想像復合畫面、寫低願望，就等於正在吸引愛情。可是感情不是單方面施法，對方有自己的狀態、選擇和行動。如果你只把焦點放在某個人身上，反而容易把自己困在等待、猜測和失望裡。</p> <h2>誤區一：以為只要許願，對方就會自動靠近</h2>\n<p>願望本身不是問題，問題是願望太空泛，最後只變成每日等訊息、等奇蹟、等對方突然改變。真正落地的吸引力法則，應該由「我要佢愛我」變成「我想要一段怎樣被對待的關係」。</p> <p>你可以具體寫低你想要的相處狀態，例如對方願意溝通、有穩定回應、尊重界線、願意共同解決問題。當你把願望寫成可觀察的行為，你會更清楚分辨眼前的人是否真的適合，而不是只被一時甜蜜牽住。</p> <h2>誤區二：把高頻率變成不准自己難過</h2>\n<p>有些人會以為吸引好愛情就一定要保持開心、不能焦慮、不能失落。結果明明很受傷，仍然逼自己假裝沒事，甚至怪自己「是不是負能量太重，所以吸引不到對的人」。這樣反而會令情緒更壓抑。</p> <p>真正的高頻率不是永遠笑著，而是你願意誠實面對自己的感受。你可以承認自己想念、失望、不安，同時不讓這些情緒控制你的行動。先安定自己，再決定要不要主動、等待還是收回，這才是比較成熟的吸引力。</p> <h2>誤區三：只想吸引對方，卻忘記自己值得被好好對待</h2>\n<p>如果你的願望只圍繞「令佢返嚟」「令佢覆我」「令佢只愛我」，你很容易把自己的價值交到對方反應手上。對方一冷淡，你就覺得自己不夠好；對方一熱情，你又立刻把所有底線放低。</p> <p>好愛情不是靠你不停降低標準換來。你可以喜歡一個人，也要記得看他是否有能力穩定愛你、尊重你、珍惜你。吸引力法則最重要的部分，不是叫你追得更用力，而是提醒你不要離開自己太遠。</p> <h2>真正有效的吸引力，是重新回到自己身上</h2>\n<p>當你把焦點由「佢幾時會愛我」轉回「我想成為怎樣的人、我想過怎樣的關係」，你的狀態會開始不一樣。你會較少用恐懼做決定，也不會一有風吹草動就亂傳訊息、亂試探、亂猜測。</p> <p>這種穩定感會影響你的說話方式、選擇方式和相處方式。你不需要扮神秘，也不需要用冷暴力測試對方；你只是慢慢變得更清楚自己，知道甚麼值得靠近，甚麼應該放慢。</p> <h2>願望要配合行動，也要觀察現實</h2>\n<p>吸引力法則不是逃避現實，而是令你更有方向地行動。如果你想脫單，就要讓自己有機會認識人；如果你想修補關係，就要先看清你們卡住的位置；如果你想復合，也要判斷對方是否仍有窗口，而不是只靠想像支撐自己。</p> <p>你可以保留願望，但同時觀察對方行動。對方是否有穩定回應？是否願意溝通？是否只在孤單時才找你？當願望和現實放在一起看，你會更容易分辨這段關係是可以推進，還是只是在消耗你的期待。</p> <h2>常見問題</h2>\n<h3>吸引力法則可以幫我復合嗎？</h3>\n<p>可以幫你整理狀態和方向，但不能保證控制對方。復合仍然要看分開原因、對方現時心態、你們是否仍有情感連結，以及下一步是否用對方式。</p>\n<h3>我想脫單，應該怎樣設定願望？</h3>\n<p>不要只寫「我要有人愛我」，可以寫得更具體，例如想要穩定溝通、互相尊重、有共同步伐、願意承擔關係的人。願望越清楚，你越容易避開不適合的人。</p>\n<h3>塔羅可以怎樣配合吸引力法則？</h3>\n<p>塔羅可以幫你看清自己目前的感情能量、吸引到的對象類型、關係阻礙和下一步方向。當你知道自己卡在哪裡，吸引力法則才不會變成盲目許願。</p>",
+    "imageLabel": "長久",
+    "summary": "第一次見對方父母係一段關係嘅里程碑，表現得好，以後條路順好多；表現唔好，隨時變成婆媳大戰嘅導火線。",
+    "content": "<h2>第一次見家長，重點是得體和自然</h2>\n<p>第一次見對方父母，很多人都會緊張：怕穿錯衫、怕送錯禮、怕講錯說話。其實見家長不是要你扮成另一個人，而是要讓對方家人感覺你有禮貌、識分寸，亦真心重視這段關係。</p>\n<p>你不需要表現得完美，但要避免太隨便。外表、禮物和對答都不是表面功夫，而是父母第一次認識你時最直接的印象。</p>\n<h2>穿搭要乾淨斯文，不要太搶</h2>\n<div class=\"article-section-card\"><p>見家長穿搭不用過分隆重，但一定要乾淨、得體和舒服。淺色系、簡單連身裙、襯衫、整齊髮型和淡妝，通常都比較安全，會令人覺得你尊重場合。</p><p>要避免太性感、太前衛、全黑或太像去派對的打扮。第一次見面不需要靠造型搶注意力，重點是讓對方父母覺得你自然、有禮貌、容易相處。</p></div><h2>送禮不要太貴，但一定要有心</h2>\n<div class=\"article-section-card\"><p>第一次見家長最好不要兩手空空，但禮物也不需要太貴重，否則反而會令對方有壓力。比較安全的選擇包括水果籃、高級茶葉、保健品或對方父母平日會用到的實用禮物。</p></div><h2>最好事前問清楚另一半</h2>\n<p>父母有沒有忌口？有沒有不喜歡的東西？屋企有沒有特別習慣？送禮最重要不是價錢，而是讓人感覺你有做功課、有尊重對方家庭。</p>\n<h2>對答要有禮貌，不要搶話題</h2>\n<div class=\"article-section-card\"><p>第一次見面時，不需要不停找話題證明自己很健談。可以多微笑、主動打招呼、簡單回應問題，適時問候對方父母的近況，讓氣氛自然一點。</p><p>如果對方父母問到工作、家庭或興趣，可以簡單分享，但不要講得太誇張，也不要不停抱怨。重點是讓對方感覺你穩定、真誠、有基本禮貌。</p></div><h2>這些話題最好先避開</h2>\n<p>第一次見家長，最好不要提以前的情史、政治立場、金錢爭議、家庭矛盾，也不要當面投訴另一半。即使你平日和另一半會互相取笑，在父母面前也要收斂一點。</p>\n<p>如果想幫手洗碗或收拾，可以禮貌提出，但不需要太用力表現。對方接受就幫，不接受就微笑坐好。太刻意討好，有時反而會令人覺得不自然。</p>\n<h2>見完家長後，可以觀察對方反應</h2>\n<div class=\"article-section-card\"><p>見家長不是只看你表現，也可以看另一半怎樣照顧你。他有沒有事前提醒你父母喜好？見面時有沒有幫你接話？如果氣氛尷尬，他會不會照顧你感受？</p><p>真正成熟的另一半，不會把你一個人放在陌生家庭裡自生自滅，而是會一起協調，讓你慢慢融入他的生活圈。</p></div>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>第一次見家長，重點是得體和自然。</li><li>見完家長後，可以觀察對方反應</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題關乎長期安排，重點不是逼對方即刻承諾，而是看你們能否坦白談未來、責任和現實限制。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
     "sourceIg": "",
-    "date": "2024-02-14",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7743594.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/romantic-couple-near-cafe-during-walk-7743594/",
@@ -4625,27 +4049,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：吸引力法則可以招來好愛情嗎？先避開這些誤區",
+    "coverCaption": "Asteria 相處教學：【見家長攻略】第一次見對方父母點著？送禮／對答／禁忌全教學！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 97,
-    "title": "你一直讓步，為什麼對方還嫌你不夠好？",
-    "category": "復合挽回",
+    "title": "【兩性相處】男朋友唔識氹人？教你 3 招調教直男，令佢主動錫返你",
+    "category": "曖昧桃花",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "復合",
-    "summary": "一段感情會唔會分手，其實一開始就睇得出！當女方係「順從型」，男方係「控制型」，其實一開始就已經種下分手種子！點解呢種組合咁易出事？由我哋陪你拆解背後原因，再教你點樣破解。",
-    "content": "<p>遇到「你一直讓步，為什麼對方還嫌你不夠好」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>讓步不應換來更多挑剔</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>看對方是否把你的付出當成理所當然</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>先分清「你一直讓步，為什麼對方還嫌」裡誰需要承擔</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>從自己的狀態判斷「你一直讓步，為什麼對方還嫌」</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>一直讓步之後，更要看自己是否被尊重</h2>\n<p>如果「你一直讓步，為什麼對方還嫌你不夠好」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「<strong>你一直讓步，為什麼對方還嫌你不夠好</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>你一直讓步，為什麼對方還嫌你不夠好</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>你一直讓步，為什麼對方還嫌你不夠好</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "曖昧",
+    "summary": "男人不主動氹你，往往是因為他們是「結果導向」的生物，認為解決問題比安撫情緒重要。",
+    "content": "<h2>先看常見情境</h2>\n<p>「<strong>我嬲咗成晚，佢竟然走去瞓覺！</strong>」，「<strong>佢問返我轉頭：『咁你想我點啫？』，真係火都嚟埋！</strong>」，好多女仔都有個迷思：如果佢愛我，佢應該會知道點樣氹我。</p>\n<h2>現實係</h2>\n<p>男人真係唔識！男人嘅腦係，「<strong> 解決問題型 </strong>」，女人嘅腦係，「<strong> 感受型 </strong>」。當你黑面，佢嘅解讀係：「佢心情唔好 -&gt; 我講多錯多 -&gt; 不如畀空間佢冷靜下」。結果佢走開咗，你就覺得佢冷暴力，惡性循環。</p>\n<h2>想佢識氹你？</h2>\n<p>你要「教」！唔好期待佢會無師自通。你要好似教小朋友咁，畀清晰嘅指引。與其生悶氣，不如直接講：「<strong>我依家唔開心，我需要你抱住我 5 分鐘，唔洗講嘢</strong>」。</p>\n<h2>再看深一層：男朋友唔識氹人？教你 3 招調教直男，令佢主動錫返你的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>直男式相處需要具體教法</li><li>想佢識氹你</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正面對另一半唔識氹人，重點不是逼對方即刻變浪漫，而是把你真正需要的安撫方式講清楚，讓對方知道可以怎樣靠近你。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2025-12-03",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-1638400.jpg",
     "coverCredit": "Photo by meijii on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/photo-of-woman-leaning-on-wooden-fence-1638400/",
@@ -4673,27 +4091,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你一直讓步，為什麼對方還嫌你不夠好？",
+    "coverCaption": "Asteria 相處教學：【兩性相處】男朋友唔識氹人？教你 3 招調教直男，令佢主動錫返你",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 98,
-    "title": "明明有陪你但唔上心？情感漠視的判斷方法",
-    "category": "溝通相處",
+    "title": "【兩性博弈】女人太主動會貶值？教你「主動的矜持」讓男人負責任",
+    "category": "曖昧桃花",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "溝通",
-    "summary": "明明在一起，但又覺得很空虛？是不是因為對方一直在漠視你的情感、有情感漠視的慣性？感情上的情感漠視 vs 冷暴力，到底有甚麼分別？",
-    "content": "<p>遇到「明明有陪你但唔上心」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>看陪伴是否真的有情感回應</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>不要為「明明有陪你但唔上心」替對方找完理由</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>別忽略「明明有陪你但唔上心」帶來的消耗</h2>\n<p>如果一段關係令你長期收聲、怕講錯、怕對方不高興，這已經不是普通磨合。你需要先把自己的感受放回合理位置。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>把「明明有陪你但唔上心」的底線講到對方聽得明</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>處理「明明有陪你但唔上心」前先定位核心卡位</h2>\n<p>如果「明明有陪你但唔上心」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「<strong>明明有陪你但唔上心</strong>」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>明明有陪你但唔上心</strong>」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>明明有陪你但唔上心</strong>」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "imageLabel": "曖昧",
+    "summary": "但在現代愛情，過度矜持會令你錯失機會，過度主動又會令男人失去征服慾。",
+    "content": "<h2>同人曖昧嘅你</h2>\n<p>同人曖昧嘅你，係咪苦等緊對方開口表白？有結婚打算嘅你，係咪苦等緊男朋友求婚？作為女人，往往會不自覺地將好多責任撥咗去男人身上。因為你下意識地覺得種種事情都係「<strong>男人</strong>」呢個角色應該做嘅事。</p>\n<p>性別定型係感情劊子手？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>女人的矜持等於被動</span></h2>\n<p>如果你覺得「<strong>矜持</strong>」即係坐喺度等運到，咁你就大錯特錯。現代男人好忙，如果你無任何訊號，佢會以為你無興趣，然後轉身追第二個。如果你覺得買樓、比錢、計劃行程全部係男人責任，佢會覺得好大壓力。當壓力大過愛，佢就會想逃避。真正的矜持，係「<strong>引導</strong>」，你要做那個「<strong>拋波</strong>」的人。但要讓他做那個「<strong>入球</strong>」的人。這才是有智慧的女人。</p>\n<h2>再看深一層：女人太主動會貶值的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
-    "date": "2025-10-27",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4307937.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-indian-man-browsing-tablet-while-woman-talking-on-smartphone-on-couch-4307937/",
@@ -4721,27 +4133,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：明明有陪你但唔上心？情感漠視的判斷方法",
+    "coverCaption": "Asteria 相處教學：【兩性博弈】女人太主動會貶值？教你「主動的矜持」讓男人負責任",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 99,
-    "title": "你只是想呻兩句，對方卻以為你想吵架？",
+    "title": "【兩性溝通】男朋友唔肯改？90% 關係問題源自「勸導」失敗！",
     "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
-    "summary": "一段有建設性嘅關係，雙方應該要令對方覺得呢段關係係安全、令人放鬆，喺出現壓力或危機時，另一半會關心、支持、保護自己。但當指責行為、輕視情緒出現，雙方就會進入敵對、不平等嘅狀態，令呢段關係嘅本質背道而馳。聽落好似好簡單，但每次一嗌交、想投訴對方時，好容易講錯嘢，會由小小嘅抱怨變成劇烈嘅指責。 想維護呢",
-    "content": "<p>都總有睇不慣對方行為嘅時候 都總有想向對方表達不滿、抱怨嘅時候，但有時表達方法出現，分唔清 抱怨 vs 指責 出現隱性攻擊，好易將一段關係推向死局。</p>\n<p>指責係導致伴侶分手嘅一個主要原因 抱怨唔係 指責係消極而值得警惕嘅，抱怨係積極而具建設性嘅 —— （Gottman, 2000）。</p>\n<h2>點解有咁大區別呢</h2>\n<p>因為抱怨係可能有建設性嘅！</p>\n<p>eg: 「我們已經好耐都冇一齊去旅行，我唔想再聽你講『抽唔出時間』。」，就某問題提出意見時，係「<strong>對事不對人</strong>」，當然，對方可能會對抱怨感到憤怒，因為被講中咗 但其實當一個人抱怨時 本身都包含請求、被需要嘅情緒，佢唔係為咗貶低、打壓對方 而係希望對方可以注意到問題並改進。</p>\n<h2>回到「你只是想呻兩句」本身，要看這幾個判斷位</h2>\n<p>抱怨嘅人： 時刻提醒自己「<strong>對事不對人</strong>」 被抱怨嘅人：喺對方抱怨時先唔好急住否認 如果你面對抱怨嘅第一感覺係憤怒、否認，代表抱怨有可能講中咗 你可以針對對方抱怨嘅內容嚟檢視自己。</p>\n<p>指責嘅人： 唔好覺得對方既然犯錯就應該被責備 嘗試用有建設性嘅抱怨代替指責，再用冷靜分析代替抱怨，對方犯錯時 你可唔可以用有效方式進行應對，先係是你哋關係成長嘅關鍵，被指責嘅人： 等你哋情緒平靜咗，你可以誠實地向對方表達自己嘅諗法，再向對方提出具體的要求。</p>\n<p>eg:「我唔喜歡你話我懶，你可以告訴我下次具體應該點做，而唔係一味批評我。」</p>\n<h2>常見問題</h2>\n<h3>面對「你只是想呻兩句」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「你只是想呻兩句」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「你只是想呻兩句」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/C5Ya8rABHq8/",
-    "date": "2024-04-05",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "summary": "想改變伴侶，直接勸導 (Persuasion) 通常會失敗，因為這會激發對方的「心理抗拒」。",
+    "content": "<h2>先看常見情境</h2>\n<p>你係咪成日講：「我講過好多次，叫你唔好XXX，點解你都係唔改：」，然後對方就會話：「你又哦我，好煩呀！」，為什麼「勸」沒有用？因為人都有，「心理抗拒 (Reactance)」。當你越用力推佢向左行，佢就會本能地向右行，以此證明自己有自主權。90% 的關係僵局，都係因為其中一方試圖用「邏輯」或者「囉嗦」去逼對方改變。</p>\n<h2>正確做法</h2>\n<div class=\"article-section-card\"><p>引導而非強迫，你要做嘅唔係做「<strong> 教官 </strong>」，而係做「<strong> 盟友 </strong>」。與其講「<strong> 你應該... </strong>」，不如問「<strong> 如果...會點樣？</strong>」，講極佢都唔聽？</p></div><h2>再看深一層：男朋友唔肯改？90% 關係問題源自「<strong>勸導</strong>」失敗的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>正確做法</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-18906280.jpg",
     "coverCredit": "Photo by Vietnam Photographer on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-man-and-woman-sitting-at-the-table-in-a-cafe-on-the-terrace-18906280/",
@@ -4769,27 +4175,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：你只是想呻兩句，對方卻以為你想吵架？",
+    "coverCaption": "Asteria 相處教學：【兩性溝通】男朋友唔肯改？90% 關係問題源自「勸導」失敗！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 100,
-    "title": "為何一戀愛就患得患失？自信消失的心理原因",
-    "category": "情緒修復",
+    "title": "【幸福秘訣】如何成為好命女人？愛情長久不衰的 3 個心態",
+    "category": "長遠關係",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "療癒",
-    "summary": "一個人生活得好好，很開心又有自信，但一拍拖就缺乏自信又患得患失？你是否不適合談戀愛？",
-    "content": "<p>自信快樂 😆 拍拖後的你 敏感又不安 😔，當你一個人生活自信、自由又開心，但進入戀愛關係就變得不安、敏感、患得患失，你，不適合拍拖嗎。</p>\n<p>生活步調、情緒、決定權 全部由你決定，你對自己有主導權 當你進入戀愛後，就要考慮對方、需要磨合、等待回應 會不自覺地把情感安全感交到對方手上。</p>\n<h2>拍拖時的「<strong>情感依賴</strong>」令你易受對方態度影響</h2>\n<p>☹️ 一句話就足以影響你一日心情；☹️ 會怕對方不再愛你、會離開你；☹️，你越投入越怕失去、越唔似自己，你不是不適合戀愛，而是未準備好用一種「<strong>成熟而穩定</strong>」的方式進入關係，先試著學習建立一段平衡的關係吧。</p>\n<h2>「為何一戀愛就患得患失」表面是情緒，底層是需要</h2>\n<p>學會辨識、回應情緒信號 學識察覺自己是否有伴隨情緒壓抑或情感疲勞，戀愛並非單方面滿足對方的需要，而是要有雙向流動的溝通，所以應該定期檢視彼此的感受&amp;期望 對於自己出現的情緒，以溝通的方式，與對方和平地討論 找出平衡的方法。</p>\n<p>如果你發現戀愛使你失去自信，先不用急於結束這段感情，也不要否定自己的價值。你可以把握這個機會重新認識自己、調整相處方式，看這段關係能否讓你做回自己，同時建立一種更穩定、更舒服的親密節奏。</p>\n<h2>常見問題</h2>\n<h3>一戀愛就患得患失，是我太黏嗎？</h3>\n<p>未必。可能是過去受傷、依附焦慮，或者對方真的不夠穩定。先分清你的焦慮和對方的實際行為。</p>\n<h3>點樣令自己在戀愛中穩定一點？</h3>\n<p>不要把所有安全感都放在對方反應上。保留自己的生活節奏，同時用具體句子表達需要，會比反覆確認更有效。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DPyfRjgAHUM/",
-    "date": "2025-10-14",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "幸福秘訣",
+    "summary": "如何成為好命女人？愛情長久不衰的 3 個心態。",
+    "content": "<p>幸福不是運氣，是一種能力。Asteria 指出，擁有長久愛情的女人通常具備 3 種特質：1. 懂得「<strong>愛自己</strong>」(不依附)、2. 懂得「<strong>示弱</strong>」(滿足男人保護慾)、3. 懂得「<strong>感恩</strong>」(正向回饋)。這些心態能建立良性的互動循環。</p>\n<h2>點解有啲女人條命咁好</h2>\n<div class=\"article-section-card\"><p>點解有啲女人條命咁好？老公又錫，生活又寫意？其實幸福唔係天生嘅，係經營返黎嘅。只要掌握幾個秘訣，你都可以成為那個「<strong>好命女人</strong>」。</p><p>愛情長久不衰的 3 個秘訣。</p></div><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>先愛自己，再愛別人</span></h2>\n<p>這句說話講到爛。但係真理。如果你將所有精力都放喺男人身上，你會變得面目可憎（充滿怨氣）。當你識得花錢打扮自己、花時間增值自己，你身上會發光。男人係趨光性動物，佢自然會被你吸引。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>識得<strong> 示弱 </strong></span></h2>\n<p>太強勢嘅女人，通常感情路都唔順。男人天生有保護慾。如果你樣樣都自己搞掂，佢會覺得自己無用。偶爾扮下蠢、擰唔開樽蓋，畀機會佢做英雄，佢會更愛你。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>懂得感恩</span></h2>\n<p>唔好將佢嘅付出視為理所當然。佢幫你倒杯水，都要講聲「<strong> 唔該 </strong>」。正向回饋 (Positive Feedback) 係維持熱情嘅燃料。</p>\n<h2>再看深一層：如何成為好命女人的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>識得，示弱</li><li>懂得感恩</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-1696691.jpg",
     "coverCredit": "Photo by Phil Nguyen on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-inside-red-telephone-booth-1696691/",
@@ -4817,27 +4217,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：為何一戀愛就患得患失？自信消失的心理原因",
+    "coverCaption": "Asteria 相處教學：【幸福秘訣】如何成為好命女人？愛情長久不衰的 3 個心態",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 101,
-    "title": "對方一直道歉但不改？原諒前要看清的事",
-    "category": "戀愛心理",
+    "title": "【性愛心理】未拍拖先上床？點解佢之後無表示？拆解男人「先性後愛」定「只性不愛」",
+    "category": "曖昧桃花",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "心理",
-    "summary": "一直道歉但不改，最需要看的不是對不起說得多真誠，而是有沒有補救、調整和承擔後果。原諒前要先看行動。",
-    "content": "<p>一句對不起可以令情緒暫時降溫，但如果同一件事反覆發生，道歉就會變成循環。你要分清他是在修補，還是在用道歉換你心軟。</p>\n<h2>道歉要有具體承擔</h2>\n<p>真正的道歉不只說我錯了，還要知道錯在哪裡、造成甚麼影響，以及下一次會怎樣避免。</p>\n<p>如果他只說「我錯了」，但講不出自己傷害了你哪裡，這句道歉很可能只是想快點完事。具體承認，才代表他真的有看見你的痛。</p>\n<h2>看補救是否主動</h2>\n<p>如果每次都要你提醒、你教、你收拾局面，對方只是被動應付，不是主動修補。</p>\n<p>主動補救會讓你感覺自己不是一個人在收拾殘局。相反，如果每次都是你提醒、你教、你原諒，久了你會對道歉失去信任。</p>\n<h2>不要太快替他找理由</h2>\n<p>你可以理解他的難處，但理解不等於替他免責。傷害發生了，就需要有人承擔。</p>\n<p>替對方找理由很容易，尤其你仍然愛他。但你可以理解原因，同時仍然要求他承擔後果，這兩件事並不衝突。</p>\n<h2>設定重複發生的底線</h2>\n<p>不是每件事都值得無限原諒。你要清楚哪些行為再出現，就代表關係已經不安全。</p>\n<p>底線要在情緒平靜時先想清楚，否則到事發時你很容易又心軟。你可以給機會，但機會應該伴隨新的做法，而不是重複同一個循環。</p>\n<h2>原諒不是立刻回復信任</h2>\n<p>你可以選擇不再追究，但信任需要時間和行動重建。對方也要接受這個過程。</p>\n<p>信任被傷過之後，需要用一段時間重新建立。對方若真的想修補，就要接受你需要時間，而不是反過來怪你為甚麼還未放下。</p>\n<h2>常見問題</h2>\n<h3>對方道歉好真誠，應否再給機會？</h3>\n<p>可以看他之後有沒有新做法，而不是只看當下語氣。</p>\n<h3>幾多次先應該停？</h3>\n<p>重點不是次數，而是每次之後有沒有實際改變。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你分清道歉、補救和操控，整理是否值得再給機會。</p>",
+    "imageLabel": "曖昧",
+    "summary": "發生關係後男人變冷淡，通常是因為「多巴胺獎賞」已獲得。",
+    "content": "<h2>發生關係後無表示，最傷人的是不確定</h2>\n<p>有些曖昧關係去到一個位置，氣氛、吸引和身體接觸都發生得很自然。你以為親密之後，兩個人的關係應該會更近，甚至會順理成章變成情侶。可是過了一段時間，他仍然沒有表白、沒有交代、沒有把你放進生活裡，甚至回覆比之前更慢。</p>\n<p>這種情況最令人辛苦的地方，不只是發生了親密接觸，而是你不知道對方到底怎樣看你。到底他是慢熱、害怕承諾，還是由一開始就只想短暫親密？要分清「<strong>先性後愛</strong>」和「<strong>只性不愛</strong>」，重點不是只看那一晚，而是看之後的行動有沒有升級。</p>\n<h2>男人可以把性和承諾分開</h2>\n<div class=\"article-section-card\"><p>很多女生在親密接觸後，會自然覺得關係已經拉近，因為身體親密往往會帶來依賴感、信任感和情緒投入。但不是每個男人都會把親密接觸等同承諾。有些人可以把性、陪伴和正式關係分開處理。</p><p>對他來說，那一晚可能是氣氛使然、生理衝動，或者只是曖昧推進到某一步。這不代表你不值得被愛，而是代表你要看清楚：親密接觸本身不等於他已經準備承擔男朋友角色。</p></div><h2>他事後有沒有主動推進關係</h2>\n<p>真正有機會由親密變成感情的情況，通常不會停在床上。事後他會更想了解你、安排正常約會、日間見面、介紹你進入他的生活，或者至少願意談清楚你們之間的定位。</p>\n<p>如果他只在夜晚找你、只想上你屋企、見面永遠離不開親密接觸，卻不願意陪你吃飯、出街、見朋友或談未來，那就要小心。這更像是他享受你的陪伴和身體親密，但不想承擔正式關係的責任。</p>\n<h2>他可能只是未玩夠，也可能只是想逃避責任</h2>\n<p>有些男人沒有即時消失，是因為他仍然享受你帶來的好處。他可以得到陪伴、曖昧和親密感，但不用報備、不用承諾、不用處理你的安全感。這對他來說很方便，對你來說卻會越拖越內耗。</p>\n<p>另一種情況，是他以為你也只是玩玩。因為你沒有講清楚界線，他就假設大家都是成年人，不需要交代。這不是叫你責怪自己，而是提醒你：如果你想要的是關係，就不能一直用沉默讓對方自行解讀。</p>\n<h2>先性後愛，要看他有沒有把你放入日常</h2>\n<p>「<strong>先性後愛</strong>」不是完全不可能，但它需要後續行動支撐。真正開始在意你的人，會在親密以外仍然想靠近你。他會關心你的生活、記得你講過的事、願意安排不以親密為目的的見面，也會慢慢讓你感覺到他想建立更深連結。</p>\n<p>如果親密之後，他只有短暫熱情，之後又回到模糊、冷淡、只在有需要時出現，那就不是先性後愛，而是你被放在一個很低成本的位置。這時候最重要不是追問他愛不愛，而是看他的行動有沒有讓你感到被尊重。</p>\n<h2>不想淪為一次性關係，可以這樣做</h2>\n<p>先停一停，不要用更多親密接觸去換承諾。當你越想用身體拉近對方，越容易讓對方覺得不用付出也能得到你。</p>\n<p>把見面模式拉回日常。你可以提出日間約會、吃飯、散步、看展覽，觀察他是否願意在親密以外投入時間。如果他一離開親密場景就興趣大減，答案已經很清楚。</p>\n<p>用簡短清楚的方式表達界線。例如：「我唔想關係一直停喺曖昧同親密接觸，我想知道你係咪有心認真了解我。」這句不是逼婚，而是讓對方知道你不是無名無份都可以一直配合。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>發生關係後無表示，最傷人的是不確定。</li><li>他可能只是未玩夠，也可能只是想逃避責任。</li><li>先性後愛，要看他有沒有把你放入日常。</li><li>不想淪為一次性關係，可以這樣做。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2023-09-27",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-14349707.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-romantic-couple-in-traditional-clothes-looking-at-each-other-14349707/",
@@ -4845,47 +4239,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-31530221.jpg",
-        "caption": "內文配圖：對方一直道歉但不改？原諒前要看清的事",
+        "caption": "內文配圖：你一直原諒，對方卻一直不改？別再替他找藉口",
         "credit": "Photo by Oliver Dohrn on Pexels",
         "creditUrl": "https://www.pexels.com/photo/portrait-of-a-young-couple-in-casual-attire-31530221/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-27028314.jpg",
-        "caption": "內文配圖：對方一直道歉但不改？原諒前要看清的事",
+        "caption": "內文配圖：你一直原諒，對方卻一直不改？別再替他找藉口",
         "credit": "Photo by Anastasia Nagibina on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-jumping-on-bed-27028314/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-10893298.jpg",
-        "caption": "內文配圖：對方一直道歉但不改？原諒前要看清的事",
+        "caption": "內文配圖：你一直原諒，對方卻一直不改？別再替他找藉口",
         "credit": "Photo by HONG SON on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-wearing-white-tops-hugging-10893298/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方一直道歉但不改？原諒前要看清的事",
+    "coverCaption": "Asteria 相處教學：【性愛心理】未拍拖先上床？點解佢之後無表示？拆解男人「先性後愛」定「只性不愛」",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 102,
-    "title": "用發脾氣換關注有用嗎？避免把對方越推越遠",
-    "category": "戀愛心理",
+    "title": "【前度陰影】男朋友忘不了前度？拆解男人偷睇 Ex IG 的 3 種心理",
+    "category": "復合挽回",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "心理",
-    "summary": "用發脾氣換關注，短期可能有效，長期卻會令對方害怕靠近。真正想被重視，要把脾氣背後的需要講清楚。",
-    "content": "<p>你發脾氣未必是想傷害對方，很多時只是太想被看見。但如果每次都用爆發換回應，對方會越來越怕你，關係也會越來越緊。</p>\n<h2>先看脾氣背後的需要</h2>\n<p>你真正想要的可能是陪伴、重視、交代或安全感。把需要找出來，才不會只剩下情緒爆發。</p>\n<p>脾氣通常不是第一層情緒，底下可能是孤單、害怕、不被重視。你越能說出真正需要，就越不需要用爆發去讓對方看見你。</p>\n<h2>爆發會令對方只看到壓力</h2>\n<p>當你聲音越來越大，對方未必聽到你的傷心，只會想停止衝突。這樣即使他回應，也未必真的理解你。</p>\n<p>人在被吼或被責怪時，會本能地防衛或逃走。你最想傳達的傷心，反而會被聲量和語氣遮住，最後對方只記得你發脾氣。</p>\n<h2>把「你都唔理我」換成具體要求</h2>\n<p>例如「你忙可以先講一聲，我會安心很多」。具體要求比指責更容易得到真正回應。</p>\n<p>具體要求讓對方知道下一步可以怎樣做。你不是要對方讀心，而是把「我需要被重視」變成他做得到的行動。</p>\n<h2>情緒來時先暫停</h2>\n<p>不是要你忍，而是先讓自己不要在最高點講最傷人的話。冷靜後再講，效果通常更好。</p>\n<p>暫停不是壓抑，而是保護你不在最痛的時候講出最傷人的話。你可以先離開對話十分鐘，等自己能講完整句子再回來。</p>\n<h2>看對方是否願意接住你的需要</h2>\n<p>你負責用較好的方式表達，對方也需要願意聽和調整。關係不是你一個人修。</p>\n<p>當你用更清楚的方式講需要後，也要看對方是否願意回應。關係不是你一個人學會好好講話，另一個人就可以永遠不接住。</p>\n<h2>常見問題</h2>\n<h3>發脾氣是否代表我很差？</h3>\n<p>不是，但如果它變成唯一表達方式，就會傷害關係。</p>\n<h3>我可以怎樣控制情緒？</h3>\n<p>先暫停、寫低真正需要，再用短句講出希望對方怎樣做。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>可以幫你把爆發式說話改成清楚但有界線的表達。</p>",
+    "imageLabel": "復合",
+    "summary": "心理學上的「未完成效應 (Zeigarnik Effect)」令大腦對未完結的關係特別在意。",
+    "content": "<h2>同男朋友一齊咗一段時間</h2>\n<p>同男朋友一齊咗一段時間。但發現佢冇完全忘記前度，令你好在意！看到佢周不時會睇 ex 嘅 IG，甚至會 like ex 嘅相？先唔好滿腔怒火咁質問佢點解對前任念念不忘！不如諗吓點解佢會咁樣啦。</p>\n<p>點解男人會忘不了前度？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>好奇與比較 (Comparison)</span></h2>\n<p>有時佢睇 Ex IG，純粹係八卦：「<strong>離開我之後，佢過成點？</strong>」如果 Ex 過得差，佢會暗爽；如果 Ex 過得好，佢會心理不平衡。這是一種 Ego (自尊心) 的表現，未必係還有愛。如果當初分手係佢做得唔好，佢對 Ex 會有一種虧欠。這種愧疚感會令佢想補償，例如在 Ex 有事時出手幫忙。這不是愛，是贖罪。人對「<strong>未完成</strong>」的事特別深刻。如果佢哋係被迫分開 (例如移民、家人反對)，這種遺憾會令佢一直記住對方。</p>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>不要用他的過去懲罰現在的自己</h2>\n<div class=\"article-section-card\"><p>你真正需要看的，不是他以前對前度做過幾多，而是他現在有沒有把你放進生活、有沒有尊重你的感受，以及願不願意和你建立新的相處方式。</p><p>如果你一直翻查過去，只會令自己停留在比較裡。可以把焦點拉回現在：他最近有沒有穩定陪伴、有沒有主動回應、有沒有在你不安時願意解釋，而不是只叫你不要想太多。</p></div><h2>再看深一層：男朋友忘不了前度的真正訊號</h2>\n\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>好奇與比較 (Comparison)</li><li>不要用他的過去懲罰現在的自己</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2023-11-18",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5184881.jpg",
     "coverCredit": "Photo by Bethany Ferr on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-sitting-on-beach-5184881/",
@@ -4913,27 +4301,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：用發脾氣換關注有用嗎？避免把對方越推越遠",
+    "coverCaption": "Asteria 相處教學：【前度陰影】男朋友忘不了前度？拆解男人偷睇 Ex IG 的 3 種心理",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 103,
-    "title": "拍拖後仍玩交友 App 代表咩？判斷變心與界線問題",
-    "category": "關係危機",
+    "title": "【前度陰影】覺得男朋友對 Ex 好過對自己？3 招擺脫「比較心態」",
+    "category": "復合挽回",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "警號",
-    "summary": "拍拖後仍玩交友 App，不一定只有一個答案，但一定涉及界線和安全感。要看他是否隱瞞、是否仍主動配對，以及你們有沒有清楚關係定義。",
-    "content": "<p>發現對方拍拖後仍玩交友 App，最令人不安的是你不知道自己在他心中算甚麼。這件事不能只靠一句「無聊看看」帶過，因為它直接碰到界線和信任。</p>\n<h2>先確認你們的關係定義</h2>\n<p>如果已經確認拍拖或排他，繼續用交友 App 就不是小事。若關係仍模糊，也要談清楚雙方期待。</p>\n<p>如果你們已經有排他共識，交友 App 就不是普通娛樂，而是會直接動搖安全感。關係定義越清楚，這件事的界線也越清楚。</p>\n<h2>看他是忘記刪除還是持續活躍</h2>\n<p>帳號存在和持續配對、聊天、更新照片是不同層次。你要看行為，而不是只聽一句解釋。</p>\n<p>有人是真的忘記刪除，有人是繼續保留選擇。你可以看登入時間、互動痕跡和他事後態度，而不是只聽一句「我無用」。</p>\n<h2>不要被「你太敏感」帶走</h2>\n<p>你介意是合理的，因為這牽涉信任。健康溝通應該回到界線，而不是把問題推成你小器。</p>\n<p>當你提出合理不安，對方若只說你小器，問題就被轉移了。真正成熟的處理，應該是一起確認界線，而不是讓你懷疑自己。</p>\n<h2>提出清楚底線</h2>\n<p>你可以直接講明：如果我們是認真關係，我不能接受繼續使用交友 App。底線要具體，才不會一直模糊。</p>\n<p>底線講清楚後，就要看他是否願意配合。不是你要控制他，而是認真關係本來就需要對容易越界的地方有共識。</p>\n<h2>看他是否願意用行動修補</h2>\n<p>真正重視你的人，會願意刪除、交代和重建信任；只靠辯解卻沒有行動，就要小心。</p>\n<p>刪 App 只是第一步，重建信任還需要後續一致行動。如果他刪完又偷偷用，這就不是誤會，而是誠信問題。</p>\n<h2>常見問題</h2>\n<h3>仍玩交友 App 是否等於變心？</h3>\n<p>不一定，但代表界線有問題，需要嚴肅處理。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>可以先整理證據和自己的底線，再冷靜講清楚。</p>\n<h3>塔羅可以睇到咩？</h3>\n<p>可以整理對方心態、是否仍有其他選擇心態，以及你應該點守界線。</p>",
+    "imageLabel": "復合",
+    "summary": "當你覺得伴侶對前任更好，這通常是一種「倖存者偏差」。",
+    "content": "<h2>先看常見情境</h2>\n<p>你係咪試過考古佢嘅 Facebook/IG，見到佢以前寫比 Ex 嘅千字文？或者聽朋友講，佢以前會送 Ex 返工。但依家叫你自己搭車？這種，「<strong>落差感</strong>」，令你心裡有條刺：「<strong>佢係咪愛佢多過愛我？</strong>」。</p>\n<p>點解會有這種落差？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>熱戀期 vs穩定期，你比較緊嘅，可能係佢同 Ex 的</span></h2>\n<p>「<strong>熱戀期</strong>」，同你依家的「<strong>穩定期</strong>」。人係會累嘅，當年佢做兵做到怕，依家佢想搵段舒服嘅關係。所以無咁殷勤。這不代表唔愛，係代表佢想過日子。太好 (做爛市)，結果被分手。所以佢學精咗，在這段關係學識咗保留。這是佢嘅成長，唔係針對你。你用佢最光鮮嘅過去，黎打擊自己最真實嘅現在。對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>不要用他的過去懲罰現在的自己</h2>\n<div class=\"article-section-card\"><p>你真正需要看的，不是他以前對前度做過幾多，而是他現在有沒有把你放進生活、有沒有尊重你的感受，以及願不願意和你建立新的相處方式。</p><p>如果你一直翻查過去，只會令自己停留在比較裡。可以把焦點拉回現在：他最近有沒有穩定陪伴、有沒有主動回應、有沒有在你不安時願意解釋，而不是只叫你不要想太多。</p></div><h2>再看深一層：覺得男朋友對 Ex 好過對自己的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>熱戀期 vs穩定期，你比較緊嘅，可能係佢同 Ex 的。</li><li>不要用他的過去懲罰現在的自己</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2024-02-29",
-    "tags": [
-      "信任危機",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-26888253.jpg",
     "coverCredit": "Photo by duhews dfbas on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/black-and-white-photo-of-a-man-and-woman-hugging-26888253/",
@@ -4961,27 +4343,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：拍拖後仍玩交友 App 代表咩？判斷變心與界線問題",
+    "coverCaption": "Asteria 相處教學：【前度陰影】覺得男朋友對 Ex 好過對自己？3 招擺脫「比較心態」",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 104,
-    "title": "朋友真的容易日久生情？由朋友變戀人的關鍵",
-    "category": "戀愛心理",
+    "title": "【缺乏安全感】總覺得男朋友唔夠愛你？拆解「患得患失」的 3 個深層原因",
+    "category": "情緒修復",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "心理",
-    "summary": "朋友容易日久生情，但不是所有熟悉都會變成愛。關鍵在於情感依賴、曖昧界線和雙方是否願意承擔關係改變。",
-    "content": "<p>由朋友變戀人，最微妙的是大家已經熟悉彼此，卻又害怕一講出口連朋友都做不成。日久生情有可能，但需要看互動是否真的超出普通朋友。</p>\n<h2>分清習慣和心動</h2>\n<p>你可能只是習慣有他在，亦可能真的開始期待更多。看自己會否吃醋、想獨佔時間、希望被他特別對待。</p>\n<p>習慣一個人陪你，不等於你真的想和他發展。你可以想像如果他開始拍拖，你是普通祝福，還是會明顯失落，這能幫你分清感覺。</p>\n<h2>留意曖昧是否雙向</h2>\n<p>如果只有你投入，對方只是享受陪伴，這段關係很容易變成你一個人越陷越深。</p>\n<p>雙向曖昧會有來有往，例如對方也會主動找你、在乎你的反應、製造單獨相處。若一直只有你付出，可能只是你把友情讀成愛情。</p>\n<h2>朋友基礎是優勢也是風險</h2>\n<p>熟悉令你們更容易信任，但一旦表白失敗，也可能影響原有相處。要先想清楚自己能否承受結果。</p>\n<p>朋友變戀人最怕輸不起，所以要先想清楚自己真正想要甚麼。不是每段友情都適合升級，但有些感情若一直壓住，也會慢慢變遺憾。</p>\n<h2>不要用無限付出換升級</h2>\n<p>你可以關心對方，但不要用伴侶式照顧換一個不肯承認的身份。</p>\n<p>如果你用伴侶級付出照顧他，卻沒有伴侶身份，你會越來越委屈。愛不是靠服務換來的，對方也需要清楚表態和承擔。</p>\n<h2>試探不如溫和打開話題</h2>\n<p>可以用低壓方式了解對方對你們關係的想法，而不是一直靠暗示和猜測。</p>\n<p>溫和打開話題可以不是正式表白，而是問對方有沒有想過你們的可能性。這比長期猜測健康，也讓你有機會回到現實判斷。</p>\n<h2>常見問題</h2>\n<h3>朋友變戀人成功率高嗎？</h3>\n<p>視乎雙方是否都有心動和承擔，不只是熟悉。</p>\n<h3>我應否表白？</h3>\n<p>先觀察對方是否有雙向曖昧，再決定用低壓方式講。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你拆對方行為是否曖昧，以及表白或退後的時機。</p>",
+    "imageLabel": "療癒",
+    "summary": "長期的不安感通常不是因為伴侶做得不夠好，而是源於內在的「低自尊」或「焦慮型依戀」。",
+    "content": "<h2>先看常見情境</h2>\n<p>你係咪成日問：「你愛唔愛我？」，即使佢答咗愛，過兩日你又會懷疑。只要佢遲覆機，或者語氣冷淡少少，你就覺得世界末日。這種長期嘅不安感，令你好痛苦，亦令對方好大壓力。</p><p>點解你總是覺得佢唔夠愛你？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>情感濾鏡 (Negative Filter)</span></h2>\n<p>你戴住一副「<strong> 受害者眼鏡 </strong>」。佢對你做嘅 10 件好事，你視而不見；但佢做錯嘅 1 件事，你會放大 100 倍。例如：佢接你收工 (忽視)。但佢食飯時睇手機 (放大 -&gt; 佢唔在乎我)。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>投射效應 (Projection)</span></h2>\n<p>你將自己對自己嘅不滿，投射落佢身上。其實係你覺得自己「<strong> 唔值得被愛 </strong>」。所以你預設佢遲早會發現你嘅缺點然後離開你。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>愛的語言不通，你想要嘅愛係</span></h2>\n<p>「<strong> 陪伴 </strong>」(Quality Time)，佢比你嘅愛係「<strong> 禮物 </strong>」(Gifts)。你收唔到你想要嗰種訊號，就以為佢無比。</p>\n<h2>先分清安全感來自哪裡：安全感不足時</h2>\n<p>安全感不足時，最容易把每個小動作都解讀成不愛。你可以先分清楚：這份不安是來自對方真的冷淡，還是來自過去受傷經驗、依戀模式或自我價值感不足。</p>\n<p>真正有用的處理，不是反覆追問對方愛不愛，而是看對方有沒有穩定行動，同時也學會安撫自己的焦慮，不讓恐懼帶住整段關係走。</p>\n<h2>先分清安全感來自哪裡：你可以把不安寫成具體事件</h2>\n<p>你可以把不安寫成具體事件：例如遲覆、語氣冷淡、少見面。當問題變得具體，你才知道要溝通的是對方行為，還是自己內在的恐懼。</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>情感濾鏡 (Negative Filter)</li><li>投射效應 (Projection)</li><li>先分清安全感來自哪裡</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2023-12-20",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5185649.jpg",
     "coverCredit": "Photo by Bethany Ferr on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-standing-side-by-side-5185649/",
@@ -5009,27 +4385,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：朋友真的容易日久生情？由朋友變戀人的關鍵",
+    "coverCaption": "Asteria 相處教學：【缺乏安全感】總覺得男朋友唔夠愛你？拆解「患得患失」的 3 個深層原因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 105,
-    "title": "朋友叫對方分手點算？用對話守住你哋段關係",
-    "category": "復合挽回",
+    "title": "【缺乏安全感】點解你的安全感總是填不滿？拆解 3 個內心黑洞 (原生家庭／依戀風格)",
+    "category": "情緒修復",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "復合",
-    "summary": "關係入面最難處理嘅，往往唔係你同伴侶之間嘅問題，而係夾雜喺中間嘅「外在聲音」。當閨蜜成日勸分、身邊人對你有偏見，好容易令對方動搖。面對呢種雜音，你要做嘅唔係開戰，而係學識優雅地「守住核心」。",
-    "content": "<p>遇到「朋友叫對方分手點算」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>把「朋友叫對方分手點算」拆成下一個小決定</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>「朋友叫對方分手點算」要看後續行動</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>先穩住自己，再看「朋友叫對方分手點算」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>「朋友叫對方分手點算」還有沒有對話空間？</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「朋友叫對方分手點算」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>面對「朋友叫對方分手點算」，先不要把修補變成追逼</h2>\n<p>如果你正面對「朋友叫對方分手點算」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>朋友叫對方分手點算</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>朋友叫對方分手點算</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>朋友叫對方分手點算</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "療癒",
+    "summary": "點解你的安全感總是填不滿？拆解 3 個內心黑洞 (原生家庭／依戀風格)",
+    "content": "<h2>有冇試過喺愛情關係入面</h2>\n<p>有冇試過喺愛情關係入面，經常缺乏「<strong>安全感</strong>」？諸多焦慮、擔心，驚對方有日會唔再愛自己。擔心自己真實缺點暴露後會被嫌棄，甚至擔心對方會瞞住你暗交新女伴？種種嘅擔憂、懷疑，其實都只係因為自己嘅安全感一直填唔滿！點解你的安全感總是填不滿？所以你會潛意識覺得「<strong>佢遲早會發現我好差，然後離開我</strong>」。這種心態令你長期處於防禦狀態。「<strong>焦慮型依戀</strong>」。長大後，你需要伴侶 24 小時報備先覺得安心，否則就會焦慮發作。</p>\n<p>如果曾經被前度背叛過 (例如出軌)，你會將這種恐懼投射落現任身上。即使現任好專一，你都會戴住有色眼鏡去 Check 佢。</p><h2>先分清安全感來自哪裡：安全感不足時</h2>\n<p>安全感不足時，最容易把每個小動作都解讀成不愛。你可以先分清楚：這份不安是來自對方真的冷淡，還是來自過去受傷經驗、依戀模式或自我價值感不足。</p>\n<p>真正有用的處理，不是反覆追問對方愛不愛，而是看對方有沒有穩定行動，同時也學會安撫自己的焦慮，不讓恐懼帶住整段關係走。</p>\n<h2>先分清安全感來自哪裡：你可以把不安寫成具體事件</h2>\n<p>你可以把不安寫成具體事件：例如遲覆、語氣冷淡、少見面。當問題變得具體，你才知道要溝通的是對方行為，還是自己內在的恐懼。</p><h2>再看深一層：點解你的安全感總是填不滿的真正訊號</h2>\n<p></p>\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2>先分清安全感來自哪裡</h2>\n\n\n<p>你可以把不安寫成具體事件：例如遲覆、語氣冷淡、少見面。當問題變得具體，你才知道要溝通的是對方行為，還是自己內在的恐懼，而不是一直在腦內反覆猜測。</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>先分清安全感來自哪裡</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
     "date": "",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-27061540.jpg",
     "coverCredit": "Photo by hoang anh on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/high-angle-view-of-woman-with-eyes-closed-27061540/",
@@ -5057,27 +4427,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：朋友叫對方分手點算？用對話守住你哋段關係",
+    "coverCaption": "Asteria 相處教學：【缺乏安全感】點解你的安全感總是填不滿？拆解 3 個內心黑洞 (原生家庭／依戀風格)",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 106,
-    "title": "太早親密會否扣分？避免關係停在酒肉階段",
-    "category": "戀愛心理",
+    "title": "【假性分手】衝動鬧分手後悔了點算？黃金 72 小時挽回攻略",
+    "category": "復合挽回",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "你有沒有經歷過咁樣嘅關係？雙方曖昧到一個位，忍唔住、唔小心出現咗抱抱、Kiss、同床共枕，甚至性行為嘅超友誼關係。你以為經過呢個階段，就可以正式成為佢嘅女朋友，點知過咗一段時間，佢仍然無動於衷、冇任何表示，到底佢當你係乜？",
-    "content": "<p>面對「太早親密會否扣分」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>把「太早親密會否扣分」由想像拉回行動</h2>\n<p>「太早親密會否扣分」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>別讓「太早親密會否扣分」變成單方面推進</h2>\n<p>好的曖昧不是你一直追，對方一直接收。你可以給機會，但也要讓對方付出一部分努力，這樣才看得出關係是否真的有發展。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>別只憑感覺判斷「太早親密會否扣分」</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「太早親密會否扣分」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>不要只看表面，先拆「太早親密會否扣分」卡在哪一步</h2>\n<p>如果你正在經歷「太早親密會否扣分」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>太早親密會否扣分</strong>」入面，曖昧卡住或對方唔表態應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>「<strong>太早親密會否扣分</strong>」入面，我主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇「<strong>太早親密會否扣分</strong>」對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "imageLabel": "復合",
+    "summary": "許多分手都是「情緒性分手」，其實內心並不想分，只是想對方挽留。",
+    "content": "<h2>先看常見情境</h2>\n<p>「<strong>我哋分手啦！</strong>」，一句晦氣說話，對方竟然當真，執野走咗。你依家好後悔，想搵返佢。但又拉唔下面子？唔小心講咗分手，點樣收科？你講分手，其實係想，「<strong>被挽留</strong>」。你想測試佢有幾緊張你。但對方聽到嘅係，「<strong>被拒絕</strong>」。佢嘅自尊心受損，覺得既然你咁想分，我就成全你。有！只要你把握，黃金 72 小時。過咗這段時間，假性分手就會變成真性分手。</p>\n<h2>放下自尊</h2>\n<p>錯在你亂講嘢。承認自己情緒失控，唔好賴人。「對唔住，我個刻太激動，講咗傷害你嘅說話。其實我無心分手」。給予空間：道歉後，比時間佢消化。唔好 chus (chur) 佢即刻答你。對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<h2>再看深一層：衝動鬧分手後悔了點算的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>放下自尊</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2023-07-01",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8055535.jpg",
     "coverCredit": "Photo by Annushka  Ahuja on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-smiling-at-the-camera-8055535/",
@@ -5085,47 +4449,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-11016967.jpg",
-        "caption": "內文配圖：太早親密會否扣分？避免關係停在酒肉階段",
+        "caption": "內文配圖：太快發生關係會影響愛情嗎？避免變成酒肉關係",
         "credit": "Photo by Chu Cuong on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-young-couple-looking-at-each-other-11016967/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-9062138.jpg",
-        "caption": "內文配圖：太早親密會否扣分？避免關係停在酒肉階段",
+        "caption": "內文配圖：太快發生關係會影響愛情嗎？避免變成酒肉關係",
         "credit": "Photo by QUIN Bridal on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-sitting-beside-a-window-while-having-coffee-9062138/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4651230.jpg",
-        "caption": "內文配圖：太早親密會否扣分？避免關係停在酒肉階段",
+        "caption": "內文配圖：太快發生關係會影響愛情嗎？避免變成酒肉關係",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-sitting-on-the-bed-4651230/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：太早親密會否扣分？避免關係停在酒肉階段",
+    "coverCaption": "Asteria 相處教學：【假性分手】衝動鬧分手後悔了點算？黃金 72 小時挽回攻略",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 107,
-    "title": "情侶成日嗌交係不適合嗎？修復溝通的關鍵方法",
+    "title": "【情侶吵架】成日嗌交代表不適合嗎？看懂良性吵架與惡性消耗",
     "category": "溝通相處",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "溝通",
-    "summary": "喺同另一半嗌交時，有冇試過無意中翻舊賬、提起佢上次嘅錯誤？你或者會覺得，既然佢/事情冇解決/冇達到你心目中最完美嘅解決方法，所以先要再一提再提。但每次嘅翻舊賬，對呢段感情都係一個重創！",
-    "content": "<p>你，或者你另一半 有冇喺嗌交時講過類似說話</p>\n<p>人在爭執中 難免想用最犀利言詞嚟傷害對方 用嚟證明自己先係啱嘅，證明對方所做嘅係錯嘅，但往往呢種「<strong>翻舊賬</strong>」嘅行為，會令大家互相傷害，令關係變得更加差 點解人喺一段感情中總係鍾意喜歡翻舊賬？</p>\n<p>當情緒波動時 記憶會recall過去嘅情緒、相關事件，負面情緒主導時會諗起過去嘅不滿 翻舊賬嘅背後 係因為內心深處有未被滿足嘅期望、焦慮。</p>\n<h2>🔎 強迫性重復</h2>\n<p>人會不斷重溫痛苦嘅經歷 試圖從中搵到解脫、或者提醒自己 每次嗌交時提到過去嘅事，其實係向對方表達「<strong>你欠我嘅</strong>」呢種意思 試圖用強迫性重復嘅方式，令對方記住自己曾經做錯。</p>\n<h2>讓「情侶成日嗌交係不適合嗎」由指責變成清楚請求</h2>\n<p>的確有做錯嘅地方 但作為翻起舊賬呢一方，呢種行為其實都會好影響雙方嘅感情，喺每一次衝突時 嘗試先停一停 俾彼此2分鐘時間冷靜處理，可以有效減少舊賬嘅機會。</p>\n<p>大家都身在事件中 大家都有盲點，有時未必知道自己咁做係啱定錯，亦會唔了解對方真正感受，甚至大家都被負能量圍繞，要真正令問題得以解決，可以請第三方幫手 避免再出現經常翻舊賬呢啲情緒化嘅衝突。</p>\n<h2>常見問題</h2>\n<h3>面對「情侶成日嗌交係不適合嗎」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「情侶成日嗌交係不適合嗎」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「情侶成日嗌交係不適合嗎」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DDhmB-QSH6V/",
-    "date": "2024-12-14",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "summary": "吵架不代表不適合，沈默才是關係的癌症。",
+    "content": "<p>吵架不代表一段關係一定有問題，真正需要留意的，是你們每次吵架之後有沒有修復能力。兩個來自不同家庭、不同成長背景的人，生活習慣、表達方式和安全感需求都不一樣，有衝突其實很正常。</p>\n<p>但如果每次吵完都只是冷戰、翻舊帳、互相攻擊，問題沒有被理解，也沒有被處理，這段關係就會一直停留在同一個循環裏。判斷你們是「<strong>正在磨合</strong>」還是真的「<strong>不適合</strong>」，重點不是吵架次數，而是吵架後能不能一起回到問題本身。</p>\n<h2>吵架不是重點，吵完之後怎樣修復才是重點</h2>\n<div class=\"article-section-card\"><p>很多人以為天生一對就不會吵架，但現實剛好相反。越親密的人，越容易碰到彼此的底線，因為你們不是普通朋友，而是要一起生活、一起承擔情緒的人。</p><p>健康的吵架，其實是一種比較激烈的溝通。它會把平時不敢講、不知道怎樣講的需要推上枱面。問題是，這場溝通最後是令大家更了解對方，還是令大家更想防備對方。</p></div><h2>如果吵架後你們可以慢慢講清楚</h2>\n<div class=\"article-section-card\"><p>我真正介意的是甚麼、我希望下次可以怎樣做、我剛才哪一句說得太重，這種吵架反而有機會令感情更穩。相反，如果吵架只是為了贏、為了發洩、為了令對方認輸，關係就會越吵越傷。</p></div><h2>第一種判斷：你們是在講需求，還是在攻擊人格？</h2>\n<p>良性的吵架會圍繞具體事件和真實需要。例如：「<strong>我覺得你最近少了陪我，我會有點失落。</strong>」這句話雖然帶有情緒，但它清楚講出感受和需要，對方仍然有空間回應。</p>\n<p>惡性的吵架就會變成人身攻擊。例如：「<strong>你正一廢柴</strong>」、「<strong>你永遠都係咁</strong>」、「<strong>同你講都嘥氣</strong>」。這些說話不是在處理問題，而是在否定對方整個人。即使當下講完很痛快，也會在關係裏留下很深的傷口。</p>\n<p>如果你們每次吵架都由事件變成互相貶低，就要停一停。因為真正破壞感情的，往往不是那件事本身，而是吵架時不斷用傷人的方式證明自己有多委屈。</p>\n<h2>第二種判斷：吵完之後，問題有沒有被處理？</h2>\n<p>良性的吵架，吵完之後會有一點進展。可能不是即刻完全解決，但至少大家更知道對方底線在哪裏，下次可以避開同一個傷口。</p>\n<p>例如你們因為遲覆訊息吵架，吵完後不是單純說「<strong>好啦對不起</strong>」，而是講清楚：工作時間未必即時回，但收工後會交代；如果真的忙，可以先留一句短訊。這種修補會令衝突變成規則和理解。</p>\n<p>惡性的吵架，就是嘈完冷戰幾日，問題沒有解決，下次再因為同一件事爆發。每次都像重新播放同一集，越吵越累，越吵越覺得對方不會明白自己。</p>\n<h2>第三種判斷：你們有沒有修復窗口？</h2>\n<div class=\"article-section-card\"><p>一段關係能不能走下去，很大程度取決於「<strong>修復窗口</strong>」。即是吵完之後，有沒有一刻大家願意放低攻擊，重新靠近對方。修復窗口可以很細，例如其中一方願意先說：「<strong>我剛才語氣太重，但我想講清楚件事。</strong>」又或者願意問：「<strong>你剛才最介意的是哪一句？</strong>」這些說話未必即刻令關係變好，但它們會打開重新溝通的門。如果你們完全沒有修復窗口，每次吵架都只剩下冷處理、封鎖、消失、翻舊帳，關係就很容易由普通衝突變成長期消耗。</p></div><h2>可以先做的三件事</h2>\n<p>吵架時先把「<strong>事件</strong>」和「<strong>人格</strong>」分開。你可以講某件事令你難受，但不要直接否定對方整個人。</p>\n<p>吵完之後不要只等對方低頭。可以先整理自己真正想要的是道歉、改變、陪伴，還是一個清楚解釋。你越清楚，對方越知道怎樣回應。</p>\n<p>為下一次定一個很小的改變。例如下次情緒太高時先暫停十分鐘、不要在公眾場合吵、不要用分手威脅對方。真正的修復，通常是由一個小規則開始。</p>\n<h2>感情拯救所話你知</h2>\n<p>成日嗌交不一定代表不適合，但如果每一次吵架都令你更怕對方、更不敢表達、更懷疑自己，這就不是普通磨合，而是關係正在消耗你。一段值得修補的關係，不是完全沒有衝突，而是兩個人願意在衝突後回來面對問題。你可以有情緒，對方也可以有情緒，但你們都要學會把情緒變成溝通，而不是變成互相傷害的武器。</p>\n<p>所以真正要問的不是「<strong>我哋係咪成日嗌交</strong>」，而是「<strong>我哋每次嗌完，有冇比上一次更明白大家</strong>」。如果答案是有，這段關係仍然有修補空間；如果答案一直是沒有，就要認真看清楚自己是否仍然安全、被尊重，以及這段關係是否還值得繼續投放。</p><h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>吵架不是重點，吵完之後怎樣修復才是重點。</li><li>如果吵架後你們可以慢慢講清楚</li><li>第一種判斷</li><li>第二種判斷</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7651545.jpg",
     "coverCredit": "Photo by Kindel Media on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-having-a-conversation-7651545/",
@@ -5153,27 +4511,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情侶成日嗌交係不適合嗎？修復溝通的關鍵方法",
+    "coverCaption": "Asteria 相處教學：【情侶吵架】成日嗌交代表不適合嗎？看懂良性吵架與惡性消耗",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 108,
-    "title": "為什麼每次拍拖都很快散？破解短戀愛循環",
+    "title": "【情侶相處】感情磨合期要幾耐？判斷「磨合」定「唔夾」的 3 個關鍵",
     "category": "戀愛心理",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "心理",
-    "summary": "覺得自己每段感情都好速食？次次拍拖都好快就散，每段關係都keep唔長？到底點解會咁？",
-    "content": "<p>而家唔止時代節奏急促 連拍拖都被影響 轉移去Fast Love 好多人習慣喺交友App識另一半，大家都少咗時間好好認識彼此，有時會唔太想磨合 反而淨仔想要一拍即合，變相即使大家之間有矛盾，你或者對方都冇嗰種「<strong>要fix好</strong>」嘅心態。</p>\n<p>一有唔夾就覺得要分享</p>\n<p>我哋平日用咗好多時間喺social media 會成日睇到其他情侶相處嘅Post/Reels，好易會產生各種焦慮，成日都想同其他人比較、同自己嘅前度比較，但比較係一段關係嘅殺手，太多嘅比較會經常挑剔你嘅另一半 對佢形成大量不滿。</p>\n<p>覺得佢呢樣唔好、嗰樣又唔好 久而久之就會事事不滿 對每一任都唔滿意、每一任拍拖一排都想散</p>\n<h2>🔎 期望值太高</h2>\n<p>每人都有自己嘅擇偶條件 現代人對戀愛嘅期望值、擇偶要求愈嚟愈高，大家都想搵到尋找完美嘅另一半，但對於「<strong>合適</strong>」嘅定義就變得非常狹窄，一旦發現對方唔符合自己心中嘅標準，或者大家嘅關係出現一啲小問題，都會成為分手嘅原因。</p>\n<h2>回到「為什麼每次拍拖都很快散」本身，要看這幾個判斷位</h2>\n<p>如果你每次拍拖都好依賴另一半 會令自己缺乏獨立性格，時間一耐，喺對方眼中就會變得「<strong>唔可愛</strong>」，如果你係太鍾意控制另一半，對方亦會覺得你唔夠相信佢，你自己對呢段關係都冇失去信心，無論係過分依賴定過分控制 都會慢慢消耗彼此嘅感情。</p>\n<p>令呢段關係越嚟越脆弱 一有咩事就只會諗到要分手</p>\n<p>好老土咁講 每段關係都會有起伏，唔好因為一啲小問題就輕易放棄，要學識用正面嘅心態去面對感情上嘅挑戰，同你嘅另一半互相磨合 將每次爭執都視之為增進彼此嘅理解同信任嘅機會，唔好隨便輕易地覺得大家就係唔夾、唔想再同佢一齊呢啲諗法。</p>\n<h2>常見問題</h2>\n<h3>每次拍拖都很快散，通常卡在哪裡？</h3>\n<p>可能是太快投入、太快失望、害怕衝突，或者一開始只靠心動，沒有真正看相處能力。</p>\n<h3>點樣打破短戀愛循環？</h3>\n<p>每次開始前先慢一點，不急著把對方理想化；關係出現問題時，也不要立即逃走，先看是否能溝通和調整。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DBJYZQ5yeXO/",
-    "date": "2024-10-15",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "summary": "「磨合」與「不合」的最大分別在於：磨合是雙方都願意為了關係而退讓；不合是只有單方面在犧牲。",
+    "content": "<h2>先看常見情境</h2>\n<p>好多人會問：「我同佢成日嘈交，到底係磨合緊，定係根本唔夾？」，這條界線好模糊。但好重要。改變的意願：磨合係「雙向奔赴」，兩個人都肯改；不合係「單向犧牲」，永遠得你一個就佢。磨合係嘈「生活習慣」(例如牙膏點唧)；不合係嘈「核心價值」(例如想唔想結婚、金錢觀)。磨合後會更了解對方；不合後只會覺得更累、更無力。感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p><h2>再看深一層：感情磨合期要幾耐的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-11394760.jpg",
     "coverCredit": "Photo by TH Team on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-holding-a-wine-bottle-11394760/",
@@ -5201,27 +4553,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：為什麼每次拍拖都很快散？破解短戀愛循環",
+    "coverCaption": "Asteria 相處教學：【情侶相處】感情磨合期要幾耐？判斷「磨合」定「唔夾」的 3 個關鍵",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 109,
-    "title": "為取悅男人壓抑自己？Pick Me Girl 的感情陷阱",
-    "category": "戀愛心理",
+    "title": "【情侶溝通】講心底話≠有效溝通！避開 5 大溝通盲點，鬧交變少一半",
+    "category": "溝通相處",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "心理",
-    "summary": "為取悅男人而壓抑自己，短期好像更容易被喜歡，長期卻會失去界線。Pick Me Girl 的陷阱，是把被選中看得比被尊重更重要。",
-    "content": "<p>你可能以為只要自己夠懂事、夠不麻煩、夠配合，就會被珍惜。但如果你一直壓低需要，只為了讓對方覺得你好相處，最後受傷的通常是你自己。</p>\n<h2>不要把低需求當成優點</h2>\n<p>不敢要求、不敢介意、不敢失望，不代表你成熟，只可能代表你害怕一有需要就被放棄。</p>\n<p>低需求有時不是成熟，而是你太怕自己一開口就不被喜歡。真正愛你的人，不會只在你沒有需要時才覺得你值得愛。</p>\n<h2>被選中不等於被尊重</h2>\n<p>對方喜歡你乖、順、好安排，不代表他真正看見你。健康關係應該容得下你的想法和界線。</p>\n<p>如果一段關係只欣賞你的配合，卻容不下你的感受，那份喜歡其實很脆弱。你要的不是被選中一下，而是長期被尊重。</p>\n<h2>停止和其他女生比較</h2>\n<p>Pick Me 心態常常建立在「我比其他女生懂事」。但愛情不是比賽，你不需要踩低別人來證明自己值得愛。</p>\n<p>把自己放到和其他女生對立的位置，會令你越來越離不開男性認可。真正的自信，不需要靠證明自己比別人更乖、更特別來成立。</p>\n<h2>練習講出真實感受</h2>\n<p>你可以溫和，但不要消失自己。從小事開始講想法，觀察對方是否尊重你的不同。</p>\n<p>真實感受可以從小事開始講，例如想去哪裡食飯、介意某句說話。對方如何回應這些小需要，會透露他是否能接住更深的你。</p>\n<h2>選擇讓你更像自己的人</h2>\n<p>真正適合的關係，不會要求你長期扮無所謂。你可以被愛，也可以有需要。</p>\n<p>讓你更像自己的人，會令你慢慢放鬆，而不是一直演出完美女友。你不用靠壓抑自己來換愛，因為那樣換來的愛也不穩。</p>\n<h2>常見問題</h2>\n<h3>懂事是否不好？</h3>\n<p>懂事本身不是問題，問題是你是否因此壓抑所有需要。</p>\n<h3>我點知自己係咪 Pick Me？</h3>\n<p>看你是否經常為了被選擇而否定自己感受或貶低其他女生。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你整理關係中的討好模式和界線，找回自己的位置。</p>",
+    "imageLabel": "溝通",
+    "summary": "許多情侶以為「坦誠」就是溝通，結果變成互相指責。",
+    "content": "<h2>先看常見情境</h2>\n<p>「<strong>我明明講晒心底話比佢聽，點解佢仲係黑面？</strong>」，好多人以為溝通就係要 100% 坦白。但如果用錯方法，「<strong>心底話</strong>」隨時變成「<strong>利劍</strong>」。</p>\n<p>拆解 5 大溝通盲點。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>預設對方會讀心 (Mind Reading)</span></h2>\n<p>「<strong>我唔講佢都應該知啦！</strong>」，錯！佢真係唔知。男人嘅腦結構比較直線，你唔畫公仔畫出腸，佢會以為你無嘢。解決方向：試下將「<strong>我覺得冷</strong>」改成「<strong>可唔可以幫我拎件衫？</strong>」。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>在情緒高漲時溝通</span></h2>\n<p>當大家嬲緊嘅時候，智商係零。呢個時候講嘅嘢，通常都係悔氣說話，而唔係心底話。解決方向：設定「<strong>冷靜機制</strong>」，當心跳加速時，停一停，半個鐘後再講。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>用你字開頭 (You-Statement)</span></h2>\n<p>「<strong>你成日都遲到</strong>」、「<strong>你根本唔在乎我</strong>」。這種句式充滿攻擊性，對方一聽就會開啟防禦機制，開始同你辯論。改用「我」字開頭 (I-Statement)，例如「<strong>我覺得好擔心...</strong>」。還有翻舊帳、單向輸出等盲點...。</p>\n<h2>再看深一層：講心底話≠有效溝通的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>預設對方會讀心 (Mind Reading)</li><li>用你字開頭 (You-Statement)</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2024-07-18",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-5225467.jpg",
     "coverCredit": "Photo by Samson Katt on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/loving-ethnic-couple-standing-near-brick-wall-and-looking-at-each-other-5225467/",
@@ -5249,27 +4595,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：為取悅男人壓抑自己？Pick Me Girl 的感情陷阱",
+    "coverCaption": "Asteria 相處教學：【情侶溝通】講心底話≠有效溝通！避開 5 大溝通盲點，鬧交變少一半",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 110,
-    "title": "不阻止就是尊重嗎？你可能誤會了關係界線",
+    "title": "【情侶溝通】Deep Talk 點樣傾？親密＝100%坦誠？小心誤踩地雷！",
     "category": "溝通相處",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
     "imageLabel": "溝通",
-    "summary": "情侶之間嘅互相尊重，就只係尊重對方嘅興趣、生活咁簡單？其實真係嘅互相尊重，應該係聆聽對方嘅需求！想知點做？",
-    "content": "<p>喺你眼中 「<strong>尊重另一半</strong>」到底應該係點做？</p>\n<p>尊重對方嘅興趣？</p>\n<p>唔干涉對方太多生活、交友？</p>\n<p>或者 你一直以為嘅「<strong>尊重</strong>」其實喺佢眼中 並唔係最理想嘅「<strong>尊重</strong>」</p>\n<p>好多時候 大家講到情侶之間要互相尊重 都會話：「<strong>佢鍾意就好啦，我唔會阻止</strong>」，eg：男朋友鍾意打機，女朋友唔會干涉 eg：或者女朋友鍾意Shopping，男朋友都唔會鬧，但咁樣真係夠。</p>\n<h2>呢種尊重只係停留喺表面</h2>\n<p>純粹係「<strong>唔阻住對方做自己鍾意嘅嘢</strong>」，但兩個人相處唔應該只係各玩各，而係要真正理解對方嘅需求，而係要去聆聽對方嘅需求 了解佢內心真正想要嘅嘢，了解佢呢個喜好嘅原因，了解佢唔同時間嘅感受，因為好多時候 兩個人相處出問題，唔係因為興趣唔同。</p>\n<p>而係因為其中一方覺得自己嘅感受冇被理解</p>\n<h2>界線不是控制，而是讓關係更自在</h2>\n<p>真正嘅聆聽 唔止係聽對方講咩 而係理解佢點解會咁講 而且願意作出改變 呢個先係真正嘅尊重</p>\n<p>eg：對方嘅需求係希望多啲相處時間 咁你可以試下喺打機之前先陪佢，或者定期安排一啲「<strong>兩個人專屬嘅時間</strong>」 一齊散步、睇戲，咁對方就會覺得自己嘅感受係被尊重。</p>\n<p>千祈唔好用自己方式去定義有冇尊重對方需求，因為每個人嘅標準都唔同，你覺得OK冇問題嘅嘢，對方未必一定同你一樣諗法，所以你先要學識用心聆聽、用心尊重 慢慢學識發現對方真正需求，理解到對方有啲嘅需求並唔係無理取鬧，而係佢真正內心嘅感受！</p>\n<h2>常見問題</h2>\n<h3>不阻止對方，就等於尊重嗎？</h3>\n<p>不一定。尊重不是甚麼都不理，而是既給對方空間，也願意講清楚自己在意甚麼和不能接受甚麼。</p>\n<h3>健康界線應該點講？</h3>\n<p>用「我需要」和「我不能接受」表達，而不是命令對方。界線的目的不是控制，是讓兩個人知道怎樣相處會安心。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DGmmc_by_lW/",
-    "date": "2025-02-28",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "summary": "兩個人一齊耐咗、熟悉咗，係咪代表甚麼都可以說。",
+    "content": "<h2>兩個人一齊耐咗、熟悉咗</h2>\n<p>究竟有甚麼可以坦白？有甚麼最好先別 100% 說出來？「<strong>坦誠</strong>」同「<strong>發洩</strong>」係兩回事。如果你的「<strong>坦誠</strong>」只是為了滿足自己說出來的快感，而不顧對方的感受（例如批評對方的家人、詳細描述前任的性事），這不是 Deep Talk，這是情感破壞。「<strong>連結 (Connection)</strong>」，而不是「<strong>審判 (Judgement)</strong>」。在開啟深層對話前，這三件事不能做：不要在對方疲累/壓力大時開始。不要帶著批判的語氣。不要強迫對方回答不想答的問題。</p>\n<p>真正高質素的對話，應該聚焦在：我們的未來願景，彼此的價值觀，我們的情感需求 (而不是投訴)。--- 拍拖耐咗無嘢講？想重拾熱戀感覺？</p>\n<h2>再看深一層：Deep Talk 點樣傾的真正訊號</h2>\n<p>好多相處問題不是一句說話造成，而是同一種表達方式重複太多次，令對方開始防衛或者麻木。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-27452065.jpg",
     "coverCredit": "Photo by Eyüpcan Timur on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-man-and-woman-standing-in-front-of-a-window-27452065/",
@@ -5297,27 +4637,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：不阻止就是尊重嗎？你可能誤會了關係界線",
+    "coverCaption": "Asteria 相處教學：【情侶溝通】Deep Talk 點樣傾？親密＝100%坦誠？小心誤踩地雷！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 111,
-    "title": "感情變淡不是突然發生：關係降溫前的細節",
-    "category": "溝通相處",
+    "title": "【情緒勒索】男朋友話「我討厭你就唔喺度啦」？拆解 4 句常見的情緒勒索金句",
+    "category": "情緒修復",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "溝通",
-    "summary": "我哋收到唔少已婚客人嘅諮詢，表示自從結咗婚，或者生咗小朋友之後，同另一半嘅關係越嚟緊淡，唔知係自己變咗，定係另一半變咗。面對呢個困境，又應該點拆局？",
-    "content": "<p>你而家係咪面對緊呢個處境</p>\n<p>💬 留給彼此嘅時間越來越少；💬 冇曬對雙方親暱嘅稱呼，用「<strong>爸爸/媽媽</strong>」代替；💬 容易將挫折發洩喺對方身上；💬 將精力、注意力都只focus喺BB身上。</p>\n<p>自從有小朋友之後 夫妻之間嘅情況唔同咗，而家唔只係兩個人、而係三個人 雙方都要付出大量注意力、精力喺小朋友身上，變相好似多咗個第三者 令你哋嘅感情變得越嚟越淡。</p>\n<h2>💭 我冇咁多時間/精力/錢去理對方</h2>\n<p>💭 對方會明白我嘅 💭問題係出喺佢度，而唔係我 💭，對方肯改，咁我咪改囉 💭 對方將問題誇大咗啫 面對呢啲情況，至少其中一方嘅內心 一定係好似上述咁諗、一定有好多藉口，但呢啲只係自己缺乏改善關係決心嘅理由。</p>\n<h2>回到「感情變淡不是突然發生」本身，要看這幾個判斷位</h2>\n<p>可能真係好難抽到時間出去 重拾以前拍拖嘅日子 但有幾樣嘢一定要記住</p>\n<p>💋 調情 打情罵俏、氹對方開心 為婚姻生活增加興奮感 💋，要有身體接觸 攬、Kiss、拖一手 提醒彼此互相珍惜嘅舉動，💋傾偈 話題唔好淨係圍繞BB 都應該有兩個人之間嘅話題。</p>\n<p>大家嘅專注力都喺度BB度 令感覺漸漸淡化、令彼此失去連結，就要借助外界力量，打開你哋之間嘅溝通渠道 等對方更容易接受你嘅訊息 重新喚起對方心中對你嘅感覺，令對方再次感受到你嘅存在，重新喚起對呢段感情嘅重視。</p>\n<h2>常見問題</h2>\n<h3>感情變淡通常有咩前兆？</h3>\n<p>常見是分享變少、對話變功能性、約會變例行、衝突不再想修補，或者其中一方開始不期待見面。</p>\n<h3>發現關係降溫，可以點拉返近？</h3>\n<p>先不要急著要求激情回來，可以由固定相處時間、真實分享和小型共同經歷開始，慢慢重建連結。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DEq5m_my9_n/",
-    "date": "2025-01-11",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "療癒",
+    "summary": "男朋友話「我討厭你就唔喺度啦」？拆解 4 句常見的情緒勒索金句。",
+    "content": "<h2>你有冇試過喺戀愛時會「心很累」</h2>\n<p>你有冇試過喺戀愛時會「<strong>心很累</strong>」：明明單身時自信滿滿，所有嘢都得心應手。但面對愛情總係「<strong>吃力不討好</strong>」，做每件事都怕惹怒對方、畏首畏尾。如果有呢種情況，你可能遭受緊對方嘅，「<strong>情緒勒索</strong>」！「<strong>我咁做都係因為太愛你</strong>」，潛台詞：如果你拒絕我，你就係拒絕緊我嘅愛，你係一個不知好歹嘅人。用「愛」黎綁架你嘅行為。如果你唔做，即係你唔愛我。我犧牲咁大，你欠咗我。這是利用你的「<strong>罪惡感</strong>」。</p>\n<p>我留喺度係一種恩賜，你要感恩。這是貶低你的價值。這類說話其實都係情緒勒索。佢借用你對佢嘅愛，去達到佢想你做到嘅結果。</p><h2>先辨認勒索句式，不要急著自責：情緒勒索最麻煩的地方</h2>\n<div class=\"article-section-card\"><p>情緒勒索最麻煩的地方，是它會把你的拒絕包裝成不夠愛、不懂感恩或傷害對方。當你一聽到就內疚，就很容易放棄自己的界線。</p><p>你可以先停一停，問自己：對方是在表達感受，還是在迫你順從？健康的愛可以討論需要，但不應用罪惡感控制你。</p></div><h2>先辨認勒索句式，不要急著自責：情緒勒索最麻煩的地方</h2>\n<div class=\"article-section-card\"><p>情緒勒索最麻煩的地方，是它會把你的拒絕包裝成不夠愛、不懂感恩或傷害對方。當你一聽到就內疚，就很容易放棄自己的界線。你可以先停一停，問自己：對方是在表達感受，還是在迫你順從？健康的愛可以討論需要，但不應用罪惡感控制你。真正的界線不是冷漠，而是讓對方知道：你願意理解他的情緒，但不會因為害怕失去，就答應所有令自己難受的要求。</p></div>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>先辨認勒索句式，不要急著自責</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>看男人心態時，不要只聽他一刻怎樣講，也要看他之後有沒有做到、願不願意承擔，以及你在相處裡是否感到安心。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-29239513.jpg",
     "coverCredit": "Photo by M1nh  Art on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/traditional-ceremony-with-couples-in-white-attire-29239513/",
@@ -5325,47 +4659,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-33893084.jpg",
-        "caption": "內文配圖：感情變淡不是突然發生：關係降溫前的細節",
+        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
         "credit": "Photo by Daniil Kondrashin on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-enjoying-a-fall-evening-outdoors-33893084/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-14036056.jpg",
-        "caption": "內文配圖：感情變淡不是突然發生：關係降溫前的細節",
+        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
         "credit": "Photo by Quang Nguyen Vinh on Pexels",
         "creditUrl": "https://www.pexels.com/photo/boy-and-a-girl-wearing-traditional-clothes-talking-in-front-of-a-building-entrance-14036056/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-36180297.jpg",
-        "caption": "內文配圖：感情變淡不是突然發生：關係降溫前的細節",
+        "caption": "內文配圖：感情變淡點算？4 個令對方慢慢抽離的行為",
         "credit": "Photo by Supriyanto  Katiman on Pexels",
         "creditUrl": "https://www.pexels.com/photo/casual-conversation-in-modern-cafe-setting-36180297/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：感情變淡不是突然發生：關係降溫前的細節",
+    "coverCaption": "Asteria 相處教學：【情緒勒索】男朋友話「我討厭你就唔喺度啦」？拆解 4 句常見的情緒勒索金句",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 112,
-    "title": "用情緒測試對方有用嗎？小心把愛越推越遠",
-    "category": "戀愛心理",
+    "title": "【情緒管理】越愛越想發脾氣？拆解「親密關係暴力」的 3 個心理成因",
+    "category": "情緒修復",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "心理",
-    "summary": "有冇試過間唔中都會好易因為一啲小事而發脾氣，但其實你都唔知自己點解會嬲得咁快，甚至會懷疑自己係咪情緒有問題？到底係咩一回事？",
-    "content": "<p>「用情緒測試對方有用嗎」會牽動很多不安，越亂越要先分清事實、猜測和感受。當你看清自己真正需要的是安慰、承諾、空間還是答案，下一步就不會只被情緒推著走。</p> <h2>不要把一刻心動當成全部證據</h2>\n<p>心動、習慣和依賴很容易混在一起。處理「用情緒測試對方有用嗎」時，要看長期相處是否舒服，而不只是某一刻很想靠近。 你可以先把腦入面的劇情寫出來，再逐句問自己：這是事實、推測，還是我害怕發生的結果？分開之後，情緒會比較容易落地。</p> <h2>讓自己先回到穩定狀態：回到「用情緒測試對方有用嗎」來看</h2>\n<p>情緒最高漲時做的決定，通常最容易後悔。先睡一覺、寫低感受，或者找人整理，再決定要不要發訊息。 情緒不是錯，但情緒最高漲時最容易講錯話。先讓自己回到穩定狀態，再決定要不要發訊息，通常會少很多後悔。</p> <h2>處理「用情緒測試對方有用嗎」不要把猜測當答案</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。 如果你需要的是安全感，就不要只用質問去換答案；可以改成表達你希望對方怎樣回應，這樣對方比較知道如何接住你。</p> <h2>面對「用情緒測試對方有用嗎」，先停下反覆試探</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。 當你不再把所有價值感交給對方反應決定，就會更容易看見這段關係是否真的適合，而不是只被一刻心動或不甘心帶走。</p> <h2>情緒很滿時，先讓自己回到穩定：回到「用情緒測試對方有用嗎」來看</h2>\n<p>如果你被「用情緒測試對方有用嗎」拉到很亂，先給自己一點時間回到穩定。你可以把感受寫低、分清事實和猜測，再決定要不要同對方談。當你不再被即時焦慮推著走，很多原本看似一定要立刻處理的事，會變得更清楚，也更容易選到不後悔的做法。</p>\n<h2>常見問題</h2>\n<h3>「用情緒測試對方有用嗎」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「用情緒測試對方有用嗎」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「用情緒測試對方有用嗎」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "imageLabel": "療癒",
+    "summary": "我們總將最壞的脾氣留給最親密的人，這源於「安全感悖論」：因為知道對方不會離開，所以肆無忌憚地發洩。",
+    "content": "<p>明明想好好相處，明明想好好相處。但每次見到佢做錯少少野，你就忍唔住火山爆發？發完脾氣又好後悔，怪自己點解控制唔到？其實你唔係脾氣差，你只係跌入咗，「<strong>親密關係的情緒陷阱</strong>」。點解對住外人好客氣，對住伴侶就發脾氣？1. 安全感悖論 (Security Paradox) 你會對老細發脾氣嗎？唔會，因為你知道後果嚴重（被炒）。但你會對伴侶發脾氣，因為你潛意識覺得，「<strong>佢係愛我嘅，佢會包容我</strong>」。這種「<strong>恃寵生驕</strong>」的心態，令你失去咗情緒過濾機制。2. 憤怒是「<strong>第二情緒</strong>」，心理學冰山理論指出，憤怒通常只係表層。</p>\n<h2>冰山下面藏著嘅係</h2>\n<p>委屈、恐懼、無助。例如你鬧佢「<strong>又遲到！</strong>」，其實你內心係驚「<strong>你係咪唔重視我？</strong>」。因為直接講「<strong>我驚</strong>」好似好弱。所以你選擇用「<strong>憤怒</strong>」黎武裝自己。</p>\n<h2>把憤怒還原成真正感受</h2>\n<p>在親密關係裡發脾氣，很多時不是單純脾氣差，而是背後有委屈、害怕被忽略，或者覺得自己不被重視。問題是，如果只用憤怒表達，對方聽到的只會是攻擊。</p>\n<p>下次爆發前，可以先問自己：我真正想要的是被理解、被重視，還是希望對方改一個具體行為？把真正需要講清楚，才有機會修補。</p>\n<h2>再看深一層：越愛越想發脾氣？拆解「<strong>親密關係暴力</strong>」的 3 個心理成因的真正訊號</h2>\n<p></p>\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2025-06-21",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-18990021.jpg",
     "coverCredit": "Photo by Tùng Sơn on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-and-man-sitting-on-grass-18990021/",
@@ -5373,47 +4701,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-4651032.jpg",
-        "caption": "內文配圖：用情緒測試對方有用嗎？小心把愛越推越遠",
+        "caption": "內文配圖：用發脾氣換關注有用嗎？避免把對方越推越遠",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-taking-pictures-in-bed-4651032/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8055516.jpg",
-        "caption": "內文配圖：用情緒測試對方有用嗎？小心把愛越推越遠",
+        "caption": "內文配圖：用發脾氣換關注有用嗎？避免把對方越推越遠",
         "credit": "Photo by Annushka  Ahuja on Pexels",
         "creditUrl": "https://www.pexels.com/photo/portrait-of-a-couple-embracing-8055516/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6944040.jpg",
-        "caption": "內文配圖：用情緒測試對方有用嗎？小心把愛越推越遠",
+        "caption": "內文配圖：用發脾氣換關注有用嗎？避免把對方越推越遠",
         "credit": "Photo by Vlada Karpovich on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-preparing-food-in-the-kitchen-6944040/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：用情緒測試對方有用嗎？小心把愛越推越遠",
+    "coverCaption": "Asteria 相處教學：【情緒管理】越愛越想發脾氣？拆解「親密關係暴力」的 3 個心理成因",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 113,
-    "title": "男人甜言蜜語可信嗎？拆解感情中的謊言信號",
-    "category": "戀愛心理",
+    "title": "【脫單攻略】朋友變情人？68% 情侶由朋友開始！教你突破 Friend Zone",
+    "category": "曖昧桃花",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "心理",
-    "summary": "男人成日把口浪過油、對住你講好多甜言蜜語 但係講太多，到底係咪真係好事？你又有冇試過因為佢嘅甜言蜜語，令自己對佢有所質疑？ 想知點解佢成日口花花？",
-    "content": "<p>甜言蜜語測謊法</p>\n<ul><li>見到你難過令我好心痛</li></ul>\n<ul><li>你會搵到比我更好嘅人</li></ul>\n<ul><li>我愛你，我乜都聽你話</li></ul>\n<p>聽落好貼心 但其實唔等於真心</p>\n<p>男人平均每日講大話6次 總計一生會講至少12萬次大話</p>\n<p>男人同女人一齊 構成咗一個虛虛實實嘅情感世界 但只係講甜言蜜語 卻從來冇付出實際行動 咁樣嘅男人係唔可靠</p>\n<h2>雖然男人識偽裝</h2>\n<p>但把口「<strong>浪過油</strong>」唔一定代表真心。甜言蜜語有時是為了塑造一個有愛心、有責任感的好男人形象；亦有些人是久經訓練，知道怎樣講最容易令人心軟。所以聽到好聽說話時，不要只看當下有幾感動，也要看他平日是否言行一致。</p>\n<h2>回到「男人甜言蜜語可信嗎」本身，要看這幾個判斷位</h2>\n<p>左邊大腦負責邏輯和語言，右邊大腦負責藝術和直覺。甜言蜜語之所以容易令人心動，是因為它會令人感覺被重視、被選擇。不過，如果男人只為了獲得好感而不斷講好聽說話，甚至不理對方真正需要，只會變成討好，而不是成熟的愛。</p>\n<p>鑑別甜言蜜語最簡單的方法，是不要只聽他講了甚麼，而是看他之後做了甚麼。關心不是靠把口，即使他說「你係我最重視嘅人」，也要觀察實際行動。例如你不舒服時，他是直接陪你看醫生，還是只叫你自己去看醫生；這些細節，比一句好聽說話更可靠。</p>\n<h2>真正可信的說話，要有後續行動支持</h2>\n<p>甜言蜜語本身唔一定係假，但如果每次都只有說話，沒有時間、照顧、承擔和修補，聽得再動人都只能當作情緒安撫。真正可靠的人，會讓你在日常細節裡感到安心，而不是只在你不安時講幾句漂亮說話。</p>\n<p>你可以留意他講完之後有沒有跟進：答應陪你會不會真的安排時間，說重視你會不會在你需要時出現，講會改會不會有新做法。當說話和行動對得上，甜言蜜語才有重量；如果長期對不上，就要把注意力從「他講得多好聽」拉回「他做得有幾穩定」。</p>\n<h2>常見問題</h2>\n<h3>男人甜言蜜語可信嗎？</h3>\n<p>甜言蜜語可以是愛意，也可以是迴避承擔。真正要看他之後有沒有行動、交代和一致性。</p>\n<h3>聽到好聽說話時，點樣保持清醒？</h3>\n<p>不要急著把一句話當承諾。看他是否在普通日子、衝突時、你需要支持時，仍然做得到他說過的事。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/CwhEZG6yMnr/",
-    "date": "2023-08-29",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "曖昧",
+    "summary": "根據研究，68% 的戀愛關係始於朋友。",
+    "content": "<p>根據研究，68% 的戀愛關係始於朋友。由朋友變情人更穩定，因為已有足夠的信任基礎。但要突破 Friend Zone。關鍵在於「<strong>打破熟悉感</strong>」——製造性張力 (Sexual Tension) 及展現對方未見過的一面，讓他重新將你定義為「<strong>異性</strong>」。</p>\n<h2>你身邊有無一個異性朋友</h2>\n<p>你身邊有無一個異性朋友，你對佢有好感。但唔敢開口？驚表白失敗，連朋友都無得做？其實，朋友變情人 (Friends to Lovers) 係最常見嘅戀愛模式。</p>\n<p>為什麼朋友容易日久生情？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>曝光效應 (Mere Exposure Effect)</span></h2>\n<p>心理學證實，見得越多，好感度越高。你哋已經有共同圈子、共同話題，省卻咗磨合期。佢知你性格。唔洗驚遇渣男。這種知根知底嘅關係，往往比 Tinder 識嘅更長久。但點解你仲係 Friend Zone？因為你太「<strong>安全</strong>」。你哋嘅相處太似兄弟/姊妹，缺乏咗愛情必需嘅，「<strong>激情 (Passion)</strong>」。要升級關係，你必須加入，「<strong>性張力</strong>」。</p>\n<h2>再看深一層：朋友變情人？68% 情侶由朋友開始！教你突破 Friend Zone的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>曝光效應 (Mere Exposure Effect)</li><li>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-35773495.jpg",
     "coverCredit": "Photo by Nadirsyah Nadirsyah on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-couple-enjoying-nature-walk-in-jakarta-park-35773495/",
@@ -5441,27 +4763,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：男人甜言蜜語可信嗎？拆解感情中的謊言信號",
+    "coverCaption": "Asteria 相處教學：【脫單攻略】朋友變情人？68% 情侶由朋友開始！教你突破 Friend Zone",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 114,
-    "title": "男人說「討厭你就不會在這裡」代表喜歡嗎？別誤讀信號",
-    "category": "戀愛心理",
+    "title": "【脫單攻略】遇不到理想型？你的擇偶標準可能太「離地」！",
+    "category": "曖昧桃花",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "你有冇試過喺戀愛時會「心很累」？明明單身時自信滿滿，所有嘢都得心應手，但面對愛情總係「吃力不討好」，做每件事都怕惹怒對方、畏首畏尾。如果有呢種情況，你可能遭受緊對方嘅「情緒勒索」！到底點樣可以掙脫開佢嘅勒索？",
-    "content": "<p>面對「男人說「討厭你就不會在這裡」代表喜歡嗎」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「男人說討厭你就不會在這裡代」要看行動，不只看感覺</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>面對「男人說討厭你就不會在這裡代」，不要太快交出主導權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>用界線看清「男人說討厭你就不會在這裡代」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「男人說討厭你就不會在這裡代」要看穩定投入</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>先找出「男人說討厭你就不會在這裡代」真正卡住的位置</h2>\n<p>如果你正在經歷「男人說「討厭你就不會在這裡」代表喜歡嗎」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>男人說「討厭你就不會在這裡</strong>」代表喜歡嗎」係咪代表我太情緒化？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>因為「<strong>男人說「討厭你就不會在這裡</strong>」代表喜歡嗎」好辛苦時，可以點樣先穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理「<strong>男人說「討厭你就不會在這裡</strong>」代表喜歡嗎」？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
+    "imageLabel": "曖昧",
+    "summary": "長期單身，或者每次拍拖的對象都不符合自己理想對象的標準。",
+    "content": "<h2>長期單身</h2>\n<p>什麼是「格價心態」：為甚麼你長期單身？又或者每次談戀愛都覺得對方與自己的理想對象有落差？其實你可有想過，問題並不在於你「遇不到好的另一半」，而是因為你自己用了「格價天王」的心態去尋找另一半！</p><h2>就像買電器一樣，你拿著一張長長的清單</h2>\n<p>要有錢、要靚仔、要專一、要識煮飯... 只要對方有一項不符合，你就即刻扣分 (Deduct Marks)。但愛情不是考試，這種「<strong> 扣分制 </strong>」思維，只會令你錯過真正適合你的人，甚至令你看不到對方身上的其他閃光點。</p>\n<h2>如何調整心態？</h2>\n<div class=\"article-section-card\"><p>試著將「<strong> 扣分制 </strong>」轉為「<strong> 加分制 </strong>」。多發掘對方的優點，而不是盯著缺點。問問自己：這個缺點是「<strong> 絕對不能接受 (Deal Breaker) </strong>」，還是只是「<strong> 不完美 </strong>」？</p><p>--- 總係遇唔到啱嘅人？想顯化靈魂伴侶？</p></div><h2>再看深一層：遇不到理想型？你的擇偶標準可能太「<strong>離地</strong>」的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>長期單身</li><li>就像買電器一樣，你拿著一張長長的清單。</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
-    "date": "2023-09-05",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-36536731.jpg",
     "coverCredit": "Photo by Nguyễn Quang Bảo on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/romantic-couple-with-bouquet-by-water-36536731/",
@@ -5489,27 +4805,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：男人說「討厭你就不會在這裡」代表喜歡嗎？別誤讀信號",
+    "coverCaption": "Asteria 相處教學：【脫單攻略】遇不到理想型？你的擇偶標準可能太「離地」！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 115,
-    "title": "第一次約會要避開咩？提高拍拖成功率的禁忌",
+    "title": "【脫單攻略】FWB 變情侶有可能嗎？3 招令他對你產生「性」以外的依賴",
     "category": "曖昧桃花",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
     "imageLabel": "曖昧",
-    "summary": "喺展開一段關係之前，女仔會觀察對方嘅人品、考慮佢嘅條件先決定要不要在同佢喺埋一齊，但其實男人亦同樣會觀察女人，再決定係咪真係想同佢一齊、長遠發展。一旦女人喺First Date做錯嘢，隨時會俾對方打入無間地獄！想知要留意乜細節？",
-    "content": "<p>面對「第一次約會要避開咩」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「第一次約會要避開咩」初期要留住選擇權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>守住界線才看得清「第一次約會要避開咩」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>從時間安排看「第一次約會要避開咩」</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>把「第一次約會要避開咩」由想像拉回行動</h2>\n<p>「第一次約會要避開咩」最容易令人把一點甜放大成希望。未有清楚行動前，先把期望放慢，才不會太早把自己放在被動位置。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>第一次約會最重要是舒服，而不是表演完美</h2>\n<p>如果你正在經歷「第一次約會要避開咩」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「<strong>第一次約會要避開咩</strong>」入面，曖昧卡住或對方唔表態應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>「<strong>第一次約會要避開咩</strong>」入面，我主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇「<strong>第一次約會要避開咩</strong>」對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
+    "summary": "由 SP/FWB 轉正非常困難，因為對方已將你歸類為「短期伴侶」。",
+    "content": "<h2>先看常見情境</h2>\n<p>「我哋好夾，無論係傾計定係...床上。但佢遲遲唔肯確認關係」。這就是典型的 Situationship (曖昧不明關係)。如果不小心，好容易就會淪為 SP (Sex Partner) 或 FWB (Friends with Benefits)。</p>\n<p>為什麼他只想要性？因為，「<strong>方便</strong>」。他得到了女朋友的福利 (性 + 陪伴)。但不需要付男朋友的責任 (報備 + 承諾)。</p>\n<p>如何轉正？(The Turn)。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>拒絕<strong> 外賣式 </strong>見面</span></h2>\n<p>如果佢每次都係夜晚 11 點先搵你，上你屋企，做完就訓/走。這是 Sex Call。你要拒絕：「<strong>今晚唔得。不過星期六下午可以去飲咖啡</strong>」。將戰場由「<strong>床上</strong>」拉返去「<strong>日間生活</strong>」。如果佢拒絕日間見面，你就知道佢只想...。但在靈魂上，你係獨一無二的。多傾 Deep Talk，多展現你的價值觀。曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<h2>要由床上關係拉回日常關係</h2>\n<p>如果你想知道對方有沒有機會認真發展，不能只看親密時有多投入，而要看他願不願意在日間見你、安排正常約會、了解你的生活，以及承擔關係推進的責任。</p>\n<p>真正能轉正的關係，通常會慢慢增加生活感和情感交流；如果對方只在想親密時出現，避開承諾和日常陪伴，就要小心你只是被放在方便的位置。</p>\n<h2>再看深一層：FWB 變情侶有可能嗎的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
-    "date": "2024-03-22",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7339323.jpg",
     "coverCredit": "Photo by cottonbro studio on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-7339323/",
@@ -5537,27 +4847,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：第一次約會要避開咩？提高拍拖成功率的禁忌",
+    "coverCaption": "Asteria 相處教學：【脫單攻略】FWB 變情侶有可能嗎？3 招令他對你產生「性」以外的依賴",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 116,
-    "title": "曖昧太久無進展？由不確定關係走向情侶的做法",
+    "title": "【脫單陷阱】太快發生關係？小心變成「酒肉情侶」！3 招判斷這段感情有無將來",
     "category": "曖昧桃花",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
     "imageLabel": "曖昧",
-    "summary": "曖昧太久無進展時，最辛苦不是沒有心動，而是關係一直沒有名份。先看對方有沒有投入時間、主動安排和清楚界線，再決定要推進、放慢還是收回期待。",
-    "content": "<p>曖昧太久無進展，最容易令人一邊有希望，一邊又很不安。你們可能會聊天、會見面、會關心對方，但每次講到關係定位，對方就含糊帶過。這種不確定感會慢慢消耗你，因為你不知道自己應該繼續投入，還是其實只是停在對方舒服的位置。</p>\n<h2>先看對方有沒有把你放進生活</h2>\n<p>真正想發展的人，不會只在無聊時出現。你要看他會否主動安排下一次見面、記得你講過的事、願意交代自己的狀態，而不是只在氣氛好時講幾句曖昧說話。</p>\n<p>如果每次都是你開話題、你約時間、你配合他的節奏，這段曖昧很可能只是靠你一個人維持。關係要走向情侶，至少要有來有往，而不是你一直猜他到底有沒有意思。</p>\n<h2>不要用更多付出換一個名份</h2>\n<p>很多人在曖昧卡住時，會下意識做更多：更快回覆、更體貼、更遷就，甚至不敢問清楚，怕一問就破壞氣氛。但如果對方本身沒有打算承擔，你做得越多，只會令自己越被動。</p>\n<p>你可以保持溫柔，但不需要把全部主動權交出去。適度放慢，反而可以看清對方會否補上。如果你退一步後，對方完全沒有行動，那就是一個很重要的答案。</p>\n<h2>用低壓方式確認關係方向</h2>\n<p>推進不等於逼對方即刻承諾。你可以用輕一點但清楚的方式表達，例如「我覺得我哋相處幾好，但我唔想一直停喺唔清唔楚的位置，你點睇？」這類說法比質問更容易讓對方真實回應。</p>\n<p>重點不是要他即場說出完美答案，而是看他有沒有正面面對。如果他永遠逃避、轉話題、用甜言蜜語安撫你，卻沒有任何實際安排，曖昧就很難自然變成穩定關係。</p>\n<h2>分清慢熱和不想負責</h2>\n<p>慢熱的人未必會很快確認關係，但通常會有穩定投入；不想負責的人則會享受親近，卻避開定位。兩者最大的分別，是你能否在相處裡感到越來越清楚，而不是越來越混亂。</p>\n<p>如果對方一直給你希望，又一直不讓關係落地，你就要替自己設一個觀察期限。不是要用期限威脅對方，而是提醒自己不要無限期等一個沒有行動的人。</p>\n<h2>想由曖昧走向情侶，要保留自己的節奏</h2>\n<p>曖昧要升級，不是靠你一個人用力推。你可以表達好感，也可以給對方空間，但同時要看他是否願意用行動接住你。真正值得發展的人，會讓關係慢慢變清楚，而不是讓你一直靠猜。</p>\n<p>如果你已經很不安，可以先停一停，把最近的互動、主動程度、見面安排和對方對未來的態度寫下來。當你不再只看一兩句甜話，就會更容易分辨這段曖昧有沒有走向情侶的可能。</p>\n<h2>常見問題</h2>\n<h3>曖昧太久無進展，係咪代表對方冇意思？</h3>\n<p>不一定。有些人是慢熱或需要時間觀察，但如果對方長期只享受曖昧、不安排見面、不回應關係方向，就要小心他可能沒有打算認真發展。</p>\n<h3>我應該直接問清楚關係嗎？</h3>\n<p>可以，但建議用低壓方式講清自己的感受和需要，而不是質問對方。你要看的不是他當刻答得多好聽，而是之後有沒有實際行動令關係更清楚。</p>\n<h3>Asteria 可以點幫我判斷呢段曖昧？</h3>\n<p>我哋可以幫你拆對方訊息、見面節奏和行動投入，睇清楚對方係慢熱、有顧慮，定其實只想停留喺曖昧舒服區。</p>",
+    "summary": "「酒肉情侶」是指那些只有娛樂和性，缺乏深層交流的關係。",
+    "content": "<h2>現代人講求效率</h2>\n<p>現代人講求效率，連戀愛都要快。認識一星期就拍拖，拍拖一個月就同居。但係，快唔一定好。如果你哋嘅關係係，「<strong>急住戀愛，又急住做愛</strong>」，小心你哋變咗，「<strong>酒肉情侶</strong>」。什麼是「<strong>酒肉情侶</strong>」？你們在一起很開心。但僅限於「玩」。約會內容：食好西、睇戲、飲酒、Staycation。對話內容：講八卦、講笑、講色情野。缺失內容：從來唔講心事、唔講未來、唔講價值觀。</p>\n<h2>為什麼這樣很危險？</h2>\n<div class=\"article-section-card\"><p>因為這種關係，「<strong> 根基不穩 </strong>」。激情 (Passion) 係會退卻嘅。當新鮮感無咗，或者遇到困難 (例如失業、生病)，你就會發現原來你哋係「<strong> 最熟悉的陌生人 </strong>」，根本無能力一齊面對風浪。</p></div><h2>再看深一層：太快發生關係？小心變成「<strong>酒肉情侶</strong>」！3 招判斷這段感情有無將來的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
-    "date": "2024-06-28",
-    "tags": [
-      "信任危機",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-7780237.jpg",
     "coverCredit": "Photo by Mikhail Nilov on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/two-women-holding-hands-7780237/",
@@ -5565,47 +4869,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8560426.jpg",
-        "caption": "內文配圖：曖昧太久無進展？由不確定關係走向情侶的做法",
+        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
         "credit": "Photo by Timur Weber on Pexels",
         "creditUrl": "https://www.pexels.com/photo/portrait-of-a-couple-together-8560426/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4150443.jpg",
-        "caption": "內文配圖：曖昧太久無進展？由不確定關係走向情侶的做法",
+        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
         "credit": "Photo by Mid.art_for.memories on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-on-date-4150443/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6643008.jpg",
-        "caption": "內文配圖：曖昧太久無進展？由不確定關係走向情侶的做法",
+        "caption": "內文配圖：不想淪為炮友？如何由曖昧關係走向真正情侶",
         "credit": "Photo by Alena Darmel on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-holding-the-man-s-hands-while-he-is-looking-away-6643008/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：曖昧太久無進展？由不確定關係走向情侶的做法",
-    "inlineCaption": "曖昧要升級，不只看甜不甜，還要看對方有沒有用行動令關係變清楚。"
+    "coverCaption": "Asteria 相處教學：【脫單陷阱】太快發生關係？小心變成「酒肉情侶」！3 招判斷這段感情有無將來",
+    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 117,
-    "title": "結婚後遇到心動的人怎麼辦？先看懂自己的需要",
+    "title": "【結婚前必看】你是適合結婚嗎？認清 Mr. Right 的 5 個關鍵指標",
     "category": "長期關係",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
     "imageLabel": "長久",
-    "summary": "唔知大家最近有冇睇Netflix嘅台劇《童話故事下集》，如果好似女主角咁，喺結婚後遇到令自己心動嘅人，你有冇諗過自己會點處理？",
-    "content": "<h2>信任開始動搖時，先看清眼前的信號：回到「結婚後遇到心動的人怎麼辦」來看</h2>\n<p>結完婚之後 可能都有機會遇到另一個令自己心動嘅人 呢類情況一啲都唔罕見，畢竟人係有感情同慾望嘅動物 但點樣處理呢種感覺 可能係一種挑戰。</p>\n<p>你夠唔夠膽話自己結婚後 100%肯定唔會對其他人心動？</p>\n<p>萬一唔小心地心動咗 又其實點處理？</p>\n<h2>了解自己嘅感受</h2>\n<p>先問下自己 呢種心動係一時衝動 定係因為現有婚姻入面有啲缺失，因為有時我哋會將新鮮感錯誤當成「愛」，有心理學研究話新鮮感會刺激多巴胺分泌，令人產生興奮同快樂，但呢種感覺通常都係短暫，你對「<strong>新嘅人</strong>」心動，其實好大機會源自你對而家個另一半嘅不滿/失望。</p>\n<h2>長遠關係要看現實責任能否一起承擔：回到「結婚後遇到心動的人怎麼辦」來看</h2>\n<p>喺心理學入面 有一個「<strong>即時快感同長遠滿足</strong>」嘅概念 簡單啲講，即時快感會令人忽略長遠後果 但做出衝動嘅決定之後，當事人往往會帶嚟內疚、後悔情緒，所以 記得考慮清楚 如果跟隨呢份心動而出軌 對自己、伴侶、甚至家庭會有咩影響。</p>\n<p>假設你係30歲結婚 一世人流流長 長命嘅話 都仲要對住你嘅另一半50-60年，冇可能完全唔會對其他人人動，既然誘惑係生活中無可避免嘅一部分 點樣應對先係最緊要。</p>\n<p>保持距離係避免進一步發展嘅關鍵，如果呢段心動已經影響到你嘅婚姻生活 不妨考慮搵專業嘅輔導員，幫你調整內心同尋找合適嘅方法！</p>\n<h2>常見問題</h2>\n<h3>結婚後遇到心動的人，是否代表婚姻錯了？</h3>\n<p>不一定。心動可能反映你有未被看見的需要，也可能只是新鮮感。重點是你如何處理，而不是立即用心動否定婚姻。</p>\n<h3>這種心動應該講出來嗎？</h3>\n<p>先整理自己真正缺的是陪伴、被理解、刺激感還是逃避壓力。未想清楚前，不要用衝動行動傷害現有關係。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DHJE2vkSIrF/",
-    "date": "2025-03-13",
-    "tags": [
-      "信任危機",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "summary": "激情可以維持戀愛，但價值觀才能維持婚姻。",
+    "content": "<h2>拍得耐，不等於適合結婚</h2>\n<p>「<strong>拍咗幾年拖，係咪應該結婚？</strong>」這個問題好常見，但結婚不是因為年紀到了、屋企催促，或者一段關係已經拖得太久。真正要問的是：你們是否有能力一起面對婚後的現實生活？</p>\n<p>拍拖時可以靠心動、浪漫和相處習慣維持，但婚姻會放大金錢、家庭、責任、衝突和未來規劃。如果某些問題在婚前已經反覆出現，婚後通常不會自然消失，只會變得更難避開。</p>\n<p>想判斷對方是不是 Mr. Right，可以先看以下 5 個婚前關鍵指標。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>原生家庭和家人界線</span></h2>\n<p>結婚不只是兩個人的事，也會牽涉雙方家庭。你可以觀察對方怎樣看待父母的意見、遇到家庭壓力時會不會有自己立場，以及是否懂得在伴侶和家人之間建立界線。</p>\n<p>如果對方凡事都以家人意見為先，或者一遇到衝突就要你單方面遷就他的家庭，婚後你可能面對的不是兩個人的婚姻，而是一段長期被第三方介入的關係。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>金錢觀是否能夠磨合</span></h2>\n<p>金錢觀不一定要完全相同，但至少要談得清楚。一個人重視儲蓄和買樓，另一個人重視享受和即時消費，本身不一定有錯，問題是雙方能否一起制定可行的生活安排。</p>\n<p>婚前可以留意對方是否願意公開討論收入、開支、儲蓄、債務和未來責任。如果一談錢就逃避、發脾氣，或者永遠只想你配合他的用錢方式，婚後很容易變成長期爭拗。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>情緒穩定度和衝突反應</span></h2>\n<p>婚姻裡一定會有壓力，所以要看的不是對方平日有幾溫柔，而是有壓力、失望或爭執時，他會怎樣處理情緒。</p>\n<p>如果他一不順心就冷暴力、失控發脾氣、摔東西，或者用說話傷害你，這些都不是小問題。情緒穩定不是沒有情緒，而是即使不開心，也不會用傷害關係的方式處理。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 4 點</span><span>解決問題的能力</span></h2>\n<p>適合結婚的人，不是永遠不會吵架，而是吵完之後願意一起修補。你可以觀察對方是否願意聽你說完、承認自己的責任、一起找方法，而不是每次都把問題推回你身上。</p>\n<p>如果一段關係每次衝突都只有你道歉、你退讓、你收拾殘局，久而久之你會很累。婚姻需要的是兩個人都願意面對問題，而不是一個人負責維持表面和平。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 5 點</span><span>未來規劃和生活方向</span></h2>\n<p>婚前要談的不只是婚禮，而是婚後生活。你們想不想要小朋友？住在哪裡？如何分配家務？怎樣照顧雙方父母？工作和家庭如何取捨？這些問題不浪漫，但非常現實。</p>\n<p>如果對方只想享受拍拖，卻一直避談未來，或者每次談到責任就含糊帶過，你需要分清楚：他是暫時未準備好，還是根本沒有打算和你一起規劃人生。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>拍咗幾年拖，係咪應該結婚？</li><li>結婚不只是兩個人的事，也會牽涉雙方家庭。</li><li>金錢觀不一定要完全相同，但至少要談得清楚。</li><li>婚姻裡一定會有壓力，所以要看的不是對方平日有幾溫柔，而是有壓力。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題關乎長期安排，重點不是逼對方即刻承諾，而是看你們能否坦白談未來、責任和現實限制。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4308060.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/serious-couple-in-conflict-sitting-on-couch-in-living-room-4308060/",
@@ -5633,27 +4931,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：結婚後遇到心動的人怎麼辦？先看懂自己的需要",
+    "coverCaption": "Asteria 相處教學：【結婚前必看】你是適合結婚嗎？認清 Mr. Right 的 5 個關鍵指標",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 118,
-    "title": "婚前關係不安點算？判斷是否適合走長遠",
-    "category": "長期關係",
+    "title": "【感情危機】隱性家暴更可怕？拆解 3 種「看不見的暴力」及自救方法",
+    "category": "關係危機",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "長久",
-    "summary": "你敢唔敢一世都唔結婚呢？好多人未考慮清楚結婚原因，但就因為世俗眼光而喺適婚年齡急住結婚，不過你有冇諗過，你喺「合適」嘅時候結婚，你嘅結婚對象又係唔係「適合」嘅人呢？",
-    "content": "<p>我同另一半已經拍拖5 年拖， 身邊嘅親朋好友都問我哋 你哋感情咁穩定點解仲唔結婚</p>\n<p>又或者會有客人有另一番苦惱： 我已經就快35歲， 好想快啲結婚 但係仲未搵到啱我嘅另一半！</p>\n<p>不論係思考緊結唔結婚好 定係好想結婚嘅你 有冇諗過結婚嘅意義到底係乜嘢？</p>\n<p>「婚姻象徵是最純粹嘅愛情，兩個人因為相愛，所以願意長相廝守，互伴終生。」，但係當你向身邊嘅親朋好友問呢個問題 真愛往往是最少會得到嘅回答，大部分人喺看待結婚時 心入都唔係咁樣考量嘅 咁佢哋心中嘅考量係乜呢。</p>\n<p>你想結婚嘅理由又係乜呢？</p>\n<h2>婚姻嘅意義係乜嘢</h2>\n<p>係為咗想要有人照顧自己？</p>\n<p>係為咗雙方嘅資源能共享？</p>\n<p>定係為咗令感情多有一份保障？</p>\n<p>你又係為咗咩原因而想結婚？</p>\n<p>因為年近中年，個個都結咗婚，你都要結？</p>\n<p>因為屋企人催你結婚，所以你都要結？</p>\n<p>因為想結婚 所以去尋找一個符合標準嘅結婚對象 我哋唔可以話呢個順序係錯誤嘅，但係你要再思考一下：你想結婚 一定是為咗滿足、達成某啲目標，例如「<strong>擁有幸</strong>」，咁呢個目標除了結婚以外 真係冇其他辦法可以幫你達成。</p>\n<h2>婚前不安要分清是壓力，還是真正不適合</h2>\n<h3>如果將婚姻當成「<strong>擁有幸福</strong>」嘅方法</h3>\n<p>咁婚姻對就只不過係一個跳板 當一個人認為「<strong>婚姻可以令自己得到幸福</strong>」，並為咗這份幸福而去「<strong>搵人拍拖</strong>」 呢個出發點本身就係有啲錯誤，當然，可能你喺「<strong>搵人拍拖</strong>」過程中 的確係可以搵到真愛，但係，結婚唔係100%保障會令人幸福。</p>\n<h2>長遠關係要看現實責任能否一起承擔：回到「婚前關係不安點算」來看</h2>\n<p>而家嘅另一半自然係你嘅結婚對象 但係到底佢係咪一個好老公人選</p>\n<p>🔎 同佢一齊，你係咪真係打從心底覺得快樂？</p>\n<p>🔎 你哋之間係咪有共同話題、愛好？</p>\n<p>🔎 同佢一齊呢段時間，你嘅正能量有冇多咗？</p>\n<p>🔎 你接唔接受到佢嘅缺點？佢又可唔可以包容你嘅缺點？</p>\n<p>🔎 同佢一齊，你係咪可以做返自己嗎？</p>\n<p>🔎 呢段關係係咪平等？</p>\n<p>🔎 你係咪真心信任佢？對方又係咪信任你？</p>\n<p>🔎 你哋對於未來嘅方向係咪一致？</p>\n<p>🔎 佢可唔可以成為你背後堅實嘅後盾？</p>\n<p>有時都未諗清楚自為何乜要結婚 未諗清楚現時嘅另一半係咪合適嘅結婚對象，但已經成為social norms嘅受害者 社會好多人會將30幾歲都未得嫁出嘅人，標籤為失敗者，所以令大家先要趕住結婚 但係，婚姻係一世嘅事。</p>\n<p>千萬唔好因為世俗觀念 令自己俾壓力自己 要逼自己喺適當嘅年齡結婚！</p>\n<h2>常見問題</h2>\n<h3>婚前不安是正常，還是警號？</h3>\n<p>婚前有壓力很正常，但如果不安來自價值觀衝突、信任問題、金錢或家庭界線長期無法處理，就需要認真面對。</p>\n<h3>婚前最應該傾清楚咩？</h3>\n<p>要傾金錢、住屋、家務、家庭界線、孩子想法和衝突處理。婚姻不是只看愛不愛，也要看能不能一起生活。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/C9AXbcUS53v/",
-    "date": "2024-07-04",
-    "tags": [
-      "關係進展",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "警號",
+    "summary": "家暴不只是肢體衝突，還包括言語羞辱、經濟控制及冷暴力。",
+    "content": "<h2>提到家暴</h2>\n<p>提到家暴，大家通常只會諗到打打殺殺。但其實，「<strong>隱性家暴 (Coercive Control)</strong>」，更加普遍，而且更難察覺。好多女仔因為身上無傷痕，就以為自己無事，結果心理受到嚴重創傷。</p>\n<p>這 3 種行為，其實都係家暴。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>言語暴力與羞辱 (Verbal Abuse)</span></h2>\n<p>唔係淨係鬧粗口先叫暴力。如果佢成日講：「<strong> 你有冇腦架？</strong>」、「<strong> 除咗我邊個會要你？</strong>」，這是在，「<strong> 系統性地摧毀你的自尊 </strong>」。久而久之，你會覺得自己真係好差，離開佢就生存唔到。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>經濟控制 (Financial Abuse)</span></h2>\n<p>佢係咪要你匯報每一筆開支？或者沒收你嘅提款卡，話幫你儲錢？這不是理財，這是控制。當你無錢喺身，你就無能力離開佢，只能夠依附佢生活。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>社交隔離 (Isolation)</span></h2>\n<p>「<strong> 你啲朋友都係豬朋狗友，唔好見啦 </strong>」。佢慢慢切斷你同家人、朋友嘅聯絡，令你嘅世界只剩下佢一個。當你發生事想求救時，你會發現通訊錄無人可以打。</p>\n<p>面對隱性家暴，你可以點做？首先，你要相信自己嘅直覺：「<strong>如果你覺得唔舒服，咁就係有問題</strong>」。唔好幫佢搵藉口（例如佢返工壓力大）。嘗試設立，「<strong>心理邊界</strong>」，當佢羞辱你時，冷靜地講：「<strong>我唔接受你用呢種語氣同我講嘢</strong>」。然後離開現場。</p>\n<h2>再看深一層：隱性家暴更可怕？拆解 3 種「<strong>看不見的暴力</strong>」及自救方法的真正訊號</h2>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>提到家暴，大家通常只會諗到打打殺殺。</li><li>言語暴力與羞辱 (Verbal Abuse)</li><li>經濟控制 (Financial Abuse)</li><li>社交隔離 (Isolation)</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-3912439.jpg",
     "coverCredit": "Photo by Gustavo Fring on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-watching-movie-on-laptop-3912439/",
@@ -5661,47 +4953,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8374279.jpg",
-        "caption": "內文配圖：婚前關係不安點算？判斷是否適合走長遠",
+        "caption": "內文配圖：你們適合結婚嗎？婚前必看的關係判斷重點",
         "credit": "Photo by AI25.Studio  AI GENERATIVE on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-working-with-laptop-in-living-room-8374279/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-6789142.jpg",
-        "caption": "內文配圖：婚前關係不安點算？判斷是否適合走長遠",
+        "caption": "內文配圖：你們適合結婚嗎？婚前必看的關係判斷重點",
         "credit": "Photo by cottonbro studio on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-close-up-shot-of-a-couple-lying-down-on-a-bed-6789142/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7671449.jpg",
-        "caption": "內文配圖：婚前關係不安點算？判斷是否適合走長遠",
+        "caption": "內文配圖：你們適合結婚嗎？婚前必看的關係判斷重點",
         "credit": "Photo by Ivan S on Pexels",
         "creditUrl": "https://www.pexels.com/photo/woman-in-gray-jacket-sitting-on-black-chair-7671449/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：婚前關係不安點算？判斷是否適合走長遠",
+    "coverCaption": "Asteria 相處教學：【感情危機】隱性家暴更可怕？拆解 3 種「看不見的暴力」及自救方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 119,
-    "title": "情緒太滿令伴侶退縮？親密關係的修復方法",
-    "category": "溝通相處",
+    "title": "【感情修復】感情出現裂痕注定分手？心理學家：只要做到這 3 點，裂痕反而令關係更堅固",
+    "category": "復合挽回",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "溝通",
-    "summary": "另一半太痴身，是否因為對方缺乏安全感？抑或其實是「依附焦慮」？怎樣減少對方的痴身？看下去吧！",
-    "content": "<p>工作期間收到數十個來自另一半的訊息 一直被問你為何沒有回覆覆，又經常追問甚麼時候能再見面，明明今天才約會 卻在明天又說自己太想念你，問今日能否再見面，雖然聽起來看是so sweet，但有時會覺得對方太「<strong>痴身</strong>」 到底對方是缺乏安全感？</p>\n<p>或者本身有「<strong>依附焦慮</strong>」？</p>\n<p>安全感不足 有時對方過份依賴未必源於性格問題，而可能是因為曾經在關係中經歷某些事件，令對方產生疑慮 擔心你對這段關係其實並不在意。</p>\n<ul><li>應對方法</li></ul>\n<p>只要你願意主動解釋清楚 給予實際的承諾與穩定的行動支持 這些情況都可以慢慢改善</p>\n<h2>依附焦慮</h2>\n<p>是一種深層的情感模式 源自早期經歷或長期關係中的不安，親密關係極度敏感 經常擔心被忽視、被拋棄，即使作為另一半的你並無異常表現，對方仍可能出現過度聯絡、情緒勒索、測試你愛不愛自己的行為，🔍 特徵 一日未覆訊息就焦慮不安 經常懷疑你變心。</p>\n<p>喜歡「<strong>測試</strong>」你是否重視自己</p>\n<h2>處理「情緒太滿令伴侶退縮」前先拆真正想要甚麼</h2>\n<p>以為只要多溝通 你們雙方的連結就會相應穩固？</p>\n<p>不一定！</p>\n<p>也許要再依靠外界能量的加持！</p>\n<p>白魔法儀式可以幫你</p>\n<ul><li>由能量層面傳遞你內心未能言喻的愛 &amp; 關懷</li></ul>\n<ul><li>打開對方內在的接收頻率 讓他/她感受到你仍然重視對方</li></ul>\n<ul><li>淡化過去的怨氣或誤解 重拾彼此之間的連結</li></ul>\n<ul><li>提升彼此心靈上的共鳴與理解</li></ul>\n<p>比起單靠口頭分享感受 儀式等於一個沉默但有力的能量訊號 重新打開一條可以被理解的感情通道</p>\n<p>面對一個「<strong>痴身</strong>」的另一半 有不少人都會覺得很煩躁，但你要記得：對方「<strong>痴身</strong>」並不是為了特意煩著你 也不是對你極不信任的表現，而是因為內心的想不安未有人真正照顧過，所以才會出現依附焦慮，只要好好安慰、穩定好你們雙方的連結 情況一定會有所改善。</p>\n<p>面對這類情況，最重要不是用更多訊息證明愛，而是用穩定、清楚、可預期的互動慢慢建立安全感。</p>\n<h2>常見問題</h2>\n<h3>面對「情緒太滿令伴侶退縮」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「情緒太滿令伴侶退縮」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「情緒太滿令伴侶退縮」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DOz4U-SkjCI/",
-    "date": "2025-09-20",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "復合",
+    "summary": "感情裂痕不代表終結，而是「升級」的訊號。",
+    "content": "<p>感情裂痕不代表終結，而是「<strong>升級</strong>」的訊號。根據日本「<strong>金繼 (Kintsugi)</strong>」哲學，用金粉修補的陶瓷比原本更美。只要雙方願意：1. 正視問題而不逃避、2. 停止互相指責、3. 重建信任，這段經歷會成為你們獨有的羈絆。</p>\n<h2>感情已經出現裂縫</h2>\n<p>感情已經出現裂縫，是否一定代表會分手：如果還來嘗試修復感情，到底還有用嗎？好多人一見到裂痕就想放棄，覺得「<strong> 有條刺 </strong>」、「<strong> 返唔到轉頭 </strong>」。但其實，世界上無一段長久關係係無裂痕嘅。</p>\n<h2>裂痕的意義</h2>\n<p>裂痕代表你哋嘅相處模式出現咗 Bug。這是系統發出嘅，「<strong> 更新通知 </strong>」。如果你選擇無視，系統就會崩潰 (分手)。如果你選擇修復 (Debug)，系統就會升級 (更深層的連結)。</p>\n<h2>修復的關鍵</h2>\n<div class=\"article-section-card\"><p>唔好嘗試「<strong> 回到過去 </strong>」(Go back)，要嘗試「<strong> 重新開始 </strong>」(Start over)。過去那個完美的形象已經破滅，依家你要愛嘅，係眼前這個真實、有缺點、但願意同你修補嘅人。</p></div><h2>再看深一層：感情出現裂痕注定分手的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>裂痕的意義</li><li>修復的關鍵</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-10533285.jpg",
     "coverCredit": "Photo by Nguyễn Thanh Tùng on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/photo-of-a-couple-in-black-leather-jackets-talking-to-each-other-10533285/",
@@ -5709,47 +4995,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-8836421.jpg",
-        "caption": "內文配圖：情緒太滿令伴侶退縮？親密關係的修復方法",
+        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
         "credit": "Photo by Los Muertos Crew on Pexels",
         "creditUrl": "https://www.pexels.com/photo/a-couple-in-the-coffee-shop-8836421/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7964174.jpg",
-        "caption": "內文配圖：情緒太滿令伴侶退縮？親密關係的修復方法",
+        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
         "credit": "Photo by Felicity Tai on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-and-woman-talking-in-the-hallway-while-holding-papers-7964174/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-4307638.jpg",
-        "caption": "內文配圖：情緒太滿令伴侶退縮？親密關係的修復方法",
+        "caption": "內文配圖：另一半受不了你的情緒？親密關係中的情緒修復方法",
         "credit": "Photo by Ketut Subiyanto on Pexels",
         "creditUrl": "https://www.pexels.com/photo/cheerful-couple-having-conversation-on-bed-4307638/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：情緒太滿令伴侶退縮？親密關係的修復方法",
+    "coverCaption": "Asteria 相處教學：【感情修復】感情出現裂痕注定分手？心理學家：只要做到這 3 點，裂痕反而令關係更堅固",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 120,
-    "title": "成日呷醋不安點算？處理伴侶異性關係的安全感方法",
-    "category": "溝通相處",
+    "title": "【感情操控】男朋友成日話「為你好」？揭開 PUA 的 5 個恐怖真相！",
+    "category": "關係危機",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "溝通",
-    "summary": "另一半成日同異性朋友傾計？令你經常忍唔住呷醋、妒忌，唔鍾意佢同異性走得太親密，咁係咪自己有問題？又到底應該點樣調整心態？",
-    "content": "<p>「成日呷醋不安點算」會牽動很多不安，越亂越要先分清事實、猜測和感受。當你看清自己真正需要的是安慰、承諾、空間還是答案，下一步就不會只被情緒推著走。</p> <h2>先分清「成日呷醋不安點算」裡的事實和想像</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。 你可以先把腦入面的劇情寫出來，再逐句問自己：這是事實、推測，還是我害怕發生的結果？分開之後，情緒會比較容易落地。</p> <h2>「成日呷醋不安點算」不要靠情緒測試答案</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。 情緒不是錯，但情緒最高漲時最容易講錯話。先讓自己回到穩定狀態，再決定要不要發訊息，通常會少很多後悔。</p> <h2>面對「成日呷醋不安點算」，把焦點收回自己</h2>\n<p>你可以在乎對方反應，但不要把所有價值感交給對方決定。當你知道自己真正想要什麼，才不會每一次波動都被拉走。 如果你需要的是安全感，就不要只用質問去換答案；可以改成表達你希望對方怎樣回應，這樣對方比較知道如何接住你。</p> <h2>看清自己真正想要的是甚麼：回到「成日呷醋不安點算」來看</h2>\n<p>有時你以為自己想要答案，其實是想要安全感；以為想復合，其實是不甘心。把需要講清楚，才不會用錯方法處理情緒。 當你不再把所有價值感交給對方反應決定，就會更容易看見這段關係是否真的適合，而不是只被一刻心動或不甘心帶走。</p> <h2>情緒很滿時，先讓自己回到穩定：回到「成日呷醋不安點算」來看</h2>\n<p>如果你被「成日呷醋不安點算」拉到很亂，先給自己一點時間回到穩定。你可以把感受寫低、分清事實和猜測，再決定要不要同對方談。當你不再被即時焦慮推著走，很多原本看似一定要立刻處理的事，會變得更清楚，也更容易選到不後悔的做法。</p>\n<h2>常見問題</h2>\n<h3>遇到「成日呷醋不安點算」，我應該點樣開口？</h3>\n<p>遇到「成日呷醋不安點算」，可以先講具體事件，再講自己的感受，最後提出一個可做到的小希望。不要一開始就定性對方人格，否則對方很容易立即防衛。</p>\n<h3>處理「成日呷醋不安點算」時，對方一聽就逃避點算？</h3>\n<p>處理「成日呷醋不安點算」時，可以先把訊息縮短，只處理一個重點。對話壓力低一點，對方才較願意留下來聽。</p>\n<h3>Asteria 的相處教學可以點樣幫到「成日呷醋不安點算」？</h3>\n<p>Asteria 可以按「成日呷醋不安點算」的情況幫你 review 對話，逐句拆邊句會推遠對方、邊句可以降低壓力，再整理更容易被聽見的表達方式。</p>",
+    "imageLabel": "警號",
+    "summary": "這可能不是愛，而是精心設計的情感操控 (Gaslighting / PUA)。",
+    "content": "<h2>先看常見情境</h2>\n<p>佢成日都話係為你好。但你有冇諗過，其實佢嘅行為係一種操控？一齊睇吓你身邊嘅另一半，有冇呢類潛在操控嘅傾向啦：一開始對你極好，令你覺得搵到靈魂伴侶，其實係為咗令你放低戒心，快速依賴佢。當你上釣後，佢開始批評你的衣著、朋友、甚至性格。「<strong>你著得好奇怪</strong>」、「<strong>你啲朋友都係利用你</strong>」。令你開始自我懷疑，覺得自己真係有問題。不准你見朋友、check 你電話，令你失去支援網絡，全世界只剩下佢一個可以依靠。</p>\n<p>「<strong>如果你愛我，你就唔會咁做</strong>」。用罪惡感黎綁架你，令你覺得拒絕佢係一種錯。5. 宣示主權 (Control)：最後，你變成他的附屬品，失去自我。</p>\n<h2>再看深一層：男朋友成日話「<strong>為你好</strong>」的真正訊號</h2>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。</p>\n<h2>你可以先觀察三個位置</h2>\n<p>對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「愛不愛」更能反映關係狀態。</p>\n<h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-08-10",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4853723.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-couple-face-to-face-with-each-other-4853723/",
@@ -5777,27 +5057,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：成日呷醋不安點算？處理伴侶異性關係的安全感方法",
+    "coverCaption": "Asteria 相處教學：【感情操控】男朋友成日話「為你好」？揭開 PUA 的 5 個恐怖真相！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 121,
-    "title": "對方不像以前熱情？分清變淡、壓力與抽離",
-    "category": "溝通相處",
+    "title": "【感情變淡】熱戀期過後無嘢講？5 招打破「冷淡期」重燃愛火",
+    "category": "復合挽回",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "對方不像以前熱情，可能是感情變淡、生活壓力，也可能是進入穩定期。不要只看熱情多少，要看投入、交代和修補意願是否仍在。",
-    "content": "<p>熱戀期過後，互動變淡一點很正常；但如果對方明顯抽離、少見少覆、對你的感受無反應，就需要認真分清是自然穩定，還是感情降溫。</p>\n<h2>穩定期不是冷淡</h2>\n<p>穩定期可以少一點刺激，但仍然有關心和交代。冷淡則是你明顯感到被放低，連基本連繫都要你追。</p>\n<p>穩定期仍然會有基本關心，例如願意交代、願意見面、願意聽你講感受。冷淡則是你越來越像在單方面維持關係。</p>\n<h2>看生活壓力是否有交代</h2>\n<p>如果對方忙，但願意解釋、補回時間，你可以理解；如果只用忙做擋箭牌，完全不理你的感受，就要小心。</p>\n<p>忙碌本身不是問題，問題是忙完之後有沒有補回。真正有心的人，未必時刻在線，但會讓你知道你沒有被忘記。</p>\n<h2>不要用追問拉回熱情</h2>\n<p>越追問「你係咪唔愛我」，對方越容易有壓力。可以先講你的感受和需要，再看他是否願意調整。</p>\n<p>追問太多會令焦慮加劇，也容易令對方更想退。你可以先把觀察講出來，例如「最近我們少了見面，我有點不安」，而不是直接定罪。</p>\n<h2>觀察行動是否仍有你</h2>\n<p>熱情可以下降，但他是否仍把你放進計劃、願意見面、記得承諾，才是更重要的訊號。</p>\n<p>熱情可能會變淡，但投入不應完全消失。你要看他是否仍然願意安排時間、回應你的需要、把你放進未來計劃。</p>\n<h2>把期待調整成可持續節奏</h2>\n<p>有時不是回到最初，而是建立新的相處方式。兩個人都舒服，關係才走得長。</p>\n<p>新的節奏需要兩個人一起調整，不是你一個人降低要求。若對方願意談，你們可以重新建立舒服頻率；若他完全不理，才是更大的訊號。</p>\n<h2>常見問題</h2>\n<h3>變淡是否代表不愛？</h3>\n<p>不一定，要看投入和交代是否仍然存在。</p>\n<h3>我應該點樣同佢講？</h3>\n<p>講具體變化和你的感受，不要一開始就控訴他不愛。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你分清穩定期、壓力期和真正抽離。</p>",
+    "imageLabel": "復合",
+    "summary": "關係變淡是必經階段，這代表你們由「激情期」進入了「穩定期」。",
+    "content": "<p>熱戀期過後無話題、少了心跳、相處變得平淡，不一定代表你們已經不愛。很多關係去到穩定期，都會由一開始的高刺激，慢慢變成日常陪伴。真正需要判斷的，不是激情有沒有下降，而是你們還願不願意為關係注入新的互動。</p>\n<p>初初一齊時，兩個人可能日日傾電話、見面不捨得走，連小事都想分享。去到後來，食飯各自看電話，放工回家只想休息，你自然會驚：「<strong>我哋係咪已經無愛？</strong>」但冷淡期未必是分手訊號，它也可以是一個提醒：關係需要由熱戀，轉入更成熟的經營方式。</p>\n<h2>冷淡期不是無愛，而是激情回落</h2>\n<p>熱戀期的強烈感覺，和大腦入面的多巴胺、苯乙胺等化學反應有關。這些反應會令人覺得對方特別吸引，訊息一來就開心，見不到面就掛住。</p>\n<p>但大腦不可能長期維持最高刺激狀態。當關係穩定下來，激情自然會回落，取而代之的是習慣、安全感和生活節奏。這不是壞事，只是你們不再靠「<strong>新鮮</strong>」維持關係，而要開始靠「<strong>選擇</strong>」和「<strong>經營</strong>」維持親密。</p>\n<h2>第一件事：接受平淡，不要急著製造危機</h2>\n<div class=\"article-section-card\"><p>很多人一感覺關係變淡，就會很焦慮，甚至用吵架、試探、冷淡去確認對方還在不在乎自己。但這樣做只會令原本可以修補的冷淡期，變成真正的關係壓力。</p><p>平淡不一定等於無聊，它有時代表你們已經有一定安全感。你要做的不是否定平淡，而是分清：這是正常穩定期，還是大家真的停止投入。如果只是少了刺激，可以慢慢加回互動；如果是長期忽視、逃避、沒有關心，就需要認真溝通。</p></div><h2>第二件事：創造新的共同經歷</h2>\n<p>大腦喜歡新鮮感。關係進入冷淡期時，不一定要靠大旅行或昂貴禮物才能回溫，反而可以由一些「<strong>未試過的小事</strong>」開始。</p>\n<p>例如每個月一起做一件新的事：去一間未去過的餐廳、學一個小手作、行一條新的路線、一起做運動、一起完成一個小挑戰。重點不是活動有幾特別，而是你們重新有「一起經歷」的感覺。</p><p>新鮮感最有用的地方，是令你重新看見對方不同的一面。當你們只剩下返工、食飯、睡覺，關係自然會變成例行公事；但當你們一起經歷新場景，互動就會重新有活力。</p>\n<h2>第三件事：重啟細小儀式感</h2>\n<p>儀式感不是浮誇，也不是一定要紀念日大餐。真正有用的儀式感，是一些穩定、細小、但能提醒彼此「<strong>我們仍然重視這段關係</strong>」的動作。</p>\n<p>例如出門前抱一抱、睡前講一句晚安、每星期留一餐不看電話的飯、紀念日寫幾句真心話。這些小事看似普通，但長期累積，就像感情保溫瓶，令關係不會因為日常忙碌而慢慢變冷。</p>\n<h2>第四件事：重新練習分享生活</h2>\n<p>冷淡期最常見的變化，是分享慾下降。以前看到一件小事都想講給對方聽，後來覺得講了也沒反應，於是慢慢收起自己。當兩個人都不再分享，關係就會變得像室友。</p>\n<p>想重新拉近距離，可以由很小的分享開始，不需要一開口就談很深的關係問題。可以講今天發生的小事、看到的笑話、心情一點點變化。重點是讓對方重新進入你的日常，而不是等到爆發時才一次過傾全部問題。</p>\n<h2>第五件事：把冷淡講出來，但不要用指責開場</h2>\n<div class=\"article-section-card\"><p>如果你真的覺得關係越來越淡，可以講，但不要一開口就說「<strong>你變咗</strong>」、「<strong>你唔愛我</strong>」。這些句子會令對方防衛，最後討論不成，變成吵架。</p><p>可以改成：「我最近覺得我哋少咗好好相處嘅時間，我有啲唔安。可唔可以今個星期留一晚一齊食飯，不看電話？」這樣講，焦點會由責備變成具體修補，對方也比較容易知道可以怎樣做。</p></div><h2>感情拯救所話你知</h2>\n<p>冷淡期不可怕，可怕的是兩個人都假裝沒事，然後讓距離越拉越遠。真正成熟的關係，不是永遠熱烈，而是在平淡裡仍然願意選擇對方、靠近對方、一起更新相處方式。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>冷淡期不是無愛，而是激情回落</li><li>第一件事</li><li>第五件事</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你覺得關係變淡，先不要急著判定感情完結。可以先看你們是否仍願意安排時間、回應彼此需要，以及一起嘗試新的相處方式。</p>\n<h2>常見問題</h2>\n<h3>對方少覆或冷淡係咪代表冇機會？</h3>\n<p>唔一定。少覆可能係情緒退後、壓力、逃避衝突，亦可能係感情降溫。重點係觀察佢冷淡持續幾耐、會唔會主動補返，以及你每次追問後關係有冇更緊。</p>\n<h3>我應該繼續追問定暫停？</h3>\n<p>通常唔建議不停追問。可以先穩住情緒，用一兩句清楚表達感受，再留空間俾對方回應；如果對方長期避開，就要重新評估互動模式。</p>\n<h3>Asteria 可以點幫我判斷？</h3>\n<p>我哋會幫你拆對方心態、關係卡位同訊息策略，睇下應該拉近、放慢、定先守住距離，避免越急越推遠。</p>",
     "sourceIg": "",
-    "date": "2023-11-04",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-36763293.jpg",
     "coverCredit": "Photo by Vitaly Gariev on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-couple-discussing-in-modern-kitchen-setting-36763293/",
@@ -5805,47 +5079,41 @@ export const teachingPosts: TeachingPost[] = [
     "images": [
       {
         "src": "/article-custom-images/stock_local/pexels-35696948.jpg",
-        "caption": "內文配圖：對方不像以前熱情？分清變淡、壓力與抽離",
+        "caption": "內文配圖：覺得對方唔夠愛你？先看清關係變淡的真正原因",
         "credit": "Photo by Thái Trường Giang on Pexels",
         "creditUrl": "https://www.pexels.com/photo/couple-enjoying-nature-on-rock-formation-in-vietnam-35696948/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-7963834.jpg",
-        "caption": "內文配圖：對方不像以前熱情？分清變淡、壓力與抽離",
+        "caption": "內文配圖：覺得對方唔夠愛你？先看清關係變淡的真正原因",
         "credit": "Photo by Felicity Tai on Pexels",
         "creditUrl": "https://www.pexels.com/photo/man-wearing-a-long-sleeves-holding-a-notebook-7963834/",
         "prompt": ""
       },
       {
         "src": "/article-custom-images/stock_local/pexels-8794813.jpg",
-        "caption": "內文配圖：對方不像以前熱情？分清變淡、壓力與抽離",
+        "caption": "內文配圖：覺得對方唔夠愛你？先看清關係變淡的真正原因",
         "credit": "Photo by Hồng Xuân Viên on Pexels",
         "creditUrl": "https://www.pexels.com/photo/female-friends-wearing-traditional-dress-8794813/",
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：對方不像以前熱情？分清變淡、壓力與抽離",
+    "coverCaption": "Asteria 相處教學：【感情變淡】熱戀期過後無嘢講？5 招打破「冷淡期」重燃愛火",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 122,
-    "title": "總覺得對方對前任更好？比較心態與安全感修復",
-    "category": "復合挽回",
+    "title": "【溝通技巧】我係為你好？點解你的關心變成他的壓力？拆解「控制型關愛」",
+    "category": "關係危機",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "復合",
-    "summary": "先別急著追問答案：真正要看的，是對方為何退後。",
-    "content": "<p>遇到「總覺得對方對前任更好」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>先判斷「總覺得對方對前任更好」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>「總覺得對方對前任更好」不用一次過逼出完整答案</h2>\n<p>你可以先整理最近三次互動：對方有沒有主動、回覆是否冷淡、你靠近時關係是變鬆還是更緊。這些線索會比一句「仲有冇機會」更準。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>用行動判斷「總覺得對方對前任更好」</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>留住步伐才看得清「總覺得對方對前任更好」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>對方是否接得住，決定「總覺得對方對前任更好」能否繼續</h2>\n<p>如果你正面對「總覺得對方對前任更好」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「總覺得對方對前任更好」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「總覺得對方對前任更好」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「總覺得對方對前任更好」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
+    "imageLabel": "警號",
+    "summary": "當「關心」附帶了「期望」，它就變成了「壓力」。",
+    "content": "<h2>先看常見情境</h2>\n<p>你想對方好，是不是就會勸對方做你覺得是正確的選擇？「<strong>你唔好食咁多熱氣野</strong>」、「<strong>你應該早啲訓</strong>」、「<strong>你應該考個車牌</strong>」。你覺得自己係賢妻良母，處處為佢著想。但對方反應冷淡，甚至話：「<strong>你好煩呀，唔好管我得唔得？</strong>」，你覺得好委屈：「<strong>我愛你先管你咋！</strong>」。</p>\n<p>為什麼愛會變成壓力？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>邊界入侵 (Boundary Intrusion)</span></h2>\n<p>你是伴侶，不是媽媽。成年人有權選擇自己的生活方式（即使是不健康的）。當你強行介入，你是在剝奪他的，「<strong> 自主權 </strong>」。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>隱性控制</span></h2>\n<p>「<strong> 為你好 </strong>」這三個字，係世界上最動聽嘅藉口。背後潛台詞係：「<strong> 你依家咁樣唔夠好，你要變成我想要嘅樣 </strong>」。這是一種否定。他在你面前感受不到接納，只感受到批判。</p>\n<h2>再看深一層：我係為你好？點解你的關心變成他的壓力？拆解「<strong>控制型關愛</strong>」的真正訊號</h2>\n<p>危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>邊界入侵 (Boundary Intrusion)</li><li>隱性控制</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題卡在溝通，先把事件、感受和希望對方做到的一件事分開講。少一點指責，多一點具體請求，對方才較容易聽入耳。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2023-10-19",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-16125552.jpg",
     "coverCredit": "Photo by Jie He on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-with-her-head-on-the-desk-16125552/",
@@ -5873,27 +5141,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：總覺得對方對前任更好？比較心態與安全感修復",
+    "coverCaption": "Asteria 相處教學：【溝通技巧】我係為你好？點解你的關心變成他的壓力？拆解「控制型關愛」",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 123,
-    "title": "總覺得相處不夠好？感情完美主義的改善方法",
-    "category": "戀愛心理",
+    "title": "【曖昧陷阱】佢同你曖昧但唔表白？拆解 3 種「假性喜歡」訊號",
+    "category": "曖昧桃花",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "心理",
-    "summary": "總覺得相處不夠好，可能不是關係真的差，而是完美主義令你一直放大問題。愛情需要改善，也需要容許不完美。",
-    "content": "<p>你可能很努力經營關係，但仍然覺得不夠好、不夠甜、不夠穩。感情完美主義會令人不停檢查問題，最後連本來好的部分也感受不到。</p>\n<h2>分清問題和不完美</h2>\n<p>真正問題需要處理，例如欺騙、冷暴力、長期失衡；但小差異、小失誤，不一定代表關係不好。</p>\n<p>不完美是關係裡必然存在的毛邊，問題則是會反覆傷害你的模式。把兩者分開，你才不會每天都像在審核伴侶表現。</p>\n<h2>不要用理想劇本審判現實</h2>\n<p>每段關係都有自己的節奏。如果你一直拿想像中的完美伴侶比較，現實中的人永遠不夠好。</p>\n<p>理想劇本通常很乾淨，但現實關係會有疲倦、誤會和狀態不好。若你只用幻想中的標準量度，任何人都會顯得不夠好。</p>\n<h2>留意自己是否過度解讀</h2>\n<p>一句回覆慢、一個表情不對，未必有重大意思。先看整體模式，不要被單一細節拉走。</p>\n<p>過度解讀會讓你把小事變成證據，例如一句短回覆就推論對方不愛。可以先停一停，看整體模式是否真的支持你的想法。</p>\n<h2>把要求變成優先次序</h2>\n<p>不是所有事都要同時改善。先選最影響安全感的一件事處理，其餘位置可以慢慢磨合。</p>\n<p>所有問題同時處理，會令雙方都覺得窒息。先揀最影響安全感的一件事傾清楚，比每天檢查十件小事更有用。</p>\n<h2>練習接收好的部分</h2>\n<p>如果對方有用心、有調整、有陪伴，也要讓自己看見。關係不是只靠找錯維持。</p>\n<p>練習看見好的部分，不是叫你忽略問題，而是讓關係不只剩下扣分。人被欣賞時，也會更有力量一起改善。</p>\n<h2>常見問題</h2>\n<h3>要求高是否代表我不適合拍拖？</h3>\n<p>不是，但需要分清底線和完美期待。</p>\n<h3>怎樣知道是問題還是我想太多？</h3>\n<p>看它是否反覆造成傷害，還是只是一時不符合期待。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你整理哪些是要處理的關係問題，哪些是焦慮放大。</p>",
+    "imageLabel": "曖昧",
+    "summary": "曖昧不等於喜歡，很多時候只是一種「麵包屑 (Breadcrumbing)」行為。",
+    "content": "<h2>天天 msg</h2>\n<p>天天 msg，會講早晨早抖，甚至會講「<strong>掛住你</strong>」。你以為我就黎出 Pool？Sorry，可能你只係跌入咗，「<strong>曖昧陷阱</strong>」。日頭唔搵你，一到夜晚寂寞就搵你傾心事。這不是深情，這是悶。講到天花龍鳳「<strong>下次帶你去邊</strong>」。但從來無實際行動約你。</p>\n<h2>忽冷忽熱</h2>\n<p>你熱佢就冷，你冷佢就熱。佢只係想吊住你條癮，唔想你走。但又唔想你太近。</p>\n<p>如何分辨真心？睇，「<strong>稀缺資源</strong>」。如果有錢人肯花錢，唔代表咩；如果有錢人肯花，時間，先係真愛。如果大忙人肯花時間，唔代表咩；如果大忙人肯，秒回，先係上心。</p>\n<h2>再看深一層：佢同你曖昧但唔表白的真正訊號</h2>\n<p>曖昧最容易令人誤判，因為甜言蜜語、偶爾主動同真正投入，其實是三件不同的事。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>忽冷忽熱</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果關係仍在曖昧階段，甜言蜜語不是唯一判斷。要看對方有沒有穩定投入、願意推進，以及你是否仍然有自己的節奏。</p>\n<h2>常見問題</h2>\n<h3>曖昧卡住時應該點判斷？</h3>\n<p>唔好只睇甜言蜜語，要睇對方有冇穩定投入、主動安排見面、願意推進關係。如果長期只享受曖昧但唔承擔，就要小心。</p>\n<h3>主動少少會唔會好似低價值？</h3>\n<p>主動唔等於低價值，關鍵係有冇界線。你可以釋出機會，但唔需要追住對方跑；要令互動有來有往，先唔會失衡。</p>\n<h3>塔羅可以睇對方係咪認真嗎？</h3>\n<p>可以。塔羅適合睇對方係認真、觀望、享受曖昧，還是另有顧慮，再幫你決定應該推進定慢慢觀察。</p>",
     "sourceIg": "",
-    "date": "2023-12-24",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-31107842.jpg",
     "coverCredit": "Photo by ARGEN  ALMAZBEKOV on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-sharing-a-quiet-moment-on-sofa-31107842/",
@@ -5921,27 +5183,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：總覺得相處不夠好？感情完美主義的改善方法",
+    "coverCaption": "Asteria 相處教學：【曖昧陷阱】佢同你曖昧但唔表白？拆解 3 種「假性喜歡」訊號",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 124,
-    "title": "他聽你說話總是不耐煩？關係疏離前的警號",
-    "category": "關係危機",
+    "title": "【職場戀愛】辦公室戀情好唔好？4 個潛規則教你公私分明，避免分手尷尬",
+    "category": "復合挽回",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "警號",
-    "summary": "你係咪真係識「聆聽」另一半講嘅嘢？好多人以為自己「聽完」、「聽咗」就OK，但咁樣並唔係真正有效嘅聆聽，亦因為咁，雙方好易出現「溝通斷層」，甚至會令對方拒絕再同你溝通！想知點補救？",
-    "content": "<p>但你有冇諗過呢個情況，係因為自己平日同佢相處嘅壞習慣造成？</p>\n<p>當你感覺另一半拒絕同你溝通時，或許你不妨諗下，自己同佢日常相處，會唔會存在咗啲令對方被忽視/不耐煩/唔被重視嘅行為！</p>\n<p>過於關注自己當下嘅需求同感受，忽略咗另一半嘅立場，呢種自我中心嘅思維模式，會冇辦法真正關注到另一半嘅諗法、感受，導致大家嘅理解上出現斷層，例如：另一半同你呻返工辛苦，但你聽完冇即時給予正確嘅安慰，反正只係話因為佢工作太忙。</p>\n<p>令你都冇時間同佢一齊出街</p>\n<p>人喺聆聽時會受到自身信念、情感影響，呢種係一個非常普遍嘅「<strong>認知偏差</strong>」，你聽佢講嘢時可能會根據自己嘅經驗、觀點，去理解佢說話嘅用意，而唔係根據佢所講嘅說話嘅嘅原意，令大家嘅想法同理解都出現偏差，例如：你追問對方幾時同你去旅行。</p>\n<p>佢話「<strong>又係呢個問題，你唔好再係咁追問</strong>」，你可能會覺得只要換個時間點再問就OK 而對方個意思其實係，「<strong>唔想去旅行，你唔好再問</strong>」，但你一直用自己嘅諗法去解讀，於是當你隔幾日又再問，對方就會嬲。</p> <h2>雙方都有問題⋯習慣性反應</h2>\n<p>大家一齊太耐就會形成「<strong>習慣性反應</strong>」，當有一方仲表達緊嘅時候，另一方已經「<strong>自以為</strong>」預測到對方會講乜，所以喺聆聽過程中就冇咁專注，明明冇認真聽對方講嘢，但又自覺已經Get到曬佢說話嘅用意，例如：當你同另一半同居後要面對屋企嘅家務。</p>\n<p>其中一方對屋企嘅清潔同整理可能冇咁用心，而被對方囉唆，所以每當對方提及家務嘅嘢時，另一方因為聽得太多了，所以喺對方開始講嘢時就提前估緊佢想講乜，以為自己已經了解佢嘅諗法，而冇打算認真聆聽佢講嘅嘢。</p> <h2>不耐煩如果反覆出現，就是關係疏離訊號</h2>\n<p>人好容易喺對方講嘢時，自己個腦就開始運轉，諗緊點回應對方、諗緊自己嘅意見，但真正有效嘅聆聽係「<strong>認真聽</strong>」，喺聽嘅過程就只係聽，唔需要加入主觀意見同自己前設嘅諗法，先清空自己嘅腦、接受佢講嘅所有內容，如果你喺聽嘅過程有咩唔明。</p>\n<p>就要等佢講完再仔細問清楚，睇吓佢講嘅嘢同你聽嘅嘢有冇出現落差。</p>\n<p>溝通唔單止係口講嘅說話，非語言嘅表達都好重要，當另一半講緊嘢時，要注意佢哋嘅面部表情、手勢、身體動作，同時都要注視自己嘅身體動作，唔好一邊聽一邊玩手指、整頭髮，否則對方會覺得你冇認真聽佢講嘢。</p> <h2>不要把「他聽你說話總是不耐煩」全部當成普通磨合</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。</p> <h2>不耐煩背後可能是情感疏離</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。</p> <h2>看他是否願意聽完你的感受</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。</p>\n<h2>常見問題</h2>\n<h3>「<strong>他聽你說話總是不耐煩</strong>」係咪關係危機警號？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>遇到「<strong>他聽你說話總是不耐煩</strong>」，我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇「<strong>他聽你說話總是不耐煩</strong>」背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
+    "imageLabel": "復合",
+    "summary": "辦公室戀情 (Office Romance) 的最大挑戰在於「公私不分」。",
+    "content": "<h2>對於扮工一族而言</h2>\n<p>對於扮工一族而言，返工佔咗生活大半時間。喺唔同嘅公司，同各式各樣嘅人相遇，當中好易同同事日久生情，成為辦公室情侶。喺職場遇到相愛嘅另一半，固然開心。但人言可畏，加上總有嘈交嘅機會。要衝破難關，其實都係一種學問！</p>\n<p>維繫辦公室戀情的 4 個 Tips。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>地下情最安全，除非你哋打算結婚，否則盡量唔好公開</span></h2>\n<p>一旦公開，同事會戴有色眼鏡睇你哋（例如覺得你哋偏私）。萬一分手，全公司都知，尷尬到想辭職。用 Email/Slack 溝通時，語氣要 Professional。唔好令同事覺得你哋係「<strong>連體嬰</strong>」。如果你哋係同一 Team，好容易會因為工作嘈交。要約定好：「<strong>離開公司門口，就不談公事</strong>」。對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<h2>再看深一層：辦公室戀情好唔好的真正訊號</h2>\n<p>對方退後未必等於完全無機會，但要先判斷仲有冇聯絡窗口、情緒連結同重新接近的空間。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>地下情最安全，除非你哋打算結婚，否則盡量唔好公開。</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你仍然想挽回，先不要急著用訊息追答案。看清分開原因、對方抗拒程度和可重新開口的窗口，會比衝動求和更有用。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2024-09-09",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8560488.jpg",
     "coverCredit": "Photo by Timur Weber on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/a-man-and-a-woman-sitting-on-the-both-side-of-the-bed-8560488/",
@@ -5969,27 +5225,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他聽你說話總是不耐煩？關係疏離前的警號",
+    "coverCaption": "Asteria 相處教學：【職場戀愛】辦公室戀情好唔好？4 個潛規則教你公私分明，避免分手尷尬",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 125,
-    "title": "用分手試探對方會挽留嗎？自殺式試探最傷關係",
-    "category": "溝通相處",
+    "title": "【關係心理學】委屈大於愛？3 個訊號揭示你們的「權力不對等」",
+    "category": "情緒修復",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "溝通",
-    "summary": "你嘅另一半會唔會係「測試者」？對方明知講咗邊句說話會令你爆炸，但就偏偏要踩住試你底線？到底「測試者」係點形成？又要點樣先可以令對方可以走出呢個惡性循環？",
-    "content": "<p>遇到「用分手試探對方會挽留嗎」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>把「用分手試探對方會挽留嗎」的底線講到對方聽得明</h2>\n<p>界線不一定要用狠話表達。你可以清楚講明甚麼行為你不能接受，以及如果再發生你會怎樣保護自己。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>看清「用分手試探對方會挽留嗎」是否踩到底線</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>用分手試探只會消耗安全感</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>把真正需要講出來，而不是用離開測試</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>面對「用分手試探對方會挽留嗎」，先不要把修補變成追逼</h2>\n<p>如果「用分手試探對方會挽留嗎」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「<strong>用分手試探對方會挽留嗎</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>用分手試探對方會挽留嗎</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>用分手試探對方會挽留嗎</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
+    "imageLabel": "療癒",
+    "summary": "當一段關係中出現「單方面發起交流」、「經常取消約會」或「總是你在道歉」時，代表權力天平已傾斜。",
+    "content": "<h2>對於你好愛嗰個人</h2>\n<p>對於你好愛嗰個人，你哋嘅關係可能曾經好平等。但係唔知從幾時開始，佢嘅位置開始比你高階，你哋之間嘅愛情，變得越嚟越不對等。當我哋越愛一個人，就越容易放下過往嘅堅持，處處為佢著想。但其實越係咁樣，你哋嘅關係就越係唔對等！佢約你就得，你約佢就要睇佢心情。甚至佢經常最後一刻放飛機 (Cancel)，而你從來唔敢發脾氣，只會話「<strong>唔緊要</strong>」。這代表你在潛意識裡覺得：他的時間價值 &gt; 你的時間價值。</p>\n<p>最後變成係你道歉（因為你催佢搞到佢唔開心）。在這段關係裡，你是「<strong>和平維護者</strong>」，他是「<strong>情緒發布者</strong>」。</p>\n<h2>留意你是不是一直把自己放低：關係不對等時</h2>\n<p>關係不對等時，最明顯的訊號不是一次爭執，而是你長期不敢提出需要、不敢拒絕、不敢表達不滿，最後連自己都習慣排在對方後面。</p>\n<p>愛一個人不代表要取消自己。你可以照顧對方感受，但同時也要看你的時間、情緒和界線有沒有被同樣尊重。</p>\n<h2>留意你是不是一直把自己放低：你每次都要先猜對方心情</h2>\n<p>如果你每次都要先猜對方心情，才敢決定自己可不可以開口，這段關係已經需要重新調整。真正平等的相處，是兩個人都可以被聽見。</p>\n\n<h2>再看深一層：委屈大於愛？3 個訊號揭示你們的「<strong>權力不對等</strong>」的真正訊號</h2>\n<p></p>\n<p></p><p></p>\n<p></p>\n<p></p>\n<h2>留意你是不是一直把自己放低</h2>\n\n\n<p>如果你每次都要先猜對方心情，才敢決定自己可不可以開口，這段關係已經需要重新調整。真正平等的相處，是兩個人都可以被聽見，也可以在不傷害彼此的情況下提出需要。</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>留意你是不是一直把自己放低</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>這算溝通問題定感情變淡？</h3>\n<p>兩者有時會重疊。要分清對方係聽唔明、唔想面對、情緒太滿，定已經對關係投入下降，先可以決定點講先有效。</p>\n<h3>我應該點講先唔會令對方防衛？</h3>\n<p>避免一開口就指責，可以先講具體事件、自己感受同希望對方做到的一件小事。訊息越短、越清楚，對方越容易聽得入耳。</p>\n<h3>Asteria 可以幫我改訊息嗎？</h3>\n<p>會。我哋其中一個重點就係幫你 review 對話，逐句睇邊句會推遠對方、邊句可以令互動舒服啲，再教你點樣回應。</p>",
     "sourceIg": "",
-    "date": "2026-01-13",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-1629026.jpg",
     "coverCredit": "Photo by Min An on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/photo-of-girl-carrying-white-flowers-1629026/",
@@ -6017,27 +5267,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：用分手試探對方會挽留嗎？自殺式試探最傷關係",
+    "coverCaption": "Asteria 相處教學：【關係心理學】委屈大於愛？3 個訊號揭示你們的「權力不對等」",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 126,
-    "title": "見到朋友幸福卻妒忌？不是壞人，是你內心有缺口",
+    "title": "【戀愛心理】男朋友成日試探我？拆解「測試者心理」背後的不安",
     "category": "情緒修復",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
     "imageLabel": "療癒",
-    "summary": "見到朋友升職、拍拖、買樓，你有冇試過心入面有啲唔舒服？同樣地，有時自己過得好，身邊嘅朋友都唔係100%會替你覺得好開心。係太虛偽？未必嘅！呢啲其實只係人嘅正常情感表現！",
-    "content": "<p>「見到朋友幸福卻妒忌」會牽動很多不安，越亂越要先分清事實、猜測和感受。當你看清自己真正需要的是安慰、承諾、空間還是答案，下一步就不會只被情緒推著走。</p> <h2>先分清「見到朋友幸福卻妒忌」裡的事實和想像</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。 如果你需要的是安全感，就不要只用質問去換答案；可以改成表達你希望對方怎樣回應，這樣對方比較知道如何接住你。</p> <h2>「見到朋友幸福卻妒忌」不要靠情緒測試答案</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。 當你不再把所有價值感交給對方反應決定，就會更容易看見這段關係是否真的適合，而不是只被一刻心動或不甘心帶走。</p> <h2>面對「見到朋友幸福卻妒忌」，把焦點收回自己</h2>\n<p>你可以在乎對方反應，但不要把所有價值感交給對方決定。當你知道自己真正想要什麼，才不會每一次波動都被拉走。 你可以先把腦入面的劇情寫出來，再逐句問自己：這是事實、推測，還是我害怕發生的結果？分開之後，情緒會比較容易落地。</p> <h2>看清自己真正想要的是甚麼：回到「見到朋友幸福卻妒忌」來看</h2>\n<p>有時你以為自己想要答案，其實是想要安全感；以為想復合，其實是不甘心。把需要講清楚，才不會用錯方法處理情緒。 情緒不是錯，但情緒最高漲時最容易講錯話。先讓自己回到穩定狀態，再決定要不要發訊息，通常會少很多後悔。</p> <h2>不安不是錯，但要先把需要講清楚：回到「見到朋友幸福卻妒忌」來看</h2>\n<p>如果你被「見到朋友幸福卻妒忌」拉到很亂，先給自己一點時間回到穩定。你可以把感受寫低、分清事實和猜測，再決定要不要同對方談。當你不再被即時焦慮推著走，很多原本看似一定要立刻處理的事，會變得更清楚，也更容易選到不後悔的做法。</p>\n<h2>常見問題</h2>\n<h3>遇到「見到朋友幸福卻妒忌」，我應該點樣開口？</h3>\n<p>遇到「見到朋友幸福卻妒忌」，可以先講具體事件，再講自己的感受，最後提出一個可做到的小希望。不要一開始就定性對方人格，否則對方很容易立即防衛。</p>\n<h3>處理「見到朋友幸福卻妒忌」時，對方一聽就逃避點算？</h3>\n<p>處理「見到朋友幸福卻妒忌」時，可以先把訊息縮短，只處理一個重點。對話壓力低一點，對方才較願意留下來聽。</p>\n<h3>Asteria 的相處教學可以點樣幫到「見到朋友幸福卻妒忌」？</h3>\n<p>Asteria 可以按「見到朋友幸福卻妒忌」的情況幫你 review 對話，逐句拆邊句會推遠對方、邊句可以降低壓力，再整理更容易被聽見的表達方式。</p>",
+    "summary": "你的另一半是否經常問這些假設性問題，甚至講反話、提分手去試探你。",
+    "content": "<h2>先看常見情境</h2>\n<p>為什麼他要測試你？這不是因為他無聊，而是因為他，「<strong>極度缺乏安全感</strong>」。在潛意識裡，他覺得自己不值得被愛。所以透過不斷設立關卡，去證明「<strong>就算我咁衰，你都唔會走</strong>」。1. 推開你 (Push-Pull)：故意冷淡，看你會不會緊張地追上來。將：「<strong>分手</strong>」掛嘴邊，其實想聽你挽留。3. 製造假想敵：提及異性，看你會不會吃醋。面對測試，你該怎麼辦？如果你每次都中計（生氣、焦慮），只會強化他的行為。你需要用「<strong>溫柔而堅定</strong>」的方式去中斷這個循環。</p>\n<h2>先分清安全感來自哪裡</h2>\n<p>安全感不足時，最容易把每個小動作都解讀成不愛。你可以先分清楚：這份不安是來自對方真的冷淡，還是來自過去受傷經驗、依戀模式或自我價值感不足。</p>\n<p>真正有用的處理，不是反覆追問對方愛不愛，而是看對方有沒有穩定行動，同時也學會安撫自己的焦慮，不讓恐懼帶住整段關係走。</p>\n<h2>不要配合測試循環</h2>\n<div class=\"article-section-card\"><p>面對試探型伴侶，最重要不是每次都急著證明自己愛他，而是看清楚這個測試會不會不斷升級。你越焦慮、越追著解釋，對方越容易用同一招確認安全感。比較成熟的做法，是溫柔但清楚地指出界線：你願意溝通，但不接受反覆用分手、冷淡或假想敵來測試關係。如果對方願意承認自己不安，這段關係仍然有機會慢慢調整；但如果每次都把你的反應當成考試，感情就會變成長期壓力。</p></div><h2>再看深一層：男朋友成日試探我的真正訊號</h2>\n<p></p>\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你一直很不安，先不要只怪自己想太多。真正要看的是對方行動能否給你穩定感，以及你有沒有為自己保留界線。</p>\n<h2>常見問題</h2>\n<h3>仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>塔羅或儀式可以點樣配合？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
     "sourceIg": "",
-    "date": "2025-07-18",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-8311872.jpg",
     "coverCredit": "Photo by Ron Lach on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/woman-wearing-coat-taking-picture-in-a-mirror-8311872/",
@@ -6065,27 +5309,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：見到朋友幸福卻妒忌？不是壞人，是你內心有缺口",
+    "coverCaption": "Asteria 相處教學：【戀愛心理】男朋友成日試探我？拆解「測試者心理」背後的不安",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 127,
-    "title": "第一次見家長點準備？不失禮的見家長攻略",
-    "category": "溝通相處",
+    "title": "【戀愛心理】點解對佢越好佢越唔珍惜？拆解「人性本賤」背後的經濟學",
+    "category": "戀愛心理",
     "color": "bg-[#EEF5DD]",
     "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "溝通",
-    "summary": "同另一半父母相處好困難？我哋教你幾招、話你知點同長輩相處，留個好印象俾佢哋啦！",
-    "content": "<p>第一次去對方屋企，好驚唔知點樣先可以留下好印象？</p>\n<p>其實好多人成日話：「<strong>見家長一定要主動啲、表現得有禮貌先有加分！</strong>」；🔎 飯後主動幫忙執嘢、洗碗；🔎 多講「<strong>多謝</strong>」、「<strong>唔該</strong>」；🔎 第一次見面準備份小禮物 感覺做足晒會好有禮貌、好識做？</p>\n<p>好似係必勝技巧？</p>\n<p>唔做會扣好多分 做咗只係合格 但係未到加好多分 🧾 飯後主動幫手收拾、洗碗 = 表示尊重同願意分擔 一定要出聲問：「<strong>需唔需要幫手？</strong>」，🧾 主動講「<strong>多謝</strong>」、「<strong>唔該</strong>」 基本禮貌 &amp; 尊重 表達感謝係最重要嘅第一步。</p>\n<p>🧾 帶一份小心意 唔需要太貴，但代表你嘅誠意 例如：小食、季節水果</p>\n<h2>見家長不是考試，重點是自然和有分寸</h2>\n<p>只係做呢幾樣嘢唔足夠幫你真正建立感情，佢哋只會覺得你「<strong>識禮貌、正常、合格</strong>」，但未必會真正鍾意你、欣賞你、覺得你貼心 想真正討好對方的父母，唔可以淨係做表面功夫 就等我哋教你幾招啦。</p>\n<h2>見家長真正加分位在細節和尊重</h2>\n<ul><li>二招：多啲配合、多啲尊重</li></ul>\n<p>長輩有佢哋早已習慣嘅生活方式 不論係飲食口味、娛樂方式、說話口吻，你都應該盡量配合、尊重對方嘅愛好，先唔好急於堅持自己嘅諗法、唔好反駁，因為對長輩嚟講 尊重係建立關係嘅第一步。</p>\n<div class=\"article-insight\"><div class=\"article-insight-label\">延伸提醒</div><p>想拉近同另一半父母、長輩、家人嘅關係，重點唔係一次表演得幾完美，而係從更多細節慢慢建立信任。</p></div>\n<ul><li>第三招：多啲觀察、盡量了解</li></ul>\n<p>對於長輩嘅愛好，就算你一開始未必有興趣，都可以先保持尊重同好奇。你可以向另一半了解他父母平日鍾意甚麼，第一次到訪時也可以多觀察屋企擺設、長輩興趣，或者留意有冇小物品需要添置。下次再到訪時送上實用小心意，會比刻意討好更自然。</p>\n<ul><li>第四招：適度表達對另一半的心意</li></ul>\n<p>父母最在意嘅往往係子女是否被好好對待。如果你可以適度表達對另一半嘅珍惜、感激同照顧，對方父母會更容易感受到你係真心維護呢段關係。</p>\n<p>最後再提醒大家！</p>\n<p>千祈唔好將「<strong>獲得父母認同</strong>」當成一場考試。唔好因為對方父母冇即刻稱讚你，就認定佢哋唔喜歡你；有啲父母本身比較內斂，你只要自然、有禮貌、做好自己應該做嘅事，就已經足夠。</p>\n\n<h2>常見問題</h2>\n<h3>第一次見家長，最重要是甚麼？</h3>\n<p>最重要不是表演完美，而是自然、有禮貌、有分寸。長輩通常會看你是否尊重他們，也是否真心珍惜另一半。</p>\n<h3>如果對方父母反應冷淡，代表失敗嗎？</h3>\n<p>不一定。有些父母本身慢熱或內斂。你可以先做好基本禮貌和細節，不需要因為一次反應就判斷自己不被接受。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DSHpbJ7EqBC/",
-    "date": "2025-12-11",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "根據「邊際效應遞減 (Diminishing Marginal Utility)」定律，當你無條件地給予，對方感受到的價值會越來越低。",
+    "content": "<h2>先看常見情境</h2>\n<p>「我幫佢洗衫煮飯，佢生日送名牌，點解佢仲係對我咁冷淡？」，好多女仔以為，只要我對佢夠好，佢就會感動。但在愛情裡，「<strong>感動</strong>」唔等於「愛」，甚至會變成，「<strong>理所當然</strong>」。</p>\n<p>心理學解密：為什麼好女人沒好報？</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>邊際效應遞減 (The Law of Diminishing Returns)</span></h2>\n<p>第一杯水係救命，第十杯水係負擔。當你嘅「好」變得廉價同垂手可得，佢就唔會覺得珍貴。人最珍惜嘅，唔係「<strong>得到</strong>」嘅嘢，而係自己「<strong>付出</strong>」咗嘅嘢。如果你唔畀機會佢付出（例如唔捨得佢比錢、唔捨得佢做家務），佢在這段關係的「<strong>沉沒成本</strong>」就是零，隨時走都無所謂。當你照顧得佢太好，你在他潛意識裡的角色就由「<strong>情人</strong>」變成了「<strong>媽媽</strong>」。男人會依賴媽媽。但唔會對媽媽有性慾同征服慾。感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<h2>不要把照顧變成單方面供應</h2>\n<div class=\"article-section-card\"><p>你可以對一個人好，但不需要把所有付出都包辦到對方不用努力。當對方完全沒有投入成本，他就更容易把你的照顧視為理所當然。</p><p>健康的做法，是保留自己的界線，也讓對方有機會為關係付出。愛不是你一個人做晒，而是兩個人都願意用行動證明這段關係值得珍惜。</p></div><h2>再看深一層：點解對佢越好佢越唔珍惜的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<p></p><p></p>\n<p></p>\n<p></p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>邊際效應遞減 (The Law of Diminishing Returns)</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6214263.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/young-asian-couple-talking-on-street-with-wooden-building-6214263/",
@@ -6113,27 +5351,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：第一次見家長點準備？不失禮的見家長攻略",
+    "coverCaption": "Asteria 相處教學：【戀愛心理】點解對佢越好佢越唔珍惜？拆解「人性本賤」背後的經濟學",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 128,
-    "title": "他見朋友多過見你？判斷你在他心中的位置",
-    "category": "溝通相處",
+    "title": "【戀愛心理】覺得另一半唔夠好？警惕「感情完美主義」破壞關係",
+    "category": "戀愛心理",
     "color": "bg-[#EDF0F7]",
     "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "溝通",
-    "summary": "他見朋友多過見你，不一定代表你不重要，但一定反映時間分配和優先次序。重點是他是否願意安排你，而不是只在有空時才想起你。",
-    "content": "<p>伴侶有朋友和私人生活是正常的，但如果他永遠把朋友排前面，而你只能等他剩下的時間，你自然會懷疑自己在他心中的位置。</p>\n<h2>先看是偶然還是長期模式</h2>\n<p>一次和朋友聚會不代表問題；但如果長期重要日子、休息時間、情緒需要都輪不到你，就值得談。</p>\n<p>如果他偶爾和朋友聚會，你可以給空間；但如果每次你有需要都排在最後，那就不是單純社交，而是優先次序問題。</p>\n<h2>不要把所有社交都當威脅</h2>\n<p>健康關係不需要完全黏在一起。你要看的是他有沒有平衡，而不是要求他放棄朋友。</p>\n<p>伴侶有自己的朋友圈是健康的，重點是他有沒有讓你感到被安排。你不是要佔據全部時間，而是想知道自己不是永遠等候補位。</p>\n<h2>講出你需要被安排</h2>\n<p>可以直接講：「我不是不讓你見朋友，但我希望你也會主動安排我們的時間。」這比冷戰更清楚。</p>\n<p>直接講需要比冷戰有效，因為很多人真的沒有意識到你在等。你要的不是禁止他見朋友，而是希望他也主動經營你們。</p>\n<h2>看他會否主動補回</h2>\n<p>如果他真的重視你，知道你不舒服後會調整時間，而不是只說你小器。</p>\n<p>補回可以是主動約下一次、解釋安排、在重要日子預留時間。若他只說你小器，卻從不調整，你的不安就有現實根據。</p>\n<h2>你也要保留自己的生活</h2>\n<p>不要把所有空檔都留給他。當你有自己的節奏，也更容易看清他是否真的願意靠近。</p>\n<p>當你有自己的生活，你會比較不容易被他的安排牽著走。這不是鬥冷淡，而是讓你保留自我，也更清楚看見他有沒有主動靠近。</p>\n<h2>常見問題</h2>\n<h3>他重朋友是否代表不愛？</h3>\n<p>不一定，要看他有沒有同時照顧你的需要。</p>\n<h3>我應該要求固定見面嗎？</h3>\n<p>可以，穩定安排有助建立安全感。</p>\n<h3>塔羅可以睇到咩？</h3>\n<p>可以整理你在他心中的位置、他的優先次序和下一步溝通方式。</p>",
+    "imageLabel": "心理",
+    "summary": "如果你經常對伴侶感到失望，覺得「還可以更好」，你可能患上了「感情完美主義 (Relationship Perfectionism)」。",
+    "content": "<h2>你係咪成日挑剔另一半</h2>\n<p>你係咪成日挑剔另一半：「佢食嘢咀嚼得好大聲」、「佢著衫無品味」、「佢講嘢唔夠幽默」。雖然佢對你唔錯。但你總係覺得，「差咁啲」。你想改造佢，甚至諗過分手搵個更好嘅。這是一種強迫症。你腦海中有一個，「理想劇本」 (通常來自韓劇或小說)。當現實中嘅伴侶同劇本有出入，你就覺得係，「錯誤」。特徵：放大缺點：你睇唔到佢嘅優點，只見到佢嘅微小瑕疵。你覺得真正嘅靈魂伴侶應該不言而喻。比較成癮：成日羨慕人哋嘅男朋友。</p>\n<p>你永遠唔會滿意。因為世界上無完美嘅人。你嘅挑剔會令伴侶覺得自卑、大壓力。最後頂唔順離開。感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你係咪成日挑剔另一半</li><li>你永遠唔會滿意。因為世界上無完美嘅人。</li><li>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。</li><li>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
     "sourceIg": "",
-    "date": "2024-07-13",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-34522954.jpg",
     "coverCredit": "Photo by 🇻🇳🇻🇳Nguyễn Tiến Thịnh 🇻🇳🇻🇳 on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/women-in-traditional-dresses-by-lotus-pond-34522954/",
@@ -6161,27 +5393,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：他見朋友多過見你？判斷你在他心中的位置",
+    "coverCaption": "Asteria 相處教學：【戀愛心理】覺得另一半唔夠好？警惕「感情完美主義」破壞關係",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 129,
-    "title": "親密關係是否什麼都要坦白？避免越講越疏遠",
-    "category": "溝通相處",
+    "title": "【戀愛心理學】5個愛情迷思的科學解釋！原來一見鍾情有根據？",
+    "category": "戀愛心理",
     "color": "bg-asteria-yellow/50",
     "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "兩個人一齊、相處時間耐咗、熟悉咗，真係乜都講得？Deep Talk真係Deep都可以Talk？但可能對另一半太坦誠、太真誠，往往係一段感情嘅致命傷？！有甚麼可以坦白？又有甚麼最好先不要 100% 全部倒出來？",
-    "content": "<p>有時你以為嘅「<strong>真誠溝通</strong>」 可能反而會成為一段感情嘅致命傷</p>\n<p>Deep Talk並唔係越 Deep 越好 有啲說話應該講 但有啲說話應該留返啲空間</p>\n<h2>🔓 關於ex 有咩係講得</h2>\n<p>前度唔係禁區 但要講得有界線 講的目的要清楚、份量要適當，如果只是想想讓對方了解自己以前的相處模式，就可以以「<strong>經驗分享</strong>」角度出發。</p>\n<h2>有些話題要講，但要保留情感邊界：回到「親密關係是否什麼都要坦白」來看</h2>\n<p>如果現任做咗啲令你諗起ex嘅事，唔好講：「<strong>我ex都會咁做，估唔到你哋都幾相似</strong>」，如果現任做咗啲令你不滿意嘅事，唔好講：「<strong>我ex絕對唔會這樣做／果然只係我ex先識點對我好</strong>」，呢類說話會令對方覺得自己俾你拎嚟同你ex比較 甚至覺得你可能未完全放低對方。</p>\n<p>咁仲有啲乜嘢其他敏感話題係可以講 &amp; 最好唔好講</p>\n<h2>關於對方家人朋友，要講感受不要判斷</h2>\n<div class=\"article-insight\"><div class=\"article-insight-label\">延伸提醒</div><p>關於對方屋企人同朋友，可以講感受同界線，但要避開直接批評，因為對方很容易把這些說話聽成你不尊重他身邊重要的人。</p></div>\n<p>如果真係對對方屋企人或朋友有意見，唔好一開口就直接批評。可以用「<strong>我感覺</strong>」做開頭，將焦點放返喺自己嘅感受，對方會較容易理解你，而唔係即刻反駁你。至於唔好講嘅，就是把對方身邊人直接定性。</p>\n<p>直接批評對方家人或朋友 eg：「<strong>你媽真係太煩</strong>」、「<strong>你個friend點解咁鐘意講是非</strong>」，聽到呢類說話 對方可能會即時起防衛心 覺得「<strong>你唔尊重我身邊人＝不尊重我</strong>」，最後再提醒大家！</p>\n<p>真正成熟嘅溝通係喺安全、理智情境下 選擇性地表達自己，呢個係心理學上嘅情感邊界（emotional boundary） 太多太深嘅傾訴會製造「<strong>親密假象</strong>」，你會誤以為對方理解你、接納你，但實際上對方未必有能力承接咁多真實面，結果當距離拉近太快，關係反而崩得更快。</p>\n<p>所以這類話題一定要小心拿捏，講得太重會令對方防衛，完全不講又會令你長期委屈。成熟的做法，是用較柔和但清楚的方式表達界線。</p>\n<h2>常見問題</h2>\n<h3>親密關係是否應該甚麼都坦白？</h3>\n<p>不是。親密不等於毫無篩選地傾倒所有內容，而是知道甚麼可以分享、怎樣分享，以及對方是否有能力承接。</p>\n<h3>哪些話題要特別小心？</h3>\n<p>前任、對方家人朋友、過去創傷和很深的恐懼都要講得有界線。目的應該是增加理解，而不是把對方拉進比較或壓力裡。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DSXJjKFEq_m/",
-    "date": "2025-12-17",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "例如「一見鍾情」其實是大腦在 0.2 秒內釋放多巴胺的結果；「越難追越矜貴」則符合心理學的「稀缺效應」。",
+    "content": "<p>愛情不只是感覺，更是大腦和身體一齊參與的化學反應。例如「<strong>一見鍾情</strong>」不一定只是浪漫幻想，也可能同吸引、投射和多巴胺反應有關。</p>\n<p>面對愛情，自己突如其來嘅舉動、諗法，都令自己變得唔認識自己。到底愛上一個人，係咪真係會令自己改變？定抑或，一切只係大腦作祟！Asteria 同你由科學角度，拆解 5 個常見嘅愛情迷思。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思 1</span><span>明明佢唔係你鍾意嗰類。但竟然日久生情</span></h2>\n<p>科學真相：唔係所有愛情都係一見鍾情。最初由友情開始，慢慢產生依戀情緒，大腦管控愛情的回路會突然被觸發，產生心動感覺。這類愛情反而更能細水長流。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思 2</span><span>每次拍拖都好快變淡，激情好快會消失</span></h2>\n<p>科學真相：熱戀期是有期限的。起初拍拖時，身體會產生苯乙胺、多巴胺等愛情激素。但平均 30個月，就會消失。之後大腦會改為釋出「內啡肽」，作用是穩定和維持關係。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思 3</span><span>成日掛住佢，諗起都好開心</span></h2>\n<p>科學真相：當你諗起對方，大腦的快樂中樞就會分泌多巴胺。這感覺類似，「藥物上癮」，一旦陷入愛情，大腦就會不斷索取這種快樂，令你無法自拔。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思 4</span><span>發生親密接觸後，更加依賴佢</span></h2>\n<p>科學真相：親密接觸後，大腦會釋放，「催產素 (Oxytocin)」。這種激素會降低你的危機意識，令人與人之間的界線消失，令你變得更加依賴對方。(警世：唔好因為發生咗關係就覺得對方可信，這是大腦的化學騙局！)。</p><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">迷思 5</span><span>分手後，個心真係會痛</span></h2>\n<p>科學真相：係真的生理痛。拍拖時神經元會互相連結，分手後這些連結被迫中斷，大腦就會釋出「痛楚」的訊號，其活躍區域與身體受傷時是一樣的。</p>\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>明明佢唔係你鍾意嗰類。但竟然日久生情。</li><li>每次拍拖都好快變淡，激情好快會消失。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>先把事件、感受和需要分開看，再決定要溝通、觀察還是設界線。越混亂的時候，越要回到具體行動，而不是靠猜測消耗自己。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-16519701.jpg",
     "coverCredit": "Photo by Marc Majam on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/senior-couple-sitting-on-pebbled-beach-wetting-their-feet-16519701/",
@@ -6209,27 +5435,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：親密關係是否什麼都要坦白？避免越講越疏遠",
+    "coverCaption": "Asteria 相處教學：【戀愛心理學】5個愛情迷思的科學解釋！原來一見鍾情有根據？",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 130,
-    "title": "想讓關係升溫？建立親密感的 5 個日常方法",
-    "category": "溝通相處",
+    "title": "【戀愛心理學】男朋友係大男人？教你「以柔制剛」輕鬆駕馭霸道總裁",
+    "category": "戀愛心理",
     "color": "bg-[#FFE7DD]",
     "icon": "fa-regular fa-comments",
-    "imageLabel": "溝通",
-    "summary": "好多啱啱/第一次拍拖嘅人，都係唔好識要應該點樣經營感情，唔知點同另一半喺心靈上、關係上更加親密。係咪覺得好困擾？不如睇吓應該點做啦！",
-    "content": "<p>無論係男定女 可能都會有種諗法 「<strong>想快啲同佢進入下一步</strong>」，「<strong>想同佢再close啲</strong>」，所謂嘅下一步 未必一定係身體上嘅親密接觸，亦代表緊大家嘅感情狀態、信任度。</p>\n<p>親密感同信任度唔係一日就有，而係透過一次次穩定互動慢慢 build up。喺呢個過程入面，兩個人會逐漸感受到安全感，所以最重要唔係急住推進，而係一步一步建立親密關係。</p>\n<h2>✨ 階段一：漸進式分享 ➡️ 建立信任感</h2>\n<p>啱啱開始一段關係 最重要係先令大家習慣咗有對方嘅存在，先可以令大家舒服地相處 所以啱啱拍拖時 唔使太急住講深層次話題。</p>\n<ul><li>同屋企人關係點？</li></ul>\n<ul><li>上一段/上幾段感情點結束？</li></ul>\n<p>呢啲話題可以令雙方慢慢了解對方內心世界 可以令關係更進一步</p>\n<ul><li>️ 但記住</li></ul>\n<p>分享要有節奏 唔好一次過講晒自己所有秘密 或者一次過問曬對方所有秘密 否則可能會嚇親對方！</p>\n<h2>親密感要靠共同經歷慢慢建立</h2>\n<p>親密關唔係淨係靠講同親密行為 仲要一齊經歷唔同嘅事</p>\n<ul><li>一齊去旅行 體驗新事物</li></ul>\n<ul><li>參與對方鍾意嘅活動 了解佢嘅世界</li></ul>\n<p>當你哋有共同回憶 感情會更加深厚 唔係淨係拍拖打卡咁簡單</p>\n<p>親密感唔係淨係開心時先有 而係當對方唔開心、冇安全感時 你嘅回應可唔可以令佢覺得安心</p>\n<ul><li>對方壓力大/情緒低落時會陪佢傾計、諗辦法解決</li></ul>\n<ul><li>大家有矛盾時，你唔好鬧爆佢，而係冷靜溝通</li></ul>\n<p>做一個願意聆聽、包容對方情緒嘅另一半 佢就自然會更加信任你、依賴佢 親密感都會更加堅固！</p>\n<h2>常見問題</h2>\n<h3>想讓關係升溫，是否要講更多深層話題？</h3>\n<p>不一定。深層話題有幫助，但太快太多會有壓力。親密感也要靠共同經歷、穩定回應和安全感慢慢建立。</p>\n<h3>怎樣令親密感自然增加？</h3>\n<p>由細小但穩定的互動開始，例如定期分享近況、一起做新事情、在對方低落時接住情緒，而不是急著推進下一步。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/DG5tdCjS6Di/",
-    "date": "2025-03-07",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "「大男人」的內心通常住著一個渴望被認同的小男孩。",
+    "content": "<h2>你的男朋友係咪好霸道、好固執</h2>\n<p>你的男朋友係咪好霸道、好固執，又要面？同大男人相處，真係少啲EQ都唔掂。好多女仔會嘗試同佢講道理，甚至同佢硬碰，結果嘈到天拆。其實，大男人係最好「<strong>操控</strong>」嘅生物，只要你摸透佢嘅心理死穴。</p>\n<p>大男人的心理特徵。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>極度需要<strong> 面子 </strong> (Hero Instinct)</span></h2>\n<p>佢哋嘅自尊心極強。喺佢心目中，佢就係國王。如果你當眾落佢面，或者質疑佢嘅決定，佢會視為對佢人格嘅攻擊。如果你表現得強勢，佢會當你係競爭對手；但如果你表現得柔弱、需要幫忙，佢嘅「<strong>英雄雷達</strong>」就會啟動，自動自覺衝出黎保護你。佢管你著咩衫、幾點返，表面係霸道，內心其實係驚失去掌控。如何相處？記住 4 個字：「<strong>滿足自尊</strong>」。平時多啲讚佢（尤其係喺外人面前），佢就會飄飄然。當佢心情好，你想要咩佢都會買比你。</p>\n<h2>再看深一層：男朋友係大男人？教你「<strong>以柔制剛</strong>」輕鬆駕馭霸道總裁的真正訊號</h2>\n<p>感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。</p>\n<p>你可以先觀察三個位置：對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p><h2>下一步不要急著做錯</h2>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。</p>\n<p>同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>你的男朋友係咪好霸道、好固執</li><li>極度需要，面子 (Hero Instinct)</li><li>再看深一層</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>看男人心態時，不要只聽他一刻怎樣講，也要看他之後有沒有做到、願不願意承擔，以及你在相處裡是否感到安心。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-4307634.jpg",
     "coverCredit": "Photo by Ketut Subiyanto on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/cheerful-couple-sitting-on-bench-and-talking-4307634/",
@@ -6257,27 +5477,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：想讓關係升溫？建立親密感的 5 個日常方法",
+    "coverCaption": "Asteria 相處教學：【戀愛心理學】男朋友係大男人？教你「以柔制剛」輕鬆駕馭霸道總裁",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 131,
-    "title": "一談戀愛就暈船？戀愛腦的原因與自救方法",
-    "category": "戀愛心理",
+    "title": "【戀愛技巧】什麼是「情緒價值」？令男人上癮的關鍵秘密！",
+    "category": "情緒修復",
     "color": "bg-asteria-pink/60",
     "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "心理",
-    "summary": "愛情會令你嘅生活添上色彩！但過度沉醉喺愛情世界，事事以另一半為先，可能你已經「戀愛腦」上身。唔好以為只有女人先有「戀愛腦」症狀，其實不論男女都機會出現呢個情況，過度「戀愛腦」上身，對愛情、對另一半無法上拔，可能有機會變成恐怖情人！想知自己有冇「戀愛腦」徵兆？本文從戀愛心理角度拆解關係訊號、應對方法與",
-    "content": "<p>「一談戀愛就暈船」會牽動很多不安，越亂越要先分清事實、猜測和感受。當你看清自己真正需要的是安慰、承諾、空間還是答案，下一步就不會只被情緒推著走。</p> <h2>讓自己先回到穩定狀態：回到「一談戀愛就暈船」來看</h2>\n<p>情緒最高漲時做的決定，通常最容易後悔。先睡一覺、寫低感受，或者找人整理，再決定要不要發訊息。 當你不再把所有價值感交給對方反應決定，就會更容易看見這段關係是否真的適合，而不是只被一刻心動或不甘心帶走。</p> <h2>把「一談戀愛就暈船」拆成事件、猜測和感受</h2>\n<p>很多不安不是來自事件本身，而是腦內補上的意思。把實際發生的事、你猜測的意思、你的感受分開，情緒會比較容易落地。 你可以先把腦入面的劇情寫出來，再逐句問自己：這是事實、推測，還是我害怕發生的結果？分開之後，情緒會比較容易落地。</p> <h2>別讓「一談戀愛就暈船」變成逼對方證明愛</h2>\n<p>越不安越想要即時答案，但重話和追問只會令對方更想逃。先穩住自己，再用清楚句子講需要，通常比爆發更有力量。 情緒不是錯，但情緒最高漲時最容易講錯話。先讓自己回到穩定狀態，再決定要不要發訊息，通常會少很多後悔。</p> <h2>不要讓「一談戀愛就暈船」決定你的價值感</h2>\n<p>你可以在乎對方反應，但不要把所有價值感交給對方決定。當你知道自己真正想要什麼，才不會每一次波動都被拉走。 如果你需要的是安全感，就不要只用質問去換答案；可以改成表達你希望對方怎樣回應，這樣對方比較知道如何接住你。</p> <h2>暈船時先把想像和現實分開</h2>\n<p>如果你被「一談戀愛就暈船」拉到很亂，先給自己一點時間回到穩定。你可以把感受寫低、分清事實和猜測，再決定要不要同對方談。當你不再被即時焦慮推著走，很多原本看似一定要立刻處理的事，會變得更清楚，也更容易選到不後悔的做法。</p>\n<h2>常見問題</h2>\n<h3>「一談戀愛就暈船」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「一談戀愛就暈船」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「一談戀愛就暈船」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
+    "imageLabel": "療癒",
+    "summary": "為什麼有些女朋友作天作地，男朋友都寵佢上天。",
+    "content": "<h2>為什麼有些女生不漂亮但很多人追</h2>\n<div class=\"article-section-card\"><p>男人最想要的不是性，是「<strong>被理解</strong>」，在這個高壓社會，男人回家最想找的，是一個可以讓他「<strong>放鬆</strong>」、「<strong>充電</strong>」的地方。如果你能提供這種價值，他就會對你上癮。</p><p>高情緒價值的 3 個特徵。</p></div><h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 1 點</span><span>不掃興</span></h2>\n<p>當他分享開心事，你會陪他一起開心，而不是潑冷水（「<strong>車，有咩咁巴閉</strong>」）。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 2 點</span><span>提供認同</span></h2>\n<p>在他失意時，你能看到他的付出，給予肯定。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">第 3 點</span><span>情緒穩定</span></h2>\n<p>你能處理好自己的情緒，而不是要他時刻為你的心情負責。</p>\n<p>真正的情緒價值，不是叫你永遠溫柔、永遠配合，也不是把自己放到很低去成全對方。它更像是一種相處能力：你能不能在對方開心時接住他的分享，在他失意時看見他的努力，在衝突時仍然保持基本尊重。如果你只是一直哄、一直忍、一直迎合，短期可能會令對方舒服，但長期會令你失去自己。高情緒價值應該是雙向的，你可以給予支持，也需要被珍惜、被回應。</p><h2>可以先做的三件事：少一點用否定句回應對方的分享</h2>\n<div class=\"article-section-card\"><p>少一點用否定句回應對方的分享，先接住感受，再表達自己的看法。讚賞要具體，例如看見對方做了甚麼努力，而不是空泛地說「<strong>你好叻</strong>」。當你自己情緒很滿時，先停一停，不要把不安變成責備。當男人在你面前感到放鬆、被理解、被尊重，他自然會更願意靠近你。但你也要記住，情緒價值不是單方面服務，而是兩個人都願意令彼此相處得更安心。</p></div><h2>可以先做的三件事：少一點用否定句回應對方的分享</h2>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>為什麼有些女生不漂亮但很多人追。</li><li>情緒價值來自接住對方感受</li><li>提供認同</li><li>情緒穩定</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你正在關係入面不斷付出，記得先看自己有沒有被好好對待。真正穩定的感情，不需要靠壓低自己去換取對方重視。</p>\n<h2>常見問題</h2>\n<h3>這代表我太情緒化嗎？</h3>\n<p>唔一定。感情入面會不安、委屈、放唔低都好正常，問題唔係有情緒，而係情緒會唔會令你失去方向、做出令自己後悔的反應。</p>\n<h3>好辛苦時可以點穩住自己？</h3>\n<p>先唔好逼自己即刻放低。可以減少反覆翻睇對話、記低真正觸發位，再一步步整理你想要的是復合、答案，還是情緒出口。</p>\n<h3>Asteria 可以點樣陪我處理？</h3>\n<p>可以。我哋唔係只做占卜或儀式，也會陪你整理近況、情緒同相處盲點，幫你喺最亂時先搵返方向。</p>",
     "sourceIg": "",
-    "date": "2023-05-16",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-6213406.jpg",
     "coverCredit": "Photo by Trần Long on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/ethnic-couple-holding-hands-in-street-near-bicycle-and-building-6213406/",
@@ -6305,27 +5519,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：一談戀愛就暈船？戀愛腦的原因與自救方法",
+    "coverCaption": "Asteria 相處教學：【戀愛技巧】什麼是「情緒價值」？令男人上癮的關鍵秘密！",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 132,
-    "title": "講心底話不等於有效溝通：5 個最常見溝通盲點",
-    "category": "溝通相處",
+    "title": "【戀愛腦自救】一拍拖就無晒朋友？5 個「戀愛腦」症狀及戒除方法",
+    "category": "戀愛心理",
     "color": "bg-asteria-blue/60",
     "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "溝通",
-    "summary": "你有冇覺得，拍拖越耐，好似就嚟越少溝通？明明好愛對方，但一開口就好易嗌交，或者講唔到真正想表達嘅意思？其實問題唔一定係唔夠愛，而係唔識傾。拍拖想行得遠，呢5個溝通小學問你真係要知！",
-    "content": "<p>但你有冇發覺 你明明已經成日同另一半講嘢，但大家嘅關係好似都係普普通通，感情冇特別變好，咁係因為你以為嘅溝通係「<strong>肯同另一半講嘢</strong>」，但就冇消化過自己「<strong>點講嘢</strong>」，亦冇設身處地咁諗吓佢聽完係咩感受 然後就誤中地雷。</p>\n<p>想知到底點為之「<strong>有效溝通</strong>」 就睇吓我哋嘅教學啦！</p>\n<p>1️⃣ 主動表達感受 唔好要人估估吓 好多人 尤其係女仔 最鍾意叫另一半估吓 但其實呢個做法真係好差！</p>\n<p>唔好覺得「<strong>你愛我就應該識我諗咩</strong>」 冇人有讀心術，亦唔係你肚入面條蟲 對方唔會知你諗緊乜 有唔開心、有需要，開口講！</p>\n<p>你唔講，對方只會亂估 估錯仲變咗你嬲佢 咁就冇完冇了</p>\n<ul><li>「<strong>你應該知我唔開心，點解仲唔氹我？</strong>」</li></ul>\n<p>⭕️ 「<strong>我有啲唔開心，可唔可以同你傾吓？</strong>」</p>\n<h2>少啲批評 多啲理解</h2>\n<p>2️⃣ 少啲批評 多啲理解 有時你係真心想對方改進，但一開口就變成鬧人 對方一聽就會起反感 仲邊有心機聽你講？</p>\n<p>試下改下語氣千祈唔好用指責方式去講 想對方改變唔一定要鬧 有時用溫柔嘅方式 反而會更容易入佢心</p>\n<ul><li>「<strong>你成日都咁嘅語氣，叫極唔改，黑人憎</strong>」</li></ul>\n<p>⭕️ 「<strong>你啱啱嗰句說話令我有啲唔開心，我唔係好鍾意你咁講</strong>」</p>\n<h2>有些話題要講，但要保留情感邊界：回到「講心底話不等於有效溝通」來看</h2>\n<p>4️⃣ 關心唔好逼得太緊 有冇試過，當你好想關心對方，但唔知點解每次講完，佢都變得好抗拒 甚至話有壓力 甚至對方聽完反而好煩躁，其實問題就出現喺你講得太緊，好似chur緊佢咁，令佢將抒發自己嘅「<strong>感受</strong>」變成佢嘅「<strong>責任</strong>」，令佢覺得壓力山大。</p>\n<ul><li>「<strong>你明明就係唔開心，有事又唔講，咁我點知要點幫你！</strong>」</li></ul>\n<p>⭕️ 「你唔開心，我感覺到嘅。如果你準備好講，我一直都喺度聽你講，同你一齊諗辦法」</p>\n<p>5️⃣ 嬲嗰陣唔好即刻爆出嚟 雖然嗌交喺某程度上嚟講，都係溝通嘅一種，但好多人一嗌起交上嚟，好易就即刻爆發 會唔小心講咗啲好hurt人嘅說話，要記住，說話出咗出嚟就收唔返 當你真係好嬲嗰陣 都要識控制吓自己嘅情緒！</p>\n<h2>常見問題</h2>\n<h3>面對「講心底話不等於有效溝通」，是不是代表關係一定不適合？</h3>\n<p>不一定。要看這個狀況是偶發，還是已經反覆影響你們的安全感和溝通。如果對方仍願意理解和調整，關係仍有修補空間。</p>\n<h3>遇到「講心底話不等於有效溝通」，我應該繼續追問嗎？</h3>\n<p>通常不建議在對方防衛最高時追問。可以先把重點縮短，講清楚事件、感受和一個具體希望，再看對方是否願意回應。</p>\n<h3>Asteria 可以怎樣幫我處理「講心底話不等於有效溝通」？</h3>\n<p>可以幫你整理對方反應、關係卡位和訊息策略，拆清楚哪些說法會推遠對方，哪些表達比較容易被接住。</p>",
-    "sourceIg": "https://www.instagram.com/p/DKCU8wmJFqo/",
-    "date": "2025-05-24",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "心理",
+    "summary": "「戀愛腦 (Limerence)」是指過度沉迷於戀愛，將伴侶視為生活唯一重心。",
+    "content": "<h2>愛情會令你嘅生活添上色彩</h2>\n<p>愛情會令你嘅生活添上色彩！但過度沉醉喺愛情世界，事事以另一半為先，可能你已經，「<strong>戀愛腦</strong>」，上身。唔好以為只有女人先有「<strong>戀愛腦</strong>」症狀，其實不論男女都機會出現呢個情況。過度「<strong>戀愛腦</strong>」上身，對愛情、對另一半無法自拔，可能有機會變成恐怖情人！有異性無人性：一拍拖就人間蒸發，朋友約極都唔出。電話不離手，秒回對方，期待對方秒回。底線後退：對方做錯事（甚至出軌），你都無限原諒，只要佢唔分手。</p>\n<p>對方會覺得你太 chus (chur)，壓力好大。最後想逃離。你自己會失去自我，萬一分手，你就一無所有。感情裡的很多反應，都同安全感、自我價值同依附模式有關；只看表面行為，很容易判斷錯方向。對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>愛情會令你嘅生活添上色彩！</li><li>對方會覺得你太 chus (chur)，壓力好大。</li><li>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。</li><li>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理。</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>感情變化不一定代表關係完結，但你需要看清楚這是正常磨合、短暫情緒，還是長期忽略彼此需要。</p>\n<h2>常見問題</h2>\n<h3>可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 可以點樣幫我？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-34581277.jpg",
     "coverCredit": "Photo by Thái Trường Giang on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/outdoor-cafe-scene-in-kon-tum-vietnam-34581277/",
@@ -6353,27 +5561,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：講心底話不等於有效溝通：5 個最常見溝通盲點",
+    "coverCaption": "Asteria 相處教學：【戀愛腦自救】一拍拖就無晒朋友？5 個「戀愛腦」症狀及戒除方法",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 133,
-    "title": "伴侶問你借錢點算？講錢不傷感情的處理方法",
-    "category": "戀愛心理",
+    "title": "【PUA警號】男朋友對你事事挑剔？拆解「打壓式教育」背後的自卑心理",
+    "category": "關係危機",
     "color": "bg-[#E7F4F2]",
     "icon": "fa-solid fa-route",
-    "imageLabel": "心理",
-    "summary": "伴侶問你借錢時，重點不是即刻答應或拒絕，而是先看清金額、用途、還款能力、過往責任感，以及你借出後會否令自己失去安全感。講錢可以有愛，但一定要有界線。",
-    "content": "<p>伴侶問你借錢，最難不是錢本身，而是你怕拒絕會傷感情、答應又怕之後收不回。這時不要用「愛不愛」去決定，而要把事情拆開：對方為甚麼要借、借多少、幾時還、過去是否守信用，以及這筆錢會不會影響你自己的生活。</p><h2>先問清楚用途和還款時間</h2><p>如果對方只說「幫幫我」但講不清用途、金額和還款日期，你就不應該急著答應。真正負責任的人，會願意把事情交代清楚，而不是用情緒逼你即刻幫。</p><h2>不要用借錢證明自己有多愛</h2><p>感情入面可以互相扶持，但金錢不應該變成愛的考試。如果你心底其實很不安，卻因為怕失去對方而勉強借出，之後很容易由幫忙變成怨氣。</p><h2>小額可以幫忙，大額一定要寫清楚</h2><p>如果只是短期小額周轉，你可以按能力決定；但涉及較大金額，就要清楚寫低借款日期、金額、還款方式和時間。講清楚不是不信任，而是保護雙方關係。</p><h2>留意借錢後的態度</h2><p>有些人借錢前很溫柔，借完之後就迴避、拖延、發脾氣，甚至反過來指責你計較。這種態度比借錢本身更值得你留意，因為它反映責任感和尊重。</p><h2>拒絕時可以溫柔，但界線要清楚</h2><p>你可以說：「我明白你而家有困難，但呢個金額我暫時承擔唔到。我可以陪你諗其他方法。」溫柔不代表要犧牲自己，界線也不等於冷血。</p><h2>談錢最重要不是冷酷，而是不要讓曖昧變成壓力</h2><p>很多感情入面的金錢矛盾，都是因為一開始不好意思講清楚。你怕講得太實際會傷感情，對方可能也覺得既然是伴侶就不需要計較；但越含糊，日後越容易變成怨氣、誤會，甚至權力不平衡。</p><p>所以講錢時可以保持溫柔，但內容要具體。你可以同時表達關心和界線：我明白你有困難，我願意陪你想辦法，但這筆錢我最多能承擔多少、希望怎樣還、如果還不到會怎樣處理。清楚不是無情，而是讓感情不用被金錢拖垮。</p><h2>常見問題</h2><p><strong>伴侶問我借錢，拒絕會不會代表我不愛？</strong><br/>不會。愛可以包括支持，但不等於必須承擔對方的金錢責任。</p><p><strong>借錢給伴侶要不要寫借據？</strong><br/>如果金額會影響你的生活，建議寫清楚。這不是破壞感情，而是避免日後誤會。</p><p><strong>對方因為我不借錢就冷淡，代表甚麼？</strong><br/>這反映對方可能把你的付出視為理所當然。你需要重新評估這段關係的尊重和平衡。</p>",
+    "imageLabel": "警號",
+    "summary": "如果伴侶經常批評你「做得唔好」、「蠢」，這未必是為了你好，而是一種「投射性認同 (Projective Identification)」。",
+    "content": "<h2>先看常見情境</h2>\n<p>「<strong>你著這件衫好肥</strong>」。「<strong>你煮飯好難食</strong>」。「<strong>你做嘢咁慢，有無腦架？</strong>」，在一段關係中，對方不斷挑剔你。佢話：「<strong>我挑剔你，係想你變好，係對你有期望</strong>」。結果你變得小心翼翼，唔敢再表達自己，甚至覺得自己真係好差。挑剔 ≠ 期望。真正愛你嘅人，會接納你嘅不完美，並用鼓勵代替批評。佢不斷挑剔，其實係源於佢內心嘅，「<strong>自卑</strong>」。佢需要踩低你，先覺得自己高高在上。這是一種，「<strong>情感操控 (PUA)</strong>」，的前奏。</p>\n<p>如何化解挑剔？不要辯論：越解釋，佢越挑剔。左耳入右耳出：視佢嘅說話為「<strong>雜音</strong>」。</p>\n<h2>堅定回擊</h2>\n<p>「<strong>我覺得我做得好好。如果你唔鍾意，你可以自己做</strong>」。危機出現時，最重要是先守住底線，再分清對方是一時情緒爆發，還是長期逃避責任。對方最近有冇主動靠近、衝突後有冇修補、你表達需要時對方係願意理解，定只係想快點完結話題。這些細節會比一句「<strong>愛不愛</strong>」更能反映關係狀態。</p>\n<p>如果你一邊很想修補，一邊又很怕失去，就更加要先整理好說話次序。先講具體事件，再講自己的感受，最後只提出一個清楚而可做到的希望。這樣比長篇控訴更容易令對方聽得入耳，也更方便判斷對方是否仍願意為關係付出。同時，你亦要留意自己有冇因為太想要答案，而忽略咗現實行動。真正值得繼續投入的關係，不會只靠一刻感動或者一句承諾，而是會在之後的相處入面慢慢見到改變。</p>\n<p>如果對方仍然願意回應、願意調整，這段關係就值得用更成熟的方法處理；但如果你每次提出需要都只換來逃避、指責或者冷淡，就要重新保護自己的界線。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>堅定回擊</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果你看到控制、冷暴力或傷害性行為，先不要急著替對方合理化。保護自己、看行動是否持續，比聽一句解釋更重要。</p>\n<h2>常見問題</h2>\n<h3>這算關係危機警號嗎？</h3>\n<p>有機會係。尤其涉及第三者、控制、冷暴力、欺騙或長期失衡時，唔好只睇對方一句解釋，要睇佢行為有冇持續、係咪願意修補。</p>\n<h3>我應該即刻攤牌嗎？</h3>\n<p>唔一定。未清楚對方心態前，太急攤牌可能令佢防衛或反咬。可以先收集訊號、穩住自己，再決定用柔和試探、直接溝通，定先保護自己。</p>\n<h3>塔羅可以點樣睇背後狀態？</h3>\n<p>可以用嚟整理對方真實狀態、你哋關係阻礙同下一步風險，但重要決定仍然要配合現實行為一齊判斷。</p>",
     "sourceIg": "",
-    "date": "2024-03-05",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-34228242.jpg",
     "coverCredit": "Photo by Studio Dreamview on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/couple-in-traditional-vietnamese-attire-walking-outdoors-34228242/",
@@ -6401,27 +5603,21 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：伴侶問你借錢點算？講錢不傷感情的處理方法",
+    "coverCaption": "Asteria 相處教學：【PUA警號】男朋友對你事事挑剔？拆解「打壓式教育」背後的自卑心理",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   },
   {
     "id": 134,
-    "title": "男人變心是天性嗎？他愛上別人的真正原因",
-    "category": "關係危機",
+    "title": "【結婚心理】男朋友拖婚？拆解「順其自然」背後的 3 大潛台詞！唔想做大齡剩女必睇",
+    "category": "長期關係",
     "color": "bg-[#F6E7D8]",
     "icon": "fa-solid fa-compass",
-    "imageLabel": "警號",
-    "summary": "就算當初愛得死去活來，時間都會令一切趨於平淡；就算身邊嘅另一半外貌標緻身材好，男人都有機會愛上其他女人！ 唔通男人變心真係預料之中？佢到底點解會變心？",
-    "content": "<p>親密關係理想形式必然係一對一，但喺人類天生的特質 呢種情況唔係必然，就算已經互相確立關係 人的感情絕對有可能愛上兩個人，亦可能慢慢變心。</p>\n<h2>變心前後，最值得看的幾個信號</h2>\n<h3>一個人變心有好多徵兆</h3>\n<p>對持續缺乏耐性 少咗主動聯絡你 唔再分享佢嘅嘢 冇過問你交友同生活，突然有一兩次對你太好，你哋之間嘅親熱都係你主導 點解拍拖中都會對其他人有feel。</p>\n<p>假如兩個女人剛好填補佢心中唔同嘅缺塊 好像唔同嘅朋友帶俾男人唔同嘅功能，Eg: 打機打波時搵A 旅行時搵B 佢唔會刻意去諗邊個朋友更重要，對女人都一樣，佢會覺得兩個人都一樣重要，所以兩個女人佢都有feel ＼貪心地覺得“全都要“／。</p>\n<h2>原因2    過於缺乏安全感</h2>\n<p>缺乏安全感嘅人 最容易喺遇到唔同人，令自己內心有所動搖 少少的熱情 少少的讚賞，就令佢分不清自己嘅真實心意 ＼佢地只係想自己被愛／。</p>\n<p>當佢認識咗個新嘅人 最開初的交流一定係最開心最輕鬆，互相會逐漸交流 產生興趣、好感，刺激同興奮的感覺 誤以為自己愛上另一個人，＼對其他人產生太多興趣可能誤以為係愛！／。</p>\n<p>世界咁大 會覺得自己想試下唔同對象 覺得一生的決定可能有更好，冇辦法選定一個人，即使目前對象唔錯，但都總有心思思的念頭 ＼當遇到令佢眼光一亮嘅人，就會動搖！／。</p>\n<h2>信號清楚後，為「男人變心是天性嗎」定界線</h2>\n<p>當然都有人是真・渣男 只貪圖另一人給予嘅情感缺失補償，Eg: 性行為方面好夾，金錢或物質上嘅滿足 從伴侶中得到優越感，明明知道自己最愛係邊個，但就係唔願放棄另一個對自己死心塌地嘅「<strong>工具人</strong>」，＼通常嗰個「<strong>工具人</strong>」都係元配！／。</p>\n<p>人都有自我防衛機制 世俗定義覺得「<strong>見異思遷</strong>」係一件唔好嘅事，只有渣男/渣女先會咁做，所以佢亦唔想承認自己係衰人，包裝到「<strong>兩個女人都愛 揀唔到</strong>」 喺愛情世界中，能夠說出兩個都愛嘅人，其實根本就兩個都唔愛 最愛自己。</p>\n<h2>常見問題</h2>\n<h3>男人變心真的是天性嗎？</h3>\n<p>不應該用天性合理化變心。人會被新鮮感吸引，但是否越界、是否誠實、是否承擔，是選擇和責任。</p>\n<h3>發現對方可能變心，應該點做？</h3>\n<p>先看信號是否持續，再講清楚你觀察到的變化和界線。不要只靠猜測內耗，也不要在未看清前把責任全攬上身。</p>\n<h3>Asteria 可以點樣幫你整理這類情況？</h3>\n<p>可以幫你把情緒、事實和對方行動分開，看清真正卡住的位置，再整理下一步應該溝通、觀察、修補還是守住界線。</p>",
-    "sourceIg": "https://www.instagram.com/p/CvW-f89ywKW/",
-    "date": "2023-07-31",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
+    "imageLabel": "長久",
+    "summary": "當男人面對結婚話題說「順其自然」，通常不是因為隨緣，而是因為「逃避」。",
+    "content": "<p>先看常見情境，拍咗幾年拖，身邊朋友陸續派帖，你開始幻想同男朋友共組家庭、步入教堂。但無奈對方一直唔主動提及婚事。每次你忍唔住開口問：「<strong>我哋幾時結？</strong>」，佢只會淡淡然答一句：「<strong>順其自然啦</strong>」。這四個字，簡直係女人嘅惡夢。所謂嘅「<strong>順其自然</strong>」，到底要等到幾時？係等到中六合彩？定係等到你年老色衰？其實，男人講「<strong>順其自然</strong>」，往往唔係真係想隨緣，而係佢由始至終都無將你放入佢嘅「<strong>結婚計劃</strong>」入面。拆解「<strong>順其自然</strong>」背後的 3 個殘酷真相。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">真相 1</span><span>經濟考量 —— 我有心但無力</span></h2>\n<p>經濟考量 ——「<strong>我有心但無力</strong>」，在香港，結婚生仔樣樣都係錢。男人嘅自尊心好強，好多時佢哋覺得要有車有樓、事業有成先有資格娶老婆。如果佢現階段事業未上軌道，或者儲蓄唔多，佢會好驚面對「<strong>結婚</strong>」呢個話題。特徵：佢平時對你好好，好負責任。但一講錢或結婚就變得好焦慮、避而不談。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">真相 2</span><span>關鍵判斷</span></h2>\n<p>彼得潘症候群 (Peter Pan Syndrome) ——「<strong> 我未玩夠 </strong>」，這類男人係長不大嘅大細路。佢哋享受拍拖嘅甜蜜。但極度抗拒婚姻嘅束縛。佢哋覺得結咗婚就係「<strong> 入墳墓 </strong>」，無得打機、無得飲酒、又要比家用。所以佢用「<strong> 順其自然 </strong>」黎拖延，目的係維持現狀：有人陪但又唔洗負責任。</p>\n<h2 class=\"article-numbered-heading\"><span class=\"article-numbered-heading__badge\">真相 3</span><span>騎牛搵馬 —— 你唔係 The One</span></h2>\n<p>騎牛搵馬 ——「<strong> 你唔係 The One </strong>」，這是最令心痛嘅真相。佢愛你，覺得同你相處舒服。但佢內心深處覺得你「<strong> 未夠好 </strong>」做佢老婆。可能係性格問題，可能係家境問題。佢拖住你，係因為佢未搵到個更好嘅；一旦遇到個更令佢心動嘅對象，佢就會即刻分手閃婚（對象唔係你）。</p>\n<h2>面對「<strong> 拖婚 </strong>」，你應該點做？</h2>\n<p>千萬唔好信「<strong> 等佢準備好 </strong>」。男人永遠唔會覺得自己準備好（尤其係錢）。你繼續等，只會消耗自己嘅青春。你需要做嘅，係分辨佢係邊一種心態，然後對症下藥。如果係經濟問題，你可以比信心佢一齊捱；但如果係心態問題，你就要考慮止蝕。</p>\n\n<h2 class=\"article-highlight-title\">重點速讀</h2>\n<ul class=\"article-highlight-list\"><li>經濟考量 —— 我有心但無力</li><li>關鍵判斷</li><li>騎牛搵馬 —— 你唔係 The One</li></ul>\n<h2>Asteria 小提醒</h2>\n<p>如果問題關乎長期安排，重點不是逼對方即刻承諾，而是看你們能否坦白談未來、責任和現實限制。</p>\n<h2>常見問題</h2>\n<h3>關係變淡係咪代表唔愛？</h3>\n<p>唔一定。熱戀感下降係正常，但如果連溝通、關心、共同目標都慢慢消失，就需要重新整理相處模式，而唔係只怪自己想太多。</p>\n<h3>可以點樣重新拉近距離？</h3>\n<p>可以先由細位開始，例如固定高質對話、少啲批判、多啲具體欣賞，再慢慢重建安全感同共同節奏。</p>\n<h3>Asteria 可以點幫我處理？</h3>\n<p>我哋可以幫你睇關係卡住的位置、對方需要同你嘅表達方式，將問題拆細到日常一句說話、一次互動點處理。</p>",
+    "sourceIg": "",
+    "date": "",
+    "tags": [],
     "coverImage": "/article-custom-images/stock_local/pexels-11989594.jpg",
     "coverCredit": "Photo by Tài Đặng on Pexels",
     "coverCreditUrl": "https://www.pexels.com/photo/man-holding-the-woman-s-hand-while-standing-on-a-rock-11989594/",
@@ -6449,775 +5645,7 @@ export const teachingPosts: TeachingPost[] = [
         "prompt": ""
       }
     ],
-    "coverCaption": "Asteria 相處教學：男人變心是天性嗎？他愛上別人的真正原因",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 135,
-    "title": "想讓愛情長久不變淡？幸福關係的相處秘訣",
-    "category": "戀愛心理",
-    "color": "bg-[#EEF5DD]",
-    "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "心理",
-    "summary": "想愛情長久不變淡，不是靠永遠保持熱戀，而是建立可持續的相處節奏、溝通方式和共同成長。",
-    "content": "<p>長久的愛情不會每天都像剛開始一樣刺激，但可以越來越穩、越來越安心。真正令感情變淡的，往往不是時間，而是兩個人停止經營。</p>\n<h2>保留日常的小連結</h2>\n<p>不用每天做大事，但一句關心、一餐飯、一段不滑手機的對話，都會累積關係的溫度。</p>\n<p>日常小連結看似普通，但它們會讓人感到自己仍然被放在心上。長久關係不是靠一次大浪漫，而是靠很多小小的在乎累積。</p>\n<h2>不要把熟悉變成理所當然</h2>\n<p>在一起久了，更要記得感謝和欣賞。被看見的感覺，是感情長久的重要養分。</p>\n<p>熟悉之後最容易忘記感謝，覺得對方做甚麼都是應份。被當成理所當然的人，久了會心淡，所以欣賞其實是維繫感情的基本功。</p>\n<h2>定期更新彼此需要</h2>\n<p>人會變，壓力會變，想要的愛也會變。不要以為很熟就不用再問，偶爾傾傾近況和需要很重要。</p>\n<p>人會隨時間改變，壓力和需要也會改變。定期問問對方最近需要甚麼、哪裡辛苦，可以避免兩個人表面很近，心裡越走越遠。</p>\n<h2>吵架後要懂得修補</h2>\n<p>長久關係不是不吵，而是吵完仍然願意回來處理。修補能力比表面甜蜜更重要。</p>\n<p>吵架後的修補，是長久關係最重要的肌肉。每一次衝突如果都能多理解一點，關係會變厚；如果每次都留下傷口，就會變淡。</p>\n<h2>一起創造新的經驗</h2>\n<p>共同學新事、去新地方、定新目標，可以讓關係不只停留在習慣，而是繼續有生命力。</p>\n<p>共同經驗能令關係有新鮮空氣，不一定要很花錢。一起學一樣東西、計劃小旅行、建立共同目標，都能讓愛不只是習慣。</p>\n<h2>常見問題</h2>\n<h3>感情變淡是否正常？</h3>\n<p>熱情下降正常，但關心和投入不應消失。</p>\n<h3>長久關係最重要是甚麼？</h3>\n<p>穩定溝通、互相欣賞、願意修補和共同成長。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你看關係變淡原因，以及如何重新建立互動節奏。</p>",
-    "sourceIg": "",
-    "date": "2024-02-17",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-7671359.jpg",
-    "coverCredit": "Photo by Ivan S on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/couple-using-a-laptop-together-7671359/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-6252451.jpg",
-        "caption": "內文配圖：想讓愛情長久不變淡？幸福關係的相處秘訣",
-        "credit": "Photo by Doci on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/elegant-asian-couple-with-photo-camera-on-road-6252451/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-30626453.jpg",
-        "caption": "內文配圖：想讓愛情長久不變淡？幸福關係的相處秘訣",
-        "credit": "Photo by Thanh  Luu on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/romantic-couple-overlooking-urban-market-30626453/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-14930322.jpg",
-        "caption": "內文配圖：想讓愛情長久不變淡？幸福關係的相處秘訣",
-        "credit": "Photo by Trần Long on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/young-couple-walking-holding-hands-14930322/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：想讓愛情長久不變淡？幸福關係的相處秘訣",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 136,
-    "title": "出軌後想補救可以點做？重建信任與挽回關係方法",
-    "category": "關係危機",
-    "color": "bg-[#EDF0F7]",
-    "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "警號",
-    "summary": "出軌後想補救，重點不是一句對不起，而是停止曖昧或第三者、承認傷害、讓對方有知情權，並用長期一致行動重建信任。能否挽回，要看對方是否仍願意看見你的改變。",
-    "content": "<p>出軌後想補救，最怕是只急著求原諒，卻沒有真正處理傷害。對方受傷的不是單一事件，而是信任被打碎、過去的安全感被推翻。所以修復不能只靠道歉，而要靠清楚、持續、可被驗證的行動。</p><h2>先停止第三者和所有曖昧聯繫</h2><p>如果你一邊說想補救，一邊仍然保留曖昧窗口，對方很難再相信你。真正想修補，就要先把會傷害關係的聯繫停下來，而不是要求對方先相信你。</p><h2>道歉要承認具體傷害</h2><p>一句「對唔住」不夠。你需要講清楚自己做了甚麼、傷害了對方甚麼、令對方失去了甚麼安全感。越想輕輕帶過，對方越會覺得你沒有真正明白。</p><h2>透明不是被審問，而是重建安全感</h2><p>出軌後的透明期會令人不舒服，但它是重建信任的一部分。你可以和對方約定哪些資訊需要交代、多久檢視一次，而不是用「你唔信我就算」去逃避。</p><h2>不要催對方原諒</h2><p>被背叛的人需要時間消化。你可以表達想修補，但不能要求對方立即回到以前。真正的誠意，是願意承受修復期的不安，而不是把壓力推回受傷的人身上。</p><h2>用之後的每一次選擇證明改變</h2><p>信任不是一次談話就回來，而是靠你之後面對誘惑、衝突和距離時的選擇慢慢累積。對方看的不是你講得幾後悔，而是你是否真的變得可靠。</p><h2>修復期要容許對方反覆，而不是要求一次翻篇</h2><p>出軌後的信任修復，很少會直線變好。對方可能今日願意靠近，明天又突然想起細節而崩潰；這不是他故意翻舊帳，而是創傷正在重新整理安全感。若你真心想補救，就要承認這段時間會不舒服，而且不能只用一句「我已經道歉」去結束。</p><p>比較有誠意的做法，是主動提供穩定交代、接受合理提問、避免再製造模糊空間，同時一起設定溝通界線。修復不是無限被審判，而是讓受傷的人慢慢看見：你之後每一次選擇，都和以前不同。</p><h2>常見問題</h2><p><strong>出軌後一定無法挽回嗎？</strong><br/>不一定，但前提是第三者已經清楚切斷，而且你願意用長期行動重建信任。</p><p><strong>對方一直追問細節，我應該點做？</strong><br/>可以設定溝通範圍和時間，但不要用不耐煩否定對方的不安。透明是修復的一部分。</p><p><strong>我已經道歉，對方仍然冷淡是否代表沒希望？</strong><br/>未必。被傷害後需要時間觀察。真正要看的是你能否穩定地做出改變。</p>",
-    "sourceIg": "",
-    "date": "2024-08-25",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-4758415.jpg",
-    "coverCredit": "Photo by Ferdy Jayadi on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/man-taking-care-of-woman-4758415/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-18928393.jpg",
-        "caption": "內文配圖：出軌後想補救可以點做？重建信任與挽回關係方法",
-        "credit": "Photo by Tùng Sơn on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/close-up-of-couple-hands-together-18928393/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-5184851.jpg",
-        "caption": "內文配圖：出軌後想補救可以點做？重建信任與挽回關係方法",
-        "credit": "Photo by Bethany Ferr on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/smiling-and-hugging-couple-5184851/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-6778739.jpg",
-        "caption": "內文配圖：出軌後想補救可以點做？重建信任與挽回關係方法",
-        "credit": "Photo by cottonbro studio on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/portrait-of-man-and-woman-6778739/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：出軌後想補救可以點做？重建信任與挽回關係方法",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 137,
-    "title": "辦公室戀情點維繫？低調拍拖與界線指南",
-    "category": "長期關係",
-    "color": "bg-asteria-yellow/50",
-    "icon": "fa-solid fa-heart",
-    "imageLabel": "長久",
-    "summary": "辦公室戀情要維繫，最重要是公私界線、低調分寸和衝突處理。越容易日日見，越需要成熟安排。",
-    "content": "<p>辦公室戀情有甜蜜，也有壓力。你們可能更容易見面、了解彼此日常，但同時也要面對同事眼光、工作利益和分手後的尷尬。</p>\n<h2>先講清楚公開程度</h2>\n<p>有些人想低調，有些人想公開。未講清楚之前，很容易一方覺得被隱藏，另一方覺得被迫。</p>\n<p>如果一方想公開、一方想保密，很容易產生被隱藏或被逼迫的感覺。先講清楚公開程度，可以減少很多不必要的猜測。</p>\n<h2>工作時保持專業界線</h2>\n<p>不要把私人情緒帶入工作決定，也不要在同事面前處理感情問題。這是保護關係，也是保護工作。</p>\n<p>辦公室裡的專業界線，其實是在保護你們。當私人情緒不直接流入工作，你們才不會因為同事眼光和工作壓力而更難修補。</p>\n<h2>避免所有時間都黏在一起</h2>\n<p>日日見不代表更穩，有時反而需要私人空間。保留各自生活，關係會更健康。</p>\n<p>日日見面不代表真正相處，甚至可能令彼此更快失去新鮮感。保留私人空間和各自朋友圈，反而會讓關係更有呼吸位。</p>\n<h2>吵架後不要影響職場互動</h2>\n<p>辦公室戀情最怕情緒外洩。可以約定工作時間先保持基本合作，私人問題下班再談。</p>\n<p>如果吵架後連工作訊息都不回，關係和工作都會受影響。先約定私人問題私人時間談，可以避免情緒擴散到整個職場。</p>\n<h2>預先想清楚風險</h2>\n<p>如果牽涉上下屬、利益衝突或公司規定，就要更小心。愛情重要，但現實後果也要計算。</p>\n<p>職場戀情牽涉現實後果，尤其是上下屬、利益衝突或公司規定。想長久，就不能只靠感覺，也要有成熟的風險意識。</p>\n<h2>常見問題</h2>\n<h3>辦公室戀情應否公開？</h3>\n<p>視乎公司文化、職級關係和雙方安全感，最重要是兩個人共識一致。</p>\n<h3>日日見會否更易變淡？</h3>\n<p>有可能，所以更要保留新鮮感和私人空間。</p>\n<h3>Asteria 可以點幫？</h3>\n<p>可以幫你分析對方投入程度、職場界線和適合的相處節奏。</p>",
-    "sourceIg": "",
-    "date": "2023-05-23",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-8055437.jpg",
-    "coverCredit": "Photo by Annushka  Ahuja on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/a-man-sitting-at-the-table-8055437/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-5571769.jpg",
-        "caption": "內文配圖：辦公室戀情點維繫？低調拍拖與界線指南",
-        "credit": "Photo by AI25.Studio  Studio on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-taking-selfie-with-a-man-5571769/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-4307881.jpg",
-        "caption": "內文配圖：辦公室戀情點維繫？低調拍拖與界線指南",
-        "credit": "Photo by Ketut Subiyanto on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/cheerful-couple-surfing-internet-on-tablet-4307881/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7794570.jpg",
-        "caption": "內文配圖：辦公室戀情點維繫？低調拍拖與界線指南",
-        "credit": "Photo by Mikhail Nilov on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/women-sitting-on-the-couch-7794570/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：辦公室戀情點維繫？低調拍拖與界線指南",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 138,
-    "title": "總覺得對象差一點？是標準太高還是真的不適合",
-    "category": "戀愛心理",
-    "color": "bg-[#FFE7DD]",
-    "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "長期單身，或者每次拍拖的對象都不符合自己理想對象的標準？你有想過可能是因為你用一個「格價天王」的心態去看待你的伴侶/你的理想對象嗎？",
-    "content": "<p>面對「總覺得對象差一點」，不要只看一刻甜蜜或氣氛。真正值得觀察的是對方有沒有穩定投入、會不會安排時間，以及你退一步時對方是否願意補上。</p> <h2>「總覺得對象差一點」要看行動，不只看感覺</h2>\n<p>曖昧或新對象最容易令人被氣氛帶走。真正有心的人，不只會甜言蜜語，亦會在時間、安排和交代上慢慢給你穩定感。 曖昧最怕靠幻想續命。把對方講過的話、做過的事和實際投入分開看，你會更容易知道自己應該繼續觀察還是調整期待。</p> <h2>面對「總覺得對象差一點」，不要太快交出主導權</h2>\n<p>你可以主動，但不要變成永遠由你推住關係走。當你稍微放慢時，觀察對方會不會補上，會更看得出對方投入程度。 一段有機會的關係，通常不是只有心動，而是有來有往、有交代、有下次。這些小細節比一句好聽說話更值得相信。</p> <h2>用界線看清「總覺得對象差一點」</h2>\n<p>如果對方只享受你的付出，卻不願意講清關係方向，你就要先守住界線。界線不是冷淡，而是避免自己一直用幻想補齊對方沒有給的承諾。 你可以享受甜蜜，但不要太快把零碎好感當成承諾。真正適合發展的人，會在相處節奏、時間安排和主動程度上慢慢給你證據。</p> <h2>「總覺得對象差一點」要看穩定投入</h2>\n<p>真正想靠近的人，不會只在無聊時出現。你要看對方會不會安排下一次、記得你講過的事，以及有沒有把你放入生活節奏。 如果一直只有你找話題、你安排、你遷就，關係很容易變成你一個人推進。稍微退一步，反而能看清對方會否自然靠近。</p> <h2>先找出「總覺得對象差一點」真正卡住的位置</h2>\n<p>如果你正在經歷「總覺得對象差一點」，先不要只問對方是否喜歡你，而是看你們之間有沒有穩定交換。真正有機會的關係，會在時間、行動和態度上慢慢變清楚。你可以保持善意，但也要把自己的節奏留住，讓對方用行動證明他是否值得你再投入。</p>\n<h2>常見問題</h2>\n<h3>「總覺得對象差一點」係咪代表我太情緒化？</h3>\n<p>未必。感情入面有情緒很正常，重點是情緒會不會令你失去方向，或者做出令自己後悔的反應。</p>\n<h3>面對「總覺得對象差一點」，應該先處理自己還是關係？</h3>\n<p>兩樣要分開。先穩住自己的情緒，才有能力看清關係；但如果關係仍重要，也可以用清楚而低壓的方式溝通。</p>\n<h3>Asteria 可以點樣陪我整理「總覺得對象差一點」？</h3>\n<p>我哋會陪你整理近況、情緒和相處盲點，幫你在最亂的時候先找回方向。</p>",
-    "sourceIg": "",
-    "date": "2025-11-18",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-9061872.jpg",
-    "coverCredit": "Photo by QUIN Bridal on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/man-and-woman-dancing-on-white-platform-9061872/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-7592325.jpg",
-        "caption": "內文配圖：總覺得對象差一點？是標準太高還是真的不適合",
-        "credit": "Photo by Miriam Alonso on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/happy-asian-couple-in-kitchen-with-salad-in-bowl-7592325/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7592767.jpg",
-        "caption": "內文配圖：總覺得對象差一點？是標準太高還是真的不適合",
-        "credit": "Photo by Miriam Alonso on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/happy-couple-on-floor-looking-at-each-other-7592767/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-4650241.jpg",
-        "caption": "內文配圖：總覺得對象差一點？是標準太高還是真的不適合",
-        "credit": "Photo by Ketut Subiyanto on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-together-by-couch-4650241/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：總覺得對象差一點？是標準太高還是真的不適合",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 139,
-    "title": "你以為是提醒，其實是提前責備？小心傷害關係",
-    "category": "戀愛心理",
-    "color": "bg-asteria-pink/60",
-    "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "心理",
-    "summary": "成日提另一半唔可以對自己唔住、唔可以唔愛自己、提對方要記得自己講過嘅嘢，呢啲過度提醒，其實係一種提前責備！",
-    "content": "<p>「<strong>你承諾過愛我一世，你唔可以反口！</strong>」、「<strong>你記得你之前講過嘅嘢啦，我係會記住㗎。</strong>」、「<strong>我最憎人呃我，你千祈唔好再好似以前咁樣！</strong>」，如果另一半曾經對你唔住、呃過你，和好之後，你成日咁同對方講嘢，你估佢係咪真係唔會再犯錯。</p>\n<p>但本質係：我假設你遲早會再次對我唔住，所以我要提前講定警告，你嘅其實語氣隱藏咗：</p>\n<ul><li>唔信任</li></ul>\n<ul><li>不安</li></ul>\n<ul><li>自我保護</li></ul>\n<ul><li>被害式預期</li></ul> <h2>呢種提前責備、負向預期係向對方傳達：</h2>\n<ul><li>我唔信你、你遲早會做錯、會離開我。</li></ul>\n<ul><li>你唔係真心愛我，而係被我要求愛我。</li></ul>\n<p>雖然你嘅提醒想留後路之用，但其實咁會拉緊對方、唔會令愛更穩定，仲會令對方覺得自己被監察、被審視、被懷疑。</p> <h2>提醒背後其實是不安和預設失望</h2>\n<p>與其係咁情緒勒索對方，不如改成表達感受、反映需要，由控訴，tone 變為舒發情感 tone，令對方先自己想主動提供安全感俾你，而唔係因為被你提醒而被逼俾安全感你。</p>\n<p>內心嘅恐懼、懷疑、不安仍然可能會自動彈出嚟，因為有時唔係你唔努力，而係你哋之間嘅能量失衡、卡住咗，咁嘅情況可以試吓用儀式提升你嘅安全感頻率，切斷舊有陰影嘅傷口，令你用更穩定能量同心態繼續維持感情，而唔係用恐懼去維持，如果你都正在面對緊同類情況。</p>\n <h2>把警告改成感受和需要</h2>\n<p>處理「你以為是提醒，其實是提前責備」時，先不要用愛去合理化傷害。你可以清楚講出底線，再看對方是否用行動修正；若只得安撫沒有改變，就要優先保護自己。</p> <h2>看對方是否被你推到長期防衛</h2>\n<p>「你以為是提醒，其實是提前責備」最怕不是一次衝突，而是同類事情不斷重複。你可以記低事件、對方解釋、之後有沒有修正，這會比單靠感覺更清楚。</p>\n<p>如果每次都是你消化、你原諒、你降低要求，而對方沒有實際改變，下一步就不是再忍，而是先守住自己的底線。</p> <h2>不要用恐懼維持關係</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。</p> <h2>安全感要靠修補，不靠反覆警告</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。</p> <h2>把舊傷口同現時事件分開</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。</p>\n<h2>常見問題</h2>\n<h3>「<strong>你以為是提醒，其實是提前責備</strong>」可以點樣先睇清楚方向？</h3>\n<p>先唔好只靠一個行為下結論。可以將對方近排態度、聯絡頻率、衝突後反應同你自己感受放埋一齊睇，方向會清楚好多。</p>\n<h3>面對「<strong>你以為是提醒，其實是提前責備</strong>」，我應該主動處理定等對方先？</h3>\n<p>如果你仍然重視呢段關係，可以主動一次，但要用低壓、清楚、有界線的方式。最怕係一邊等、一邊內耗，最後失去判斷力。</p>\n<h3>Asteria 感情拯救所可以點樣幫「<strong>你以為是提醒，其實是提前責備</strong>」？</h3>\n<p>我哋會用塔羅分析、相處教學、對話 review 同個案經驗，幫你拆對方心態、訊息策略同下一步做法。</p>",
-    "sourceIg": "",
-    "date": "",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-32296038.jpg",
-    "coverCredit": "Photo by lange x on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/couple-walking-at-night-in-ningbo-city-32296038/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-33419036.jpg",
-        "caption": "內文配圖：你以為是提醒，其實是提前責備？小心傷害關係",
-        "credit": "Photo by Chuot  Anhls on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-enjoying-photography-moment-indoors-33419036/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-14930372.jpg",
-        "caption": "內文配圖：你以為是提醒，其實是提前責備？小心傷害關係",
-        "credit": "Photo by Trần Long on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/man-holding-the-hand-of-a-woman-14930372/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-27028323.jpg",
-        "caption": "內文配圖：你以為是提醒，其實是提前責備？小心傷害關係",
-        "credit": "Photo by Anastasia Nagibina on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-sitting-on-a-bed-eating-breakfast-27028323/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：你以為是提醒，其實是提前責備？小心傷害關係",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 140,
-    "title": "道歉只說對不起不夠？真正平息伴侶情緒的方法",
-    "category": "溝通相處",
-    "color": "bg-asteria-blue/60",
-    "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "溝通",
-    "summary": "道歉只說對不起不夠，真正平息伴侶情緒，需要承認傷害、理解對方感受，並提出可見的補救行動。",
-    "content": "<p>很多人以為說了對不起，事情就應該完結。但對受傷的一方來說，真正需要的不是三個字，而是你是否明白他為甚麼痛，以及你之後會怎樣避免重複。</p>\n<h2>先承認具體傷害</h2>\n<p>不要只說「對不起啦」。要講清楚你知道自己哪個行為令對方受傷，對方才會覺得你不是敷衍。</p>\n<p>具體承認會令對方知道你真的有聽見，而不是只想快點過關。例如講出「我昨晚沒有交代就消失，令你很不安」，比一句對不起有力量得多。</p>\n<h2>不要急著解釋自己原因</h2>\n<p>解釋可以之後再講，但一開始就辯解，對方會覺得你在推責任。先接住情緒，再談背景。</p>\n<p>很多道歉失敗，是因為一開始就急著解釋自己不是故意。你可以有原因，但先讓對方感覺被理解，之後再談背景，效果會完全不同。</p>\n<h2>讓對方知道你聽明白</h2>\n<p>可以重述對方感受，例如「你會覺得我無視你，這點我明白」。被理解，比被要求快點原諒更重要。</p>\n<p>重述對方感受不是背稿，而是讓他知道你有站在他的角度看一次。人在被理解後，情緒才比較容易慢慢放下。</p>\n<h2>提出下一次做法</h2>\n<p>真正有力量的道歉，要有行動。例如下次提前交代、停止某個行為、補回造成的影響。</p>\n<p>下一次做法要具體，否則道歉很快變成空話。可以講清楚你會提前交代、停止某個行為，或怎樣補回今次造成的影響。</p>\n<h2>接受信任需要時間</h2>\n<p>你道歉了，不代表對方要立刻沒事。給時間讓信任慢慢回來，也是修補的一部分。</p>\n<p>對方未即刻好返，不代表你的道歉沒有用。信任受傷後需要時間，你願意穩定地做出改變，才是最能平息情緒的部分。</p>\n<h2>常見問題</h2>\n<h3>為甚麼我道歉了對方仍然嬲？</h3>\n<p>可能他需要的是理解和補救，不只是聽到對不起。</p>\n<h3>道歉時最忌講咩？</h3>\n<p>最忌一邊道歉一邊推責任，例如「我都係因為你先咁」。</p>\n<h3>Asteria 可以幫我寫道歉訊息嗎？</h3>\n<p>可以幫你整理真誠、有承擔、又不卑微的道歉內容。</p>",
-    "sourceIg": "",
-    "date": "2024-08-02",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-4307828.jpg",
-    "coverCredit": "Photo by Ketut Subiyanto on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/loving-ethnic-couple-talking-in-cozy-living-room-4307828/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-8518887.jpg",
-        "caption": "內文配圖：道歉只說對不起不夠？真正平息伴侶情緒的方法",
-        "credit": "Photo by Artem Podrez on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/man-and-woman-holding-cups-while-talking-8518887/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-8560359.jpg",
-        "caption": "內文配圖：道歉只說對不起不夠？真正平息伴侶情緒的方法",
-        "credit": "Photo by Timur Weber on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/portrait-of-a-couple-in-a-room-8560359/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7671425.jpg",
-        "caption": "內文配圖：道歉只說對不起不夠？真正平息伴侶情緒的方法",
-        "credit": "Photo by Ivan S on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-sitting-next-to-a-man-7671425/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：道歉只說對不起不夠？真正平息伴侶情緒的方法",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 141,
-    "title": "媽寶男有咩徵兆？拍拖前要看清的危險信號",
-    "category": "關係危機",
-    "color": "bg-[#E7F4F2]",
-    "icon": "fa-solid fa-route",
-    "imageLabel": "警號",
-    "summary": "媽寶男不一定一開始就明顯，他可能看起來孝順、溫柔、很需要你，但相處久了才發現他缺乏界線、凡事聽屋企人、遇事不願承擔。拍拖前要先看清這些危險信號。",
-    "content": "<p>媽寶男最容易令人誤判，因為一開始他可能很溫柔、很依賴你，也很常把屋企人掛在嘴邊。你會以為這代表他孝順、有責任感，但真正相處後才發現，他不是重視家庭，而是沒有建立自己的界線和承擔能力。</p>\n<h2>第一個徵兆：凡事都要屋企人批准</h2>\n<p>孝順和沒有主見是兩回事。健康的伴侶可以尊重父母意見，但最後仍然會自己判斷、自己承擔。如果他每件事都要問屋企人，甚至把你們的決定交給父母裁決，關係很容易變成三方拉扯。</p>\n<p>你要留意他會不會用「我媽話」來否定你，例如你的打扮、工作、生活習慣，甚至你們約會和未來安排。這不是單純聽意見，而是把屋企人的標準放到你身上。</p>\n<h2>第二個徵兆：出事時永遠不是自己的責任</h2>\n<p>媽寶男常見問題不是只愛媽媽，而是未學識承擔。遇到衝突時，他可能會怪你太敏感、怪父母逼他、怪環境不配合，總之很少真正面對自己的選擇。</p>\n<p>如果一個人連小事都不願認錯，長遠關係裡遇到金錢、同居、婚姻或家庭問題時，他就更容易逃避。愛情不能只靠你包容，他也要有能力站出來處理問題。</p>\n<h2>第三個徵兆：家庭界線長期混亂</h2>\n<p>有些人會很自然把另一半拉入家庭規則，例如要求你配合他屋企人的喜好、節日安排、生活方式，卻從來沒有問你是否舒服。久而久之，你會覺得自己不是在和他拍拖，而是在適應整個家庭。</p>\n<p>真正成熟的伴侶，會在你和家人之間做好橋樑，而不是要你自己去承受壓力。如果他每次都叫你忍、叫你配合，卻不願替你說一句公道話，這個位置就需要重新評估。</p>\n<h2>第四個徵兆：靠依賴包裝成深情</h2>\n<p>媽寶男有時會令你覺得自己很被需要，因為他甚麼都想問你、依賴你、要你照顧他情緒。但被需要不等於被愛，長遠來看，你可能會變成他的第二個照顧者。</p>\n<p>拍拖不是要你接手養大一個人。你可以支持對方成長，但不能替他承擔所有選擇。如果他只想被照顧，卻不願一起建立成熟關係，你會越愛越累。</p>\n<h2>遇到媽寶男，先守住自己的界線</h2>\n<p>不要一開始就同對方屋企人爭地位，也不要急著證明自己比他家人重要。比較穩陣的做法，是觀察他有沒有能力獨立決定、尊重你的感受，以及在衝突中願不願意承擔。</p>\n<p>你可以溫和講清界線，例如哪些事屬於你們兩個人的決定，哪些家庭意見可以聽但不應直接控制你。真正值得走長遠的人，會願意學習平衡，而不是永遠叫你讓步。</p>\n<h2>常見問題</h2>\n<h3>媽寶男同孝順男有咩分別？</h3>\n<p>孝順男會尊重家人，但仍然有自己的判斷和承擔；媽寶男則容易把家人意見放到你們關係之上，甚至要求你無條件配合。</p>\n<h3>拍拖初期點樣分辨媽寶男？</h3>\n<p>看他遇到衝突時會否自己處理、是否凡事問父母、會不會把家庭要求直接壓到你身上，以及有沒有清楚保護你們兩個人的界線。</p>\n<h3>Asteria 可以點幫我判斷呢段關係？</h3>\n<p>我哋可以幫你拆對方家庭界線、責任感和相處模式，睇清楚佢係單純重視家庭，定係未有能力建立成熟伴侶關係。</p>",
-    "sourceIg": "https://www.instagram.com/p/C68jnkByhvx/",
-    "date": "2024-05-14",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-5617779.jpg",
-    "coverCredit": "Photo by RDNE Stock project on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/man-talking-to-woman-feeling-upset-5617779/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-6669840.jpg",
-        "caption": "內文配圖：媽寶男有咩徵兆？拍拖前要看清的危險信號",
-        "credit": "Photo by RDNE Stock project on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/man-and-woman-sitting-back-to-back-6669840/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-4308053.jpg",
-        "caption": "內文配圖：媽寶男有咩徵兆？拍拖前要看清的危險信號",
-        "credit": "Photo by Ketut Subiyanto on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/thoughtful-man-talking-to-upset-woman-on-couch-4308053/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-5617757.jpg",
-        "caption": "內文配圖：媽寶男有咩徵兆？拍拖前要看清的危險信號",
-        "credit": "Photo by RDNE Stock project on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/man-in-black-long-sleeve-shirt-walking-away-feeling-upset-5617757/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：媽寶男有咩徵兆？拍拖前要看清的危險信號",
-    "inlineCaption": "真正要看的不是他是否重視家人，而是他能否在關係裡有界線和承擔。"
-  },
-  {
-    "id": 142,
-    "title": "關係進入冷淡期怎麼辦？重新拉近距離的方法",
-    "category": "復合挽回",
-    "color": "bg-[#F6E7D8]",
-    "icon": "fa-solid fa-compass",
-    "imageLabel": "復合",
-    "summary": "遇到「關係進入冷淡期怎麼辦」時，先分清表面行為、真正情緒同互動模式，再決定應該溝通、觀察、修補定守住界線。",
-    "content": "<p>遇到「關係進入冷淡期怎麼辦」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「關係進入冷淡期怎麼辦」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>不要被「關係進入冷淡期怎麼辦」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>從回覆判斷「關係進入冷淡期怎麼辦」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「關係進入冷淡期怎麼辦」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>越想靠近「關係進入冷淡期怎麼辦」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>少覆不是答案，真正要看的是互動有沒有變鬆</h2>\n<p>如果你正面對「關係進入冷淡期怎麼辦」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「關係進入冷淡期怎麼辦」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「關係進入冷淡期怎麼辦」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「關係進入冷淡期怎麼辦」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
-    "sourceIg": "",
-    "date": "2024-02-03",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-3389450.jpg",
-    "coverCredit": "Photo by Ryanniel  Masucol on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/woman-wearing-black-long-sleeved-shirt-3389450/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-6669783.jpg",
-        "caption": "內文配圖：關係進入冷淡期怎麼辦？重新拉近距離的方法",
-        "credit": "Photo by RDNE Stock project on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-with-hand-on-face-looking-down-on-cellphone-6669783/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-11377624.jpg",
-        "caption": "內文配圖：關係進入冷淡期怎麼辦？重新拉近距離的方法",
-        "credit": "Photo by Picas Joe on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-pretty-woman-in-white-dress-holding-a-drink-11377624/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-2215219.jpg",
-        "caption": "內文配圖：關係進入冷淡期怎麼辦？重新拉近距離的方法",
-        "credit": "Photo by Nam Phong Bùi on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-wearing-black-and-white-dress-shirt-and-gray-shorts-sitting-on-parking-lot-2215219/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：關係進入冷淡期怎麼辦？重新拉近距離的方法",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 143,
-    "title": "兩個人在一起卻很孤獨？比吵架更傷人的關係冷漠",
-    "category": "溝通相處",
-    "color": "bg-[#EEF5DD]",
-    "icon": "fa-solid fa-magnifying-glass-heart",
-    "imageLabel": "溝通",
-    "summary": "有時感情唔係因為嗌大交先分手，而係因為慢慢被忽視而令感情磨淡。當大家嘅對話變得表面、情緒被忽略、心就會開始疏離，呢啲都係感情出現問題嘅警號。想學識點修復被忽視嘅關係？",
-    "content": "<p>最大嘅危機未必係嗌交、冷戰，反而係「<strong>被忽視</strong>」呢啲細微又慢慢累積嘅跡象，當你同另一半嘅相處變成「<strong>習慣</strong>」、「<strong>理所當然</strong>」，少咗真誠、互動、心靈連結，你哋嘅關係就可能會慢慢變成兩個人都覺得，「<strong>其實你同我好似冇乜關係</strong>」</p>\n<p>如果你哋講嘅內容多數都係日常普通嘢，好少傾心事、冇深度對話、停留喺表面嘅交流，就代表你哋喺心靈層面已經開始疏遠，逃避講爭議話題、唔提對方錯處，價值觀嘅差異、未來、對方做錯過嘅事都避開唔講，代表雙方都冇再真正想了解對方內心。</p>\n<p>呢段關係可能已經變成「<strong>得過且過</strong>」嘅相處模式。</p> <h2>同對方傾訴但對方成日講錯嘢</h2>\n<p>搵另一半安慰，但佢覆得好hea 甚至會避開或者無視你嘅情緒，如果呢啲情況經常出現，代表你嘅情感需要其實被對方忽視咗，喺關係入面變透明，你哋可能知道對方每日做乜、去邊度、同邊個一齊，但冇分享內心世界、真實想法、恐懼同需要。</p>\n<p>你哋淨係交換生活資訊，冇交流情感，就代表你同對方嘅心可能已經越走越遠。</p> <h2>孤獨感通常由日常忽視慢慢累積</h2>\n<p>好多人喺情感忽視嘅狀態下會懷疑自己係咪太敏感，你要中斷這種循環，試吓先承認自己嘅感受，唔好質疑情緒，而係溫柔地接納佢，只要你可以肯定自己，就唔需要依賴對方嘅回應嚟證明自身價值。</p>\n<p>修復被忽視嘅感覺，第一步唔係逼自己唔介意，而係誠實承認：你需要更多回應、更多交流，也需要知道對方是否願意一起改善。</p> <h2>先分清窗口位，再決定要靠近還是放慢</h2>\n<p>處理「<strong>兩個人在一起卻很孤獨</strong>」時，最重要不是即刻追答案，而是先看對方是否仍願意回應、是否仍有情緒反應，以及你們之間還有沒有安全的對話空間。</p>\n<p>如果窗口仍在，可以用低壓、短句和清楚目的重新建立互動；如果對方明顯抗拒，就要先停一停，避免越追越令對方想逃。</p> <h2>孤獨感不是小題大做</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。</p> <h2>先看對方是否願意聽你講感受</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。</p> <h2>把表面陪伴和真正連結分開</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。</p>\n<h2>常見問題</h2>\n<h3>「<strong>兩個人在一起卻很孤獨</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>兩個人在一起卻很孤獨</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>兩個人在一起卻很孤獨</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
-    "sourceIg": "",
-    "date": "2026-01-25",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-37071184.jpg",
-    "coverCredit": "Photo by Nowrin Sanjana on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/two-women-engaged-in-outdoor-conversation-37071184/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-28494744.jpg",
-        "caption": "內文配圖：兩個人在一起卻很孤獨？比吵架更傷人的關係冷漠",
-        "credit": "Photo by Huy Nguyễn on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/playful-couple-in-a-vibrant-local-market-stall-28494744/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-5225486.jpg",
-        "caption": "內文配圖：兩個人在一起卻很孤獨？比吵架更傷人的關係冷漠",
-        "credit": "Photo by Samson Katt on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/concentrated-asian-couple-using-smartphones-on-bench-5225486/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-37071186.jpg",
-        "caption": "內文配圖：兩個人在一起卻很孤獨？比吵架更傷人的關係冷漠",
-        "credit": "Photo by Nowrin Sanjana on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/casual-outdoor-conversation-among-friends-37071186/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：兩個人在一起卻很孤獨？比吵架更傷人的關係冷漠",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 144,
-    "title": "吵架衝口講分手？修復傷害前要先做的事",
-    "category": "復合挽回",
-    "color": "bg-[#EDF0F7]",
-    "icon": "fa-solid fa-shield-heart",
-    "imageLabel": "復合",
-    "summary": "吵架衝口講分手後，先不要急著要求對方當無事發生。要先承認這句話造成的傷害，再分清自己是一時情緒、想被重視，還是真的想離開。修復的關鍵是讓對方重新相信你不是每次吵架都會用分手威脅。",
-    "content": "<p>吵架時衝口講分手，很多人事後都會後悔，覺得自己只是情緒上頭，不是真的想離開。但對方聽到的，可能不是一時氣話，而是「原來這段關係可以隨時被你放棄」。所以修復之前，先要明白這句話造成了甚麼傷害。</p><h2>先承認那句分手造成的傷害</h2><p>不要一開始就解釋「我只係嬲」。你可以先說：「我知道我講分手令你覺得好無安全感，呢句說話唔應該用嚟傷你。」先承認傷害，對方才比較容易聽到你的後悔。</p><h2>分清是一時情緒，還是真的想離開</h2><p>如果你每次衝突都想用分手逼對方重視，這其實是一種求救方式，但同時也會破壞信任。你要問自己：我想要的是被理解，還是真的不想繼續？</p><h2>不要立即逼對方表態</h2><p>你後悔，不代表對方要即刻沒事。給對方一點時間消化，不要反過來追問「咁你仲愛唔愛我」。這樣只會令對方覺得又要照顧你的情緒。</p><h2>重新約定吵架底線</h2><p>如果想繼續，就要一起訂清楚：吵架時不講分手、不封鎖威脅、不用消失懲罰對方。關係要穩定，需要的不只是道歉，而是新的相處規則。</p><h2>用之後幾次衝突證明改變</h2><p>對方是否再次相信你，不是看你這次講得多誠懇，而是看下一次吵架時，你是否真的不再用分手傷人。信任要靠重複的穩定行動修回來。</p><h2>真正的道歉，要讓對方看見下次會不一樣</h2><p>衝口講分手之後，最需要修補的不是一句說話本身，而是對方對關係穩定性的信任。你可以解釋自己當時很激動，但更重要是講清楚下次情緒上來時，你會怎樣停下來、怎樣表達受傷，而不是再用離開威脅對方。</p><p>例如你們可以約定一個暫停句：「我而家太激動，想冷靜二十分鐘再講。」這句不是逃避，而是保護對話。當對方一次次看見你真的不用分手去壓住衝突，安全感才會慢慢回來。</p><h2>常見問題</h2><p><strong>衝口講分手後，應該立即道歉嗎？</strong><br/>可以道歉，但不要急著要求對方原諒。先承認傷害，再給對方時間。</p><p><strong>我只是想對方重視我，為甚麼會變得這麼嚴重？</strong><br/>因為分手是很重的字眼。它會令對方覺得關係不安全，之後更難放鬆相處。</p><p><strong>怎樣避免下次又講分手？</strong><br/>在情緒上來前先暫停對話，約定冷靜後再談。你可以表達受傷，但不要用結束關係作威脅。</p>",
-    "sourceIg": "",
-    "date": "2023-07-26",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-8727458.jpg",
-    "coverCredit": "Photo by Tima Miroshnichenko on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/a-woman-in-red-shirt-with-a-sad-facial-expression-8727458/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-2204949.jpg",
-        "caption": "內文配圖：吵架衝口講分手？修復傷害前要先做的事",
-        "credit": "Photo by Kha Ruxury on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-leaning-on-glass-2204949/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-31048773.jpg",
-        "caption": "內文配圖：吵架衝口講分手？修復傷害前要先做的事",
-        "credit": "Photo by Minh Tran on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/emotional-woman-sitting-indoors-in-distress-31048773/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-11153501.jpg",
-        "caption": "內文配圖：吵架衝口講分手？修復傷害前要先做的事",
-        "credit": "Photo by chunhsien shih on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-leaning-on-concrete-platform-11153501/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：吵架衝口講分手？修復傷害前要先做的事",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 145,
-    "title": "為什麼安全感總是填不滿？愛情不安的根源",
-    "category": "溝通相處",
-    "color": "bg-asteria-yellow/50",
-    "icon": "fa-solid fa-heart",
-    "imageLabel": "溝通",
-    "summary": "安全感填不滿，未必等於對方不愛你。有時是對方行為不穩，有時是過去受傷令你太容易預設最壞結果。真正要做的是分清「事實警號」和「內在焦慮」，再用具體需要代替反覆試探。",
-    "content": "<p>安全感不足時，你可能會忍不住查訊息、反覆確認、想知道對方每一刻在做甚麼。但安全感如果只靠對方即時回應來填補，很容易變成越確認越不安，越不安越想控制。</p><h2>先分清事實警號和內在焦慮</h2><p>如果對方長期隱瞞、忽冷忽熱、說一套做一套，那是需要面對的事實；但如果對方只是遲回一點，你已經想像最壞結果，就可能是過去受傷觸發了焦慮。</p><h2>反覆確認會形成安全感黑洞</h2><p>你問一次，對方答一次，你會短暫安心；但不久之後又需要下一次確認。久而久之，對方覺得被審問，你也覺得自己越來越累。</p><h2>你需要的是穩定行動，不是即時保證</h2><p>真正能建立安全感的，不是對方每天講幾多次愛你，而是他是否穩定、誠實、守承諾、有問題願意談。安全感要看行動是否一致。</p><h2>不要用試探換安全感</h2><p>故意冷淡、講反話、測試對方會不會追你，短期可能有反應，但長期會令關係變得緊張。想要安心，要學會直接講需要，而不是設局等對方猜。</p><h2>把生活重心放回自己身上</h2><p>安全感不只來自伴侶，也來自你對自己的穩定。當你的生活只剩下等訊息、猜對方反應，不安就會被放大。先把自己的節奏找回來，關係才有空間變穩。</p><h2>安全感要同時看對方，也要看自己如何回應不安</h2><p>安全感不是叫你把所有不安都自己吞下，也不是要求對方二十四小時報備。比較成熟的做法，是分清哪些需要由對方用穩定行動回應，哪些是你可以慢慢練習安撫自己的部分。兩邊都要處理，關係才不會變成一個人追、一個人逃。</p><p>你可以先由很小的地方開始，例如在情緒最滿時暫停十分鐘，寫低自己害怕的是事實還是想像；然後再用一句清楚的請求同對方講。當你不再完全被不安推著走，對方也比較容易聽見你的需要，而不是只感受到壓力。</p><h2>常見問題</h2><p><strong>缺乏安全感是否代表我太黏？</strong><br/>不一定。你可能只是受過傷，或者對方真的不夠穩定。先分清事實和焦慮。</p><p><strong>對方應不應該一直安撫我？</strong><br/>伴侶可以安撫，但不能成為你唯一的安全感來源。你也需要建立自己的穩定感。</p><p><strong>怎樣講安全感需要才不會像指責？</strong><br/>用具體事件和需要表達，例如：「你臨時消失我會不安，下次可否先講一聲？」比「你根本唔愛我」更有效。</p>",
-    "sourceIg": "",
-    "date": "2023-08-08",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-14025894.jpg",
-    "coverCredit": "Photo by Quang Nguyen Vinh on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/a-man-and-woman-sitting-on-the-wooden-chairs-14025894/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-35866246.jpg",
-        "caption": "內文配圖：為什麼安全感總是填不滿？愛情不安的根源",
-        "credit": "Photo by 🇻🇳🇻🇳Nguyễn Tiến Thịnh 🇻🇳🇻🇳 on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/outdoor-portrait-of-two-happy-women-smiling-35866246/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-37381141.jpg",
-        "caption": "內文配圖：為什麼安全感總是填不滿？愛情不安的根源",
-        "credit": "Photo by Surya Travel on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/young-couple-in-traditional-asian-attire-outdoors-37381141/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7417519.jpg",
-        "caption": "內文配圖：為什麼安全感總是填不滿？愛情不安的根源",
-        "credit": "Photo by cottonbro studio on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-couple-having-a-conversation-while-sitting-on-a-couch-7417519/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：為什麼安全感總是填不滿？愛情不安的根源",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 146,
-    "title": "對方答應了卻做不到？承諾落空背後的心理原因",
-    "category": "戀愛心理",
-    "color": "bg-[#FFE7DD]",
-    "icon": "fa-regular fa-comments",
-    "imageLabel": "心理",
-    "summary": "對方答應了卻做不到，不一定是完全不愛，但一定反映承諾、能力或優先次序出現落差。與其反覆追問「點解又係咁」，不如把承諾縮細、定清時間，並觀察對方是否願意用行動補回。",
-    "content": "<p>對方答應你會改、會覆、會陪你、會處理問題，但最後又做不到，最令人心累的地方不是單次失約，而是你開始不知道還能不能相信他說的話。</p><h2>先分清：忘記、做不到，還是不重視</h2><p>有些人是真的忘記，有些人是能力不足，有些人則是答應時只想令你停止不開心。三者處理方法不同，所以不要只停留在「你又呃我」這一句。</p><h2>承諾要具體到時間和行動</h2><p>「我會改」太空泛。你可以把要求變成具體行動，例如「下次臨時有事，提前同我講」或「每星期留一晚好好傾」。越具體，越容易驗證。</p><h2>不要只聽道歉，要看補救</h2><p>真正重視你的人，不會只說對不起，還會主動補回造成的影響。如果每次都只是道歉，之後完全沒有改變，你就要看清這不是溝通不足，而是行動不足。</p><h2>設定你可以接受的底線</h2><p>你可以給對方機會，但機會不等於無限次重來。先想清楚：哪些事可以再磨合，哪些事反覆發生會令你失去信任。</p><h2>長期落空時，要看優先次序</h2><p>如果對方對其他事很有責任感，唯獨對你們的承諾一直拖延，那可能不是他做不到，而是這段關係在他的優先次序裡太低。</p><h2>信任不是靠承諾回來，而是靠可預期的行動</h2><p>承諾落空最傷人的地方，是你之後聽到任何保證都會先懷疑。這種懷疑不是小器，而是你的安全感曾經被透支。與其逼自己馬上相信，不如把觀察期講清楚：接下來一段時間，你希望看到甚麼行動、甚麼頻率、甚麼補救方式。</p><p>如果對方真的重視這段關係，他會願意把承諾變成你看得見的安排，而不是只要求你「唔好再提」。反過來，如果每次一談實際行動就逃避，問題就未必是他記性差，而是他未準備好為關係負責。</p><h2>常見問題</h2><p><strong>對方經常答應但做不到，是否代表不愛？</strong><br/>不一定，但代表他的承諾未能支撐你的安全感。你需要看他是否願意用行動補救。</p><p><strong>我應該再給幾多次機會？</strong><br/>不要只計次數，要看每次之後有沒有新做法。如果完全沒有改變，機會只會變成循環。</p><p><strong>怎樣提出要求比較有效？</strong><br/>把要求講成具體行動和時間，而不是只說「你要對我好啲」。</p>",
-    "sourceIg": "",
-    "date": "2023-09-09",
-    "tags": [
-      "戀愛心理",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-7417512.jpg",
-    "coverCredit": "Photo by cottonbro studio on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/a-couple-sitting-on-brown-rug-beside-coach-7417512/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-3912438.jpg",
-        "caption": "內文配圖：對方答應了卻做不到？承諾落空背後的心理原因",
-        "credit": "Photo by Gustavo Fring on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-watching-movie-on-laptop-3912438/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7780427.jpg",
-        "caption": "內文配圖：對方答應了卻做不到？承諾落空背後的心理原因",
-        "credit": "Photo by Mikhail Nilov on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/happy-couple-lying-on-the-bed-while-looking-at-each-other-7780427/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-8055827.jpg",
-        "caption": "內文配圖：對方答應了卻做不到？承諾落空背後的心理原因",
-        "credit": "Photo by Annushka  Ahuja on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/husband-looking-at-his-wife-8055827/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：對方答應了卻做不到？承諾落空背後的心理原因",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 147,
-    "title": "為什麼對方總是不懂你？男女溝通差異與解法",
-    "category": "溝通相處",
-    "color": "bg-asteria-pink/60",
-    "icon": "fa-solid fa-heart-crack",
-    "imageLabel": "溝通",
-    "summary": "對方總是不懂你，很多時不是你講得不夠多，而是你講的是情緒，對方聽到的是指責。把感受、事件和希望分開講，才能讓對方知道你真正需要甚麼。",
-    "content": "<p>你明明只是想被理解，但一開口就變成吵架；你想講感受，對方卻只聽到你在怪他。很多感情問題不是沒有溝通，而是兩個人接收訊息的方式不同。</p><h2>不是不懂，而是訊息翻譯失敗</h2><p>你說「你都唔理我」，其實想講的是「我想被你重視」；但對方聽到的可能是「你又在指責我」。當訊息被翻譯錯，對話就會越講越遠。</p><h2>把「你懂不懂我」翻譯成具體需要</h2><p>與其說「你永遠都咁自私」，不如說「昨晚我講緊一件重要事，你一路睇手機，我覺得自己不被重視」。具體事件比人格批評更容易讓對方聽入耳。</p><h2>告訴他你要安慰，還是要方法</h2><p>有些人一聽到問題就急著解決，但你其實只是想被抱抱、被聽見。你可以直接講：「我而家唔係想要答案，我想你先聽我講完。」</p><h2>不要期待對方自動讀心</h2><p>長期相處不等於對方一定懂你的每個暗示。如果你一直用反話、沉默或試探表達需要，對方很容易猜錯，最後你更失望。</p><h2>看他是否願意學習你的語言</h2><p>真正值得修補的關係，不是對方一次就完全懂你，而是他願意慢慢學你重視甚麼、怕甚麼、需要怎樣被安撫。</p><h2>真正被理解，是兩個人都願意校準語言</h2><p>溝通差異最難的地方，是你以為自己已經講得很清楚，對方卻只接收到壓力；對方以為自己已經回應了，你卻覺得他完全沒有接住。這時候不要急著判斷誰比較有問題，可以先把對話拆細：我剛才真正想講甚麼？你剛才聽到的是甚麼？中間哪一句開始變成誤會？</p><p>當兩個人願意這樣校準，關係就不再只是靠默契硬撐。你不需要每次都講到完美，對方也不需要一次就完全懂你；重要的是你們開始有共同語言，知道下次卡住時可以怎樣慢下來，而不是一受傷就互相定性。</p><h2>常見問題</h2><p><strong>為甚麼我講很多次，對方仍然不明白？</strong><br/>可能你講的是情緒結論，對方聽到的是指責。試著把事件、感受和希望分開講。</p><p><strong>對方很理性，我很情緒化，是否一定不合？</strong><br/>不一定。你們需要學會先確認情緒，再討論方法，而不是一開始就辯對錯。</p><p><strong>怎樣令對方更願意聽？</strong><br/>少用「你永遠」「你根本」，多用具體事件和你真正需要的回應。</p>",
-    "sourceIg": "",
-    "date": "2024-10-10",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-7968926.jpg",
-    "coverCredit": "Photo by George Pak on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/a-touring-couple-resting-on-a-bench-7968926/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-7968658.jpg",
-        "caption": "內文配圖：為什麼對方總是不懂你？男女溝通差異與解法",
-        "credit": "Photo by George Pak on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/backpackers-on-market-7968658/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-28263838.jpg",
-        "caption": "內文配圖：為什麼對方總是不懂你？男女溝通差異與解法",
-        "credit": "Photo by Hom Nay Chup Gi on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-man-and-woman-are-standing-in-front-of-a-crowd-28263838/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7968352.jpg",
-        "caption": "內文配圖：為什麼對方總是不懂你？男女溝通差異與解法",
-        "credit": "Photo by George Pak on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/cheerful-diverse-couple-drinking-beverages-on-terrace-in-countryside-7968352/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：為什麼對方總是不懂你？男女溝通差異與解法",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 148,
-    "title": "分手後為什麼不應再和前任發生關係？復合前要避開",
-    "category": "復合挽回",
-    "color": "bg-asteria-blue/60",
-    "icon": "fa-solid fa-hand-holding-heart",
-    "imageLabel": "復合",
-    "summary": "先別急著追問答案：真正要看的，是對方為何退後。",
-    "content": "<p>遇到「分手後為什麼不應再和前任發生關係」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>不要只聽一句，要看「分手後為什麼不應再和前任發」之後點做</h2>\n<p>一句想你、一次回覆或者一刻溫柔，都不等於關係已經修復。真正要看的是對方會不會持續回應、願不願意安排時間，以及有沒有避開同一個問題。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>不要被「分手後為什麼不應再和前任發」牽著走</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>從回覆判斷「分手後為什麼不應再和前任發」的餘地</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「分手後為什麼不應再和前任發生關係」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>越想靠近「分手後為什麼不應再和前任發」，越不要追逼</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>想修補「分手後為什麼不應再和前任發生關係」，先判斷仲有沒有窗口</h2>\n<p>如果你正面對「分手後為什麼不應再和前任發生關係」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「分手後為什麼不應再和前任發生關係」仲有機會挽回或復合嗎？</h3>\n<p>要看對方是否仍有聯絡窗口、情緒是否完全切斷，以及你一靠近時關係是變鬆還是更緊。不是每段冷淡都等於無機會，但方法用錯會令機會變少。</p>\n<h3>面對「分手後為什麼不應再和前任發生關係」，應該斷聯、主動還是等待？</h3>\n<p>先看你們目前的互動狀態。如果對方仍有回應，可以低壓互動；如果對方明顯抗拒，就要先停止追問，避免把自己推到更弱的位置。</p>\n<h3>Asteria 可以點樣幫我睇「分手後為什麼不應再和前任發生關係」的方向？</h3>\n<p>我哋會按你的對話、時間線和對方反應，幫你判斷現在適合拉近、等待、斷聯，還是先修補情緒位置。</p>",
-    "sourceIg": "",
-    "date": "2023-09-20",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-6798565.jpg",
-    "coverCredit": "Photo by Michelle Leman on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/sad-ethnic-female-leaning-forward-on-railing-of-terrace-and-looking-down-6798565/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-26742024.jpg",
-        "caption": "內文配圖：分手後為什麼不應再和前任發生關係？復合前要避開",
-        "credit": "Photo by kittbui on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-young-woman-leaning-on-the-table-and-looking-towards-the-window-26742024/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-715811.jpg",
-        "caption": "內文配圖：分手後為什麼不應再和前任發生關係？復合前要避開",
-        "credit": "Photo by Min An on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-wearing-white-tank-top-and-white-hat-standing-on-a-boardwalk-715811/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-7676539.jpg",
-        "caption": "內文配圖：分手後為什麼不應再和前任發生關係？復合前要避開",
-        "credit": "Photo by Mikhail Nilov on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-crying-while-holding-white-roses-7676539/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：分手後為什麼不應再和前任發生關係？復合前要避開",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 149,
-    "title": "為什麼分手會這麼痛？走過情感修復期的方法",
-    "category": "復合挽回",
-    "color": "bg-[#E7F4F2]",
-    "icon": "fa-solid fa-route",
-    "imageLabel": "復合",
-    "summary": "分手之後，成日都有人話：「放低啦，下一個會更好。」但點解今次就特別難放低？明明以前都試過失戀，但點解今次嘅痛楚，好似以往強烈，點樣都走唔出嚟？等我同你拆解下背後嘅原因，同埋點樣可以改變現況！",
-    "content": "<p>遇到「為什麼分手會這麼痛」時，最折磨人的通常不是一句有沒有機會，而是你不知道該主動、等待，還是先停下。先看清對方仍有沒有回應窗口、你們最近的互動是否變鬆，才不會把修補變成追逼。</p> <h2>留住步伐才看得清「為什麼分手會這麼痛」</h2>\n<p>想修補不代表要放低全部界線。你可以釋出善意，但不要用失控的追問換安全感；越能穩住自己，越容易看清對方真正態度。 如果你不肯停一停，很容易把原本尚有的聯絡窗口逼到更窄；先留意對方對輕鬆訊息、日常分享和短句回應是否仍然接得住。</p> <h2>先看對方是否仍願意談「為什麼分手會這麼痛」</h2>\n<p>如果對方仍然會回覆、會有情緒反應，代表「為什麼分手會這麼痛」未必完全沒有轉圜，但方法要放輕。不要一開始就追問答案，先看對方是否仍願意保留最基本的互動。 這一步不是叫你放棄，而是避免用焦慮去推動關係。越能慢下來，你越容易分辨對方是真冷淡，還是暫時未準備好面對。</p> <h2>別讓「為什麼分手會這麼痛」變成壓力</h2>\n<p>越想挽回越容易急著解釋、道歉或交代所有委屈。可是對方退後時，長訊息通常只會加重壓力；先穩住節奏，才有機會令對方願意再聽。 真正有用的修補，通常不是講最多道理，而是令對方重新感覺跟你互動沒有壓力；當互動變穩，後面才有機會再談深一點。</p> <h2>先判斷「為什麼分手會這麼痛」是真冷靜還是逃避</h2>\n<p>冷靜通常仍有基本交代；逃避會避開核心問題；切斷則會連普通互動都拒絕。判斷清楚狀態，才知道應該等、慢慢靠近，還是先保護自己。 你可以先把目標定為「令下一次對話不再繃緊」，而不是一次過要求復合、承諾或表態；關係重新有空間，對方才比較容易放下防衛。</p> <h2>面對「分手會這麼痛」，先不要把修補變成追逼</h2>\n<p>如果你正面對「為什麼分手會這麼痛」，可以先不要急著做最大動作。把最近的對話、對方回覆速度、主動程度和你每次靠近後的反應放在一起看，會比單靠一兩句說話更準。當你看清對方仍有沒有窗口，再決定要不要用低壓方式重新打開互動，或者先把自己從情緒追趕入面抽返出來。</p>\n<h2>常見問題</h2>\n<h3>「<strong>為什麼分手會這麼痛</strong>」仲有機會挽回或復合嗎？</h3>\n<p>要睇分開原因、對方而家抗拒程度、你哋仲有冇情緒連結。復合唔係只靠多傳幾句訊息，而係先判斷窗口位同重新建立安全感。</p>\n<h3>想處理「<strong>為什麼分手會這麼痛</strong>」，第一步應該做咩？</h3>\n<p>第一步通常唔係即刻求答案，而係先停低整理情緒、分清假性分手定真性切斷，再決定係保持聯絡、短暫斷聯，定用較低壓方式重新開口。</p>\n<h3>愛情塔羅或儀式可以點樣配合「<strong>為什麼分手會這麼痛</strong>」？</h3>\n<p>塔羅可以幫你睇清對方狀態、阻礙同下一步方向；儀式就要按個案判斷適唔適合配合，唔應該盲目亂做。</p>",
-    "sourceIg": "",
-    "date": "2025-04-05",
-    "tags": [
-      "分手復合",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-1629033.jpg",
-    "coverCredit": "Photo by Min An on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/close-up-photo-of-woman-with-short-hair-1629033/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-25322754.jpg",
-        "caption": "內文配圖：為什麼分手會這麼痛？走過情感修復期的方法",
-        "credit": "Photo by Quý Nguyễn on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-holding-chair-bars-25322754/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-3251699.jpg",
-        "caption": "內文配圖：為什麼分手會這麼痛？走過情感修復期的方法",
-        "credit": "Photo by LML 6768 on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/woman-hugging-a-teddy-bear-3251699/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-6754020.jpg",
-        "caption": "內文配圖：為什麼分手會這麼痛？走過情感修復期的方法",
-        "credit": "Photo by cottonbro studio on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-woman-sitting-on-the-floor-while-leaning-on-the-wall-6754020/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：為什麼分手會這麼痛？走過情感修復期的方法",
-    "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
-  },
-  {
-    "id": 150,
-    "title": "男人為什麼常用冷暴力？不溝通背後的心理",
-    "category": "關係危機",
-    "color": "bg-[#F6E7D8]",
-    "icon": "fa-solid fa-compass",
-    "imageLabel": "警號",
-    "summary": "遇到「男人為什麼常用冷暴力」時，先分清表面行為、真正情緒同互動模式，再決定應該溝通、觀察、修補定守住界線。",
-    "content": "<p>遇到「男人為什麼常用冷暴力」時，不要只靠對方一句解釋安撫自己。你要看同類事情是否反覆出現、對方有沒有承認責任，以及你是否在關係裡越來越不敢講真話。</p> <h2>冷暴力不是冷靜，而是切斷溝通</h2>\n<p>磨合是雙方都願意調整；警號是你一直降低底線，對方卻沒有實際改變。不要只聽解釋，要看行動有沒有跟上。 如果你發現自己為了維持關係而長期收聲、道歉、解釋，甚至懷疑自己是否太敏感，就要先停一停，把感受放回合理位置。</p> <h2>先停止追問，避免被拖入消耗</h2>\n<p>如果某些行為令你不敢表達、不敢拒絕，甚至開始懷疑自己感受是否合理，就要先保護自己，而不是急著證明你夠不夠愛。 健康的修補需要雙方一起承擔。你可以給機會，但不要把所有責任都攬上身，否則關係只會越修越失衡。</p> <h2>看他沉默後有沒有回來修補</h2>\n<p>把事件、對方解釋和後續行動記低，你會更容易看出這是偶發衝突，還是長期消耗。清楚看見模式，才知道下一步要修補還是止損。 你不需要即時把關係判死刑，但一定要看對方之後有沒有修正。如果每次都只是道歉，之後又重複同一件事，問題就不是誤會咁簡單。</p> <h2>「男人為什麼常用冷暴力」不是你一個人的責任</h2>\n<p>對方做錯事後，如果最後變成你一直道歉、解釋和哄返對方，就要小心關係已經失衡。健康關係應該有雙方承擔。 界線不是用來懲罰對方，而是提醒自己甚麼不能再無限承受。你越清楚底線，越不容易在關係裡一直被對方情緒牽著走。</p> <h2>面對冷暴力，要先守住界線再談修補</h2>\n<p>如果「男人為什麼常用冷暴力」令你長期不舒服，就不要只靠忍耐換和平。你可以先整理哪些行為是偶發、哪些是重複出現，再決定要怎樣講界線。真正的修補不是你一個人退讓，而是對方願意看見問題、承擔責任，並在之後用行動令你重新感到安心。</p>\n<h2>常見問題</h2>\n<h3>「男人為什麼常用冷暴力」係咪一定要分手？</h3>\n<p>不一定，但一定要先看清它是偶發衝突還是長期模式。如果牽涉控制、欺騙、暴力或持續傷害，就要先保護自己。</p>\n<h3>面對「男人為什麼常用冷暴力」，對方道歉後應該再給機會嗎？</h3>\n<p>看道歉後有沒有實際改變。真正的修補不是一句對不起，而是願意承認、調整和承擔後果。</p>\n<h3>Asteria 可以點樣幫我判斷「男人為什麼常用冷暴力」？</h3>\n<p>我哋會幫你拆對方行為、關係風險和下一步溝通策略，亦會提醒你哪些位置要守住底線。</p>",
-    "sourceIg": "",
-    "date": "2024-05-04",
-    "tags": [
-      "相處溝通",
-      "愛情拯救所",
-      "感情占卜",
-      "塔羅",
-      "白魔法儀式"
-    ],
-    "coverImage": "/article-custom-images/stock_local/pexels-8560765.jpg",
-    "coverCredit": "Photo by Timur Weber on Pexels",
-    "coverCreditUrl": "https://www.pexels.com/photo/unhappy-couple-sitting-together-8560765/",
-    "coverPrompt": "",
-    "images": [
-      {
-        "src": "/article-custom-images/stock_local/pexels-7447061.jpg",
-        "caption": "內文配圖：男人為什麼常用冷暴力？不溝通背後的心理",
-        "credit": "Photo by Gustavo Fring on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/a-distant-couple-sitting-on-a-sofa-7447061/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-5616189.jpg",
-        "caption": "內文配圖：男人為什麼常用冷暴力？不溝通背後的心理",
-        "credit": "Photo by RDNE Stock project on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/man-in-black-suit-standing-beside-woman-in-black-dress-5616189/",
-        "prompt": ""
-      },
-      {
-        "src": "/article-custom-images/stock_local/pexels-27178871.jpg",
-        "caption": "內文配圖：男人為什麼常用冷暴力？不溝通背後的心理",
-        "credit": "Photo by ylham on Pexels",
-        "creditUrl": "https://www.pexels.com/photo/couple-standing-in-line-on-pavement-by-lake-shore-27178871/",
-        "prompt": ""
-      }
-    ],
-    "coverCaption": "Asteria 相處教學：男人為什麼常用冷暴力？不溝通背後的心理",
+    "coverCaption": "Asteria 相處教學：【結婚心理】男朋友拖婚？拆解「順其自然」背後的 3 大潛台詞！唔想做大齡剩女必睇",
     "inlineCaption": "關係不只是答案，還需要一步一步看清楚相處方法。"
   }
 ];

@@ -1199,7 +1199,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     };
 
     const getArticleSegments = (content: string) => {
-      const parts = content.split(/(?=<h2>)/g).filter((part) => part.trim());
+      const parts = content.split(/(?=<h2(?:\s|>))/g).filter((part) => part.trim());
       return parts.length ? parts : [content];
     };
 
@@ -1250,7 +1250,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               <i className="fa-solid fa-arrow-left"></i> 返回首頁
             </a>
             <section className="bg-white border border-asteria-cream/70 rounded-3xl p-8 md:p-10 shadow-sm">
-              <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
+              <div className="text-sm font-bold text-asteria-primary mb-2">Asteria感情拯救所</div>
               <h1 className="text-4xl md:text-5xl font-bold text-asteria-dark mb-5">客人個案長文</h1>
               <p className="text-stone-500 leading-relaxed max-w-2xl">
                 呢度之後會放真實匿名個案長文，例如復合、斷聯、冷淡、第三者、前任新歡、關係修復等案例拆解。暫時未放內容，等整理好真個案先公開。
@@ -1285,7 +1285,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
               <div className="py-8 md:py-12">
                 <div className="flex flex-wrap items-center gap-3 text-sm text-stone-400 mb-5">
                   <span className="text-asteria-primary font-bold">{activePost.category}</span>
-                  <span>asteria感情拯救所</span>
+                  <span>Asteria感情拯救所</span>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold text-asteria-dark leading-tight mb-5">{activePost.title}</h1>
                 <p className="text-lg md:text-xl text-stone-500 leading-relaxed mb-10 max-w-3xl">{activePost.summary}</p>
@@ -1333,7 +1333,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
             </a>
             <div className="mb-10 grid lg:grid-cols-[1fr_auto] gap-6 items-end">
               <div>
-                <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
+                <div className="text-sm font-bold text-asteria-primary mb-2">Asteria感情拯救所</div>
                 <h1 className="text-4xl font-bold text-asteria-dark mb-3">相處教學</h1>
                 <p className="text-stone-500 max-w-2xl">用圖文方式慢慢睇，將感情相處、復合心態、曖昧判斷整理成一篇篇短教學。</p>
               </div>
@@ -1407,7 +1407,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <div className="text-sm font-bold text-asteria-primary mb-2">asteria感情拯救所</div>
+              <div className="text-sm font-bold text-asteria-primary mb-2">Asteria感情拯救所</div>
               <h2 className="text-3xl font-bold text-asteria-dark mb-3">相處教學</h2>
               <p className="text-stone-500">不再在感情裡迷路，學會愛與被愛的智慧。</p>
             </div>
