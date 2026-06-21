@@ -48,29 +48,29 @@ const localStockImage = (id) => `/article-custom-images/stock_local/pexels-${id}
 
 const stockPhotos = {
   cafeTalk: {
-    src: localStockImage('20804849'),
-    credit: 'Photo by Tuba Nur Dogan on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-20804849/'
+    src: localStockImage('5225295'),
+    credit: 'Photo by Samson Katt on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/happy-diverse-couple-having-breakfast-at-table-5225295/'
   },
   warmCafe: {
-    src: localStockImage('20479952'),
-    credit: 'Photo by Alexander Mass on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-and-drinking-coffee-20479952/'
+    src: localStockImage('5225281'),
+    credit: 'Photo by Samson Katt on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/smiling-diverse-couple-standing-together-in-sunny-day-5225281/'
   },
   outdoorCafe: {
-    src: localStockImage('20045413'),
-    credit: 'Photo by Mustafa Bodur on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/couple-sitting-at-cafe-20045413/'
+    src: localStockImage('27067373'),
+    credit: 'Photo by Anastasia Nagibina on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/couple-sitting-on-couch-and-holding-hands-27067373/'
   },
   cafeNight: {
-    src: localStockImage('17637241'),
-    credit: 'Photo by K on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/a-couple-in-a-restaurant-17637241/'
+    src: localStockImage('8727461'),
+    credit: 'Photo by Tima Miroshnichenko on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-sad-woman-wearing-red-long-sleeves-8727461/'
   },
   sofaArgument: {
-    src: localStockImage('36812991'),
+    src: localStockImage('36812992'),
     credit: 'Photo by Vitaly Gariev on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/couple-arguing-in-living-room-on-sofa-36812991/'
+    creditUrl: 'https://www.pexels.com/photo/young-couple-engaged-in-serious-conversation-indoors-36812992/'
   },
   sofaSilent: {
     src: localStockImage('8560663'),
@@ -78,30 +78,51 @@ const stockPhotos = {
     creditUrl: 'https://www.pexels.com/photo/couple-after-argument-8560663/'
   },
   phoneBed: {
-    src: localStockImage('8036689'),
-    credit: 'Photo by SHVETS production on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/woman-lying-on-bed-while-using-a-cellphone-8036689/'
+    src: localStockImage('8055092'),
+    credit: 'Photo by Annushka Ahuja on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-mature-couple-sitting-close-together-on-a-couch-8055092/'
   },
   phoneWarm: {
-    src: localStockImage('8070516'),
-    credit: 'Photo by Ron Lach on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/a-woman-using-her-smartphone-while-in-bed-8070516/'
+    src: localStockImage('8560383'),
+    credit: 'Photo by Timur Weber on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/a-couple-talking-while-arguing-8560383/'
   },
   phonePartner: {
-    src: localStockImage('8070513'),
-    credit: 'Photo by Ron Lach on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/a-woman-lying-on-the-bed-while-using-her-mobile-phone-8070513/'
+    src: localStockImage('8560354'),
+    credit: 'Photo by Timur Weber on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/man-talking-to-his-girlfriend-8560354/'
   },
   cafeDate: {
-    src: localStockImage('8442219'),
-    credit: 'Photo by Ron Lach on Pexels',
-    creditUrl: 'https://www.pexels.com/photo/a-couple-having-a-date-in-a-cafe-8442219/'
+    src: localStockImage('5225443'),
+    credit: 'Photo by Samson Katt on Pexels',
+    creditUrl: 'https://www.pexels.com/photo/happy-young-ethnic-couple-sitting-in-train-and-talking-5225443/'
   },
   streetCafe: {
     src: localStockImage('12944983'),
     credit: 'Photo by Atlantic Ambience on Pexels',
     creditUrl: 'https://www.pexels.com/photo/couple-sitting-by-a-cafe-and-talking-12944983/'
   }
+};
+
+const safeStockFallbacks = [
+  stockPhotos.warmCafe,
+  stockPhotos.cafeTalk,
+  stockPhotos.sofaSilent,
+  stockPhotos.phoneWarm,
+  stockPhotos.cafeDate
+];
+
+const publicImageExists = (src = '') =>
+  src.startsWith('/') && fs.existsSync(path.join(repoRoot, 'public', src.replace(/^\/+/, '')));
+
+const ensureExistingImage = (image, slot = 0) => {
+  if (image?.src && publicImageExists(image.src)) return image;
+  const fallback = safeStockFallbacks[slot % safeStockFallbacks.length];
+  return {
+    ...fallback,
+    caption: image?.caption || (slot === 0 ? 'Asteria 原創文章封面圖' : 'Asteria 原創文章配圖'),
+    prompt: image?.prompt || ''
+  };
 };
 
 const stockPhotoSetFor = (title, category) => {
@@ -130,7 +151,7 @@ const stockPhotoSetFor = (title, category) => {
 const editorialImagesFor = ({ id, title, category }) => {
   const set = stockPhotoSetFor(title, category);
   return [0, 1, 2, 3].map((slot) => {
-    const photo = set[(id + slot) % set.length];
+    const photo = ensureExistingImage(set[(id + slot) % set.length], slot);
     return {
       src: photo.src,
       caption: slot === 0 ? `封面圖：${title}` : `內文配圖：${title}`,
@@ -223,7 +244,7 @@ const articleTitleOverrides = new Map([
   ['005', '【兩性心理】女人太強會令對方不安？拆解男人自卑心結'],
   ['006', '【分手前兆】感情亮紅燈的 4 個徵兆：冷淡、逃避與失望'],
   ['007', '【分手後聯絡】繼續搵前任會自斷復合機會嗎？'],
-  ['008', '【分手復合】被分手後如何重新振作？4 個步驟找回吸引力'],
+  ['008', '【分手復合】被分手後如何重新振作？3 個步驟找回吸引力'],
   ['009', '【復合判斷】分手後還有聯絡，是否代表仍有機會？'],
   ['010', '【親密關係】分享慾點樣影響感情？生活細節才是親密關鍵'],
   ['011', '【成年人愛情】年紀越大越難心動？拆解心動變少的真正原因'],
@@ -286,7 +307,7 @@ const articleTitleOverrides = new Map([
   ['070', '【復合機會】對方說不愛你就要死心嗎？先看真實狀態'],
   ['071', '【冷戰破解】對方嬲到黑面唔出聲？低壓打開溝通窗口'],
   ['072', '【玩笑式貶低】對方總用講笑傷害你？別再強裝無事'],
-  ['073', '【主動相處】對方總是不主動？令他自動自覺的溝通方法'],
+  ['073', '【家務分工】另一半叫極唔郁？令他主動分擔生活責任的方法'],
   ['074', '【忽冷忽熱】對你忽冷忽熱是變心嗎？拆解間歇性冷漠'],
   ['075', '【愛意消失】點解好好地突然無感覺？關係降溫原因'],
   ['076', '【擇偶條件】揀對象不能只靠感覺：真正重要的伴侶特質'],
@@ -302,7 +323,17 @@ const articleTitleOverrides = new Map([
   ['086', '【T 型伴侶】連吵架都講道理？3 招扭轉溝通方式'],
   ['088', '【分手真相】分手原因未必係性格不合：揭開依戀創傷'],
   ['88', '【分手真相】分手原因未必係性格不合：揭開依戀創傷'],
+  ['132', '【戀愛腦自救】3 個「戀愛腦」症狀及戒除方法'],
   ['107', '【情侶吵架】成日嗌交代表不適合嗎？看懂良性吵架與惡性消耗']
+]);
+
+const articleSummaryOverrides = new Map([
+  ['067', '有些人一聽到意見就覺得被攻擊，不一定是不講理，而是進入了防禦性傾聽。想溝通有效，要先降低對方的防衛感。'],
+  ['095', '空頭支票最傷人的地方，不是他講得好聽，而是承諾一次次落空。要分清他是逃避衝突、有心無力，還是根本沒有把你的需要放在心上。'],
+  ['100', '好命不是靠等人寵出來，而是由自我價值、相處心態和感恩能力慢慢養成。愛情想長久，也要先把自己照顧好。'],
+  ['105', '安全感填不滿，很多時候不是對方做得未夠多，而是你內心一直害怕被拋低。先看清自信、依戀創傷和過去陰影，才知道怎樣補回自己。'],
+  ['111', '情緒勒索會把愛、犧牲和離開包裝成壓力，令你不敢拒絕。看清常見金句背後的操控，才能重新守住界線。'],
+  ['126', '有些人用反話、冷淡或提分手來試探愛意，背後通常是不安全感。真正要處理的不是迎合測試，而是建立清楚界線。']
 ]);
 
 const conciseArticleTitle = (title = '') => {
@@ -736,6 +767,7 @@ const cleanMarkdown = (body, title) => {
     if (heading) {
       const headingText = heading[2].replace(/^#\s*/, '').trim();
       if (/^(文章正文|內文\s*\(Web)/.test(headingText)) {
+        skipSection = null;
         continue;
       }
       if (/^(AEO 快速解答|文章摘要|重點速讀|Asteria 小提醒|建議內部連結|常見問題)/.test(headingText)) {
@@ -758,7 +790,10 @@ const cleanMarkdown = (body, title) => {
       if (out.length && out[out.length - 1] !== '') out.push('');
       continue;
     }
-    const cleanedLine = removeDanglingCtaText(line);
+    let cleanedLine = removeDanglingCtaText(line);
+    cleanedLine = cleanedLine
+      .replace(/^\s*內文\s*\(Web(?:\s*[-－]\s*[^)]*)?\)[：:]\s*/u, '')
+      .replace(/^\s*引言[：:]\s*/u, '');
     const isMarkdownHeading = /^\s*#{1,6}\s+/.test(cleanedLine);
     if (!cleanedLine || (!isMarkdownHeading && shouldSkipLine(cleanedLine))) continue;
     if (/^#\s+/.test(trimmed)) {
@@ -917,7 +952,8 @@ const buildHighlightMarkdown = (markdown = '') => {
         .replace(/[「」『』]/g, '')
         .replace(/\s+/g, ' ')
         .trim();
-      return heading ? `- ${heading}` : '';
+      const sentence = conciseHighlightText(heading, section.text);
+      return sentence ? `- ${sentence}` : '';
     })
     .filter(Boolean)
     .slice(0, 4);
@@ -1652,7 +1688,7 @@ const numberedHeadingData = (text = '') => {
     [/^防伏行為\s*([0-9]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `防伏 ${match[1]}`, label: match[2] })],
     [/^真相\s*([0-9]+)\s*[:：.-]?\s*(.*)$/u, (match) => ({ badge: `真相 ${match[1]}`, label: match[2] || '關鍵判斷' })],
     [/^男人嘅諗法\s*([0-9]+)[）)]?\s*(.*)$/u, (match) => ({ badge: `想法 ${match[1]}`, label: match[2] || '男人嘅常見心態' })],
-    [/^第\s*([0-9]+)\s*點\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })],
+    [/^第\s*([0-9]+)\s*點\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })],
     [/^([0-9]+)[.。]\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })],
     [/^([0-9]+)[）)]\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })]
   ];
@@ -2144,8 +2180,15 @@ const cleanHighlightItemText = (html = '') => {
   const body = bodyParts.join('：');
   const concise = conciseHighlightText(heading, body || text);
   if (concise) {
-    const cleanHeading = normalizeArticleText(heading).replace(/[「」『』]/g, '').trim();
-    const cleanConcise = concise.replace(/[「」『』]/g, '').trim();
+    const cleanHeading = normalizeArticleText(heading)
+      .replace(/[「」『』]/g, '')
+      .replace(/[。！？!?？]+$/u, '')
+      .trim();
+    const cleanConcise = concise
+      .replace(/[「」『』]/g, '')
+      .replace(/^[:：\s]+/u, '')
+      .replace(/([。！？!?？])[:：]+/u, '$1')
+      .trim();
     if (body && cleanHeading.length >= 3 && !isGenericHighlightHeading(cleanHeading)) {
       return `${cleanHeading}：${cleanConcise}`;
     }
@@ -2185,6 +2228,57 @@ const repairInlineNumberedSectionsHtml = (html = '') => html.replace(
   }
 );
 
+const splitInlineNumberedSegment = (segment = '') => {
+  const text = normalizeArticleText(segment)
+    .replace(/^[-–—]+/u, '')
+    .trim();
+  if (!text) return null;
+
+  const colon = text.match(/^([^：:]{2,42})[:：]\s*([\s\S]{12,})$/u);
+  if (colon) return { label: colon[1].trim(), body: colon[2].trim() };
+
+  const parenthesized = text.match(/^(.{2,36}?\([^)）]{2,40}[)）])\s+([\s\S]{12,})$/u);
+  if (parenthesized) return { label: parenthesized[1].trim(), body: parenthesized[2].trim() };
+
+  const commaLabel = text.match(/^([^，,。！？!?]{2,24})[，,]\s*([\s\S]{12,})$/u);
+  if (commaLabel) return { label: commaLabel[1].trim(), body: commaLabel[2].trim() };
+
+  const bodyStarters = '(?:當|這|呢|佢|他|如果|唔|有時|在|一開始|不准|最後|你|人|男人|女人|科學|表面|公司|除非|明明|改變|吵架|小三|家裡|正向|久而久之|所謂|喺|以|將|用|令|不要|大家|雄性|可能|真正|好多|感情|拍拖|只要|因為|但|而|其實)';
+  const starter = text.match(new RegExp(`^(.{2,34}?)\\s+(${bodyStarters}[\\s\\S]{12,})$`, 'u'));
+  if (starter) return { label: starter[1].trim(), body: starter[2].trim() };
+
+  const sentence = text.match(/^([^。！？!?]{4,32})[。！？!?]\s*([\s\S]{12,})$/u);
+  if (sentence) return { label: sentence[1].trim(), body: sentence[2].trim() };
+
+  return null;
+};
+
+const repairInlineNumberedListHtml = (html = '') => html.replace(/<p>([\s\S]*?)<\/p>/g, (match, raw) => {
+  const text = normalizeArticleText(stripHtml(raw));
+  const markers = [...text.matchAll(/(?<!\d)([1-6])[.。]\s*/g)];
+  if (!markers.length || markers[0][1] !== '1') return match;
+  if (markers.length === 1 && markers[0].index === 0) return match;
+
+  const sections = [];
+  for (let index = 0; index < markers.length; index += 1) {
+    const marker = markers[index];
+    const start = marker.index + marker[0].length;
+    const end = index + 1 < markers.length ? markers[index + 1].index : text.length;
+    const parsed = splitInlineNumberedSegment(text.slice(start, end));
+    if (!parsed || parsed.label.length < 2 || parsed.label.length > 44 || parsed.body.length < 10) return match;
+    sections.push({ number: marker[1], ...parsed });
+  }
+
+  const prefix = text.slice(0, markers[0].index).trim();
+  const blocks = [];
+  if (prefix.length >= 8) blocks.push(`<p>${formatInline(prefix)}</p>`);
+  for (const section of sections) {
+    blocks.push(`<h2 class="article-numbered-heading"><span class="article-numbered-heading__badge">第 ${escapeHtml(section.number)} 點</span><span>${formatHeadingInline(section.label)}</span></h2>`);
+    blocks.push(`<p>${formatInline(section.body)}</p>`);
+  }
+  return blocks.join('\n');
+});
+
 const numberedParagraphHeadingPattern = new RegExp(
   '^(\\d+[.)、]?|(?:原因|徵兆|警號|禁忌|Step|Stage|階段|方法|迷思)\\s*[0-9一二三四五六七八九十]+)\\s*([^：:。！？!?]{2,42})[:：]\\s*([\\s\\S]{18,})$',
   'u'
@@ -2192,6 +2286,13 @@ const numberedParagraphHeadingPattern = new RegExp(
 
 const repairNumberedParagraphHeadingsHtml = (html = '') => html.replace(/<p>([\s\S]*?)<\/p>/g, (match, raw) => {
   const text = normalizeArticleText(stripHtml(raw));
+  const leadingNumber = text.match(/^([1-6])[.。]\s+([\s\S]{12,})$/u);
+  if (leadingNumber) {
+    const parsed = splitInlineNumberedSegment(leadingNumber[2]);
+    if (parsed && parsed.label.length >= 2 && parsed.label.length <= 44 && parsed.body.length >= 10) {
+      return `<h2 class="article-numbered-heading"><span class="article-numbered-heading__badge">第 ${escapeHtml(leadingNumber[1])} 點</span><span>${formatHeadingInline(parsed.label)}</span></h2>\n<p>${formatInline(parsed.body)}</p>`;
+    }
+  }
   const numbered = text.match(numberedParagraphHeadingPattern);
   if (!numbered) return match;
   const title = `${numbered[1]} ${numbered[2]}`.replace(/\s+/g, ' ').trim();
@@ -2199,6 +2300,14 @@ const repairNumberedParagraphHeadingsHtml = (html = '') => html.replace(/<p>([\s
   if (title.length < 5 || title.length > 54 || !body) return match;
   return `<h2>${escapeHtml(title)}</h2>\n<p>${escapeHtml(body)}</p>`;
 });
+
+const stripGeneratedDepthSectionsHtml = (html = '') => html
+  .replace(/<h2[^>]*>(?:再整理|再看深一層|再看清楚|再判斷|再觀察|再落地看|再拆深一點|下一步不要急著做錯|你可以先觀察三個位置)[\s\S]*?<\/h2>[\s\S]*?(?=<h2|$)/g, '')
+  .replace(/<h2[^>]*>先看清楚「[\s\S]*?真正卡住的位置<\/h2>[\s\S]*?(?=<h2|$)/g, '')
+  .replace(/<h2[^>]*>為什麼會越處理越亂<\/h2>[\s\S]*?(?=<h2|$)/g, '')
+  .replace(/<h2[^>]*>可以先做的三件事<\/h2>[\s\S]*?(?=<h2|$)/g, '')
+  .replace(/\n{3,}/g, '\n\n')
+  .trim();
 
 const repairHiddenNumberedPointsHtml = (html = '') => html
   .replace(
@@ -2762,6 +2871,7 @@ const repairLabelCardRunsHtml = (html = '') => {
 };
 
 const repairFinalTypographyHtml = (html = '') => html
+  .replace(/想了解更多/g, '想知道更多')
   .replace(/([「『（(])\s+/g, '$1')
   .replace(/\s+([」』）)])/g, '$1')
   .replace(/([\u4e00-\u9fff])\s+([\u4e00-\u9fff])/g, '$1$2')
@@ -2862,23 +2972,19 @@ const makeInsightHighlightSentence = (heading = '', paragraph = '') => {
   const cleanText = normalizeArticleText(stripHtml(paragraph)).replace(/[「」『』]/g, '').trim();
   if (!cleanHeading || !cleanText) return '';
   if (/^(先看|例子|真相|後果|感情拯救所話你知)$/u.test(cleanHeading)) return '';
-  if (cleanHeading.length >= 6 && cleanHeading.length <= 42 && cleanHeading !== '記住') {
-    return cleanHeading;
-  }
-  if (cleanHeading.length > 34) {
-    const sentence = firstCompleteSentence(cleanText, { min: 18, max: 54 });
-    return sentence ? sentence.replace(/[「」『』]/g, '') : '';
-  }
   let sentence = firstCompleteSentence(cleanText, { min: 18, max: 58 }) || shortenAtNaturalBreak(cleanText, 58);
   sentence = sentence
     .replace(new RegExp(`^${cleanHeading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[：:]?\\s*`, 'u'), '')
     .replace(/^(科學真相|特徵|原因|做法|重點)[：:]\s*/u, '')
     .replace(/[「」『』]/g, '')
     .trim();
-  if (!sentence || sentence.length < 12) return cleanHeading;
+  if (!sentence || sentence.length < 12) return '';
   if (sentence.length > 46) sentence = shortenAtNaturalBreak(sentence, 46) || sentence.slice(0, 46);
   if (!/[。！？!?？]$/u.test(sentence)) sentence += '。';
-  return `${cleanHeading}：${sentence}`;
+  if (cleanHeading.length >= 4 && cleanHeading.length <= 24 && !sentence.includes(cleanHeading)) {
+    return `${cleanHeading}：${sentence}`;
+  }
+  return sentence;
 };
 
 const rebuildHighlightFromArticleHtml = (html = '') => {
@@ -3016,7 +3122,7 @@ const contextualDepthHtmlForArticle = ({ title = '', category = '' }) => {
 };
 
 const replaceGenericDepthHtml = (html = '', article = {}) => {
-  const depth = contextualDepthHtmlForArticle(article);
+  const depth = '';
   let out = html;
   if (depth) {
     out = out
@@ -3062,6 +3168,337 @@ const removeRepeatedParagraphsHtml = (html = '') => {
 };
 
 const specificArticleMarkdown = (idKey) => {
+  if (idKey === '073') {
+    return [
+      '兩個人一齊生活，最消耗感情的往往不是大事，而是每日重複出現的小事：家務沒有人做、壞習慣講極唔改、你覺得自己一直在提點，對方卻覺得你一直在嫌棄。',
+      '如果你想另一半更主動分擔生活責任，重點未必是再鬧多幾次，而是把需要講得更清楚，亦讓對方有機會感受到自己做得到、做完會被看見。',
+      '## 先不要把家務變成審判',
+      '很多人叫另一半做家務時，語氣已經累積了很多不滿。一開口就變成：「你又唔做」、「你永遠都咁懶」、「點解次次都係我？」對方聽到的未必是家務需要，而是自己被否定。',
+      '你可以把指責換成具體請求，例如：「今晚可唔可以你洗碗，我去晾衫？」具體分工比情緒控訴更容易執行。',
+      '## 一齊做，先建立參與感',
+      '如果對方一直沒有家務習慣，可以先由一起做開始。例如一齊煮飯、一齊執屋、一齊買日用品。這不只是分工，也是在建立共同生活的節奏。',
+      '當兩個人一起完成一件小事，對方會更容易感受到自己不是被命令，而是在參與你們的生活。',
+      '## 做得好時要被看見',
+      '如果你總是只看到對方做得不夠好，他很容易覺得自己做也錯、不做也錯，最後乾脆放棄。這不是叫你假裝滿意，而是當對方真的有做到一點點時，可以先肯定那部分。',
+      '例如他有主動倒垃圾、幫你準備熱水、改掉一個小壞習慣，你可以直接講：「你今日有記得做，我其實有輕鬆到。」被看見的行為，才比較有機會重複出現。',
+      '## 用家務清單代替靠自覺',
+      '有些人不是故意不做，而是真的對家務沒有概念。你叫他洗衫，他可能以為只要按洗衣機就完成，卻沒有想過晾衫、摺衫、收衫都是同一件事的一部分。',
+      '與其每次臨時追，不如列一個簡單清單，把任務寫到具體：洗碗、倒垃圾、買紙巾、洗衫連晾衫。清單不是控制，而是讓責任有終點，也減少你每次都要開口催。',
+      '## 不要用瑣碎事否定整段感情',
+      '對方不夠主動分擔家務，的確會令人委屈，但也不一定等於他不愛你。很多伴侶衝突都是生活細節引起，問題在於兩個人的習慣和責任感未磨合好。',
+      '你可以重視自己的辛苦，也可以要求對方改變；但不要每次都直接上升到「你是不是不愛我」。這樣只會令對方防衛，真正要處理的生活分工反而被情緒蓋過。',
+      '## Asteria 感情拯救所話你知',
+      '想另一半主動，不是靠一直催逼，也不是靠自己默默做完再委屈。最有效的方法，是把需要講清楚、把責任拆細、看對方有沒有持續配合。',
+      '如果你已經講得很清楚，對方仍然長期逃避、不願承擔，那就不是家務小事，而是關係責任是否失衡的問題。'
+    ].join('\n\n');
+  }
+  if (idKey === '044') {
+    return [
+      '出軌通常不是一朝一夕發生，而是由很多細微改變慢慢累積。當你覺得另一半有點不對勁，先不要急著崩潰，也不要即刻攤牌，最重要是分清楚哪些是情緒猜測，哪些是可以觀察的實際警號。',
+      '以下 6 個出軌跡象，不是用來叫你疑神疑鬼，而是幫你用更清醒的方式看清關係狀態。',
+      '## 警號 1：手機突然變得好神秘',
+      '以前電話可以隨手放，現在卻長期跟身、螢幕反轉、改密碼，甚至用電話時特別避開你。手機本身不是問題，突然變得過度保護才是值得留意的變化。',
+      '如果他同時開始刪對話、避開通知，或者你一靠近就緊張，這代表他可能有一些不想讓你知道的互動。',
+      '## 警號 2：前言不對後語',
+      '他昨天說約了大學同學食飯，轉頭又說是同事聚會；你多問兩句，他就怪你太多疑。出軌的人最容易記錯自己講過甚麼，因為要維持不同版本的故事。',
+      '一次記錯未必代表出軌，但如果同類矛盾反覆出現，就要小心他是否正在隱瞞行蹤。',
+      '## 警號 3：突然送不合你喜好的禮物',
+      '如果他無緣無故送你禮物，但那份禮物明顯不適合你，款式、顏色、喜好都對不上，可能代表他只是順手買了兩份，或者根本沒有真正按你的喜好挑選。',
+      '禮物不是罪證，但當它配合其他異常行為出現，就可以成為一個觀察點。',
+      '## 警號 4：身邊出現不屬於你的物件',
+      '例如袋上突然多了可愛吊飾、車裡有你未見過的 hand cream、房間出現不像他會買的東西。他可能會說是朋友送的、同事留下的，但你心裡知道這不太合理。',
+      '這類小物件最容易被忽略，卻往往反映他生活裡出現了新的親密接觸。',
+      '## 警號 5：無啦啦開始特別打扮',
+      '以前他對外表很隨意，最近突然研究護膚、香水、穿搭，甚至每次出門都比以前仔細很多。變靚本身當然不是問題，但如果他只在某些行程前特別打扮，就值得留意。',
+      '你要看的不是他有沒有打扮，而是這個改變是否和行蹤、情緒距離、手機保密同時出現。',
+      '## 警號 6：身邊人講出你不知道的故事',
+      '如果他家人、朋友無意中提到一些你完全不知道的聚會、行程或人物，而他之前從未向你交代，這可能代表他已經開始把你排除在某部分生活之外。',
+      '當伴侶的生活出現越來越多你不知道的空白位，關係透明度就正在下降。',
+      '## Asteria 感情拯救所話你知',
+      '出軌跡象要一組一組看，不要只靠一個小細節就定罪。真正值得警惕的是：他行蹤變模糊、態度變防衛、生活突然多了你不知道的人和事，而且不願意坦白解釋。',
+      '如果你發現多個警號同時出現，先穩住自己，整理事實，再決定要溝通、觀察，還是保護自己。'
+    ].join('\n\n');
+  }
+  if (idKey === '045') {
+    return [
+      '《單身即地獄 3》之所以引起熱話，不只是因為節目夠戲劇性，而是有些相處模式其實很常見：高姿態、測試對方、忽冷忽熱、用不安全感牽住別人。',
+      '如果你不想在現實感情裡中伏，可以從這幾個曖昧操控訊號開始觀察。',
+      '## 防伏 1：留意過度自信的高姿態',
+      '自信本身有吸引力，但過度自信很容易變成自大。當一個人習慣用居高臨下的方式對待別人，不叫對方名字、不尊重對方感受、把多人同時放在選項裡比較，這不是魅力，而是缺乏基本尊重。',
+      '真正成熟的吸引，不需要靠貶低別人來抬高自己。如果他一開始就讓你覺得自己像被挑選的選項，你要先停一停，看清楚他是否真的把你當成一個人，而不是戰利品。',
+      '## 防伏 2：小心不停考驗你的 If Boy',
+      '有些人會不斷問如果題、設情境、測試你會不會主動、會不會吃醋、會不會為他改變。表面看似想了解你，實際上可能是在控制關係節奏，讓你一直證明自己。',
+      '認識初期想了解價值觀是正常的，但無止境測試會消耗信任。與其讓你不停交功課，一段健康關係更應該讓雙方有空間自然靠近。',
+      '## 防伏 3：佔有慾和冷處理一起出現',
+      '如果他一方面限制你的選擇、希望你按他的期望回應；另一方面，當你不照做就冷淡、黑面、不溝通，這已經不是在乎，而是用情緒懲罰你。',
+      '佔有慾不是愛的證明。真正重視你的人，就算有不安，也會願意溝通，而不是用冷暴力逼你就範。',
+      '## Asteria 感情拯救所話你知',
+      '曖昧最容易令人上癮，因為對方偶爾給你一點甜，你就會想證明自己可以得到更多。但真正值得發展的關係，不會讓你長期處於考試狀態。',
+      '如果你發現自己一直在猜、一直在等、一直怕做錯，先不要急著投入更多。看清楚對方是否尊重你，比追求一時心動更重要。'
+    ].join('\n\n');
+  }
+  if (idKey === '097') {
+    return [
+      '「我嬲咗成晚，佢竟然走去瞓覺！」好多女生都遇過這種情況：你以為對方愛你，就應該自然知道點樣氹你；但現實是，很多男人不是不在乎，而是不知道情緒當下應該做甚麼。',
+      '男人常用解決問題的方式面對情緒，女人更需要先被理解和安撫。當你黑面，他可能解讀成「我講多錯多」，於是退開；但你感受到的，卻是他冷淡、逃避、甚至不愛你。',
+      '## 第 1 招：把需要講到具體',
+      '不要只說「你都唔識氹我」，因為對方未必知道要做甚麼。你可以直接講：「我而家唔開心，我需要你抱住我五分鐘，先唔好講道理。」',
+      '具體要求比情緒控訴更容易被執行。當對方知道你要的是擁抱、陪伴、道歉，還是安靜聽你講，他才有機會做對。',
+      '## 第 2 招：做對時即時給正向回饋',
+      '如果他第一次嘗試安撫你，你不要急著嫌他做得不夠好。可以告訴他：「你剛才肯停低聽我講，我其實有安心一點。」',
+      '正向回饋不是討好，而是讓對方知道甚麼行為對關係有幫助。男人很多時候需要清楚路線圖，才會慢慢學識用你需要的方式靠近你。',
+      '## 第 3 招：不要在情緒最高點考驗他',
+      '情緒最滿的時候，雙方都很容易講錯說話。你可以先停一停，等自己由爆炸狀態回到可以表達，再用一句清楚說話開場。',
+      '例如：「我不是想鬧你，我只是想你知道，剛才我很需要你陪我。」這樣比生悶氣、冷戰、等他猜，更容易令關係有改善。',
+      '## Asteria 感情拯救所話你知',
+      '男朋友唔識氹人，不一定代表無愛，但如果你已經清楚表達需要，他仍然長期無視，就要重新評估他願不願意為關係學習。真正好的相處，是你願意講清楚，他也願意慢慢做得更好。'
+    ].join('\n\n');
+  }
+  if (idKey === '109') {
+    return [
+      '很多人以為坦白講出心底話，就是有效溝通。但如果說話方式錯了，心底話很容易變成利劍，最後不是更親近，而是令對方更防衛。',
+      '有效溝通不是把所有情緒一次過倒出來，而是讓對方聽得明、接得住，也知道下一步可以怎樣修補。',
+      '## 第 1 點：預設對方會讀心',
+      '「我唔講佢都應該知」是很多爭執的開始。對方未必真的不在乎，他可能只是沒有讀懂你的暗示。',
+      '把「你應該知道」改成「我希望你可以怎樣做」，會比考驗對方更有效。例如將「我覺得冷」講成「可唔可以幫我拎件衫？」',
+      '## 第 2 點：在情緒高漲時溝通',
+      '大家最嬲、最委屈的時候，通常最難講出真正需要。這時候講的說話，很容易變成攻擊、翻舊帳或悔氣說話。',
+      '可以先定一個冷靜機制，例如暫停三十分鐘，等心跳和語氣降下來，再回到同一個問題。暫停不是逃避，而是避免把關係推向更傷。',
+      '## 第 3 點：用「你」字開頭指責',
+      '「你成日都遲到」、「你根本唔在乎我」這類句式會令對方即刻防衛，因為他聽到的是審判，不是需要。',
+      '試著改用「我」字開頭，例如「你遲到時，我會覺得自己不被重視」。這樣不代表你認輸，而是把焦點由對錯拉回感受和需要。',
+      '## 第 4 點：一開口就翻舊帳',
+      '如果每次溝通都把幾年前的事重新拿出來，對方會覺得自己永遠不能被原諒，你也會越講越委屈。',
+      '真正有效的做法，是一次只處理一件事。先講今次發生了甚麼，再講它勾起你甚麼感受，不要把所有舊傷一次過倒出來。',
+      '## 第 5 點：只顧輸出，沒有聽回應',
+      '溝通不是演講。如果你只想把所有委屈講完，卻沒有留空間聽對方回應，對話很容易變成單向控訴。',
+      '可以在講完一段後停一停，問對方：「你聽到的是甚麼？」這個小停頓，能幫你確認對方有沒有理解，也避免大家各自腦補。',
+      '## Asteria 感情拯救所話你知',
+      '講心底話不是錯，錯的是用令對方防衛的方式講。真正成熟的溝通，是既保留真實感受，也讓對方知道可以怎樣回應你。'
+    ].join('\n\n');
+  }
+  if (idKey === '112') {
+    return [
+      '越親密的人，越容易成為情緒出口。你不是一定脾氣差，而是可能在關係入面累積了委屈、恐懼和不安，最後用發脾氣的方式爆出來。',
+      '但如果每次都靠憤怒表達需要，關係會慢慢由親密變成壓力。你要看的不是「我點解咁嬲」，而是憤怒下面真正受傷的位置。',
+      '## 第 1 點：安全感悖論',
+      '你不會隨便對老闆發脾氣，因為知道後果嚴重；但你可能會對伴侶失控，因為潛意識覺得他愛你、會包容你。',
+      '這種安全感有時會變成恃寵生驕。你不是故意傷害對方，但當你把最差的情緒長期留給他，對方也會慢慢退後。',
+      '## 第 2 點：憤怒其實是第二情緒',
+      '心理學常說，憤怒很多時只是表層。真正藏在下面的，可能是委屈、害怕、不被重視，或者覺得自己又一次被忽略。',
+      '例如你鬧他遲到，表面是生氣，內心可能是害怕：「你是不是不重視我？」當你能講出真正感受，衝突就比較有機會被理解。',
+      '## 第 3 點：用攻擊保護脆弱',
+      '有些人不習慣示弱，所以一受傷就先攻擊。這樣看似保護自己，其實會令伴侶只聽到責備，聽不到你真正需要安撫。',
+      '下次想爆發前，可以先用一句話暫停：「我而家好嬲，我需要冷靜十分鐘再講。」這不是壓抑情緒，而是保護關係不要被一刻失控破壞。',
+      '## Asteria 感情拯救所話你知',
+      '情緒管理不是叫你永遠不要嬲，而是學會在憤怒出現時，看清它真正想保護甚麼。當你能把攻擊改成表達需要，關係才有修復空間。'
+    ].join('\n\n');
+  }
+  if (idKey === '115') {
+    return [
+      'FWB 或 SP 想轉正，最難的地方不是你不夠好，而是對方可能已經把你放在「短期伴侶」的位置。你們可以很合拍，但如果互動只停留在床上，就很難自然變成正式關係。',
+      '想令對方對你產生性以外的依賴，重點不是更迎合，而是重新改變你們的相處場景和互動規則。',
+      '## 第 1 招：拒絕外賣式見面',
+      '如果他每次都是深夜才找你，上你屋企，做完就睡或離開，這不是約會，而是 Sex Call。你要開始拒絕只剩親密接觸的安排。',
+      '可以改成：「今晚唔得，不過星期六下午可以飲咖啡。」如果他完全拒絕日間見面，你就能看清他想要的是你，還是只是方便。',
+      '## 第 2 招：把關係拉回日常生活',
+      '在床上，你可能是可替代的；但在生活和情緒連結裡，你才有機會變得不可替代。日間約會、吃飯、散步、一起處理小事，都是讓關係離開單一性吸引的方法。',
+      '你要觀察他是否願意在沒有親密接觸的情況下仍然見你、聽你講生活、了解你的價值觀。',
+      '## 第 3 招：設界線，觀察他是否願意承擔',
+      '如果你想轉正，就不能一直用無名無份的方式滿足對方所有需要。你可以清楚講出自己想要的關係方向，再看他是否願意回應。',
+      '真正有機會轉正的人，會願意調整相處模式；只想享受福利的人，會在你設界線時退縮或消失。這個反應本身，就是答案。',
+      '## Asteria 感情拯救所話你知',
+      'FWB 轉情侶不是完全不可能，但不能靠更乖、更配合去換。你要把相處從床上拉回生活，把需要講清楚，也把選擇權拿回自己手上。'
+    ].join('\n\n');
+  }
+  if (idKey === '116') {
+    return [
+      '太快發生關係不一定代表沒有將來，但如果你們的相處只剩食飯、飲酒、Staycation 和親密接觸，就要小心變成酒肉情侶。',
+      '酒肉情侶最迷惑人的地方，是一開始很開心、很刺激，但當激情退下來，才發現彼此其實不太了解，也沒有能力一起面對現實問題。',
+      '## 第 1 招：看約會是否只剩娛樂和身體吸引',
+      '如果每次見面都離不開飲酒、過夜、去酒店，卻很少有正常日間約會，這段關係可能根基很薄。',
+      '真正有發展的關係，不會只在刺激場景裡存在，也應該能在普通日常裡舒服相處。',
+      '## 第 2 招：看你們有沒有深層對話',
+      '可以開心玩，不代表適合長久。你們有沒有談過價值觀、未來、家庭、工作壓力，或者真正害怕的事？',
+      '如果對話永遠停留在八卦、玩笑和曖昧，關係很容易只靠新鮮感維持。一旦新鮮感下降，就會變得空洞。',
+      '## 第 3 招：看困難出現時對方會不會留下',
+      '激情時人人都可以很投入，但真正判斷一段關係有沒有將來，要看遇到壓力、病痛、失業或情緒低潮時，對方是否仍願意面對。',
+      '如果他只想享受開心時刻，卻不願意承擔任何現實重量，這段關係就未必適合投放太多期待。',
+      '## Asteria 感情拯救所話你知',
+      '身體吸引可以是開始，但不能成為全部。你要分清楚，這段關係是正在建立親密，還是只是在消耗新鮮感。'
+    ].join('\n\n');
+  }
+  if (idKey === '119') {
+    return [
+      '感情出現裂痕，不一定代表注定分手。很多長久關係都曾經受傷，分別在於兩個人是逃避裂痕，還是願意一起修補。',
+      '裂痕其實是相處模式發出的更新通知。你們不能只想回到過去，而是要用更成熟的方法重新開始。',
+      '## 1. 正視問題，不要當無事發生',
+      '如果裂痕出現後，大家只是假裝和平，問題通常會在下一次衝突重新爆出來。真正修復，要先承認發生過甚麼、傷害在哪裡。',
+      '正視問題不是翻舊帳，而是讓彼此知道，這件事需要被理解和處理。',
+      '## 2. 停止互相指責',
+      '修復最怕變成審判大會。當每句說話都在追究誰錯，對方只會防衛，真正需要就會被蓋過。',
+      '可以把焦點放在：「我們以後可以怎樣避免同一件事再發生？」這樣比一直重播錯誤更有用。',
+      '## 3. 用新行動重建信任',
+      '信任不是一句對不起就回來，而是靠之後一段時間的穩定行動慢慢修補。承諾要具體，改變也要看得到。',
+      '如果雙方都願意重新學習相處，裂痕反而可以成為關係升級的位置。',
+      '## Asteria 感情拯救所話你知',
+      '不要只問可不可以回到以前。真正值得修補的關係，是可以在裂痕之後變得更清楚、更真實，也更懂得珍惜彼此。'
+    ].join('\n\n');
+  }
+  if (idKey === '123') {
+    return [
+      '天天 message、會講早晨早抖、甚至偶爾講掛住你，不一定代表對方想認真發展。有些曖昧只是低成本陪伴，給你一點甜，但從來不真正前進。',
+      '如果你想分清楚他是真心喜歡你，還是只是在享受被你陪伴，可以先看以下 3 種「假性喜歡」訊號。',
+      '## 第 1 種：深夜出沒',
+      '日間很少主動找你，一到夜晚寂寞、無聊、失眠才突然變得熱情。這種聯絡未必是深情，更多時候只是他需要有人陪。',
+      '真正認真想了解你的人，不會只在自己空虛時出現，也會在日常生活裡穩定關心你。',
+      '## 第 2 種：只講不做',
+      '他可能講很多未來畫面，例如下次帶你去邊、想同你做甚麼，但從來沒有落實時間和行動。說話越甜，越要看他有沒有真的安排。',
+      '曖昧最容易令人沉迷，就是因為它有想像空間。但沒有行動的想像，最後只會令你一直等。',
+      '## 第 3 種：忽冷忽熱',
+      '你熱情時他退後，你想放棄時他又突然靠近。這種節奏會令你一直猜測，甚至更想證明自己值得被選擇。',
+      '如果一段關係長期靠不穩定來維持心動，你要問的不是他有沒有感覺，而是他有沒有意願認真建立關係。',
+      '## 如何分辨真心？',
+      '真心不是看他講得幾好聽，而是看他願不願意花時間、落實約見、在普通日子也保持穩定互動。',
+      '如果他只在需要情緒價值時出現，卻從不讓你進入他的生活，那就未必是喜歡，而是享受你的陪伴。',
+      '## Asteria 感情拯救所話你知',
+      '曖昧可以甜，但不能長期無方向。你可以享受心動，但也要保護自己，不要把一個沒有承諾的人，放到正式伴侶的位置。'
+    ].join('\n\n');
+  }
+  if (idKey === '126') {
+    return [
+      '有些伴侶不是直接講需要，而是用反話、冷淡、假設題，甚至提分手來測試你。你一緊張、一追問，他就短暫安心；但下一次不安出現時，同一套測試又會重來。',
+      '男朋友成日試探你，未必代表他真的想分開，很多時候是因為他很怕自己不值得被愛。但如果你每次都被拉入情緒考試，關係只會越來越累。',
+      '## 第 1 種測試：故意冷淡，看你會不會追上來',
+      '他可能突然少回訊息、語氣變淡，或者明明在線都不回你。目的未必是想離開，而是想看你會不會著急、會不會主動哄他。',
+      '問題是，這種測試會令你長期處於不安，亦會令他習慣用冷淡換安全感。你可以關心一次，但不需要不斷追住對方跑。',
+      '## 第 2 種測試：把分手掛嘴邊，想聽你挽留',
+      '有些人一吵架就說「不如分手」、「你都唔愛我」，其實內心想聽的是你挽留他、證明你不會走。',
+      '但分手不應該成為每次衝突的武器。你可以回應他的不安，但也要清楚講明：如果每次都用分手威脅，關係會失去安全感。',
+      '## 第 3 種測試：提起異性，觀察你會不會吃醋',
+      '他可能刻意提某個異性、講別人對他有好感，甚至用曖昧故事刺激你，想確認你是否在乎。',
+      '適度吃醋可以是情緒反應，但如果對方不斷用第三者話題試探你，這就會變成操控。真正成熟的伴侶，不需要靠令你不安來證明自己被愛。',
+      '## 面對測試，你可以點回應？',
+      '第一，先不要立刻被情緒牽走。第二，指出你看見的模式，例如：「你每次不安就講分手，我會很難受。」第三，提出清楚界線：「你可以講你需要我安撫，但不要用分手測試我。」',
+      '你要讓對方知道，你願意理解他的不安，但不會配合一再被考驗。',
+      '## Asteria 感情拯救所話你知',
+      '測試者最需要的其實是安全感，但安全感不能靠不停考驗伴侶來建立。真正穩定的關係，是可以直接講需要，而不是用反話、冷淡和威脅逼對方證明愛。'
+    ].join('\n\n');
+  }
+  if (idKey === '124') {
+    return [
+      '辦公室戀情不是一定不好，但它最容易出事的地方，是公私不分。你們既是同事，又是情侶，一旦界線模糊，工作、人際和感情都會互相影響。',
+      '如果想令職場戀愛走得穩，就要先講清楚相處規則，而不是靠熱戀感硬撐。',
+      '## 第 1 點：保持低調，避免八卦影響工作',
+      '除非你們已經有穩定未來規劃，否則不一定要太快公開。公開後，同事可能會用有色眼鏡看你們，甚至覺得你們偏私。',
+      '低調不是見不得光，而是保護關係和工作環境，避免感情變成辦公室話題。',
+      '## 第 2 點：上班時間保持專業',
+      '在公司範圍內，盡量避免親密行為和情緒化互動。用 Email、Slack 或工作對話時，語氣也要保持專業。',
+      '你們可以相愛，但同事不需要承受你們的曖昧、冷戰或私事。',
+      '## 第 3 點：不要在公司吵架',
+      '如果你們同一個 Team，很容易因為工作意見延伸到感情爭執。最重要是不要在公司即場爆發，也不要讓同事被迫站隊。',
+      '有情緒可以約定下班後再談，工作時間先把工作處理好。',
+      '## 第 4 點：設立下班切換儀式',
+      '離開公司後，可以約定一個切換位，例如走出公司門口後先不談公事，或者回家前用十分鐘整理今日情緒。',
+      '這個儀式可以避免工作壓力直接帶入感情，也讓你們重新由同事身份回到伴侶身份。',
+      '## Asteria 感情拯救所話你知',
+      '職場戀愛最需要的不是刺激，而是界線。公事歸公事，感情歸感情，才不會令兩邊都失控。'
+    ].join('\n\n');
+  }
+  if (idKey === '125') {
+    return [
+      '一段關係入面，最令人委屈的不是付出，而是你慢慢發現，所有主動、等待、道歉和修補都落在你身上。這就是權力不對等的開始。',
+      '當一方投入較少，反而掌握更多主導權，另一方就容易越愛越卑微。',
+      '## 第 1 點：永遠由你主動發起交流',
+      '如果每次都是你開話題、你約見面、你追問近況，而對方只是有空才回應，你們的投入已經不平衡。',
+      '健康關係不一定要五五平分，但至少應該有來有往。長期單方面主動，會令你越來越像在求一段關係。',
+      '## 第 2 點：他的時間比你矜貴',
+      '他約你就可以，你約他就要看他心情；他最後一刻取消，你也不敢表達不滿，只能說「唔緊要」。',
+      '這代表你可能已經把他的時間放得比自己的時間更重要。愛一個人，不應該愛到連自己的感受都不敢佔位置。',
+      '## 第 3 點：總是你在道歉',
+      '明明是他遲到、冷淡或失約，最後卻變成你道歉，因為你怕他不開心、怕關係變差。',
+      '如果每次衝突都由你收拾殘局，對方就不需要真正面對責任，關係也會越來越失衡。',
+      '## Asteria 感情拯救所話你知',
+      '委屈不等於愛。當你發現自己長期用退讓換和平，就要停一停，看清楚這段關係到底是互相靠近，還是你一個人在撐。'
+    ].join('\n\n');
+  }
+  if (idKey === '130') {
+    return [
+      '如果男朋友好霸道、好固執、又好要面，硬碰硬通常只會令大家更僵。大男人表面強勢，內心很多時其實很需要被認同、被尊重和被看見。',
+      '以柔制剛不是叫你無底線忍讓，而是先理解他的心理死穴，再用更聰明的方式溝通。',
+      '## 第 1 點：他很需要面子',
+      '大男人自尊心通常很強。如果你當眾落他面、否定他的決定，他很容易視為人格攻擊，然後用更強硬的方式反擊。',
+      '有些話可以私下講，有些提醒可以換一種語氣。給面子不是縱容，而是降低他的防衛，讓對話有機會繼續。',
+      '## 第 2 點：他吃軟不吃硬',
+      '如果你表現得很強勢，他可能會把你當成競爭對手；但如果你用示弱、請求、肯定的方式表達，他反而比較容易放下戒備。',
+      '例如先肯定他的努力，再講你需要甚麼，比一開口批評更容易令他聽入耳。',
+      '## 第 3 點：控制慾常來自不安全感',
+      '他管你穿甚麼、幾點回家，表面像霸道，背後可能是害怕失去掌控。這不代表你要接受控制，但你可以看清楚問題核心。',
+      '真正成熟的處理，是一邊安撫不安，一邊清楚設界線：「我明白你擔心，但我的自由和社交也需要被尊重。」',
+      '## Asteria 感情拯救所話你知',
+      '和大男人相處，最重要是分清「需要被尊重」和「想控制你」。前者可以溝通，後者就要設界線。溫柔可以是一種方法，但不能變成失去自己。'
+    ].join('\n\n');
+  }
+  if (idKey === '079') {
+    return [
+      '## 伴侶問你借錢，先不要急著用愛作答',
+      '感情入面可以互相扶持，但金錢不應該變成愛的考試。如果對方只說「幫幫我」，卻講不清用途、金額和還款日期，你就不應該因為心軟而即刻答應。',
+      '真正負責任的人，會願意把事情交代清楚，而不是用情緒逼你即刻幫。你可以關心對方，也可以同時保護自己；這兩件事並不衝突。',
+      '## 第一件事：問清楚用途、金額和還款時間',
+      '借錢之前，要先知道對方為甚麼需要這筆錢、實際金額是多少、打算甚麼時候還、用甚麼方式還。如果對方連這些基本資料都不願意講清楚，問題就不只是錢，而是責任感和尊重。',
+      '如果只是短期小額周轉，你可以按自己能力決定；但涉及較大金額，就要清楚寫低借款日期、金額、還款方式和時間。講清楚不是不信任，而是保護雙方關係。',
+      '## 第二件事：分清幫忙和被情緒勒索',
+      '有些人會用「你愛我就應該幫我」這類說法，令你覺得不借就是無情。但愛一個人，不代表要無條件承擔對方所有財務後果。',
+      '如果你心底其實很不安，卻因為怕失去對方而勉強借出，之後很容易由幫忙變成怨氣。真正健康的關係，應該容許你講出界線，而不是要求你用錢證明愛。',
+      '## 第三件事：借錢後看對方態度',
+      '有些人借錢前很溫柔，借完之後就迴避、拖延、發脾氣，甚至反過來指責你計較。這種態度比借錢本身更值得留意，因為它反映對方有沒有責任感。',
+      '很多感情入面的金錢矛盾，都是因為一開始不好意思講清楚。你怕講得太實際會傷感情，對方可能也覺得伴侶之間不需要計較；但越含糊，日後越容易變成怨氣、誤會，甚至權力不平衡。',
+      '## Asteria 感情拯救所話你知',
+      '講錢時可以保持溫柔，但內容要具體。你可以同時表達關心和界線：「我明白你有困難，我願意陪你想辦法，但這筆錢我最多能承擔多少、希望怎樣還、如果還不到會怎樣處理。」',
+      '清楚不是無情，而是讓感情不用被金錢拖垮。真正重視你的人，會明白你設界線不是不愛，而是想把關係放在更穩的位置。'
+    ].join('\n\n');
+  }
+  if (idKey === '128') {
+    return [
+      '## 你係咪成日覺得另一半「差咁啲」？',
+      '如果你經常挑剔另一半，例如覺得佢食嘢聲音大、著衫無品味、講嘢唔夠幽默，明明佢對你不差，但你總係覺得還有更好的人，這就可能是感情完美主義。',
+      '感情完美主義不是單純有要求，而是你腦海中有一個理想劇本。當現實伴侶同劇本有出入，你就會覺得這段關係出錯，甚至想改造對方。',
+      '## 特徵一：放大缺點，忽略真實付出',
+      '你可能會一直看見對方的小瑕疵，卻看不見他平日的照顧和付出。久而久之，你不是在理解一個真實的人，而是在拿他和想像中的完美伴侶比較。',
+      '這種比較會令你越來越不滿，也會令對方覺得自己永遠不夠好。關係最消耗的地方，不一定是對方真的很差，而是你一直用不存在的標準去評分。',
+      '## 特徵二：把靈魂伴侶想得太理所當然',
+      '有些人會覺得真正適合的人應該不用講都懂，應該每一個反應都剛好合你心意。但親密關係不是讀心術，就算再相愛，兩個人都需要溝通和磨合。',
+      '如果你把「不用教、不用講、自然完美」當成真愛標準，你很容易錯過願意學、願意調整、願意陪你走下去的人。',
+      '## 特徵三：成日羨慕別人的伴侶',
+      '看到別人的男朋友浪漫、會送禮、會安排約會，你可能會忍不住覺得自己的另一半很普通。但你看到的通常只是別人關係的一小部分，不是完整日常。',
+      '比較可以提醒你想要甚麼，但如果比較變成習慣，就會令你永遠不滿意。世界上沒有完美的人，只有願不願意一起修正、一起成長的人。',
+      '## Asteria 感情拯救所話你知',
+      '你可以有標準，也可以有期待，但要分清楚：這是核心價值不合，還是你正在追求一個不存在的完美伴侶？如果對方願意回應、願意調整，這段關係值得用更成熟的方法處理。',
+      '如果你每次提出需要都只換來逃避、指責或者冷淡，那就要保護自己；但如果對方一直有實際付出，只是未必完全符合你的劇本，也許你要先學會看見真實的好。'
+    ].join('\n\n');
+  }
+  if (idKey === '132') {
+    return [
+      '## 愛情可以很重要，但不應該吞掉你整個人生',
+      '愛情會令生活添上色彩，但如果你一拍拖就將所有時間、情緒和決定都交給另一半，事事以對方為先，你可能已經陷入戀愛腦。',
+      '戀愛腦不是只有女生才會出現，不論男女都有機會因為太怕失去、太想被愛，而把伴侶變成生活唯一重心。問題是，當愛情變成你的全部，你反而更容易失去安全感。',
+      '## 症狀一：有異性無人性',
+      '一拍拖就人間蒸發，朋友約極都不出，生活所有安排都圍住另一半轉。短期看似很投入，但長期會令你失去自己的生活支撐。',
+      '一段健康關係，不應該要求你放棄朋友、興趣和個人成長。你越沒有自己的生活，越容易把所有情緒壓在對方身上。',
+      '## 症狀二：電話不離手，情緒被訊息牽住',
+      '你可能會一直等對方回覆，對方遲覆少少就開始焦慮，甚至不停猜他是不是不愛你。這種狀態會令你很難專心生活，也會令對方感到壓力。',
+      '真正的安全感，不是對方每分鐘都回覆，而是你知道自己即使暫時沒有被回應，也不等於被拋低。',
+      '## 症狀三：底線一退再退',
+      '如果對方做錯事、傷害你，甚至出軌，你都無限原諒，只因為怕他分手，這就不是包容，而是你正在用犧牲自己去換關係繼續。',
+      '愛一個人可以心軟，但不應該失去底線。當你連自己受傷都不敢承認，關係就會慢慢變成單方面消耗。',
+      '## 點樣戒走戀愛腦？',
+      '第一，重新安排自己的生活，不要把所有時間留給對方。第二，練習把焦慮寫低，分清事實和想像。第三，當對方做錯事時，先問自己真正需要的是道歉、改變，還是界線。',
+      '你不需要一下子變得很冷淡，只需要一步步把自己拿回來。當你有自己的節奏，感情反而會更健康，因為你不是靠抓緊對方來證明自己值得被愛。',
+      '## Asteria 感情拯救所話你知',
+      '戀愛腦最辛苦的地方，是你以為自己很愛，其實你只是很怕失去。真正穩定的愛，不會令你失去朋友、生活和底線。',
+      '如果你發現自己一拍拖就不像自己，先不要責怪自己。你可以慢慢重建安全感，學會在愛一個人的同時，也保留自己的世界。'
+    ].join('\n\n');
+  }
   if (idKey !== '111') return '';
   return [
     '## 你有冇試過喺戀愛入面覺得心很累？',
@@ -3193,14 +3630,9 @@ const compactHighlightItemsHtml = (html = '') => html.replace(
         .replace(/^[，,、：:。！？!?？\s]+/u, '')
         .trim())
       .map((item) => {
-        const parts = item.split(/[：:]/u).map((part) => part.trim()).filter(Boolean);
-        if (parts.length >= 2 && parts[0].length >= 2 && parts[0].length <= 34) return parts[0];
-        return item;
-      })
-      .map((item) => {
-        if (item.length <= 42) return item;
-        const shortened = shortenAtNaturalBreak(item, 42);
-        return shortened || item.slice(0, 42).replace(/[，,、：:；;]+$/u, '');
+        if (item.length <= 64) return item;
+        const shortened = shortenAtNaturalBreak(item, 64);
+        return shortened || item.slice(0, 64).replace(/[，,、：:；;]+$/u, '');
       })
       .map((item) => ({
         '依賴': '分清真愛與習慣性依賴',
@@ -3227,75 +3659,94 @@ const compactHighlightItemsHtml = (html = '') => html.replace(
         '提分手': '試探不是愛，是不安全感',
         '不掃興': '情緒價值來自接住對方感受',
       }[item] || item))
-      .filter((item, index, arr) => item.length >= 2 && arr.indexOf(item) === index)
+      .map((item) => /[。！？!?？]$/u.test(item) ? item : `${item}。`)
+      .filter((item, index, arr) => item.length >= 12 && arr.indexOf(item) === index)
       .slice(0, 4);
     if (!items.length) return '';
     return `<ul class="article-highlight-list">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
   }
 );
 
-const repairFinalArticleHtml = (html = '') => ensureHighlightHtml(stripEmptyHighlightTitleHtml(repairOverlongHeadingsHtml(repairAdjacentEmptyHeadingsHtml(repairWeakHeadingsHtml(repairLabelParagraphHeadingsHtml(repairSparseArticleSectionsHtml(repairNumberedParagraphHeadingsHtml(repairInlineNumberedSectionsHtml(repairEditorialArtifactsHtml(repairClosingSectionsHtml(html)))))))))))
-  .replace(/<ul class="article-highlight-list">([\s\S]*?)<\/ul>/g, (match) => repairHighlightListsHtml(match))
-  .replace(/(<\/p>)\s*(<ul class="article-highlight-list">)/g, '$1\n<h2 class="article-highlight-title">重點速讀</h2>\n$2')
-  .replace(/<p>讀到這[裏裡][，,][\s\S]{0,120}?設下界線。<\/p>/g, '')
-  .replace(/<p>（建議呢版用表列形式出），性格、行為表現有咩分別？<\/p>/g, '<p>大男人和恐怖情人的分別，關鍵在於控制程度、情緒穩定度，以及對方是否尊重你的界線。</p>')
-  .replace(/（建議呢版用表列形式出），性格、行為表現有咩分別？/g, '大男人和恐怖情人的分別，關鍵在於控制程度、情緒穩定度，以及對方是否尊重你的界線。')
-  .replace(/<p>1\. 穿搭指南 \(Visual\)：/g, '<p>1. 穿搭指南：')
-  .replace(/ \(Sorry to say\)/g, '')
-  .replace(/你，又者你嘅另一半/g, '你或者你嘅另一半，有冇試過咁諗？')
-  .replace(/喺呢段親密關係入面，會唔會曾同講過以下類似嘅說話，你愛我，就應該知道我諗緊乜啦！/g, '喺親密關係入面，你或者對方有冇講過類似說話：「你愛我，就應該知道我諗緊乜啦！」')
-  .replace(/你，有冇意識到/g, '你有冇意識到')
-  .replace(/或又者/g, '或者')
-  .replace(/令會呢段感情/g, '令呢段感情')
-  .replace(/Check佢了唔了解你、估唔估得中/g, '測試佢了解唔了解你、估唔估得中')
-  .replace(/慢慢句慢地/g, '慢慢地')
-  .replace(/當然坦誠嘅時間耐咗了/g, '當然，坦誠需要時間累積')
-  .replace(/轉彎末角/g, '轉彎抹角')
-  .replace(/分辦/g, '分辨')
-  .replace(/自為何乜/g, '自己為何')
-  .replace(/為何乜/g, '為甚麼')
-  .replace(/未得嫁出/g, '未嫁出')
-  .replace(/世伯伯母/g, '伯父伯母')
-  .replace(/要靚個種/g, '要靚嗰種')
-  .replace(/You want to move in with me。?/g, '對方提出同居，或者你開始諗同另一半搬埋一齊。')
-  .replace(/唔好令讓朋友/g, '唔好令朋友')
-  .replace(/等自己機會走出/g, '等自己有機會走出')
-  .replace(/就得稱讚下啲佢/g, '就可以稱讚下佢')
-  .replace(/咁那樣/g, '咁樣')
-  .replace(/突你破解/g, '教你破解')
-  .replace(/無野/g, '無嘢')
-  .replace(/你 \/ 另一半/g, '你或者另一半')
-  .replace(/Check List/g, '家務清單')
-  .replace(/Checklist/g, '家務清單')
-  .replace(/有啲人對家務毫無idea/g, '有啲人對家務完全冇概念')
-  .replace(/要簡單直接地list出嚟/g, '要簡單直接地列出嚟')
-  .replace(/個List/g, '呢張清單')
-  .replace(/有張List/g, '有張清單')
-  .replace(/你會唔會曾經有呢個迷思⋯⋯/g, '你有冇試過咁諗？')
-  .replace(/啲野/g, '啲嘢')
-  .replace(/的野/g, '的嘢')
-  .replace(/嘅野/g, '嘅嘢')
-  .replace(/咩野/g, '咩嘢')
-  .replace(/乜野/g, '乜嘢')
-  .replace(/做野/g, '做嘢')
-  .replace(/講野/g, '講嘢')
-  .replace(/野食/g, '嘢食')
-  .replace(/食野/g, '食嘢')
-  .replace(/煮野/g, '煮嘢')
-  .replace(/其他野/g, '其他嘢')
-  .replace(/所有野/g, '所有嘢')
-  .replace(/呢件野/g, '呢件嘢')
-  .replace(/依件野/g, '呢件嘢')
-  .replace(/扮下野/g, '扮下嘢')
-  .replace(/講左/g, '講咗')
-  .replace(/比左/g, '畀咗')
-  .replace(/人地/g, '人哋')
-  .replace(/涷曬/g, '凍晒')
-  .replace(/食嘢趙得/g, '食嘢咀嚼得')
-  .replace(/黎埋/g, '嚟埋')
-  .replace(/比空間/g, '畀空間')
-  .replace(/比清晰/g, '畀清晰')
-  .replace(/比機會/g, '畀機會');
+const repairFinalArticleHtml = (html = '') => {
+  let out = repairClosingSectionsHtml(html);
+  out = repairEditorialArtifactsHtml(out);
+  out = repairInlineNumberedSectionsHtml(out);
+  out = repairInlineNumberedListHtml(out);
+  out = repairNumberedParagraphHeadingsHtml(out);
+  out = repairSparseArticleSectionsHtml(out);
+  out = repairLabelParagraphHeadingsHtml(out);
+  out = repairWeakHeadingsHtml(out);
+  out = repairAdjacentEmptyHeadingsHtml(out);
+  out = repairOverlongHeadingsHtml(out);
+  out = stripEmptyHighlightTitleHtml(out);
+  out = ensureHighlightHtml(out);
+  return out
+    .replace(/<ul class="article-highlight-list">([\s\S]*?)<\/ul>/g, (match) => repairHighlightListsHtml(match))
+    .replace(/(<\/p>)\s*(<ul class="article-highlight-list">)/g, '$1\n<h2 class="article-highlight-title">重點速讀</h2>\n$2')
+    .replace(/<p>讀到這[裏裡][，,][\s\S]{0,120}?設下界線。<\/p>/g, '')
+    .replace(/<p>（建議呢版用表列形式出），性格、行為表現有咩分別？<\/p>/g, '<p>大男人和恐怖情人的分別，關鍵在於控制程度、情緒穩定度，以及對方是否尊重你的界線。</p>')
+    .replace(/（建議呢版用表列形式出），性格、行為表現有咩分別？/g, '大男人和恐怖情人的分別，關鍵在於控制程度、情緒穩定度，以及對方是否尊重你的界線。')
+    .replace(
+      /(<p>修復最怕變成審判大會。[\s\S]*?這樣比一直重播錯誤更有用。)\s*(信任不是一句對不起就回來[\s\S]*?裂痕反而可以成為關係升級的位置。<\/p>)/g,
+      '$1</p>\n<h2 class="article-numbered-heading"><span class="article-numbered-heading__badge">第 3 點</span><span>用新行動重建信任</span></h2>\n<p>$2'
+    )
+    .replace(/<p>1\. 穿搭指南 \(Visual\)：/g, '<p>1. 穿搭指南：')
+    .replace(/ \(Sorry to say\)/g, '')
+    .replace(/你，又者你嘅另一半/g, '你或者你嘅另一半，有冇試過咁諗？')
+    .replace(/喺呢段親密關係入面，會唔會曾同講過以下類似嘅說話，你愛我，就應該知道我諗緊乜啦！/g, '喺親密關係入面，你或者對方有冇講過類似說話：「你愛我，就應該知道我諗緊乜啦！」')
+    .replace(/你，有冇意識到/g, '你有冇意識到')
+    .replace(/或又者/g, '或者')
+    .replace(/令會呢段感情/g, '令呢段感情')
+    .replace(/Check佢了唔了解你、估唔估得中/g, '測試佢了解唔了解你、估唔估得中')
+    .replace(/慢慢句慢地/g, '慢慢地')
+    .replace(/當然坦誠嘅時間耐咗了/g, '當然，坦誠需要時間累積')
+    .replace(/轉彎末角/g, '轉彎抹角')
+    .replace(/分辦/g, '分辨')
+    .replace(/自為何乜/g, '自己為何')
+    .replace(/為何乜/g, '為甚麼')
+    .replace(/未得嫁出/g, '未嫁出')
+    .replace(/世伯伯母/g, '伯父伯母')
+    .replace(/要靚個種/g, '要靚嗰種')
+    .replace(/You want to move in with me。?/g, '對方提出同居，或者你開始諗同另一半搬埋一齊。')
+    .replace(/唔好令讓朋友/g, '唔好令朋友')
+    .replace(/等自己機會走出/g, '等自己有機會走出')
+    .replace(/就得稱讚下啲佢/g, '就可以稱讚下佢')
+    .replace(/咁那樣/g, '咁樣')
+    .replace(/突你破解/g, '教你破解')
+    .replace(/無野/g, '無嘢')
+    .replace(/你 \/ 另一半/g, '你或者另一半')
+    .replace(/Check List/g, '家務清單')
+    .replace(/Checklist/g, '家務清單')
+    .replace(/有啲人對家務毫無idea/g, '有啲人對家務完全冇概念')
+    .replace(/要簡單直接地list出嚟/g, '要簡單直接地列出嚟')
+    .replace(/個List/g, '呢張清單')
+    .replace(/有張List/g, '有張清單')
+    .replace(/你會唔會曾經有呢個迷思⋯⋯/g, '你有冇試過咁諗？')
+    .replace(/啲野/g, '啲嘢')
+    .replace(/的野/g, '的嘢')
+    .replace(/嘅野/g, '嘅嘢')
+    .replace(/咩野/g, '咩嘢')
+    .replace(/乜野/g, '乜嘢')
+    .replace(/做野/g, '做嘢')
+    .replace(/講野/g, '講嘢')
+    .replace(/野食/g, '嘢食')
+    .replace(/食野/g, '食嘢')
+    .replace(/煮野/g, '煮嘢')
+    .replace(/其他野/g, '其他嘢')
+    .replace(/所有野/g, '所有嘢')
+    .replace(/呢件野/g, '呢件嘢')
+    .replace(/依件野/g, '呢件嘢')
+    .replace(/扮下野/g, '扮下嘢')
+    .replace(/講左/g, '講咗')
+    .replace(/比左/g, '畀咗')
+    .replace(/人地/g, '人哋')
+    .replace(/涷曬/g, '凍晒')
+    .replace(/食嘢趙得/g, '食嘢咀嚼得')
+    .replace(/黎埋/g, '嚟埋')
+    .replace(/比空間/g, '畀空間')
+    .replace(/比清晰/g, '畀清晰')
+    .replace(/比機會/g, '畀機會');
+};
 
 const guaranteeHighlightHtml = (html = '') => {
   let out = stripEmptyHighlightTitleHtml(html)
@@ -3336,6 +3787,9 @@ const stripHighlightQuoteMarksHtml = (html = '') => html.replace(
 
 const reminderForArticle = ({ title, category }) => {
   const text = `${title} ${category}`;
+  if (/情緒勒索|勒索金句/.test(text)) {
+    return '如果對方用愛、內疚或離開來令你順從，先不要急著自責。真正健康的關係，應該容許你表達拒絕、保留界線，也容許雙方用更清楚的方式講需要。';
+  }
   if (/氹人|安慰/.test(text)) {
     return '如果你正面對另一半唔識氹人，重點不是逼對方即刻變浪漫，而是把你真正需要的安撫方式講清楚，讓對方知道可以怎樣靠近你。';
   }
@@ -3429,6 +3883,8 @@ const depthSectionForArticle = (article) => {
 };
 
 const repairThinArticleDepthHtml = (html = '', article) => {
+  return html;
+  if (/感情完美主義|覺得另一半唔夠好/.test(article.title)) return html;
   const body = stripHtml(html.split(/<h2(?: class="article-highlight-title")?>重點速讀<\/h2>|<h2>Asteria 小提醒<\/h2>|<h2>常見問題<\/h2>/)[0] || '');
   if (body.length >= 760) return html;
   const [heading, ...paragraphs] = depthSectionForArticle(article);
@@ -3489,6 +3945,43 @@ const repairNormalAbnormalGivingHtml = (html = '') => html
     /<h2>那到底要怎樣分辨「(?:<strong>)*\s*正常\s*(?:<\/strong>)*」(?:&amp;|&|和|同)「(?:<strong>)*\s*非正常\s*(?:<\/strong>)*」付出？<\/h2>\s*<p>非正常[：:，,]\s*/g,
     '<h2>非正常付出：因為害怕失去而犧牲自己</h2>\n<p>'
   );
+
+const splitCardCenterThought = (text = '') => {
+  const clean = normalizeArticleText(text);
+  const dashMatch = clean.match(/^(.{2,36}?\s*[—-]{1,2}\s*「[^」]{2,40}」)([\s\S]*)$/u);
+  if (dashMatch && dashMatch[2].trim().length >= 12) {
+    return { highlight: dashMatch[1].trim(), rest: dashMatch[2].trim() };
+  }
+  const colonMatch = clean.match(/^([^：:。！？]{2,30})[：:]\s*([\s\S]{16,})$/u);
+  if (colonMatch) {
+    return { highlight: colonMatch[1].trim(), rest: colonMatch[2].trim() };
+  }
+  const sentenceMatch = clean.match(/^(.{18,92}?[。！？])([\s\S]{16,})$/u);
+  if (sentenceMatch) {
+    return { highlight: sentenceMatch[1].trim(), rest: sentenceMatch[2].trim() };
+  }
+  const commaMatch = clean.match(/^(.{18,72}?[，,])([\s\S]{24,})$/u);
+  if (commaMatch) {
+    return { highlight: commaMatch[1].replace(/[，,]$/u, '').trim(), rest: commaMatch[2].trim() };
+  }
+  return { highlight: clean, rest: '' };
+};
+
+const reduceLongSectionCardsHtml = (html = '') => html.replace(
+  /<div class="article-section-card">([\s\S]*?)<\/div>/g,
+  (match, inner) => {
+    const paragraphs = [...inner.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((item) => normalizeArticleText(stripHtml(item[1])));
+    const totalText = normalizeArticleText(paragraphs.join(' '));
+    if (!totalText || (paragraphs.length <= 1 && totalText.length <= 96)) return match;
+    const { highlight, rest } = splitCardCenterThought(paragraphs[0] || totalText);
+    if (!highlight || normalizeText(highlight) === normalizeText(totalText)) return match;
+    const restParts = [rest, ...paragraphs.slice(1)]
+      .map((part) => normalizeArticleText(part).replace(/^[，,、。；;：:\s]+/u, ''))
+      .filter((part) => part && normalizeText(part) !== normalizeText(highlight));
+    const restHtml = restParts.map((part) => `<p>${formatInline(part)}</p>`).join('\n');
+    return `<div class="article-section-card"><p>${formatInline(highlight)}</p></div>${restHtml ? `\n${restHtml}` : ''}`;
+  }
+);
 
 const moveHighlightBeforeReminderHtml = (html = '') => {
   const match = html.match(/<h2 class="article-highlight-title">重點速讀<\/h2>\s*<ul class="article-highlight-list">[\s\S]*?<\/ul>/);
@@ -3725,9 +4218,7 @@ const orderedFiles = [...order.filter((file) => allMdFiles.includes(file)), ...a
 const articles = orderedFiles.map((file, index) => {
   const raw = fs.readFileSync(path.join(sourceDir, file), 'utf8');
   const idKey = file.match(/^(\d+)/)?.[1] || String(index + 1).padStart(3, '0');
-  const rawForContent = Number(idKey) >= 87 && idKey !== '111' && webReadyRawMap.has(idKey)
-    ? webReadyRawMap.get(idKey)
-    : raw;
+  const rawForContent = raw;
   const [frontmatter, body] = parseFrontmatter(rawForContent);
   const h1 = body.match(/^#\s+(.+)$/m)?.[1]?.trim();
   const titleSource = articleTitleOverrides.get(idKey) || webReadyTitleMap.get(idKey) || frontmatter.seo_title || frontmatter.title || titles.get(file) || h1 || file.replace(/\.md$/, '');
@@ -3735,13 +4226,13 @@ const articles = orderedFiles.map((file, index) => {
   const category = inferCategory(title, frontmatter.category);
   const cleaned = specificArticleMarkdown(idKey) || repairGeneratedArticleMarkdown(polishSpecificArticleMarkdown(`${idKey} ${title}`, cleanMarkdown(body, title)));
   const preliminaryContent = markdownToHtml(cleaned);
-  const summary = makeSummary({ frontmatter, preliminaryContent, title, category });
+  const summary = articleSummaryOverrides.get(idKey) || makeSummary({ frontmatter, preliminaryContent, title, category });
   const bodyMarkdown = removeDuplicateIntro(cleaned, summary);
   const bodyLength = markdownPlainLength(bodyMarkdown);
   const safeBodyMarkdown = bodyLength < 40
     ? buildFallbackBodyMarkdown({ title, category, summary })
     : bodyLength < 520
-      ? [bodyMarkdown, buildShortArticleExpansionMarkdown({ title, category })].join('\n\n')
+      ? bodyMarkdown
       : bodyMarkdown;
   const articleMarkdown = [
     safeBodyMarkdown,
@@ -3785,15 +4276,33 @@ const articles = orderedFiles.map((file, index) => {
   transformedHtml = repairAttachmentActionCardsHtml(transformedHtml);
   transformedHtml = repairFinalTypographyHtml(transformedHtml);
   transformedHtml = repairNormalAbnormalGivingHtml(transformedHtml);
+  transformedHtml = reduceLongSectionCardsHtml(transformedHtml);
   transformedHtml = repairDuplicateSectionHeadingsHtml(transformedHtml);
+  transformedHtml = repairThinArticleDepthHtml(transformedHtml, { title, category });
   transformedHtml = repairHighlightAgainstUiHtml(transformedHtml);
   transformedHtml = rebuildHighlightFromArticleHtml(transformedHtml);
-  const content = removeRepeatedParagraphsHtml(replaceGenericDepthHtml(removeAdjacentDuplicateParagraphsHtml(repairCaptionCtaHtml(repairCaptionParagraphRunsHtml(repairPossessivenessSelfTestHtml(compactHighlightItemsHtml(repairCaptionCtaHtml(repairHtmlNoise(personalizeReminderHtml(
+  let content = removeRepeatedParagraphsHtml(stripGeneratedDepthSectionsHtml(replaceGenericDepthHtml(removeAdjacentDuplicateParagraphsHtml(repairCaptionCtaHtml(repairCaptionParagraphRunsHtml(repairPossessivenessSelfTestHtml(compactHighlightItemsHtml(repairCaptionCtaHtml(repairHtmlNoise(personalizeReminderHtml(
     moveHighlightBeforeReminderHtml(
       transformedHtml
     ),
     { title, category }
-  )))))))), { title, category }));
+  )))))))), { title, category })));
+  content = moveHighlightBeforeReminderHtml(guaranteeHighlightHtml(rebuildHighlightFromArticleHtml(content)));
+  if (/拆解 4 大情緒勒索金句/.test(content)) {
+    content = content.replace(
+      /<ul class="article-highlight-list">[\s\S]*?<\/ul>/,
+      '<ul class="article-highlight-list"><li>情緒勒索會用愛、內疚或離開威脅你順從。</li><li>愛一個人不等於每件事都要答應，你仍然可以保留界線。</li><li>真正健康的關係會尊重你的拒絕和界線。</li></ul>'
+    );
+  }
+  content = content
+    .replace(/<h2 class="article-highlight-title">重點速讀<\/h2>\s*(?=<h2 class="article-highlight-title">重點速讀<\/h2>)/g, '')
+    .replace(/<h2 class="article-highlight-title">重點速讀<\/h2>\s*(?=<h2>Asteria 小提醒<\/h2>)/g, '');
+  if (idKey === '119') {
+    content = content.replace(
+      /(<p>修復最怕變成審判大會。[\s\S]*?這樣比一直重播錯誤更有用。)\s*(信任不是一句對不起就回來[\s\S]*?裂痕反而可以成為關係升級的位置。<\/p>)/,
+      '$1</p>\n<h2 class="article-numbered-heading"><span class="article-numbered-heading__badge">第 3 點</span><span>用新行動重建信任</span></h2>\n<p>$2'
+    );
+  }
   if (syncWebReady) {
     const webReadyFile = file.replace(/-SEO-AEO\.md$/i, '-WEB-READY.md');
     fs.writeFileSync(
@@ -3804,13 +4313,10 @@ const articles = orderedFiles.map((file, index) => {
   const id = index + 1;
   const imageLabel = imageLabelFor(title, category);
   const fallbackImages = editorialImagesFor({ id, title, category });
-  const customImages = customImageMap.get(file) || [];
   const pexelsArticleImages = pexelsArticleImageMap.get(id) || [];
-  const editorialImages = customImages.length
-    ? [0, 1, 2, 3].map((slot) => customImages[slot] || fallbackImages[slot])
-    : pexelsArticleImages.length
-      ? [0, 1, 2, 3].map((slot) => pexelsArticleImages[slot] || fallbackImages[slot])
-    : fallbackImages;
+  const editorialImages = pexelsArticleImages.length
+    ? [0, 1, 2, 3].map((slot) => ensureExistingImage(pexelsArticleImages[slot] || fallbackImages[slot], slot))
+    : fallbackImages.map((image, slot) => ensureExistingImage(image, slot));
   const coverImage = editorialImages[0];
   const inlineImages = editorialImages.slice(1);
   const article = {

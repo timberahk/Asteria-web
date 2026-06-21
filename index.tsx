@@ -912,6 +912,8 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       return [...items.slice(offset), ...items.slice(0, offset)];
     };
 
+    const [recommendationSeed] = useState(() => Date.now() + Math.floor(Math.random() * 100000));
+
     const scoreRelatedPost = (source: TeachingPost, candidate: TeachingPost) => {
       let score = 0;
       if (source.category === candidate.category) score += 8;
@@ -927,7 +929,12 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       return score;
     };
 
-    const getRelatedPosts = (currentId: number | null, count: number, offset = 0) => {
+    const getRelatedPosts = (
+      currentId: number | null,
+      count: number,
+      offset = 0,
+      options: { randomizeWithinRelevantPool?: boolean; poolSize?: number } = {}
+    ) => {
       const current = posts.find((post) => post.id === currentId);
       const candidates = posts.filter((post) => post.id !== currentId);
       if (!current) return rotatePosts(candidates, offset).slice(0, count);
@@ -935,13 +942,20 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       const seed = current.id + stableHash(current.category || '') + offset * 17;
       const rotatedCandidates = rotatePosts(candidates, seed);
 
-      return [...rotatedCandidates]
+      const sorted = [...rotatedCandidates]
         .sort((a, b) => {
           const scoreDiff = scoreRelatedPost(current, b) - scoreRelatedPost(current, a);
           if (scoreDiff !== 0) return scoreDiff;
           return ((a.id + seed) % 23) - ((b.id + seed) % 23);
-        })
-        .slice(0, count);
+        });
+
+      if (!options.randomizeWithinRelevantPool) return sorted.slice(0, count);
+
+      const bestScore = scoreRelatedPost(current, sorted[0]);
+      const relevantPool = sorted.filter((post) => scoreRelatedPost(current, post) >= bestScore);
+      const pool = relevantPool.length >= count ? relevantPool : sorted;
+      const poolSize = Math.max(count, Math.min(pool.length, options.poolSize || count * 5));
+      return rotatePosts(pool.slice(0, poolSize), seed + offset).slice(0, count);
     };
 
     const getHomePosts = () => {
@@ -959,7 +973,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const articleMatch = pathMatch || hashMatch;
     const activeId = articleMatch ? Number(articleMatch[1] === 'article' ? articleMatch[2] : articleMatch[1]) : null;
     const activePost = posts.find((post) => post.id === activeId);
-    const relatedPosts = getRelatedPosts(activeId, 5).slice(0, 3);
+    const relatedPosts = getRelatedPosts(activeId, 3, recommendationSeed, { randomizeWithinRelevantPool: true, poolSize: 15 });
     const isCaseLibrary = fullPage && window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase() === 'cases';
 
     const absoluteUrl = (url?: string) => {
@@ -1156,13 +1170,52 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
       };
     };
 
+    const fallbackArticleImages = [
+      {
+        src: '/article-custom-images/stock_local/pexels-5225295.jpg',
+        caption: 'Asteria 相處教學配圖',
+        credit: 'Photo by Samson Katt on Pexels',
+        creditUrl: 'https://www.pexels.com/photo/happy-diverse-couple-having-breakfast-at-table-5225295/',
+        prompt: ''
+      },
+      {
+        src: '/article-custom-images/stock_local/pexels-5225281.jpg',
+        caption: 'Asteria 相處教學配圖',
+        credit: 'Photo by Samson Katt on Pexels',
+        creditUrl: 'https://www.pexels.com/photo/smiling-diverse-couple-standing-together-in-sunny-day-5225281/',
+        prompt: ''
+      },
+      {
+        src: '/article-custom-images/stock_local/pexels-8560663.jpg',
+        caption: 'Asteria 相處教學配圖',
+        credit: 'Photo by Timur Weber on Pexels',
+        creditUrl: 'https://www.pexels.com/photo/couple-after-argument-8560663/',
+        prompt: ''
+      }
+    ];
+
+    const uniqueImages = (images: Array<{ src: string; caption?: string; credit?: string; creditUrl?: string; prompt?: string } | undefined>) =>
+      Array.from(
+        new Map(
+          images
+            .filter((image): image is { src: string; caption?: string; credit?: string; creditUrl?: string; prompt?: string } => Boolean(image?.src))
+            .map((image) => [image.src, image])
+        ).values()
+      );
+
+    const getCoverImageOptions = (post: TeachingPost) =>
+      uniqueImages([getCoverImage(post), ...(post.images || []), ...getEditorialImages(post.id), ...fallbackArticleImages]);
+
     const ArticleCover = ({ post, compact = false, hero = false }: { post: TeachingPost; compact?: boolean; hero?: boolean }) => {
-      const cover = getCoverImage(post);
-      const [failed, setFailed] = useState(false);
+      const imageOptions = getCoverImageOptions(post);
+      const [imageIndex, setImageIndex] = useState(0);
+      const cover = imageOptions[Math.min(imageIndex, imageOptions.length - 1)];
+      const failed = imageIndex >= imageOptions.length;
+      useEffect(() => setImageIndex(0), [post.id]);
       return (
         <div className={`${hero ? 'aspect-[16/9] md:aspect-[2.2/1]' : compact ? 'aspect-[1.15/1]' : 'aspect-[4/3]'} relative overflow-hidden bg-[#FFF8EC]`}>
           {!failed ? (
-            <img src={cover.src} alt={`${post.title}｜${post.category}｜Asteria 相處教學封面`} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
+            <img key={cover.src} src={cover.src} alt={`${post.title}｜${post.category}｜Asteria 相處教學封面`} className="w-full h-full object-cover" loading="lazy" onError={() => setImageIndex((current) => current + 1)} />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-[#FFF8EC] text-asteria-primary">
               <i className="fa-regular fa-image text-3xl"></i>
@@ -1179,7 +1232,7 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
     const getInlineImages = (id?: number | null) => {
       const post = posts.find((item) => item.id === id) || posts[0];
       const images = post.images || [];
-      return images.length ? images : getEditorialImages(post.id);
+      return uniqueImages([...(images.length ? images : getEditorialImages(post.id)), getCoverImage(post), ...fallbackArticleImages]);
     };
 
     const PhotoCredit = ({ image }: { image?: { credit?: string; creditUrl?: string } }) => {
@@ -1205,13 +1258,16 @@ const Blog = ({ fullPage = false }: { fullPage?: boolean }) => {
 
     const ArticleInlineImage = ({ index }: { index: number }) => {
       const images = getInlineImages(activeId);
-      const image = images[index] || images[0];
-      const [failed, setFailed] = useState(false);
+      const imageOptions = uniqueImages([images[index], ...images]);
+      const [imageIndex, setImageIndex] = useState(0);
+      const image = imageOptions[Math.min(imageIndex, imageOptions.length - 1)];
+      const failed = imageIndex >= imageOptions.length;
+      useEffect(() => setImageIndex(0), [activeId, index]);
       return (
         <figure className="article-figure my-10 md:my-14 overflow-hidden rounded-[24px] md:rounded-[32px] border border-asteria-cream/70 bg-white shadow-sm">
           <div className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] bg-[#FFF8EC]">
             {!failed ? (
-              <img src={image.src} alt={`${activePost?.title || 'Asteria 相處教學'} 內文圖片：${image.caption}`} className="w-full h-full object-cover" loading="lazy" onError={() => setFailed(true)} />
+              <img key={image.src} src={image.src} alt={`${activePost?.title || 'Asteria 相處教學'} 內文圖片：${image.caption}`} className="w-full h-full object-cover" loading="lazy" onError={() => setImageIndex((current) => current + 1)} />
             ) : (
               <div className="w-full h-full flex items-center justify-center text-asteria-primary">
                 <i className="fa-regular fa-image text-3xl"></i>
