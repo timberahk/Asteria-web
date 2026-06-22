@@ -1680,14 +1680,20 @@ const numberedHeadingData = (text = '') => {
     [/^迷思\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: /^[一二三四五六七八九十]$/u.test(match[1]) ? `迷思${match[1]}` : `迷思 ${match[1]}`, label: match[2] })],
     [/^誤區\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: /^[一二三四五六七八九十]$/u.test(match[1]) ? `誤區${match[1]}` : `誤區 ${match[1]}`, label: match[2] })],
     [/^徵兆\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `徵兆 ${match[1]}`, label: match[2] })],
+    [/^徵狀\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `徵狀 ${match[1]}`, label: match[2] })],
+    [/^特徵\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `特徵 ${match[1]}`, label: match[2] })],
+    [/^症狀\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `症狀 ${match[1]}`, label: match[2] })],
     [/^階段\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: /^[一二三四五六七八九十]$/u.test(match[1]) ? `階段${match[1]}` : `階段 ${match[1]}`, label: match[2] })],
     [/^禁忌\s*([0-9]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `禁忌 ${match[1]}`, label: match[2] })],
     [/^警號\s*([0-9]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `警號 ${match[1]}`, label: match[2] })],
     [/^跡象\s*([0-9]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `跡象 ${match[1]}`, label: match[2] })],
     [/^原因\s*([0-9]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `原因 ${match[1]}`, label: match[2] })],
+    [/^防伏\s*([0-9一二三四五六七八九十]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `防伏 ${match[1]}`, label: match[2] })],
     [/^防伏行為\s*([0-9]+)\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `防伏 ${match[1]}`, label: match[2] })],
     [/^真相\s*([0-9]+)\s*[:：.-]?\s*(.*)$/u, (match) => ({ badge: `真相 ${match[1]}`, label: match[2] || '關鍵判斷' })],
     [/^男人嘅諗法\s*([0-9]+)[）)]?\s*(.*)$/u, (match) => ({ badge: `想法 ${match[1]}`, label: match[2] || '男人嘅常見心態' })],
+    [/^第\s*([0-9一二三四五六七八九十]+)\s*招\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 招`, label: match[2] })],
+    [/^第\s*([0-9一二三四五六七八九十]+)\s*種(?:測試)?\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 種`, label: match[2] })],
     [/^第\s*([0-9]+)\s*點\s*[:：.-]?\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })],
     [/^([0-9]+)[.。]\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })],
     [/^([0-9]+)[）)]\s*(.+)$/u, (match) => ({ badge: `第 ${match[1]} 點`, label: match[2] })]
@@ -2300,6 +2306,31 @@ const repairNumberedParagraphHeadingsHtml = (html = '') => html.replace(/<p>([\s
   if (title.length < 5 || title.length > 54 || !body) return match;
   return `<h2>${escapeHtml(title)}</h2>\n<p>${escapeHtml(body)}</p>`;
 });
+
+const splitOverlongNumberedHeadingLabel = (label = '') => {
+  const clean = normalizeArticleText(stripHtml(label)).trim();
+  const continuationBody = (value = '') => value.replace(/(講|係|是|例如|包括|背後潛台詞係)[。.]$/u, '$1').trim();
+  const parenthetical = clean.match(/^(.{2,32}\([^)]{2,64}\))\s+([\s\S]{10,})$/u);
+  if (parenthetical && /[，,。！？!?]|如果|有時|唔係|不是/.test(parenthetical[2])) {
+    return { heading: parenthetical[1].trim(), body: continuationBody(parenthetical[2]) };
+  }
+  const colon = clean.match(/^([^，,。！？!?：:]{2,16})[，,：:]\s*([\s\S]{12,})$/u);
+  if (colon && /這|呢|為你好|背後|如果|當你|你會|佢會/.test(colon[2])) {
+    return { heading: colon[1].trim(), body: continuationBody(colon[2]) };
+  }
+  return null;
+};
+
+const repairOverlongNumberedHeadingLabelsHtml = (html = '') => html.replace(
+  /<h([23]) class="article-numbered-heading([^"]*)"><span class="article-numbered-heading__badge">([\s\S]*?)<\/span><span>([\s\S]*?)<\/span><\/h\1>\s*<p>([\s\S]*?)<\/p>/g,
+  (match, level, classSuffix, badge, rawLabel, paragraph) => {
+    const split = splitOverlongNumberedHeadingLabel(rawLabel);
+    if (!split) return match;
+    const body = normalizeArticleText(`${split.body} ${stripHtml(paragraph)}`).trim();
+    if (body.length < 12) return match;
+    return `<h${level} class="article-numbered-heading${classSuffix}"><span class="article-numbered-heading__badge">${badge}</span><span>${formatHeadingInline(split.heading)}</span></h${level}>\n<p>${formatInline(body)}</p>`;
+  }
+);
 
 const stripGeneratedDepthSectionsHtml = (html = '') => html
   .replace(/<h2[^>]*>(?:再整理|再看深一層|再看清楚|再判斷|再觀察|再落地看|再拆深一點|下一步不要急著做錯|你可以先觀察三個位置)[\s\S]*?<\/h2>[\s\S]*?(?=<h2|$)/g, '')
@@ -3168,6 +3199,46 @@ const removeRepeatedParagraphsHtml = (html = '') => {
 };
 
 const specificArticleMarkdown = (idKey) => {
+  if (idKey === '026') {
+    return [
+      '拍拖嗰陣，最怕唔係大吵大鬧，而係對方突然冷淡、無故疏遠。佢唔再主動搵你，又唔直接講分手，令你一直猜：佢到底係忙，定係已經想離開？',
+      '這種冷暴力式分手，很多時是對方不想做壞人，所以用慢慢抽離的方式逼你先開口。以下三個徵狀，可以幫你分清對方係暫時低潮，還是正在一步步退出關係。',
+      '## 徵狀 1：慢慢減少對你嘅關心',
+      '呢類人未必會突然消失，而是慢慢抽離，令你一步步習慣沒有他的感覺。以前會主動關心你，現在連基本關心都沒有，甚至你主動搵他，他都只是敷衍回應。',
+      '對話會由熱絡變成冷淡，只剩下「哦、係咩？」、「OK」這類無溫度回覆。他不再主動參與你的生活，也不再想知道你過得怎樣。',
+      '## 徵狀 2：選擇性忽略',
+      '以前他回你 message 很快，後來慢慢變成幾個鐘先覆，甚至已讀不回。你問他點解，他只會說「忙緊」，但明明他又有時間同朋友食飯、出街。',
+      '當你約他見面，他會用不同藉口推搪，總之唯獨對你特別忙。這種選擇性忽略會令你越來越少出現在他的生活裡，也令你慢慢懷疑自己是否已經不重要。',
+      '## 徵狀 3：負面互動',
+      '有些人表面上沒有說要分手，但行為和語氣已經明顯改變。他表面仍然會理你，但經常和你爭執、貶低你、踩你痛處。',
+      '你提出建議，他只會反擊：「你識咩啫？」這些負面互動會令你覺得自己做甚麼都錯。當批評和防衛變成循環，目的可能就是令你感到挫敗和不被愛，最後忍不住提出分手。',
+      '## 冷暴力等於溫柔？',
+      '其實冷暴力不是溫柔，而是一種逃避。有些人不敢正面分手，是因為怕內疚，或者不想做壞人，所以用冷淡、忽略和負面互動逼你先開口。',
+      '這種方式會造成更大的心理傷害，因為你會不停懷疑自己是不是做錯了甚麼，令你困在慢性傷害的循環裡。',
+      '## 對方冷暴力，你應該點做？',
+      '當對方對你冷暴力，不代表你要變得低聲下氣。先穩定自己的情緒，不要用負面情緒對抗負面情緒，也不要急著追問答案。',
+      '你可以保持自己的步調，重新看清楚自己的價值，再決定要溝通、觀察、暫時拉開距離，還是接受這段關係已經失衡。',
+      '## Asteria 感情拯救所話你知',
+      '另一半對你冷暴力，不代表你完全無能為力。真正重要的是先穩住自己，看清對方是否仍有修補意願，再決定下一步，而不是被他的忽冷忽熱牽著走。'
+    ].join('\n\n');
+  }
+  if (idKey === '090') {
+    return [
+      '分手最痛的，很多時不是失去一個人，而是覺得自己被否定、覺得自己是失敗者。好多人分手後會陷入自暴自棄、暴飲暴食，或者不斷求復合。',
+      '但如果你願意慢慢整理，這段時間其實也可以成為人生的增值期。成長思維不是叫你即刻沒事，而是把失戀變成重新理解自己、重建生活的起點。',
+      '## 第 1 點：容許自己悲傷 (Grieve Fully)',
+      '唔好扮無事。傷心是正常的生理和心理反應，你可以給自己一個期限，例如三日，讓自己盡情喊、盡情頹。',
+      '但期限過後，就要開始照顧基本生活：起身、食飯、洗面、出門。療癒不是壓抑情緒，而是不讓情緒永遠控制你。',
+      '## 第 2 點：檢視感情模式 (Pattern Recognition)',
+      '冷靜落嚟諗一諗，點解會分手？是溝通出問題，還是你一直愛上同一類會傷害你的人？這一步不是為了自責，而是為了看清模式。',
+      '如果你能找出自己在關係入面的慣性，例如過度付出、害怕失去、沒有界線，下一段感情就不需要重蹈覆轍。',
+      '## 第 3 點：重建生活秩序 (Routine)',
+      '失戀會令生活大亂，所以你要由小事開始拎返掌控感。例如每日準時起身、每星期做兩次運動、學一樣新技能，或者重新安排自己的社交節奏。',
+      '當你發現自己可以控制生活，自信就會慢慢回來。你不是只能等對方回頭，你也可以一步步回到自己身上。',
+      '## Asteria 感情拯救所話你知',
+      '分手後最重要不是逼自己即刻放低，而是不要在痛苦裡失去方向。當你能看清關係模式、照顧自己、重建生活，這段經歷才有機會真正變成成長。'
+    ].join('\n\n');
+  }
   if (idKey === '004') {
     return [
       '有些人只是性格比較大男人，喜歡主導、愛面子，未必一定是危險關係。但如果對方的強勢變成控制、監控、貶低和威脅，這就不是普通大男人，而可能是恐怖情人的警號。',
@@ -3269,6 +3340,30 @@ const specificArticleMarkdown = (idKey) => {
       '## Asteria 感情拯救所話你知',
       '曖昧最容易令人上癮，因為對方偶爾給你一點甜，你就會想證明自己可以得到更多。但真正值得發展的關係，不會讓你長期處於考試狀態。',
       '如果你發現自己一直在猜、一直在等、一直怕做錯，先不要急著投入更多。看清楚對方是否尊重你，比追求一時心動更重要。'
+    ].join('\n\n');
+  }
+  if (idKey === '058') {
+    return [
+      '無論係邊一方提出分手，雙方都會經歷情緒低潮期。喺呢段時間入面，情緒波動係不可避免，首要係俾空間自己宣洩情緒，亦俾空間對方慢慢消化。',
+      '當情緒逐漸穩定落嚟之後，先再諗係咪要進入下一個階段：考慮復合。復合唔應該靠一股衝動，而係要按步就班睇清楚彼此是否真的準備好。',
+      '## Stage 1 疏理情緒',
+      '呢個係最關鍵嘅一步。你要清楚諗清楚分手原因，理解自己、理解對方，睇返呢段關係入面出現咗啲咩問題，自己又有邊啲地方可以改善。',
+      '如果你哋將來有機會重新開始，反思會幫你搵到出路，亦可以避免復合後又重蹈覆轍。',
+      '## Stage 2 嘗試獨立',
+      '反思完，先唔好急於聯絡對方。你要先嘗試自己獨自生活，學習喺冇對方嘅情況下，自己嘅生活會係點。',
+      '呢一步係為咗確認你唔係單純想依賴對方填補空虛，而係真係覺得呢段關係值得重新努力。',
+      '## Stage 3 重建溝通',
+      '如果你自己生活咗一段短時間，仍然覺得呢段關係值得挽回，咁就要重新同對方建立有效溝通。',
+      '呢個溝通要有合適時間同態度配合。唔好一開始就急住問結果、逼對方復合，而係先專注聆聽對方感受同想法，了解彼此真實諗法同深層傷口。',
+      '## Stage 4 試探復合',
+      '你哋可以試吓重新開始約會，但先用朋友之間聚會嘅感覺開始，慢慢重新建立親密感，而唔係一開始就即時返到以前最親密嘅狀態。',
+      '先營造輕鬆愉快嘅氛圍，避免過度壓力同過度期待，再觀察彼此係咪真係已經準備好重啟關係。',
+      '## Stage 5 正式復合',
+      '如果大家都確認想重新開始，呢個階段嘅挑戰係點樣長期維繫復合後嘅關係，避免過去出現過嘅問題再次出現。',
+      '唔需要時時刻刻記住過去失誤，但要記得大家溝通過嘅內容。雙方都要更加注重溝通、協調，有問題就拎出嚟傾，唔好收埋。',
+      '## Asteria 感情拯救所話你知',
+      '好多人分手後好快就後悔，可能隔咗一兩日，甚至幾個鐘，就想即刻復合。但如果未真正處理分開原因，只係因為習慣、心軟或怕失去而復合，最後好容易再次面臨同一個問題。',
+      '與其急住要求復合，不如先思考清楚，再定好復合嘅方法同步驟。真正穩定嘅復合，唔係返去舊模式，而係用新方式重新開始。'
     ].join('\n\n');
   }
   if (idKey === '097') {
@@ -3707,6 +3802,7 @@ const repairFinalArticleHtml = (html = '') => {
   out = repairInlineNumberedSectionsHtml(out);
   out = repairInlineNumberedListHtml(out);
   out = repairNumberedParagraphHeadingsHtml(out);
+  out = repairOverlongNumberedHeadingLabelsHtml(out);
   out = repairSparseArticleSectionsHtml(out);
   out = repairLabelParagraphHeadingsHtml(out);
   out = repairWeakHeadingsHtml(out);
@@ -3994,10 +4090,6 @@ const splitCardCenterThought = (text = '') => {
   if (sentenceMatch) {
     return { highlight: sentenceMatch[1].trim(), rest: sentenceMatch[2].trim() };
   }
-  const commaMatch = clean.match(/^(.{18,72}?[，,])([\s\S]{24,})$/u);
-  if (commaMatch) {
-    return { highlight: commaMatch[1].replace(/[，,]$/u, '').trim(), rest: commaMatch[2].trim() };
-  }
   return { highlight: clean, rest: '' };
 };
 
@@ -4014,6 +4106,20 @@ const reduceLongSectionCardsHtml = (html = '') => html.replace(
       .filter((part) => part && normalizeText(part) !== normalizeText(highlight));
     const restHtml = restParts.map((part) => `<p>${formatInline(part)}</p>`).join('\n');
     return `<div class="article-section-card"><p>${formatInline(highlight)}</p></div>${restHtml ? `\n${restHtml}` : ''}`;
+  }
+);
+
+const repairTruthHeadingCardsHtml = (html = '') => html.replace(
+  /<h2>真相\s*([0-9]+)<\/h2>\s*<div class="article-section-card"><p>([\s\S]*?)<\/p><\/div>/g,
+  (match, number, cardHtml) => {
+    const cardText = normalizeArticleText(stripHtml(cardHtml));
+    const split = cardText.match(/^(.{2,36}?)\s*[—-]{1,2}\s*(「[^」]{2,40}」)$/u);
+    const label = split ? split[1].trim() : '關鍵判斷';
+    const card = (split ? split[2].trim() : cardText).replace(/[「」]/g, '');
+    return [
+      `<h2 class="article-numbered-heading"><span class="article-numbered-heading__badge">真相 ${number}</span><span>${formatHeadingInline(label)}</span></h2>`,
+      `<div class="article-section-card"><p>${formatInline(card)}</p></div>`
+    ].join('\n');
   }
 );
 
@@ -4311,6 +4417,7 @@ const articles = orderedFiles.map((file, index) => {
   transformedHtml = repairFinalTypographyHtml(transformedHtml);
   transformedHtml = repairNormalAbnormalGivingHtml(transformedHtml);
   transformedHtml = reduceLongSectionCardsHtml(transformedHtml);
+  transformedHtml = repairTruthHeadingCardsHtml(transformedHtml);
   transformedHtml = repairDuplicateSectionHeadingsHtml(transformedHtml);
   transformedHtml = repairThinArticleDepthHtml(transformedHtml, { title, category });
   transformedHtml = repairHighlightAgainstUiHtml(transformedHtml);
@@ -4349,6 +4456,12 @@ const articles = orderedFiles.map((file, index) => {
     content = content.replace(
       /(<p>修復最怕變成審判大會。[\s\S]*?這樣比一直重播錯誤更有用。)\s*(信任不是一句對不起就回來[\s\S]*?裂痕反而可以成為關係升級的位置。<\/p>)/,
       '$1</p>\n<h2 class="article-numbered-heading"><span class="article-numbered-heading__badge">第 3 點</span><span>用新行動重建信任</span></h2>\n<p>$2'
+    );
+  }
+  if (idKey === '134') {
+    content = content.replace(
+      /<h2 class="article-highlight-title">重點速讀<\/h2>\s*<ul class="article-highlight-list">[\s\S]*?<\/ul>/,
+      '<h2 class="article-highlight-title">重點速讀</h2>\n<ul class="article-highlight-list"><li>男朋友講順其自然，很多時不是隨緣，而是未把結婚放入清晰計劃。</li><li>如果是經濟壓力，他需要的是共同面對現實，而不是長期避談。</li><li>如果是抗拒承擔或未玩夠，你要看清他是否真的願意進入婚姻責任。</li><li>面對拖婚，重點不是無限等待，而是分辨原因、講清界線，再決定是否繼續投放。</li></ul>'
     );
   }
   if (syncWebReady) {

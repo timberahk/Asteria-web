@@ -35,6 +35,7 @@ const LOGO_SRC = "/asteria-logo.jpg";
 const WHATSAPP_URL = "https://wa.me/85259413688";
 const TELEGRAM_URL = "https://t.me/asteriahongkong";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100075792163593";
+const INSTAGRAM_URL = "https://www.instagram.com/asteria.crystal.tarot/";
 const SITE_URL = "https://asteria-tarot.com";
 const DEFAULT_SEO_IMAGE = `${SITE_URL}${LOGO_SRC}`;
 const DEFAULT_WHATSAPP_MESSAGE = '你好，我喺 Asteria 網站睇到你哋，想了解感情分析／儀式方向。我的情況係：';
@@ -340,6 +341,9 @@ const Navbar = () => {
               </div>
             )}
             <div className="mt-2 grid grid-cols-2 gap-2 border-t border-asteria-cream/60 pt-2">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#FCAF45] px-3 text-xs font-bold text-white">
+                <i className="fa-brands fa-instagram"></i> Instagram
+              </a>
               <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" onClick={closeMobileMenu} className="inline-flex h-9 items-center justify-center gap-1 rounded-full bg-[#25D366] px-3 text-xs font-bold text-white">
                 <i className="fa-brands fa-whatsapp"></i> WhatsApp
               </a>
@@ -354,8 +358,11 @@ const Navbar = () => {
       )}
       <div className="bg-asteria-dark text-white">
         <div className="container mx-auto px-3 py-2 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs md:text-sm text-center">
-          <span className="font-bold whitespace-nowrap">IG 帳號暫停通知</span>
-          <span className="text-white/80 whitespace-nowrap">請改用以下官方方法聯絡：</span>
+          <span className="font-bold whitespace-nowrap">IG 帳號已恢復</span>
+          <span className="text-white/80 whitespace-nowrap">可以用以下官方方法聯絡：</span>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#FCAF45] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
+            <i className="fa-brands fa-instagram"></i> Instagram
+          </a>
           <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center justify-center gap-1 bg-[#25D366] text-white px-2.5 sm:px-3 py-1 rounded-full font-bold whitespace-nowrap">
             <i className="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
@@ -404,11 +411,14 @@ const Hero = () => (
                 <i className="fa-solid fa-bullhorn"></i>
               </div>
               <div>
-                <div className="font-bold text-asteria-dark mb-1">IG 帳號暫停通知</div>
+                <div className="font-bold text-asteria-dark mb-1">Instagram 官方帳號已恢復</div>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4">
-                  IG 暫時停用。請用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡我哋。
+                  可以直接 Follow 返 @asteria.crystal.tarot，亦可以用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡我哋。
                 </p>
                 <div className="flex flex-wrap gap-3">
+                  <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#FCAF45] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
+                    <i className="fa-brands fa-instagram"></i> Instagram
+                  </a>
                   <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 sm:px-5 py-3 rounded-xl font-bold hover:brightness-95 transition-all whitespace-nowrap">
                     <i className="fa-brands fa-whatsapp"></i> WhatsApp
                   </a>
@@ -4346,6 +4356,9 @@ const Footer = () => (
         我們致力於運用白魔法與塔羅智慧，為你在迷惘中找到出口。
       </p>
       <div className="flex justify-center gap-4 mb-6">
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Instagram" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition-all shadow-sm">
+          <i className="fa-brands fa-instagram text-xl"></i>
+        </a>
         <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all shadow-sm">
           <i className="fa-brands fa-whatsapp text-xl"></i>
         </a>
@@ -4357,6 +4370,9 @@ const Footer = () => (
         </a>
       </div>
       <div className="mx-auto mb-8 grid gap-2 text-sm text-stone-500 max-w-md">
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
+          Instagram：@asteria.crystal.tarot
+        </a>
         <a href={makeWhatsappUrl(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noreferrer" className="hover:text-asteria-primary transition-colors">
           WhatsApp：5941 3688
         </a>
@@ -4461,7 +4477,7 @@ const App = () => {
     const pageSeo: Record<AppPage, { title: string; description: string; canonical: string; robots?: string }> = {
       home: {
         title: 'Asteria 感情拯救所｜復合挽回・相處教學・感情占卜・愛情儀式',
-        description: 'Asteria 感情拯救所提供感情占卜、塔羅分析、復合挽回、斷聯冷淡、曖昧第三者、愛情儀式與日常相處教學。IG 暫停期間請用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡。',
+        description: 'Asteria 感情拯救所提供感情占卜、塔羅分析、復合挽回、斷聯冷淡、曖昧第三者、愛情儀式與日常相處教學。Instagram @asteria.crystal.tarot 已恢復，亦可用 WhatsApp、Telegram、Facebook 或 Asteria Space 聯絡。',
         canonical: `${SITE_URL}/`,
       },
       teaching: {
